@@ -26,6 +26,11 @@ namespace options {
 
         po::options_description desc;
         po::variables_map vm;
+
+        int model_type;
+
+
+        bool modelTypeSet();
     };
 }
 

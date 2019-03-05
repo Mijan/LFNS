@@ -33,6 +33,7 @@ public:
 
 protected:
     io::ConfigFileInterpreter interpreter;
+    options::CommandLineOptions _command_line_options;
 
     virtual void _readSettingsfromFile();
 

@@ -8,11 +8,9 @@
 
 namespace options {
     LFNSOptions::LFNSOptions()
-            : DataOptions(), num_dpgmm_iterations(-1), N(-1), r(-1),
-              rejection_quantile(-1), rejection_quantile_low_accept(-1), thresh_accept_rate(-1),
-              LFNS_tolerance(-1),
-              H(-1), _sampler_index(0), use_premature_cancelation(false),
-              previous_population_file(""), print_interval(-1), verbose(true) {
+            : DataOptions(), num_dpgmm_iterations(-1), N(-1), r(-1), rejection_quantile(-1),
+              rejection_quantile_low_accept(-1), thresh_accept_rate(-1), LFNS_tolerance(-1), H(-1), _sampler_index(0),
+              use_premature_cancelation(false), previous_population_file(""), print_interval(-1), verbose(true){
 
 
         desc.add_options()("dpgmmiterations,d", po::value<int>(&num_dpgmm_iterations),
