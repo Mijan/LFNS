@@ -56,4 +56,14 @@ namespace sampler {
 
         return log_likelihood;
     }
+
+
+    void KernelDensityEstimation::writeToStream(std::ostream &stream) {
+        stream << "KernelDensityEstimation with kernel:" << std::endl;
+        _kernel->writeToStream(stream);
+    }
+
+    void KernelDensityEstimation::setRng(base::RngPtr rng){
+        DensityEstimation::setRng(rng);
+    }
 }

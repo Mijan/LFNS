@@ -41,6 +41,15 @@ namespace sampler {
         }
 
         int num_dp_iterations;
+
+
+    private:
+        friend class boost::serialization::access;
+
+        template<class Archive>
+        void serialize(Archive &ar, const unsigned int version) {
+            ar & num_dp_iterations;
+        }
     };
 
     class DpGmmSampler : public DensityEstimation {
@@ -94,7 +103,6 @@ namespace boost {
         inline void
         save_construct_data(Archive &ar, const sampler::DpGmmSampler *t, const unsigned int file_version) {
             // save data required to construct instance
-
 
             int sample_size = t->getSamplerDimension();
             int num_dp_it = t->_num_dp_gmm_iteration;

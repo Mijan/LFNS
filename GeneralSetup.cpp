@@ -5,25 +5,27 @@
 #include "GeneralSetup.h"
 #include "src/simulator/SimulatorSsa.h"
 #include "src/simulator/SimulatorOde.h"
+#include "src/simulator/SimulatorHybrid.h"
 
 GeneralSetup::GeneralSetup(options::CommandLineOptions &options, int process_nbr) : interpreter(
-        options.config_file_name), rng(nullptr), _command_line_options(options) {
+        options.config_file_name), rng(nullptr) {
     io_settings.config_file = options.config_file_name;
     io_settings.output_file = options.output_file_name;
+    experiments = options.experiments;
     rng = std::make_shared<base::RandomNumberGenerator>(process_nbr * time(NULL));
 }
 
 GeneralSetup::~GeneralSetup() {}
 
 void GeneralSetup::_readSettingsfromFile() {
-    experiments = _readExperiments();
-    model_settings = _readModelSettings(experiments);
+    if (experiments.empty()) { experiments = _readExperiments(); }
+    model_settings = _readModelSettings();
 }
 
 
 void GeneralSetup::printSettings(std::ostream &os) { io_settings.print(os); }
 
-models::ModelSettings GeneralSetup::_readModelSettings(std::vector<std::string> experiments) {
+models::ModelSettings GeneralSetup::_readModelSettings() {
     models::ModelSettings model_settings;
     model_settings.model_file = interpreter.getModelFileName();
     model_settings.initial_value_file = interpreter.getInitialConditionsFile();
@@ -38,28 +40,41 @@ models::ModelSettings GeneralSetup::_readModelSettings(std::vector<std::string> 
     base::Utils::addOnlyNew<std::string>(param_names, measure_data.getParameterNames());
     model_settings.param_names = param_names;
 
-    model_settings.fixed_parameters = interpreter.getFixedParameters();
+    try {
+        model_settings.fixed_parameters = interpreter.getFixedParameters();
+    } catch (const std::exception &e) {}
 
-    if (_command_line_options.modelTypeSet()) {
-        switch(_command_line_options.model_type) {
-            case 0 :
-                model_settings.model_type = models::MODEL_TYPE::ODE;
-                break;
-            case 1 :
-                model_settings.model_type = models::MODEL_TYPE::STOCH;
-                break;
-        }
-    } else {
-        std::string model_type_str = interpreter.getModelType();
-        if (models::MODEL_TYPE_NAME.count(model_type_str) == 0) {
-            std::stringstream os;
-            os << "Modeltype " << model_type_str << " not known. Possible options are: ";
-            std::map<std::string, models::MODEL_TYPE>::iterator it = models::MODEL_TYPE_NAME.begin();
-            for (it; it != models::MODEL_TYPE_NAME.end(); it++) { os << it->first << ", "; }
-            throw std::runtime_error(os.str());
-        }
-        model_settings.model_type = models::MODEL_TYPE_NAME[model_type_str];
+    std::string model_type_str = interpreter.getModelType();
+    if (models::MODEL_TYPE_NAME.count(model_type_str) == 0) {
+        std::stringstream os;
+        os << "Modeltype " << model_type_str << " not known. Possible options are: ";
+        std::map<std::string, models::MODEL_TYPE>::iterator it = models::MODEL_TYPE_NAME.begin();
+        for (it; it != models::MODEL_TYPE_NAME.end(); it++) { os << it->first << ", "; }
+        throw std::runtime_error(os.str());
     }
+    model_settings.model_type = models::MODEL_TYPE_NAME[model_type_str];
+
+    if (model_settings.model_type == models::MODEL_TYPE::HYBRID) {
+        bool species_found = false;
+        if (interpreter.detSpeciesProvided()) {
+            species_found = true;
+            model_settings.det_species_names = interpreter.getDetSpecies();
+        }
+        if (interpreter.stochSpeciesProvided()) {
+            if (species_found) {
+                throw std::runtime_error(
+                        "For Hybrid model either deterministic (model.detspecies) or stochastic species (model.stochspecies) need to be provided, but not both!");
+            }
+            model_settings.stoch_species_names = interpreter.getStochSpecies();
+            species_found = true;
+        }
+
+        if (!species_found) {
+            throw std::runtime_error(
+                    "For Hybrid model either deterministic (model.detspecies) or stochastic species (model.stochspecies) need to be provided, but none of them are set!");
+        }
+    }
+
     return model_settings;
 }
 
@@ -81,10 +96,13 @@ std::vector<models::InputData> GeneralSetup::_getInputDatasForExperiment(std::st
                           << names[i] << " starting at " << starting_times[i] << " will be ignored!" << std::endl;
             } else {
                 int max_num_pulses = std::min(num_pulses[i],
-                                              (int) std::ceil((final_time - starting_times[i]) / (periods[i] + 1)));
-                datas.push_back(
-                        models::InputData(periods[i], strength[i], duration[i], max_num_pulses, names[i],
-                                          starting_times[i]));
+                                              (int) std::ceil((final_time - starting_times[i]) / (periods[i])));
+
+                if (max_num_pulses > 0) {
+                    datas.push_back(
+                            models::InputData(periods[i], strength[i], duration[i], max_num_pulses, names[i],
+                                              starting_times[i]));
+                }
             }
         }
     }
@@ -98,6 +116,25 @@ simulator::Simulator_ptr GeneralSetup::_createSimulator(models::ChemicalReaction
         simulator::SimulatorSsa simulator_ssa(rng, dynamics->getPropensityFct(), dynamics->getReactionFct(),
                                               dynamics->getNumReactions());
         sim_ptr = std::make_shared<simulator::SimulatorSsa>(simulator_ssa);
+    } else if (model_settings.model_type == models::MODEL_TYPE::HYBRID) {
+        if (!model_settings.stoch_species_names.empty()) {
+            std::cout << "set stoch speices" << std::endl;
+            dynamics->setStochStatesForHybridModel(model_settings.stoch_species_names);
+        } else {
+            dynamics->setDetStatesForHybridModel(model_settings.det_species_names);
+        }
+        simulator::SimulatorSsa simulator_ssa(rng, dynamics->getPropensityFct(), dynamics->getReactionFct(),
+                                              dynamics->getNumReactions());
+        simulator::SimulatorSsa_ptr simulator_ssa_ptr = std::make_shared<simulator::SimulatorSsa>(simulator_ssa);
+
+        simulator::OdeSettings ode_settings;
+        simulator::SimulatorOde simulator_ode(ode_settings, dynamics->getRhsFct(), dynamics->getNumSpecies());
+        simulator::SimulatorOde_ptr simulator_ode_ptr = std::make_shared<simulator::SimulatorOde>(simulator_ode);
+
+        std::vector<int> stoch_indices = dynamics->getStochIndices();
+        std::vector<int> det_indices = dynamics->getDetSpeciesIndices();
+        sim_ptr = std::make_shared<simulator::SimulatorHybrid>(simulator_ssa_ptr, simulator_ode_ptr, stoch_indices,
+                                                               det_indices);
     } else {
         simulator::OdeSettings ode_settings;
         simulator::SimulatorOde simulator_ode(ode_settings, dynamics->getRhsFct(), dynamics->getNumSpecies());

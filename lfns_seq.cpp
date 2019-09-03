@@ -22,15 +22,13 @@ int main(int argc, char **argv) {
         lfns_options.handleCommandLineOptions(argc, argv);
 
 
-        LFNSSetup likelihood_setup(lfns_options);
-        likelihood_setup.setUp();
-        return runLFNS(likelihood_setup);
+        LFNSSetup lfns_setup(lfns_options);
+        lfns_setup.setUp();
+        return runLFNS(lfns_setup);
     } catch (const std::exception &e) {
         std::cerr << "Failed to run LFNS, exception thrown:\n\t" << e.what() << std::endl;
         return 0;
     }
-    return 1;
-
 }
 
 // TODO add check if output files can be saved BEFORE code runs!
@@ -44,17 +42,20 @@ int runLFNS(LFNSSetup &lfns_setup) {
     model_summary_file_stream << model_summary_stream.str();
     model_summary_file_stream.close();
 
+    lfns::seq::LFNSSeq lfns(lfns_setup.lfns_settings, lfns_setup.mult_like_eval.getLogLikeFun());
+    lfns.setThresholdPointer(&lfns_setup.threshold);
+    lfns.setSampler(lfns_setup.prior, lfns_setup.density_estimation, lfns_setup.rng);
+    lfns.setLogParams(lfns_setup.sampler_settings.getLogParams());
 
-    lfns::seq::LFNSSeq lfns(lfns_setup.lfns_settings, lfns_setup.sampler_settings, lfns_setup.rng,
-                            lfns_setup.mult_like_eval.getLogLikeFun());
+
     if (!lfns_setup.lfns_settings.previous_log_file.empty()) {
         lfns.resumeRum(lfns_setup.lfns_settings.previous_log_file);
     }
     if (lfns_setup.particle_filter_settings.use_premature_cancelation) {
         for (particle_filter::ParticleFilter_ptr filter : lfns_setup.particle_filters) {
-            filter->setThresholdPtr(lfns.getPointerToThreshold());
+            filter->setThresholdPtr(&lfns_setup.threshold);
         }
-        lfns_setup.mult_like_eval.setThresholdPtr(lfns.getPointerToThreshold());
+        lfns_setup.mult_like_eval.setThresholdPtr(&lfns_setup.threshold);
     }
 
     lfns.runLFNS();

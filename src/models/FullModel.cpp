@@ -4,6 +4,7 @@
 
 #include "FullModel.h"
 #include "../base/Utils.h"
+#include "../base/IoUtils.h"
 
 namespace models {
     using namespace std::placeholders;
@@ -40,6 +41,19 @@ namespace models {
         dynamics = std::make_shared<models::ChemicalReactionNetwork>(
                 settings.model_file);
         models::InitialValueData init_data(settings.initial_value_file);
+        if (init_data.getNumInitialValues() != dynamics->getNumSpecies()) {
+            std::stringstream ss;
+            ss << "Initial states not properly set! Model dynamics require " << dynamics->getNumSpecies()
+               << " species, but initial states for " << init_data.getNumInitialValues() << " states defined!"
+               << std::endl;
+            std::vector<std::string> dynamics_states = dynamics->getSpeciesNames();
+            std::vector<std::string> init_states = init_data.getInitialStates();
+            ss << "Model dynamics species: " << std::endl;
+            for (std::string species: dynamics_states) { ss << species << std::endl; }
+            ss << "\nProvided initial states for: " << std::endl;
+            for (std::string species: init_states) { ss << species << std::endl; }
+            throw std::runtime_error(ss.str());
+        }
         initial_value_provider = std::make_shared<models::InitialValueProvider>(rng, init_data);
         initial_value_provider->setOutputStateMapping(dynamics->getSpeciesNames());
 
@@ -158,7 +172,7 @@ namespace models {
 
     void FullModel::evaluateInput(const double *state, double t) {
         if (!_inputs.input_pram_indices.empty()) {
-            for (int index : _inputs.input_pram_indices) { _inputs.modified_parameter[index] = _parameter[index]; }
+            for (int index : _inputs.input_pram_indices) { _inputs.modified_parameter[index] = 0; }//_parameter[index]; }
             for (InputPulse &input : _inputs.pulses) {
                 if (input.pulseActive(t)) {
                     _inputs.modified_parameter[input.parameter_index] += input._input_strength;
@@ -172,9 +186,7 @@ namespace models {
         return std::make_shared<PerturbationFct>(std::bind(&FullModel::evaluateInput, this, _1, _2));
     }
 
-    std::vector<double> FullModel::getDiscontTimes() {
-        return _inputs.getDisContTime();
-    }
+    std::vector<double> FullModel::getDiscontTimes() {        return _inputs.getDisContTime();    }
 
     double FullModel::root(const double *state, double t) {
 

@@ -7,15 +7,14 @@
 #include "../base/IoUtils.h"
 
 namespace options {
-    CommandLineOptions::CommandLineOptions() : config_file_name(""), output_file_name(""), desc(),
-                                               model_type(-1) {
+    CommandLineOptions::CommandLineOptions() : config_file_name(""), output_file_name(""), desc() {
 
-        desc.add_options()("help", "produce help message")(
-                "modeltype,m", po::value<int>(&model_type),
-                "The type of model: deterministic (0) or stochastic (1)")("config_file",
-                                                                          po::value<std::string>(&config_file_name),
-                                                                          "Config file. A config file must always be provided!")(
-                "output_file,O", po::value<std::string>(&output_file_name), "Output file");
+        desc.add_options()("help", "produce help message")("config_file",
+                                                           po::value<std::string>(&config_file_name),
+                                                           "Config file. A config file must always be provided!")(
+                "output_file,O", po::value<std::string>(&output_file_name), "Output file")(
+                "experiment,E", po::value<std::vector<std::string> >(&experiments)->multitoken(),
+                "The performed experiments");
 
     }
 
@@ -45,6 +44,7 @@ namespace options {
                 throw std::runtime_error(
                         "Provided config file does not seem to be a .xml file. Please provide a xml problem file name with its relative or absolute location");
             }
+
         }
 
         if (!base::IoUtils::isPathAbsolute(config_file_name)) {
@@ -76,18 +76,7 @@ namespace options {
             std::cerr << "No output file name provided! Using default value for filename:" << output_file_name
                       << std::endl;
         }
-
-        if (model_type > 1) {
-            std::stringstream ss;
-            ss
-                    << "Wrong model type set in command line! Set 0 for deterministic model and 1 for stochastic models. Current model: "
-                    << model_type << std::endl;
-            throw std::runtime_error(ss.str());
-        }
         return 1;
     }
-
-    bool CommandLineOptions::modelTypeSet() { return vm.count("modeltype") > 0; }
-
 }
 

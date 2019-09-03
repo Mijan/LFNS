@@ -7,13 +7,12 @@
 namespace lfns {
     namespace mpi {
         LFNSWorker::LFNSWorker(std::size_t my_rank, int num_parameters,
-                               LogLikelihodEvalFct_ptr log_likelihood_evaluation, LFNSSettings &lfns_settings,
-                               sampler::SamplerSettings &sampler_settings, base::RngPtr rng) :
+                               LogLikelihodEvalFct_ptr log_likelihood_evaluation) :
                 _my_rank(my_rank), _num_parameters(num_parameters), _particle(new double[num_parameters]),
                 _epsilon(-DBL_MAX), _sampler_size(1), _stopping_flag_request(new bmpi::request()),
                 _mpi_stopping_criterion(std::make_shared<MPIStoppingCriterion>(_stopping_flag_request)),
                 _log_likelihood_evaluation(log_likelihood_evaluation), _stop_iteration(false),
-                _sampler(lfns_settings, sampler_settings, rng) {}
+                _sampler(nullptr) {}
 
         LFNSWorker::~LFNSWorker() {
             delete[] _particle;
@@ -27,6 +26,13 @@ namespace lfns {
         }
 
         void LFNSWorker::run() {
+
+
+            if (!_sampler.get()) {
+                std::stringstream ss;
+                ss << "Tried to run LFNS without initializing it:\n\t" << "LFNS_Sampler has not been set!" << std::endl;
+                throw std::runtime_error(ss.str());
+            }
 
             MPI_INSTRUCTION instruction(INSTRUCTION);
 
@@ -85,7 +91,7 @@ namespace lfns {
 
         void LFNSWorker::_sampleConstrPrior() {
             time_t tic = clock();
-            const std::vector<double> &parameter = _sampler.sampleConstrPrior();
+            const std::vector<double> &parameter = _sampler->sampleConstrPrior();
             time_t toc = clock();
             time_t sampling_time = toc - tic;
             double log_likelihood = (*_log_likelihood_evaluation)(parameter);
@@ -101,7 +107,7 @@ namespace lfns {
 
         void LFNSWorker::_samplePrior() {
             time_t tic = clock();
-            std::vector<double> parameter = _sampler.samplePrior();
+            std::vector<double> parameter = _sampler->samplePrior();
             time_t toc = clock();
             double log_likelihood = (*_log_likelihood_evaluation)(parameter);
             world.send(0, INSTRUCTION, PARTICLE_ACCEPTED);
@@ -116,7 +122,8 @@ namespace lfns {
             world.recv(0, SAMPLER, sampler_char_ptr, _sampler_size);
             std::string sampler_str(sampler_char_ptr, sampler_char_ptr + _sampler_size);
             std::stringstream stream(sampler_str);
-            _sampler.updateSerializedSampler(stream);
+            _sampler->updateSerializedSampler(stream);
+            _sampler->getDensityEstimation()->updateLogLikelihoodFct(_log_likelihood_evaluation);
         }
 
         void LFNSWorker::_prepareStoppingFlag() {
@@ -124,6 +131,15 @@ namespace lfns {
             *_stopping_flag_request = world.irecv(0, STOP_SIMULATION, _stop_iteration);
             _mpi_stopping_criterion->updateRequest(_stopping_flag_request);
         }
+
+
+        void
+        LFNSWorker::setSampler(sampler::Sampler_ptr prior, sampler::DensityEstimation_ptr density_estimation,
+                               base::RngPtr rng) {
+            _sampler = std::make_shared<LFNSSampler>(prior, density_estimation, rng);
+        }
+
+        void LFNSWorker::setLogParams(std::vector<int> log_params) { _sampler->setLogParams(log_params); }
 
 
         void LFNSWorker::_updateEpsilon() { world.recv(0, EPSILON, _epsilon); }

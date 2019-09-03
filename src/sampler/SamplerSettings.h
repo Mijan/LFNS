@@ -70,7 +70,8 @@ namespace sampler {
             for (const std::string &param: param_names) {
                 bool param_found = parameter_bounds.count(param) > 0;
                 if (param_found) {
-                    bounds.push_back(parameter_bounds[param]);
+                    std::pair<double, double> d = parameter_bounds[param];
+                    bounds.push_back(d);
                 }
                 if (!param_found) {
                     std::stringstream ss;
@@ -99,6 +100,8 @@ namespace sampler {
             }
             return log_params;
         }
+
+        std::vector<int> getLogParams() { return getLogParams(param_names); }
     };
 }
 

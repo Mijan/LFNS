@@ -4,6 +4,7 @@
 
 #include <iomanip>
 #include "MeasurementModel.h"
+#include "ModelExceptions.h"
 #include <algorithm>
 
 namespace models {
@@ -43,6 +44,7 @@ namespace models {
                << _measurement_parsers.size() << " measurements" << std::endl;
             throw std::runtime_error(os.str());
         }
+
         for (std::size_t i = 0; i < _measurement_parsers.size(); i++) {
             try {
                 (*measurement)[i] = _measurement_parsers[i].Eval();
@@ -87,7 +89,7 @@ namespace models {
                     ss << "Computed likelihood is NaN!\n\tExpression: " << _log_likelihood.GetExpr() << std::endl;
                     ss << "\tPointer values:" << std::endl;
                     printPointerValue(ss);
-                    throw std::runtime_error(ss.str());
+                    throw ModelException(ss.str());
                 }
             }
             return log_likelihood;

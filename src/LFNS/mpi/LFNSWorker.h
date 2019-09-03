@@ -51,8 +51,7 @@ namespace lfns {
         class LFNSWorker {
 
         public:
-            LFNSWorker(std::size_t my_rank, int num_parameters, LogLikelihodEvalFct_ptr log_likelihood_evaluation,
-                       LFNSSettings &settings, sampler::SamplerSettings &sampler_settings, base::RngPtr rng);
+            LFNSWorker(std::size_t my_rank, int num_parameters, LogLikelihodEvalFct_ptr log_likelihood_evaluation);
 
             virtual ~LFNSWorker();
 
@@ -61,6 +60,11 @@ namespace lfns {
             virtual void run();
 
             double *getEpsilonPtr();
+
+            void
+            setSampler(sampler::Sampler_ptr prior, sampler::DensityEstimation_ptr density_estimation, base::RngPtr rng);
+
+            void setLogParams(std::vector<int> log_params);
 
         protected:
             const std::size_t _my_rank;
@@ -77,7 +81,7 @@ namespace lfns {
 
             bmpi::communicator world;
 
-            LFNSSampler _sampler;
+            LFNSSampler_ptr _sampler;
 
             void _computeLikelihood();
 

@@ -15,6 +15,7 @@
 #include <boost/serialization/utility.hpp>
 #include <boost/serialization/complex.hpp>
 #include <boost/serialization/shared_ptr.hpp>
+#include <boost/serialization/split_member.hpp>
 
 #include "../base/EigenSerialization.h"
 
@@ -24,11 +25,16 @@
 #include <fstream>
 #include <sstream>
 #include <float.h>
+#include <iostream>
 #include "../base/EigenMatrices.h"
 #include "../base/RandomDistributions.h"
 
 
 namespace sampler {
+    typedef std::function<double(const std::vector<double> &)> LogLikelihodEvalFct;
+    typedef std::shared_ptr<LogLikelihodEvalFct> LogLikelihodEvalFct_ptr;
+
+
     class SamplerData {
     public:
         SamplerData(int n) : bounds(n, std::pair<double, double>(-DBL_MAX, DBL_MAX)) {}
@@ -45,9 +51,7 @@ namespace sampler {
         friend class boost::serialization::access;
 
         template<class Archive>
-        void serialize(Archive &ar, const unsigned int version) {
-            ar & bounds;
-        }
+        void serialize(Archive &ar, const unsigned int version) { ar & bounds; }
     };
 
     typedef std::shared_ptr<SamplerData> SamplerData_ptr;
@@ -67,6 +71,8 @@ namespace sampler {
         virtual std::size_t getSamplerDimension() const { return _bounds.size(); }
 
         virtual void updateSeed(int seed) { _rng->seed(seed); }
+
+        virtual void updateLogLikelihoodFct(LogLikelihodEvalFct_ptr fct_ptr) {}
 
         bool isSampleFeasible(const std::vector<double> &sample) {
             for (std::size_t i = 0; i < sample.size(); i++) {
@@ -91,7 +97,19 @@ namespace sampler {
             stream << std::endl;
         }
 
-        virtual void setRng(base::RngPtr rng) { *_rng = *rng; }
+        virtual void setRng(base::RngPtr rng) { _rng = rng; }
+
+        virtual void setLogScale(int param_index) {
+            if (_bounds[param_index].first <= 0 || _bounds[param_index].second <= 0) {
+                std::stringstream ss;
+                ss << "Tried to set scale for parameter number " << param_index
+                   << " to log, but original bounds is already " << _bounds[param_index].first << ", "
+                   << _bounds[param_index].second << std::endl;
+                throw std::runtime_error(ss.str());
+            }
+            _bounds[param_index].first = std::log10(_bounds[param_index].first);
+            _bounds[param_index].second = std::log10(_bounds[param_index].second);
+        }
 
     protected:
 
@@ -112,6 +130,9 @@ namespace sampler {
 
     class KernelSampler {
     public:
+
+        virtual ~KernelSampler() {}
+
         virtual std::vector<double> &sample(const std::vector<double> &kernel_center) = 0;
 
         virtual void sample(base::EiVector &sample, const std::vector<double> &kernel_center) = 0;
@@ -122,6 +143,8 @@ namespace sampler {
         virtual double getLogLikelihood(const base::EiVector &sample, const std::vector<double> &kernel_center) = 0;
 
         virtual void updateKernel(const base::EiMatrix &transformed_samples) = 0;
+
+        virtual void writeToStream(std::ostream &stream) = 0;
 
         friend class boost::serialization::access;
 

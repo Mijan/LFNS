@@ -61,7 +61,17 @@ void LikelihoodSetup::_readSettingsfromFile() {
 }
 
 std::vector<std::string>
-LikelihoodSetup::_readExperiments() { return interpreter.getExperimentsForEvaluateLikelihood(); }
+LikelihoodSetup::_readExperiments() {
+    try {
+        return interpreter.getExperimentsForEvaluateLikelihood();
+    } catch (const std::exception &e) {
+        std::stringstream ss;
+        ss << "Failed to read experiments for likelihood evaluation:\n\t" << e.what() << std::endl;
+        ss << "At least one experiment with corresponding data needs to be provided." << std::endl;
+        throw std::runtime_error(ss.str());
+    }
+
+}
 
 
 void LikelihoodSetup::printSettings(std::ostream &os) {
@@ -203,9 +213,11 @@ particle_filter::ParticleFilterSettings LikelihoodSetup::_readParticleFilterSett
                     << filter_settings.H << std::endl;
         }
     }
-    if (_likelihood_options.vm.count("numuseddata") >
-        0) { filter_settings.num_used_trajectories = _likelihood_options.num_used_data; }
-    if (_likelihood_options.vm.count("numcomputations") >
-        0) { num_computations = _likelihood_options.num_computations; }
+    if (_likelihood_options.vm.count("numuseddata") > 0) {
+        filter_settings.num_used_trajectories = _likelihood_options.num_used_data;
+    }
+    if (_likelihood_options.vm.count("numcomputations") > 0) {
+        num_computations = _likelihood_options.num_computations;
+    }
     return filter_settings;
 }

@@ -11,6 +11,18 @@
 #include <iostream>
 
 namespace sampler {
+    class DensityEstimation;
+}
+namespace boost {
+    namespace serialization {
+        template<class Archive>
+        inline void save_construct_data(Archive &ar, const sampler::DensityEstimation *t,
+                                        const unsigned int file_version);
+    }
+}
+
+
+namespace sampler {
     class DensityEstimation : public Sampler {
     public:
 
@@ -20,7 +32,7 @@ namespace sampler {
 
         void updateDensitySamples(base::EiMatrix &samples);
 
-        std::vector<double> &sample() override;
+        virtual std::vector<double> &sample() override;
 
         virtual double getLogLikelihood(const std::vector<double> &sample);
 
@@ -30,6 +42,8 @@ namespace sampler {
 
         virtual double getTransformedLogLikelihood(const base::EiVector &trans_sample) = 0;
 
+        virtual void updateAcceptanceRate(double acceptance_rate){};
+
     private:
         base::EiVector _trans_sample;
 
@@ -38,6 +52,9 @@ namespace sampler {
         base::EiMatrixC _evs;
         base::EiMatrixC _inv_evs;
         base::EiVectorC _evals;
+        virtual void transformSample(base::EiVector &sample);
+
+        virtual void retransformSample(base::EiVector &sample);
 
         friend class boost::serialization::access;
 
@@ -55,6 +72,7 @@ namespace sampler {
     };
 
     typedef std::shared_ptr<DensityEstimation> DensityEstimation_ptr;
+
 }
 
 #endif //LFNS_SAMPLERPARTICLES_H

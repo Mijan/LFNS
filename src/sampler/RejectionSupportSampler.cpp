@@ -12,10 +12,8 @@ namespace sampler {
     RejectionSupportSampler::RejectionSupportSampler(base::RngPtr rng, DensityEstimation_ptr sampler,
                                                      RejectionSamplerData data) : DensityEstimation(rng, data),
                                                                                   _dist(0, 1),
-                                                                                  _current_sampler(
-                                                                                          sampler),
-                                                                                  _rejection_data(
-                                                                                          data),
+                                                                                  _current_sampler(sampler),
+                                                                                  _rejection_data(data),
                                                                                   _log_rejection_const(
                                                                                           data.log_rejection_const),
                                                                                   _rejection_quantile(
@@ -58,15 +56,6 @@ namespace sampler {
     }
 
     void RejectionSupportSampler::computeRejectionConst(const base::EiMatrix &transformed_samples) {
-
-//        double min_log_like = DBL_MAX;
-//        for (int i = 0; i < transformed_samples.rows(); i++) {
-//            base::EiConstSubVectorRow row = transformed_samples.row(i);
-//            double log_like = _current_sampler->getTransformedLogLikelihood(row);
-//            min_log_like = min_log_like < log_like ? min_log_like : log_like;
-//        }
-//
-//        _log_rejection_const = min_log_like;
 
         int num_runs = 1000;
         base::EiVector sample(transformed_samples.cols());
@@ -125,13 +114,25 @@ namespace sampler {
     double RejectionSupportSampler::getTransformedLogLikelihood(const base::EiVector &trans_sample) {
         if (!_current_sampler) {
             throw std::runtime_error(
-                    "Tried to compute the loglikelihood from rejection sampler without having set the current sampler!");
+                    "Tried to compute the log-likelihood from rejection sampler without having set the current sampler!");
         }
         double log_likelihood;
         double log_like = _current_sampler->getTransformedLogLikelihood(trans_sample);
         if (log_like < _log_rejection_const) { log_likelihood = -DBL_MAX; }
         else { log_likelihood = _log_rejection_const; }
         return log_likelihood;
+    }
+
+
+    void RejectionSupportSampler::setRng(base::RngPtr rng) {
+        DensityEstimation::setRng(rng);
+        _current_sampler->setRng(rng);
+    }
+
+
+    void RejectionSupportSampler::setLogScale(int param_index) {
+        Sampler::setLogScale(param_index);
+        _current_sampler->setLogScale(param_index);
     }
 
 } /* namespace sampler */

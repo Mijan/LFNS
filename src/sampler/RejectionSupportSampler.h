@@ -96,6 +96,11 @@ namespace sampler {
 
         double getTransformedLogLikelihood(const base::EiVector &trans_sample) override;
 
+        void setRng(base::RngPtr rng) override;
+
+
+        virtual void setLogScale(int param_index) override;
+
     private:
         base::UniformRealDistribution _dist;
         DensityEstimation_ptr _current_sampler;
@@ -134,7 +139,7 @@ namespace boost {
 
 
             ar << t->_rejection_data;
-            ar << t->_current_sampler;
+            ar << t->_current_sampler.get();
 
         }
 
@@ -147,11 +152,12 @@ namespace boost {
             sampler::RejectionSamplerData data(1);
             ar >> data;
 
-            sampler::DensityEstimation_ptr sampler;
+            sampler::DensityEstimation * sampler;
             ar >> sampler;
 
+            sampler::DensityEstimation_ptr sampler_ptr(sampler);
             // invoke inplace constructor to initialize instance of my_class
-            ::new(t)sampler::RejectionSupportSampler(rng, sampler, data);
+            ::new(t)sampler::RejectionSupportSampler(rng, sampler_ptr, data);
         }
     }
 }

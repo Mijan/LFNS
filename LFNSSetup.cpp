@@ -8,9 +8,17 @@
 #include "src/base/IoUtils.h"
 #include "src/simulator/SimulatorOde.h"
 #include "src/simulator/SimulatorSsa.h"
+#include "src/sampler/DpGmmSampler.h"
+#include "src/sampler/RejectionSupportSampler.h"
+#include "src/sampler/GaussianSampler.h"
+#include "src/sampler/KernelSupportEstimation.h"
+#include "src/sampler/SliceSampler.h"
+#include "src/sampler/UniformSampler.h"
+#include "src/sampler/EllipsoidSampler.h"
 
 
-LFNSSetup::LFNSSetup(options::LFNSOptions options, int process_nbr) : GeneralSetup(options, process_nbr), _lfns_options(options) {}
+LFNSSetup::LFNSSetup(options::LFNSOptions options, int process_nbr) : GeneralSetup(options, process_nbr),
+                                                                      _lfns_options(options) {}
 
 LFNSSetup::~LFNSSetup() {}
 
@@ -48,6 +56,8 @@ void LFNSSetup::setUp() {
         }
     }
     particle_filter_settings.num_used_trajectories = max_num_traj;
+    density_estimation = _createDensityEstimation(lfns_settings, sampler_settings);
+    prior = _createPrior(lfns_settings, sampler_settings);
 }
 
 void LFNSSetup::printSettings(std::ostream &os) {
@@ -69,7 +79,16 @@ void LFNSSetup::printSettings(std::ostream &os) {
 }
 
 
-std::vector<std::string> LFNSSetup::_readExperiments() { return interpreter.getExperimentsForLFNS(); }
+std::vector<std::string> LFNSSetup::_readExperiments() {
+    try {
+        return interpreter.getExperimentsForLFNS();
+    } catch (const std::exception &e) {
+        std::stringstream ss;
+        ss << "Failed to read experiments for LFNS:\n\t" << e.what() << std::endl;
+        ss << "At least one experiment with corresponding data needs to be provided." << std::endl;
+        throw std::runtime_error(ss.str());
+    }
+}
 
 void LFNSSetup::_readSettingsfromFile() {
     GeneralSetup::_readSettingsfromFile();
@@ -91,7 +110,7 @@ particle_filter::ParticleFilterSettings LFNSSetup::_readParticleFilterSettings()
     if (_lfns_options.vm.count("smcparticles") > 0) { filter_settings.H = _lfns_options.H; }
     else {
         try {
-            filter_settings.H = interpreter.getHForEvaluateLikelihood();
+            filter_settings.H = interpreter.getHForLFNS();
         } catch (const std::exception &e) {
             std::cout
                     << "No number of particles for particle H for particle filter provided (either with -H through the command line or 'ComputeLikelihood.H' in the config file). Assume H = "
@@ -107,6 +126,92 @@ particle_filter::ParticleFilterSettings LFNSSetup::_readParticleFilterSettings()
     return filter_settings;
 }
 
+
+sampler::DensityEstimation_ptr
+LFNSSetup::_createDensityEstimation(lfns::LFNSSettings lfns_settings, sampler::SamplerSettings settings) {
+
+    sampler::DensityEstimation_ptr density_estimation_ptr(nullptr);
+
+    std::vector<std::string> unfixed_params = settings.param_names;
+    sampler::SamplerData sampler_data(unfixed_params.size());
+    sampler_data.bounds = settings.getBounds(unfixed_params);
+
+    switch (lfns_settings.estimator) {
+        case lfns::REJECT_DPGMM  : {
+            sampler::DpGmmSamplerData dpgmm_data(sampler_data);
+            dpgmm_data.num_dp_iterations = 50;
+            sampler::DpGmmSampler_ptr dpgmm_sampler = std::make_shared<sampler::DpGmmSampler>(rng, dpgmm_data);
+
+
+            sampler::RejectionSamplerData rej_data(sampler_data);
+            rej_data.rejection_quantile = lfns_settings.rejection_quantile_for_density_estimation;
+            rej_data.thresh_accept_rate = lfns_settings.thresh_accept_rate;
+            rej_data.rejection_quantile_low_accept = lfns_settings.rejection_quantile_low_accept;
+
+            density_estimation_ptr = std::make_shared<sampler::RejectionSupportSampler>(rng, dpgmm_sampler, rej_data);
+            break;
+        }
+        case lfns::KDE_GAUSS: {
+            sampler::NormalSamplerData normal_data(sampler_data);
+            normal_data.cov = base::EiMatrix::Identity(sampler_data.size(), sampler_data.size()) * 0.1;
+            sampler::GaussianSampler_ptr gauss_kernel = std::make_shared<sampler::GaussianSampler>(rng, normal_data);
+
+            density_estimation_ptr = std::make_shared<sampler::KernelSupportEstimation>(rng, gauss_kernel,
+                                                                                        sampler_data);
+            break;
+        }
+        case lfns::KDE_UNIFORM: {
+            sampler::UniformSamplerData unif_data(sampler_data);
+            sampler::KernelSampler_ptr unif_kernel = std::make_shared<sampler::UniformSampler>(rng, unif_data);
+            density_estimation_ptr = std::make_shared<sampler::KernelSupportEstimation>(rng, unif_kernel,
+                                                                                        sampler_data);
+            break;
+        }
+        case lfns::ELLIPS: {
+            density_estimation_ptr = std::make_shared<sampler::EllipsoidSampler>(rng, sampler_data);
+            break;
+        }
+        case lfns::SLICE: {
+            sampler::SliceSampler_ptr sampler_ptr = std::make_shared<sampler::SliceSampler>(rng, sampler_data,
+                                                                                            mult_like_eval.getLogLikeFun(),
+                                                                                            &threshold);
+            sampler_ptr->setLogScaleIndices(settings.getLogParams());
+            density_estimation_ptr = sampler_ptr;
+
+            break;
+        }
+    }
+    return density_estimation_ptr;
+}
+
+
+sampler::Sampler_ptr LFNSSetup::_createPrior(lfns::LFNSSettings lfns_settings, sampler::SamplerSettings settings) {
+
+    sampler::Sampler_ptr prior_ptr(nullptr);
+    std::vector<std::string> unfixed_params = settings.param_names;
+    sampler::SamplerData sampler_data(unfixed_params.size());
+    sampler_data.bounds = settings.getBounds(unfixed_params);
+
+    if (lfns_settings.uniform_prior) {
+        sampler::UniformSamplerData uni_data(sampler_data);
+        prior_ptr = std::make_shared<sampler::UniformSampler>(rng, sampler_data);
+    } else {
+        sampler::DpGmmSamplerData dpgmm_data(sampler_data);
+        dpgmm_data.num_dp_iterations = 50;
+        sampler::DpGmmSampler_ptr dpgmm_sampler = std::make_shared<sampler::DpGmmSampler>(rng, dpgmm_data);
+
+        lfns::LiveParticleSet particles;
+        particles.readFromFile(lfns_settings.prior_file);
+        base::EiMatrix matrix = particles.toMatrix();
+        for (int &index: settings.getLogParams()) {
+            matrix.col(index) = matrix.col(index).array().log10();
+        }
+
+        dpgmm_sampler->updateDensitySamples(matrix);
+        prior_ptr = dpgmm_sampler;
+    }
+    return prior_ptr;
+}
 
 sampler::SamplerSettings LFNSSetup::_readSamplerSettings() {
     sampler::SamplerSettings sampler_setting;
@@ -194,7 +299,7 @@ lfns::LFNSSettings LFNSSetup::_readLFNSSettings() {
     } else {
         try { lfns_setting.log_termination = std::log(interpreter.getEpsilonForLFNS()); }
         catch (const std::runtime_error &e) {
-            std::cout
+            std::cerr
                     << "\tNo number termination threshold epsilon for LFNS provided (either with -t through the command line or 'LFNS.epsilon' in the config file). Assume epsilon = "
                     << std::exp(lfns_setting.log_termination) << std::endl;
         }
@@ -213,6 +318,10 @@ lfns::LFNSSettings LFNSSetup::_readLFNSSettings() {
                 lfns_setting.estimator = lfns::DENSITY_ESTIMATOR::ELLIPS;
                 break;
             }
+            case 3: {
+                lfns_setting.estimator = lfns::DENSITY_ESTIMATOR::SLICE;
+                break;
+            }
         }
     }
     if (_lfns_options.vm.count("previous_pop") >
@@ -220,5 +329,22 @@ lfns::LFNSSettings LFNSSetup::_readLFNSSettings() {
     if (_lfns_options.vm.count("printinterval") > 0) { lfns_setting.print_interval = _lfns_options.print_interval; }
     if (_lfns_options.vm.count("rej_quan") >
         0) { lfns_setting.rejection_quantile_for_density_estimation = _lfns_options.rejection_quantile; }
+
+    if (_lfns_options.vm.count("acc_thresh") > 0 || _lfns_options.vm.count("rej_quan_lo_accept") > 0) {
+        if (_lfns_options.vm.count("acc_thresh") != _lfns_options.vm.count("rej_quan_lo_accept")) {
+            std::cerr
+                    << "If variable rejection constant for the rejection sampler is set, bot, the acceptance rate threshold as well as the corresponding rejection quantile needs to be provided! Ignoring provided values!"
+                    << std::endl;
+            lfns_setting.rejection_quantile_low_accept = -1;
+            lfns_settings.thresh_accept_rate = -1;
+        }
+
+        lfns_setting.rejection_quantile_low_accept = _lfns_options.rejection_quantile_low_accept;
+        lfns_setting.thresh_accept_rate = _lfns_options.thresh_accept_rate;
+    }
+    if (_lfns_options.vm.count("priorfile") > 0) {
+        lfns_setting.uniform_prior = false;
+        lfns_setting.prior_file = _lfns_options.prior_file;
+    }
     return lfns_setting;
 }

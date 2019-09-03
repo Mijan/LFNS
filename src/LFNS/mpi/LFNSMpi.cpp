@@ -18,20 +18,26 @@
 
 #include <boost/serialization/export.hpp>
 
+BOOST_SERIALIZATION_ASSUME_ABSTRACT(sampler::Sampler);
+BOOST_SERIALIZATION_ASSUME_ABSTRACT(sampler::KernelSampler);
+
 BOOST_CLASS_EXPORT_GUID(sampler::Sampler, "Sampler");
 BOOST_CLASS_EXPORT_GUID(sampler::KernelSampler, "KernelSampler");
 BOOST_CLASS_EXPORT_GUID(sampler::DensityEstimation, "DensityEstimation");
 BOOST_CLASS_EXPORT_GUID(sampler::DpGmmSampler, "DpGmmSampler");
 BOOST_CLASS_EXPORT_GUID(sampler::EllipsoidSampler, "EllipsoidSampler");
 BOOST_CLASS_EXPORT_GUID(sampler::KernelDensityEstimation, "KernelDensityEstimation");
+BOOST_CLASS_EXPORT_GUID(sampler::KernelSupportEstimation, "KernelSupportEstimation");
 BOOST_CLASS_EXPORT_GUID(sampler::RejectionSupportSampler, "RejectionSupportSampler");
 BOOST_CLASS_EXPORT_GUID(sampler::UniformSampler, "UniformSampler");
+BOOST_CLASS_EXPORT_GUID(sampler::GaussianSampler, "GaussianSampler");
 
 namespace lfns {
     namespace mpi {
-        LFNSMpi::LFNSMpi(LFNSSettings &lfns_settings, sampler::SamplerSettings &sampler_settings, base::RngPtr rng,
-                         int num_tasks) : LFNS(lfns_settings, sampler_settings, rng), _num_tasks(num_tasks), time_1(0),
-                                          time_2(0), time_3(0), time_4(0), time_5(0) {}
+
+        LFNSMpi::LFNSMpi(LFNSSettings &lfns_settings, int num_tasks)
+                : LFNS(lfns_settings), _num_tasks(num_tasks),
+                  time_1(0), time_2(0), time_3(0), time_4(0), time_5(0) {}
 
         LFNSMpi::~LFNSMpi() {}
 
@@ -80,6 +86,7 @@ namespace lfns {
                     queue.clearFirstParticle();
                 }
             }
+            _logger.logIterationStats();
             queue.stopPendingRequests();
         }
 
@@ -89,6 +96,7 @@ namespace lfns {
         }
 
         void LFNSMpi::_sampleConstPrior(RequestQueue &queue) {
+            _sampler->updateAcceptanceRate(_logger.lastAcceptanceRate());
             for (int j = 0; j < _settings.r; j++) {
                 const LFNSParticle &particle = _live_points.removeLowestPartcile();
                 _dead_points.push_back(particle);
@@ -100,9 +108,10 @@ namespace lfns {
             _logger.epsilonUpdated(_epsilon);
 
             time_t tic = clock();
-            _sampler.updateLiveSamples(_live_points);
-            time_t toc= clock();
-            _logger.samplerUpdated(_sampler, toc - tic);
+            std::cout << "number of live samples: " << _live_points.numberParticles() << std::endl;
+            _sampler->updateLiveSamples(_live_points);
+            time_t toc = clock();
+            _logger.samplerUpdated(*_sampler, toc - tic);
             _updateSampler();
 
             while (_live_points.numberParticles() < _settings.N) {
@@ -141,7 +150,7 @@ namespace lfns {
                 world.send(rank, INSTRUCTION, UPDATE_SAMPLER);
 
                 std::stringstream stream;
-                _sampler.getSerializedSampler(stream);
+                _sampler->getSerializedSampler(stream);
 
                 std::size_t sampler_size = stream.str().size();
                 world.send(rank, SAMPLER_SIZE, sampler_size);

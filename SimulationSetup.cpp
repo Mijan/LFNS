@@ -46,7 +46,15 @@ void SimulationSetup::_readSettingsfromFile() {
 
 }
 
-std::vector<std::string> SimulationSetup::_readExperiments() { return interpreter.getExperimentsForSimulations(); }
+std::vector<std::string> SimulationSetup::_readExperiments() {
+    try {
+        return interpreter.getExperimentsForSimulations();
+    } catch (const std::exception &e) {
+        std::cerr << "Failed to read experiments for simulation:\n\t" << e.what() << std::endl;
+        std::cerr << "Dummy experiment '0' will be simulated." << std::endl;
+        return {"0"};
+    }
+}
 
 void SimulationSetup::printSettings(std::ostream &os) {
     GeneralSetup::printSettings(os);
@@ -142,7 +150,7 @@ void SimulationSetup::_readSimulationSettings() {
         else {
             std::cerr
                     << "No number of simulations (either with -n through command line or 'Simulation.num_simulations') provided, assume default value of "
-                    << number_simulations;
+                    << number_simulations << std::endl;
         }
     }
 

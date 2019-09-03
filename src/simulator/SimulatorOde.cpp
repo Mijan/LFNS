@@ -9,6 +9,7 @@
 #include <cstring>
 #include "SimulatorOde.h"
 #include "../base/MathUtils.h"
+#include "SimulatorExceptions.h"
 
 namespace simulator {
     using namespace std::placeholders;
@@ -21,7 +22,7 @@ namespace simulator {
 
         _t_ptr = &_t;
         _states_ptr = &_states;
-        _cvode_mem = CVodeCreate(CV_BDF, CV_NEWTON);
+        _cvode_mem = CVodeCreate(CV_BDF);
 
         _rhs_data.rhs_fct = rhs_fct;
         _rhs_data.num_states = num_states;
@@ -64,7 +65,7 @@ namespace simulator {
               _A(SUNDenseMatrix(rhs._states.size(), rhs._states.size())),
               _LS(SUNDenseLinearSolver(_current_state_n_vector, _A)) {
 
-        _cvode_mem = CVodeCreate(CV_BDF, CV_NEWTON);
+        _cvode_mem = CVodeCreate(CV_BDF);
         _t_ptr = &_t;
         _states_ptr = &_states;
         _rhs_data.rhs_fct = rhs._rhs_data.rhs_fct;
@@ -112,17 +113,12 @@ namespace simulator {
     }
 
     void SimulatorOde::reset(std::vector<double> &state, double &t) {
+        Simulator::reset(state, t);
 
         N_VSetArrayPointer(state.data(), _current_state_n_vector);
-        _states_ptr = &state;
-        _t_ptr = &t;
 
         if (CVodeReInit(_cvode_mem, t, _current_state_n_vector) != CV_SUCCESS) {
             throw std::runtime_error("Reinitializing ODE solver went wrong!");
-        }
-
-        if (!_discont_times.empty() && t < _discont_times.back()) {
-            _discont_it = base::MathUtils::binarySearchLatter(_discont_times.begin(), _discont_times.end() - 1, t);
         }
     }
 
@@ -190,7 +186,9 @@ namespace simulator {
             os << "Current step size:\t" << h_curr << std::endl;
             os << "Current internal time:\t" << t_cur;
 
-            throw std::runtime_error(os.str());
+            SimulationAborted exception(os.str(), t);
+
+            throw exception;
         }
     }
 
