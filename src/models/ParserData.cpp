@@ -23,14 +23,37 @@ namespace models {
                                                     _uniform_random_params(), _uniform_int_random_params() {
         try {
             io::ParserReader reader(file_name);
-            parameter_names = reader.readParameterNames();
-            species_names = reader.readSpeciesNames();
-            _normal_random_nbr = reader.readNormalRdn();
-            _uniform_random_nbr = reader.readUniformRdn();
-            _uniform_int_random_nbr = reader.readUniformIntRdn();
-            _normal_random_params = reader.readNormalParams();
-            _uniform_random_params = reader.readUniformParams();
-            _uniform_int_random_params = reader.readUniformIntParams();
+            if (reader.parametersDefined()) { parameter_names = reader.readParameterNames(); }
+            if (reader.speciesDefined()) { species_names = reader.readSpeciesNames(); }
+            if (reader.randomNumbersDefined()) {
+                _normal_random_nbr = reader.readNormalRdn();
+                if (!_normal_random_nbr.empty()) { _normal_random_params = reader.readNormalParams(); }
+                _uniform_random_nbr = reader.readUniformRdn();
+                if (!_uniform_random_nbr.empty()) { _uniform_random_params = reader.readUniformParams(); }
+                _uniform_int_random_nbr = reader.readUniformIntRdn();
+                if (!_uniform_int_random_nbr.empty()) { _uniform_int_random_params = reader.readUniformIntParams(); }
+                if (_normal_random_nbr.size() != _normal_random_params.size()) {
+                    std::stringstream ss;
+                    ss << "Failed to define random numbers. Number of normal random numbers defined: "
+                       << _normal_random_nbr.size() << ", but " << _normal_random_params.size()
+                       << " parameters defined!" << std::endl;
+                    throw std::runtime_error(ss.str());
+                }
+                if (_uniform_random_nbr.size() != _uniform_random_params.size()) {
+                    std::stringstream ss;
+                    ss << "Failed to define random numbers. Number of uniform random numbers defined: "
+                       << _uniform_random_nbr.size() << ", but " << _uniform_random_params.size()
+                       << " parameters defined!" << std::endl;
+                    throw std::runtime_error(ss.str());
+                }
+                if (_uniform_int_random_nbr.size() != _uniform_int_random_params.size()) {
+                    std::stringstream ss;
+                    ss << "Failed to define random numbers. Number of uniform int random numbers defined: "
+                       << _uniform_int_random_nbr.size() << ", but " << _uniform_int_random_params.size()
+                       << " parameters defined!" << std::endl;
+                    throw std::runtime_error(ss.str());
+                }
+            }
         } catch (const std::exception &e) {
             std::stringstream os;
             os << "Failed to crate Parser Data: " << "\n\t" << e.what() << std::endl;

@@ -22,6 +22,12 @@ namespace io {
 
         virtual ~ParserReader();
 
+        bool parametersDefined() const;
+
+        bool speciesDefined() const;
+
+        bool randomNumbersDefined() const;
+
         std::vector<std::string> readParameterNames();
 
         std::vector<std::string> readSpeciesNames();

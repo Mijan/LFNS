@@ -8,19 +8,23 @@
 #include <sstream>
 #include <boost/algorithm/string.hpp>
 #include "../base/Utils.h"
+#include "ReaderException.h"
+#include <boost/algorithm/string.hpp>
 
 namespace io {
-    TxtFileReader::TxtFileReader(std::string txt_file_name) : _txt_file_lines() {
+    TxtFileReader::TxtFileReader(std::string txt_file_name) : _file_name(txt_file_name), _txt_file_lines() {
         std::ifstream txt_stream(txt_file_name.c_str());
         if (!txt_stream.is_open()) {
             std::ostringstream os;
-            os << "File " << txt_file_name << " could not be read!"
-               << std::endl;
-            throw std::runtime_error(os.str());
+            os << "File " << txt_file_name << " could not be read!" << std::endl;
+            throw ReaderException(os.str());
         }
 
         std::string line;
-        while (std::getline(txt_stream, line)) { _txt_file_lines.push_back(line); }
+        while (std::getline(txt_stream, line)) {
+            boost::trim(line);
+            _txt_file_lines.push_back(line);
+        }
         txt_stream.close();
     }
 
@@ -35,11 +39,11 @@ namespace io {
         for (std::size_t line_nbr = 0; line_nbr < _txt_file_lines.size(); line_nbr++) {
 
             line = _txt_file_lines[line_nbr];
-            if (line.compare(caption) == 0) {
+            if (boost::iequals(line, caption)) {
                 if (entries_found) {
                     std::ostringstream os;
                     os << "Multiple lines with '" << caption << "' found!" << std::endl;
-                    throw std::runtime_error(os.str());
+                    throw ReaderException(os.str());
                 }
                 entries = _readStrippedDelimitterdLine(_txt_file_lines[line_nbr + 1], delimiter);
                 entries_found = true;
@@ -48,7 +52,7 @@ namespace io {
         if (!entries_found) {
             std::ostringstream os;
             os << "'" << caption << "' line not found!" << std::endl;
-            throw std::runtime_error(os.str());
+            throw ReaderException(os.str());
         }
         return entries;
     }
@@ -85,7 +89,7 @@ namespace io {
             std::ostringstream os;
             os << "line must have exactly one token '" << delimiter
                << "', current line is: " << line << std::endl;
-            throw std::runtime_error(os.str());
+            throw ReaderException(os.str());
         }
 
         return two_strings;
@@ -104,16 +108,24 @@ namespace io {
                 reaction_lines.push_back(line);
             }
 
-            if (line.compare(caption) == 0) {
-                reactions_found = true;
-            }
+            if (boost::iequals(line, caption)) { reactions_found = true; }
         }
 
         if (!reactions_found) {
             std::ostringstream os;
             os << caption << " line not found!" << std::endl;
-            throw std::runtime_error(os.str());
+            throw ReaderException(os.str());
         }
         return reaction_lines;
+    }
+
+
+    bool TxtFileReader::_keyworkdExists(std::string keyword) const {
+        std::string line;
+        for (std::size_t line_nbr = 0; line_nbr < _txt_file_lines.size(); line_nbr++) {
+            line = _txt_file_lines[line_nbr];
+            if (boost::iequals(line, keyword)) { return true; }
+        }
+        return false;
     }
 }

@@ -117,7 +117,7 @@ namespace models {
                 for (std::string &state_name : state_order) { ss << state_name << ", "; }
                 ss << std::endl;
                 ss << "Internal state order: ";
-                for (const std::string &state_name : _initial_data.getSpeciesNames()) { ss << state_name << ", "; }
+                for (const std::string &state_name : _initial_data.getInitialStates()) { ss << state_name << ", "; }
                 ss << std::endl;
                 throw std::runtime_error(ss.str());
             }
