@@ -4,6 +4,7 @@
 
 #include "XmlFileReader.h"
 #include "../base/Utils.h"
+#include "ReaderExceptions.h"
 #include <boost/property_tree/xml_parser.hpp>
 
 namespace io {
@@ -18,11 +19,16 @@ namespace io {
 
         std::vector<XmlMap> maps = getEntryMaps(parent_path, sub_tree_name);
 
+        if (maps.empty()) {
+            std::ostringstream os;
+            os << "Subtree " << sub_tree_name << " not found. " << std::endl;
+            throw EntryNotFoundException(os.str());
+        }
         if (maps.size() != 1) {
             std::ostringstream os;
             os << "Exactly one tree '" << sub_tree_name << "' expected, but " << maps.size() <<
                " provided!" << std::endl;
-            throw std::runtime_error(os.str());
+            throw ReaderException(os.str());
         }
         return maps[0];
     };

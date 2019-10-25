@@ -15,6 +15,11 @@ namespace io {
     private:
         std::string _error_message;
     };
+
+    class EntryNotFoundException : public ReaderException {
+    public:
+        EntryNotFoundException(std::string error_message) : ReaderException(error_message) {}
+    };
 }
 
 #endif //LFNS_READEREXCEPTION_H

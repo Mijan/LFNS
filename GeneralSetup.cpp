@@ -40,9 +40,8 @@ models::ModelSettings GeneralSetup::_readModelSettings() {
     base::Utils::addOnlyNew<std::string>(param_names, measure_data.getParameterNames());
     model_settings.param_names = param_names;
 
-    try {
-        model_settings.fixed_parameters = interpreter.getFixedParameters();
-    } catch (const std::exception &e) {}
+
+    model_settings.fixed_parameters = interpreter.getFixedParameters();
 
     std::string model_type_str = interpreter.getModelType();
     if (models::MODEL_TYPE_NAME.count(model_type_str) == 0) {

@@ -11,6 +11,7 @@
 #include "../base/Utils.h"
 #include "../sampler/GaussianSampler.h"
 #include "../sampler/UniformSampler.h"
+#include "ReaderExceptions.h"
 
 namespace io {
 
@@ -100,7 +101,12 @@ namespace io {
 
     std::map<std::string, std::pair<double, double> > ConfigFileInterpreter::getParameterBounds() {
         std::map<std::string, std::pair<double, double> > bounds;
-        std::vector<XmlMap> bound_entries = _reader.getEntryMaps("parameters.bounds", "bound");
+        std::vector<XmlMap> bound_entries;
+        try {
+            bound_entries = _reader.getEntryMaps("parameters.bounds", "bound");
+        } catch (const std::exception &e) {
+            return bounds;
+        }
 
         for (XmlMap bound_entry: bound_entries) {
             std::string param_name_str = bound_entry["parameters"].entry;
@@ -127,7 +133,14 @@ namespace io {
 
     std::map<std::string, double> ConfigFileInterpreter::getFixedParameters() {
         std::map<std::string, double> fixed_params;
-        XmlMap fixed_entries = _reader.getEntryMap("parameters", "fixedparams");
+        XmlMap fixed_entries;
+
+        try {
+            fixed_entries = _reader.getEntryMap("parameters", "fixedparams");
+        }catch(const EntryNotFoundException &e){
+            return fixed_params;
+        }
+
         std::string param_names_str = fixed_entries["parameters"].entry;
         std::vector<std::string> param_names = base::Utils::StringToStringVector(param_names_str);
 
