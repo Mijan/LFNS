@@ -12,6 +12,7 @@
 #include "src/models/FullModel.h"
 #include "src/simulator/Simulator.h"
 #include "src/io/ConfigFileInterpreter.h"
+#include "src/simulator/SimulatorOde.h"
 
 class GeneralSetup {
 
@@ -40,6 +41,7 @@ protected:
     virtual std::vector<std::string> _readExperiments() = 0;
 
     models::ModelSettings _readModelSettings();
+    simulator::OdeSettings _readOdeSettings();
 
     std::vector<models::InputData> _getInputDatasForExperiment(std::string experiment, double final_time);
 

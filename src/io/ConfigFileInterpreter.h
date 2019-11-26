@@ -14,6 +14,16 @@
 
 namespace io {
 
+    class ConfigFileException : public std::exception {
+    public:
+        ConfigFileException(std::string e) : _error_message(e) {};
+
+        const char *what() const throw() { return _error_message.c_str(); }
+
+    private:
+        std::string _error_message;
+    };
+
     class ConfigFileInterpreter {
     public:
         ConfigFileInterpreter(std::string instance_file_name);
@@ -91,6 +101,16 @@ namespace io {
         std::vector<std::string> getDetSpecies();
 
         std::vector<std::string> getStochSpecies();
+
+        double getMinStepSize();
+
+        double getRelTol();
+
+        double getAbsTol();
+
+        int getMaxErrorFails();
+
+        int getMaxNumberSteps();
 
     protected:
         XmlFileReader _reader;

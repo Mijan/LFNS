@@ -98,6 +98,66 @@ namespace io {
         return stoch_species;
     }
 
+    double ConfigFileInterpreter::getMinStepSize(){
+        try {
+            std::string min_step_size_str = _reader.getEntry("ODESettings.minstepsize");
+            return std::stod(min_step_size_str);
+        } catch (const std::exception &e) {
+            std::stringstream ss;
+            ss << "Could not read the minimal step size for ODE simulator: \n\t" << e.what() << std::endl;
+            ConfigFileException except(ss.str());
+            throw except;
+        }
+    }
+
+    double ConfigFileInterpreter::getRelTol(){
+        try {
+            std::string rel_tol_str = _reader.getEntry("ODESettings.reltol");
+            return std::stod(rel_tol_str);
+        } catch (const std::exception &e) {
+            std::stringstream ss;
+            ss << "Could not read the relative tolerance for ODE simulator: \n\t" << e.what() << std::endl;
+            ConfigFileException except(ss.str());
+            throw except;
+        }
+    }
+
+    double ConfigFileInterpreter::getAbsTol(){
+        try {
+            std::string abs_tol_str = _reader.getEntry("ODESettings.abstol");
+            return std::stod(abs_tol_str);
+        } catch (const std::exception &e) {
+            std::stringstream ss;
+            ss << "Could not read the absolute tolerance for ODE simulator: \n\t" << e.what() << std::endl;
+            ConfigFileException except(ss.str());
+            throw except;
+        }
+    }
+
+    int ConfigFileInterpreter::getMaxErrorFails(){
+        try {
+            std::string max_error_fails_str = _reader.getEntry("ODESettings.maxerrorfails");
+            return std::stod(max_error_fails_str);
+        } catch (const std::exception &e) {
+            std::stringstream ss;
+            ss << "Could not read the maximal error fails for ODE simulator: \n\t" << e.what() << std::endl;
+            ConfigFileException except(ss.str());
+            throw except;
+        }
+    }
+
+    int ConfigFileInterpreter::getMaxNumberSteps(){
+        try {
+            std::string abs_tol_str = _reader.getEntry("ODESettings.maxnumsteps");
+            return std::stod(abs_tol_str);
+        } catch (const std::exception &e) {
+            std::stringstream ss;
+            ss << "Could not read the maximal number of steps for ODE simulator: \n\t" << e.what() << std::endl;
+            ConfigFileException except(ss.str());
+            throw except;
+        }
+    }
+
 
     std::map<std::string, std::pair<double, double> > ConfigFileInterpreter::getParameterBounds() {
         std::map<std::string, std::pair<double, double> > bounds;

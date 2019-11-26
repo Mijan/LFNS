@@ -110,8 +110,8 @@ namespace models {
                 dx[species_index] = 0;
             }
             species_index++;
-
         }
+        int a = 2;
     }
 
     RhsFct_ptr ChemicalReactionNetwork::getRhsFct() {

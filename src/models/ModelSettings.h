@@ -48,25 +48,6 @@ namespace models {
             stream << "Measurement file:\t" << measurement_file << std::endl << std::endl;
 
 
-            if (model_type == MODEL_TYPE::STOCH) { stream << "A SSA simulator will be used" << std::endl; }
-            else if (model_type == MODEL_TYPE::HYBRID) {
-                stream << "A HYBRID simulator will be used" << std::endl;
-                if(!det_species_names.empty()) {
-                    stream << std::setw(30) << "\nDeterminsitic species: " << det_species_names[0] << std::endl;
-                    for (int i = 1; i < det_species_names.size(); i++) {
-                        stream << std::setw(30) << det_species_names[i] << std::endl;
-                    }
-                    stream << "Remaining species will be simulated stochastically.\n" << std::endl;
-                }else {
-                    stream << std::setw(30) << "\nStochastic species: " << stoch_species_names[0] << std::endl;
-                    for (int j = 1; j < stoch_species_names.size(); j++) {
-                        stream << std::setw(30) << stoch_species_names[j] << std::endl;
-                    }
-                    stream << "Remaining species will be simulated deterministically.\n" << std::endl;
-                }
-
-            } else { stream << "An ODE simulator will be used" << std::endl; }
-
             std::size_t max_name_length = 0;
             for (std::string &param_name : param_names) {
                 if (max_name_length < param_name.size()) { max_name_length = param_name.size(); }
@@ -103,6 +84,27 @@ namespace models {
                 }
                 stream << std::endl;
             }
+
+            if (model_type == MODEL_TYPE::STOCH) { stream << "A SSA simulator will be used" << std::endl; }
+            else if (model_type == MODEL_TYPE::HYBRID) {
+                stream << "A HYBRID simulator will be used" << std::endl;
+                if (!det_species_names.empty()) {
+                    stream << std::setw(30) << "\nDeterminsitic species: " << det_species_names[0] << std::endl;
+                    for (int i = 1; i < det_species_names.size(); i++) {
+                        stream << std::setw(30) << det_species_names[i] << std::endl;
+                    }
+                    stream << "Remaining species will be simulated stochastically.\n" << std::endl;
+                } else {
+                    stream << std::setw(30) << "\nStochastic species: " << stoch_species_names[0] << std::endl;
+                    for (int j = 1; j < stoch_species_names.size(); j++) {
+                        stream << std::setw(30) << stoch_species_names[j] << std::endl;
+                    }
+                    stream << "Remaining species will be simulated deterministically.\n" << std::endl;
+                }
+
+            } else { stream << "An ODE simulator will be used" << std::endl; }
+
+
         }
     };
 }

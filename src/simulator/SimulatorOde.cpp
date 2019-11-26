@@ -86,6 +86,11 @@ namespace simulator {
         if (CVodeSetErrHandlerFn(_cvode_mem, CVErrHandlerFn, nullptr) != CV_SUCCESS) {
             throw std::runtime_error("Error handling could not be set!");
         }
+
+        if (CVodeSStolerances(_cvode_mem, _settings.rel_tol, _settings.abs_tol) != CV_SUCCESS) {
+            throw std::runtime_error("Setting tolerances for ODE solver went wrong!");
+        }
+
         if (CVodeSStolerances(_cvode_mem, _settings.rel_tol, _settings.abs_tol) != CV_SUCCESS) {
             throw std::runtime_error("Setting tolerances for ODE solver went wrong!");
         }
@@ -195,7 +200,18 @@ namespace simulator {
 
     int SimulatorOde::cvOdeRhs_static(realtype t, N_Vector y, N_Vector ydot, void *user_data) {
         RhsData *rhs_data = (RhsData *) user_data;
+//        std::cout << "Y before: " << std::endl;
+//        N_VPrint_Serial(y);
+//        std::cout << "\nY_dot before: " << std::endl;
+//        N_VPrint_Serial(ydot);
+//        double* y_dot_ptr = NV_DATA_S(ydot);
+//        double* y_ptr = NV_DATA_S(y);
         (*rhs_data->rhs_fct)(NV_DATA_S(ydot), NV_DATA_S(y), t);
+
+//        std::cout << "Y after: " << std::endl;
+//        N_VPrint_Serial(y);
+//        std::cout << "\nY_dot after: " << std::endl;
+//        N_VPrint_Serial(ydot);
         return 0;
     }
 

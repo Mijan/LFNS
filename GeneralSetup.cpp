@@ -77,6 +77,42 @@ models::ModelSettings GeneralSetup::_readModelSettings() {
     return model_settings;
 }
 
+simulator::OdeSettings GeneralSetup::_readOdeSettings() {
+    simulator::OdeSettings ode_settings;
+    try { ode_settings.min_step_size = interpreter.getMinStepSize(); } catch (const io::ConfigFileException &e) {
+        std::stringstream ss;
+        ss << "No minimal step size for ODE provided (ODESettings.minstepsize), assume default value of "
+           << ode_settings.min_step_size;
+        std::cerr << ss.str() << std::endl;
+    }
+    try { ode_settings.rel_tol = interpreter.getRelTol(); } catch (const io::ConfigFileException &e) {
+        std::stringstream ss;
+        ss << "No relative tolerance for ODE provided (ODESettings.reltol), assume default value of "
+           << ode_settings.rel_tol;
+        std::cerr << ss.str() << std::endl;
+    }
+    try { ode_settings.abs_tol = interpreter.getAbsTol(); } catch (const io::ConfigFileException &e) {
+        std::stringstream ss;
+        ss << "No absolute tolerance for ODE provided (ODESettings.abstol), assume default value of "
+           << ode_settings.abs_tol;
+        std::cerr << ss.str() << std::endl;
+    }
+    try { ode_settings.max_error_fails = interpreter.getMaxErrorFails(); } catch (const io::ConfigFileException &e) {
+        std::stringstream ss;
+        ss << "No maximal error fails for ODE provided (ODESettings.maxerrorfails), assume default value of "
+           << ode_settings.max_error_fails;
+        std::cerr << ss.str() << std::endl;
+    }
+    try { ode_settings.max_num_steps = interpreter.getMaxNumberSteps(); } catch (const io::ConfigFileException &e) {
+        std::stringstream ss;
+        ss << "No maximal number of steps for ODE provided (ODESettings.maxnumsteps), assume default value of "
+           << ode_settings.max_num_steps;
+        std::cerr << ss.str() << std::endl;
+    }
+
+    return ode_settings;
+}
+
 std::vector<models::InputData> GeneralSetup::_getInputDatasForExperiment(std::string experiment, double final_time) {
     std::vector<double> periods = interpreter.getPulsePeriods(experiment);
     std::vector<models::InputData> datas;
@@ -117,7 +153,7 @@ simulator::Simulator_ptr GeneralSetup::_createSimulator(models::ChemicalReaction
         sim_ptr = std::make_shared<simulator::SimulatorSsa>(simulator_ssa);
     } else if (model_settings.model_type == models::MODEL_TYPE::HYBRID) {
         if (!model_settings.stoch_species_names.empty()) {
-            std::cout << "set stoch speices" << std::endl;
+            std::cout << "set stoch species" << std::endl;
             dynamics->setStochStatesForHybridModel(model_settings.stoch_species_names);
         } else {
             dynamics->setDetStatesForHybridModel(model_settings.det_species_names);
@@ -126,7 +162,7 @@ simulator::Simulator_ptr GeneralSetup::_createSimulator(models::ChemicalReaction
                                               dynamics->getNumReactions());
         simulator::SimulatorSsa_ptr simulator_ssa_ptr = std::make_shared<simulator::SimulatorSsa>(simulator_ssa);
 
-        simulator::OdeSettings ode_settings;
+        simulator::OdeSettings ode_settings = _readOdeSettings();
         simulator::SimulatorOde simulator_ode(ode_settings, dynamics->getRhsFct(), dynamics->getNumSpecies());
         simulator::SimulatorOde_ptr simulator_ode_ptr = std::make_shared<simulator::SimulatorOde>(simulator_ode);
 
@@ -135,7 +171,7 @@ simulator::Simulator_ptr GeneralSetup::_createSimulator(models::ChemicalReaction
         sim_ptr = std::make_shared<simulator::SimulatorHybrid>(simulator_ssa_ptr, simulator_ode_ptr, stoch_indices,
                                                                det_indices);
     } else {
-        simulator::OdeSettings ode_settings;
+        simulator::OdeSettings ode_settings = _readOdeSettings();
         simulator::SimulatorOde simulator_ode(ode_settings, dynamics->getRhsFct(), dynamics->getNumSpecies());
         simulator::SimulatorOde_ptr simulator_ode_ptr = std::make_shared<simulator::SimulatorOde>(simulator_ode);
         sim_ptr = simulator_ode_ptr;

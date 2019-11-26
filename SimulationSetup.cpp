@@ -97,6 +97,16 @@ void SimulationSetup::printSettings(std::ostream &os) {
 
     os << "\n---------- Model Settings ----------" << std::endl;
     model_settings.print(os);
+
+    if (model_settings.model_type == models::MODEL_TYPE::HYBRID || model_settings.model_type == models::MODEL_TYPE::ODE){
+        simulator::OdeSettings ode_settings = _readOdeSettings();
+        os << "Settings for ODE simulator:" << std::endl;
+        os << std::setw(30) << std::left << "Minimal step size:" <<ode_settings.min_step_size << std::endl;
+        os << std::setw(30) << std::left  << "Maximal number of steps:" <<ode_settings.max_num_steps << std::endl;
+        os << std::setw(30) << std::left  << "Maximal error fails:" <<ode_settings.max_error_fails << std::endl;
+        os << std::setw(30) << std::left  << "Absolute tolerance:" <<ode_settings.abs_tol << std::endl;
+        os << std::setw(30) << std::left  << "Relative tolerance:" <<ode_settings.rel_tol << std::endl;
+    }
     os << std::endl;
     if (full_models.empty()) { std::cerr << "No models created!!" << std::endl; }
     else { full_models.back()->printInfo(os); }
