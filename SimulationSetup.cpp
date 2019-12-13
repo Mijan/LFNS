@@ -98,14 +98,15 @@ void SimulationSetup::printSettings(std::ostream &os) {
     os << "\n---------- Model Settings ----------" << std::endl;
     model_settings.print(os);
 
-    if (model_settings.model_type == models::MODEL_TYPE::HYBRID || model_settings.model_type == models::MODEL_TYPE::ODE){
+    if (model_settings.model_type == models::MODEL_TYPE::HYBRID ||
+        model_settings.model_type == models::MODEL_TYPE::ODE) {
         simulator::OdeSettings ode_settings = _readOdeSettings();
         os << "Settings for ODE simulator:" << std::endl;
-        os << std::setw(30) << std::left << "Minimal step size:" <<ode_settings.min_step_size << std::endl;
-        os << std::setw(30) << std::left  << "Maximal number of steps:" <<ode_settings.max_num_steps << std::endl;
-        os << std::setw(30) << std::left  << "Maximal error fails:" <<ode_settings.max_error_fails << std::endl;
-        os << std::setw(30) << std::left  << "Absolute tolerance:" <<ode_settings.abs_tol << std::endl;
-        os << std::setw(30) << std::left  << "Relative tolerance:" <<ode_settings.rel_tol << std::endl;
+        os << std::setw(30) << std::left << "Minimal step size:" << ode_settings.min_step_size << std::endl;
+        os << std::setw(30) << std::left << "Maximal number of steps:" << ode_settings.max_num_steps << std::endl;
+        os << std::setw(30) << std::left << "Maximal error fails:" << ode_settings.max_error_fails << std::endl;
+        os << std::setw(30) << std::left << "Absolute tolerance:" << ode_settings.abs_tol << std::endl;
+        os << std::setw(30) << std::left << "Relative tolerance:" << ode_settings.rel_tol << std::endl;
     }
     os << std::endl;
     if (full_models.empty()) { std::cerr << "No models created!!" << std::endl; }
@@ -126,15 +127,31 @@ void SimulationSetup::_readSimulationSettings() {
                << std::endl;
             throw std::runtime_error(ss.str());
         }
-        if (parameter.size() == 0 && parameter_file.size() == 0) {
+        if (!sim_param_names.empty() && parameter.size() == 0 && parameter_file.size() == 0) {
             std::stringstream ss;
             ss
-                    << "For simulation either a parameter vector (either with -p through the command line or 'Simulation.parameter' through config file) or a file with parameters either with -P through the command line or 'Simulation.parameter_file' through config file) needs to be provided"
+                    << "For simulation either a parameter vector (either with -p through the command line or 'Simulation.parameter' through config file) or a file with parameters (either with -P through the command line or 'Simulation.parameter_file' through config file) needs to be provided"
                     << std::endl;
             throw std::runtime_error(ss.str());
         }
     }
 
+    if (sim_param_names.empty()) {
+        if (!parameter.empty()) {
+            std::cerr
+                    << "Warning: No parameters needed for simulation, but simulation parameters provided! Provided parameters will be ignored!"
+                    << std::endl;
+            parameter.clear();
+        }
+
+        if (!parameter_file.empty()) {
+            std::cerr
+                    << "Warning: No parameters needed for simulation, but simulation parameter file provided! Provided parameters will be ignored!"
+                    << std::endl;
+            parameter_file.clear();
+        }
+
+    }
     if (!parameter.empty()) {
         if (parameter.size() != sim_param_names.size()) {
             std::stringstream ss;
@@ -203,6 +220,9 @@ void SimulationSetup::_createOutputTimes() {
 }
 
 void SimulationSetup::_createParameterVector() {
+    if (sim_param_names.empty()) {
+        parameters.push_back(std::vector<double>());
+        return; }
     if (!parameter.empty()) {
         parameters.push_back(parameter);
     } else {

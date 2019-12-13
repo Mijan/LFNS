@@ -154,7 +154,7 @@ namespace simulator {
             }
 
             if (_stopping_criterions.processStopped()) { return; }
-            run_next_step = final_time > t + _settings.min_step_size;
+            run_next_step = final_time > t + std::max(_settings.min_step_size, 1e-10);
         }
     }
 
