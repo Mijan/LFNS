@@ -49,9 +49,6 @@ namespace lfns {
 
         post_quant.log_ztot = base::MathUtils::sumOfLog(log_zd, log_zl);
 
-//
-//        double log_zd_var = _computeLogZdVar(dead_points, log_zd);
-//        double log_zd_var_2 = _computeLogZdVar_2(dead_points, log_zd);
         double log_zd_var = _computeLogZdVar_3(dead_points, log_zd);
         post_quant.log_zd_var = log_zd_var;
 
@@ -63,7 +60,6 @@ namespace lfns {
         _computeCovTerm(dead_points, live_points, &log_cov_term, &sign_cov);
         double log_ztot_var = base::MathUtils::sumOfLog({log_zl_var, log_zd_var, log_cov_term}, {1, 1, sign_cov});
 
-//        double log_z_tot_var_prev = _computeLogZtotVar(log_zd, log_zd_var, log_zl, log_zl_var, live_points, m);
         post_quant.log_ztot_var = log_ztot_var;
 
         post_quant.log_live_average = live_points.getLogAverageL();
@@ -114,98 +110,7 @@ namespace lfns {
 
     double PosteriorEstimator::E_t2(int j) { return (_N - j + 1) * (_N - j + 2) / (double) ((_N + 1) * (_N + 2)); }
 
-//    double PosteriorEstimator::_computeLogZdVar(DeadParticleSet &dead_points, double log_zd) {
-//        double E_zd_2 = 0;
-//        int m = dead_points.size() / _r;
-//
-//        std::vector<double> log_B = std::vector<double>(m, 0.0);
-//        double max_log_B = -DBL_MAX;
-//        for (int i = 0; i < m; i++) {
-//            log_B[i] = _computeLogBi(i + 1);
-//            max_log_B = max_log_B > log_B[i] ? max_log_B : log_B[i];
-//        }
-//        E_zd_2 = base::MathUtils::sumOfLog(log_B, max_log_B);
-//
-//        return base::MathUtils::diffOfLog(E_zd_2, 2 * log_zd);
-//    }
 
-//    double PosteriorEstimator::_computeLogBi(int i) {
-//        double log_sum_2 = 0;
-//        double log_sum_2_1 = 0;
-//
-//        for (int j = 0; j <= _r; j++) {
-//            log_sum_2_1 += std::pow(_e_normalized[i - 1][j], 2) * _E_t2[j];
-//        }
-//        log_sum_2_1 = std::log(log_sum_2_1) + 2 * _e_log_scale[i - 1];
-//
-//        double max_tmp_2 = -DBL_MAX;
-//        std::vector<double> log_sums_2_2 = std::vector<double>(_r, -DBL_MAX);
-//        for (int j = 1; j <= _r; j++) {
-//            double log_fac;
-//            if (j < _r) {
-//                log_fac = std::log(2) + std::log(_e_normalized[i - 1][j] * _E_t[j]) + _e_log_scale[i - 1];
-//            } else {
-//                log_fac = std::log(2) + std::log(-_e_normalized[i - 1][j] * _E_t[j]) + _e_log_scale[i - 1];
-//            }
-//
-//            double log_sum_2_2_1 = 0;
-//            for (int k = 0; k < j; k++) {
-//                log_sum_2_2_1 += _e_normalized[i - 1][k] * _E_t[k];
-//            }
-//            log_sum_2_2_1 = std::log(log_sum_2_2_1) + _e_log_scale[i - 1];
-//
-//            log_sums_2_2[j - 1] = log_fac + log_sum_2_2_1;
-//            max_tmp_2 = max_tmp_2 > log_sums_2_2[j - 1] ? max_tmp_2 : log_sums_2_2[j - 1];
-//        }
-//        double log_sum_2_2 = 0;
-//        for (int j = 0; j < _r - 1; j++) {
-//            log_sum_2_2 += exp(log_sums_2_2[j] - max_tmp_2);
-//        }
-//
-//        log_sum_2_2 = log_sum_2_2 - exp(log_sums_2_2[_r - 1] - max_tmp_2);
-//        int sgn = log_sum_2_2 < 0 ? -1 : 1;
-//
-//        log_sum_2_2 = std::log(sgn * log_sum_2_2) + max_tmp_2;
-//
-//        double max_log = std::max<double>(log_sum_2_2, log_sum_2_1);
-//        log_sum_2 = std::log(sgn * exp(log_sum_2_2 - max_log) + exp(log_sum_2_1 - max_log)) + max_log;
-//        log_sum_2 = log_sum_2 + (i - 1) * std::log(_E_t2[_r]);
-//
-//
-//        double log_bm;
-//        if (i > 1) {
-//            double log_fac_1 = 0;
-//            for (int j = 0; j <= _r; j++) {
-//                log_fac_1 += _e_normalized[i - 1][j] * _E_t[j];
-//            }
-//            log_fac_1 = std::log(log_fac_1) + _e_log_scale[i - 1];
-//
-//
-//            std::vector<double> log_facs_2 = std::vector<double>(i - 1, 0.0);
-//            double max_tmp = -DBL_MAX;
-//            for (int l = 0; l < i - 1; l++) {
-//                double log_fac_2_1 = l * std::log(_E_t2[_r]);
-//                double log_fac_2_2 = 0;
-//                double tmp_fac = std::pow(_E_t[_r], (i - 1) - l);
-//                for (int j = 0; j < _r; j++) {
-//                    log_fac_2_2 += _e_normalized[l][j] * _E_t[j] * tmp_fac;
-//                }
-//                log_fac_2_2 += _e_normalized[l][_r] * _E_t2[_r] * std::pow(_E_t[_r], (i - 1) - l - 1);
-//                log_fac_2_2 = std::log(log_fac_2_2) + _e_log_scale[l];
-//                log_facs_2[l] = log_fac_2_1 + log_fac_2_2;
-//                max_tmp = max_tmp > log_facs_2[l] ? max_tmp : log_facs_2[l];
-//            }
-//            double log_fac_2 = base::MathUtils::sumOfLog(log_facs_2, max_tmp);
-//
-//            log_bm = log(2) + log_fac_1 + log_fac_2;
-//
-//
-//            log_bm = base::MathUtils::sumOfLog(log_bm, log_sum_2);
-//        } else {
-//            log_bm = log_sum_2;
-//        }
-//        return log_bm;
-//    }
 
 
     void PosteriorEstimator::_computeE(DeadParticleSet &dead_points) {
@@ -241,16 +146,13 @@ namespace lfns {
 
     double PosteriorEstimator::_computeLogZlVar(LiveParticleSet &live_points, int m) {
         double log_xm = m * std::log(_E_t[_r]);
-//        double log_xm2 = m * std::log(_E_t2[_r]);
         double log_average_l = live_points.getLogAverageL();
 
         double log_var_l = live_points.getLogVariance(log_average_l) - std::log(live_points.numberParticles());
-        double log_var_xm = std::log(_varX(m, _r));//std::log(std::exp(log_xm2) - exp(2 * log_xm));
+        double log_var_xm = std::log(_varX(m, _r));
 
-//        double sum_1 = log_var_xm + log_var_l;
         double sum_2 = log_var_xm + 2 * log_average_l;
         double sum_3 = 2 * log_xm + log_var_l;
-//        std::vector<double> sum_elements = {sum_2, sum_3};
         return base::MathUtils::sumOfLog(sum_2, sum_3);
 
     }
@@ -377,139 +279,6 @@ namespace lfns {
         std::cout << "Posterior written into " << posterior_file_name << std::endl;
     }
 
-//    double PosteriorEstimator::_computeLogZdVar_2(DeadParticleSet &dead_points, double zd) {
-//
-//        int m = dead_points.size() / _r;
-//
-//        std::vector<double> log_contributions(m, 0);
-//        std::vector<int> signs(m, 0);
-//        for (int l = 1; l <= m; l++) {
-//            double log_part_1 = -DBL_MAX;
-//            int sign_1 = 1;
-//            if (l > 1) {
-//                _computeLogZdVarPartFirst_2(dead_points, l, &log_part_1, &sign_1);
-//            }
-//
-//            double log_part_2 = -DBL_MAX;
-//            int sign_2 = 1;
-//            _computeLogZdVarPartSecond_2(dead_points, l, &log_part_2, &sign_2);
-////            log_contributions[l - 1] =
-//            base::MathUtils::sumOfLog({log_part_1, log_part_2}, {sign_1, sign_2}, &log_contributions[l - 1],
-//                                      &signs[l - 1]);
-////            signs[l - 1] = sign_1
-//        }
-//
-//
-//        double log_zd_var = 0;
-//        int sign_zd = 1;
-//        base::MathUtils::sumOfLog(log_contributions, signs, &log_zd_var, &sign_zd);
-//        if (sign_zd < 0) {
-//            throw std::runtime_error("sign of variance is negative!!!");
-//        }
-//        return log_zd_var;
-//
-//    }
-
-
-//    void PosteriorEstimator::_computeLogZdVarPartFirst_2(DeadParticleSet &dead_points, int m, double *log_result,
-//                                                         int *sing_result) {
-//
-//        std::vector<double> &e_vec_norm = _e_normalized[m - 1];
-//        double log_E_m = 0;
-//        for (int j = 0; j <= _r; j++) {
-//            log_E_m += e_vec_norm[j] * _E_t[j];
-//        }
-//        log_E_m = log(log_E_m) + _e_log_scale[m - 1];
-//
-//
-//        std::vector<double> log_summands;
-//        std::vector<int> log_signs;
-//        log_summands.reserve(m - 1);
-//        log_signs.reserve(m - 1);
-//        double max_log_val = -DBL_MAX;
-//        for (int i = 1; i <= m - 1; i++) {
-//            double log_x_1 = (m - i - 1) * std::log(_E_t[_r]); // x_{m-i-1,r}
-//
-//            /*
-//             * t_r Var(x_{i-1,r}) \sum_{j=0}^{r-1} e_{i,j} t_j
-//             */
-//            double log_first_sum = 0;
-//            double log_t_r = std::log(_E_t[_r]);
-//            double log_var_x_i = std::log(_varX(i - 1, _r));
-//
-//            std::vector<double> &e_vec_norm_tmp = _e_normalized[i - 1];
-//            double log_e_i = 0;
-//            for (int j = 0; j < _r; j++) {
-//                log_e_i += e_vec_norm_tmp[j] * _E_t[j];
-//            }
-//            log_e_i = log(log_e_i) + _e_log_scale[i - 1];
-//            log_first_sum = log_t_r + log_var_x_i + log_e_i;
-//
-//            /*
-//             * e_{i,r} Var(x_{i,r})
-//             */
-//            double e = -e_vec_norm_tmp[_r];
-//            double log_e = std::log(e) + _e_log_scale[i - 1];
-//            double log_var_xi = std::log(_varX(i, _r));
-//
-//            double log_second_sum = log_e + log_var_xi;
-//
-//            double log_partial_sum;
-//            int sgn = log_first_sum < log_second_sum ? -1 : 1;
-//            log_signs.push_back(sgn);
-//            if (sgn < 0) {
-//                log_partial_sum = base::MathUtils::diffOfLog(log_second_sum, log_first_sum);
-//            } else {
-//                log_partial_sum = base::MathUtils::diffOfLog(log_first_sum, log_second_sum);
-//            }
-//            log_partial_sum += log_x_1;
-//            log_summands.push_back(log_partial_sum);
-//            max_log_val = max_log_val > log_partial_sum ? max_log_val : log_partial_sum;
-//        }
-//
-//        *log_result = 0;
-//        for (double &log_part : log_summands) { *log_result += std::exp(log_part - max_log_val); }
-//        *sing_result = *log_result < 0 ? -1 : 1;
-//        *log_result = std::log(*log_result) + max_log_val + std::log(2) + log_E_m;
-//    }
-//
-//
-//    void PosteriorEstimator::_computeLogZdVarPartSecond_2(DeadParticleSet &dead_points, int m, double *log_result,
-//                                                          int *sing_result) {
-//
-//        double log_sum_1 = 0;
-//        /*
-//         * sum e_{i,j}^2 Var(x_{m,j})
-//         */
-//        std::vector<double> &e_vec_norm_tmp = _e_normalized[m - 1];
-//        double e_i = 0;
-//        for (int j = 0; j <= _r; j++) {
-//            double var_x_mj = _varX(m, j);
-//            e_i += std::pow(e_vec_norm_tmp[j], 2) * var_x_mj;
-//        }
-//        log_sum_1 = log(e_i) + 2 * _e_log_scale[m - 1];
-//
-//
-//        /*
-//         * Var(x_{m-1,r}) * 2 * sum_{j=1}^r sum_{k = 0}^{j-1}e_mj e_mk t_j t_k
-//         */
-//
-//        double log_var_x_m1 = std::log(_varX(m - 1, _r));
-//
-//        double log_e_sums = 0;
-//        for (int j = 1; j <= _r; j++) {
-//            for (int k = 0; k <= j - 1; k++) {
-//                log_e_sums += e_vec_norm_tmp[j] * e_vec_norm_tmp[k] * _E_t[j] * _E_t[k];
-//            }
-//        }
-//        int sgn = log_e_sums < 0 ? -1 : 1;
-//        log_e_sums = std::log(std::abs(log_e_sums)) + 2 * _e_log_scale[m - 1];
-//
-//        double log_sum_2 = log_var_x_m1 + std::log(2) + log_e_sums;
-//
-//        base::MathUtils::sumOfLog({log_sum_1, log_sum_2}, {1, sgn}, log_result, sing_result);
-//    }
-
 
     double PosteriorEstimator::_varX(int i, int j) {
 
@@ -582,12 +351,8 @@ namespace lfns {
             int sign_2 = 1;
 
 
-
-//            _computeLogZdVarPartSecond_2(dead_points, m, &log_part_2, &sign_2);
-//            log_contributions[l - 1] =
             base::MathUtils::sumOfLog({log_part_1, log_part_2}, {sign_1, sign_2}, &log_contributions[m - 1],
                                       &signs[m - 1]);
-//            signs[l - 1] = sign_1
         }
 
 

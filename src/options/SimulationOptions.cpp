@@ -51,14 +51,6 @@ namespace options {
                << std::endl;
             throw std::runtime_error(os.str());
         }
-
-        if (vm.count("parameter-file") > 0 && vm.count("numsimulations") > 0 && num_simulations > 1) {
-            std::ostringstream os;
-            os <<
-               "If simulation parameter file (-P) is provided, number of simulations (-n) needs to be 1"
-               << std::endl;
-            throw std::runtime_error(os.str());
-        }
         if (vm.count("parameter-file") > 0) {
             if (!base::IoUtils::isPathAbsolute(param_file)) {
                 fs::path full_path(fs::current_path());
