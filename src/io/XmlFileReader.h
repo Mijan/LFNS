@@ -61,6 +61,8 @@ namespace io {
 
         std::string getEntry(std::string path);
 
+        XmlEntry getXmlEntry(std::string path);
+
         std::vector<XmlEntry> getEntries(std::string path, std::string node_name);
 
         std::string getXmlFilePath();

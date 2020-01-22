@@ -91,7 +91,7 @@ namespace models {
 
     void ChemicalReactionNetwork::rhs(double *dx, const double *state, double t) {
 
-
+//        printPointerValue(std::cout);
         if (!_initialized) {
             std::stringstream os;
             os << "ChemicalReactionNetwork must be initialized before measurement can be computed!"

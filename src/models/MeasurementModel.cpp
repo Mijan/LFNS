@@ -26,7 +26,6 @@ namespace models {
 
     void
     MeasurementModel::computeMeasurement(std::vector<double> *measurement, const std::vector<double> &state, double t) {
-
         if (!_initialized) {
             std::stringstream os;
             os << "MeasurementModel must be initialized before measurement can be computed!"
@@ -69,6 +68,7 @@ namespace models {
 
     double MeasurementModel::getLogLikelihood(const std::vector<double> &state, const std::vector<double> &measurements,
                                               double t) {
+//        printPointerValue(std::cout);
         if (!_initialized) {
             std::stringstream os;
             os << "MeasurementModel must be initialized before measurement can be computed!"

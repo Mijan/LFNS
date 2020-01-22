@@ -142,6 +142,31 @@ namespace models {
         }
     }
 
+    double* FullModel::fixParameterPointer(std::string param_name) {
+        std::vector<std::string>::iterator it = std::find(_param_names.begin(), _param_names.end(), param_name);
+        bool param_found = it != _param_names.end();
+        if (param_found) {
+            try {
+                int index = it - _param_names.begin();
+                std::vector<int>::iterator it = std::find(_unfixed_parameter_indices.begin(),
+                                                          _unfixed_parameter_indices.end(), index);
+                _unfixed_parameter_indices.erase(it);
+
+                return &_parameter[index];
+            } catch (const std::exception &e) {
+                std::ostringstream os;
+                os << "Failed to fix parameter pointer for " << param_name << ":" << std::endl;
+                os << "\t" << e.what() << std::endl;
+                throw std::runtime_error(os.str());
+            }
+        } else {
+            std::ostringstream os;
+            os << "Tried to fix parameter pointer for " << param_name << ", but no such parameter defined." << std::endl;
+            throw std::runtime_error(os.str());
+
+        }
+    }
+
 
     void FullModel::printInfo(std::ostream &os) {
         dynamics->printInfo(os);

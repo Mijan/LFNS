@@ -47,12 +47,28 @@ void LFNSSetup::setUp() {
                                                     full_model->measurement_model->getLikelihoodFct(),
                                                     full_model->initial_value_provider->getInitialStateFct(),
                                                     full_model->dynamics->getNumSpecies(), particle_filter_settings.H);
-        particle_filters.push_back(std::make_shared<particle_filter::ParticleFilter>(part_filter));
+        particle_filter::ParticleFilter_ptr filter_ptr = std::make_shared<particle_filter::ParticleFilter>(part_filter);
+
+        if (!particle_filter_settings.provided_parameter_file.empty()) {
+            std::vector<double *> param_ptrs;
+            for (std::string &param_name : particle_filter_settings.provided_parameter_names) {
+                param_ptrs.push_back(full_model->fixParameterPointer(param_name));
+            }
+            filter_ptr->setProvidedParticles(param_ptrs, particle_filter_settings.provided_parameter_file);
+        }
+
+        particle_filters.push_back(filter_ptr);
 
         for (int traj_nbr = 0; traj_nbr < data.size(); traj_nbr++) {
             mult_like_eval.addLogLikeFun(
                     particle_filters.back()->getLikelihoodEvaluationForData(&data_vec.back()[traj_nbr],
                                                                             &times_vec.back()));
+        }
+    }
+
+    if (!particle_filter_settings.provided_parameter_names.empty()) {
+        for (std::string &name : particle_filter_settings.provided_parameter_names) {
+            model_settings.fixed_parameters.insert({name, -1});
         }
     }
     particle_filter_settings.num_used_trajectories = max_num_traj;
@@ -75,14 +91,15 @@ void LFNSSetup::printSettings(std::ostream &os) {
     os << "\n---------- Model Settings ----------" << std::endl;
     model_settings.print(os);
 
-    if (model_settings.model_type == models::MODEL_TYPE::HYBRID || model_settings.model_type == models::MODEL_TYPE::ODE){
+    if (model_settings.model_type == models::MODEL_TYPE::HYBRID ||
+        model_settings.model_type == models::MODEL_TYPE::ODE) {
         simulator::OdeSettings ode_settings = _readOdeSettings();
         os << "Settings for ODE simulator:" << std::endl;
-        os << std::setw(30) << std::left << "Minimal step size:" <<ode_settings.min_step_size << std::endl;
-        os << std::setw(30) << std::left  << "Maximal number of steps:" <<ode_settings.max_num_steps << std::endl;
-        os << std::setw(30) << std::left  << "Maximal error fails:" <<ode_settings.max_error_fails << std::endl;
-        os << std::setw(30) << std::left  << "Absolute tolerance:" <<ode_settings.abs_tol << std::endl;
-        os << std::setw(30) << std::left  << "Relative tolerance:" <<ode_settings.rel_tol << std::endl;
+        os << std::setw(30) << std::left << "Minimal step size:" << ode_settings.min_step_size << std::endl;
+        os << std::setw(30) << std::left << "Maximal number of steps:" << ode_settings.max_num_steps << std::endl;
+        os << std::setw(30) << std::left << "Maximal error fails:" << ode_settings.max_error_fails << std::endl;
+        os << std::setw(30) << std::left << "Absolute tolerance:" << ode_settings.abs_tol << std::endl;
+        os << std::setw(30) << std::left << "Relative tolerance:" << ode_settings.rel_tol << std::endl;
     }
 
     os << std::endl;
@@ -134,6 +151,32 @@ particle_filter::ParticleFilterSettings LFNSSetup::_readParticleFilterSettings()
     if (_lfns_options.vm.count("numuseddata") >
         0) { filter_settings.num_used_trajectories = _lfns_options.num_used_data; }
     filter_settings.param_names = model_settings.getUnfixedParameters();
+
+
+    if (interpreter.parametersProvided()) {
+        filter_settings.provided_parameter_file = interpreter.gerProvidedParametersFile();
+        std::vector<std::vector<double> > provided_parameters;
+        try {
+            provided_parameters = base::IoUtils::readVectorOfVectors(filter_settings.provided_parameter_file);
+        } catch (const std::exception &e) {
+            std::stringstream ss;
+            ss << "Failed to read provided parameter file for LFNS:\n\t" << e.what() << std::endl;
+            throw std::runtime_error(ss.str());
+        }
+
+        filter_settings.provided_parameter_names = interpreter.getProvidedParameters();
+
+        if (filter_settings.provided_parameter_names.size() != provided_parameters[0].size()) {
+            std::stringstream ss;
+            ss << "Number of provided parameters does not match! Number of provided parameters "
+               << filter_settings.provided_parameter_names.size() << " but parameter file "
+               << filter_settings.provided_parameter_file
+               << " contains " << provided_parameters[0].size() << " parameters." << std::endl;
+            ss << "Provided parameters: " << std::endl;
+            for (std::string &param : filter_settings.provided_parameter_names) ss << param << " ";
+            throw std::runtime_error(ss.str());
+        }
+    }
     return filter_settings;
 }
 
@@ -227,6 +270,13 @@ sampler::Sampler_ptr LFNSSetup::_createPrior(lfns::LFNSSettings lfns_settings, s
 sampler::SamplerSettings LFNSSetup::_readSamplerSettings() {
     sampler::SamplerSettings sampler_setting;
     sampler_setting.param_names = model_settings.getUnfixedParameters();
+    for (std::string &param : particle_filter_settings.provided_parameter_names) {
+        std::vector<std::string>::iterator it = std::find(sampler_setting.param_names.begin(),
+                                                          sampler_setting.param_names.end(), param);
+        if (it != sampler_setting.param_names.end()) {
+            sampler_setting.param_names.erase(it);
+        }
+    }
 
     std::map<std::string, std::pair<double, double> > bounds = interpreter.getParameterBounds();
     std::map<std::string, std::string> log_scale_str = interpreter.getParameterScales();
@@ -357,5 +407,6 @@ lfns::LFNSSettings LFNSSetup::_readLFNSSettings() {
         lfns_setting.uniform_prior = false;
         lfns_setting.prior_file = _lfns_options.prior_file;
     }
+
     return lfns_setting;
 }

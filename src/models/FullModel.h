@@ -35,6 +35,8 @@ namespace models {
 
         void fixParameter(std::string param_name, double val);
 
+        double* fixParameterPointer(std::string param_name);
+
         void printInfo(std::ostream &os);
 
         void addInputPulse(InputPulse pulse);

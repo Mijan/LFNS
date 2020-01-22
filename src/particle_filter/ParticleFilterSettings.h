@@ -21,6 +21,9 @@ namespace particle_filter {
         bool use_premature_cancelation = false;
         int H = 200;
 
+        std::string provided_parameter_file = "";
+        std::vector<std::string> provided_parameter_names = {};
+
         void print(std::ostream &stream) {
 
 
@@ -33,6 +36,14 @@ namespace particle_filter {
             }
             stream << "Nnumber of trajectories used for each experiment: " << num_used_trajectories << std::endl;
             stream << "\n\n" << std::endl;
+
+
+            if (provided_parameter_file.size() > 0) {
+                stream << "\nA file with already presampled parameters was provided the parameters" << std::endl;
+                for (std::string &param_name : provided_parameter_names) stream << param_name << " ";
+                stream << "\nwill be read from the file" << std::endl;
+                stream << provided_parameter_file << std::endl;
+            }
         }
 
         std::vector<std::string> param_names;

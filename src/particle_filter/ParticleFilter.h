@@ -55,6 +55,10 @@ namespace particle_filter {
 
         virtual void addStoppingCriterion(simulator::StoppingFct_ptr stopping_criterion);
 
+        void _sampleProvidedParameter();
+
+        void setProvidedParticles(std::vector<double*> provided_param_ptrs, std::string provided_parameters_file);
+
 
     protected:
         base::RngPtr _rng;
@@ -68,6 +72,10 @@ namespace particle_filter {
         SmcParticleSet_ptr _smc_particles;
         std::vector<double> _log_likelihoods_tmps;
         double *_threshold_ptr;
+
+        base::UniformIntDistribution _dist;
+        std::vector<std::vector<double> > _provided_parameters;
+        std::vector<double*> _provided_parameter_ptrs;
 
         simulator::StoppingCriterions _stopping_criterions;
     };

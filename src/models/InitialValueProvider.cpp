@@ -31,6 +31,7 @@ namespace models {
     InitialValueProvider::~InitialValueProvider() {}
 
     void InitialValueProvider::computeInitialState(std::vector<double> *state_0, double *t_0) {
+//        printPointerValue(std::cout);
         try {
             if (!_initialized) {
                 std::stringstream os;

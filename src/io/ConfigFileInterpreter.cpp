@@ -536,4 +536,28 @@ namespace io {
         double interval = std::stod(interval_str);
         return interval;
     }
+
+    bool ConfigFileInterpreter::parametersProvided(){
+        try {
+            std::string provided_parameters = _reader.getEntry("LFNS.providedparameters");
+            return true;
+        } catch (const std::exception &e) {
+            return false;
+        }
+    }
+
+    std::string ConfigFileInterpreter::gerProvidedParametersFile(){
+        XmlEntry provided_parameters = _reader.getXmlEntry("LFNS.providedparameters");
+        std::string param_file = provided_parameters.getAttributeValue("file");
+        if (base::IoUtils::isPathAbsolute(param_file)) { return param_file; }
+        else {
+            return _reader.getXmlFilePath() + param_file;
+        }
+    }
+
+    std::vector<std::string> ConfigFileInterpreter::getProvidedParameters(){
+        XmlEntry provided_parameters = _reader.getXmlEntry("LFNS.providedparameters");
+        std::vector<std::string> params = base::Utils::StringToStringVector(provided_parameters.entry);
+        return params;
+    }
 }

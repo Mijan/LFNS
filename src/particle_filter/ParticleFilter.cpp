@@ -6,6 +6,7 @@
 #include <iostream>
 #include <sstream>
 #include <muParserError.h>
+#include <IoUtils.h>
 #include "ParticleFilter.h"
 #include "../simulator/SimulatorExceptions.h"
 #include "../models/ModelExceptions.h"
@@ -40,6 +41,9 @@ namespace particle_filter {
             throw std::runtime_error(ss.str());
         }
 
+
+        // TODO implement version for multiple particles
+        if (!_provided_parameters.empty()) { _sampleProvidedParameter(); }
         try {
             (*_setting_parameter_fct)(theta);
 
@@ -72,14 +76,14 @@ namespace particle_filter {
             os << "Position: " << e.GetPos() << "\n";
             os << "Errc:     " << e.GetCode() << "\n";
             throw std::runtime_error(os.str());
-        }catch(const simulator::SimulationAborted & e){
+        } catch (const simulator::SimulationAborted &e) {
             std::cerr << "simulation for paramter ";
-            for (double d : theta) { std::cerr  << d << " "; }
+            for (double d : theta) { std::cerr << d << " "; }
             std::cerr << " aborted at timepoint " << e.terminationTime() << std::endl;
             return -DBL_MAX;
-        }catch(const models::ModelException & e){
+        } catch (const models::ModelException &e) {
             std::cerr << "Model related error for parameter ";
-            for (double d : theta) { std::cerr  << d << " "; }
+            for (double d : theta) { std::cerr << d << " "; }
             std::cerr << " with error mssage:\n\t" << e.what() << std::endl;
             return -DBL_MAX;
         }
@@ -93,7 +97,6 @@ namespace particle_filter {
         for (int t = 0; t < times.size(); t++) {
             double final_time = times[t];
             (*_simulation_fct)(final_time);
-
             double log_likelihood_part = (*_likelihood_fct)(particle->state, data[t], particle->time);
             log_likelihood += log_likelihood_part;
         }
@@ -144,4 +147,19 @@ namespace particle_filter {
     void ParticleFilter::addStoppingCriterion(simulator::StoppingFct_ptr stopping_criterion) {
         _stopping_criterions.push_back(stopping_criterion);
     }
+
+    void ParticleFilter::_sampleProvidedParameter() {
+        int index = _dist(*_rng);
+        for (int i = 0; i < _provided_parameter_ptrs.size(); i++) {
+            *_provided_parameter_ptrs[i] = _provided_parameters[index][i];
+        }
+    }
+
+    void ParticleFilter::setProvidedParticles(std::vector<double *> provided_param_ptrs,
+                                              std::string provided_parameters_file) {
+        _provided_parameter_ptrs = provided_param_ptrs;
+        _provided_parameters = base::IoUtils::readVectorOfVectors(provided_parameters_file);
+        _dist = base::UniformIntDistribution(0, _provided_parameters.size() - 1);
+    }
+
 }

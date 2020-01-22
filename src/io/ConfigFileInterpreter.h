@@ -112,6 +112,12 @@ namespace io {
 
         int getMaxNumberSteps();
 
+        bool parametersProvided();
+
+        std::string gerProvidedParametersFile();
+
+        std::vector<std::string> getProvidedParameters();
+
     protected:
         XmlFileReader _reader;
 

@@ -55,6 +55,20 @@ namespace io {
 
     std::string XmlFileReader::getEntry(std::string path) { return _pt.get_child(path).get_value<std::string>(); }
 
+    XmlEntry XmlFileReader::getXmlEntry(std::string path) {
+        XmlEntry entry;
+
+        bt_ptree tree = _pt.get_child(path);
+        entry.entry = tree.get_value<std::string>();
+        bt_ptree &attributes_tree = tree.get_child("<xmlattr>");
+        for (bt_ptree::value_type &at : attributes_tree.get_child("")) {
+            entry.attributes.push_back(std::make_pair<std::string, std::string>(at.first.data(),
+                                                                          at.second.get_value<std::string>(
+                                                                                  "")));
+        }
+        return entry;
+    }
+
     std::vector<XmlEntry> XmlFileReader::getEntries(std::string path, std::string node_name) {
         std::vector<XmlEntry> entries;
         for (bt_ptree::value_type &v : _pt.get_child(path)) {
