@@ -1,0 +1,5 @@
+<map id="io::InitialValueReader" name="io::InitialValueReader">
+<area shape="rect" id="node1" title="A class that is used to read an initial value file." alt="" coords="5,155,167,181"/>
+<area shape="rect" id="node2" href="$classio_1_1ParserReader.html" title="A general class to read text files containing parameter definitions, species definitions,..." alt="" coords="22,80,150,107"/>
+<area shape="rect" id="node3" href="$classio_1_1TxtFileReader.html" title="A class that is used to read text files and provides some concenience functions." alt="" coords="20,5,152,32"/>
+</map>

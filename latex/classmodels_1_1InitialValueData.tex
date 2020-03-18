@@ -1,0 +1,166 @@
+\hypertarget{classmodels_1_1InitialValueData}{}\doxysection{models\+::Initial\+Value\+Data Class Reference}
+\label{classmodels_1_1InitialValueData}\index{models::InitialValueData@{models::InitialValueData}}
+
+
+This class contains all the data that can be read from the initial value file.  
+
+
+
+
+{\ttfamily \#include $<$Initial\+Value\+Data.\+h$>$}
+
+
+
+Inheritance diagram for models\+::Initial\+Value\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classmodels_1_1InitialValueData__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for models\+::Initial\+Value\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classmodels_1_1InitialValueData__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1InitialValueData_a47fd89767f9aaf347bc1f6393371a9f6}{Initial\+Value\+Data}} (std\+::string initial\+\_\+value\+\_\+file)
+\item 
+\mbox{\hyperlink{classmodels_1_1InitialValueData_a49857f4a2191e752c7bc8935b8b3b864}{Initial\+Value\+Data}} (const \mbox{\hyperlink{classmodels_1_1InitialValueData}{Initial\+Value\+Data}} \&rhs)
+\item 
+virtual \mbox{\hyperlink{classmodels_1_1InitialValueData_af7af79f840a53797048ad7befe7ed37b}{$\sim$\+Initial\+Value\+Data}} ()
+\item 
+void \mbox{\hyperlink{classmodels_1_1InitialValueData_a9dc58c367319f15d81a6ace05e772d70}{set\+Initial\+Values}} (std\+::string species, std\+::string initial\+\_\+value)
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1InitialValueData_a5c330cd5e12c21fc8fe02e6fecff2cff}{get\+Initial\+Value\+For\+Species}} (std\+::string species)
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1InitialValueData_a4ecf37aef10ac356c1908952f7d786d6}{get\+Initial\+States}} () const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1InitialValueData_a1ae693941615266a3f4d71116b613e3a}{get\+Initial\+State\+Index}} (std\+::string species\+\_\+name) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1InitialValueData_ac7afd51730283f2d64f789228bd91464}{get\+Initial\+Values}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classmodels_1_1InitialValueData_ad74e940f70d925485137bf4d8ba000fe}{get\+Initial\+Time\+Value}} () const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1InitialValueData_ae3c243dd4cc3cd195ed66846bbc16eb9}{get\+Num\+Initial\+Values}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classmodels_1_1InitialValueData_ad55253d8c08706144a9593efb94b6518}{\+\_\+initial\+\_\+values\+\_\+by\+\_\+species}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1InitialValueData_a5b15458d6ed9978f292ed821881a471b}{\+\_\+initial\+\_\+states}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1InitialValueData_a2ce078f3e93a29a7996a8cb5ab71072e}{\+\_\+initial\+\_\+values}}
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1InitialValueData_afdfbf1bbaf90078535403894688567c5}{\+\_\+initial\+\_\+time\+\_\+value}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class contains all the data that can be read from the initial value file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a47fd89767f9aaf347bc1f6393371a9f6}\label{classmodels_1_1InitialValueData_a47fd89767f9aaf347bc1f6393371a9f6}} 
+\index{models::InitialValueData@{models::InitialValueData}!InitialValueData@{InitialValueData}}
+\index{InitialValueData@{InitialValueData}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{InitialValueData()}{InitialValueData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily models\+::\+Initial\+Value\+Data\+::\+Initial\+Value\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{initial\+\_\+value\+\_\+file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a49857f4a2191e752c7bc8935b8b3b864}\label{classmodels_1_1InitialValueData_a49857f4a2191e752c7bc8935b8b3b864}} 
+\index{models::InitialValueData@{models::InitialValueData}!InitialValueData@{InitialValueData}}
+\index{InitialValueData@{InitialValueData}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{InitialValueData()}{InitialValueData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily models\+::\+Initial\+Value\+Data\+::\+Initial\+Value\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmodels_1_1InitialValueData}{Initial\+Value\+Data}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_af7af79f840a53797048ad7befe7ed37b}\label{classmodels_1_1InitialValueData_af7af79f840a53797048ad7befe7ed37b}} 
+\index{models::InitialValueData@{models::InitialValueData}!````~InitialValueData@{$\sim$InitialValueData}}
+\index{````~InitialValueData@{$\sim$InitialValueData}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{$\sim$InitialValueData()}{~InitialValueData()}}
+{\footnotesize\ttfamily models\+::\+Initial\+Value\+Data\+::$\sim$\+Initial\+Value\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a1ae693941615266a3f4d71116b613e3a}\label{classmodels_1_1InitialValueData_a1ae693941615266a3f4d71116b613e3a}} 
+\index{models::InitialValueData@{models::InitialValueData}!getInitialStateIndex@{getInitialStateIndex}}
+\index{getInitialStateIndex@{getInitialStateIndex}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{getInitialStateIndex()}{getInitialStateIndex()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Initial\+Value\+Data\+::get\+Initial\+State\+Index (\begin{DoxyParamCaption}\item[{std\+::string}]{species\+\_\+name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a4ecf37aef10ac356c1908952f7d786d6}\label{classmodels_1_1InitialValueData_a4ecf37aef10ac356c1908952f7d786d6}} 
+\index{models::InitialValueData@{models::InitialValueData}!getInitialStates@{getInitialStates}}
+\index{getInitialStates@{getInitialStates}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{getInitialStates()}{getInitialStates()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Initial\+Value\+Data\+::get\+Initial\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_ad74e940f70d925485137bf4d8ba000fe}\label{classmodels_1_1InitialValueData_ad74e940f70d925485137bf4d8ba000fe}} 
+\index{models::InitialValueData@{models::InitialValueData}!getInitialTimeValue@{getInitialTimeValue}}
+\index{getInitialTimeValue@{getInitialTimeValue}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{getInitialTimeValue()}{getInitialTimeValue()}}
+{\footnotesize\ttfamily const std\+::string \& models\+::\+Initial\+Value\+Data\+::get\+Initial\+Time\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a5c330cd5e12c21fc8fe02e6fecff2cff}\label{classmodels_1_1InitialValueData_a5c330cd5e12c21fc8fe02e6fecff2cff}} 
+\index{models::InitialValueData@{models::InitialValueData}!getInitialValueForSpecies@{getInitialValueForSpecies}}
+\index{getInitialValueForSpecies@{getInitialValueForSpecies}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{getInitialValueForSpecies()}{getInitialValueForSpecies()}}
+{\footnotesize\ttfamily std\+::string models\+::\+Initial\+Value\+Data\+::get\+Initial\+Value\+For\+Species (\begin{DoxyParamCaption}\item[{std\+::string}]{species }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_ac7afd51730283f2d64f789228bd91464}\label{classmodels_1_1InitialValueData_ac7afd51730283f2d64f789228bd91464}} 
+\index{models::InitialValueData@{models::InitialValueData}!getInitialValues@{getInitialValues}}
+\index{getInitialValues@{getInitialValues}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{getInitialValues()}{getInitialValues()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Initial\+Value\+Data\+::get\+Initial\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_ae3c243dd4cc3cd195ed66846bbc16eb9}\label{classmodels_1_1InitialValueData_ae3c243dd4cc3cd195ed66846bbc16eb9}} 
+\index{models::InitialValueData@{models::InitialValueData}!getNumInitialValues@{getNumInitialValues}}
+\index{getNumInitialValues@{getNumInitialValues}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{getNumInitialValues()}{getNumInitialValues()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Initial\+Value\+Data\+::get\+Num\+Initial\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a9dc58c367319f15d81a6ace05e772d70}\label{classmodels_1_1InitialValueData_a9dc58c367319f15d81a6ace05e772d70}} 
+\index{models::InitialValueData@{models::InitialValueData}!setInitialValues@{setInitialValues}}
+\index{setInitialValues@{setInitialValues}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{setInitialValues()}{setInitialValues()}}
+{\footnotesize\ttfamily void models\+::\+Initial\+Value\+Data\+::set\+Initial\+Values (\begin{DoxyParamCaption}\item[{std\+::string}]{species,  }\item[{std\+::string}]{initial\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a5b15458d6ed9978f292ed821881a471b}\label{classmodels_1_1InitialValueData_a5b15458d6ed9978f292ed821881a471b}} 
+\index{models::InitialValueData@{models::InitialValueData}!\_initial\_states@{\_initial\_states}}
+\index{\_initial\_states@{\_initial\_states}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{\_initial\_states}{\_initial\_states}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Initial\+Value\+Data\+::\+\_\+initial\+\_\+states\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_afdfbf1bbaf90078535403894688567c5}\label{classmodels_1_1InitialValueData_afdfbf1bbaf90078535403894688567c5}} 
+\index{models::InitialValueData@{models::InitialValueData}!\_initial\_time\_value@{\_initial\_time\_value}}
+\index{\_initial\_time\_value@{\_initial\_time\_value}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{\_initial\_time\_value}{\_initial\_time\_value}}
+{\footnotesize\ttfamily std\+::string models\+::\+Initial\+Value\+Data\+::\+\_\+initial\+\_\+time\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_a2ce078f3e93a29a7996a8cb5ab71072e}\label{classmodels_1_1InitialValueData_a2ce078f3e93a29a7996a8cb5ab71072e}} 
+\index{models::InitialValueData@{models::InitialValueData}!\_initial\_values@{\_initial\_values}}
+\index{\_initial\_values@{\_initial\_values}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{\_initial\_values}{\_initial\_values}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Initial\+Value\+Data\+::\+\_\+initial\+\_\+values\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1InitialValueData_ad55253d8c08706144a9593efb94b6518}\label{classmodels_1_1InitialValueData_ad55253d8c08706144a9593efb94b6518}} 
+\index{models::InitialValueData@{models::InitialValueData}!\_initial\_values\_by\_species@{\_initial\_values\_by\_species}}
+\index{\_initial\_values\_by\_species@{\_initial\_values\_by\_species}!models::InitialValueData@{models::InitialValueData}}
+\doxysubsubsection{\texorpdfstring{\_initial\_values\_by\_species}{\_initial\_values\_by\_species}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ models\+::\+Initial\+Value\+Data\+::\+\_\+initial\+\_\+values\+\_\+by\+\_\+species\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{InitialValueData_8h}{Initial\+Value\+Data.\+h}}\item 
+src/models/\mbox{\hyperlink{InitialValueData_8cpp}{Initial\+Value\+Data.\+cpp}}\end{DoxyCompactItemize}

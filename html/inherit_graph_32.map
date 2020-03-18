@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classmodels_1_1BaseData.html" title="The base data needed for constructing the base objects. It requires a list of parameters and a list o..." alt="" coords="5,56,147,83"/>
+<area shape="rect" id="node2" href="$classmodels_1_1ParserData.html" title=" " alt="" coords="195,56,344,83"/>
+<area shape="rect" id="node3" href="$classmodels_1_1InitialValueData.html" title="This class contains all the data that can be read from the initial value file." alt="" coords="420,5,603,32"/>
+<area shape="rect" id="node4" href="$classmodels_1_1MeasurementModelData.html" title="This class contains all the data that can be read from the measurement model sfile." alt="" coords="392,56,631,83"/>
+<area shape="rect" id="node5" href="$classmodels_1_1ModelReactionData.html" title="This class contains all the data that can be read from the model dynamics file." alt="" coords="408,107,615,133"/>
+</map>

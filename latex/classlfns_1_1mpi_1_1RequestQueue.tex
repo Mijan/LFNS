@@ -1,0 +1,235 @@
+\hypertarget{classlfns_1_1mpi_1_1RequestQueue}{}\doxysection{lfns\+::mpi\+::Request\+Queue Class Reference}
+\label{classlfns_1_1mpi_1_1RequestQueue}\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+
+
+{\ttfamily \#include $<$Request\+Queue.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a83d7236c4796c26f941e56bd85cfdeab}{Request\+Queue}} ()
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a3dc1968e38fe1c8f5205ebd0fea889bc}{$\sim$\+Request\+Queue}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_aa88c9f8e057a94b2d7282a704ceb834a}{add\+Request}} (std\+::size\+\_\+t rank, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+parameters, bool sample\+\_\+prior=false)
+\item 
+double \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a99e30023faa49068631cf89bc4b530a2}{get\+First\+Likelihood}} ()
+\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a2fceeaa68ff63d1438658fe1685ca3f2}{get\+First\+Theta}} ()
+\item 
+bool \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a78149a409f40133152ea491f62d94cee}{first\+Particle\+Finished}} ()
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a00c95218c95642172a23c6fafff547c0}{get\+First\+Particle\+Clocks}} ()
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a5f8f18fa271833f7ca1115b266479c83}{get\+First\+Sampling\+Clocks}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a11d0ea8f9f1158706a87d12dd811c61d}{get\+First\+Used\+Process}} ()
+\item 
+std\+::queue$<$ std\+::size\+\_\+t $>$ \& \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a8d928b4485171bd358355cb957dad5c8}{get\+Finished\+Processess}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_aec88db6be01bd7b25e5319aab9c6beaf}{clear\+First\+Particle}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a197df37951dd411acd6bc96b7487db23}{stop\+Pending\+Requests}} ()
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_ae317ac09cf949e3d9955631380da9e03}{size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_ab3a4b236c430f75faa7c0c675d4e7773}{computed\+\_\+particles}}
+\item 
+std\+::queue$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_aa005d33cebfd9267412d16fe3cd10798}{used\+\_\+process}}
+\item 
+std\+::queue$<$ time\+\_\+t $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_ace303be9e352703e4d9d9f78c3775a8a}{clocks\+\_\+for\+\_\+particles}}
+\item 
+std\+::queue$<$ time\+\_\+t $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_acba2db5c9c75307e6b39459d0ab4bff0}{clocks\+\_\+for\+\_\+sampling}}
+\item 
+std\+::queue$<$ double $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_aee6b1890447a87b609fc547ae2696381}{log\+\_\+likelihoods}}
+\item 
+std\+::queue$<$ bool $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_afc34258835b0300bd68f162f3ec257e9}{process\+\_\+finished}}
+\item 
+std\+::vector$<$ time\+\_\+t $\ast$ $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_addd2f59008f74b69f21c5e950ad744bd}{ptr\+\_\+clocks\+\_\+for\+\_\+particles}}
+\item 
+std\+::vector$<$ time\+\_\+t $\ast$ $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a676a15add41e08cfaf4ae9d0c5860d36}{ptr\+\_\+clocks\+\_\+for\+\_\+sampling}}
+\item 
+std\+::vector$<$ double $\ast$ $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a60c3135f3b628bfbd8da93cd97074a48}{ptr\+\_\+log\+\_\+likelihoods}}
+\item 
+std\+::vector$<$ bool $\ast$ $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a3ccb393930ac5e34982739acf0b6e069}{ptr\+\_\+process\+\_\+finished}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $\ast$ $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a46ee4cd10613066882517e5bc53e17e0}{ptr\+\_\+particles}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacelfns_1_1mpi_ac917b0ed5dee1263bde11a750f70f993}{Mpi\+Particle\+Request\+\_\+ptr}} $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a7246da834842e81dfc2d35d399dd4993}{particle\+\_\+requests}}
+\item 
+std\+::queue$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue_a7489d834b8708d36a244a3e6d7ffa152}{\+\_\+finished\+\_\+request\+\_\+queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a83d7236c4796c26f941e56bd85cfdeab}\label{classlfns_1_1mpi_1_1RequestQueue_a83d7236c4796c26f941e56bd85cfdeab}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!RequestQueue@{RequestQueue}}
+\index{RequestQueue@{RequestQueue}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{RequestQueue()}{RequestQueue()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+Request\+Queue\+::\+Request\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a3dc1968e38fe1c8f5205ebd0fea889bc}\label{classlfns_1_1mpi_1_1RequestQueue_a3dc1968e38fe1c8f5205ebd0fea889bc}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!````~RequestQueue@{$\sim$RequestQueue}}
+\index{````~RequestQueue@{$\sim$RequestQueue}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{$\sim$RequestQueue()}{~RequestQueue()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+Request\+Queue\+::$\sim$\+Request\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_aa88c9f8e057a94b2d7282a704ceb834a}\label{classlfns_1_1mpi_1_1RequestQueue_aa88c9f8e057a94b2d7282a704ceb834a}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+Request\+Queue\+::add\+Request (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{rank,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+parameters,  }\item[{bool}]{sample\+\_\+prior = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_aec88db6be01bd7b25e5319aab9c6beaf}\label{classlfns_1_1mpi_1_1RequestQueue_aec88db6be01bd7b25e5319aab9c6beaf}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!clearFirstParticle@{clearFirstParticle}}
+\index{clearFirstParticle@{clearFirstParticle}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{clearFirstParticle()}{clearFirstParticle()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+Request\+Queue\+::clear\+First\+Particle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a78149a409f40133152ea491f62d94cee}\label{classlfns_1_1mpi_1_1RequestQueue_a78149a409f40133152ea491f62d94cee}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!firstParticleFinished@{firstParticleFinished}}
+\index{firstParticleFinished@{firstParticleFinished}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{firstParticleFinished()}{firstParticleFinished()}}
+{\footnotesize\ttfamily bool lfns\+::mpi\+::\+Request\+Queue\+::first\+Particle\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a8d928b4485171bd358355cb957dad5c8}\label{classlfns_1_1mpi_1_1RequestQueue_a8d928b4485171bd358355cb957dad5c8}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!getFinishedProcessess@{getFinishedProcessess}}
+\index{getFinishedProcessess@{getFinishedProcessess}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{getFinishedProcessess()}{getFinishedProcessess()}}
+{\footnotesize\ttfamily std\+::queue$<$ std\+::size\+\_\+t $>$ \& lfns\+::mpi\+::\+Request\+Queue\+::get\+Finished\+Processess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a99e30023faa49068631cf89bc4b530a2}\label{classlfns_1_1mpi_1_1RequestQueue_a99e30023faa49068631cf89bc4b530a2}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!getFirstLikelihood@{getFirstLikelihood}}
+\index{getFirstLikelihood@{getFirstLikelihood}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{getFirstLikelihood()}{getFirstLikelihood()}}
+{\footnotesize\ttfamily double lfns\+::mpi\+::\+Request\+Queue\+::get\+First\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a00c95218c95642172a23c6fafff547c0}\label{classlfns_1_1mpi_1_1RequestQueue_a00c95218c95642172a23c6fafff547c0}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!getFirstParticleClocks@{getFirstParticleClocks}}
+\index{getFirstParticleClocks@{getFirstParticleClocks}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{getFirstParticleClocks()}{getFirstParticleClocks()}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+Request\+Queue\+::get\+First\+Particle\+Clocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a5f8f18fa271833f7ca1115b266479c83}\label{classlfns_1_1mpi_1_1RequestQueue_a5f8f18fa271833f7ca1115b266479c83}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!getFirstSamplingClocks@{getFirstSamplingClocks}}
+\index{getFirstSamplingClocks@{getFirstSamplingClocks}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{getFirstSamplingClocks()}{getFirstSamplingClocks()}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+Request\+Queue\+::get\+First\+Sampling\+Clocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a2fceeaa68ff63d1438658fe1685ca3f2}\label{classlfns_1_1mpi_1_1RequestQueue_a2fceeaa68ff63d1438658fe1685ca3f2}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!getFirstTheta@{getFirstTheta}}
+\index{getFirstTheta@{getFirstTheta}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{getFirstTheta()}{getFirstTheta()}}
+{\footnotesize\ttfamily const std\+::vector$<$ double $>$ \& lfns\+::mpi\+::\+Request\+Queue\+::get\+First\+Theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a11d0ea8f9f1158706a87d12dd811c61d}\label{classlfns_1_1mpi_1_1RequestQueue_a11d0ea8f9f1158706a87d12dd811c61d}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!getFirstUsedProcess@{getFirstUsedProcess}}
+\index{getFirstUsedProcess@{getFirstUsedProcess}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{getFirstUsedProcess()}{getFirstUsedProcess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::mpi\+::\+Request\+Queue\+::get\+First\+Used\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_ae317ac09cf949e3d9955631380da9e03}\label{classlfns_1_1mpi_1_1RequestQueue_ae317ac09cf949e3d9955631380da9e03}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!size@{size}}
+\index{size@{size}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t lfns\+::mpi\+::\+Request\+Queue\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a197df37951dd411acd6bc96b7487db23}\label{classlfns_1_1mpi_1_1RequestQueue_a197df37951dd411acd6bc96b7487db23}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!stopPendingRequests@{stopPendingRequests}}
+\index{stopPendingRequests@{stopPendingRequests}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{stopPendingRequests()}{stopPendingRequests()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+Request\+Queue\+::stop\+Pending\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a7489d834b8708d36a244a3e6d7ffa152}\label{classlfns_1_1mpi_1_1RequestQueue_a7489d834b8708d36a244a3e6d7ffa152}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!\_finished\_request\_queue@{\_finished\_request\_queue}}
+\index{\_finished\_request\_queue@{\_finished\_request\_queue}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{\_finished\_request\_queue}{\_finished\_request\_queue}}
+{\footnotesize\ttfamily std\+::queue$<$std\+::size\+\_\+t$>$ lfns\+::mpi\+::\+Request\+Queue\+::\+\_\+finished\+\_\+request\+\_\+queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_ace303be9e352703e4d9d9f78c3775a8a}\label{classlfns_1_1mpi_1_1RequestQueue_ace303be9e352703e4d9d9f78c3775a8a}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!clocks\_for\_particles@{clocks\_for\_particles}}
+\index{clocks\_for\_particles@{clocks\_for\_particles}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{clocks\_for\_particles}{clocks\_for\_particles}}
+{\footnotesize\ttfamily std\+::queue$<$time\+\_\+t$>$ lfns\+::mpi\+::\+Request\+Queue\+::clocks\+\_\+for\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_acba2db5c9c75307e6b39459d0ab4bff0}\label{classlfns_1_1mpi_1_1RequestQueue_acba2db5c9c75307e6b39459d0ab4bff0}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!clocks\_for\_sampling@{clocks\_for\_sampling}}
+\index{clocks\_for\_sampling@{clocks\_for\_sampling}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{clocks\_for\_sampling}{clocks\_for\_sampling}}
+{\footnotesize\ttfamily std\+::queue$<$time\+\_\+t$>$ lfns\+::mpi\+::\+Request\+Queue\+::clocks\+\_\+for\+\_\+sampling\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_ab3a4b236c430f75faa7c0c675d4e7773}\label{classlfns_1_1mpi_1_1RequestQueue_ab3a4b236c430f75faa7c0c675d4e7773}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!computed\_particles@{computed\_particles}}
+\index{computed\_particles@{computed\_particles}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{computed\_particles}{computed\_particles}}
+{\footnotesize\ttfamily std\+::queue$<$std\+::vector$<$double$>$ $>$ lfns\+::mpi\+::\+Request\+Queue\+::computed\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_aee6b1890447a87b609fc547ae2696381}\label{classlfns_1_1mpi_1_1RequestQueue_aee6b1890447a87b609fc547ae2696381}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!log\_likelihoods@{log\_likelihoods}}
+\index{log\_likelihoods@{log\_likelihoods}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{log\_likelihoods}{log\_likelihoods}}
+{\footnotesize\ttfamily std\+::queue$<$double$>$ lfns\+::mpi\+::\+Request\+Queue\+::log\+\_\+likelihoods\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a7246da834842e81dfc2d35d399dd4993}\label{classlfns_1_1mpi_1_1RequestQueue_a7246da834842e81dfc2d35d399dd4993}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!particle\_requests@{particle\_requests}}
+\index{particle\_requests@{particle\_requests}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{particle\_requests}{particle\_requests}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacelfns_1_1mpi_ac917b0ed5dee1263bde11a750f70f993}{Mpi\+Particle\+Request\+\_\+ptr}}$>$ lfns\+::mpi\+::\+Request\+Queue\+::particle\+\_\+requests\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_afc34258835b0300bd68f162f3ec257e9}\label{classlfns_1_1mpi_1_1RequestQueue_afc34258835b0300bd68f162f3ec257e9}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!process\_finished@{process\_finished}}
+\index{process\_finished@{process\_finished}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{process\_finished}{process\_finished}}
+{\footnotesize\ttfamily std\+::queue$<$bool$>$ lfns\+::mpi\+::\+Request\+Queue\+::process\+\_\+finished\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_addd2f59008f74b69f21c5e950ad744bd}\label{classlfns_1_1mpi_1_1RequestQueue_addd2f59008f74b69f21c5e950ad744bd}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!ptr\_clocks\_for\_particles@{ptr\_clocks\_for\_particles}}
+\index{ptr\_clocks\_for\_particles@{ptr\_clocks\_for\_particles}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{ptr\_clocks\_for\_particles}{ptr\_clocks\_for\_particles}}
+{\footnotesize\ttfamily std\+::vector$<$time\+\_\+t $\ast$$>$ lfns\+::mpi\+::\+Request\+Queue\+::ptr\+\_\+clocks\+\_\+for\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a676a15add41e08cfaf4ae9d0c5860d36}\label{classlfns_1_1mpi_1_1RequestQueue_a676a15add41e08cfaf4ae9d0c5860d36}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!ptr\_clocks\_for\_sampling@{ptr\_clocks\_for\_sampling}}
+\index{ptr\_clocks\_for\_sampling@{ptr\_clocks\_for\_sampling}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{ptr\_clocks\_for\_sampling}{ptr\_clocks\_for\_sampling}}
+{\footnotesize\ttfamily std\+::vector$<$time\+\_\+t $\ast$$>$ lfns\+::mpi\+::\+Request\+Queue\+::ptr\+\_\+clocks\+\_\+for\+\_\+sampling\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a60c3135f3b628bfbd8da93cd97074a48}\label{classlfns_1_1mpi_1_1RequestQueue_a60c3135f3b628bfbd8da93cd97074a48}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!ptr\_log\_likelihoods@{ptr\_log\_likelihoods}}
+\index{ptr\_log\_likelihoods@{ptr\_log\_likelihoods}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{ptr\_log\_likelihoods}{ptr\_log\_likelihoods}}
+{\footnotesize\ttfamily std\+::vector$<$double $\ast$$>$ lfns\+::mpi\+::\+Request\+Queue\+::ptr\+\_\+log\+\_\+likelihoods\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a46ee4cd10613066882517e5bc53e17e0}\label{classlfns_1_1mpi_1_1RequestQueue_a46ee4cd10613066882517e5bc53e17e0}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!ptr\_particles@{ptr\_particles}}
+\index{ptr\_particles@{ptr\_particles}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{ptr\_particles}{ptr\_particles}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $\ast$$>$ lfns\+::mpi\+::\+Request\+Queue\+::ptr\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_a3ccb393930ac5e34982739acf0b6e069}\label{classlfns_1_1mpi_1_1RequestQueue_a3ccb393930ac5e34982739acf0b6e069}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!ptr\_process\_finished@{ptr\_process\_finished}}
+\index{ptr\_process\_finished@{ptr\_process\_finished}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{ptr\_process\_finished}{ptr\_process\_finished}}
+{\footnotesize\ttfamily std\+::vector$<$bool $\ast$$>$ lfns\+::mpi\+::\+Request\+Queue\+::ptr\+\_\+process\+\_\+finished\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1RequestQueue_aa005d33cebfd9267412d16fe3cd10798}\label{classlfns_1_1mpi_1_1RequestQueue_aa005d33cebfd9267412d16fe3cd10798}} 
+\index{lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}!used\_process@{used\_process}}
+\index{used\_process@{used\_process}!lfns::mpi::RequestQueue@{lfns::mpi::RequestQueue}}
+\doxysubsubsection{\texorpdfstring{used\_process}{used\_process}}
+{\footnotesize\ttfamily std\+::queue$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ lfns\+::mpi\+::\+Request\+Queue\+::used\+\_\+process\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{RequestQueue_8h}{Request\+Queue.\+h}}\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{RequestQueue_8cpp}{Request\+Queue.\+cpp}}\end{DoxyCompactItemize}

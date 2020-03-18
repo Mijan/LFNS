@@ -1,0 +1,216 @@
+\hypertarget{classSimulationSetup}{}\doxysection{Simulation\+Setup Class Reference}
+\label{classSimulationSetup}\index{SimulationSetup@{SimulationSetup}}
+
+
+{\ttfamily \#include $<$Simulation\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for Simulation\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classSimulationSetup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Simulation\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSimulationSetup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSimulationSetup_a3d5fd8d90df45baf5feba52fd0afb6fb}{Simulation\+Setup}} (\mbox{\hyperlink{classoptions_1_1SimulationOptions}{options\+::\+Simulation\+Options}} \&options)
+\item 
+virtual \mbox{\hyperlink{classSimulationSetup_ab9610505dafde7aad3940080908560e2}{$\sim$\+Simulation\+Setup}} ()
+\item 
+void \mbox{\hyperlink{classSimulationSetup_ab3de21f326af52765b43e03313fa322b}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{classSimulationSetup_a9c88c6ab3fe180d2ce723134c9d87cbc}{print\+Settings}} (std\+::ostream \&os) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classSimulationSetup_a0ed757eb003a4ab87adc0ab548b991ba}{parameters}}
+\item 
+\mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} \mbox{\hyperlink{classSimulationSetup_a15b1e3b01afc091bd8bc19b6b758f611}{times}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classSimulationSetup_a08b3df8f75c73d23582a996f98c43b0e}{number\+\_\+simulations}} = 1
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classSimulationSetup_a4f9d0e0703d8a657db1bc4b547817268}{parameter}} = \{\}
+\item 
+std\+::string \mbox{\hyperlink{classSimulationSetup_a0fdaffd024fd0cef4dba97a6db3640a9}{parameter\+\_\+file}} = \char`\"{}\char`\"{}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classSimulationSetup_aba96ce33ed8b6cf7ac9c0cae0aeebb4b}{sim\+\_\+param\+\_\+names}}
+\item 
+double \mbox{\hyperlink{classSimulationSetup_a8ae1bde556e5bd163dd8627b41ddbe5d}{initial\+\_\+time}} = 0
+\item 
+double \mbox{\hyperlink{classSimulationSetup_ab3a923032bd2876ef1e6dfbf09ef9c35}{final\+\_\+time}} = 100
+\item 
+double \mbox{\hyperlink{classSimulationSetup_abb814098c9d89d686df28bb2d4ba4a83}{interval}} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSimulationSetup_a196e061359d03e36342ce2beea820e46}{\+\_\+read\+Settingsfrom\+File}} () override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classSimulationSetup_aeffc0ff6e4620330e86150e6cd792a9a}{\+\_\+read\+Experiments}} () override
+\item 
+void \mbox{\hyperlink{classSimulationSetup_a8ceeb8a355178bcf4d54ac1c605e8ab4}{\+\_\+create\+Parameter\+Vector}} ()
+\item 
+void \mbox{\hyperlink{classSimulationSetup_a126df1664a19c53c2e743c6bac9bc51e}{\+\_\+create\+Output\+Times}} ()
+\item 
+void \mbox{\hyperlink{classSimulationSetup_a05a547f19cc45b7a392ddc11771af61a}{\+\_\+read\+Simulation\+Settings}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoptions_1_1SimulationOptions}{options\+::\+Simulation\+Options}} \mbox{\hyperlink{classSimulationSetup_a18af169031defb16922e406cf7236513}{\+\_\+sim\+\_\+options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSimulationSetup_a3d5fd8d90df45baf5feba52fd0afb6fb}\label{classSimulationSetup_a3d5fd8d90df45baf5feba52fd0afb6fb}} 
+\index{SimulationSetup@{SimulationSetup}!SimulationSetup@{SimulationSetup}}
+\index{SimulationSetup@{SimulationSetup}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{SimulationSetup()}{SimulationSetup()}}
+{\footnotesize\ttfamily Simulation\+Setup\+::\+Simulation\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoptions_1_1SimulationOptions}{options\+::\+Simulation\+Options}} \&}]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSimulationSetup_ab9610505dafde7aad3940080908560e2}\label{classSimulationSetup_ab9610505dafde7aad3940080908560e2}} 
+\index{SimulationSetup@{SimulationSetup}!````~SimulationSetup@{$\sim$SimulationSetup}}
+\index{````~SimulationSetup@{$\sim$SimulationSetup}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimulationSetup()}{~SimulationSetup()}}
+{\footnotesize\ttfamily Simulation\+Setup\+::$\sim$\+Simulation\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSimulationSetup_a126df1664a19c53c2e743c6bac9bc51e}\label{classSimulationSetup_a126df1664a19c53c2e743c6bac9bc51e}} 
+\index{SimulationSetup@{SimulationSetup}!\_createOutputTimes@{\_createOutputTimes}}
+\index{\_createOutputTimes@{\_createOutputTimes}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{\_createOutputTimes()}{\_createOutputTimes()}}
+{\footnotesize\ttfamily void Simulation\+Setup\+::\+\_\+create\+Output\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSimulationSetup_a8ceeb8a355178bcf4d54ac1c605e8ab4}\label{classSimulationSetup_a8ceeb8a355178bcf4d54ac1c605e8ab4}} 
+\index{SimulationSetup@{SimulationSetup}!\_createParameterVector@{\_createParameterVector}}
+\index{\_createParameterVector@{\_createParameterVector}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{\_createParameterVector()}{\_createParameterVector()}}
+{\footnotesize\ttfamily void Simulation\+Setup\+::\+\_\+create\+Parameter\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSimulationSetup_aeffc0ff6e4620330e86150e6cd792a9a}\label{classSimulationSetup_aeffc0ff6e4620330e86150e6cd792a9a}} 
+\index{SimulationSetup@{SimulationSetup}!\_readExperiments@{\_readExperiments}}
+\index{\_readExperiments@{\_readExperiments}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{\_readExperiments()}{\_readExperiments()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Simulation\+Setup\+::\+\_\+read\+Experiments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGeneralSetup_a1a558d3ff0cbac30255b95e3f8baaed2}{General\+Setup}}.
+
+\mbox{\Hypertarget{classSimulationSetup_a196e061359d03e36342ce2beea820e46}\label{classSimulationSetup_a196e061359d03e36342ce2beea820e46}} 
+\index{SimulationSetup@{SimulationSetup}!\_readSettingsfromFile@{\_readSettingsfromFile}}
+\index{\_readSettingsfromFile@{\_readSettingsfromFile}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSettingsfromFile()}{\_readSettingsfromFile()}}
+{\footnotesize\ttfamily void Simulation\+Setup\+::\+\_\+read\+Settingsfrom\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a2832f825b34cf426b1f7604fd8d04fe0}{General\+Setup}}.
+
+\mbox{\Hypertarget{classSimulationSetup_a05a547f19cc45b7a392ddc11771af61a}\label{classSimulationSetup_a05a547f19cc45b7a392ddc11771af61a}} 
+\index{SimulationSetup@{SimulationSetup}!\_readSimulationSettings@{\_readSimulationSettings}}
+\index{\_readSimulationSettings@{\_readSimulationSettings}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSimulationSettings()}{\_readSimulationSettings()}}
+{\footnotesize\ttfamily void Simulation\+Setup\+::\+\_\+read\+Simulation\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSimulationSetup_a9c88c6ab3fe180d2ce723134c9d87cbc}\label{classSimulationSetup_a9c88c6ab3fe180d2ce723134c9d87cbc}} 
+\index{SimulationSetup@{SimulationSetup}!printSettings@{printSettings}}
+\index{printSettings@{printSettings}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{printSettings()}{printSettings()}}
+{\footnotesize\ttfamily void Simulation\+Setup\+::print\+Settings (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a4298cb4b3798a38969ed76bbc80a1fd8}{General\+Setup}}.
+
+\mbox{\Hypertarget{classSimulationSetup_ab3de21f326af52765b43e03313fa322b}\label{classSimulationSetup_ab3de21f326af52765b43e03313fa322b}} 
+\index{SimulationSetup@{SimulationSetup}!setUp@{setUp}}
+\index{setUp@{setUp}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void Simulation\+Setup\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSimulationSetup_a18af169031defb16922e406cf7236513}\label{classSimulationSetup_a18af169031defb16922e406cf7236513}} 
+\index{SimulationSetup@{SimulationSetup}!\_sim\_options@{\_sim\_options}}
+\index{\_sim\_options@{\_sim\_options}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{\_sim\_options}{\_sim\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1SimulationOptions}{options\+::\+Simulation\+Options}} Simulation\+Setup\+::\+\_\+sim\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSimulationSetup_ab3a923032bd2876ef1e6dfbf09ef9c35}\label{classSimulationSetup_ab3a923032bd2876ef1e6dfbf09ef9c35}} 
+\index{SimulationSetup@{SimulationSetup}!final\_time@{final\_time}}
+\index{final\_time@{final\_time}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{final\_time}{final\_time}}
+{\footnotesize\ttfamily double Simulation\+Setup\+::final\+\_\+time = 100}
+
+\mbox{\Hypertarget{classSimulationSetup_a8ae1bde556e5bd163dd8627b41ddbe5d}\label{classSimulationSetup_a8ae1bde556e5bd163dd8627b41ddbe5d}} 
+\index{SimulationSetup@{SimulationSetup}!initial\_time@{initial\_time}}
+\index{initial\_time@{initial\_time}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{initial\_time}{initial\_time}}
+{\footnotesize\ttfamily double Simulation\+Setup\+::initial\+\_\+time = 0}
+
+\mbox{\Hypertarget{classSimulationSetup_abb814098c9d89d686df28bb2d4ba4a83}\label{classSimulationSetup_abb814098c9d89d686df28bb2d4ba4a83}} 
+\index{SimulationSetup@{SimulationSetup}!interval@{interval}}
+\index{interval@{interval}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily double Simulation\+Setup\+::interval = 1}
+
+\mbox{\Hypertarget{classSimulationSetup_a08b3df8f75c73d23582a996f98c43b0e}\label{classSimulationSetup_a08b3df8f75c73d23582a996f98c43b0e}} 
+\index{SimulationSetup@{SimulationSetup}!number\_simulations@{number\_simulations}}
+\index{number\_simulations@{number\_simulations}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{number\_simulations}{number\_simulations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} Simulation\+Setup\+::number\+\_\+simulations = 1}
+
+\mbox{\Hypertarget{classSimulationSetup_a4f9d0e0703d8a657db1bc4b547817268}\label{classSimulationSetup_a4f9d0e0703d8a657db1bc4b547817268}} 
+\index{SimulationSetup@{SimulationSetup}!parameter@{parameter}}
+\index{parameter@{parameter}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{parameter}{parameter}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Simulation\+Setup\+::parameter = \{\}}
+
+\mbox{\Hypertarget{classSimulationSetup_a0fdaffd024fd0cef4dba97a6db3640a9}\label{classSimulationSetup_a0fdaffd024fd0cef4dba97a6db3640a9}} 
+\index{SimulationSetup@{SimulationSetup}!parameter\_file@{parameter\_file}}
+\index{parameter\_file@{parameter\_file}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{parameter\_file}{parameter\_file}}
+{\footnotesize\ttfamily std\+::string Simulation\+Setup\+::parameter\+\_\+file = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{classSimulationSetup_a0ed757eb003a4ab87adc0ab548b991ba}\label{classSimulationSetup_a0ed757eb003a4ab87adc0ab548b991ba}} 
+\index{SimulationSetup@{SimulationSetup}!parameters@{parameters}}
+\index{parameters@{parameters}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ Simulation\+Setup\+::parameters}
+
+\mbox{\Hypertarget{classSimulationSetup_aba96ce33ed8b6cf7ac9c0cae0aeebb4b}\label{classSimulationSetup_aba96ce33ed8b6cf7ac9c0cae0aeebb4b}} 
+\index{SimulationSetup@{SimulationSetup}!sim\_param\_names@{sim\_param\_names}}
+\index{sim\_param\_names@{sim\_param\_names}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{sim\_param\_names}{sim\_param\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Simulation\+Setup\+::sim\+\_\+param\+\_\+names}
+
+\mbox{\Hypertarget{classSimulationSetup_a15b1e3b01afc091bd8bc19b6b758f611}\label{classSimulationSetup_a15b1e3b01afc091bd8bc19b6b758f611}} 
+\index{SimulationSetup@{SimulationSetup}!times@{times}}
+\index{times@{times}!SimulationSetup@{SimulationSetup}}
+\doxysubsubsection{\texorpdfstring{times}{times}}
+{\footnotesize\ttfamily \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} Simulation\+Setup\+::times}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SimulationSetup_8h}{Simulation\+Setup.\+h}}\item 
+\mbox{\hyperlink{SimulationSetup_8cpp}{Simulation\+Setup.\+cpp}}\end{DoxyCompactItemize}

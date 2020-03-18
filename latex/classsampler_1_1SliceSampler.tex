@@ -1,0 +1,240 @@
+\hypertarget{classsampler_1_1SliceSampler}{}\doxysection{sampler\+::Slice\+Sampler Class Reference}
+\label{classsampler_1_1SliceSampler}\index{sampler::SliceSampler@{sampler::SliceSampler}}
+
+
+{\ttfamily \#include $<$Slice\+Sampler.\+h$>$}
+
+
+
+Inheritance diagram for sampler\+::Slice\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classsampler_1_1SliceSampler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sampler\+::Slice\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classsampler_1_1SliceSampler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsampler_1_1SliceSampler_aa976e05e99b82c19a1681dd0c1c5bd8d}{Slice\+Sampler}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}} data, \mbox{\hyperlink{namespacesampler_ae78b846fc0bf0af368f1b6a08dc0026b}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} log\+\_\+like\+\_\+fun, double $\ast$epsilon, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+steps=10)
+\item 
+\mbox{\hyperlink{classsampler_1_1SliceSampler_a56a40fd31e2b593fe49ffe4e34942830}{$\sim$\+Slice\+Sampler}} () override
+\item 
+void \mbox{\hyperlink{classsampler_1_1SliceSampler_af234643796a3d400f8e79ff7cb352cf8}{update\+Transformed\+Density\+Samples}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples) override
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1SliceSampler_af88ffff98267861b568b2d9519a9f0db}{sample\+Transformed}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\item 
+virtual double \mbox{\hyperlink{classsampler_1_1SliceSampler_a99b2ac2b638500d977ed7c65d86e2ada}{get\+Transformed\+Log\+Likelihood}} (const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1SliceSampler_acbe3a226a0363928e99cbb531ca51696}{update\+Log\+Likelihood\+Fct}} (\mbox{\hyperlink{namespacesampler_ae78b846fc0bf0af368f1b6a08dc0026b}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} fct\+\_\+ptr) override
+\item 
+void \mbox{\hyperlink{classsampler_1_1SliceSampler_ad2cf4604f29490250f7eda5e7655d548}{set\+Log\+Scale\+Indices}} (std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ log\+\_\+scale\+\_\+indices)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classsampler_1_1SliceSampler_a05418c6810f33e82cac63bed54fbfd1a}{serialize}} (Archive \&ar, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} version)
+\item 
+double \mbox{\hyperlink{classsampler_1_1SliceSampler_a42b8c34e6bb023d8ac7dd860b94b835d}{\+\_\+log\+\_\+like\+\_\+eigen}} (\mbox{\hyperlink{namespacebase_a363306111fa76ab811155d5f2a5225a8}{base\+::\+Ei\+Vector\+Ref}} \mbox{\hyperlink{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}{sample}})
+\item 
+void \mbox{\hyperlink{classsampler_1_1SliceSampler_a3809fd6ae4bb1a8290d9b13be433f79c}{\+\_\+stay\+Within\+Bounds}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&\mbox{\hyperlink{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}{sample}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesampler_ae78b846fc0bf0af368f1b6a08dc0026b}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsampler_1_1SliceSampler_a1d7ebe614175a757b46fd23eecddeb63}{\+\_\+log\+\_\+like}}
+\item 
+\mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \mbox{\hyperlink{classsampler_1_1SliceSampler_a88a9057bdd5b56396b4759cd7a9ef677}{\+\_\+transformed\+\_\+samples}}
+\item 
+\mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \mbox{\hyperlink{classsampler_1_1SliceSampler_a43d4dbf58db56936752f7b384be0c8dd}{\+\_\+decomposed\+\_\+cov}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classsampler_1_1SliceSampler_ad00369d72fe9c320a057469b8475debb}{\+\_\+num\+\_\+steps}}
+\item 
+\mbox{\hyperlink{namespacebase_a81cf40e8e5bca9f2fbf772f9add6fa06}{base\+::\+Uniform\+Int\+Distribution}} \mbox{\hyperlink{classsampler_1_1SliceSampler_a623c08222598135b4e5e9cb1f4f45da9}{\+\_\+sample\+\_\+dist}}
+\item 
+\mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} \mbox{\hyperlink{classsampler_1_1SliceSampler_ac4e40fd36d42146b387a7ad4ce2d257e}{\+\_\+uniform\+\_\+dist}}
+\item 
+\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \mbox{\hyperlink{classsampler_1_1SliceSampler_a4d502e646e382ae00a7ade4888e51329}{\+\_\+lower\+\_\+bound}}
+\item 
+\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \mbox{\hyperlink{classsampler_1_1SliceSampler_a2d8f29cab5416c8b443402f5f1067f22}{\+\_\+upper\+\_\+bound}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classsampler_1_1SliceSampler_a46b8b0ef81f3583463560bbf27aadce2}{\+\_\+log\+\_\+scale\+\_\+indices}}
+\item 
+double $\ast$ \mbox{\hyperlink{classsampler_1_1SliceSampler_a42a5a243ffe00dc80492c4fc87c28847}{\+\_\+epsilon}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1SliceSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_aa976e05e99b82c19a1681dd0c1c5bd8d}\label{classsampler_1_1SliceSampler_aa976e05e99b82c19a1681dd0c1c5bd8d}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!SliceSampler@{SliceSampler}}
+\index{SliceSampler@{SliceSampler}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{SliceSampler()}{SliceSampler()}}
+{\footnotesize\ttfamily sampler\+::\+Slice\+Sampler\+::\+Slice\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}}}]{data,  }\item[{\mbox{\hyperlink{namespacesampler_ae78b846fc0bf0af368f1b6a08dc0026b}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}}}]{log\+\_\+like\+\_\+fun,  }\item[{double $\ast$}]{epsilon,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+steps = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a56a40fd31e2b593fe49ffe4e34942830}\label{classsampler_1_1SliceSampler_a56a40fd31e2b593fe49ffe4e34942830}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!````~SliceSampler@{$\sim$SliceSampler}}
+\index{````~SliceSampler@{$\sim$SliceSampler}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{$\sim$SliceSampler()}{~SliceSampler()}}
+{\footnotesize\ttfamily sampler\+::\+Slice\+Sampler\+::$\sim$\+Slice\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a42b8c34e6bb023d8ac7dd860b94b835d}\label{classsampler_1_1SliceSampler_a42b8c34e6bb023d8ac7dd860b94b835d}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_log\_like\_eigen@{\_log\_like\_eigen}}
+\index{\_log\_like\_eigen@{\_log\_like\_eigen}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_log\_like\_eigen()}{\_log\_like\_eigen()}}
+{\footnotesize\ttfamily double sampler\+::\+Slice\+Sampler\+::\+\_\+log\+\_\+like\+\_\+eigen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a363306111fa76ab811155d5f2a5225a8}{base\+::\+Ei\+Vector\+Ref}}}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a3809fd6ae4bb1a8290d9b13be433f79c}\label{classsampler_1_1SliceSampler_a3809fd6ae4bb1a8290d9b13be433f79c}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_stayWithinBounds@{\_stayWithinBounds}}
+\index{\_stayWithinBounds@{\_stayWithinBounds}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_stayWithinBounds()}{\_stayWithinBounds()}}
+{\footnotesize\ttfamily void sampler\+::\+Slice\+Sampler\+::\+\_\+stay\+Within\+Bounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a99b2ac2b638500d977ed7c65d86e2ada}\label{classsampler_1_1SliceSampler_a99b2ac2b638500d977ed7c65d86e2ada}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!getTransformedLogLikelihood@{getTransformedLogLikelihood}}
+\index{getTransformedLogLikelihood@{getTransformedLogLikelihood}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{getTransformedLogLikelihood()}{getTransformedLogLikelihood()}}
+{\footnotesize\ttfamily double sampler\+::\+Slice\+Sampler\+::get\+Transformed\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_af88ffff98267861b568b2d9519a9f0db}\label{classsampler_1_1SliceSampler_af88ffff98267861b568b2d9519a9f0db}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!sampleTransformed@{sampleTransformed}}
+\index{sampleTransformed@{sampleTransformed}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{sampleTransformed()}{sampleTransformed()}}
+{\footnotesize\ttfamily void sampler\+::\+Slice\+Sampler\+::sample\+Transformed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a05418c6810f33e82cac63bed54fbfd1a}\label{classsampler_1_1SliceSampler_a05418c6810f33e82cac63bed54fbfd1a}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!serialize@{serialize}}
+\index{serialize@{serialize}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void sampler\+::\+Slice\+Sampler\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_ad2cf4604f29490250f7eda5e7655d548}\label{classsampler_1_1SliceSampler_ad2cf4604f29490250f7eda5e7655d548}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!setLogScaleIndices@{setLogScaleIndices}}
+\index{setLogScaleIndices@{setLogScaleIndices}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{setLogScaleIndices()}{setLogScaleIndices()}}
+{\footnotesize\ttfamily void sampler\+::\+Slice\+Sampler\+::set\+Log\+Scale\+Indices (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$}]{log\+\_\+scale\+\_\+indices }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_acbe3a226a0363928e99cbb531ca51696}\label{classsampler_1_1SliceSampler_acbe3a226a0363928e99cbb531ca51696}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!updateLogLikelihoodFct@{updateLogLikelihoodFct}}
+\index{updateLogLikelihoodFct@{updateLogLikelihoodFct}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{updateLogLikelihoodFct()}{updateLogLikelihoodFct()}}
+{\footnotesize\ttfamily void sampler\+::\+Slice\+Sampler\+::update\+Log\+Likelihood\+Fct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesampler_ae78b846fc0bf0af368f1b6a08dc0026b}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}}}]{fct\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_a9d1c561f5abd32ea54b7db3c7513b860}{sampler\+::\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_af234643796a3d400f8e79ff7cb352cf8}\label{classsampler_1_1SliceSampler_af234643796a3d400f8e79ff7cb352cf8}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!updateTransformedDensitySamples@{updateTransformedDensitySamples}}
+\index{updateTransformedDensitySamples@{updateTransformedDensitySamples}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{updateTransformedDensitySamples()}{updateTransformedDensitySamples()}}
+{\footnotesize\ttfamily void sampler\+::\+Slice\+Sampler\+::update\+Transformed\+Density\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}{sampler\+::\+Density\+Estimation}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classsampler_1_1SliceSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a43d4dbf58db56936752f7b384be0c8dd}\label{classsampler_1_1SliceSampler_a43d4dbf58db56936752f7b384be0c8dd}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_decomposed\_cov@{\_decomposed\_cov}}
+\index{\_decomposed\_cov@{\_decomposed\_cov}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_decomposed\_cov}{\_decomposed\_cov}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} sampler\+::\+Slice\+Sampler\+::\+\_\+decomposed\+\_\+cov\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a42a5a243ffe00dc80492c4fc87c28847}\label{classsampler_1_1SliceSampler_a42a5a243ffe00dc80492c4fc87c28847}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_epsilon@{\_epsilon}}
+\index{\_epsilon@{\_epsilon}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_epsilon}{\_epsilon}}
+{\footnotesize\ttfamily double$\ast$ sampler\+::\+Slice\+Sampler\+::\+\_\+epsilon\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a1d7ebe614175a757b46fd23eecddeb63}\label{classsampler_1_1SliceSampler_a1d7ebe614175a757b46fd23eecddeb63}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_log\_like@{\_log\_like}}
+\index{\_log\_like@{\_log\_like}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_log\_like}{\_log\_like}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ae78b846fc0bf0af368f1b6a08dc0026b}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} sampler\+::\+Slice\+Sampler\+::\+\_\+log\+\_\+like\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a46b8b0ef81f3583463560bbf27aadce2}\label{classsampler_1_1SliceSampler_a46b8b0ef81f3583463560bbf27aadce2}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_log\_scale\_indices@{\_log\_scale\_indices}}
+\index{\_log\_scale\_indices@{\_log\_scale\_indices}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_log\_scale\_indices}{\_log\_scale\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ sampler\+::\+Slice\+Sampler\+::\+\_\+log\+\_\+scale\+\_\+indices\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a4d502e646e382ae00a7ade4888e51329}\label{classsampler_1_1SliceSampler_a4d502e646e382ae00a7ade4888e51329}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_lower\_bound@{\_lower\_bound}}
+\index{\_lower\_bound@{\_lower\_bound}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_lower\_bound}{\_lower\_bound}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} sampler\+::\+Slice\+Sampler\+::\+\_\+lower\+\_\+bound\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_ad00369d72fe9c320a057469b8475debb}\label{classsampler_1_1SliceSampler_ad00369d72fe9c320a057469b8475debb}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_num\_steps@{\_num\_steps}}
+\index{\_num\_steps@{\_num\_steps}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_num\_steps}{\_num\_steps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} sampler\+::\+Slice\+Sampler\+::\+\_\+num\+\_\+steps\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a623c08222598135b4e5e9cb1f4f45da9}\label{classsampler_1_1SliceSampler_a623c08222598135b4e5e9cb1f4f45da9}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_sample\_dist@{\_sample\_dist}}
+\index{\_sample\_dist@{\_sample\_dist}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_sample\_dist}{\_sample\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a81cf40e8e5bca9f2fbf772f9add6fa06}{base\+::\+Uniform\+Int\+Distribution}} sampler\+::\+Slice\+Sampler\+::\+\_\+sample\+\_\+dist\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a88a9057bdd5b56396b4759cd7a9ef677}\label{classsampler_1_1SliceSampler_a88a9057bdd5b56396b4759cd7a9ef677}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_transformed\_samples@{\_transformed\_samples}}
+\index{\_transformed\_samples@{\_transformed\_samples}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_transformed\_samples}{\_transformed\_samples}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} sampler\+::\+Slice\+Sampler\+::\+\_\+transformed\+\_\+samples\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_ac4e40fd36d42146b387a7ad4ce2d257e}\label{classsampler_1_1SliceSampler_ac4e40fd36d42146b387a7ad4ce2d257e}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_uniform\_dist@{\_uniform\_dist}}
+\index{\_uniform\_dist@{\_uniform\_dist}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_dist}{\_uniform\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} sampler\+::\+Slice\+Sampler\+::\+\_\+uniform\+\_\+dist\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1SliceSampler_a2d8f29cab5416c8b443402f5f1067f22}\label{classsampler_1_1SliceSampler_a2d8f29cab5416c8b443402f5f1067f22}} 
+\index{sampler::SliceSampler@{sampler::SliceSampler}!\_upper\_bound@{\_upper\_bound}}
+\index{\_upper\_bound@{\_upper\_bound}!sampler::SliceSampler@{sampler::SliceSampler}}
+\doxysubsubsection{\texorpdfstring{\_upper\_bound}{\_upper\_bound}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} sampler\+::\+Slice\+Sampler\+::\+\_\+upper\+\_\+bound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sampler/\mbox{\hyperlink{SliceSampler_8h}{Slice\+Sampler.\+h}}\item 
+src/sampler/\mbox{\hyperlink{SliceSampler_8cpp}{Slice\+Sampler.\+cpp}}\end{DoxyCompactItemize}

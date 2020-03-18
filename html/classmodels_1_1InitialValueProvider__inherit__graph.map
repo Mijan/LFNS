@@ -1,0 +1,5 @@
+<map id="models::InitialValueProvider" name="models::InitialValueProvider">
+<area shape="rect" id="node1" title="This class provides a means to compute the initial state for a particular model." alt="" coords="5,155,211,181"/>
+<area shape="rect" id="node2" href="$classmodels_1_1ParserBaseObject.html" title="This class extends the BaseObject to be parsed from a file." alt="" coords="12,80,204,107"/>
+<area shape="rect" id="node3" href="$classmodels_1_1BaseObject.html" title=" " alt="" coords="32,5,184,32"/>
+</map>

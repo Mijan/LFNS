@@ -1,0 +1,134 @@
+\hypertarget{classmcmc_1_1MCMCLogger}{}\doxysection{mcmc\+::M\+C\+M\+C\+Logger Class Reference}
+\label{classmcmc_1_1MCMCLogger}\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+
+
+{\ttfamily \#include $<$M\+C\+M\+C\+Logger.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCLogger_a2f4da8f6e70de677c28f559ad4217fe7}{M\+C\+M\+C\+Logger}} (\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}} settings)
+\item 
+virtual \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a0bb6f5bcb4ea0e8928f4e6f06477de1c}{$\sim$\+M\+C\+M\+C\+Logger}} ()
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_af67dc102b36f145fb5917994c1d8bbb2}{mcmc\+Started}} ()
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_ad5a680ae25fade9d6dce15718943762b}{mcmc\+Resume}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+particles, const std\+::vector$<$ double $>$ \&theta, double log\+\_\+like)
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a0b61939cd07f2411667afbb21a5e3bf3}{particle\+Sampled}} (const std\+::vector$<$ double $>$ \&curr\+\_\+theta)
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_ab1bfb2a8c9aa46dc6bde85b64bf35a84}{particle\+Accepted}} (const std\+::vector$<$ double $>$ \&theta, double log\+\_\+l)
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a545e1a4369f84708620d425ac5711c59}{particle\+Accepted}} (const std\+::vector$<$ double $>$ \&theta, double log\+\_\+l, time\+\_\+t clocks\+\_\+particle)
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a796269a5b7d85998d6f983b5f84f69e6}{particle\+Rejected}} (const std\+::vector$<$ double $>$ \&theta, double log\+\_\+likelihood)
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a8faf64d7b0d23a43e9db247877c06d18}{mcmc\+Terminated}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a88ac621a31edf8be47ff94e82b3c2c91}{\+\_\+print\+Acceptance\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+time\+\_\+t \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a637b2afe1f116d2150459233b1f5407b}{\+\_\+particle\+\_\+tic}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a6b71c1e29809bddf8147f11a869f95cd}{\+\_\+num\+\_\+accepted\+\_\+particles}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classmcmc_1_1MCMCLogger_a28a4cef5ca4647b0f6776c437f4d6bd8}{\+\_\+num\+\_\+rejections}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a2f4da8f6e70de677c28f559ad4217fe7}\label{classmcmc_1_1MCMCLogger_a2f4da8f6e70de677c28f559ad4217fe7}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!MCMCLogger@{MCMCLogger}}
+\index{MCMCLogger@{MCMCLogger}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{MCMCLogger()}{MCMCLogger()}}
+{\footnotesize\ttfamily mcmc\+::\+M\+C\+M\+C\+Logger\+::\+M\+C\+M\+C\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}}}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a0bb6f5bcb4ea0e8928f4e6f06477de1c}\label{classmcmc_1_1MCMCLogger_a0bb6f5bcb4ea0e8928f4e6f06477de1c}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!````~MCMCLogger@{$\sim$MCMCLogger}}
+\index{````~MCMCLogger@{$\sim$MCMCLogger}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{$\sim$MCMCLogger()}{~MCMCLogger()}}
+{\footnotesize\ttfamily mcmc\+::\+M\+C\+M\+C\+Logger\+::$\sim$\+M\+C\+M\+C\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a88ac621a31edf8be47ff94e82b3c2c91}\label{classmcmc_1_1MCMCLogger_a88ac621a31edf8be47ff94e82b3c2c91}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!\_printAcceptanceInfo@{\_printAcceptanceInfo}}
+\index{\_printAcceptanceInfo@{\_printAcceptanceInfo}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{\_printAcceptanceInfo()}{\_printAcceptanceInfo()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::\+\_\+print\+Acceptance\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_ad5a680ae25fade9d6dce15718943762b}\label{classmcmc_1_1MCMCLogger_ad5a680ae25fade9d6dce15718943762b}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!mcmcResume@{mcmcResume}}
+\index{mcmcResume@{mcmcResume}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{mcmcResume()}{mcmcResume()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::mcmc\+Resume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+particles,  }\item[{const std\+::vector$<$ double $>$ \&}]{theta,  }\item[{double}]{log\+\_\+like }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_af67dc102b36f145fb5917994c1d8bbb2}\label{classmcmc_1_1MCMCLogger_af67dc102b36f145fb5917994c1d8bbb2}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!mcmcStarted@{mcmcStarted}}
+\index{mcmcStarted@{mcmcStarted}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{mcmcStarted()}{mcmcStarted()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::mcmc\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a8faf64d7b0d23a43e9db247877c06d18}\label{classmcmc_1_1MCMCLogger_a8faf64d7b0d23a43e9db247877c06d18}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!mcmcTerminated@{mcmcTerminated}}
+\index{mcmcTerminated@{mcmcTerminated}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{mcmcTerminated()}{mcmcTerminated()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::mcmc\+Terminated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_ab1bfb2a8c9aa46dc6bde85b64bf35a84}\label{classmcmc_1_1MCMCLogger_ab1bfb2a8c9aa46dc6bde85b64bf35a84}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!particleAccepted@{particleAccepted}}
+\index{particleAccepted@{particleAccepted}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{particleAccepted()}{particleAccepted()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::particle\+Accepted (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{theta,  }\item[{double}]{log\+\_\+l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a545e1a4369f84708620d425ac5711c59}\label{classmcmc_1_1MCMCLogger_a545e1a4369f84708620d425ac5711c59}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!particleAccepted@{particleAccepted}}
+\index{particleAccepted@{particleAccepted}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{particleAccepted()}{particleAccepted()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::particle\+Accepted (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{theta,  }\item[{double}]{log\+\_\+l,  }\item[{time\+\_\+t}]{clocks\+\_\+particle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a796269a5b7d85998d6f983b5f84f69e6}\label{classmcmc_1_1MCMCLogger_a796269a5b7d85998d6f983b5f84f69e6}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!particleRejected@{particleRejected}}
+\index{particleRejected@{particleRejected}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{particleRejected()}{particleRejected()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::particle\+Rejected (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{theta,  }\item[{double}]{log\+\_\+likelihood }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a0b61939cd07f2411667afbb21a5e3bf3}\label{classmcmc_1_1MCMCLogger_a0b61939cd07f2411667afbb21a5e3bf3}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!particleSampled@{particleSampled}}
+\index{particleSampled@{particleSampled}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{particleSampled()}{particleSampled()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Logger\+::particle\+Sampled (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{curr\+\_\+theta }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a6b71c1e29809bddf8147f11a869f95cd}\label{classmcmc_1_1MCMCLogger_a6b71c1e29809bddf8147f11a869f95cd}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!\_num\_accepted\_particles@{\_num\_accepted\_particles}}
+\index{\_num\_accepted\_particles@{\_num\_accepted\_particles}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{\_num\_accepted\_particles}{\_num\_accepted\_particles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} mcmc\+::\+M\+C\+M\+C\+Logger\+::\+\_\+num\+\_\+accepted\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a28a4cef5ca4647b0f6776c437f4d6bd8}\label{classmcmc_1_1MCMCLogger_a28a4cef5ca4647b0f6776c437f4d6bd8}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!\_num\_rejections@{\_num\_rejections}}
+\index{\_num\_rejections@{\_num\_rejections}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{\_num\_rejections}{\_num\_rejections}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} mcmc\+::\+M\+C\+M\+C\+Logger\+::\+\_\+num\+\_\+rejections\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCLogger_a637b2afe1f116d2150459233b1f5407b}\label{classmcmc_1_1MCMCLogger_a637b2afe1f116d2150459233b1f5407b}} 
+\index{mcmc::MCMCLogger@{mcmc::MCMCLogger}!\_particle\_tic@{\_particle\_tic}}
+\index{\_particle\_tic@{\_particle\_tic}!mcmc::MCMCLogger@{mcmc::MCMCLogger}}
+\doxysubsubsection{\texorpdfstring{\_particle\_tic}{\_particle\_tic}}
+{\footnotesize\ttfamily time\+\_\+t mcmc\+::\+M\+C\+M\+C\+Logger\+::\+\_\+particle\+\_\+tic\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMCLogger_8h}{M\+C\+M\+C\+Logger.\+h}}\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMCLogger_8cpp}{M\+C\+M\+C\+Logger.\+cpp}}\end{DoxyCompactItemize}

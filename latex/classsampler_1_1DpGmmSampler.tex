@@ -1,0 +1,200 @@
+\hypertarget{classsampler_1_1DpGmmSampler}{}\doxysection{sampler\+::Dp\+Gmm\+Sampler Class Reference}
+\label{classsampler_1_1DpGmmSampler}\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+
+
+{\ttfamily \#include $<$Dp\+Gmm\+Sampler.\+h$>$}
+
+
+
+Inheritance diagram for sampler\+::Dp\+Gmm\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classsampler_1_1DpGmmSampler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sampler\+::Dp\+Gmm\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classsampler_1_1DpGmmSampler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsampler_1_1DpGmmSampler_a5f70bc1fd05de9e45a3f6781060ddfe3}{Dp\+Gmm\+Sampler}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{classsampler_1_1DpGmmSamplerData}{Dp\+Gmm\+Sampler\+Data}} data)
+\item 
+\mbox{\hyperlink{classsampler_1_1DpGmmSampler_a9caf1f53921c41cfbeec2e4ce7773c8d}{Dp\+Gmm\+Sampler}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{classsampler_1_1DpGmmSamplerData}{Dp\+Gmm\+Sampler\+Data}} data, std\+::vector$<$ D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component $>$ mixture\+\_\+components)
+\item 
+virtual \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a04ab55ebbc88a38491e79eea18426dde}{$\sim$\+Dp\+Gmm\+Sampler}} ()
+\item 
+void \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a764214fad21397c64c10737a51eef7e9}{write\+To\+Stream}} (std\+::ostream \&stream)
+\item 
+void \mbox{\hyperlink{classsampler_1_1DpGmmSampler_af3bcbd5959dc5cad948046401d77753e}{update\+Transformed\+Density\+Samples}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples) override
+\item 
+void \mbox{\hyperlink{classsampler_1_1DpGmmSampler_ab6d6bff0f9a8d25c170308bcbf789c86}{sample\+Transformed}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\item 
+double \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a616838393d619edd822ec6181a76d28b}{get\+Transformed\+Log\+Likelihood}} (const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\friend \mbox{\hyperlink{classsampler_1_1DpGmmSampler_aef805c75bca566c028e01d8afa87fc73}{void \+::boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (Archive \&ar, const \+::\mbox{\hyperlink{classsampler_1_1DpGmmSampler}{sampler\+::\+Dp\+Gmm\+Sampler}} $\ast$t, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} file\+\_\+version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a9b463fadb9c1911605138339ea7237ff}{serialize}} (Archive \&ar, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component $>$ \mbox{\hyperlink{classsampler_1_1DpGmmSampler_adcde9af5e7b37dcf4327301dca1a2e33}{\+\_\+mixture\+\_\+components}}
+\item 
+\mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a6950dd59cac6ef5efe79752449b01861}{\+\_\+dist}}
+\item 
+bool \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a6d0c3eff34917dae2bfcf47981dcb0bc}{\+\_\+hyper\+\_\+params\+\_\+set}}
+\item 
+D\+P\+\_\+\+G\+M\+M\+::\+D\+P\+G\+M\+M\+Estimator \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a9e207f4c003c0136178cc32825e2bb6e}{\+\_\+estimator}}
+\item 
+D\+P\+\_\+\+G\+M\+M\+::\+Hyper\+Parameters \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a14d8d6b72e6913a98f71db0f4f07a63e}{\+\_\+hyper\+\_\+parameters}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a5ebfa525910667d3d465d24258282b3a}{\+\_\+num\+\_\+dp\+\_\+gmm\+\_\+iteration}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1DpGmmSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a5f70bc1fd05de9e45a3f6781060ddfe3}\label{classsampler_1_1DpGmmSampler_a5f70bc1fd05de9e45a3f6781060ddfe3}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!DpGmmSampler@{DpGmmSampler}}
+\index{DpGmmSampler@{DpGmmSampler}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{DpGmmSampler()}{DpGmmSampler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sampler\+::\+Dp\+Gmm\+Sampler\+::\+Dp\+Gmm\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{classsampler_1_1DpGmmSamplerData}{Dp\+Gmm\+Sampler\+Data}}}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a9caf1f53921c41cfbeec2e4ce7773c8d}\label{classsampler_1_1DpGmmSampler_a9caf1f53921c41cfbeec2e4ce7773c8d}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!DpGmmSampler@{DpGmmSampler}}
+\index{DpGmmSampler@{DpGmmSampler}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{DpGmmSampler()}{DpGmmSampler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sampler\+::\+Dp\+Gmm\+Sampler\+::\+Dp\+Gmm\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{classsampler_1_1DpGmmSamplerData}{Dp\+Gmm\+Sampler\+Data}}}]{data,  }\item[{std\+::vector$<$ D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component $>$}]{mixture\+\_\+components }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a04ab55ebbc88a38491e79eea18426dde}\label{classsampler_1_1DpGmmSampler_a04ab55ebbc88a38491e79eea18426dde}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!````~DpGmmSampler@{$\sim$DpGmmSampler}}
+\index{````~DpGmmSampler@{$\sim$DpGmmSampler}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{$\sim$DpGmmSampler()}{~DpGmmSampler()}}
+{\footnotesize\ttfamily sampler\+::\+Dp\+Gmm\+Sampler\+::$\sim$\+Dp\+Gmm\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a616838393d619edd822ec6181a76d28b}\label{classsampler_1_1DpGmmSampler_a616838393d619edd822ec6181a76d28b}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!getTransformedLogLikelihood@{getTransformedLogLikelihood}}
+\index{getTransformedLogLikelihood@{getTransformedLogLikelihood}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{getTransformedLogLikelihood()}{getTransformedLogLikelihood()}}
+{\footnotesize\ttfamily double sampler\+::\+Dp\+Gmm\+Sampler\+::get\+Transformed\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_ab6d6bff0f9a8d25c170308bcbf789c86}\label{classsampler_1_1DpGmmSampler_ab6d6bff0f9a8d25c170308bcbf789c86}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!sampleTransformed@{sampleTransformed}}
+\index{sampleTransformed@{sampleTransformed}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{sampleTransformed()}{sampleTransformed()}}
+{\footnotesize\ttfamily void sampler\+::\+Dp\+Gmm\+Sampler\+::sample\+Transformed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a9b463fadb9c1911605138339ea7237ff}\label{classsampler_1_1DpGmmSampler_a9b463fadb9c1911605138339ea7237ff}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!serialize@{serialize}}
+\index{serialize@{serialize}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void sampler\+::\+Dp\+Gmm\+Sampler\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_af3bcbd5959dc5cad948046401d77753e}\label{classsampler_1_1DpGmmSampler_af3bcbd5959dc5cad948046401d77753e}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!updateTransformedDensitySamples@{updateTransformedDensitySamples}}
+\index{updateTransformedDensitySamples@{updateTransformedDensitySamples}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{updateTransformedDensitySamples()}{updateTransformedDensitySamples()}}
+{\footnotesize\ttfamily void sampler\+::\+Dp\+Gmm\+Sampler\+::update\+Transformed\+Density\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_aef805c75bca566c028e01d8afa87fc73}\label{classsampler_1_1DpGmmSampler_aef805c75bca566c028e01d8afa87fc73}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}}
+\index{void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{void ::boost::serialization::save\_construct\_data()}{void ::boost::serialization::save\_construct\_data()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+sampler\+::\+Dp\+Gmm\+Sampler\+::void \+::\mbox{\hyperlink{namespaceboost_1_1serialization_a06e6584c879d27ff1f020d6e381ffa2a}{boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const \+::\mbox{\hyperlink{classsampler_1_1DpGmmSampler}{sampler\+::\+Dp\+Gmm\+Sampler}} $\ast$}]{t,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{file\+\_\+version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a764214fad21397c64c10737a51eef7e9}\label{classsampler_1_1DpGmmSampler_a764214fad21397c64c10737a51eef7e9}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!writeToStream@{writeToStream}}
+\index{writeToStream@{writeToStream}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{writeToStream()}{writeToStream()}}
+{\footnotesize\ttfamily void sampler\+::\+Dp\+Gmm\+Sampler\+::write\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_ad1143ee047e139371910e9b7887df330}{sampler\+::\+Sampler}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classsampler_1_1DpGmmSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a6950dd59cac6ef5efe79752449b01861}\label{classsampler_1_1DpGmmSampler_a6950dd59cac6ef5efe79752449b01861}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!\_dist@{\_dist}}
+\index{\_dist@{\_dist}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{\_dist}{\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} sampler\+::\+Dp\+Gmm\+Sampler\+::\+\_\+dist\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a9e207f4c003c0136178cc32825e2bb6e}\label{classsampler_1_1DpGmmSampler_a9e207f4c003c0136178cc32825e2bb6e}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!\_estimator@{\_estimator}}
+\index{\_estimator@{\_estimator}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{\_estimator}{\_estimator}}
+{\footnotesize\ttfamily D\+P\+\_\+\+G\+M\+M\+::\+D\+P\+G\+M\+M\+Estimator sampler\+::\+Dp\+Gmm\+Sampler\+::\+\_\+estimator\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a14d8d6b72e6913a98f71db0f4f07a63e}\label{classsampler_1_1DpGmmSampler_a14d8d6b72e6913a98f71db0f4f07a63e}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!\_hyper\_parameters@{\_hyper\_parameters}}
+\index{\_hyper\_parameters@{\_hyper\_parameters}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{\_hyper\_parameters}{\_hyper\_parameters}}
+{\footnotesize\ttfamily D\+P\+\_\+\+G\+M\+M\+::\+Hyper\+Parameters sampler\+::\+Dp\+Gmm\+Sampler\+::\+\_\+hyper\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a6d0c3eff34917dae2bfcf47981dcb0bc}\label{classsampler_1_1DpGmmSampler_a6d0c3eff34917dae2bfcf47981dcb0bc}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!\_hyper\_params\_set@{\_hyper\_params\_set}}
+\index{\_hyper\_params\_set@{\_hyper\_params\_set}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{\_hyper\_params\_set}{\_hyper\_params\_set}}
+{\footnotesize\ttfamily bool sampler\+::\+Dp\+Gmm\+Sampler\+::\+\_\+hyper\+\_\+params\+\_\+set\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_adcde9af5e7b37dcf4327301dca1a2e33}\label{classsampler_1_1DpGmmSampler_adcde9af5e7b37dcf4327301dca1a2e33}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!\_mixture\_components@{\_mixture\_components}}
+\index{\_mixture\_components@{\_mixture\_components}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{\_mixture\_components}{\_mixture\_components}}
+{\footnotesize\ttfamily std\+::vector$<$D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component$>$ sampler\+::\+Dp\+Gmm\+Sampler\+::\+\_\+mixture\+\_\+components\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DpGmmSampler_a5ebfa525910667d3d465d24258282b3a}\label{classsampler_1_1DpGmmSampler_a5ebfa525910667d3d465d24258282b3a}} 
+\index{sampler::DpGmmSampler@{sampler::DpGmmSampler}!\_num\_dp\_gmm\_iteration@{\_num\_dp\_gmm\_iteration}}
+\index{\_num\_dp\_gmm\_iteration@{\_num\_dp\_gmm\_iteration}!sampler::DpGmmSampler@{sampler::DpGmmSampler}}
+\doxysubsubsection{\texorpdfstring{\_num\_dp\_gmm\_iteration}{\_num\_dp\_gmm\_iteration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} sampler\+::\+Dp\+Gmm\+Sampler\+::\+\_\+num\+\_\+dp\+\_\+gmm\+\_\+iteration\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sampler/\mbox{\hyperlink{DpGmmSampler_8h}{Dp\+Gmm\+Sampler.\+h}}\item 
+src/sampler/\mbox{\hyperlink{DpGmmSampler_8cpp}{Dp\+Gmm\+Sampler.\+cpp}}\end{DoxyCompactItemize}

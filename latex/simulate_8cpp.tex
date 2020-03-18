@@ -1,0 +1,127 @@
+\hypertarget{simulate_8cpp}{}\doxysection{simulate.\+cpp File Reference}
+\label{simulate_8cpp}\index{simulate.cpp@{simulate.cpp}}
+{\ttfamily \#include \char`\"{}src/options/\+Simulation\+Options.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Simulation\+Setup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/base/\+Io\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/simulator/\+Simulator\+Exceptions.\+h\char`\"{}}\newline
+Include dependency graph for simulate.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{simulate_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ double $>$ \mbox{\hyperlink{simulate_8cpp_a0330dac27f49cd377caf4afd36f94395}{Times}}
+\item 
+typedef std\+::vector$<$ double $>$ \mbox{\hyperlink{simulate_8cpp_a021492bb7579a4e15e9d7fe33d1f538f}{State}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{simulate_8cpp_a021492bb7579a4e15e9d7fe33d1f538f}{State}} $>$ \mbox{\hyperlink{simulate_8cpp_ab30eeab5f0b7b1c9aaf114de88338396}{Trajectory}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{LFNSSetup_8h_afc53d704f6190c0f145dd263cba02adc}{Trajectory}} $>$ \mbox{\hyperlink{simulate_8cpp_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{simulate_8cpp_a8f608305f5eef1ab514ca3ecf122e40b}{simulate}} (\mbox{\hyperlink{classSimulationSetup}{Simulation\+Setup}} \&simulation\+\_\+setup)
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{simulate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{simulate_8cpp_a6e4553ed16748bdad3046b6e9286ced4}{model\+\_\+summary\+\_\+suffix}} = \char`\"{}model\+\_\+summary\char`\"{}
+\item 
+static std\+::stringstream \mbox{\hyperlink{simulate_8cpp_a430fc877c32280f39b0b3fdb095b5c37}{summary\+\_\+stream}}
+\item 
+static std\+::string \mbox{\hyperlink{simulate_8cpp_acf1fe9e6676af0694ea56ffca266267b}{latent\+\_\+states\+\_\+suffix}} = \char`\"{}latent\+\_\+states\char`\"{}
+\item 
+static std\+::string \mbox{\hyperlink{simulate_8cpp_a3978c9e43e9be7d6147fcf71927419fe}{measurement\+\_\+suffix}} = \char`\"{}measurements\char`\"{}
+\item 
+static std\+::string \mbox{\hyperlink{simulate_8cpp_a836c53f409949b5dd8a51cf2f9b14dd4}{times\+\_\+suffix}} = \char`\"{}times\char`\"{}
+\item 
+\mbox{\hyperlink{classoptions_1_1SimulationOptions}{options\+::\+Simulation\+Options}} \mbox{\hyperlink{simulate_8cpp_a1281e2daccac28dfec3d4559436e35b0}{simulation\+\_\+options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{simulate_8cpp_a021492bb7579a4e15e9d7fe33d1f538f}\label{simulate_8cpp_a021492bb7579a4e15e9d7fe33d1f538f}} 
+\index{simulate.cpp@{simulate.cpp}!State@{State}}
+\index{State@{State}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily typedef std\+::vector$<$double$>$ \mbox{\hyperlink{simulate_8cpp_a021492bb7579a4e15e9d7fe33d1f538f}{State}}}
+
+\mbox{\Hypertarget{simulate_8cpp_a0330dac27f49cd377caf4afd36f94395}\label{simulate_8cpp_a0330dac27f49cd377caf4afd36f94395}} 
+\index{simulate.cpp@{simulate.cpp}!Times@{Times}}
+\index{Times@{Times}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{Times}{Times}}
+{\footnotesize\ttfamily typedef std\+::vector$<$double$>$ \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}}}
+
+\mbox{\Hypertarget{simulate_8cpp_ab30eeab5f0b7b1c9aaf114de88338396}\label{simulate_8cpp_ab30eeab5f0b7b1c9aaf114de88338396}} 
+\index{simulate.cpp@{simulate.cpp}!Trajectory@{Trajectory}}
+\index{Trajectory@{Trajectory}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{Trajectory}{Trajectory}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{simulate_8cpp_a021492bb7579a4e15e9d7fe33d1f538f}{State}}$>$ \mbox{\hyperlink{LFNSSetup_8h_afc53d704f6190c0f145dd263cba02adc}{Trajectory}}}
+
+\mbox{\Hypertarget{simulate_8cpp_a9b18a08167208d161ab62443b45ea424}\label{simulate_8cpp_a9b18a08167208d161ab62443b45ea424}} 
+\index{simulate.cpp@{simulate.cpp}!TrajectorySet@{TrajectorySet}}
+\index{TrajectorySet@{TrajectorySet}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{TrajectorySet}{TrajectorySet}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{LFNSSetup_8h_afc53d704f6190c0f145dd263cba02adc}{Trajectory}}$>$ \mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{simulate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{simulate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{simulate.cpp@{simulate.cpp}!main@{main}}
+\index{main@{main}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{simulate_8cpp_a8f608305f5eef1ab514ca3ecf122e40b}\label{simulate_8cpp_a8f608305f5eef1ab514ca3ecf122e40b}} 
+\index{simulate.cpp@{simulate.cpp}!simulate@{simulate}}
+\index{simulate@{simulate}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} simulate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSimulationSetup}{Simulation\+Setup}} \&}]{simulation\+\_\+setup }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{simulate_8cpp_acf1fe9e6676af0694ea56ffca266267b}\label{simulate_8cpp_acf1fe9e6676af0694ea56ffca266267b}} 
+\index{simulate.cpp@{simulate.cpp}!latent\_states\_suffix@{latent\_states\_suffix}}
+\index{latent\_states\_suffix@{latent\_states\_suffix}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{latent\_states\_suffix}{latent\_states\_suffix}}
+{\footnotesize\ttfamily std\+::string latent\+\_\+states\+\_\+suffix = \char`\"{}latent\+\_\+states\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{simulate_8cpp_a3978c9e43e9be7d6147fcf71927419fe}\label{simulate_8cpp_a3978c9e43e9be7d6147fcf71927419fe}} 
+\index{simulate.cpp@{simulate.cpp}!measurement\_suffix@{measurement\_suffix}}
+\index{measurement\_suffix@{measurement\_suffix}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{measurement\_suffix}{measurement\_suffix}}
+{\footnotesize\ttfamily std\+::string measurement\+\_\+suffix = \char`\"{}measurements\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{simulate_8cpp_a6e4553ed16748bdad3046b6e9286ced4}\label{simulate_8cpp_a6e4553ed16748bdad3046b6e9286ced4}} 
+\index{simulate.cpp@{simulate.cpp}!model\_summary\_suffix@{model\_summary\_suffix}}
+\index{model\_summary\_suffix@{model\_summary\_suffix}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{model\_summary\_suffix}{model\_summary\_suffix}}
+{\footnotesize\ttfamily std\+::string model\+\_\+summary\+\_\+suffix = \char`\"{}model\+\_\+summary\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{simulate_8cpp_a1281e2daccac28dfec3d4559436e35b0}\label{simulate_8cpp_a1281e2daccac28dfec3d4559436e35b0}} 
+\index{simulate.cpp@{simulate.cpp}!simulation\_options@{simulation\_options}}
+\index{simulation\_options@{simulation\_options}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{simulation\_options}{simulation\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1SimulationOptions}{options\+::\+Simulation\+Options}} simulation\+\_\+options}
+
+\mbox{\Hypertarget{simulate_8cpp_a430fc877c32280f39b0b3fdb095b5c37}\label{simulate_8cpp_a430fc877c32280f39b0b3fdb095b5c37}} 
+\index{simulate.cpp@{simulate.cpp}!summary\_stream@{summary\_stream}}
+\index{summary\_stream@{summary\_stream}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{summary\_stream}{summary\_stream}}
+{\footnotesize\ttfamily std\+::stringstream summary\+\_\+stream\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{simulate_8cpp_a836c53f409949b5dd8a51cf2f9b14dd4}\label{simulate_8cpp_a836c53f409949b5dd8a51cf2f9b14dd4}} 
+\index{simulate.cpp@{simulate.cpp}!times\_suffix@{times\_suffix}}
+\index{times\_suffix@{times\_suffix}!simulate.cpp@{simulate.cpp}}
+\doxysubsubsection{\texorpdfstring{times\_suffix}{times\_suffix}}
+{\footnotesize\ttfamily std\+::string times\+\_\+suffix = \char`\"{}times\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

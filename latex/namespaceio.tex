@@ -1,0 +1,165 @@
+\hypertarget{namespaceio}{}\doxysection{io Namespace Reference}
+\label{namespaceio}\index{io@{io}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classio_1_1ConfigFileException}{Config\+File\+Exception}}
+\begin{DoxyCompactList}\small\item\em An extension that can be thrown when the config file contains syntax errors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1ConfigFileInterpreter}{Config\+File\+Interpreter}}
+\begin{DoxyCompactList}\small\item\em This class is used to read a config file and access all the information provided there. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1EntryNotFoundException}{Entry\+Not\+Found\+Exception}}
+\item 
+class \mbox{\hyperlink{classio_1_1InitialValueReader}{Initial\+Value\+Reader}}
+\begin{DoxyCompactList}\small\item\em A class that is used to read an initial value file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1IoSettings}{Io\+Settings}}
+\begin{DoxyCompactList}\small\item\em User provided program options related to Input/\+Ooutput. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1MeasurementModelReader}{Measurement\+Model\+Reader}}
+\begin{DoxyCompactList}\small\item\em A class used to read a measurement model file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1ModelAnaReader}{Model\+Ana\+Reader}}
+\item 
+class \mbox{\hyperlink{classio_1_1ModelReactionReader}{Model\+Reaction\+Reader}}
+\begin{DoxyCompactList}\small\item\em A class used to read a model reactions from a model dynamics file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1ParserReader}{Parser\+Reader}}
+\begin{DoxyCompactList}\small\item\em A general class to read text files containing parameter definitions, species definitions, random numbers and so on. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1ReaderException}{Reader\+Exception}}
+\item 
+class \mbox{\hyperlink{classio_1_1TxtFileReader}{Txt\+File\+Reader}}
+\begin{DoxyCompactList}\small\item\em A class that is used to read text files and provides some concenience functions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classio_1_1XmlEntry}{Xml\+Entry}}
+\item 
+class \mbox{\hyperlink{classio_1_1XmlFileReader}{Xml\+File\+Reader}}
+\item 
+class \mbox{\hyperlink{classio_1_1XmlPropertyMap}{Xml\+Property\+Map}}
+\begin{DoxyCompactList}\small\item\em A custom implementation of a X\+ML property map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::property\+\_\+tree\+::ptree \mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classio_1_1XmlEntry}{Xml\+Entry}} $>$ \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_ab76ed623f459f94021673f1c74164787}{I\+N\+I\+T\+I\+A\+L\+\_\+\+V\+A\+L\+U\+ES}} = \char`\"{}Initial Values\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_a2181b6da35ca82673a594aa6dc8b71a9}{M\+E\+A\+S\+U\+R\+E\+M\+E\+N\+T\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Measurement\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_ab7bd849a3243d3aac5d8ab2b8d462d2a}{L\+O\+G\+L\+I\+K\+E\+L\+I\+H\+O\+O\+D\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Loglikelihood\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_ae3267e97be655d1697c2b20caddda5b7}{R\+E\+A\+C\+T\+I\+O\+N\+S\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Reactions\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_a1d8e482ad7e15c3d2d5a471f4ac51feb}{V\+A\+R\+I\+A\+B\+L\+E\+S\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Variables\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_ab62894f7d114025111854478564343b8}{P\+R\+O\+P\+E\+N\+S\+I\+T\+Y\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Propensity\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_acdca5b3e4641744009726af926c17762}{N\+U\+L\+L\+\_\+\+S\+T\+R\+I\+NG}} = \char`\"{}0\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_aa44525855b101500309cffe343ed7a50}{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Parameters\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_abe3b87147400ee6a7694b7cf081b6a91}{S\+P\+E\+C\+I\+E\+S\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Species\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_ace41a4922985e030622947f92432d5d3}{R\+A\+N\+D\+O\+M\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Random numbers\+:\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_af968a535cba288f064fd1ab162aca039}{N\+O\+R\+M\+A\+L\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Normal\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_a1e629d4c2ee3cbbd290bda1206e34bc4}{U\+N\+I\+F\+O\+R\+M\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Uniform\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceio_aaadd30e9082e4d990c02d10ea1f9d648}{U\+N\+I\+F\+O\+R\+M\+\_\+\+I\+N\+T\+\_\+\+C\+A\+P\+T\+I\+ON}} = \char`\"{}Uniform\+\_\+\+Int\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}\label{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}} 
+\index{io@{io}!bt\_ptree@{bt\_ptree}}
+\index{bt\_ptree@{bt\_ptree}!io@{io}}
+\doxysubsubsection{\texorpdfstring{bt\_ptree}{bt\_ptree}}
+{\footnotesize\ttfamily typedef boost\+::property\+\_\+tree\+::ptree \mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{io\+::bt\+\_\+ptree}}}
+
+\mbox{\Hypertarget{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}\label{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}} 
+\index{io@{io}!XmlMap@{XmlMap}}
+\index{XmlMap@{XmlMap}!io@{io}}
+\doxysubsubsection{\texorpdfstring{XmlMap}{XmlMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classio_1_1XmlEntry}{Xml\+Entry}}$>$ \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{io\+::\+Xml\+Map}}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceio_ab76ed623f459f94021673f1c74164787}\label{namespaceio_ab76ed623f459f94021673f1c74164787}} 
+\index{io@{io}!INITIAL\_VALUES@{INITIAL\_VALUES}}
+\index{INITIAL\_VALUES@{INITIAL\_VALUES}!io@{io}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_VALUES}{INITIAL\_VALUES}}
+{\footnotesize\ttfamily const std\+::string io\+::\+I\+N\+I\+T\+I\+A\+L\+\_\+\+V\+A\+L\+U\+ES = \char`\"{}Initial Values\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_ab7bd849a3243d3aac5d8ab2b8d462d2a}\label{namespaceio_ab7bd849a3243d3aac5d8ab2b8d462d2a}} 
+\index{io@{io}!LOGLIKELIHOOD\_CAPTION@{LOGLIKELIHOOD\_CAPTION}}
+\index{LOGLIKELIHOOD\_CAPTION@{LOGLIKELIHOOD\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{LOGLIKELIHOOD\_CAPTION}{LOGLIKELIHOOD\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+L\+O\+G\+L\+I\+K\+E\+L\+I\+H\+O\+O\+D\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Loglikelihood\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_a2181b6da35ca82673a594aa6dc8b71a9}\label{namespaceio_a2181b6da35ca82673a594aa6dc8b71a9}} 
+\index{io@{io}!MEASUREMENT\_CAPTION@{MEASUREMENT\_CAPTION}}
+\index{MEASUREMENT\_CAPTION@{MEASUREMENT\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{MEASUREMENT\_CAPTION}{MEASUREMENT\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+M\+E\+A\+S\+U\+R\+E\+M\+E\+N\+T\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Measurement\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_af968a535cba288f064fd1ab162aca039}\label{namespaceio_af968a535cba288f064fd1ab162aca039}} 
+\index{io@{io}!NORMAL\_CAPTION@{NORMAL\_CAPTION}}
+\index{NORMAL\_CAPTION@{NORMAL\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{NORMAL\_CAPTION}{NORMAL\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+N\+O\+R\+M\+A\+L\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Normal\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_acdca5b3e4641744009726af926c17762}\label{namespaceio_acdca5b3e4641744009726af926c17762}} 
+\index{io@{io}!NULL\_STRING@{NULL\_STRING}}
+\index{NULL\_STRING@{NULL\_STRING}!io@{io}}
+\doxysubsubsection{\texorpdfstring{NULL\_STRING}{NULL\_STRING}}
+{\footnotesize\ttfamily const std\+::string io\+::\+N\+U\+L\+L\+\_\+\+S\+T\+R\+I\+NG = \char`\"{}0\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_aa44525855b101500309cffe343ed7a50}\label{namespaceio_aa44525855b101500309cffe343ed7a50}} 
+\index{io@{io}!PARAMETER\_CAPTION@{PARAMETER\_CAPTION}}
+\index{PARAMETER\_CAPTION@{PARAMETER\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{PARAMETER\_CAPTION}{PARAMETER\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Parameters\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_ab62894f7d114025111854478564343b8}\label{namespaceio_ab62894f7d114025111854478564343b8}} 
+\index{io@{io}!PROPENSITY\_CAPTION@{PROPENSITY\_CAPTION}}
+\index{PROPENSITY\_CAPTION@{PROPENSITY\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{PROPENSITY\_CAPTION}{PROPENSITY\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+P\+R\+O\+P\+E\+N\+S\+I\+T\+Y\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Propensity\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_ace41a4922985e030622947f92432d5d3}\label{namespaceio_ace41a4922985e030622947f92432d5d3}} 
+\index{io@{io}!RANDOM\_NUMBER\_CAPTION@{RANDOM\_NUMBER\_CAPTION}}
+\index{RANDOM\_NUMBER\_CAPTION@{RANDOM\_NUMBER\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{RANDOM\_NUMBER\_CAPTION}{RANDOM\_NUMBER\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+R\+A\+N\+D\+O\+M\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Random numbers\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_ae3267e97be655d1697c2b20caddda5b7}\label{namespaceio_ae3267e97be655d1697c2b20caddda5b7}} 
+\index{io@{io}!REACTIONS\_CAPTION@{REACTIONS\_CAPTION}}
+\index{REACTIONS\_CAPTION@{REACTIONS\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{REACTIONS\_CAPTION}{REACTIONS\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+R\+E\+A\+C\+T\+I\+O\+N\+S\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Reactions\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_abe3b87147400ee6a7694b7cf081b6a91}\label{namespaceio_abe3b87147400ee6a7694b7cf081b6a91}} 
+\index{io@{io}!SPECIES\_CAPTION@{SPECIES\_CAPTION}}
+\index{SPECIES\_CAPTION@{SPECIES\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{SPECIES\_CAPTION}{SPECIES\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+S\+P\+E\+C\+I\+E\+S\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Species\+:\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_a1e629d4c2ee3cbbd290bda1206e34bc4}\label{namespaceio_a1e629d4c2ee3cbbd290bda1206e34bc4}} 
+\index{io@{io}!UNIFORM\_CAPTION@{UNIFORM\_CAPTION}}
+\index{UNIFORM\_CAPTION@{UNIFORM\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{UNIFORM\_CAPTION}{UNIFORM\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+U\+N\+I\+F\+O\+R\+M\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Uniform\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_aaadd30e9082e4d990c02d10ea1f9d648}\label{namespaceio_aaadd30e9082e4d990c02d10ea1f9d648}} 
+\index{io@{io}!UNIFORM\_INT\_CAPTION@{UNIFORM\_INT\_CAPTION}}
+\index{UNIFORM\_INT\_CAPTION@{UNIFORM\_INT\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{UNIFORM\_INT\_CAPTION}{UNIFORM\_INT\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+U\+N\+I\+F\+O\+R\+M\+\_\+\+I\+N\+T\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Uniform\+\_\+\+Int\char`\"{}}
+
+\mbox{\Hypertarget{namespaceio_a1d8e482ad7e15c3d2d5a471f4ac51feb}\label{namespaceio_a1d8e482ad7e15c3d2d5a471f4ac51feb}} 
+\index{io@{io}!VARIABLES\_CAPTION@{VARIABLES\_CAPTION}}
+\index{VARIABLES\_CAPTION@{VARIABLES\_CAPTION}!io@{io}}
+\doxysubsubsection{\texorpdfstring{VARIABLES\_CAPTION}{VARIABLES\_CAPTION}}
+{\footnotesize\ttfamily const std\+::string io\+::\+V\+A\+R\+I\+A\+B\+L\+E\+S\+\_\+\+C\+A\+P\+T\+I\+ON = \char`\"{}Variables\+:\char`\"{}}
+

@@ -1,0 +1,65 @@
+\hypertarget{evaluate__likelihood_8cpp}{}\doxysection{evaluate\+\_\+likelihood.\+cpp File Reference}
+\label{evaluate__likelihood_8cpp}\index{evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}}
+{\ttfamily \#include \char`\"{}src/options/\+Compute\+Likelihood\+Options.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Likelihood\+Setup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/base/\+Io\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/base/\+Math\+Utils.\+h\char`\"{}}\newline
+Include dependency graph for evaluate\+\_\+likelihood.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{evaluate__likelihood_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{evaluate__likelihood_8cpp_af6e621e49f13fe34155bccb1689be957}{compute\+Likelihood}} (\mbox{\hyperlink{classLikelihoodSetup}{Likelihood\+Setup}} \&likelihood\+\_\+setup)
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{evaluate__likelihood_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{evaluate__likelihood_8cpp_a6e4553ed16748bdad3046b6e9286ced4}{model\+\_\+summary\+\_\+suffix}} = \char`\"{}model\+\_\+summary\char`\"{}
+\item 
+static std\+::stringstream \mbox{\hyperlink{evaluate__likelihood_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}{model\+\_\+summary\+\_\+stream}}
+\item 
+\mbox{\hyperlink{classoptions_1_1ComputeLikelihoodOptions}{options\+::\+Compute\+Likelihood\+Options}} \mbox{\hyperlink{evaluate__likelihood_8cpp_a69d0bc00cfbb9f97295857f1c1af1c2f}{likelihood\+\_\+options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{evaluate__likelihood_8cpp_af6e621e49f13fe34155bccb1689be957}\label{evaluate__likelihood_8cpp_af6e621e49f13fe34155bccb1689be957}} 
+\index{evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}!computeLikelihood@{computeLikelihood}}
+\index{computeLikelihood@{computeLikelihood}!evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}}
+\doxysubsubsection{\texorpdfstring{computeLikelihood()}{computeLikelihood()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} compute\+Likelihood (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLikelihoodSetup}{Likelihood\+Setup}} \&}]{likelihood\+\_\+setup }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evaluate__likelihood_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{evaluate__likelihood_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}!main@{main}}
+\index{main@{main}!evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{evaluate__likelihood_8cpp_a69d0bc00cfbb9f97295857f1c1af1c2f}\label{evaluate__likelihood_8cpp_a69d0bc00cfbb9f97295857f1c1af1c2f}} 
+\index{evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}!likelihood\_options@{likelihood\_options}}
+\index{likelihood\_options@{likelihood\_options}!evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}}
+\doxysubsubsection{\texorpdfstring{likelihood\_options}{likelihood\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1ComputeLikelihoodOptions}{options\+::\+Compute\+Likelihood\+Options}} likelihood\+\_\+options}
+
+\mbox{\Hypertarget{evaluate__likelihood_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}\label{evaluate__likelihood_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}} 
+\index{evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}!model\_summary\_stream@{model\_summary\_stream}}
+\index{model\_summary\_stream@{model\_summary\_stream}!evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}}
+\doxysubsubsection{\texorpdfstring{model\_summary\_stream}{model\_summary\_stream}}
+{\footnotesize\ttfamily std\+::stringstream model\+\_\+summary\+\_\+stream\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{evaluate__likelihood_8cpp_a6e4553ed16748bdad3046b6e9286ced4}\label{evaluate__likelihood_8cpp_a6e4553ed16748bdad3046b6e9286ced4}} 
+\index{evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}!model\_summary\_suffix@{model\_summary\_suffix}}
+\index{model\_summary\_suffix@{model\_summary\_suffix}!evaluate\_likelihood.cpp@{evaluate\_likelihood.cpp}}
+\doxysubsubsection{\texorpdfstring{model\_summary\_suffix}{model\_summary\_suffix}}
+{\footnotesize\ttfamily std\+::string model\+\_\+summary\+\_\+suffix = \char`\"{}model\+\_\+summary\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

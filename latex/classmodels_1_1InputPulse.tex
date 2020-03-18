@@ -1,0 +1,114 @@
+\hypertarget{classmodels_1_1InputPulse}{}\doxysection{models\+::Input\+Pulse Class Reference}
+\label{classmodels_1_1InputPulse}\index{models::InputPulse@{models::InputPulse}}
+
+
+{\ttfamily \#include $<$Input\+Pulse.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1InputPulse_a0877c61bc2793d848b5d60db84170435}{Input\+Pulse}} (\mbox{\hyperlink{structmodels_1_1InputData}{Input\+Data}} input\+\_\+data)
+\item 
+virtual \mbox{\hyperlink{classmodels_1_1InputPulse_a5d298a3cbf460d181818d1e70921aa41}{$\sim$\+Input\+Pulse}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1InputPulse_abf3da2e9f8c2be70126aa5e715dcd042}{get\+Dis\+Cont\+Times}} ()
+\begin{DoxyCompactList}\small\item\em This function returns the timpoints of all beginnings and endings of each pulse. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmodels_1_1InputPulse_a741fc1e74c6b5cf332c8917f78fc4dfb}{pulse\+Active}} (double t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1InputPulse_adb6daba680ac35f4e33dd9a1f8b562b1}{pulse\+\_\+beginnings}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1InputPulse_a4a26a70d5eda24700a5976bab4b78920}{pulse\+\_\+ends}}
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1InputPulse_a5bf423abd290e747f251d6e3ed1147c3}{input\+\_\+name}}
+\item 
+double \mbox{\hyperlink{classmodels_1_1InputPulse_a9995edaedf1b0b7688bdda9d00523537}{\+\_\+input\+\_\+strength}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classmodels_1_1InputPulse_ae2695610d685553ac4b898dc319e54b9}{parameter\+\_\+index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements the input pulses for different experiments. Each \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} contains information about the input parameter, which is the parameter to be modified by the \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} and information about the time during which the pulse should be applied. It also containes the value of the input. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1InputPulse_a0877c61bc2793d848b5d60db84170435}\label{classmodels_1_1InputPulse_a0877c61bc2793d848b5d60db84170435}} 
+\index{models::InputPulse@{models::InputPulse}!InputPulse@{InputPulse}}
+\index{InputPulse@{InputPulse}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{InputPulse()}{InputPulse()}}
+{\footnotesize\ttfamily models\+::\+Input\+Pulse\+::\+Input\+Pulse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodels_1_1InputData}{Input\+Data}}}]{input\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1InputPulse_a5d298a3cbf460d181818d1e70921aa41}\label{classmodels_1_1InputPulse_a5d298a3cbf460d181818d1e70921aa41}} 
+\index{models::InputPulse@{models::InputPulse}!````~InputPulse@{$\sim$InputPulse}}
+\index{````~InputPulse@{$\sim$InputPulse}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputPulse()}{~InputPulse()}}
+{\footnotesize\ttfamily models\+::\+Input\+Pulse\+::$\sim$\+Input\+Pulse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1InputPulse_abf3da2e9f8c2be70126aa5e715dcd042}\label{classmodels_1_1InputPulse_abf3da2e9f8c2be70126aa5e715dcd042}} 
+\index{models::InputPulse@{models::InputPulse}!getDisContTimes@{getDisContTimes}}
+\index{getDisContTimes@{getDisContTimes}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{getDisContTimes()}{getDisContTimes()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ models\+::\+Input\+Pulse\+::get\+Dis\+Cont\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns the timpoints of all beginnings and endings of each pulse. 
+
+\mbox{\Hypertarget{classmodels_1_1InputPulse_a741fc1e74c6b5cf332c8917f78fc4dfb}\label{classmodels_1_1InputPulse_a741fc1e74c6b5cf332c8917f78fc4dfb}} 
+\index{models::InputPulse@{models::InputPulse}!pulseActive@{pulseActive}}
+\index{pulseActive@{pulseActive}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{pulseActive()}{pulseActive()}}
+{\footnotesize\ttfamily bool models\+::\+Input\+Pulse\+::pulse\+Active (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+Indicates if the pulse is active at a particular time {\ttfamily t}. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The time for which the input is checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the pulse is active at time {\ttfamily t} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1InputPulse_a9995edaedf1b0b7688bdda9d00523537}\label{classmodels_1_1InputPulse_a9995edaedf1b0b7688bdda9d00523537}} 
+\index{models::InputPulse@{models::InputPulse}!\_input\_strength@{\_input\_strength}}
+\index{\_input\_strength@{\_input\_strength}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{\_input\_strength}{\_input\_strength}}
+{\footnotesize\ttfamily double models\+::\+Input\+Pulse\+::\+\_\+input\+\_\+strength}
+
+\mbox{\Hypertarget{classmodels_1_1InputPulse_a5bf423abd290e747f251d6e3ed1147c3}\label{classmodels_1_1InputPulse_a5bf423abd290e747f251d6e3ed1147c3}} 
+\index{models::InputPulse@{models::InputPulse}!input\_name@{input\_name}}
+\index{input\_name@{input\_name}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{input\_name}{input\_name}}
+{\footnotesize\ttfamily std\+::string models\+::\+Input\+Pulse\+::input\+\_\+name}
+
+\mbox{\Hypertarget{classmodels_1_1InputPulse_ae2695610d685553ac4b898dc319e54b9}\label{classmodels_1_1InputPulse_ae2695610d685553ac4b898dc319e54b9}} 
+\index{models::InputPulse@{models::InputPulse}!parameter\_index@{parameter\_index}}
+\index{parameter\_index@{parameter\_index}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{parameter\_index}{parameter\_index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} models\+::\+Input\+Pulse\+::parameter\+\_\+index}
+
+\mbox{\Hypertarget{classmodels_1_1InputPulse_adb6daba680ac35f4e33dd9a1f8b562b1}\label{classmodels_1_1InputPulse_adb6daba680ac35f4e33dd9a1f8b562b1}} 
+\index{models::InputPulse@{models::InputPulse}!pulse\_beginnings@{pulse\_beginnings}}
+\index{pulse\_beginnings@{pulse\_beginnings}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{pulse\_beginnings}{pulse\_beginnings}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Input\+Pulse\+::pulse\+\_\+beginnings}
+
+\mbox{\Hypertarget{classmodels_1_1InputPulse_a4a26a70d5eda24700a5976bab4b78920}\label{classmodels_1_1InputPulse_a4a26a70d5eda24700a5976bab4b78920}} 
+\index{models::InputPulse@{models::InputPulse}!pulse\_ends@{pulse\_ends}}
+\index{pulse\_ends@{pulse\_ends}!models::InputPulse@{models::InputPulse}}
+\doxysubsubsection{\texorpdfstring{pulse\_ends}{pulse\_ends}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Input\+Pulse\+::pulse\+\_\+ends}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{InputPulse_8h}{Input\+Pulse.\+h}}\item 
+src/models/\mbox{\hyperlink{InputPulse_8cpp}{Input\+Pulse.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\hypertarget{GaussianSampler_8h}{}\doxysection{src/sampler/\+Gaussian\+Sampler.h File Reference}
+\label{GaussianSampler_8h}\index{src/sampler/GaussianSampler.h@{src/sampler/GaussianSampler.h}}
+{\ttfamily \#include $<$boost/serialization/base\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/tracking.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/nvp.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/vector.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/utility.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../base/\+Eigen\+Matrices.\+h\char`\"{}}\newline
+Include dependency graph for Gaussian\+Sampler.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GaussianSampler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GaussianSampler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1NormalSamplerData}{sampler\+::\+Normal\+Sampler\+Data}}
+\item 
+class \mbox{\hyperlink{classsampler_1_1GaussianSampler}{sampler\+::\+Gaussian\+Sampler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesampler}{sampler}}
+\item 
+ \mbox{\hyperlink{namespaceboost}{boost}}
+\item 
+ \mbox{\hyperlink{namespaceboost_1_1serialization}{boost\+::serialization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Normal\+Sampler\+Data $>$ \mbox{\hyperlink{namespacesampler_a4275919bdcf5f68a5c35d02ee378c8a3}{sampler\+::\+Normal\+Sampler\+Data\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Gaussian\+Sampler $>$ \mbox{\hyperlink{namespacesampler_a85f4dea73113aa320d8f99a2bf10c6e3}{sampler\+::\+Gaussian\+Sampler\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a0aeff6d4bbcf4f21f098d817f3fa9343}{boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (Archive \&ar, const \mbox{\hyperlink{classsampler_1_1GaussianSampler}{sampler\+::\+Gaussian\+Sampler}} $\ast$t, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} file\+\_\+version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_af51a6d9fe64809dc29fb4119883e3182}{boost\+::serialization\+::load\+\_\+construct\+\_\+data}} (Archive \&ar, \mbox{\hyperlink{classsampler_1_1GaussianSampler}{sampler\+::\+Gaussian\+Sampler}} $\ast$t, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} file\+\_\+version)
+\end{DoxyCompactItemize}

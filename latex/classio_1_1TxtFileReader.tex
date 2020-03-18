@@ -1,0 +1,119 @@
+\hypertarget{classio_1_1TxtFileReader}{}\doxysection{io\+::Txt\+File\+Reader Class Reference}
+\label{classio_1_1TxtFileReader}\index{io::TxtFileReader@{io::TxtFileReader}}
+
+
+A class that is used to read text files and provides some concenience functions.  
+
+
+
+
+{\ttfamily \#include $<$Txt\+File\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for io\+::Txt\+File\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classio_1_1TxtFileReader__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1TxtFileReader_a84050ba2ecbae40361fe334f951c86d1}{Txt\+File\+Reader}} (std\+::string txt\+\_\+file\+\_\+name)
+\item 
+virtual \mbox{\hyperlink{classio_1_1TxtFileReader_a46f5f920b195799b5ad46f0bcaad6d53}{$\sim$\+Txt\+File\+Reader}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1TxtFileReader_a937be6ddc01859d3619915e5329f0de3}{\+\_\+read\+Line\+With\+Caption}} (std\+::string Caption, std\+::string delimiter)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1TxtFileReader_a85a97c58f1c807288f17b05b7c66884a}{\+\_\+read\+Stripped\+Delimitterd\+Line}} (std\+::string line, std\+::string delimiter)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1TxtFileReader_a2ca965d10c049613a4e803065843138b}{\+\_\+split\+In\+Two}} (std\+::string line, std\+::string delimiter)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1TxtFileReader_a182ca30597eb3ba2143b7644ea068ebd}{\+\_\+read\+Caption\+Lines}} (std\+::string caption)
+\item 
+bool \mbox{\hyperlink{classio_1_1TxtFileReader_aba9b18f1f532e8acee546c8ce7032739}{\+\_\+keyworkd\+Exists}} (std\+::string keyword) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1TxtFileReader_a465c7e5f3a0f7f9d9b86416010df52cb}{\+\_\+file\+\_\+name}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1TxtFileReader_ae013c556aaf853614b6e1120012ea04b}{\+\_\+txt\+\_\+file\+\_\+lines}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that is used to read text files and provides some concenience functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classio_1_1TxtFileReader_a84050ba2ecbae40361fe334f951c86d1}\label{classio_1_1TxtFileReader_a84050ba2ecbae40361fe334f951c86d1}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!TxtFileReader@{TxtFileReader}}
+\index{TxtFileReader@{TxtFileReader}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{TxtFileReader()}{TxtFileReader()}}
+{\footnotesize\ttfamily io\+::\+Txt\+File\+Reader\+::\+Txt\+File\+Reader (\begin{DoxyParamCaption}\item[{std\+::string}]{txt\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1TxtFileReader_a46f5f920b195799b5ad46f0bcaad6d53}\label{classio_1_1TxtFileReader_a46f5f920b195799b5ad46f0bcaad6d53}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!````~TxtFileReader@{$\sim$TxtFileReader}}
+\index{````~TxtFileReader@{$\sim$TxtFileReader}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{$\sim$TxtFileReader()}{~TxtFileReader()}}
+{\footnotesize\ttfamily io\+::\+Txt\+File\+Reader\+::$\sim$\+Txt\+File\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classio_1_1TxtFileReader_aba9b18f1f532e8acee546c8ce7032739}\label{classio_1_1TxtFileReader_aba9b18f1f532e8acee546c8ce7032739}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!\_keyworkdExists@{\_keyworkdExists}}
+\index{\_keyworkdExists@{\_keyworkdExists}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{\_keyworkdExists()}{\_keyworkdExists()}}
+{\footnotesize\ttfamily bool io\+::\+Txt\+File\+Reader\+::\+\_\+keyworkd\+Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{keyword }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classio_1_1TxtFileReader_a182ca30597eb3ba2143b7644ea068ebd}\label{classio_1_1TxtFileReader_a182ca30597eb3ba2143b7644ea068ebd}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!\_readCaptionLines@{\_readCaptionLines}}
+\index{\_readCaptionLines@{\_readCaptionLines}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{\_readCaptionLines()}{\_readCaptionLines()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Txt\+File\+Reader\+::\+\_\+read\+Caption\+Lines (\begin{DoxyParamCaption}\item[{std\+::string}]{caption }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classio_1_1TxtFileReader_a937be6ddc01859d3619915e5329f0de3}\label{classio_1_1TxtFileReader_a937be6ddc01859d3619915e5329f0de3}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!\_readLineWithCaption@{\_readLineWithCaption}}
+\index{\_readLineWithCaption@{\_readLineWithCaption}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{\_readLineWithCaption()}{\_readLineWithCaption()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Txt\+File\+Reader\+::\+\_\+read\+Line\+With\+Caption (\begin{DoxyParamCaption}\item[{std\+::string}]{Caption,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classio_1_1TxtFileReader_a85a97c58f1c807288f17b05b7c66884a}\label{classio_1_1TxtFileReader_a85a97c58f1c807288f17b05b7c66884a}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!\_readStrippedDelimitterdLine@{\_readStrippedDelimitterdLine}}
+\index{\_readStrippedDelimitterdLine@{\_readStrippedDelimitterdLine}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{\_readStrippedDelimitterdLine()}{\_readStrippedDelimitterdLine()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Txt\+File\+Reader\+::\+\_\+read\+Stripped\+Delimitterd\+Line (\begin{DoxyParamCaption}\item[{std\+::string}]{line,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classio_1_1TxtFileReader_a2ca965d10c049613a4e803065843138b}\label{classio_1_1TxtFileReader_a2ca965d10c049613a4e803065843138b}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!\_splitInTwo@{\_splitInTwo}}
+\index{\_splitInTwo@{\_splitInTwo}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{\_splitInTwo()}{\_splitInTwo()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Txt\+File\+Reader\+::\+\_\+split\+In\+Two (\begin{DoxyParamCaption}\item[{std\+::string}]{line,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classio_1_1TxtFileReader_a465c7e5f3a0f7f9d9b86416010df52cb}\label{classio_1_1TxtFileReader_a465c7e5f3a0f7f9d9b86416010df52cb}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!\_file\_name@{\_file\_name}}
+\index{\_file\_name@{\_file\_name}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{\_file\_name}{\_file\_name}}
+{\footnotesize\ttfamily std\+::string io\+::\+Txt\+File\+Reader\+::\+\_\+file\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classio_1_1TxtFileReader_ae013c556aaf853614b6e1120012ea04b}\label{classio_1_1TxtFileReader_ae013c556aaf853614b6e1120012ea04b}} 
+\index{io::TxtFileReader@{io::TxtFileReader}!\_txt\_file\_lines@{\_txt\_file\_lines}}
+\index{\_txt\_file\_lines@{\_txt\_file\_lines}!io::TxtFileReader@{io::TxtFileReader}}
+\doxysubsubsection{\texorpdfstring{\_txt\_file\_lines}{\_txt\_file\_lines}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ io\+::\+Txt\+File\+Reader\+::\+\_\+txt\+\_\+file\+\_\+lines\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/io/\mbox{\hyperlink{TxtFileReader_8h}{Txt\+File\+Reader.\+h}}\item 
+src/io/\mbox{\hyperlink{TxtFileReader_8cpp}{Txt\+File\+Reader.\+cpp}}\end{DoxyCompactItemize}

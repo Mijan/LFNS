@@ -1,0 +1,236 @@
+\hypertarget{classlfns_1_1LFNS}{}\doxysection{lfns\+::L\+F\+NS Class Reference}
+\label{classlfns_1_1LFNS}\index{lfns::LFNS@{lfns::LFNS}}
+
+
+{\ttfamily \#include $<$L\+F\+N\+S.\+h$>$}
+
+
+
+Inheritance diagram for lfns\+::L\+F\+NS\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classlfns_1_1LFNS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lfns\+::L\+F\+NS\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlfns_1_1LFNS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNS_ae7d9668718c7a9f631c3582d8c70af9d}{L\+F\+NS}} (\mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} \&lfns\+\_\+settings)
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1LFNS_a7f64614660641a6f1af9b0365f7eb26e}{$\sim$\+L\+F\+NS}} ()
+\item 
+virtual void \mbox{\hyperlink{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}{run\+L\+F\+NS}} ()=0
+\begin{DoxyCompactList}\small\item\em This function runs the main algorithm and is separately implemented in L\+F\+N\+S\+Seq amd L\+F\+N\+S\+Mpi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlfns_1_1LFNS_a42644638bcbb315f59c2f7264d00ca6e}{resume\+Rum}} (std\+::string previous\+\_\+log\+\_\+file)
+\item 
+double $\ast$ \mbox{\hyperlink{classlfns_1_1LFNS_aef9efe9b3b1bf4f3329dfdf3b31db521}{get\+Pointer\+To\+Threshold}} ()
+\item 
+bool \mbox{\hyperlink{classlfns_1_1LFNS_a85d456d1c0144b8a3f57d8ef214b36e2}{check\+If\+Initialized}} (std\+::ostream \&os)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNS_ae3669dc67b074bde494417d0d83213cb}{set\+Sampler}} (\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} prior, \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} density\+\_\+estimation, \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNS_a5c330f5342d2fb088f61738836c3478b}{set\+Log\+Params}} (std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ log\+\_\+params)
+\begin{DoxyCompactList}\small\item\em This function provides the indices of those parameters that are considered to be sampled in the log-\/space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}{set\+Threshold\+Pointer}} (double $\ast$epsilon\+\_\+ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classlfns_1_1LFNS_a216d491ac3d258748c79b03693c7a2eb}{\+\_\+test\+Termination}} (\mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} \&post\+\_\+quant)
+\item 
+bool \mbox{\hyperlink{classlfns_1_1LFNS_ad46e384ac0637f2dc40d8b3d5d86bf11}{\+\_\+post\+Iteration}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} \mbox{\hyperlink{classlfns_1_1LFNS_a106ca1cd6211477b407b3cbac857f4b7}{\+\_\+settings}}
+\begin{DoxyCompactList}\small\item\em All the settings as read from the config file or provided through the command line. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \mbox{\hyperlink{classlfns_1_1LFNS_a00c56757226dd3d1a7e526cb24342892}{\+\_\+live\+\_\+points}}
+\item 
+\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \mbox{\hyperlink{classlfns_1_1LFNS_aea91813b638b98f68496c3f583790a45}{\+\_\+dead\+\_\+points}}
+\item 
+\mbox{\hyperlink{namespacelfns_a4bf0d313e7bf6678971be8a10f58a30d}{Posterior\+Estimator\+\_\+ptr}} \mbox{\hyperlink{classlfns_1_1LFNS_a62cc9310f52090ff7041d0161679c0e6}{\+\_\+post\+\_\+estimator}}
+\item 
+\mbox{\hyperlink{namespacelfns_a5835e36fed9bf89b0325286c4ef3dc1f}{L\+F\+N\+S\+Sampler\+\_\+ptr}} \mbox{\hyperlink{classlfns_1_1LFNS_aae27b972b6316ad78ec3b61a50d225ae}{\+\_\+sampler}}
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNSLogger}{L\+F\+N\+S\+Logger}} \mbox{\hyperlink{classlfns_1_1LFNS_ae462019505a2533164c393f2ba35132b}{\+\_\+logger}}
+\item 
+bool \mbox{\hyperlink{classlfns_1_1LFNS_a56893eb073c185c9256be35a8e6ce486}{\+\_\+resume\+\_\+run}}
+\item 
+double $\ast$ \mbox{\hyperlink{classlfns_1_1LFNS_ac81de30079efcf3acbd374497975e9f3}{\+\_\+epsilon\+\_\+ptr}}
+\item 
+double \mbox{\hyperlink{classlfns_1_1LFNS_a5c91c58436aa9b9a453fec8516d6dd9c}{\+\_\+epsilon}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNS_a4e27a1b99dcc1d27b979c045224541a5}{\+\_\+num\+\_\+parameters}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the common ancestor class for the sequential (L\+F\+N\+S\+Seq) and parallel (L\+F\+N\+S\+Mpi) \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithms. It is based on the publication Mikelson, Jan, and Mustafa Khammash. \char`\"{}\+Likelihood-\/free nested sampling for biochemical
+reaction networks.\char`\"{} bio\+Rxiv (2019)\+: 564047. See this publication for all details on the functioning ond parameters of this algorithm 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNS_ae7d9668718c7a9f631c3582d8c70af9d}\label{classlfns_1_1LFNS_ae7d9668718c7a9f631c3582d8c70af9d}} 
+\index{lfns::LFNS@{lfns::LFNS}!LFNS@{LFNS}}
+\index{LFNS@{LFNS}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{LFNS()}{LFNS()}}
+{\footnotesize\ttfamily lfns\+::\+L\+F\+N\+S\+::\+L\+F\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} \&}]{lfns\+\_\+settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a7f64614660641a6f1af9b0365f7eb26e}\label{classlfns_1_1LFNS_a7f64614660641a6f1af9b0365f7eb26e}} 
+\index{lfns::LFNS@{lfns::LFNS}!````~LFNS@{$\sim$LFNS}}
+\index{````~LFNS@{$\sim$LFNS}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{$\sim$LFNS()}{~LFNS()}}
+{\footnotesize\ttfamily lfns\+::\+L\+F\+N\+S\+::$\sim$\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNS_ad46e384ac0637f2dc40d8b3d5d86bf11}\label{classlfns_1_1LFNS_ad46e384ac0637f2dc40d8b3d5d86bf11}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_postIteration@{\_postIteration}}
+\index{\_postIteration@{\_postIteration}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_postIteration()}{\_postIteration()}}
+{\footnotesize\ttfamily bool lfns\+::\+L\+F\+N\+S\+::\+\_\+post\+Iteration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+This function contains all the procedures that are done after an itretion finishes, such as writing the current live and dead partile sets to file, updating the logger and so on \mbox{\Hypertarget{classlfns_1_1LFNS_a216d491ac3d258748c79b03693c7a2eb}\label{classlfns_1_1LFNS_a216d491ac3d258748c79b03693c7a2eb}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_testTermination@{\_testTermination}}
+\index{\_testTermination@{\_testTermination}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_testTermination()}{\_testTermination()}}
+{\footnotesize\ttfamily bool lfns\+::\+L\+F\+N\+S\+::\+\_\+test\+Termination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} \&}]{post\+\_\+quant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a85d456d1c0144b8a3f57d8ef214b36e2}\label{classlfns_1_1LFNS_a85d456d1c0144b8a3f57d8ef214b36e2}} 
+\index{lfns::LFNS@{lfns::LFNS}!checkIfInitialized@{checkIfInitialized}}
+\index{checkIfInitialized@{checkIfInitialized}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{checkIfInitialized()}{checkIfInitialized()}}
+{\footnotesize\ttfamily bool lfns\+::\+L\+F\+N\+S\+::check\+If\+Initialized (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_aef9efe9b3b1bf4f3329dfdf3b31db521}\label{classlfns_1_1LFNS_aef9efe9b3b1bf4f3329dfdf3b31db521}} 
+\index{lfns::LFNS@{lfns::LFNS}!getPointerToThreshold@{getPointerToThreshold}}
+\index{getPointerToThreshold@{getPointerToThreshold}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{getPointerToThreshold()}{getPointerToThreshold()}}
+{\footnotesize\ttfamily double $\ast$ lfns\+::\+L\+F\+N\+S\+::get\+Pointer\+To\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a42644638bcbb315f59c2f7264d00ca6e}\label{classlfns_1_1LFNS_a42644638bcbb315f59c2f7264d00ca6e}} 
+\index{lfns::LFNS@{lfns::LFNS}!resumeRum@{resumeRum}}
+\index{resumeRum@{resumeRum}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{resumeRum()}{resumeRum()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::resume\+Rum (\begin{DoxyParamCaption}\item[{std\+::string}]{previous\+\_\+log\+\_\+file }\end{DoxyParamCaption})}
+
+This function needs to be called when the \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithm is a continuation of a previous run. In that case a {\ttfamily previous\+\_\+log\+\_\+file} needs to be provided. This file needs to be the $\ast$\+\_\+log\+\_\+file.txt from a previous run. To continue a run it is important that the number of samples (N and r) stay the same between runs. \mbox{\Hypertarget{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}\label{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}} 
+\index{lfns::LFNS@{lfns::LFNS}!runLFNS@{runLFNS}}
+\index{runLFNS@{runLFNS}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{runLFNS()}{runLFNS()}}
+{\footnotesize\ttfamily virtual void lfns\+::\+L\+F\+N\+S\+::run\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This function runs the main algorithm and is separately implemented in L\+F\+N\+S\+Seq amd L\+F\+N\+S\+Mpi. 
+
+
+
+Implemented in \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a773883e77996a9e4084d52c71d0dd8a3}{lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi}}, and \mbox{\hyperlink{classlfns_1_1seq_1_1LFNSSeq_a6a678ce4d14b9d3868c6c2e6993b66e7}{lfns\+::seq\+::\+L\+F\+N\+S\+Seq}}.
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a5c330f5342d2fb088f61738836c3478b}\label{classlfns_1_1LFNS_a5c330f5342d2fb088f61738836c3478b}} 
+\index{lfns::LFNS@{lfns::LFNS}!setLogParams@{setLogParams}}
+\index{setLogParams@{setLogParams}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{setLogParams()}{setLogParams()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::set\+Log\+Params (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$}]{log\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+This function provides the indices of those parameters that are considered to be sampled in the log-\/space. 
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_ae3669dc67b074bde494417d0d83213cb}\label{classlfns_1_1LFNS_ae3669dc67b074bde494417d0d83213cb}} 
+\index{lfns::LFNS@{lfns::LFNS}!setSampler@{setSampler}}
+\index{setSampler@{setSampler}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{setSampler()}{setSampler()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::set\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}}}]{prior,  }\item[{\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}}}]{density\+\_\+estimation,  }\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng }\end{DoxyParamCaption})}
+
+This function sets the prior sampler (in {\ttfamily prior}) the density estimation ind ({\ttfamily density\+\_\+estimation}) and the random number generator ({\ttfamily rng}) for the \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithm. These objects need to be set before the algorithm can be run. \mbox{\Hypertarget{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}\label{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}} 
+\index{lfns::LFNS@{lfns::LFNS}!setThresholdPointer@{setThresholdPointer}}
+\index{setThresholdPointer@{setThresholdPointer}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{setThresholdPointer()}{setThresholdPointer()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::set\+Threshold\+Pointer (\begin{DoxyParamCaption}\item[{double $\ast$}]{epsilon\+\_\+ptr }\end{DoxyParamCaption})}
+
+This function allows for the setting of a pointer in which the threshold in each iteration can be saved. This is convenient if the threshold needs to be read in another object. This is used in some likelihood evaluator that aborts the likelihood computation when the resulting log-\/likelihood of a sample parameter cannot be higher than the current threshold. See for instance the function Particle\+Filter\+::set\+Threshold\+Ptr() 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNS_aea91813b638b98f68496c3f583790a45}\label{classlfns_1_1LFNS_aea91813b638b98f68496c3f583790a45}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_dead\_points@{\_dead\_points}}
+\index{\_dead\_points@{\_dead\_points}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_dead\_points}{\_dead\_points}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} lfns\+::\+L\+F\+N\+S\+::\+\_\+dead\+\_\+points\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a5c91c58436aa9b9a453fec8516d6dd9c}\label{classlfns_1_1LFNS_a5c91c58436aa9b9a453fec8516d6dd9c}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_epsilon@{\_epsilon}}
+\index{\_epsilon@{\_epsilon}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_epsilon}{\_epsilon}}
+{\footnotesize\ttfamily double lfns\+::\+L\+F\+N\+S\+::\+\_\+epsilon\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_ac81de30079efcf3acbd374497975e9f3}\label{classlfns_1_1LFNS_ac81de30079efcf3acbd374497975e9f3}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_epsilon\_ptr@{\_epsilon\_ptr}}
+\index{\_epsilon\_ptr@{\_epsilon\_ptr}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_epsilon\_ptr}{\_epsilon\_ptr}}
+{\footnotesize\ttfamily double$\ast$ lfns\+::\+L\+F\+N\+S\+::\+\_\+epsilon\+\_\+ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a00c56757226dd3d1a7e526cb24342892}\label{classlfns_1_1LFNS_a00c56757226dd3d1a7e526cb24342892}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_live\_points@{\_live\_points}}
+\index{\_live\_points@{\_live\_points}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_live\_points}{\_live\_points}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} lfns\+::\+L\+F\+N\+S\+::\+\_\+live\+\_\+points\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_ae462019505a2533164c393f2ba35132b}\label{classlfns_1_1LFNS_ae462019505a2533164c393f2ba35132b}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlfns_1_1LFNSLogger}{L\+F\+N\+S\+Logger}} lfns\+::\+L\+F\+N\+S\+::\+\_\+logger\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a4e27a1b99dcc1d27b979c045224541a5}\label{classlfns_1_1LFNS_a4e27a1b99dcc1d27b979c045224541a5}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_num\_parameters@{\_num\_parameters}}
+\index{\_num\_parameters@{\_num\_parameters}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_num\_parameters}{\_num\_parameters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+::\+\_\+num\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a62cc9310f52090ff7041d0161679c0e6}\label{classlfns_1_1LFNS_a62cc9310f52090ff7041d0161679c0e6}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_post\_estimator@{\_post\_estimator}}
+\index{\_post\_estimator@{\_post\_estimator}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_post\_estimator}{\_post\_estimator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelfns_a4bf0d313e7bf6678971be8a10f58a30d}{Posterior\+Estimator\+\_\+ptr}} lfns\+::\+L\+F\+N\+S\+::\+\_\+post\+\_\+estimator\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a56893eb073c185c9256be35a8e6ce486}\label{classlfns_1_1LFNS_a56893eb073c185c9256be35a8e6ce486}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_resume\_run@{\_resume\_run}}
+\index{\_resume\_run@{\_resume\_run}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_resume\_run}{\_resume\_run}}
+{\footnotesize\ttfamily bool lfns\+::\+L\+F\+N\+S\+::\+\_\+resume\+\_\+run\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_aae27b972b6316ad78ec3b61a50d225ae}\label{classlfns_1_1LFNS_aae27b972b6316ad78ec3b61a50d225ae}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_sampler@{\_sampler}}
+\index{\_sampler@{\_sampler}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_sampler}{\_sampler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelfns_a5835e36fed9bf89b0325286c4ef3dc1f}{L\+F\+N\+S\+Sampler\+\_\+ptr}} lfns\+::\+L\+F\+N\+S\+::\+\_\+sampler\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNS_a106ca1cd6211477b407b3cbac857f4b7}\label{classlfns_1_1LFNS_a106ca1cd6211477b407b3cbac857f4b7}} 
+\index{lfns::LFNS@{lfns::LFNS}!\_settings@{\_settings}}
+\index{\_settings@{\_settings}!lfns::LFNS@{lfns::LFNS}}
+\doxysubsubsection{\texorpdfstring{\_settings}{\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} lfns\+::\+L\+F\+N\+S\+::\+\_\+settings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+All the settings as read from the config file or provided through the command line. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LFNS_8h}{L\+F\+N\+S.\+h}}\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LFNS_8cpp}{L\+F\+N\+S.\+cpp}}\end{DoxyCompactItemize}

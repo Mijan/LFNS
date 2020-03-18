@@ -1,0 +1,171 @@
+\hypertarget{namespacelfns_1_1mpi}{}\doxysection{lfns\+::mpi Namespace Reference}
+\label{namespacelfns_1_1mpi}\index{lfns::mpi@{lfns::mpi}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi}{L\+F\+N\+S\+Mpi}}
+\item 
+class \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker}{L\+F\+N\+S\+Worker}}
+\item 
+class \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiLikelihoodRequest}{Mpi\+Likelihood\+Request}}
+\item 
+class \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest}{Mpi\+Particle\+Request}}
+\item 
+class \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest}{Mpi\+Request}}
+\item 
+class \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion}{M\+P\+I\+Stopping\+Criterion}}
+\item 
+class \mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue}{Request\+Queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ bool()$>$ \mbox{\hyperlink{namespacelfns_1_1mpi_abebce95628129c7629bdb66dd2e9be68}{Stopping\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacelfns_1_1mpi_abebce95628129c7629bdb66dd2e9be68}{Stopping\+Fct}} $>$ \mbox{\hyperlink{namespacelfns_1_1mpi_a8fa1b43266ce4c891c63320ff0eb0e0a}{Stopping\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion}{M\+P\+I\+Stopping\+Criterion}} $>$ \mbox{\hyperlink{namespacelfns_1_1mpi_aa45287a407c30935f3831a42118ab6e5}{M\+P\+I\+Stopping\+Criterion\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiLikelihoodRequest}{Mpi\+Likelihood\+Request}} $>$ \mbox{\hyperlink{namespacelfns_1_1mpi_a9cf9edd3afc1e6fe2b7239abb352f036}{Mpi\+Likelihood\+Request\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest}{Mpi\+Particle\+Request}} $>$ \mbox{\hyperlink{namespacelfns_1_1mpi_ac917b0ed5dee1263bde11a750f70f993}{Mpi\+Particle\+Request\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498}{M\+P\+I\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} \{ \newline
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a8ea7915d32887da517cb99b32cc9ae73}{D\+I\+E\+T\+AG}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ada741a70af4f7f67961334adab5dbf56}{L\+I\+K\+E\+L\+I\+H\+O\+O\+D\+\_\+\+R\+E\+C\+O\+M\+PU}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ae01754b414035e261fa558c4285f57ff}{U\+P\+D\+A\+T\+E\+\_\+\+E\+P\+S\+I\+L\+ON}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a5faad7b1139c1a0eee490d28d8a46d28}{U\+P\+D\+A\+T\+E\+\_\+\+S\+A\+M\+P\+L\+ER}}, 
+\newline
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aff1f5b8120f5b4602df3298450976acb}{S\+A\+M\+P\+L\+E\+R\+\_\+\+S\+I\+ZE}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aee496c6b3fc9062b0a976a1bcee92504}{S\+A\+M\+P\+L\+E\+\_\+\+P\+R\+I\+OR}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a30fc787dc0e8453038e3325ee49e2b32}{S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+R\+I\+OR}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aa4157c4c90f12ab2fc630dded6c549d7}{S\+A\+M\+P\+L\+ER}}, 
+\newline
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a8948d2c5ec6d81092bbadfa7ffcd3cab}{E\+P\+S\+I\+L\+ON}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a63732347f3c4eff4b727951d88e37b3b}{P\+A\+R\+T\+I\+C\+LE}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a942a1091b9edb0b17c76007b47fec99d}{C\+L\+O\+C\+K\+S\+\_\+\+S\+A\+M\+P\+L\+I\+NG}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498abe98a16c0ffc3db43e6051d8abf284dc}{I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}, 
+\newline
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a3972c443949bda523c7208fa4e8f469e}{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+A\+C\+C\+E\+P\+T\+ED}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a33e66fff703acc8f67c81aefa9464323}{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+R\+E\+J\+E\+C\+T\+ED}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a698c0c9359bc62874e3668eaf47508cf}{S\+T\+O\+P\+\_\+\+S\+I\+M\+U\+L\+A\+T\+I\+ON}}, 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ae866b3b481c6732faa5784e9a65b61c2}{P\+R\+E\+P\+A\+R\+E\+\_\+\+S\+T\+O\+P\+P\+I\+NG}}, 
+\newline
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a198b3b75af97fe53c2c2146f2a6a6938}{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+S\+E\+C\+O\+N\+DS}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacelfns_1_1mpi_a9cf9edd3afc1e6fe2b7239abb352f036}\label{namespacelfns_1_1mpi_a9cf9edd3afc1e6fe2b7239abb352f036}} 
+\index{lfns::mpi@{lfns::mpi}!MpiLikelihoodRequest\_ptr@{MpiLikelihoodRequest\_ptr}}
+\index{MpiLikelihoodRequest\_ptr@{MpiLikelihoodRequest\_ptr}!lfns::mpi@{lfns::mpi}}
+\doxysubsubsection{\texorpdfstring{MpiLikelihoodRequest\_ptr}{MpiLikelihoodRequest\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classlfns_1_1mpi_1_1MpiLikelihoodRequest}{Mpi\+Likelihood\+Request}}$>$ \mbox{\hyperlink{namespacelfns_1_1mpi_a9cf9edd3afc1e6fe2b7239abb352f036}{lfns\+::mpi\+::\+Mpi\+Likelihood\+Request\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacelfns_1_1mpi_ac917b0ed5dee1263bde11a750f70f993}\label{namespacelfns_1_1mpi_ac917b0ed5dee1263bde11a750f70f993}} 
+\index{lfns::mpi@{lfns::mpi}!MpiParticleRequest\_ptr@{MpiParticleRequest\_ptr}}
+\index{MpiParticleRequest\_ptr@{MpiParticleRequest\_ptr}!lfns::mpi@{lfns::mpi}}
+\doxysubsubsection{\texorpdfstring{MpiParticleRequest\_ptr}{MpiParticleRequest\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest}{Mpi\+Particle\+Request}}$>$ \mbox{\hyperlink{namespacelfns_1_1mpi_ac917b0ed5dee1263bde11a750f70f993}{lfns\+::mpi\+::\+Mpi\+Particle\+Request\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacelfns_1_1mpi_aa45287a407c30935f3831a42118ab6e5}\label{namespacelfns_1_1mpi_aa45287a407c30935f3831a42118ab6e5}} 
+\index{lfns::mpi@{lfns::mpi}!MPIStoppingCriterion\_ptr@{MPIStoppingCriterion\_ptr}}
+\index{MPIStoppingCriterion\_ptr@{MPIStoppingCriterion\_ptr}!lfns::mpi@{lfns::mpi}}
+\doxysubsubsection{\texorpdfstring{MPIStoppingCriterion\_ptr}{MPIStoppingCriterion\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion}{M\+P\+I\+Stopping\+Criterion}}$>$ \mbox{\hyperlink{namespacelfns_1_1mpi_aa45287a407c30935f3831a42118ab6e5}{lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacelfns_1_1mpi_abebce95628129c7629bdb66dd2e9be68}\label{namespacelfns_1_1mpi_abebce95628129c7629bdb66dd2e9be68}} 
+\index{lfns::mpi@{lfns::mpi}!StoppingFct@{StoppingFct}}
+\index{StoppingFct@{StoppingFct}!lfns::mpi@{lfns::mpi}}
+\doxysubsubsection{\texorpdfstring{StoppingFct}{StoppingFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$bool()$>$ \mbox{\hyperlink{namespacelfns_1_1mpi_abebce95628129c7629bdb66dd2e9be68}{lfns\+::mpi\+::\+Stopping\+Fct}}}
+
+\mbox{\Hypertarget{namespacelfns_1_1mpi_a8fa1b43266ce4c891c63320ff0eb0e0a}\label{namespacelfns_1_1mpi_a8fa1b43266ce4c891c63320ff0eb0e0a}} 
+\index{lfns::mpi@{lfns::mpi}!StoppingFct\_ptr@{StoppingFct\_ptr}}
+\index{StoppingFct\_ptr@{StoppingFct\_ptr}!lfns::mpi@{lfns::mpi}}
+\doxysubsubsection{\texorpdfstring{StoppingFct\_ptr}{StoppingFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacelfns_1_1mpi_abebce95628129c7629bdb66dd2e9be68}{Stopping\+Fct}}$>$ \mbox{\hyperlink{namespacelfns_1_1mpi_a8fa1b43266ce4c891c63320ff0eb0e0a}{lfns\+::mpi\+::\+Stopping\+Fct\+\_\+ptr}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498}} 
+\index{lfns::mpi@{lfns::mpi}!MPI\_INSTRUCTION@{MPI\_INSTRUCTION}}
+\index{MPI\_INSTRUCTION@{MPI\_INSTRUCTION}!lfns::mpi@{lfns::mpi}}
+\doxysubsubsection{\texorpdfstring{MPI\_INSTRUCTION}{MPI\_INSTRUCTION}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498}{lfns\+::mpi\+::\+M\+P\+I\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIETAG@{DIETAG}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!DIETAG@{DIETAG}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a8ea7915d32887da517cb99b32cc9ae73}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a8ea7915d32887da517cb99b32cc9ae73}} 
+D\+I\+E\+T\+AG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIKELIHOOD\_RECOMPU@{LIKELIHOOD\_RECOMPU}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!LIKELIHOOD\_RECOMPU@{LIKELIHOOD\_RECOMPU}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ada741a70af4f7f67961334adab5dbf56}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ada741a70af4f7f67961334adab5dbf56}} 
+L\+I\+K\+E\+L\+I\+H\+O\+O\+D\+\_\+\+R\+E\+C\+O\+M\+PU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UPDATE\_EPSILON@{UPDATE\_EPSILON}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!UPDATE\_EPSILON@{UPDATE\_EPSILON}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ae01754b414035e261fa558c4285f57ff}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ae01754b414035e261fa558c4285f57ff}} 
+U\+P\+D\+A\+T\+E\+\_\+\+E\+P\+S\+I\+L\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UPDATE\_SAMPLER@{UPDATE\_SAMPLER}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!UPDATE\_SAMPLER@{UPDATE\_SAMPLER}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a5faad7b1139c1a0eee490d28d8a46d28}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a5faad7b1139c1a0eee490d28d8a46d28}} 
+U\+P\+D\+A\+T\+E\+\_\+\+S\+A\+M\+P\+L\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAMPLER\_SIZE@{SAMPLER\_SIZE}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!SAMPLER\_SIZE@{SAMPLER\_SIZE}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aff1f5b8120f5b4602df3298450976acb}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aff1f5b8120f5b4602df3298450976acb}} 
+S\+A\+M\+P\+L\+E\+R\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAMPLE\_PRIOR@{SAMPLE\_PRIOR}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!SAMPLE\_PRIOR@{SAMPLE\_PRIOR}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aee496c6b3fc9062b0a976a1bcee92504}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aee496c6b3fc9062b0a976a1bcee92504}} 
+S\+A\+M\+P\+L\+E\+\_\+\+P\+R\+I\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAMPLE\_CONSTR\_PRIOR@{SAMPLE\_CONSTR\_PRIOR}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!SAMPLE\_CONSTR\_PRIOR@{SAMPLE\_CONSTR\_PRIOR}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a30fc787dc0e8453038e3325ee49e2b32}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a30fc787dc0e8453038e3325ee49e2b32}} 
+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+R\+I\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAMPLER@{SAMPLER}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!SAMPLER@{SAMPLER}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aa4157c4c90f12ab2fc630dded6c549d7}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498aa4157c4c90f12ab2fc630dded6c549d7}} 
+S\+A\+M\+P\+L\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EPSILON@{EPSILON}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!EPSILON@{EPSILON}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a8948d2c5ec6d81092bbadfa7ffcd3cab}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a8948d2c5ec6d81092bbadfa7ffcd3cab}} 
+E\+P\+S\+I\+L\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARTICLE@{PARTICLE}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!PARTICLE@{PARTICLE}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a63732347f3c4eff4b727951d88e37b3b}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a63732347f3c4eff4b727951d88e37b3b}} 
+P\+A\+R\+T\+I\+C\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLOCKS\_SAMPLING@{CLOCKS\_SAMPLING}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!CLOCKS\_SAMPLING@{CLOCKS\_SAMPLING}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a942a1091b9edb0b17c76007b47fec99d}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a942a1091b9edb0b17c76007b47fec99d}} 
+C\+L\+O\+C\+K\+S\+\_\+\+S\+A\+M\+P\+L\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INSTRUCTION@{INSTRUCTION}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!INSTRUCTION@{INSTRUCTION}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498abe98a16c0ffc3db43e6051d8abf284dc}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498abe98a16c0ffc3db43e6051d8abf284dc}} 
+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARTICLE\_ACCEPTED@{PARTICLE\_ACCEPTED}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!PARTICLE\_ACCEPTED@{PARTICLE\_ACCEPTED}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a3972c443949bda523c7208fa4e8f469e}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a3972c443949bda523c7208fa4e8f469e}} 
+P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+A\+C\+C\+E\+P\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARTICLE\_REJECTED@{PARTICLE\_REJECTED}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!PARTICLE\_REJECTED@{PARTICLE\_REJECTED}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a33e66fff703acc8f67c81aefa9464323}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a33e66fff703acc8f67c81aefa9464323}} 
+P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+R\+E\+J\+E\+C\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP\_SIMULATION@{STOP\_SIMULATION}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!STOP\_SIMULATION@{STOP\_SIMULATION}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a698c0c9359bc62874e3668eaf47508cf}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a698c0c9359bc62874e3668eaf47508cf}} 
+S\+T\+O\+P\+\_\+\+S\+I\+M\+U\+L\+A\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PREPARE\_STOPPING@{PREPARE\_STOPPING}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!PREPARE\_STOPPING@{PREPARE\_STOPPING}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ae866b3b481c6732faa5784e9a65b61c2}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498ae866b3b481c6732faa5784e9a65b61c2}} 
+P\+R\+E\+P\+A\+R\+E\+\_\+\+S\+T\+O\+P\+P\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARTICLE\_SECONDS@{PARTICLE\_SECONDS}!lfns::mpi@{lfns::mpi}}\index{lfns::mpi@{lfns::mpi}!PARTICLE\_SECONDS@{PARTICLE\_SECONDS}}}\mbox{\Hypertarget{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a198b3b75af97fe53c2c2146f2a6a6938}\label{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498a198b3b75af97fe53c2c2146f2a6a6938}} 
+P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+S\+E\+C\+O\+N\+DS&\\
+\hline
+
+\end{DoxyEnumFields}

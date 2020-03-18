@@ -1,0 +1,184 @@
+\hypertarget{classsimulator_1_1SimulatorSsa}{}\doxysection{simulator\+::Simulator\+Ssa Class Reference}
+\label{classsimulator_1_1SimulatorSsa}\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+
+
+{\ttfamily \#include $<$Simulator\+Ssa.\+h$>$}
+
+
+
+Inheritance diagram for simulator\+::Simulator\+Ssa\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classsimulator_1_1SimulatorSsa__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for simulator\+::Simulator\+Ssa\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classsimulator_1_1SimulatorSsa__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a9315eb7e4853532b1469ce89f2f88903}{Simulator\+Ssa}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}{Propensity\+Fct\+\_\+ptr}} propensity\+\_\+fct, \mbox{\hyperlink{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}{Reaction\+Fct\+\_\+ptr}} reaction\+\_\+fct, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+reactions)
+\item 
+virtual \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a781e942aadc61a2a9678cc6d512acf33}{$\sim$\+Simulator\+Ssa}} ()
+\item 
+virtual \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a6a92dc0c230367c50d4b57d0512244ad}{get\+Simulation\+Fct}} ()
+\item 
+virtual void \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_abdf1f52531d8702ba1e4ecc5a1abba9d}{simulate}} (double final\+\_\+time)
+\item 
+\mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a5d835ff20e07c85dcabc3c706e4ecda5}{get\+Reset\+Fct}} () override
+\item 
+void \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_ad0911503c2b679a9b6f03bc1dfffbebd}{simulate\+Reaction}} (std\+::vector$<$ double $>$ \&state, double \&t, double final\+\_\+time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a138c33534b5615cd836b83c87a28c1f7}{\+\_\+get\+Time\+To\+Next\+Reaction}} (double prop\+\_\+sum)
+\item 
+void \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_aed421c6d58bc722752d0d76a51c3ac4b}{\+\_\+simulate\+Reaction}} (std\+::vector$<$ double $>$ \&state, double \&t, double final\+\_\+time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a6ac979f26e2d93f92497b3cf61e95a53}{\+\_\+rng}}
+\item 
+\mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a52938a38f8e493466d379cce469b8a37}{\+\_\+dis}}
+\item 
+double \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a53c8c212a08a33f9ceb7af43f979aec7}{\+\_\+time\+\_\+to\+\_\+next\+\_\+reaction}}
+\item 
+\mbox{\hyperlink{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}{Propensity\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_af847dd85761088b5cfb92cdd23e0a916}{\+\_\+propensity\+\_\+fct}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_ab7046cc983b5284cba9995f7bae0855a}{\+\_\+propensities}}
+\item 
+\mbox{\hyperlink{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}{Reaction\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_acd83564241a3ddde10b85aa70bf539eb}{\+\_\+reaction\+\_\+fct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a9315eb7e4853532b1469ce89f2f88903}\label{classsimulator_1_1SimulatorSsa_a9315eb7e4853532b1469ce89f2f88903}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!SimulatorSsa@{SimulatorSsa}}
+\index{SimulatorSsa@{SimulatorSsa}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{SimulatorSsa()}{SimulatorSsa()}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+Ssa\+::\+Simulator\+Ssa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}{Propensity\+Fct\+\_\+ptr}}}]{propensity\+\_\+fct,  }\item[{\mbox{\hyperlink{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}{Reaction\+Fct\+\_\+ptr}}}]{reaction\+\_\+fct,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+reactions }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rng} & random number generator \\
+\hline
+{\em propensity\+\_\+fct} & \\
+\hline
+{\em reaction\+\_\+fct} & \\
+\hline
+{\em num\+\_\+reactions} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a781e942aadc61a2a9678cc6d512acf33}\label{classsimulator_1_1SimulatorSsa_a781e942aadc61a2a9678cc6d512acf33}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!````~SimulatorSsa@{$\sim$SimulatorSsa}}
+\index{````~SimulatorSsa@{$\sim$SimulatorSsa}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimulatorSsa()}{~SimulatorSsa()}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+Ssa\+::$\sim$\+Simulator\+Ssa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a138c33534b5615cd836b83c87a28c1f7}\label{classsimulator_1_1SimulatorSsa_a138c33534b5615cd836b83c87a28c1f7}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_getTimeToNextReaction@{\_getTimeToNextReaction}}
+\index{\_getTimeToNextReaction@{\_getTimeToNextReaction}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_getTimeToNextReaction()}{\_getTimeToNextReaction()}}
+{\footnotesize\ttfamily double simulator\+::\+Simulator\+Ssa\+::\+\_\+get\+Time\+To\+Next\+Reaction (\begin{DoxyParamCaption}\item[{double}]{prop\+\_\+sum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_aed421c6d58bc722752d0d76a51c3ac4b}\label{classsimulator_1_1SimulatorSsa_aed421c6d58bc722752d0d76a51c3ac4b}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_simulateReaction@{\_simulateReaction}}
+\index{\_simulateReaction@{\_simulateReaction}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_simulateReaction()}{\_simulateReaction()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ssa\+::\+\_\+simulate\+Reaction (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{state,  }\item[{double \&}]{t,  }\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a5d835ff20e07c85dcabc3c706e4ecda5}\label{classsimulator_1_1SimulatorSsa_a5d835ff20e07c85dcabc3c706e4ecda5}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!getResetFct@{getResetFct}}
+\index{getResetFct@{getResetFct}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{getResetFct()}{getResetFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Ssa\+::get\+Reset\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a0df0905d6e73446e39fb3021395d11c9}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a6a92dc0c230367c50d4b57d0512244ad}\label{classsimulator_1_1SimulatorSsa_a6a92dc0c230367c50d4b57d0512244ad}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!getSimulationFct@{getSimulationFct}}
+\index{getSimulationFct@{getSimulationFct}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{getSimulationFct()}{getSimulationFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Ssa\+::get\+Simulation\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a833bcbc098992ac34610a8bf75c88865}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_abdf1f52531d8702ba1e4ecc5a1abba9d}\label{classsimulator_1_1SimulatorSsa_abdf1f52531d8702ba1e4ecc5a1abba9d}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!simulate@{simulate}}
+\index{simulate@{simulate}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ssa\+::simulate (\begin{DoxyParamCaption}\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a7483d21dde301a5390392539169a7aa1}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_ad0911503c2b679a9b6f03bc1dfffbebd}\label{classsimulator_1_1SimulatorSsa_ad0911503c2b679a9b6f03bc1dfffbebd}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!simulateReaction@{simulateReaction}}
+\index{simulateReaction@{simulateReaction}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{simulateReaction()}{simulateReaction()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ssa\+::simulate\+Reaction (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{state,  }\item[{double \&}]{t,  }\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a52938a38f8e493466d379cce469b8a37}\label{classsimulator_1_1SimulatorSsa_a52938a38f8e493466d379cce469b8a37}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_dis@{\_dis}}
+\index{\_dis@{\_dis}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_dis}{\_dis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} simulator\+::\+Simulator\+Ssa\+::\+\_\+dis\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_ab7046cc983b5284cba9995f7bae0855a}\label{classsimulator_1_1SimulatorSsa_ab7046cc983b5284cba9995f7bae0855a}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_propensities@{\_propensities}}
+\index{\_propensities@{\_propensities}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_propensities}{\_propensities}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ simulator\+::\+Simulator\+Ssa\+::\+\_\+propensities\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_af847dd85761088b5cfb92cdd23e0a916}\label{classsimulator_1_1SimulatorSsa_af847dd85761088b5cfb92cdd23e0a916}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_propensity\_fct@{\_propensity\_fct}}
+\index{\_propensity\_fct@{\_propensity\_fct}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_propensity\_fct}{\_propensity\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}{Propensity\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Ssa\+::\+\_\+propensity\+\_\+fct\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_acd83564241a3ddde10b85aa70bf539eb}\label{classsimulator_1_1SimulatorSsa_acd83564241a3ddde10b85aa70bf539eb}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_reaction\_fct@{\_reaction\_fct}}
+\index{\_reaction\_fct@{\_reaction\_fct}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_reaction\_fct}{\_reaction\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}{Reaction\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Ssa\+::\+\_\+reaction\+\_\+fct\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a6ac979f26e2d93f92497b3cf61e95a53}\label{classsimulator_1_1SimulatorSsa_a6ac979f26e2d93f92497b3cf61e95a53}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_rng@{\_rng}}
+\index{\_rng@{\_rng}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_rng}{\_rng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} simulator\+::\+Simulator\+Ssa\+::\+\_\+rng\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorSsa_a53c8c212a08a33f9ceb7af43f979aec7}\label{classsimulator_1_1SimulatorSsa_a53c8c212a08a33f9ceb7af43f979aec7}} 
+\index{simulator::SimulatorSsa@{simulator::SimulatorSsa}!\_time\_to\_next\_reaction@{\_time\_to\_next\_reaction}}
+\index{\_time\_to\_next\_reaction@{\_time\_to\_next\_reaction}!simulator::SimulatorSsa@{simulator::SimulatorSsa}}
+\doxysubsubsection{\texorpdfstring{\_time\_to\_next\_reaction}{\_time\_to\_next\_reaction}}
+{\footnotesize\ttfamily double simulator\+::\+Simulator\+Ssa\+::\+\_\+time\+\_\+to\+\_\+next\+\_\+reaction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/simulator/\mbox{\hyperlink{SimulatorSsa_8h}{Simulator\+Ssa.\+h}}\item 
+src/simulator/\mbox{\hyperlink{SimulatorSsa_8cpp}{Simulator\+Ssa.\+cpp}}\end{DoxyCompactItemize}

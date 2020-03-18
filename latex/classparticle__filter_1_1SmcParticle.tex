@@ -1,0 +1,101 @@
+\hypertarget{classparticle__filter_1_1SmcParticle}{}\doxysection{particle\+\_\+filter\+::Smc\+Particle Class Reference}
+\label{classparticle__filter_1_1SmcParticle}\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+
+
+{\ttfamily \#include $<$Smc\+Particle.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1SmcParticle_acac68a511c7f81e39a0cf35840cdda20}{Smc\+Particle}} (std\+::size\+\_\+t state\+\_\+size)
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1SmcParticle_a21b8fbd7b60f7d9e69b748c55dc4afb1}{Smc\+Particle}} (const std\+::vector$<$ double $>$ \&state\+\_\+, double t)
+\item 
+virtual \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_a318bdc50acb59b8b87db04f602e5270f}{$\sim$\+Smc\+Particle}} ()
+\item 
+double \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_a054283d39d57a00b2ff430cf77f0c238}{weight}} ()
+\item 
+void \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_acd7e78b1f82469104ce87ff153a5cd2b}{set\+Weight}} (double \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_a054283d39d57a00b2ff430cf77f0c238}{weight}})
+\item 
+virtual void \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_afde4ba1f4e97aa881be83f6eee8fc404}{replace\+With}} (const \mbox{\hyperlink{classparticle__filter_1_1SmcParticle}{Smc\+Particle}} \&rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_ad779c431a9fd79dcb5ae979243f713ef}{state}}
+\item 
+double \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_ab2962a7c2627afd82479061ef4b6dfc1}{time}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticle__filter_1_1SmcParticle_a7450bd0ae2c4720bfd3e055c37b3529a}{\+\_\+weight}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_acac68a511c7f81e39a0cf35840cdda20}\label{classparticle__filter_1_1SmcParticle_acac68a511c7f81e39a0cf35840cdda20}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!SmcParticle@{SmcParticle}}
+\index{SmcParticle@{SmcParticle}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{SmcParticle()}{SmcParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily particle\+\_\+filter\+::\+Smc\+Particle\+::\+Smc\+Particle (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{state\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_a21b8fbd7b60f7d9e69b748c55dc4afb1}\label{classparticle__filter_1_1SmcParticle_a21b8fbd7b60f7d9e69b748c55dc4afb1}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!SmcParticle@{SmcParticle}}
+\index{SmcParticle@{SmcParticle}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{SmcParticle()}{SmcParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily particle\+\_\+filter\+::\+Smc\+Particle\+::\+Smc\+Particle (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{state\+\_\+,  }\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_a318bdc50acb59b8b87db04f602e5270f}\label{classparticle__filter_1_1SmcParticle_a318bdc50acb59b8b87db04f602e5270f}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!````~SmcParticle@{$\sim$SmcParticle}}
+\index{````~SmcParticle@{$\sim$SmcParticle}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmcParticle()}{~SmcParticle()}}
+{\footnotesize\ttfamily virtual particle\+\_\+filter\+::\+Smc\+Particle\+::$\sim$\+Smc\+Particle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_afde4ba1f4e97aa881be83f6eee8fc404}\label{classparticle__filter_1_1SmcParticle_afde4ba1f4e97aa881be83f6eee8fc404}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!replaceWith@{replaceWith}}
+\index{replaceWith@{replaceWith}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{replaceWith()}{replaceWith()}}
+{\footnotesize\ttfamily virtual void particle\+\_\+filter\+::\+Smc\+Particle\+::replace\+With (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classparticle__filter_1_1SmcParticle}{Smc\+Particle}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_acd7e78b1f82469104ce87ff153a5cd2b}\label{classparticle__filter_1_1SmcParticle_acd7e78b1f82469104ce87ff153a5cd2b}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily void particle\+\_\+filter\+::\+Smc\+Particle\+::set\+Weight (\begin{DoxyParamCaption}\item[{double}]{weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_a054283d39d57a00b2ff430cf77f0c238}\label{classparticle__filter_1_1SmcParticle_a054283d39d57a00b2ff430cf77f0c238}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!weight@{weight}}
+\index{weight@{weight}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{weight()}{weight()}}
+{\footnotesize\ttfamily double particle\+\_\+filter\+::\+Smc\+Particle\+::weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_a7450bd0ae2c4720bfd3e055c37b3529a}\label{classparticle__filter_1_1SmcParticle_a7450bd0ae2c4720bfd3e055c37b3529a}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!\_weight@{\_weight}}
+\index{\_weight@{\_weight}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{\_weight}{\_weight}}
+{\footnotesize\ttfamily double particle\+\_\+filter\+::\+Smc\+Particle\+::\+\_\+weight\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_ad779c431a9fd79dcb5ae979243f713ef}\label{classparticle__filter_1_1SmcParticle_ad779c431a9fd79dcb5ae979243f713ef}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!state@{state}}
+\index{state@{state}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ particle\+\_\+filter\+::\+Smc\+Particle\+::state}
+
+\mbox{\Hypertarget{classparticle__filter_1_1SmcParticle_ab2962a7c2627afd82479061ef4b6dfc1}\label{classparticle__filter_1_1SmcParticle_ab2962a7c2627afd82479061ef4b6dfc1}} 
+\index{particle\_filter::SmcParticle@{particle\_filter::SmcParticle}!time@{time}}
+\index{time@{time}!particle\_filter::SmcParticle@{particle\_filter::SmcParticle}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double particle\+\_\+filter\+::\+Smc\+Particle\+::time}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/particle\+\_\+filter/\mbox{\hyperlink{SmcParticle_8h}{Smc\+Particle.\+h}}\end{DoxyCompactItemize}

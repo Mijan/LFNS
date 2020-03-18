@@ -1,0 +1,145 @@
+\hypertarget{classio_1_1ModelReactionReader}{}\doxysection{io\+::Model\+Reaction\+Reader Class Reference}
+\label{classio_1_1ModelReactionReader}\index{io::ModelReactionReader@{io::ModelReactionReader}}
+
+
+A class used to read a model reactions from a model dynamics file.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Reaction\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for io\+::Model\+Reaction\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classio_1_1ModelReactionReader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for io\+::Model\+Reaction\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classio_1_1ModelReactionReader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1ModelReactionReader_a9d725389f7be466cb86717c85dfe088b}{Model\+Reaction\+Reader}} (std\+::string model\+\_\+file\+\_\+name)
+\item 
+virtual \mbox{\hyperlink{classio_1_1ModelReactionReader_ae01c012f8b30133136cc359201b3d3b2}{$\sim$\+Model\+Reaction\+Reader}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classio_1_1ModelReactionReader_a8d9e9e5b3513711867d3566e07df8285}{read\+Production\+Species}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classio_1_1ModelReactionReader_af4b030d311a2b2206f60c2b5106ca03e}{read\+Product\+Species}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classio_1_1ModelReactionReader_a99dbb9d4ead12ab1c1235b30c2ebc93d}{read\+Reaction\+Variables}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ModelReactionReader_ac95fb34a2fcf055793f333a395fd5a08}{read\+Propensities}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ModelReactionReader_af31f577c21cd6b876ca33d798affa01c}{\+\_\+read\+Reaction\+Line\+Reaction}} (std\+::string line)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ModelReactionReader_a3cda8e2528541218c5393c6040641bd1}{\+\_\+read\+Reaction\+Line\+Variables}} (std\+::string line)
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ModelReactionReader_aa090305cba5228374d09592f44a0a923}{\+\_\+read\+Reaction\+Line\+Propensity}} (std\+::string line)
+\item 
+void \mbox{\hyperlink{classio_1_1ModelReactionReader_ab03aef3c64bf8628fd1d73e92501553c}{\+\_\+remove\+N\+U\+L\+L\+Species}} (std\+::vector$<$ std\+::string $>$ \&species\+\_\+vector)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ModelReactionReader_a08d6ec44080f01ddcab619b349534d12}{\+\_\+txt\+\_\+file\+\_\+lines}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class used to read a model reactions from a model dynamics file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_a9d725389f7be466cb86717c85dfe088b}\label{classio_1_1ModelReactionReader_a9d725389f7be466cb86717c85dfe088b}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!ModelReactionReader@{ModelReactionReader}}
+\index{ModelReactionReader@{ModelReactionReader}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{ModelReactionReader()}{ModelReactionReader()}}
+{\footnotesize\ttfamily io\+::\+Model\+Reaction\+Reader\+::\+Model\+Reaction\+Reader (\begin{DoxyParamCaption}\item[{std\+::string}]{model\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_ae01c012f8b30133136cc359201b3d3b2}\label{classio_1_1ModelReactionReader_ae01c012f8b30133136cc359201b3d3b2}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!````~ModelReactionReader@{$\sim$ModelReactionReader}}
+\index{````~ModelReactionReader@{$\sim$ModelReactionReader}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{$\sim$ModelReactionReader()}{~ModelReactionReader()}}
+{\footnotesize\ttfamily io\+::\+Model\+Reaction\+Reader\+::$\sim$\+Model\+Reaction\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_aa090305cba5228374d09592f44a0a923}\label{classio_1_1ModelReactionReader_aa090305cba5228374d09592f44a0a923}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!\_readReactionLinePropensity@{\_readReactionLinePropensity}}
+\index{\_readReactionLinePropensity@{\_readReactionLinePropensity}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{\_readReactionLinePropensity()}{\_readReactionLinePropensity()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Model\+Reaction\+Reader\+::\+\_\+read\+Reaction\+Line\+Propensity (\begin{DoxyParamCaption}\item[{std\+::string}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_af31f577c21cd6b876ca33d798affa01c}\label{classio_1_1ModelReactionReader_af31f577c21cd6b876ca33d798affa01c}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!\_readReactionLineReaction@{\_readReactionLineReaction}}
+\index{\_readReactionLineReaction@{\_readReactionLineReaction}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{\_readReactionLineReaction()}{\_readReactionLineReaction()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Model\+Reaction\+Reader\+::\+\_\+read\+Reaction\+Line\+Reaction (\begin{DoxyParamCaption}\item[{std\+::string}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_a3cda8e2528541218c5393c6040641bd1}\label{classio_1_1ModelReactionReader_a3cda8e2528541218c5393c6040641bd1}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!\_readReactionLineVariables@{\_readReactionLineVariables}}
+\index{\_readReactionLineVariables@{\_readReactionLineVariables}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{\_readReactionLineVariables()}{\_readReactionLineVariables()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Model\+Reaction\+Reader\+::\+\_\+read\+Reaction\+Line\+Variables (\begin{DoxyParamCaption}\item[{std\+::string}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_ab03aef3c64bf8628fd1d73e92501553c}\label{classio_1_1ModelReactionReader_ab03aef3c64bf8628fd1d73e92501553c}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!\_removeNULLSpecies@{\_removeNULLSpecies}}
+\index{\_removeNULLSpecies@{\_removeNULLSpecies}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{\_removeNULLSpecies()}{\_removeNULLSpecies()}}
+{\footnotesize\ttfamily void io\+::\+Model\+Reaction\+Reader\+::\+\_\+remove\+N\+U\+L\+L\+Species (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{species\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_a8d9e9e5b3513711867d3566e07df8285}\label{classio_1_1ModelReactionReader_a8d9e9e5b3513711867d3566e07df8285}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!readProductionSpecies@{readProductionSpecies}}
+\index{readProductionSpecies@{readProductionSpecies}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{readProductionSpecies()}{readProductionSpecies()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ io\+::\+Model\+Reaction\+Reader\+::read\+Production\+Species (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_af4b030d311a2b2206f60c2b5106ca03e}\label{classio_1_1ModelReactionReader_af4b030d311a2b2206f60c2b5106ca03e}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!readProductSpecies@{readProductSpecies}}
+\index{readProductSpecies@{readProductSpecies}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{readProductSpecies()}{readProductSpecies()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ io\+::\+Model\+Reaction\+Reader\+::read\+Product\+Species (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_ac95fb34a2fcf055793f333a395fd5a08}\label{classio_1_1ModelReactionReader_ac95fb34a2fcf055793f333a395fd5a08}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!readPropensities@{readPropensities}}
+\index{readPropensities@{readPropensities}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{readPropensities()}{readPropensities()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Model\+Reaction\+Reader\+::read\+Propensities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_a99dbb9d4ead12ab1c1235b30c2ebc93d}\label{classio_1_1ModelReactionReader_a99dbb9d4ead12ab1c1235b30c2ebc93d}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!readReactionVariables@{readReactionVariables}}
+\index{readReactionVariables@{readReactionVariables}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{readReactionVariables()}{readReactionVariables()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ io\+::\+Model\+Reaction\+Reader\+::read\+Reaction\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classio_1_1ModelReactionReader_a08d6ec44080f01ddcab619b349534d12}\label{classio_1_1ModelReactionReader_a08d6ec44080f01ddcab619b349534d12}} 
+\index{io::ModelReactionReader@{io::ModelReactionReader}!\_txt\_file\_lines@{\_txt\_file\_lines}}
+\index{\_txt\_file\_lines@{\_txt\_file\_lines}!io::ModelReactionReader@{io::ModelReactionReader}}
+\doxysubsubsection{\texorpdfstring{\_txt\_file\_lines}{\_txt\_file\_lines}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ io\+::\+Model\+Reaction\+Reader\+::\+\_\+txt\+\_\+file\+\_\+lines\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/io/\mbox{\hyperlink{ModelReactionReader_8h}{Model\+Reaction\+Reader.\+h}}\item 
+src/io/\mbox{\hyperlink{ModelReactionReader_8cpp}{Model\+Reaction\+Reader.\+cpp}}\end{DoxyCompactItemize}

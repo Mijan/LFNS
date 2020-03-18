@@ -1,0 +1,14 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classsampler_1_1KernelSampler.html" title=" " alt="" coords="5,31,184,57"/>
+<area shape="rect" id="node2" href="$classsampler_1_1GaussianSampler.html" title=" " alt="" coords="235,81,432,108"/>
+<area shape="rect" id="node3" href="$classsampler_1_1UniformSampler.html" title=" " alt="" coords="238,31,429,57"/>
+<area shape="rect" id="node4" href="$classsampler_1_1Sampler.html" title=" " alt="" coords="26,81,163,108"/>
+<area shape="rect" id="node5" href="$classsampler_1_1DensityEstimation.html" title=" " alt="" coords="232,132,435,159"/>
+<area shape="rect" id="node6" href="$classMixutreSampler.html" title=" " alt="" coords="541,5,668,32"/>
+<area shape="rect" id="node7" href="$classsampler_1_1DpGmmSampler.html" title=" " alt="" coords="509,56,700,83"/>
+<area shape="rect" id="node8" href="$classsampler_1_1EllipsoidSampler.html" title=" " alt="" coords="509,107,701,133"/>
+<area shape="rect" id="node9" href="$classsampler_1_1KernelDensityEstimation.html" title=" " alt="" coords="483,157,727,184"/>
+<area shape="rect" id="node11" href="$classsampler_1_1RejectionSupportSampler.html" title=" " alt="" coords="507,209,702,250"/>
+<area shape="rect" id="node12" href="$classsampler_1_1SliceSampler.html" title=" " alt="" coords="521,275,689,301"/>
+<area shape="rect" id="node10" href="$classsampler_1_1KernelSupportEstimation.html" title=" " alt="" coords="775,157,1019,184"/>
+</map>

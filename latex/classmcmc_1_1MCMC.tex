@@ -1,0 +1,116 @@
+\hypertarget{classmcmc_1_1MCMC}{}\doxysection{mcmc\+::M\+C\+MC Class Reference}
+\label{classmcmc_1_1MCMC}\index{mcmc::MCMC@{mcmc::MCMC}}
+
+
+{\ttfamily \#include $<$M\+C\+M\+C.\+h$>$}
+
+
+
+Collaboration diagram for mcmc\+::M\+C\+MC\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmcmc_1_1MCMC__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMC_a7ee5b18cfc8424adace2a7ad02b0a8e8}{M\+C\+MC}} (\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}} \&mcmc\+\_\+settings, \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \&sampler\+\_\+settings, \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{namespacemcmc_ab02e0caaea55d5361f7b9dc20507ba52}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} log\+\_\+likelihood\+\_\+evaluation)
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMC_a086b66d2adb064eb0e74ea09d64aa265}{run\+M\+C\+MC}} ()
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMC_ae08283f505412fe65df4e020718e41c4}{resume\+Rum}} (std\+::string previous\+\_\+log\+\_\+file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}} \mbox{\hyperlink{classmcmc_1_1MCMC_ae755de2730847fc5b59da42e6cc33f06}{\+\_\+settings}}
+\item 
+\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} \mbox{\hyperlink{classmcmc_1_1MCMC_a47cc02c51c2f90ee517ce6e181f2c928}{\+\_\+rng}}
+\item 
+\mbox{\hyperlink{namespacemcmc_ab02e0caaea55d5361f7b9dc20507ba52}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmcmc_1_1MCMC_ab8c96a59c5375f5bbf30ffef5d9202e7}{\+\_\+log\+\_\+likelihood\+\_\+evaluation}}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCSampler}{M\+C\+M\+C\+Sampler}} \mbox{\hyperlink{classmcmc_1_1MCMC_a6e9b275574bb438d02388ba00cf075fe}{\+\_\+sampler}}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCParticles}{M\+C\+M\+C\+Particles}} \mbox{\hyperlink{classmcmc_1_1MCMC_ab92e711aca8a5d81e69d917e33e1e366}{\+\_\+particles}}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCLogger}{M\+C\+M\+C\+Logger}} \mbox{\hyperlink{classmcmc_1_1MCMC_a7d26559c77365d74f42721c3413ba0c5}{\+\_\+logger}}
+\item 
+bool \mbox{\hyperlink{classmcmc_1_1MCMC_a72f0e7acd01128877c73f6529573ea31}{\+\_\+resume\+\_\+run}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMC_a7ee5b18cfc8424adace2a7ad02b0a8e8}\label{classmcmc_1_1MCMC_a7ee5b18cfc8424adace2a7ad02b0a8e8}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!MCMC@{MCMC}}
+\index{MCMC@{MCMC}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{MCMC()}{MCMC()}}
+{\footnotesize\ttfamily mcmc\+::\+M\+C\+M\+C\+::\+M\+C\+MC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}} \&}]{mcmc\+\_\+settings,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \&}]{sampler\+\_\+settings,  }\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{namespacemcmc_ab02e0caaea55d5361f7b9dc20507ba52}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}}}]{log\+\_\+likelihood\+\_\+evaluation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMC_ae08283f505412fe65df4e020718e41c4}\label{classmcmc_1_1MCMC_ae08283f505412fe65df4e020718e41c4}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!resumeRum@{resumeRum}}
+\index{resumeRum@{resumeRum}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{resumeRum()}{resumeRum()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+::resume\+Rum (\begin{DoxyParamCaption}\item[{std\+::string}]{previous\+\_\+log\+\_\+file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMC_a086b66d2adb064eb0e74ea09d64aa265}\label{classmcmc_1_1MCMC_a086b66d2adb064eb0e74ea09d64aa265}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!runMCMC@{runMCMC}}
+\index{runMCMC@{runMCMC}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{runMCMC()}{runMCMC()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+::run\+M\+C\+MC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMC_ab8c96a59c5375f5bbf30ffef5d9202e7}\label{classmcmc_1_1MCMC_ab8c96a59c5375f5bbf30ffef5d9202e7}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!\_log\_likelihood\_evaluation@{\_log\_likelihood\_evaluation}}
+\index{\_log\_likelihood\_evaluation@{\_log\_likelihood\_evaluation}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{\_log\_likelihood\_evaluation}{\_log\_likelihood\_evaluation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemcmc_ab02e0caaea55d5361f7b9dc20507ba52}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} mcmc\+::\+M\+C\+M\+C\+::\+\_\+log\+\_\+likelihood\+\_\+evaluation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMC_a7d26559c77365d74f42721c3413ba0c5}\label{classmcmc_1_1MCMC_a7d26559c77365d74f42721c3413ba0c5}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmcmc_1_1MCMCLogger}{M\+C\+M\+C\+Logger}} mcmc\+::\+M\+C\+M\+C\+::\+\_\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMC_ab92e711aca8a5d81e69d917e33e1e366}\label{classmcmc_1_1MCMC_ab92e711aca8a5d81e69d917e33e1e366}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!\_particles@{\_particles}}
+\index{\_particles@{\_particles}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{\_particles}{\_particles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmcmc_1_1MCMCParticles}{M\+C\+M\+C\+Particles}} mcmc\+::\+M\+C\+M\+C\+::\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMC_a72f0e7acd01128877c73f6529573ea31}\label{classmcmc_1_1MCMC_a72f0e7acd01128877c73f6529573ea31}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!\_resume\_run@{\_resume\_run}}
+\index{\_resume\_run@{\_resume\_run}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{\_resume\_run}{\_resume\_run}}
+{\footnotesize\ttfamily bool mcmc\+::\+M\+C\+M\+C\+::\+\_\+resume\+\_\+run\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMC_a47cc02c51c2f90ee517ce6e181f2c928}\label{classmcmc_1_1MCMC_a47cc02c51c2f90ee517ce6e181f2c928}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!\_rng@{\_rng}}
+\index{\_rng@{\_rng}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{\_rng}{\_rng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} mcmc\+::\+M\+C\+M\+C\+::\+\_\+rng\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMC_a6e9b275574bb438d02388ba00cf075fe}\label{classmcmc_1_1MCMC_a6e9b275574bb438d02388ba00cf075fe}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!\_sampler@{\_sampler}}
+\index{\_sampler@{\_sampler}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{\_sampler}{\_sampler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmcmc_1_1MCMCSampler}{M\+C\+M\+C\+Sampler}} mcmc\+::\+M\+C\+M\+C\+::\+\_\+sampler\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMC_ae755de2730847fc5b59da42e6cc33f06}\label{classmcmc_1_1MCMC_ae755de2730847fc5b59da42e6cc33f06}} 
+\index{mcmc::MCMC@{mcmc::MCMC}!\_settings@{\_settings}}
+\index{\_settings@{\_settings}!mcmc::MCMC@{mcmc::MCMC}}
+\doxysubsubsection{\texorpdfstring{\_settings}{\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}} mcmc\+::\+M\+C\+M\+C\+::\+\_\+settings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMC_8h}{M\+C\+M\+C.\+h}}\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMC_8cpp}{M\+C\+M\+C.\+cpp}}\end{DoxyCompactItemize}

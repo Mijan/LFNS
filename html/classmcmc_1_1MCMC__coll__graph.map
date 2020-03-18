@@ -1,0 +1,7 @@
+<map id="mcmc::MCMC" name="mcmc::MCMC">
+<area shape="rect" id="node1" title=" " alt="" coords="318,95,430,121"/>
+<area shape="rect" id="node2" href="$classmcmc_1_1MCMCSampler.html" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node3" href="$classmcmc_1_1MCMCSettings.html" title=" " alt="" coords="197,5,362,32"/>
+<area shape="rect" id="node4" href="$classmcmc_1_1MCMCParticles.html" title=" " alt="" coords="387,5,553,32"/>
+<area shape="rect" id="node5" href="$classmcmc_1_1MCMCLogger.html" title=" " alt="" coords="577,5,733,32"/>
+</map>

@@ -1,0 +1,220 @@
+\hypertarget{classparticle__filter_1_1ParticleFilter}{}\doxysection{particle\+\_\+filter\+::Particle\+Filter Class Reference}
+\label{classparticle__filter_1_1ParticleFilter}\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+
+
+{\ttfamily \#include $<$Particle\+Filter.\+h$>$}
+
+
+
+Collaboration diagram for particle\+\_\+filter\+::Particle\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classparticle__filter_1_1ParticleFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a63d46d44284189b4b6e14b2e5f06adc6}{Particle\+Filter}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{namespaceparticle__filter_a3120a821b7690a7ea5855e485f1d942d}{Set\+Parameter\+Fct\+\_\+ptr}} setting\+\_\+parameter\+\_\+fct, \mbox{\hyperlink{namespaceparticle__filter_a94c6c5b1acf269f0368e9d6ec937e353}{Simulation\+Fct\+\_\+ptr}} simulation\+\_\+fct, \mbox{\hyperlink{namespaceparticle__filter_a2019a05b4ff230fe15b1b28ac03b31f8}{Reset\+Fct\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a1481d8481f849cdcccf856878777b2fd}{\+\_\+reset\+\_\+fct}}, \mbox{\hyperlink{namespaceparticle__filter_a3931f18a25d5e36bb0495ca497c8bac5}{Likelihood\+Fct\+\_\+ptr}} likelihood\+\_\+fct, \mbox{\hyperlink{namespaceparticle__filter_a3e7840e0535922240b376b7e5a00f93b}{Initial\+State\+Fct\+\_\+ptr}} initial\+\_\+state\+\_\+fct, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+states, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+particles=1000)
+\item 
+virtual \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_aa90f88217c3166e094f015192ae6174c}{$\sim$\+Particle\+Filter}} ()
+\item 
+virtual double \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a243b69439b91c23acc12fc5e72eb30b0}{compute\+Log\+Likelihood}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data, const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{plotBE_8m_ac150111bafc331bafb353619452c5c5c}{times}}, const std\+::vector$<$ double $>$ \&theta)
+\item 
+virtual double \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_ae69360cfbbf5c115d99e5281ec8ddf46}{compute\+Log\+Likelihood\+No\+Resampling}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data, const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{plotBE_8m_ac150111bafc331bafb353619452c5c5c}{times}})
+\item 
+\mbox{\hyperlink{namespaceparticle__filter_a203c46b8c40177731d768edcfc185003}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a6551fab8386431eaa15fca5c498370bc}{get\+Likelihood\+Evaluation\+For\+Data}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $\ast$data, const std\+::vector$<$ double $>$ $\ast$\mbox{\hyperlink{plotBE_8m_ac150111bafc331bafb353619452c5c5c}{times}})
+\item 
+virtual double \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a258e6d252773ee7ce2570b514c17e5bf}{\+\_\+run\+Filtering\+Step}} (const std\+::vector$<$ double $>$ \&data, double final\+\_\+time)
+\item 
+void \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_ac31db3b13c26105d4ee1559fba74598b}{set\+Threshold\+Ptr}} (double $\ast$threshold)
+\item 
+virtual void \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a89ff71d929b53b9fd1950a2a45efb7b1}{add\+Stopping\+Criterion}} (\mbox{\hyperlink{namespacesimulator_a94387d9253f2f6666472764e510e65e7}{simulator\+::\+Stopping\+Fct\+\_\+ptr}} stopping\+\_\+criterion)
+\item 
+void \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a35cb8385e073213ed2aabd67fcada8f6}{\+\_\+sample\+Provided\+Parameter}} ()
+\item 
+void \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_ad0788692f39aa53860bc2e0153f550dd}{set\+Provided\+Particles}} (std\+::vector$<$ double $\ast$ $>$ provided\+\_\+param\+\_\+ptrs, std\+::string provided\+\_\+parameters\+\_\+file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a713eee8fe9b9502e34fdf050300e6c73}{\+\_\+rng}}
+\item 
+\mbox{\hyperlink{namespaceparticle__filter_a3120a821b7690a7ea5855e485f1d942d}{Set\+Parameter\+Fct\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a0f9c0f0073d7cece9b9c08f357bf1dd2}{\+\_\+setting\+\_\+parameter\+\_\+fct}}
+\item 
+\mbox{\hyperlink{namespaceparticle__filter_a2019a05b4ff230fe15b1b28ac03b31f8}{Reset\+Fct\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a1481d8481f849cdcccf856878777b2fd}{\+\_\+reset\+\_\+fct}}
+\item 
+\mbox{\hyperlink{namespaceparticle__filter_a94c6c5b1acf269f0368e9d6ec937e353}{Simulation\+Fct\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a6c4bb74854e96cba8556fb353e90396c}{\+\_\+simulation\+\_\+fct}}
+\item 
+\mbox{\hyperlink{namespaceparticle__filter_a3931f18a25d5e36bb0495ca497c8bac5}{Likelihood\+Fct\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a0c06ca422f6ef7022c32daae1e694cb1}{\+\_\+likelihood\+\_\+fct}}
+\item 
+\mbox{\hyperlink{namespaceparticle__filter_a3e7840e0535922240b376b7e5a00f93b}{Initial\+State\+Fct\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a0d57a71d8acb041900fbf19d5f6605a8}{\+\_\+initial\+\_\+state\+\_\+fct}}
+\item 
+\mbox{\hyperlink{namespaceparticle__filter_af2f6c990b80508154cbd714892c44426}{Smc\+Particle\+Set\+\_\+ptr}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a2e0fdd0d88d38b5789dda14838d97a10}{\+\_\+smc\+\_\+particles}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_ac06f3815273f3ab2dfd38b5922fd9c98}{\+\_\+log\+\_\+likelihoods\+\_\+tmps}}
+\item 
+double $\ast$ \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a91d946d55f9955f9110a03722a4c61f7}{\+\_\+threshold\+\_\+ptr}}
+\item 
+\mbox{\hyperlink{namespacebase_a81cf40e8e5bca9f2fbf772f9add6fa06}{base\+::\+Uniform\+Int\+Distribution}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a502588c3dd2f2311a3e23b39fdf8e7c4}{\+\_\+dist}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a83d8094887247d9cb3640e2653bf3185}{\+\_\+provided\+\_\+parameters}}
+\item 
+std\+::vector$<$ double $\ast$ $>$ \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a250d1555be01732be554c5d66b476198}{\+\_\+provided\+\_\+parameter\+\_\+ptrs}}
+\item 
+\mbox{\hyperlink{classsimulator_1_1StoppingCriterions}{simulator\+::\+Stopping\+Criterions}} \mbox{\hyperlink{classparticle__filter_1_1ParticleFilter_a22347fde1f51a18d36b955c5202747bd}{\+\_\+stopping\+\_\+criterions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a63d46d44284189b4b6e14b2e5f06adc6}\label{classparticle__filter_1_1ParticleFilter_a63d46d44284189b4b6e14b2e5f06adc6}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!ParticleFilter@{ParticleFilter}}
+\index{ParticleFilter@{ParticleFilter}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{ParticleFilter()}{ParticleFilter()}}
+{\footnotesize\ttfamily particle\+\_\+filter\+::\+Particle\+Filter\+::\+Particle\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{namespaceparticle__filter_a3120a821b7690a7ea5855e485f1d942d}{Set\+Parameter\+Fct\+\_\+ptr}}}]{setting\+\_\+parameter\+\_\+fct,  }\item[{\mbox{\hyperlink{namespaceparticle__filter_a94c6c5b1acf269f0368e9d6ec937e353}{Simulation\+Fct\+\_\+ptr}}}]{simulation\+\_\+fct,  }\item[{\mbox{\hyperlink{namespaceparticle__filter_a2019a05b4ff230fe15b1b28ac03b31f8}{Reset\+Fct\+\_\+ptr}}}]{\+\_\+reset\+\_\+fct,  }\item[{\mbox{\hyperlink{namespaceparticle__filter_a3931f18a25d5e36bb0495ca497c8bac5}{Likelihood\+Fct\+\_\+ptr}}}]{likelihood\+\_\+fct,  }\item[{\mbox{\hyperlink{namespaceparticle__filter_a3e7840e0535922240b376b7e5a00f93b}{Initial\+State\+Fct\+\_\+ptr}}}]{initial\+\_\+state\+\_\+fct,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+states,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+particles = {\ttfamily 1000} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_aa90f88217c3166e094f015192ae6174c}\label{classparticle__filter_1_1ParticleFilter_aa90f88217c3166e094f015192ae6174c}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!````~ParticleFilter@{$\sim$ParticleFilter}}
+\index{````~ParticleFilter@{$\sim$ParticleFilter}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{$\sim$ParticleFilter()}{~ParticleFilter()}}
+{\footnotesize\ttfamily particle\+\_\+filter\+::\+Particle\+Filter\+::$\sim$\+Particle\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a258e6d252773ee7ce2570b514c17e5bf}\label{classparticle__filter_1_1ParticleFilter_a258e6d252773ee7ce2570b514c17e5bf}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_runFilteringStep@{\_runFilteringStep}}
+\index{\_runFilteringStep@{\_runFilteringStep}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_runFilteringStep()}{\_runFilteringStep()}}
+{\footnotesize\ttfamily double particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+run\+Filtering\+Step (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data,  }\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a35cb8385e073213ed2aabd67fcada8f6}\label{classparticle__filter_1_1ParticleFilter_a35cb8385e073213ed2aabd67fcada8f6}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_sampleProvidedParameter@{\_sampleProvidedParameter}}
+\index{\_sampleProvidedParameter@{\_sampleProvidedParameter}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_sampleProvidedParameter()}{\_sampleProvidedParameter()}}
+{\footnotesize\ttfamily void particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+sample\+Provided\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a89ff71d929b53b9fd1950a2a45efb7b1}\label{classparticle__filter_1_1ParticleFilter_a89ff71d929b53b9fd1950a2a45efb7b1}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!addStoppingCriterion@{addStoppingCriterion}}
+\index{addStoppingCriterion@{addStoppingCriterion}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{addStoppingCriterion()}{addStoppingCriterion()}}
+{\footnotesize\ttfamily void particle\+\_\+filter\+::\+Particle\+Filter\+::add\+Stopping\+Criterion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesimulator_a94387d9253f2f6666472764e510e65e7}{simulator\+::\+Stopping\+Fct\+\_\+ptr}}}]{stopping\+\_\+criterion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a243b69439b91c23acc12fc5e72eb30b0}\label{classparticle__filter_1_1ParticleFilter_a243b69439b91c23acc12fc5e72eb30b0}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!computeLogLikelihood@{computeLogLikelihood}}
+\index{computeLogLikelihood@{computeLogLikelihood}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{computeLogLikelihood()}{computeLogLikelihood()}}
+{\footnotesize\ttfamily double particle\+\_\+filter\+::\+Particle\+Filter\+::compute\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data,  }\item[{const std\+::vector$<$ double $>$ \&}]{times,  }\item[{const std\+::vector$<$ double $>$ \&}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_ae69360cfbbf5c115d99e5281ec8ddf46}\label{classparticle__filter_1_1ParticleFilter_ae69360cfbbf5c115d99e5281ec8ddf46}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!computeLogLikelihoodNoResampling@{computeLogLikelihoodNoResampling}}
+\index{computeLogLikelihoodNoResampling@{computeLogLikelihoodNoResampling}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{computeLogLikelihoodNoResampling()}{computeLogLikelihoodNoResampling()}}
+{\footnotesize\ttfamily double particle\+\_\+filter\+::\+Particle\+Filter\+::compute\+Log\+Likelihood\+No\+Resampling (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data,  }\item[{const std\+::vector$<$ double $>$ \&}]{times }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a6551fab8386431eaa15fca5c498370bc}\label{classparticle__filter_1_1ParticleFilter_a6551fab8386431eaa15fca5c498370bc}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!getLikelihoodEvaluationForData@{getLikelihoodEvaluationForData}}
+\index{getLikelihoodEvaluationForData@{getLikelihoodEvaluationForData}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{getLikelihoodEvaluationForData()}{getLikelihoodEvaluationForData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceparticle__filter_a203c46b8c40177731d768edcfc185003}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::get\+Likelihood\+Evaluation\+For\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $\ast$}]{data,  }\item[{const std\+::vector$<$ double $>$ $\ast$}]{times }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_ad0788692f39aa53860bc2e0153f550dd}\label{classparticle__filter_1_1ParticleFilter_ad0788692f39aa53860bc2e0153f550dd}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!setProvidedParticles@{setProvidedParticles}}
+\index{setProvidedParticles@{setProvidedParticles}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{setProvidedParticles()}{setProvidedParticles()}}
+{\footnotesize\ttfamily void particle\+\_\+filter\+::\+Particle\+Filter\+::set\+Provided\+Particles (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $\ast$ $>$}]{provided\+\_\+param\+\_\+ptrs,  }\item[{std\+::string}]{provided\+\_\+parameters\+\_\+file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_ac31db3b13c26105d4ee1559fba74598b}\label{classparticle__filter_1_1ParticleFilter_ac31db3b13c26105d4ee1559fba74598b}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!setThresholdPtr@{setThresholdPtr}}
+\index{setThresholdPtr@{setThresholdPtr}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{setThresholdPtr()}{setThresholdPtr()}}
+{\footnotesize\ttfamily void particle\+\_\+filter\+::\+Particle\+Filter\+::set\+Threshold\+Ptr (\begin{DoxyParamCaption}\item[{double $\ast$}]{threshold }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a502588c3dd2f2311a3e23b39fdf8e7c4}\label{classparticle__filter_1_1ParticleFilter_a502588c3dd2f2311a3e23b39fdf8e7c4}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_dist@{\_dist}}
+\index{\_dist@{\_dist}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_dist}{\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a81cf40e8e5bca9f2fbf772f9add6fa06}{base\+::\+Uniform\+Int\+Distribution}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+dist\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a0d57a71d8acb041900fbf19d5f6605a8}\label{classparticle__filter_1_1ParticleFilter_a0d57a71d8acb041900fbf19d5f6605a8}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_initial\_state\_fct@{\_initial\_state\_fct}}
+\index{\_initial\_state\_fct@{\_initial\_state\_fct}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_initial\_state\_fct}{\_initial\_state\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceparticle__filter_a3e7840e0535922240b376b7e5a00f93b}{Initial\+State\+Fct\+\_\+ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+initial\+\_\+state\+\_\+fct\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a0c06ca422f6ef7022c32daae1e694cb1}\label{classparticle__filter_1_1ParticleFilter_a0c06ca422f6ef7022c32daae1e694cb1}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_likelihood\_fct@{\_likelihood\_fct}}
+\index{\_likelihood\_fct@{\_likelihood\_fct}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_likelihood\_fct}{\_likelihood\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceparticle__filter_a3931f18a25d5e36bb0495ca497c8bac5}{Likelihood\+Fct\+\_\+ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+likelihood\+\_\+fct\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_ac06f3815273f3ab2dfd38b5922fd9c98}\label{classparticle__filter_1_1ParticleFilter_ac06f3815273f3ab2dfd38b5922fd9c98}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_log\_likelihoods\_tmps@{\_log\_likelihoods\_tmps}}
+\index{\_log\_likelihoods\_tmps@{\_log\_likelihoods\_tmps}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_log\_likelihoods\_tmps}{\_log\_likelihoods\_tmps}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+log\+\_\+likelihoods\+\_\+tmps\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a250d1555be01732be554c5d66b476198}\label{classparticle__filter_1_1ParticleFilter_a250d1555be01732be554c5d66b476198}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_provided\_parameter\_ptrs@{\_provided\_parameter\_ptrs}}
+\index{\_provided\_parameter\_ptrs@{\_provided\_parameter\_ptrs}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_provided\_parameter\_ptrs}{\_provided\_parameter\_ptrs}}
+{\footnotesize\ttfamily std\+::vector$<$double$\ast$$>$ particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+provided\+\_\+parameter\+\_\+ptrs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a83d8094887247d9cb3640e2653bf3185}\label{classparticle__filter_1_1ParticleFilter_a83d8094887247d9cb3640e2653bf3185}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_provided\_parameters@{\_provided\_parameters}}
+\index{\_provided\_parameters@{\_provided\_parameters}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_provided\_parameters}{\_provided\_parameters}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+provided\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a1481d8481f849cdcccf856878777b2fd}\label{classparticle__filter_1_1ParticleFilter_a1481d8481f849cdcccf856878777b2fd}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_reset\_fct@{\_reset\_fct}}
+\index{\_reset\_fct@{\_reset\_fct}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_reset\_fct}{\_reset\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceparticle__filter_a2019a05b4ff230fe15b1b28ac03b31f8}{Reset\+Fct\+\_\+ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+reset\+\_\+fct\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a713eee8fe9b9502e34fdf050300e6c73}\label{classparticle__filter_1_1ParticleFilter_a713eee8fe9b9502e34fdf050300e6c73}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_rng@{\_rng}}
+\index{\_rng@{\_rng}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_rng}{\_rng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+rng\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a0f9c0f0073d7cece9b9c08f357bf1dd2}\label{classparticle__filter_1_1ParticleFilter_a0f9c0f0073d7cece9b9c08f357bf1dd2}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_setting\_parameter\_fct@{\_setting\_parameter\_fct}}
+\index{\_setting\_parameter\_fct@{\_setting\_parameter\_fct}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_setting\_parameter\_fct}{\_setting\_parameter\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceparticle__filter_a3120a821b7690a7ea5855e485f1d942d}{Set\+Parameter\+Fct\+\_\+ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+setting\+\_\+parameter\+\_\+fct\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a6c4bb74854e96cba8556fb353e90396c}\label{classparticle__filter_1_1ParticleFilter_a6c4bb74854e96cba8556fb353e90396c}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_simulation\_fct@{\_simulation\_fct}}
+\index{\_simulation\_fct@{\_simulation\_fct}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_simulation\_fct}{\_simulation\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceparticle__filter_a94c6c5b1acf269f0368e9d6ec937e353}{Simulation\+Fct\+\_\+ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+simulation\+\_\+fct\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a2e0fdd0d88d38b5789dda14838d97a10}\label{classparticle__filter_1_1ParticleFilter_a2e0fdd0d88d38b5789dda14838d97a10}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_smc\_particles@{\_smc\_particles}}
+\index{\_smc\_particles@{\_smc\_particles}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_smc\_particles}{\_smc\_particles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceparticle__filter_af2f6c990b80508154cbd714892c44426}{Smc\+Particle\+Set\+\_\+ptr}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+smc\+\_\+particles\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a22347fde1f51a18d36b955c5202747bd}\label{classparticle__filter_1_1ParticleFilter_a22347fde1f51a18d36b955c5202747bd}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_stopping\_criterions@{\_stopping\_criterions}}
+\index{\_stopping\_criterions@{\_stopping\_criterions}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_stopping\_criterions}{\_stopping\_criterions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsimulator_1_1StoppingCriterions}{simulator\+::\+Stopping\+Criterions}} particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+stopping\+\_\+criterions\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classparticle__filter_1_1ParticleFilter_a91d946d55f9955f9110a03722a4c61f7}\label{classparticle__filter_1_1ParticleFilter_a91d946d55f9955f9110a03722a4c61f7}} 
+\index{particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}!\_threshold\_ptr@{\_threshold\_ptr}}
+\index{\_threshold\_ptr@{\_threshold\_ptr}!particle\_filter::ParticleFilter@{particle\_filter::ParticleFilter}}
+\doxysubsubsection{\texorpdfstring{\_threshold\_ptr}{\_threshold\_ptr}}
+{\footnotesize\ttfamily double$\ast$ particle\+\_\+filter\+::\+Particle\+Filter\+::\+\_\+threshold\+\_\+ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/particle\+\_\+filter/\mbox{\hyperlink{ParticleFilter_8h}{Particle\+Filter.\+h}}\item 
+src/particle\+\_\+filter/\mbox{\hyperlink{ParticleFilter_8cpp}{Particle\+Filter.\+cpp}}\end{DoxyCompactItemize}

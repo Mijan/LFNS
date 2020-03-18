@@ -1,0 +1,110 @@
+\hypertarget{classmcmc_1_1MCMCSampler}{}\doxysection{mcmc\+::M\+C\+M\+C\+Sampler Class Reference}
+\label{classmcmc_1_1MCMCSampler}\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+
+
+{\ttfamily \#include $<$M\+C\+M\+C\+Sampler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCSampler_a00cf23a4c0e8c1a0907e1b3d7b428ecd}{M\+C\+M\+C\+Sampler}} (\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}} \&mcmc\+\_\+settings, \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \&settings, \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng)
+\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classmcmc_1_1MCMCSampler_a515f2761ac50ae8f40bbe3dec702db26}{sample\+Prior}} ()
+\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classmcmc_1_1MCMCSampler_a66c5b086ca77220dbaa6b3aab82be1f7}{sample\+Kernel}} (const std\+::vector$<$ double $>$ \&kernel\+\_\+center)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classmcmc_1_1MCMCSampler_a9b97dcdbb6704ec11a659de91702d411}{\+\_\+scale\+Up\+Sample}} (std\+::vector$<$ double $>$ \&sample)
+\item 
+std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classmcmc_1_1MCMCSampler_aa03c9651558095fda676e274055617cb}{\+\_\+scale\+Down\+Sample}} (std\+::vector$<$ double $>$ \&sample)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} \mbox{\hyperlink{classmcmc_1_1MCMCSampler_ab520c7e1a0f0799a21b04f7522d0e804}{\+\_\+rng}}
+\item 
+\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} \mbox{\hyperlink{classmcmc_1_1MCMCSampler_a21b71aa03b7d0897a6554a6740ea2779}{\+\_\+prior}}
+\item 
+\mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{sampler\+::\+Kernel\+Sampler\+\_\+ptr}} \mbox{\hyperlink{classmcmc_1_1MCMCSampler_ae90d89216e08a787ee53e3b920641637}{\+\_\+kernel\+\_\+sampler}}
+\item 
+bool \mbox{\hyperlink{classmcmc_1_1MCMCSampler_a6065d3a16b78e2d3c1f2d55ab23e5530}{\+\_\+uniform\+\_\+prior}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classmcmc_1_1MCMCSampler_a0c32df7fe4a82c22cade20fdc72ba83f}{\+\_\+log\+\_\+params}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_a00cf23a4c0e8c1a0907e1b3d7b428ecd}\label{classmcmc_1_1MCMCSampler_a00cf23a4c0e8c1a0907e1b3d7b428ecd}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!MCMCSampler@{MCMCSampler}}
+\index{MCMCSampler@{MCMCSampler}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{MCMCSampler()}{MCMCSampler()}}
+{\footnotesize\ttfamily mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+M\+C\+M\+C\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{M\+C\+M\+C\+Settings}} \&}]{mcmc\+\_\+settings,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \&}]{settings,  }\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_aa03c9651558095fda676e274055617cb}\label{classmcmc_1_1MCMCSampler_aa03c9651558095fda676e274055617cb}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!\_scaleDownSample@{\_scaleDownSample}}
+\index{\_scaleDownSample@{\_scaleDownSample}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{\_scaleDownSample()}{\_scaleDownSample()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ \& mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+\_\+scale\+Down\+Sample (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_a9b97dcdbb6704ec11a659de91702d411}\label{classmcmc_1_1MCMCSampler_a9b97dcdbb6704ec11a659de91702d411}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!\_scaleUpSample@{\_scaleUpSample}}
+\index{\_scaleUpSample@{\_scaleUpSample}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{\_scaleUpSample()}{\_scaleUpSample()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ \& mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+\_\+scale\+Up\+Sample (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_a66c5b086ca77220dbaa6b3aab82be1f7}\label{classmcmc_1_1MCMCSampler_a66c5b086ca77220dbaa6b3aab82be1f7}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!sampleKernel@{sampleKernel}}
+\index{sampleKernel@{sampleKernel}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{sampleKernel()}{sampleKernel()}}
+{\footnotesize\ttfamily const std\+::vector$<$ double $>$ \& mcmc\+::\+M\+C\+M\+C\+Sampler\+::sample\+Kernel (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{kernel\+\_\+center }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_a515f2761ac50ae8f40bbe3dec702db26}\label{classmcmc_1_1MCMCSampler_a515f2761ac50ae8f40bbe3dec702db26}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!samplePrior@{samplePrior}}
+\index{samplePrior@{samplePrior}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{samplePrior()}{samplePrior()}}
+{\footnotesize\ttfamily const std\+::vector$<$ double $>$ \& mcmc\+::\+M\+C\+M\+C\+Sampler\+::sample\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_ae90d89216e08a787ee53e3b920641637}\label{classmcmc_1_1MCMCSampler_ae90d89216e08a787ee53e3b920641637}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!\_kernel\_sampler@{\_kernel\_sampler}}
+\index{\_kernel\_sampler@{\_kernel\_sampler}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{\_kernel\_sampler}{\_kernel\_sampler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{sampler\+::\+Kernel\+Sampler\+\_\+ptr}} mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+\_\+kernel\+\_\+sampler\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_a0c32df7fe4a82c22cade20fdc72ba83f}\label{classmcmc_1_1MCMCSampler_a0c32df7fe4a82c22cade20fdc72ba83f}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!\_log\_params@{\_log\_params}}
+\index{\_log\_params@{\_log\_params}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{\_log\_params}{\_log\_params}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+\_\+log\+\_\+params\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_a21b71aa03b7d0897a6554a6740ea2779}\label{classmcmc_1_1MCMCSampler_a21b71aa03b7d0897a6554a6740ea2779}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!\_prior@{\_prior}}
+\index{\_prior@{\_prior}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{\_prior}{\_prior}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+\_\+prior\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_ab520c7e1a0f0799a21b04f7522d0e804}\label{classmcmc_1_1MCMCSampler_ab520c7e1a0f0799a21b04f7522d0e804}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!\_rng@{\_rng}}
+\index{\_rng@{\_rng}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{\_rng}{\_rng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+\_\+rng\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCSampler_a6065d3a16b78e2d3c1f2d55ab23e5530}\label{classmcmc_1_1MCMCSampler_a6065d3a16b78e2d3c1f2d55ab23e5530}} 
+\index{mcmc::MCMCSampler@{mcmc::MCMCSampler}!\_uniform\_prior@{\_uniform\_prior}}
+\index{\_uniform\_prior@{\_uniform\_prior}!mcmc::MCMCSampler@{mcmc::MCMCSampler}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_prior}{\_uniform\_prior}}
+{\footnotesize\ttfamily bool mcmc\+::\+M\+C\+M\+C\+Sampler\+::\+\_\+uniform\+\_\+prior\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMCSampler_8h}{M\+C\+M\+C\+Sampler.\+h}}\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMCSampler_8cpp}{M\+C\+M\+C\+Sampler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+<map id="SimulationSetup" name="SimulationSetup">
+<area shape="rect" id="node1" title=" " alt="" coords="1015,145,1144,172"/>
+<area shape="rect" id="node2" href="$classGeneralSetup.html" title=" " alt="" coords="721,101,832,128"/>
+<area shape="rect" id="node3" href="$classio_1_1IoSettings.html" title="User provided program options related to Input/Ooutput." alt="" coords="302,56,409,83"/>
+<area shape="rect" id="node4" href="$classio_1_1ConfigFileInterpreter.html" title="This class is used to read a config file and access all the information provided there." alt="" coords="268,107,443,133"/>
+<area shape="rect" id="node5" href="$classio_1_1XmlFileReader.html" title=" " alt="" coords="5,107,143,133"/>
+<area shape="rect" id="node6" href="$classoptions_1_1CommandLineOptions.html" title=" " alt="" coords="244,175,467,201"/>
+<area shape="rect" id="node8" href="$classoptions_1_1SimulationOptions.html" title=" " alt="" coords="677,171,876,197"/>
+<area shape="rect" id="node7" href="$classmodels_1_1ModelSettings.html" title=" " alt="" coords="270,5,441,32"/>
+</map>

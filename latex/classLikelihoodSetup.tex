@@ -1,0 +1,224 @@
+\hypertarget{classLikelihoodSetup}{}\doxysection{Likelihood\+Setup Class Reference}
+\label{classLikelihoodSetup}\index{LikelihoodSetup@{LikelihoodSetup}}
+
+
+{\ttfamily \#include $<$Likelihood\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for Likelihood\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classLikelihoodSetup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Likelihood\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLikelihoodSetup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLikelihoodSetup_a2f0a82cc886965bf645fc00ca9891ecb}{Likelihood\+Setup}} (\mbox{\hyperlink{classoptions_1_1ComputeLikelihoodOptions}{options\+::\+Compute\+Likelihood\+Options}} options)
+\item 
+virtual \mbox{\hyperlink{classLikelihoodSetup_a575e3915a7b618a5c03cc60e4a324993}{$\sim$\+Likelihood\+Setup}} ()
+\item 
+void \mbox{\hyperlink{classLikelihoodSetup_aac41192b57a06ea08ff038bfa9970926}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{classLikelihoodSetup_a87f0204b025fe875e03abcb977e8a38b}{print\+Settings}} (std\+::ostream \&os) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceparticle__filter_aa21cf3ac69734e515f30f71f1a55ebcc}{particle\+\_\+filter\+::\+Particle\+Filter\+\_\+ptr}} $>$ \mbox{\hyperlink{classLikelihoodSetup_a104ad0729042db34ddb15003cc0e83e4}{particle\+\_\+filters}}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \mbox{\hyperlink{classLikelihoodSetup_a7eb1889eb78ac9da1f5d79b5bf1a8b73}{particle\+\_\+filter\+\_\+settings}}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1MultLikelihoodEval}{particle\+\_\+filter\+::\+Mult\+Likelihood\+Eval}} \mbox{\hyperlink{classLikelihoodSetup_a311f31392f4694ab0982b75c8f4bf429}{mult\+\_\+like\+\_\+eval}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} $>$ \mbox{\hyperlink{classLikelihoodSetup_ae3396176c7c7011478298d51924e4c9b}{times\+\_\+vec}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} $>$ \mbox{\hyperlink{classLikelihoodSetup_aab28241474cee5d1c8044cb065c52345}{data\+\_\+vec}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classLikelihoodSetup_ae241e4c067d2ab099bafdb9815a38b1e}{parameters}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classLikelihoodSetup_ae0e41b0d8a1867e940a7c27d89c7a8d8}{parameter}}
+\item 
+std\+::string \mbox{\hyperlink{classLikelihoodSetup_a731c57f60a685fd319b00746b57e6c75}{parameter\+\_\+file}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classLikelihoodSetup_a3a7c944f21b72312902af17341364756}{num\+\_\+computations}} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLikelihoodSetup_ac467408b2738eed5cacd16d116ad8d8b}{\+\_\+read\+Settingsfrom\+File}} () override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classLikelihoodSetup_aea178bfbe8affa09497dd47acc85c835}{\+\_\+read\+Experiments}} () override
+\item 
+\mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} \mbox{\hyperlink{classLikelihoodSetup_aa1ae64ef13a41eaa051cef76e52c121b}{create\+Data}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+outputs, std\+::string experiment, \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&settings)
+\item 
+\mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} \mbox{\hyperlink{classLikelihoodSetup_a334b42b04e7c79b691d34a8b8bf2ca57}{\+\_\+create\+Data\+Times}} (std\+::string experiment, \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&settings)
+\item 
+void \mbox{\hyperlink{classLikelihoodSetup_a4b5977c9651ea89b02c3f864319ab749}{\+\_\+create\+Parameter\+Vector}} ()
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \mbox{\hyperlink{classLikelihoodSetup_a9ce852b85caa84146b357ae69abdc9ef}{\+\_\+read\+Particle\+Filter\+Settings}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoptions_1_1ComputeLikelihoodOptions}{options\+::\+Compute\+Likelihood\+Options}} \mbox{\hyperlink{classLikelihoodSetup_af43d6a109f7c76a4a79e85331d837bbe}{\+\_\+likelihood\+\_\+options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLikelihoodSetup_a2f0a82cc886965bf645fc00ca9891ecb}\label{classLikelihoodSetup_a2f0a82cc886965bf645fc00ca9891ecb}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!LikelihoodSetup@{LikelihoodSetup}}
+\index{LikelihoodSetup@{LikelihoodSetup}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{LikelihoodSetup()}{LikelihoodSetup()}}
+{\footnotesize\ttfamily Likelihood\+Setup\+::\+Likelihood\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoptions_1_1ComputeLikelihoodOptions}{options\+::\+Compute\+Likelihood\+Options}}}]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a575e3915a7b618a5c03cc60e4a324993}\label{classLikelihoodSetup_a575e3915a7b618a5c03cc60e4a324993}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!````~LikelihoodSetup@{$\sim$LikelihoodSetup}}
+\index{````~LikelihoodSetup@{$\sim$LikelihoodSetup}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{$\sim$LikelihoodSetup()}{~LikelihoodSetup()}}
+{\footnotesize\ttfamily Likelihood\+Setup\+::$\sim$\+Likelihood\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLikelihoodSetup_a334b42b04e7c79b691d34a8b8bf2ca57}\label{classLikelihoodSetup_a334b42b04e7c79b691d34a8b8bf2ca57}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!\_createDataTimes@{\_createDataTimes}}
+\index{\_createDataTimes@{\_createDataTimes}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{\_createDataTimes()}{\_createDataTimes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} Likelihood\+Setup\+::\+\_\+create\+Data\+Times (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment,  }\item[{\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a4b5977c9651ea89b02c3f864319ab749}\label{classLikelihoodSetup_a4b5977c9651ea89b02c3f864319ab749}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!\_createParameterVector@{\_createParameterVector}}
+\index{\_createParameterVector@{\_createParameterVector}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{\_createParameterVector()}{\_createParameterVector()}}
+{\footnotesize\ttfamily void Likelihood\+Setup\+::\+\_\+create\+Parameter\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLikelihoodSetup_aea178bfbe8affa09497dd47acc85c835}\label{classLikelihoodSetup_aea178bfbe8affa09497dd47acc85c835}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!\_readExperiments@{\_readExperiments}}
+\index{\_readExperiments@{\_readExperiments}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{\_readExperiments()}{\_readExperiments()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Likelihood\+Setup\+::\+\_\+read\+Experiments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGeneralSetup_a1a558d3ff0cbac30255b95e3f8baaed2}{General\+Setup}}.
+
+\mbox{\Hypertarget{classLikelihoodSetup_a9ce852b85caa84146b357ae69abdc9ef}\label{classLikelihoodSetup_a9ce852b85caa84146b357ae69abdc9ef}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!\_readParticleFilterSettings@{\_readParticleFilterSettings}}
+\index{\_readParticleFilterSettings@{\_readParticleFilterSettings}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{\_readParticleFilterSettings()}{\_readParticleFilterSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} Likelihood\+Setup\+::\+\_\+read\+Particle\+Filter\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLikelihoodSetup_ac467408b2738eed5cacd16d116ad8d8b}\label{classLikelihoodSetup_ac467408b2738eed5cacd16d116ad8d8b}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!\_readSettingsfromFile@{\_readSettingsfromFile}}
+\index{\_readSettingsfromFile@{\_readSettingsfromFile}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSettingsfromFile()}{\_readSettingsfromFile()}}
+{\footnotesize\ttfamily void Likelihood\+Setup\+::\+\_\+read\+Settingsfrom\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a2832f825b34cf426b1f7604fd8d04fe0}{General\+Setup}}.
+
+\mbox{\Hypertarget{classLikelihoodSetup_aa1ae64ef13a41eaa051cef76e52c121b}\label{classLikelihoodSetup_aa1ae64ef13a41eaa051cef76e52c121b}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!createData@{createData}}
+\index{createData@{createData}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{createData()}{createData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} Likelihood\+Setup\+::create\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+outputs,  }\item[{std\+::string}]{experiment,  }\item[{\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a87f0204b025fe875e03abcb977e8a38b}\label{classLikelihoodSetup_a87f0204b025fe875e03abcb977e8a38b}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!printSettings@{printSettings}}
+\index{printSettings@{printSettings}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{printSettings()}{printSettings()}}
+{\footnotesize\ttfamily void Likelihood\+Setup\+::print\+Settings (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a4298cb4b3798a38969ed76bbc80a1fd8}{General\+Setup}}.
+
+\mbox{\Hypertarget{classLikelihoodSetup_aac41192b57a06ea08ff038bfa9970926}\label{classLikelihoodSetup_aac41192b57a06ea08ff038bfa9970926}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!setUp@{setUp}}
+\index{setUp@{setUp}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void Likelihood\+Setup\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLikelihoodSetup_af43d6a109f7c76a4a79e85331d837bbe}\label{classLikelihoodSetup_af43d6a109f7c76a4a79e85331d837bbe}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!\_likelihood\_options@{\_likelihood\_options}}
+\index{\_likelihood\_options@{\_likelihood\_options}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{\_likelihood\_options}{\_likelihood\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1ComputeLikelihoodOptions}{options\+::\+Compute\+Likelihood\+Options}} Likelihood\+Setup\+::\+\_\+likelihood\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLikelihoodSetup_aab28241474cee5d1c8044cb065c52345}\label{classLikelihoodSetup_aab28241474cee5d1c8044cb065c52345}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!data\_vec@{data\_vec}}
+\index{data\_vec@{data\_vec}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{data\_vec}{data\_vec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}}$>$ Likelihood\+Setup\+::data\+\_\+vec}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a311f31392f4694ab0982b75c8f4bf429}\label{classLikelihoodSetup_a311f31392f4694ab0982b75c8f4bf429}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!mult\_like\_eval@{mult\_like\_eval}}
+\index{mult\_like\_eval@{mult\_like\_eval}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{mult\_like\_eval}{mult\_like\_eval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1MultLikelihoodEval}{particle\+\_\+filter\+::\+Mult\+Likelihood\+Eval}} Likelihood\+Setup\+::mult\+\_\+like\+\_\+eval}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a3a7c944f21b72312902af17341364756}\label{classLikelihoodSetup_a3a7c944f21b72312902af17341364756}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!num\_computations@{num\_computations}}
+\index{num\_computations@{num\_computations}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{num\_computations}{num\_computations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} Likelihood\+Setup\+::num\+\_\+computations = 1}
+
+\mbox{\Hypertarget{classLikelihoodSetup_ae0e41b0d8a1867e940a7c27d89c7a8d8}\label{classLikelihoodSetup_ae0e41b0d8a1867e940a7c27d89c7a8d8}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!parameter@{parameter}}
+\index{parameter@{parameter}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{parameter}{parameter}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Likelihood\+Setup\+::parameter}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a731c57f60a685fd319b00746b57e6c75}\label{classLikelihoodSetup_a731c57f60a685fd319b00746b57e6c75}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!parameter\_file@{parameter\_file}}
+\index{parameter\_file@{parameter\_file}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{parameter\_file}{parameter\_file}}
+{\footnotesize\ttfamily std\+::string Likelihood\+Setup\+::parameter\+\_\+file = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{classLikelihoodSetup_ae241e4c067d2ab099bafdb9815a38b1e}\label{classLikelihoodSetup_ae241e4c067d2ab099bafdb9815a38b1e}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!parameters@{parameters}}
+\index{parameters@{parameters}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ Likelihood\+Setup\+::parameters}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a7eb1889eb78ac9da1f5d79b5bf1a8b73}\label{classLikelihoodSetup_a7eb1889eb78ac9da1f5d79b5bf1a8b73}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!particle\_filter\_settings@{particle\_filter\_settings}}
+\index{particle\_filter\_settings@{particle\_filter\_settings}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{particle\_filter\_settings}{particle\_filter\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} Likelihood\+Setup\+::particle\+\_\+filter\+\_\+settings}
+
+\mbox{\Hypertarget{classLikelihoodSetup_a104ad0729042db34ddb15003cc0e83e4}\label{classLikelihoodSetup_a104ad0729042db34ddb15003cc0e83e4}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!particle\_filters@{particle\_filters}}
+\index{particle\_filters@{particle\_filters}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{particle\_filters}{particle\_filters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceparticle__filter_aa21cf3ac69734e515f30f71f1a55ebcc}{particle\+\_\+filter\+::\+Particle\+Filter\+\_\+ptr}}$>$ Likelihood\+Setup\+::particle\+\_\+filters}
+
+\mbox{\Hypertarget{classLikelihoodSetup_ae3396176c7c7011478298d51924e4c9b}\label{classLikelihoodSetup_ae3396176c7c7011478298d51924e4c9b}} 
+\index{LikelihoodSetup@{LikelihoodSetup}!times\_vec@{times\_vec}}
+\index{times\_vec@{times\_vec}!LikelihoodSetup@{LikelihoodSetup}}
+\doxysubsubsection{\texorpdfstring{times\_vec}{times\_vec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}}$>$ Likelihood\+Setup\+::times\+\_\+vec}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{LikelihoodSetup_8h}{Likelihood\+Setup.\+h}}\item 
+\mbox{\hyperlink{LikelihoodSetup_8cpp}{Likelihood\+Setup.\+cpp}}\end{DoxyCompactItemize}

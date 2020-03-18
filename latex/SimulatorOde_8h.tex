@@ -1,0 +1,50 @@
+\hypertarget{SimulatorOde_8h}{}\doxysection{src/simulator/\+Simulator\+Ode.h File Reference}
+\label{SimulatorOde_8h}\index{src/simulator/SimulatorOde.h@{src/simulator/SimulatorOde.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$sundials/sundials\+\_\+nvector.\+h$>$}\newline
+{\ttfamily \#include $<$sunmatrix/sunmatrix\+\_\+dense.\+h$>$}\newline
+{\ttfamily \#include $<$sunlinsol/sunlinsol\+\_\+dense.\+h$>$}\newline
+{\ttfamily \#include $<$nvector/nvector\+\_\+serial.\+h$>$}\newline
+{\ttfamily \#include $<$cvode/cvode.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}Stopping\+Criterion.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Simulator.\+h\char`\"{}}\newline
+Include dependency graph for Simulator\+Ode.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SimulatorOde_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SimulatorOde_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsimulator_1_1RhsData}{simulator\+::\+Rhs\+Data}}
+\item 
+struct \mbox{\hyperlink{structsimulator_1_1OdeSettings}{simulator\+::\+Ode\+Settings}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1SimulatorOde}{simulator\+::\+Simulator\+Ode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesimulator}{simulator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(double $\ast$dx, const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacesimulator_a7771e2b5c4a2961f846d474492de52ef}{simulator\+::\+Rhs\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Rhs\+Fct $>$ \mbox{\hyperlink{namespacesimulator_aea0de4330eba514037e844442323b3de}{simulator\+::\+Rhs\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Simulator\+Ode $>$ \mbox{\hyperlink{namespacesimulator_a322e73b52914203912392239426a7300}{simulator\+::\+Simulator\+Ode\+\_\+ptr}}
+\end{DoxyCompactItemize}

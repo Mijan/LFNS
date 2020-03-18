@@ -1,0 +1,275 @@
+\hypertarget{classbase_1_1MathUtils}{}\doxysection{base\+::Math\+Utils Class Reference}
+\label{classbase_1_1MathUtils}\index{base::MathUtils@{base::MathUtils}}
+
+
+{\ttfamily \#include $<$Math\+Utils.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classbase_1_1MathUtils_ae720408596e965239cb08a6499a0fd42}{find\+Index\+Smaller\+Than}} (std\+::vector$<$ double $>$ \&vec, double entry)
+\item 
+static \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classbase_1_1MathUtils_a78e2e618373745dcc58f5dfd41599dd2}{find\+Index\+Larger\+Than}} (std\+::vector$<$ double $>$ \&vec, double entry)
+\item 
+static std\+::vector$<$ double $>$\+::iterator \mbox{\hyperlink{classbase_1_1MathUtils_ae7ed5e3cc4bb067ea301dd87661653b4}{binary\+Search\+Latter}} (std\+::vector$<$ double $>$\+::iterator begin, std\+::vector$<$ double $>$\+::iterator end, double entry)
+\item 
+static std\+::vector$<$ double $>$\+::iterator \mbox{\hyperlink{classbase_1_1MathUtils_a1edb4aa9171e9606fa076dbf1e1b8565}{binary\+Search\+Former}} (std\+::vector$<$ double $>$\+::iterator begin, std\+::vector$<$ double $>$\+::iterator end, double entry)
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_a3c630638d10bdf190e68812acc75e547}{binomial}} (double n, double k)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classbase_1_1MathUtils_a48d45d8cd241e3d7db99dee3f852899d}{sgn}} (T val)
+\item 
+static \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{Ei\+Matrix}} \mbox{\hyperlink{classbase_1_1MathUtils_a459a0c094fc369aaa6503b02518c62d8}{compute\+Covariance}} (\mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{Ei\+Matrix}} \&data)
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_a96eea258975385b54975bc973911b401}{di\+Gamma}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} x)
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_a24f43c8ead40c26076d8a236e07bb18f}{sum\+Of\+Log}} (double log\+\_\+1, double log\+\_\+2)
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_a71d0c270e09596ddc854af80392c32ab}{diff\+Of\+Log}} (double log\+\_\+1, double log\+\_\+2)
+\item 
+static void \mbox{\hyperlink{classbase_1_1MathUtils_a2a229349594a1aff796f1f36305e0f2a}{sum\+Of\+Log}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{plotBE_8m_a37d874d1d45bc2e5bfa013cddacb8e68}{logs}}, const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&signs, double $\ast$log\+\_\+result, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$sign\+\_\+result)
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_aa2acd13fc7ee4cf42423e897d9bc3150}{sum\+Of\+Log}} (const std\+::vector$<$ double $>$ \&log\+\_\+s)
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_a8d3bed2169bec7f155962cff830e3593}{sum\+Of\+Log}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{plotBE_8m_a37d874d1d45bc2e5bfa013cddacb8e68}{logs}}, const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&signs)
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_abe652c1c26add56b3472d79f1fc4b1bd}{sum\+Of\+Log}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{plotBE_8m_a37d874d1d45bc2e5bfa013cddacb8e68}{logs}}, double \mbox{\hyperlink{plotBE_8m_a3d779d299bb5356211ee1973e4e457a2}{max\+\_\+log}})
+\item 
+static double \mbox{\hyperlink{classbase_1_1MathUtils_a6743a7d1bda4b2b180c9ca976136c193}{sum\+Of\+Log}} (const std\+::vector$<$ double $>$ \&log\+\_\+s, const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&signs, double \mbox{\hyperlink{plotBE_8m_a3d779d299bb5356211ee1973e4e457a2}{max\+\_\+log}})
+\item 
+static void \mbox{\hyperlink{classbase_1_1MathUtils_aee020cf27dce6d768e64f1aa7d0b7d7e}{sum\+Of\+Log}} (const std\+::vector$<$ double $>$ \&log\+\_\+s, const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&signs, double \mbox{\hyperlink{plotBE_8m_a3d779d299bb5356211ee1973e4e457a2}{max\+\_\+log}}, double $\ast$log\+\_\+result, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$sign\+\_\+result)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a1edb4aa9171e9606fa076dbf1e1b8565}\label{classbase_1_1MathUtils_a1edb4aa9171e9606fa076dbf1e1b8565}} 
+\index{base::MathUtils@{base::MathUtils}!binarySearchFormer@{binarySearchFormer}}
+\index{binarySearchFormer@{binarySearchFormer}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{binarySearchFormer()}{binarySearchFormer()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$\+::iterator base\+::\+Math\+Utils\+::binary\+Search\+Former (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$\+::iterator}]{begin,  }\item[{std\+::vector$<$ double $>$\+::iterator}]{end,  }\item[{double}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Performs a binary search and returns the iterator pointing to the element before entry 
+\begin{DoxyParams}{Parameters}
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+{\em entry} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_ae7ed5e3cc4bb067ea301dd87661653b4}\label{classbase_1_1MathUtils_ae7ed5e3cc4bb067ea301dd87661653b4}} 
+\index{base::MathUtils@{base::MathUtils}!binarySearchLatter@{binarySearchLatter}}
+\index{binarySearchLatter@{binarySearchLatter}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{binarySearchLatter()}{binarySearchLatter()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$\+::iterator base\+::\+Math\+Utils\+::binary\+Search\+Latter (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$\+::iterator}]{begin,  }\item[{std\+::vector$<$ double $>$\+::iterator}]{end,  }\item[{double}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Performs a binary search and returns the iterator pointing to the element after entry 
+\begin{DoxyParams}{Parameters}
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+{\em entry} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a3c630638d10bdf190e68812acc75e547}\label{classbase_1_1MathUtils_a3c630638d10bdf190e68812acc75e547}} 
+\index{base::MathUtils@{base::MathUtils}!binomial@{binomial}}
+\index{binomial@{binomial}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{binomial()}{binomial()}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::binomial (\begin{DoxyParamCaption}\item[{double}]{n,  }\item[{double}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1MathUtils_a459a0c094fc369aaa6503b02518c62d8}\label{classbase_1_1MathUtils_a459a0c094fc369aaa6503b02518c62d8}} 
+\index{base::MathUtils@{base::MathUtils}!computeCovariance@{computeCovariance}}
+\index{computeCovariance@{computeCovariance}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{computeCovariance()}{computeCovariance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{Ei\+Matrix}} base\+::\+Math\+Utils\+::compute\+Covariance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{Ei\+Matrix}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1MathUtils_a71d0c270e09596ddc854af80392c32ab}\label{classbase_1_1MathUtils_a71d0c270e09596ddc854af80392c32ab}} 
+\index{base::MathUtils@{base::MathUtils}!diffOfLog@{diffOfLog}}
+\index{diffOfLog@{diffOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{diffOfLog()}{diffOfLog()}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::diff\+Of\+Log (\begin{DoxyParamCaption}\item[{double}]{log\+\_\+1,  }\item[{double}]{log\+\_\+2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Compute the log of the difference of two number that are both given as logarithms 
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+1} & \\
+\hline
+{\em log\+\_\+2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+log(exp(log\+\_\+1) -\/ exp(log\+\_\+2)) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a96eea258975385b54975bc973911b401}\label{classbase_1_1MathUtils_a96eea258975385b54975bc973911b401}} 
+\index{base::MathUtils@{base::MathUtils}!diGamma@{diGamma}}
+\index{diGamma@{diGamma}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{diGamma()}{diGamma()}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::di\+Gamma (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1MathUtils_a78e2e618373745dcc58f5dfd41599dd2}\label{classbase_1_1MathUtils_a78e2e618373745dcc58f5dfd41599dd2}} 
+\index{base::MathUtils@{base::MathUtils}!findIndexLargerThan@{findIndexLargerThan}}
+\index{findIndexLargerThan@{findIndexLargerThan}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{findIndexLargerThan()}{findIndexLargerThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} base\+::\+Math\+Utils\+::find\+Index\+Larger\+Than (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{vec,  }\item[{double}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Finds the first element in a vector that contains an element larger than entry 
+\begin{DoxyParams}{Parameters}
+{\em vec} & \\
+\hline
+{\em entry} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the index of the entry of interest 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_ae720408596e965239cb08a6499a0fd42}\label{classbase_1_1MathUtils_ae720408596e965239cb08a6499a0fd42}} 
+\index{base::MathUtils@{base::MathUtils}!findIndexSmallerThan@{findIndexSmallerThan}}
+\index{findIndexSmallerThan@{findIndexSmallerThan}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{findIndexSmallerThan()}{findIndexSmallerThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} base\+::\+Math\+Utils\+::find\+Index\+Smaller\+Than (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{vec,  }\item[{double}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Finds the last element in a vector that contains an element smaller than entry 
+\begin{DoxyParams}{Parameters}
+{\em vec} & \\
+\hline
+{\em entry} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the index of the entry of interest 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a48d45d8cd241e3d7db99dee3f852899d}\label{classbase_1_1MathUtils_a48d45d8cd241e3d7db99dee3f852899d}} 
+\index{base::MathUtils@{base::MathUtils}!sgn@{sgn}}
+\index{sgn@{sgn}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sgn()}{sgn()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} base\+::\+Math\+Utils\+::sgn (\begin{DoxyParamCaption}\item[{T}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1MathUtils_aa2acd13fc7ee4cf42423e897d9bc3150}\label{classbase_1_1MathUtils_aa2acd13fc7ee4cf42423e897d9bc3150}} 
+\index{base::MathUtils@{base::MathUtils}!sumOfLog@{sumOfLog}}
+\index{sumOfLog@{sumOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sumOfLog()}{sumOfLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::sum\+Of\+Log (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{log\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the sum of a vector of numbers, assuming they are all positive 
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+s} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a6743a7d1bda4b2b180c9ca976136c193}\label{classbase_1_1MathUtils_a6743a7d1bda4b2b180c9ca976136c193}} 
+\index{base::MathUtils@{base::MathUtils}!sumOfLog@{sumOfLog}}
+\index{sumOfLog@{sumOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sumOfLog()}{sumOfLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::sum\+Of\+Log (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{log\+\_\+s,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&}]{signs,  }\item[{double}]{max\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the sum of a vector of numbers, with different signs 
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+s} & \\
+\hline
+{\em signs} & \\
+\hline
+{\em max\+\_\+log} & the log of the largest of the numbers to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_aee020cf27dce6d768e64f1aa7d0b7d7e}\label{classbase_1_1MathUtils_aee020cf27dce6d768e64f1aa7d0b7d7e}} 
+\index{base::MathUtils@{base::MathUtils}!sumOfLog@{sumOfLog}}
+\index{sumOfLog@{sumOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sumOfLog()}{sumOfLog()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily void base\+::\+Math\+Utils\+::sum\+Of\+Log (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{log\+\_\+s,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&}]{signs,  }\item[{double}]{max\+\_\+log,  }\item[{double $\ast$}]{log\+\_\+result,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$}]{sign\+\_\+result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the sum of a vector of numbers, with different signs 
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+s} & \\
+\hline
+{\em signs} & \\
+\hline
+{\em max\+\_\+log} & the log of the largest of the numbers to be added \\
+\hline
+{\em log\+\_\+result} & \\
+\hline
+{\em sign\+\_\+result} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a8d3bed2169bec7f155962cff830e3593}\label{classbase_1_1MathUtils_a8d3bed2169bec7f155962cff830e3593}} 
+\index{base::MathUtils@{base::MathUtils}!sumOfLog@{sumOfLog}}
+\index{sumOfLog@{sumOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sumOfLog()}{sumOfLog()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::sum\+Of\+Log (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{logs,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the sum of a vector of numbers, with different signs 
+\begin{DoxyParams}{Parameters}
+{\em logs} & the logs of the numbers to be added \\
+\hline
+{\em signs} & the sign of each number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a2a229349594a1aff796f1f36305e0f2a}\label{classbase_1_1MathUtils_a2a229349594a1aff796f1f36305e0f2a}} 
+\index{base::MathUtils@{base::MathUtils}!sumOfLog@{sumOfLog}}
+\index{sumOfLog@{sumOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sumOfLog()}{sumOfLog()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily void base\+::\+Math\+Utils\+::sum\+Of\+Log (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{logs,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&}]{signs,  }\item[{double $\ast$}]{log\+\_\+result,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$}]{sign\+\_\+result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the sum of a vector of numbers 
+\begin{DoxyParams}{Parameters}
+{\em logs} & the logs of the numbers to be added \\
+\hline
+{\em signs} & the sign of each number \\
+\hline
+{\em log\+\_\+result} & the log of the sum of all of the numbers \\
+\hline
+{\em sign\+\_\+result} & the sign of the sum of all of the number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase_1_1MathUtils_abe652c1c26add56b3472d79f1fc4b1bd}\label{classbase_1_1MathUtils_abe652c1c26add56b3472d79f1fc4b1bd}} 
+\index{base::MathUtils@{base::MathUtils}!sumOfLog@{sumOfLog}}
+\index{sumOfLog@{sumOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sumOfLog()}{sumOfLog()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::sum\+Of\+Log (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{logs,  }\item[{double}]{max\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the sum of a vector of numbers, assuming they are all positive 
+\begin{DoxyParams}{Parameters}
+{\em logs} & \\
+\hline
+{\em max\+\_\+log} & the log of the largest of the numbers to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase_1_1MathUtils_a24f43c8ead40c26076d8a236e07bb18f}\label{classbase_1_1MathUtils_a24f43c8ead40c26076d8a236e07bb18f}} 
+\index{base::MathUtils@{base::MathUtils}!sumOfLog@{sumOfLog}}
+\index{sumOfLog@{sumOfLog}!base::MathUtils@{base::MathUtils}}
+\doxysubsubsection{\texorpdfstring{sumOfLog()}{sumOfLog()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily double base\+::\+Math\+Utils\+::sum\+Of\+Log (\begin{DoxyParamCaption}\item[{double}]{log\+\_\+1,  }\item[{double}]{log\+\_\+2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Compute the log of the sum of two number that are both given as logarithms 
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+1} & \\
+\hline
+{\em log\+\_\+2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+log(exp(log\+\_\+1) + exp(log\+\_\+2)) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/base/\mbox{\hyperlink{MathUtils_8h}{Math\+Utils.\+h}}\item 
+src/base/\mbox{\hyperlink{MathUtils_8cpp}{Math\+Utils.\+cpp}}\end{DoxyCompactItemize}

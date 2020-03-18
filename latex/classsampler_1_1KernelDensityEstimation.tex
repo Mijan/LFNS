@@ -1,0 +1,200 @@
+\hypertarget{classsampler_1_1KernelDensityEstimation}{}\doxysection{sampler\+::Kernel\+Density\+Estimation Class Reference}
+\label{classsampler_1_1KernelDensityEstimation}\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+
+
+{\ttfamily \#include $<$Kernel\+Density\+Estimation.\+h$>$}
+
+
+
+Inheritance diagram for sampler\+::Kernel\+Density\+Estimation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classsampler_1_1KernelDensityEstimation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sampler\+::Kernel\+Density\+Estimation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classsampler_1_1KernelDensityEstimation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_ab64e3540dc252bf29843637d21bdf0ba}{Kernel\+Density\+Estimation}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{Kernel\+Sampler\+\_\+ptr}} kernel, \mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}} data)
+\item 
+virtual \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_aace2d5075633f3490dd3ed824cc6fbc0}{$\sim$\+Kernel\+Density\+Estimation}} ()
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a7d625a26c437520c81e352058d58370b}{update\+Transformed\+Density\+Samples}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples)
+\item 
+void \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_ab74a0587cde82a69b757461eac1a0237}{sample\+Transformed}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\item 
+double \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a4c62ee8c8fc8e8c8cf1e2dd7a527ddb4}{get\+Transformed\+Log\+Likelihood}} (const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_abb70cdca173f483114a5b3c0d92570c2}{write\+To\+Stream}} (std\+::ostream \&stream)
+\item 
+void \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a59d6445de85cb8b2014f4fd0ae3764ac}{set\+Rng}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\friend \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_aea5d603cd6108eb54db6080f762987ea}{void \+::boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (Archive \&ar, const \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation}{Kernel\+Density\+Estimation}} $\ast$t, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} file\+\_\+version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a75d93015c61e5e911fab8c14d8861179}{serialize}} (Archive \&ar, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a0c02081a6d4088ff27d5cd0d74820c45}{\+\_\+means}}
+\item 
+\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_aaae10793487cde8986d1906706c7544d}{\+\_\+weights}}
+\item 
+\mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{Kernel\+Sampler\+\_\+ptr}} \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a6cad5d0861d221d75052ca9cab2c39eb}{\+\_\+kernel}}
+\item 
+\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a9653dcb7641488fb21800913fd26134f}{\+\_\+log\+\_\+likes\+\_\+tmp}}
+\item 
+\mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_ad0d20a9653e568e073e1c9ea67913152}{\+\_\+uniform\+\_\+dist}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_ab64e3540dc252bf29843637d21bdf0ba}\label{classsampler_1_1KernelDensityEstimation_ab64e3540dc252bf29843637d21bdf0ba}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!KernelDensityEstimation@{KernelDensityEstimation}}
+\index{KernelDensityEstimation@{KernelDensityEstimation}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{KernelDensityEstimation()}{KernelDensityEstimation()}}
+{\footnotesize\ttfamily sampler\+::\+Kernel\+Density\+Estimation\+::\+Kernel\+Density\+Estimation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{Kernel\+Sampler\+\_\+ptr}}}]{kernel,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}}}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_aace2d5075633f3490dd3ed824cc6fbc0}\label{classsampler_1_1KernelDensityEstimation_aace2d5075633f3490dd3ed824cc6fbc0}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!````~KernelDensityEstimation@{$\sim$KernelDensityEstimation}}
+\index{````~KernelDensityEstimation@{$\sim$KernelDensityEstimation}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{$\sim$KernelDensityEstimation()}{~KernelDensityEstimation()}}
+{\footnotesize\ttfamily sampler\+::\+Kernel\+Density\+Estimation\+::$\sim$\+Kernel\+Density\+Estimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_a4c62ee8c8fc8e8c8cf1e2dd7a527ddb4}\label{classsampler_1_1KernelDensityEstimation_a4c62ee8c8fc8e8c8cf1e2dd7a527ddb4}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!getTransformedLogLikelihood@{getTransformedLogLikelihood}}
+\index{getTransformedLogLikelihood@{getTransformedLogLikelihood}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{getTransformedLogLikelihood()}{getTransformedLogLikelihood()}}
+{\footnotesize\ttfamily double sampler\+::\+Kernel\+Density\+Estimation\+::get\+Transformed\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_ab74a0587cde82a69b757461eac1a0237}\label{classsampler_1_1KernelDensityEstimation_ab74a0587cde82a69b757461eac1a0237}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!sampleTransformed@{sampleTransformed}}
+\index{sampleTransformed@{sampleTransformed}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{sampleTransformed()}{sampleTransformed()}}
+{\footnotesize\ttfamily void sampler\+::\+Kernel\+Density\+Estimation\+::sample\+Transformed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_a75d93015c61e5e911fab8c14d8861179}\label{classsampler_1_1KernelDensityEstimation_a75d93015c61e5e911fab8c14d8861179}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!serialize@{serialize}}
+\index{serialize@{serialize}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void sampler\+::\+Kernel\+Density\+Estimation\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_a59d6445de85cb8b2014f4fd0ae3764ac}\label{classsampler_1_1KernelDensityEstimation_a59d6445de85cb8b2014f4fd0ae3764ac}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!setRng@{setRng}}
+\index{setRng@{setRng}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{setRng()}{setRng()}}
+{\footnotesize\ttfamily void sampler\+::\+Kernel\+Density\+Estimation\+::set\+Rng (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_aaf71502a75c29244c170925e5731c2d3}{sampler\+::\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_a7d625a26c437520c81e352058d58370b}\label{classsampler_1_1KernelDensityEstimation_a7d625a26c437520c81e352058d58370b}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!updateTransformedDensitySamples@{updateTransformedDensitySamples}}
+\index{updateTransformedDensitySamples@{updateTransformedDensitySamples}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{updateTransformedDensitySamples()}{updateTransformedDensitySamples()}}
+{\footnotesize\ttfamily void sampler\+::\+Kernel\+Density\+Estimation\+::update\+Transformed\+Density\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}{sampler\+::\+Density\+Estimation}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_a4a777a372b5b2922a509a802f8c0b748}{sampler\+::\+Kernel\+Support\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_aea5d603cd6108eb54db6080f762987ea}\label{classsampler_1_1KernelDensityEstimation_aea5d603cd6108eb54db6080f762987ea}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}}
+\index{void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{void ::boost::serialization::save\_construct\_data()}{void ::boost::serialization::save\_construct\_data()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+sampler\+::\+Kernel\+Density\+Estimation\+::void \+::\mbox{\hyperlink{namespaceboost_1_1serialization_a06e6584c879d27ff1f020d6e381ffa2a}{boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation}{Kernel\+Density\+Estimation}} $\ast$}]{t,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{file\+\_\+version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_abb70cdca173f483114a5b3c0d92570c2}\label{classsampler_1_1KernelDensityEstimation_abb70cdca173f483114a5b3c0d92570c2}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!writeToStream@{writeToStream}}
+\index{writeToStream@{writeToStream}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{writeToStream()}{writeToStream()}}
+{\footnotesize\ttfamily void sampler\+::\+Kernel\+Density\+Estimation\+::write\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_ad1143ee047e139371910e9b7887df330}{sampler\+::\+Sampler}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classsampler_1_1KernelDensityEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_a6cad5d0861d221d75052ca9cab2c39eb}\label{classsampler_1_1KernelDensityEstimation_a6cad5d0861d221d75052ca9cab2c39eb}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!\_kernel@{\_kernel}}
+\index{\_kernel@{\_kernel}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_kernel}{\_kernel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{Kernel\+Sampler\+\_\+ptr}} sampler\+::\+Kernel\+Density\+Estimation\+::\+\_\+kernel\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_a9653dcb7641488fb21800913fd26134f}\label{classsampler_1_1KernelDensityEstimation_a9653dcb7641488fb21800913fd26134f}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!\_log\_likes\_tmp@{\_log\_likes\_tmp}}
+\index{\_log\_likes\_tmp@{\_log\_likes\_tmp}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_log\_likes\_tmp}{\_log\_likes\_tmp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} sampler\+::\+Kernel\+Density\+Estimation\+::\+\_\+log\+\_\+likes\+\_\+tmp\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_a0c02081a6d4088ff27d5cd0d74820c45}\label{classsampler_1_1KernelDensityEstimation_a0c02081a6d4088ff27d5cd0d74820c45}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!\_means@{\_means}}
+\index{\_means@{\_means}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_means}{\_means}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ sampler\+::\+Kernel\+Density\+Estimation\+::\+\_\+means\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_ad0d20a9653e568e073e1c9ea67913152}\label{classsampler_1_1KernelDensityEstimation_ad0d20a9653e568e073e1c9ea67913152}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!\_uniform\_dist@{\_uniform\_dist}}
+\index{\_uniform\_dist@{\_uniform\_dist}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_dist}{\_uniform\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} sampler\+::\+Kernel\+Density\+Estimation\+::\+\_\+uniform\+\_\+dist\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelDensityEstimation_aaae10793487cde8986d1906706c7544d}\label{classsampler_1_1KernelDensityEstimation_aaae10793487cde8986d1906706c7544d}} 
+\index{sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!sampler::KernelDensityEstimation@{sampler::KernelDensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} sampler\+::\+Kernel\+Density\+Estimation\+::\+\_\+weights\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sampler/\mbox{\hyperlink{KernelDensityEstimation_8h}{Kernel\+Density\+Estimation.\+h}}\item 
+src/sampler/\mbox{\hyperlink{KernelDensityEstimation_8cpp}{Kernel\+Density\+Estimation.\+cpp}}\end{DoxyCompactItemize}

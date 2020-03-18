@@ -1,0 +1,165 @@
+\hypertarget{classbase_1_1IoUtils}{}\doxysection{base\+::Io\+Utils Class Reference}
+\label{classbase_1_1IoUtils}\index{base::IoUtils@{base::IoUtils}}
+
+
+{\ttfamily \#include $<$Io\+Utils.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_ae22dd567a6f0d92cae045d02974debf8}{append\+To\+File\+Name}} (const std\+::string file\+Name, const std\+::string ending\+\_\+string)
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_a3b92541c6d48f6eb9a137fe71e1d182f}{get\+Absolute\+Path}} (std\+::string path, std\+::string base\+\_\+path)
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_a5b5195643be5b97ddd8faccee6cec6a8}{get\+File\+Location}} (std\+::string full\+\_\+file\+\_\+path)
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_a7ff60a2f802f7e33316b410a7a915ecc}{get\+File\+Name}} (std\+::string full\+\_\+file\+\_\+path)
+\item 
+static bool \mbox{\hyperlink{classbase_1_1IoUtils_a18072a57144e3e5447781924d7318a0b}{is\+Path\+Absolute}} (std\+::string path)
+\item 
+static bool \mbox{\hyperlink{classbase_1_1IoUtils_a9f1448675df7150f6eeee470e458f266}{does\+File\+Exists}} (std\+::string \mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classbase_1_1IoUtils_abd7ab06d7aed9ba9b881933df544cd75}{write\+Vector}} (std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}{output\+\_\+file\+\_\+name}}, const std\+::vector$<$ T $>$ \&out\+\_\+vector, std\+::string delimmiter=\char`\"{}, \char`\"{}, std\+::ios\+\_\+base\+::openmode mode=std\+::ios\+\_\+base\+::out)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classbase_1_1IoUtils_a9ade7c26ede8099c553a910b55020199}{write\+Vector\+Col}} (std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}{output\+\_\+file\+\_\+name}}, const std\+::vector$<$ T $>$ \&out\+\_\+vector, std\+::ios\+\_\+base\+::openmode mode=std\+::ios\+\_\+base\+::out)
+\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase_1_1IoUtils_a76abd9cc8bc3f27610560428069df7fc}{read\+Vector}} (std\+::string input\+\_\+file\+\_\+name)
+\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase_1_1IoUtils_aa3febde93be63054c29b51e135e87a2a}{read\+Col\+Vector}} (std\+::string input\+\_\+file\+\_\+name)
+\item 
+static std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classbase_1_1IoUtils_a2b9a34c5a0bf9f63bfc4a04db99f6f70}{read\+Vector\+Of\+Vectors}} (std\+::string input\+\_\+file\+\_\+name)
+\item 
+static std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \mbox{\hyperlink{classbase_1_1IoUtils_abf955712302670d73bd5222a5a709be5}{read\+Multiline}} (std\+::string input\+\_\+file\+\_\+name, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+lines\+\_\+for\+\_\+multiline, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} max\+\_\+traj=1000)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classbase_1_1IoUtils_a1e232320e4231171f03e29f72d6ece34}{write\+Vector\+Of\+Vectors}} (std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}{output\+\_\+file\+\_\+name}}, const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&out\+\_\+vectors, bool transposed=false, std\+::ios\+\_\+base\+::openmode mode=std\+::ios\+\_\+base\+::out)
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_a32eaafa9fc334cc2b111bae1ef42e2ee}{set\+File\+Ending}} (const std\+::string file\+Name, const std\+::string string)
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_a6aef2317fbedd48d097112b4d434db3b}{get\+File\+Ending}} (const std\+::string \mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}})
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_ac821bc085f002e1ded21e014d4442e47}{int\+To\+String}} (size\+\_\+t nbr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbase_1_1IoUtils_ae22dd567a6f0d92cae045d02974debf8}\label{classbase_1_1IoUtils_ae22dd567a6f0d92cae045d02974debf8}} 
+\index{base::IoUtils@{base::IoUtils}!appendToFileName@{appendToFileName}}
+\index{appendToFileName@{appendToFileName}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{appendToFileName()}{appendToFileName()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Io\+Utils\+::append\+To\+File\+Name (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+Name,  }\item[{const std\+::string}]{ending\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a9f1448675df7150f6eeee470e458f266}\label{classbase_1_1IoUtils_a9f1448675df7150f6eeee470e458f266}} 
+\index{base::IoUtils@{base::IoUtils}!doesFileExists@{doesFileExists}}
+\index{doesFileExists@{doesFileExists}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{doesFileExists()}{doesFileExists()}}
+{\footnotesize\ttfamily bool base\+::\+Io\+Utils\+::does\+File\+Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a3b92541c6d48f6eb9a137fe71e1d182f}\label{classbase_1_1IoUtils_a3b92541c6d48f6eb9a137fe71e1d182f}} 
+\index{base::IoUtils@{base::IoUtils}!getAbsolutePath@{getAbsolutePath}}
+\index{getAbsolutePath@{getAbsolutePath}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{getAbsolutePath()}{getAbsolutePath()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Io\+Utils\+::get\+Absolute\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{std\+::string}]{base\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a6aef2317fbedd48d097112b4d434db3b}\label{classbase_1_1IoUtils_a6aef2317fbedd48d097112b4d434db3b}} 
+\index{base::IoUtils@{base::IoUtils}!getFileEnding@{getFileEnding}}
+\index{getFileEnding@{getFileEnding}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{getFileEnding()}{getFileEnding()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Io\+Utils\+::get\+File\+Ending (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a5b5195643be5b97ddd8faccee6cec6a8}\label{classbase_1_1IoUtils_a5b5195643be5b97ddd8faccee6cec6a8}} 
+\index{base::IoUtils@{base::IoUtils}!getFileLocation@{getFileLocation}}
+\index{getFileLocation@{getFileLocation}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{getFileLocation()}{getFileLocation()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Io\+Utils\+::get\+File\+Location (\begin{DoxyParamCaption}\item[{std\+::string}]{full\+\_\+file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a7ff60a2f802f7e33316b410a7a915ecc}\label{classbase_1_1IoUtils_a7ff60a2f802f7e33316b410a7a915ecc}} 
+\index{base::IoUtils@{base::IoUtils}!getFileName@{getFileName}}
+\index{getFileName@{getFileName}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{getFileName()}{getFileName()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Io\+Utils\+::get\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{full\+\_\+file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_ac821bc085f002e1ded21e014d4442e47}\label{classbase_1_1IoUtils_ac821bc085f002e1ded21e014d4442e47}} 
+\index{base::IoUtils@{base::IoUtils}!intToString@{intToString}}
+\index{intToString@{intToString}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{intToString()}{intToString()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Io\+Utils\+::int\+To\+String (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{nbr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a18072a57144e3e5447781924d7318a0b}\label{classbase_1_1IoUtils_a18072a57144e3e5447781924d7318a0b}} 
+\index{base::IoUtils@{base::IoUtils}!isPathAbsolute@{isPathAbsolute}}
+\index{isPathAbsolute@{isPathAbsolute}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{isPathAbsolute()}{isPathAbsolute()}}
+{\footnotesize\ttfamily bool base\+::\+Io\+Utils\+::is\+Path\+Absolute (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_aa3febde93be63054c29b51e135e87a2a}\label{classbase_1_1IoUtils_aa3febde93be63054c29b51e135e87a2a}} 
+\index{base::IoUtils@{base::IoUtils}!readColVector@{readColVector}}
+\index{readColVector@{readColVector}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{readColVector()}{readColVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ base\+::\+Io\+Utils\+::read\+Col\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_abf955712302670d73bd5222a5a709be5}\label{classbase_1_1IoUtils_abf955712302670d73bd5222a5a709be5}} 
+\index{base::IoUtils@{base::IoUtils}!readMultiline@{readMultiline}}
+\index{readMultiline@{readMultiline}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{readMultiline()}{readMultiline()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ base\+::\+Io\+Utils\+::read\+Multiline (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+file\+\_\+name,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+lines\+\_\+for\+\_\+multiline,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{max\+\_\+traj = {\ttfamily 1000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a76abd9cc8bc3f27610560428069df7fc}\label{classbase_1_1IoUtils_a76abd9cc8bc3f27610560428069df7fc}} 
+\index{base::IoUtils@{base::IoUtils}!readVector@{readVector}}
+\index{readVector@{readVector}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{readVector()}{readVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ base\+::\+Io\+Utils\+::read\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a2b9a34c5a0bf9f63bfc4a04db99f6f70}\label{classbase_1_1IoUtils_a2b9a34c5a0bf9f63bfc4a04db99f6f70}} 
+\index{base::IoUtils@{base::IoUtils}!readVectorOfVectors@{readVectorOfVectors}}
+\index{readVectorOfVectors@{readVectorOfVectors}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{readVectorOfVectors()}{readVectorOfVectors()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ base\+::\+Io\+Utils\+::read\+Vector\+Of\+Vectors (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a32eaafa9fc334cc2b111bae1ef42e2ee}\label{classbase_1_1IoUtils_a32eaafa9fc334cc2b111bae1ef42e2ee}} 
+\index{base::IoUtils@{base::IoUtils}!setFileEnding@{setFileEnding}}
+\index{setFileEnding@{setFileEnding}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{setFileEnding()}{setFileEnding()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Io\+Utils\+::set\+File\+Ending (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+Name,  }\item[{const std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_abd7ab06d7aed9ba9b881933df544cd75}\label{classbase_1_1IoUtils_abd7ab06d7aed9ba9b881933df544cd75}} 
+\index{base::IoUtils@{base::IoUtils}!writeVector@{writeVector}}
+\index{writeVector@{writeVector}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{writeVector()}{writeVector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void base\+::\+Io\+Utils\+::write\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+name,  }\item[{const std\+::vector$<$ T $>$ \&}]{out\+\_\+vector,  }\item[{std\+::string}]{delimmiter = {\ttfamily \char`\"{},~\char`\"{}},  }\item[{std\+::ios\+\_\+base\+::openmode}]{mode = {\ttfamily std\+:\+:ios\+\_\+base\+:\+:out} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a9ade7c26ede8099c553a910b55020199}\label{classbase_1_1IoUtils_a9ade7c26ede8099c553a910b55020199}} 
+\index{base::IoUtils@{base::IoUtils}!writeVectorCol@{writeVectorCol}}
+\index{writeVectorCol@{writeVectorCol}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{writeVectorCol()}{writeVectorCol()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void base\+::\+Io\+Utils\+::write\+Vector\+Col (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+name,  }\item[{const std\+::vector$<$ T $>$ \&}]{out\+\_\+vector,  }\item[{std\+::ios\+\_\+base\+::openmode}]{mode = {\ttfamily std\+:\+:ios\+\_\+base\+:\+:out} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1IoUtils_a1e232320e4231171f03e29f72d6ece34}\label{classbase_1_1IoUtils_a1e232320e4231171f03e29f72d6ece34}} 
+\index{base::IoUtils@{base::IoUtils}!writeVectorOfVectors@{writeVectorOfVectors}}
+\index{writeVectorOfVectors@{writeVectorOfVectors}!base::IoUtils@{base::IoUtils}}
+\doxysubsubsection{\texorpdfstring{writeVectorOfVectors()}{writeVectorOfVectors()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void base\+::\+Io\+Utils\+::write\+Vector\+Of\+Vectors (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+name,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{out\+\_\+vectors,  }\item[{bool}]{transposed = {\ttfamily false},  }\item[{std\+::ios\+\_\+base\+::openmode}]{mode = {\ttfamily std\+:\+:ios\+\_\+base\+:\+:out} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Writes a vector of vectors to a file. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of data to be written \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+file\+\_\+name} & \\
+\hline
+{\em out\+\_\+vectors} & \\
+\hline
+{\em transposed} & indicates if the matrix to be written needs to be transposed \\
+\hline
+{\em mode} & indicates the mode in which the destimation file needs to be open. In particular if the new data should overwrite its current content or if it should append the new content. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/base/\mbox{\hyperlink{IoUtils_8h}{Io\+Utils.\+h}}\item 
+src/base/\mbox{\hyperlink{IoUtils_8cpp}{Io\+Utils.\+cpp}}\end{DoxyCompactItemize}

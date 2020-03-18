@@ -1,0 +1,239 @@
+\hypertarget{classsimulator_1_1SimulatorOde}{}\doxysection{simulator\+::Simulator\+Ode Class Reference}
+\label{classsimulator_1_1SimulatorOde}\index{simulator::SimulatorOde@{simulator::SimulatorOde}}
+
+
+{\ttfamily \#include $<$Simulator\+Ode.\+h$>$}
+
+
+
+Inheritance diagram for simulator\+::Simulator\+Ode\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classsimulator_1_1SimulatorOde__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for simulator\+::Simulator\+Ode\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulator_1_1SimulatorOde__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsimulator_1_1SimulatorOde_ac13d6820bcba9e8ad791882f8a0fc8ae}{Simulator\+Ode}} (\mbox{\hyperlink{structsimulator_1_1OdeSettings}{Ode\+Settings}} settings, \mbox{\hyperlink{namespacesimulator_aea0de4330eba514037e844442323b3de}{Rhs\+Fct\+\_\+ptr}} rhs\+\_\+fct, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+states)
+\item 
+\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a97cea22aa24f75b53ebee7dddc5f5ade}{Simulator\+Ode}} (const \mbox{\hyperlink{classsimulator_1_1SimulatorOde}{Simulator\+Ode}} \&rhs)
+\item 
+virtual \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a6fe633a5cb7de988b518114b28ca0580}{$\sim$\+Simulator\+Ode}} ()
+\item 
+virtual \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a3504227c6b449fcf86781f725c844ec5}{get\+Simulation\+Fct}} ()
+\item 
+virtual void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ac87b3e81b11ccf24b5e8af4c1962b62d}{simulate}} (double final\+\_\+time)
+\item 
+virtual \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a6e82fb17e3591d3fecfbe1df068e0872}{get\+Reset\+Fct}} ()
+\item 
+void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a08c990089813a4998e4f4515f910a7e1}{reset}} (std\+::vector$<$ double $>$ \&state, double \&t) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ab5b536e3a5ea1847a096c265a82aeef6}{\+\_\+run\+Solver}} (double \&t, double final\+\_\+time)
+\item 
+void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ac1b271a02d92f565ec3bb41f39aa7304}{\+\_\+run\+Single\+Step}} (double \&t, double final\+\_\+time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a27cb0caa82c243e7259613241a6a85e3}{cv\+Ode\+Rhs\+\_\+static}} (realtype t, N\+\_\+\+Vector y, N\+\_\+\+Vector ydot, void $\ast$user\+\_\+data)
+\item 
+static void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde_aba9865462257c757196d6b4b84ec3964}{\+\_\+cvode\+\_\+mem}}
+\item 
+\mbox{\hyperlink{structsimulator_1_1RhsData}{Rhs\+Data}} \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ab148781e4ab149c7e547d00eedc4d4aa}{\+\_\+rhs\+\_\+data}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ade4078be2abf6024e12747d80bc5f642}{\+\_\+states}}
+\item 
+double \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a4f0043fbb235d3c5a1cbc9d53f375889}{\+\_\+t}}
+\item 
+\mbox{\hyperlink{structsimulator_1_1OdeSettings}{Ode\+Settings}} \mbox{\hyperlink{classsimulator_1_1SimulatorOde_aecf00a41a5cf19d8ff2aaef5d39d5a6a}{\+\_\+settings}}
+\item 
+N\+\_\+\+Vector \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a6458009eec243364edf4a2eec2c66598}{\+\_\+current\+\_\+state\+\_\+n\+\_\+vector}}
+\item 
+S\+U\+N\+Matrix \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a70cb82a028fc85cb45c5334683a1beca}{\+\_\+A}}
+\item 
+S\+U\+N\+Linear\+Solver \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ab4d55f6e7a2b30cf291aa519d6c3730c}{\+\_\+\+LS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr void($\ast$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ad7ff176a899827448738bb34cf07bbc7}{C\+V\+Err\+Handler\+Fn}} )(\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}}
+\item 
+static constexpr \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}($\ast$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ade67d68d65aa05f7427f2239d2cee1ea}{C\+V\+Rhs\+Fn}} )(realtype t, N\+\_\+\+Vector y, N\+\_\+\+Vector ydot, void $\ast$user\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a27cb0caa82c243e7259613241a6a85e3}{cv\+Ode\+Rhs\+\_\+static}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ac13d6820bcba9e8ad791882f8a0fc8ae}\label{classsimulator_1_1SimulatorOde_ac13d6820bcba9e8ad791882f8a0fc8ae}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!SimulatorOde@{SimulatorOde}}
+\index{SimulatorOde@{SimulatorOde}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{SimulatorOde()}{SimulatorOde()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+Ode\+::\+Simulator\+Ode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsimulator_1_1OdeSettings}{Ode\+Settings}}}]{settings,  }\item[{\mbox{\hyperlink{namespacesimulator_aea0de4330eba514037e844442323b3de}{Rhs\+Fct\+\_\+ptr}}}]{rhs\+\_\+fct,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+states }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a97cea22aa24f75b53ebee7dddc5f5ade}\label{classsimulator_1_1SimulatorOde_a97cea22aa24f75b53ebee7dddc5f5ade}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!SimulatorOde@{SimulatorOde}}
+\index{SimulatorOde@{SimulatorOde}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{SimulatorOde()}{SimulatorOde()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+Ode\+::\+Simulator\+Ode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsimulator_1_1SimulatorOde}{Simulator\+Ode}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a6fe633a5cb7de988b518114b28ca0580}\label{classsimulator_1_1SimulatorOde_a6fe633a5cb7de988b518114b28ca0580}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!````~SimulatorOde@{$\sim$SimulatorOde}}
+\index{````~SimulatorOde@{$\sim$SimulatorOde}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimulatorOde()}{~SimulatorOde()}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+Ode\+::$\sim$\+Simulator\+Ode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ac1b271a02d92f565ec3bb41f39aa7304}\label{classsimulator_1_1SimulatorOde_ac1b271a02d92f565ec3bb41f39aa7304}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_runSingleStep@{\_runSingleStep}}
+\index{\_runSingleStep@{\_runSingleStep}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_runSingleStep()}{\_runSingleStep()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ode\+::\+\_\+run\+Single\+Step (\begin{DoxyParamCaption}\item[{double \&}]{t,  }\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ab5b536e3a5ea1847a096c265a82aeef6}\label{classsimulator_1_1SimulatorOde_ab5b536e3a5ea1847a096c265a82aeef6}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_runSolver@{\_runSolver}}
+\index{\_runSolver@{\_runSolver}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_runSolver()}{\_runSolver()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ode\+::\+\_\+run\+Solver (\begin{DoxyParamCaption}\item[{double \&}]{t,  }\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}\label{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!cvOdeErrorHandling\_static@{cvOdeErrorHandling\_static}}
+\index{cvOdeErrorHandling\_static@{cvOdeErrorHandling\_static}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{cvOdeErrorHandling\_static()}{cvOdeErrorHandling\_static()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ode\+::cv\+Ode\+Error\+Handling\+\_\+static (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{error\+\_\+code,  }\item[{const char $\ast$}]{module,  }\item[{const char $\ast$}]{function,  }\item[{char $\ast$}]{msg,  }\item[{void $\ast$}]{eh\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a27cb0caa82c243e7259613241a6a85e3}\label{classsimulator_1_1SimulatorOde_a27cb0caa82c243e7259613241a6a85e3}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!cvOdeRhs\_static@{cvOdeRhs\_static}}
+\index{cvOdeRhs\_static@{cvOdeRhs\_static}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{cvOdeRhs\_static()}{cvOdeRhs\_static()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} simulator\+::\+Simulator\+Ode\+::cv\+Ode\+Rhs\+\_\+static (\begin{DoxyParamCaption}\item[{realtype}]{t,  }\item[{N\+\_\+\+Vector}]{y,  }\item[{N\+\_\+\+Vector}]{ydot,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a6e82fb17e3591d3fecfbe1df068e0872}\label{classsimulator_1_1SimulatorOde_a6e82fb17e3591d3fecfbe1df068e0872}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!getResetFct@{getResetFct}}
+\index{getResetFct@{getResetFct}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{getResetFct()}{getResetFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Ode\+::get\+Reset\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a0df0905d6e73446e39fb3021395d11c9}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a3504227c6b449fcf86781f725c844ec5}\label{classsimulator_1_1SimulatorOde_a3504227c6b449fcf86781f725c844ec5}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!getSimulationFct@{getSimulationFct}}
+\index{getSimulationFct@{getSimulationFct}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{getSimulationFct()}{getSimulationFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Ode\+::get\+Simulation\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a833bcbc098992ac34610a8bf75c88865}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a08c990089813a4998e4f4515f910a7e1}\label{classsimulator_1_1SimulatorOde_a08c990089813a4998e4f4515f910a7e1}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!reset@{reset}}
+\index{reset@{reset}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ode\+::reset (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{state,  }\item[{double \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsimulator_1_1Simulator_a178c313f7f42d2c314d2f7a2cb8e3845}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ac87b3e81b11ccf24b5e8af4c1962b62d}\label{classsimulator_1_1SimulatorOde_ac87b3e81b11ccf24b5e8af4c1962b62d}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!simulate@{simulate}}
+\index{simulate@{simulate}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Ode\+::simulate (\begin{DoxyParamCaption}\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a7483d21dde301a5390392539169a7aa1}{simulator\+::\+Simulator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a70cb82a028fc85cb45c5334683a1beca}\label{classsimulator_1_1SimulatorOde_a70cb82a028fc85cb45c5334683a1beca}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_A@{\_A}}
+\index{\_A@{\_A}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_A}{\_A}}
+{\footnotesize\ttfamily S\+U\+N\+Matrix simulator\+::\+Simulator\+Ode\+::\+\_\+A\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a6458009eec243364edf4a2eec2c66598}\label{classsimulator_1_1SimulatorOde_a6458009eec243364edf4a2eec2c66598}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_current\_state\_n\_vector@{\_current\_state\_n\_vector}}
+\index{\_current\_state\_n\_vector@{\_current\_state\_n\_vector}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_current\_state\_n\_vector}{\_current\_state\_n\_vector}}
+{\footnotesize\ttfamily N\+\_\+\+Vector simulator\+::\+Simulator\+Ode\+::\+\_\+current\+\_\+state\+\_\+n\+\_\+vector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_aba9865462257c757196d6b4b84ec3964}\label{classsimulator_1_1SimulatorOde_aba9865462257c757196d6b4b84ec3964}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_cvode\_mem@{\_cvode\_mem}}
+\index{\_cvode\_mem@{\_cvode\_mem}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_cvode\_mem}{\_cvode\_mem}}
+{\footnotesize\ttfamily void$\ast$ simulator\+::\+Simulator\+Ode\+::\+\_\+cvode\+\_\+mem\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ab4d55f6e7a2b30cf291aa519d6c3730c}\label{classsimulator_1_1SimulatorOde_ab4d55f6e7a2b30cf291aa519d6c3730c}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_LS@{\_LS}}
+\index{\_LS@{\_LS}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_LS}{\_LS}}
+{\footnotesize\ttfamily S\+U\+N\+Linear\+Solver simulator\+::\+Simulator\+Ode\+::\+\_\+\+LS\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ab148781e4ab149c7e547d00eedc4d4aa}\label{classsimulator_1_1SimulatorOde_ab148781e4ab149c7e547d00eedc4d4aa}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_rhs\_data@{\_rhs\_data}}
+\index{\_rhs\_data@{\_rhs\_data}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_rhs\_data}{\_rhs\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsimulator_1_1RhsData}{Rhs\+Data}} simulator\+::\+Simulator\+Ode\+::\+\_\+rhs\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_aecf00a41a5cf19d8ff2aaef5d39d5a6a}\label{classsimulator_1_1SimulatorOde_aecf00a41a5cf19d8ff2aaef5d39d5a6a}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_settings@{\_settings}}
+\index{\_settings@{\_settings}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_settings}{\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsimulator_1_1OdeSettings}{Ode\+Settings}} simulator\+::\+Simulator\+Ode\+::\+\_\+settings\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ade4078be2abf6024e12747d80bc5f642}\label{classsimulator_1_1SimulatorOde_ade4078be2abf6024e12747d80bc5f642}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_states@{\_states}}
+\index{\_states@{\_states}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_states}{\_states}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ simulator\+::\+Simulator\+Ode\+::\+\_\+states\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_a4f0043fbb235d3c5a1cbc9d53f375889}\label{classsimulator_1_1SimulatorOde_a4f0043fbb235d3c5a1cbc9d53f375889}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!\_t@{\_t}}
+\index{\_t@{\_t}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{\_t}{\_t}}
+{\footnotesize\ttfamily double simulator\+::\+Simulator\+Ode\+::\+\_\+t\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ad7ff176a899827448738bb34cf07bbc7}\label{classsimulator_1_1SimulatorOde_ad7ff176a899827448738bb34cf07bbc7}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!CVErrHandlerFn@{CVErrHandlerFn}}
+\index{CVErrHandlerFn@{CVErrHandlerFn}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{CVErrHandlerFn}{CVErrHandlerFn}}
+{\footnotesize\ttfamily constexpr void($\ast$ simulator\+::\+Simulator\+Ode\+::\+C\+V\+Err\+Handler\+Fn) (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ade67d68d65aa05f7427f2239d2cee1ea}\label{classsimulator_1_1SimulatorOde_ade67d68d65aa05f7427f2239d2cee1ea}} 
+\index{simulator::SimulatorOde@{simulator::SimulatorOde}!CVRhsFn@{CVRhsFn}}
+\index{CVRhsFn@{CVRhsFn}!simulator::SimulatorOde@{simulator::SimulatorOde}}
+\doxysubsubsection{\texorpdfstring{CVRhsFn}{CVRhsFn}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}($\ast$ simulator\+::\+Simulator\+Ode\+::\+C\+V\+Rhs\+Fn) (realtype t, N\+\_\+\+Vector y, N\+\_\+\+Vector ydot, void $\ast$user\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a27cb0caa82c243e7259613241a6a85e3}{cv\+Ode\+Rhs\+\_\+static}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/simulator/\mbox{\hyperlink{SimulatorOde_8h}{Simulator\+Ode.\+h}}\item 
+src/simulator/\mbox{\hyperlink{SimulatorOde_8cpp}{Simulator\+Ode.\+cpp}}\end{DoxyCompactItemize}

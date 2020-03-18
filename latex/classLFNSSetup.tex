@@ -1,0 +1,256 @@
+\hypertarget{classLFNSSetup}{}\doxysection{L\+F\+N\+S\+Setup Class Reference}
+\label{classLFNSSetup}\index{LFNSSetup@{LFNSSetup}}
+
+
+{\ttfamily \#include $<$L\+F\+N\+S\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for L\+F\+N\+S\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classLFNSSetup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for L\+F\+N\+S\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLFNSSetup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLFNSSetup_a1791215ca67c3b1181ee3fcc74967980}{L\+F\+N\+S\+Setup}} (\mbox{\hyperlink{classoptions_1_1LFNSOptions}{options\+::\+L\+F\+N\+S\+Options}} options, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} process\+\_\+nbr=1)
+\item 
+virtual \mbox{\hyperlink{classLFNSSetup_ac040c45633147281ce51ea7fce86b6d4}{$\sim$\+L\+F\+N\+S\+Setup}} ()
+\item 
+void \mbox{\hyperlink{classLFNSSetup_a93bbe7b4c98e2cc22f86f1fc06ea8dae}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{classLFNSSetup_a5ca7442a66b14b5ea16f6414184a1a97}{print\+Settings}} (std\+::ostream \&os) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceparticle__filter_aa21cf3ac69734e515f30f71f1a55ebcc}{particle\+\_\+filter\+::\+Particle\+Filter\+\_\+ptr}} $>$ \mbox{\hyperlink{classLFNSSetup_addebe75e7f8f20f247805af268d1b1a7}{particle\+\_\+filters}}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1MultLikelihoodEval}{particle\+\_\+filter\+::\+Mult\+Likelihood\+Eval}} \mbox{\hyperlink{classLFNSSetup_aa880648a72abf5f72d4eebd24030c7b0}{mult\+\_\+like\+\_\+eval}}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \mbox{\hyperlink{classLFNSSetup_a1c72be6590c5b2c4cb8fa1882dffcc84}{particle\+\_\+filter\+\_\+settings}}
+\item 
+\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} \mbox{\hyperlink{classLFNSSetup_ab883fe4446521f9e32fb92cf2ba4da22}{prior}}
+\item 
+\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} \mbox{\hyperlink{classLFNSSetup_a505acd703cfdfbb30bfebe916b68fc75}{density\+\_\+estimation}}
+\item 
+\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \mbox{\hyperlink{classLFNSSetup_a76b1dea0864986c3f77ef4f74aa52a96}{sampler\+\_\+settings}}
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}} \mbox{\hyperlink{classLFNSSetup_ab07523a76d512142b2f566ac877ca242}{lfns\+\_\+settings}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} $>$ \mbox{\hyperlink{classLFNSSetup_a4a0b37953dc826de8e4ca69e2c42b59d}{times\+\_\+vec}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} $>$ \mbox{\hyperlink{classLFNSSetup_ad52977e9094abc26e61aeb5c5f847c3c}{data\+\_\+vec}}
+\item 
+double \mbox{\hyperlink{classLFNSSetup_a2f72cdb4f70558a1fe25a6ab7d14aef4}{threshold}} = -\/D\+B\+L\+\_\+\+M\+AX
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLFNSSetup_a8d1de0a871ae41946671f5b896ed57f8}{\+\_\+read\+Settingsfrom\+File}} () override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classLFNSSetup_a3f216958d12748e6970e4d783aec8ce0}{\+\_\+read\+Experiments}} () override
+\item 
+\mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} \mbox{\hyperlink{classLFNSSetup_aecc6609323b6897cb266dea99d4f7720}{\+\_\+create\+Data}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+outputs, std\+::string experiment, \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&settings)
+\item 
+\mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} \mbox{\hyperlink{classLFNSSetup_aaedadf8bd787b7e46b05dd066d0f882d}{\+\_\+create\+Data\+Times}} (std\+::string experiment, \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&settings)
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \mbox{\hyperlink{classLFNSSetup_a8ca673c2c0169eb8a2d570f1c8f59638}{\+\_\+read\+Particle\+Filter\+Settings}} ()
+\item 
+\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} \mbox{\hyperlink{classLFNSSetup_a2332988b56adffdb2bd7d2355622c565}{\+\_\+create\+Density\+Estimation}} (\mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}} \mbox{\hyperlink{classLFNSSetup_ab07523a76d512142b2f566ac877ca242}{lfns\+\_\+settings}}, \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} settings)
+\item 
+\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} \mbox{\hyperlink{classLFNSSetup_a770d14b0513ce56fa50ff14990ead7f4}{\+\_\+create\+Prior}} (\mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}} \mbox{\hyperlink{classLFNSSetup_ab07523a76d512142b2f566ac877ca242}{lfns\+\_\+settings}}, \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} settings)
+\item 
+\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \mbox{\hyperlink{classLFNSSetup_a069c9f23c49172a691922ef1a106c9d1}{\+\_\+read\+Sampler\+Settings}} ()
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}} \mbox{\hyperlink{classLFNSSetup_a134e38bdc7db98e836096f8543188576}{\+\_\+read\+L\+F\+N\+S\+Settings}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoptions_1_1LFNSOptions}{options\+::\+L\+F\+N\+S\+Options}} \mbox{\hyperlink{classLFNSSetup_ad44d0b259750c05b8a5893a70c332c7a}{\+\_\+lfns\+\_\+options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLFNSSetup_a1791215ca67c3b1181ee3fcc74967980}\label{classLFNSSetup_a1791215ca67c3b1181ee3fcc74967980}} 
+\index{LFNSSetup@{LFNSSetup}!LFNSSetup@{LFNSSetup}}
+\index{LFNSSetup@{LFNSSetup}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{LFNSSetup()}{LFNSSetup()}}
+{\footnotesize\ttfamily L\+F\+N\+S\+Setup\+::\+L\+F\+N\+S\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoptions_1_1LFNSOptions}{options\+::\+L\+F\+N\+S\+Options}}}]{options,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{process\+\_\+nbr = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLFNSSetup_ac040c45633147281ce51ea7fce86b6d4}\label{classLFNSSetup_ac040c45633147281ce51ea7fce86b6d4}} 
+\index{LFNSSetup@{LFNSSetup}!````~LFNSSetup@{$\sim$LFNSSetup}}
+\index{````~LFNSSetup@{$\sim$LFNSSetup}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{$\sim$LFNSSetup()}{~LFNSSetup()}}
+{\footnotesize\ttfamily L\+F\+N\+S\+Setup\+::$\sim$\+L\+F\+N\+S\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLFNSSetup_aecc6609323b6897cb266dea99d4f7720}\label{classLFNSSetup_aecc6609323b6897cb266dea99d4f7720}} 
+\index{LFNSSetup@{LFNSSetup}!\_createData@{\_createData}}
+\index{\_createData@{\_createData}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_createData()}{\_createData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} L\+F\+N\+S\+Setup\+::\+\_\+create\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+outputs,  }\item[{std\+::string}]{experiment,  }\item[{\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_aaedadf8bd787b7e46b05dd066d0f882d}\label{classLFNSSetup_aaedadf8bd787b7e46b05dd066d0f882d}} 
+\index{LFNSSetup@{LFNSSetup}!\_createDataTimes@{\_createDataTimes}}
+\index{\_createDataTimes@{\_createDataTimes}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_createDataTimes()}{\_createDataTimes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} L\+F\+N\+S\+Setup\+::\+\_\+create\+Data\+Times (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment,  }\item[{\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_a2332988b56adffdb2bd7d2355622c565}\label{classLFNSSetup_a2332988b56adffdb2bd7d2355622c565}} 
+\index{LFNSSetup@{LFNSSetup}!\_createDensityEstimation@{\_createDensityEstimation}}
+\index{\_createDensityEstimation@{\_createDensityEstimation}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_createDensityEstimation()}{\_createDensityEstimation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} L\+F\+N\+S\+Setup\+::\+\_\+create\+Density\+Estimation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}}}]{lfns\+\_\+settings,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}}}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_a770d14b0513ce56fa50ff14990ead7f4}\label{classLFNSSetup_a770d14b0513ce56fa50ff14990ead7f4}} 
+\index{LFNSSetup@{LFNSSetup}!\_createPrior@{\_createPrior}}
+\index{\_createPrior@{\_createPrior}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_createPrior()}{\_createPrior()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} L\+F\+N\+S\+Setup\+::\+\_\+create\+Prior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}}}]{lfns\+\_\+settings,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}}}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_a3f216958d12748e6970e4d783aec8ce0}\label{classLFNSSetup_a3f216958d12748e6970e4d783aec8ce0}} 
+\index{LFNSSetup@{LFNSSetup}!\_readExperiments@{\_readExperiments}}
+\index{\_readExperiments@{\_readExperiments}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_readExperiments()}{\_readExperiments()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ L\+F\+N\+S\+Setup\+::\+\_\+read\+Experiments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGeneralSetup_a1a558d3ff0cbac30255b95e3f8baaed2}{General\+Setup}}.
+
+\mbox{\Hypertarget{classLFNSSetup_a134e38bdc7db98e836096f8543188576}\label{classLFNSSetup_a134e38bdc7db98e836096f8543188576}} 
+\index{LFNSSetup@{LFNSSetup}!\_readLFNSSettings@{\_readLFNSSettings}}
+\index{\_readLFNSSettings@{\_readLFNSSettings}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_readLFNSSettings()}{\_readLFNSSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}} L\+F\+N\+S\+Setup\+::\+\_\+read\+L\+F\+N\+S\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_a8ca673c2c0169eb8a2d570f1c8f59638}\label{classLFNSSetup_a8ca673c2c0169eb8a2d570f1c8f59638}} 
+\index{LFNSSetup@{LFNSSetup}!\_readParticleFilterSettings@{\_readParticleFilterSettings}}
+\index{\_readParticleFilterSettings@{\_readParticleFilterSettings}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_readParticleFilterSettings()}{\_readParticleFilterSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} L\+F\+N\+S\+Setup\+::\+\_\+read\+Particle\+Filter\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_a069c9f23c49172a691922ef1a106c9d1}\label{classLFNSSetup_a069c9f23c49172a691922ef1a106c9d1}} 
+\index{LFNSSetup@{LFNSSetup}!\_readSamplerSettings@{\_readSamplerSettings}}
+\index{\_readSamplerSettings@{\_readSamplerSettings}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSamplerSettings()}{\_readSamplerSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} L\+F\+N\+S\+Setup\+::\+\_\+read\+Sampler\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_a8d1de0a871ae41946671f5b896ed57f8}\label{classLFNSSetup_a8d1de0a871ae41946671f5b896ed57f8}} 
+\index{LFNSSetup@{LFNSSetup}!\_readSettingsfromFile@{\_readSettingsfromFile}}
+\index{\_readSettingsfromFile@{\_readSettingsfromFile}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSettingsfromFile()}{\_readSettingsfromFile()}}
+{\footnotesize\ttfamily void L\+F\+N\+S\+Setup\+::\+\_\+read\+Settingsfrom\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a2832f825b34cf426b1f7604fd8d04fe0}{General\+Setup}}.
+
+\mbox{\Hypertarget{classLFNSSetup_a5ca7442a66b14b5ea16f6414184a1a97}\label{classLFNSSetup_a5ca7442a66b14b5ea16f6414184a1a97}} 
+\index{LFNSSetup@{LFNSSetup}!printSettings@{printSettings}}
+\index{printSettings@{printSettings}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{printSettings()}{printSettings()}}
+{\footnotesize\ttfamily void L\+F\+N\+S\+Setup\+::print\+Settings (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a4298cb4b3798a38969ed76bbc80a1fd8}{General\+Setup}}.
+
+\mbox{\Hypertarget{classLFNSSetup_a93bbe7b4c98e2cc22f86f1fc06ea8dae}\label{classLFNSSetup_a93bbe7b4c98e2cc22f86f1fc06ea8dae}} 
+\index{LFNSSetup@{LFNSSetup}!setUp@{setUp}}
+\index{setUp@{setUp}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void L\+F\+N\+S\+Setup\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLFNSSetup_ad44d0b259750c05b8a5893a70c332c7a}\label{classLFNSSetup_ad44d0b259750c05b8a5893a70c332c7a}} 
+\index{LFNSSetup@{LFNSSetup}!\_lfns\_options@{\_lfns\_options}}
+\index{\_lfns\_options@{\_lfns\_options}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{\_lfns\_options}{\_lfns\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1LFNSOptions}{options\+::\+L\+F\+N\+S\+Options}} L\+F\+N\+S\+Setup\+::\+\_\+lfns\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLFNSSetup_ad52977e9094abc26e61aeb5c5f847c3c}\label{classLFNSSetup_ad52977e9094abc26e61aeb5c5f847c3c}} 
+\index{LFNSSetup@{LFNSSetup}!data\_vec@{data\_vec}}
+\index{data\_vec@{data\_vec}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{data\_vec}{data\_vec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}}$>$ L\+F\+N\+S\+Setup\+::data\+\_\+vec}
+
+\mbox{\Hypertarget{classLFNSSetup_a505acd703cfdfbb30bfebe916b68fc75}\label{classLFNSSetup_a505acd703cfdfbb30bfebe916b68fc75}} 
+\index{LFNSSetup@{LFNSSetup}!density\_estimation@{density\_estimation}}
+\index{density\_estimation@{density\_estimation}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{density\_estimation}{density\_estimation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} L\+F\+N\+S\+Setup\+::density\+\_\+estimation}
+
+\mbox{\Hypertarget{classLFNSSetup_ab07523a76d512142b2f566ac877ca242}\label{classLFNSSetup_ab07523a76d512142b2f566ac877ca242}} 
+\index{LFNSSetup@{LFNSSetup}!lfns\_settings@{lfns\_settings}}
+\index{lfns\_settings@{lfns\_settings}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{lfns\_settings}{lfns\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlfns_1_1LFNSSettings}{lfns\+::\+L\+F\+N\+S\+Settings}} L\+F\+N\+S\+Setup\+::lfns\+\_\+settings}
+
+\mbox{\Hypertarget{classLFNSSetup_aa880648a72abf5f72d4eebd24030c7b0}\label{classLFNSSetup_aa880648a72abf5f72d4eebd24030c7b0}} 
+\index{LFNSSetup@{LFNSSetup}!mult\_like\_eval@{mult\_like\_eval}}
+\index{mult\_like\_eval@{mult\_like\_eval}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{mult\_like\_eval}{mult\_like\_eval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1MultLikelihoodEval}{particle\+\_\+filter\+::\+Mult\+Likelihood\+Eval}} L\+F\+N\+S\+Setup\+::mult\+\_\+like\+\_\+eval}
+
+\mbox{\Hypertarget{classLFNSSetup_a1c72be6590c5b2c4cb8fa1882dffcc84}\label{classLFNSSetup_a1c72be6590c5b2c4cb8fa1882dffcc84}} 
+\index{LFNSSetup@{LFNSSetup}!particle\_filter\_settings@{particle\_filter\_settings}}
+\index{particle\_filter\_settings@{particle\_filter\_settings}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{particle\_filter\_settings}{particle\_filter\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} L\+F\+N\+S\+Setup\+::particle\+\_\+filter\+\_\+settings}
+
+\mbox{\Hypertarget{classLFNSSetup_addebe75e7f8f20f247805af268d1b1a7}\label{classLFNSSetup_addebe75e7f8f20f247805af268d1b1a7}} 
+\index{LFNSSetup@{LFNSSetup}!particle\_filters@{particle\_filters}}
+\index{particle\_filters@{particle\_filters}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{particle\_filters}{particle\_filters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceparticle__filter_aa21cf3ac69734e515f30f71f1a55ebcc}{particle\+\_\+filter\+::\+Particle\+Filter\+\_\+ptr}}$>$ L\+F\+N\+S\+Setup\+::particle\+\_\+filters}
+
+\mbox{\Hypertarget{classLFNSSetup_ab883fe4446521f9e32fb92cf2ba4da22}\label{classLFNSSetup_ab883fe4446521f9e32fb92cf2ba4da22}} 
+\index{LFNSSetup@{LFNSSetup}!prior@{prior}}
+\index{prior@{prior}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{prior}{prior}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} L\+F\+N\+S\+Setup\+::prior}
+
+\mbox{\Hypertarget{classLFNSSetup_a76b1dea0864986c3f77ef4f74aa52a96}\label{classLFNSSetup_a76b1dea0864986c3f77ef4f74aa52a96}} 
+\index{LFNSSetup@{LFNSSetup}!sampler\_settings@{sampler\_settings}}
+\index{sampler\_settings@{sampler\_settings}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{sampler\_settings}{sampler\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} L\+F\+N\+S\+Setup\+::sampler\+\_\+settings}
+
+\mbox{\Hypertarget{classLFNSSetup_a2f72cdb4f70558a1fe25a6ab7d14aef4}\label{classLFNSSetup_a2f72cdb4f70558a1fe25a6ab7d14aef4}} 
+\index{LFNSSetup@{LFNSSetup}!threshold@{threshold}}
+\index{threshold@{threshold}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily double L\+F\+N\+S\+Setup\+::threshold = -\/D\+B\+L\+\_\+\+M\+AX}
+
+\mbox{\Hypertarget{classLFNSSetup_a4a0b37953dc826de8e4ca69e2c42b59d}\label{classLFNSSetup_a4a0b37953dc826de8e4ca69e2c42b59d}} 
+\index{LFNSSetup@{LFNSSetup}!times\_vec@{times\_vec}}
+\index{times\_vec@{times\_vec}!LFNSSetup@{LFNSSetup}}
+\doxysubsubsection{\texorpdfstring{times\_vec}{times\_vec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}}$>$ L\+F\+N\+S\+Setup\+::times\+\_\+vec}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{LFNSSetup_8h}{L\+F\+N\+S\+Setup.\+h}}\item 
+\mbox{\hyperlink{LFNSSetup_8cpp}{L\+F\+N\+S\+Setup.\+cpp}}\end{DoxyCompactItemize}

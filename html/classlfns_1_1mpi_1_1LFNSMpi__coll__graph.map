@@ -1,0 +1,8 @@
+<map id="lfns::mpi::LFNSMpi" name="lfns::mpi::LFNSMpi">
+<area shape="rect" id="node1" title=" " alt="" coords="243,171,387,197"/>
+<area shape="rect" id="node2" href="$classlfns_1_1LFNS.html" title=" " alt="" coords="271,95,358,121"/>
+<area shape="rect" id="node3" href="$classlfns_1_1LFNSLogger.html" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node4" href="$classlfns_1_1LFNSSettings.html" title=" " alt="" coords="161,5,301,32"/>
+<area shape="rect" id="node5" href="$classlfns_1_1LiveParticleSet.html" title=" " alt="" coords="325,5,475,32"/>
+<area shape="rect" id="node6" href="$classlfns_1_1DeadParticleSet.html" title=" " alt="" coords="500,5,657,32"/>
+</map>

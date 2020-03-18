@@ -1,0 +1,291 @@
+\hypertarget{classmodels_1_1FullModel}{}\doxysection{models\+::Full\+Model Class Reference}
+\label{classmodels_1_1FullModel}\index{models::FullModel@{models::FullModel}}
+
+
+{\ttfamily \#include $<$Full\+Model.\+h$>$}
+
+
+
+Collaboration diagram for models\+::Full\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classmodels_1_1FullModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1FullModel_a2e517258dd34c99bcbbd84845984ade6}{Full\+Model}} (\mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{Chemical\+Reaction\+Network\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1FullModel_aec21a5e848457e2e2ed28e116855a86c}{dynamics}}, \mbox{\hyperlink{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}{Initial\+Value\+Provider\+\_\+ptr}} init\+\_\+val, \mbox{\hyperlink{namespacemodels_a61e4da4435717b9a02649d8897878c25}{Measurement\+Model\+\_\+ptr}} measurement)
+\item 
+\mbox{\hyperlink{classmodels_1_1FullModel_a137a702688869957df5650a5b4d0a1f3}{Full\+Model}} (\mbox{\hyperlink{classmodels_1_1ModelSettings}{models\+::\+Model\+Settings}} \&settings, \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, std\+::string experiment=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classmodels_1_1FullModel_ae1517d6d45cc0d96c6fe1ccacf8d98d9}{Full\+Model}} (const \mbox{\hyperlink{classmodels_1_1FullModel}{Full\+Model}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmodels_1_1FullModel_a31565d87f7df81c76eae7ade9c213790}{$\sim$\+Full\+Model}} ()
+\item 
+\mbox{\hyperlink{namespacemodels_a38a7dcebb0f7d38b15eb80570539c1b5}{Set\+Parameter\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1FullModel_a57b57473c8e413c24531764e462ab675}{get\+Parameter\+Setting\+Fct}} ()
+\begin{DoxyCompactList}\small\item\em Provides a pointer to the \mbox{\hyperlink{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}{set\+Parameter()}} function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodels_1_1FullModel_a23896bb7394e31011b895a2f55070007}{fix\+Parameter}} (std\+::string param\+\_\+name, double val)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1FullModel_afb58784309304ca014868bc85648c2a6}{get\+Unfixed\+Paramteters}} ()
+\item 
+double $\ast$ \mbox{\hyperlink{classmodels_1_1FullModel_afb04a9f5b9eb2f3d6fa891def66e2ecf}{fix\+Parameter\+Pointer}} (std\+::string param\+\_\+name)
+\item 
+void \mbox{\hyperlink{classmodels_1_1FullModel_a20b06eca23676a7932de4f5b74bdd78f}{print\+Info}} (std\+::ostream \&os)
+\item 
+void \mbox{\hyperlink{classmodels_1_1FullModel_a7381a0bc7614daca104228a307ea7090}{add\+Input\+Pulse}} (\mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} pulse)
+\item 
+void \mbox{\hyperlink{classmodels_1_1FullModel_a64cdc283d3a4c7d936ffc732adfba7bc}{evaluate\+Input}} (const double $\ast$state, double t)
+\item 
+\mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1FullModel_a1d1b6b9202bfb6cedb6608708746b2cf}{get\+Input\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Provides a pointer to the \mbox{\hyperlink{classmodels_1_1FullModel_a64cdc283d3a4c7d936ffc732adfba7bc}{evaluate\+Input()}} function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemodels_a5f1b891e949b36e6145ec03382bfa6dd}{Measurement\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1FullModel_ac97323847d319b85c3c22f6b2775b1b8}{get\+Measurement\+Fct}} ()
+\begin{DoxyCompactList}\small\item\em Provides a pointer to the \mbox{\hyperlink{classmodels_1_1MeasurementModel_abec10147bccba09823d8a2a80bb1f329}{Measurement\+Model\+::compute\+Measurement()}} function of the \mbox{\hyperlink{classmodels_1_1FullModel_a61058f09df8ebc0ed6090e06d74dfe57}{measurement\+\_\+model}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1FullModel_a6451d7a532d1f2399a097af605633210}{get\+Discont\+Times}} ()
+\item 
+void \mbox{\hyperlink{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}{set\+Parameter}} (const std\+::vector$<$ double $>$ \&theta)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{Chemical\+Reaction\+Network\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1FullModel_aec21a5e848457e2e2ed28e116855a86c}{dynamics}}
+\begin{DoxyCompactList}\small\item\em The object containing the dynamics of the model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}{Initial\+Value\+Provider\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1FullModel_a8f02e0b1a48e1a102437af51c9e1c5a7}{initial\+\_\+value\+\_\+provider}}
+\item 
+\mbox{\hyperlink{namespacemodels_a61e4da4435717b9a02649d8897878c25}{Measurement\+Model\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1FullModel_a61058f09df8ebc0ed6090e06d74dfe57}{measurement\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em The object containing all information to simulate a measurement based on a particular state of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1FullModel_a123c6197acf21ce6767ebf0705a3857d}{\+\_\+param\+\_\+names}}
+\begin{DoxyCompactList}\small\item\em The vector containing all parameter names. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1FullModel_a3179d428372d658a9d50854566b69048}{\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em The vector containing all values for the parameter. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classmodels_1_1FullModel_ab5a974df9b8b586c145b49d7aae804bd}{\+\_\+unfixed\+\_\+parameter\+\_\+indices}}
+\begin{DoxyCompactList}\small\item\em A vector with indices of the parameters that have not been fixed and can be set through \mbox{\hyperlink{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}{set\+Parameter()}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmodels_1_1InputPulses}{Input\+Pulses}} \mbox{\hyperlink{classmodels_1_1FullModel_af6e04bdddd1f9b82ebda3a10a7da7525}{\+\_\+inputs}}
+\begin{DoxyCompactList}\small\item\em All provided \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} objects for this particular model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class representing the full model that can be simulated using one of the simulators (currently O\+DE simulator S\+SA simulator and a hybrid simulator. This class provides a way to compute the initial state of a system, to evaluate the dynamics for an o\+DE simulator and compute the propensity for the S\+SA simulator. It also provides a way to simulate a measurement at any given timepoint, which is considered to not be a part of the model dynamics. This class also allows to apply inputs to the model dynamics to simulate various experiments. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1FullModel_a2e517258dd34c99bcbbd84845984ade6}\label{classmodels_1_1FullModel_a2e517258dd34c99bcbbd84845984ade6}} 
+\index{models::FullModel@{models::FullModel}!FullModel@{FullModel}}
+\index{FullModel@{FullModel}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{FullModel()}{FullModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily models\+::\+Full\+Model\+::\+Full\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{Chemical\+Reaction\+Network\+\_\+ptr}}}]{dynamics,  }\item[{\mbox{\hyperlink{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}{Initial\+Value\+Provider\+\_\+ptr}}}]{init\+\_\+val,  }\item[{\mbox{\hyperlink{namespacemodels_a61e4da4435717b9a02649d8897878c25}{Measurement\+Model\+\_\+ptr}}}]{measurement }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_a137a702688869957df5650a5b4d0a1f3}\label{classmodels_1_1FullModel_a137a702688869957df5650a5b4d0a1f3}} 
+\index{models::FullModel@{models::FullModel}!FullModel@{FullModel}}
+\index{FullModel@{FullModel}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{FullModel()}{FullModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily models\+::\+Full\+Model\+::\+Full\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodels_1_1ModelSettings}{models\+::\+Model\+Settings}} \&}]{settings,  }\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{std\+::string}]{experiment = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Constructor based on \mbox{\hyperlink{classmodels_1_1ModelSettings}{models\+::\+Model\+Settings}} that directly constructs all required objects. 
+\begin{DoxyParams}{Parameters}
+{\em experiment} & indicates which particular experiment this model corresponds to. This influences the Input\+Provider objects that will be constructed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodels_1_1FullModel_ae1517d6d45cc0d96c6fe1ccacf8d98d9}\label{classmodels_1_1FullModel_ae1517d6d45cc0d96c6fe1ccacf8d98d9}} 
+\index{models::FullModel@{models::FullModel}!FullModel@{FullModel}}
+\index{FullModel@{FullModel}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{FullModel()}{FullModel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily models\+::\+Full\+Model\+::\+Full\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmodels_1_1FullModel}{Full\+Model}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_a31565d87f7df81c76eae7ade9c213790}\label{classmodels_1_1FullModel_a31565d87f7df81c76eae7ade9c213790}} 
+\index{models::FullModel@{models::FullModel}!````~FullModel@{$\sim$FullModel}}
+\index{````~FullModel@{$\sim$FullModel}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{$\sim$FullModel()}{~FullModel()}}
+{\footnotesize\ttfamily models\+::\+Full\+Model\+::$\sim$\+Full\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1FullModel_a7381a0bc7614daca104228a307ea7090}\label{classmodels_1_1FullModel_a7381a0bc7614daca104228a307ea7090}} 
+\index{models::FullModel@{models::FullModel}!addInputPulse@{addInputPulse}}
+\index{addInputPulse@{addInputPulse}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{addInputPulse()}{addInputPulse()}}
+{\footnotesize\ttfamily void models\+::\+Full\+Model\+::add\+Input\+Pulse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}}}]{pulse }\end{DoxyParamCaption})}
+
+This function adds an \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} object to the model by adding it to \mbox{\hyperlink{classmodels_1_1FullModel_af6e04bdddd1f9b82ebda3a10a7da7525}{\+\_\+inputs}}. An \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} object is used to simulate a particular experimental input. It allows to set certain parameters (the input parameters) to a specific predefined value at a specific predefined time. 
+\begin{DoxyParams}{Parameters}
+{\em pulse} & the \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} object to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodels_1_1FullModel_a64cdc283d3a4c7d936ffc732adfba7bc}\label{classmodels_1_1FullModel_a64cdc283d3a4c7d936ffc732adfba7bc}} 
+\index{models::FullModel@{models::FullModel}!evaluateInput@{evaluateInput}}
+\index{evaluateInput@{evaluateInput}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{evaluateInput()}{evaluateInput()}}
+{\footnotesize\ttfamily void models\+::\+Full\+Model\+::evaluate\+Input (\begin{DoxyParamCaption}\item[{const double $\ast$}]{state,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+This function evaluates the inputs in \mbox{\hyperlink{classmodels_1_1FullModel_af6e04bdddd1f9b82ebda3a10a7da7525}{\+\_\+inputs}} as provided by \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} objects that were set through the \mbox{\hyperlink{classmodels_1_1FullModel_a7381a0bc7614daca104228a307ea7090}{add\+Input\+Pulse()}} function. This function is implemented to take a pointer to a {\ttfamily state} and the current time {\ttfamily t}. Note that when multiple \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} objects targeting the same parameter are provided, the input strenght for each \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} is added. These {\ttfamily state} and the current time {\ttfamily t} are currently ignored but can be used in future implementations. \mbox{\Hypertarget{classmodels_1_1FullModel_a23896bb7394e31011b895a2f55070007}\label{classmodels_1_1FullModel_a23896bb7394e31011b895a2f55070007}} 
+\index{models::FullModel@{models::FullModel}!fixParameter@{fixParameter}}
+\index{fixParameter@{fixParameter}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{fixParameter()}{fixParameter()}}
+{\footnotesize\ttfamily void models\+::\+Full\+Model\+::fix\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{param\+\_\+name,  }\item[{double}]{val }\end{DoxyParamCaption})}
+
+This function fixes a certain parameter to a particular value. This removes the corresponding index from \mbox{\hyperlink{classmodels_1_1FullModel_ab5a974df9b8b586c145b49d7aae804bd}{\+\_\+unfixed\+\_\+parameter\+\_\+indices}}, effectively reduces the size of any future provided parameter vector by 1, as any parameter vector that is set through the \mbox{\hyperlink{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}{set\+Parameter()}} function must have length equal to the length of \mbox{\hyperlink{classmodels_1_1FullModel_ab5a974df9b8b586c145b49d7aae804bd}{\+\_\+unfixed\+\_\+parameter\+\_\+indices}}. 
+\begin{DoxyParams}{Parameters}
+{\em param\+\_\+name} & the name of the particular parameter to be fixed \\
+\hline
+{\em val} & the value to which the parameter is fixed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodels_1_1FullModel_afb04a9f5b9eb2f3d6fa891def66e2ecf}\label{classmodels_1_1FullModel_afb04a9f5b9eb2f3d6fa891def66e2ecf}} 
+\index{models::FullModel@{models::FullModel}!fixParameterPointer@{fixParameterPointer}}
+\index{fixParameterPointer@{fixParameterPointer}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{fixParameterPointer()}{fixParameterPointer()}}
+{\footnotesize\ttfamily double $\ast$ models\+::\+Full\+Model\+::fix\+Parameter\+Pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{param\+\_\+name }\end{DoxyParamCaption})}
+
+This function removes the index for parameter {\ttfamily param\+\_\+name} from \mbox{\hyperlink{classmodels_1_1FullModel_ab5a974df9b8b586c145b49d7aae804bd}{\+\_\+unfixed\+\_\+parameter\+\_\+indices}} and returns a pointer to the corresponding parameter value. This allows effectively to manipulate the value of a particular parameter without calling the \mbox{\hyperlink{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}{set\+Parameter()}} function. 
+\begin{DoxyParams}{Parameters}
+{\em param\+\_\+name} & the parameter name to be fixed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the value of the parameter with name {\ttfamily param\+\_\+name} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodels_1_1FullModel_a6451d7a532d1f2399a097af605633210}\label{classmodels_1_1FullModel_a6451d7a532d1f2399a097af605633210}} 
+\index{models::FullModel@{models::FullModel}!getDiscontTimes@{getDiscontTimes}}
+\index{getDiscontTimes@{getDiscontTimes}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{getDiscontTimes()}{getDiscontTimes()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ models\+::\+Full\+Model\+::get\+Discont\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function returns the next timepoint of discontinuity, i.\+e. the next timepoint on which an input pulse starts or stops. \mbox{\Hypertarget{classmodels_1_1FullModel_a1d1b6b9202bfb6cedb6608708746b2cf}\label{classmodels_1_1FullModel_a1d1b6b9202bfb6cedb6608708746b2cf}} 
+\index{models::FullModel@{models::FullModel}!getInputFunction@{getInputFunction}}
+\index{getInputFunction@{getInputFunction}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{getInputFunction()}{getInputFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}} models\+::\+Full\+Model\+::get\+Input\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Provides a pointer to the \mbox{\hyperlink{classmodels_1_1FullModel_a64cdc283d3a4c7d936ffc732adfba7bc}{evaluate\+Input()}} function. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_ac97323847d319b85c3c22f6b2775b1b8}\label{classmodels_1_1FullModel_ac97323847d319b85c3c22f6b2775b1b8}} 
+\index{models::FullModel@{models::FullModel}!getMeasurementFct@{getMeasurementFct}}
+\index{getMeasurementFct@{getMeasurementFct}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{getMeasurementFct()}{getMeasurementFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a5f1b891e949b36e6145ec03382bfa6dd}{Measurement\+Fct\+\_\+ptr}} models\+::\+Full\+Model\+::get\+Measurement\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Provides a pointer to the \mbox{\hyperlink{classmodels_1_1MeasurementModel_abec10147bccba09823d8a2a80bb1f329}{Measurement\+Model\+::compute\+Measurement()}} function of the \mbox{\hyperlink{classmodels_1_1FullModel_a61058f09df8ebc0ed6090e06d74dfe57}{measurement\+\_\+model}}. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_a57b57473c8e413c24531764e462ab675}\label{classmodels_1_1FullModel_a57b57473c8e413c24531764e462ab675}} 
+\index{models::FullModel@{models::FullModel}!getParameterSettingFct@{getParameterSettingFct}}
+\index{getParameterSettingFct@{getParameterSettingFct}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{getParameterSettingFct()}{getParameterSettingFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a38a7dcebb0f7d38b15eb80570539c1b5}{Set\+Parameter\+Fct\+\_\+ptr}} models\+::\+Full\+Model\+::get\+Parameter\+Setting\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Provides a pointer to the \mbox{\hyperlink{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}{set\+Parameter()}} function. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_afb58784309304ca014868bc85648c2a6}\label{classmodels_1_1FullModel_afb58784309304ca014868bc85648c2a6}} 
+\index{models::FullModel@{models::FullModel}!getUnfixedParamteters@{getUnfixedParamteters}}
+\index{getUnfixedParamteters@{getUnfixedParamteters}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{getUnfixedParamteters()}{getUnfixedParamteters()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ models\+::\+Full\+Model\+::get\+Unfixed\+Paramteters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a vector with the unfixed parameter names. This vector is constructed with every function call. \begin{DoxyReturn}{Returns}
+a vector with the names of the unfixed parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodels_1_1FullModel_a20b06eca23676a7932de4f5b74bdd78f}\label{classmodels_1_1FullModel_a20b06eca23676a7932de4f5b74bdd78f}} 
+\index{models::FullModel@{models::FullModel}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily void models\+::\+Full\+Model\+::print\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+Prints all information about the model to {\ttfamily os} stream 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the information is printed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}\label{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}} 
+\index{models::FullModel@{models::FullModel}!setParameter@{setParameter}}
+\index{setParameter@{setParameter}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{setParameter()}{setParameter()}}
+{\footnotesize\ttfamily void models\+::\+Full\+Model\+::set\+Parameter (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{theta }\end{DoxyParamCaption})}
+
+This function can be used to set a parameter vector for the model. This parameter vector will be used for the simulation, computation of the initial states and computation of the measurement. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1FullModel_af6e04bdddd1f9b82ebda3a10a7da7525}\label{classmodels_1_1FullModel_af6e04bdddd1f9b82ebda3a10a7da7525}} 
+\index{models::FullModel@{models::FullModel}!\_inputs@{\_inputs}}
+\index{\_inputs@{\_inputs}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{\_inputs}{\_inputs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodels_1_1InputPulses}{Input\+Pulses}} models\+::\+Full\+Model\+::\+\_\+inputs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+All provided \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} objects for this particular model. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_a123c6197acf21ce6767ebf0705a3857d}\label{classmodels_1_1FullModel_a123c6197acf21ce6767ebf0705a3857d}} 
+\index{models::FullModel@{models::FullModel}!\_param\_names@{\_param\_names}}
+\index{\_param\_names@{\_param\_names}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{\_param\_names}{\_param\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Full\+Model\+::\+\_\+param\+\_\+names\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The vector containing all parameter names. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_a3179d428372d658a9d50854566b69048}\label{classmodels_1_1FullModel_a3179d428372d658a9d50854566b69048}} 
+\index{models::FullModel@{models::FullModel}!\_parameter@{\_parameter}}
+\index{\_parameter@{\_parameter}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{\_parameter}{\_parameter}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Full\+Model\+::\+\_\+parameter\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The vector containing all values for the parameter. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_ab5a974df9b8b586c145b49d7aae804bd}\label{classmodels_1_1FullModel_ab5a974df9b8b586c145b49d7aae804bd}} 
+\index{models::FullModel@{models::FullModel}!\_unfixed\_parameter\_indices@{\_unfixed\_parameter\_indices}}
+\index{\_unfixed\_parameter\_indices@{\_unfixed\_parameter\_indices}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{\_unfixed\_parameter\_indices}{\_unfixed\_parameter\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ models\+::\+Full\+Model\+::\+\_\+unfixed\+\_\+parameter\+\_\+indices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A vector with indices of the parameters that have not been fixed and can be set through \mbox{\hyperlink{classmodels_1_1FullModel_adef783751ceb6708700fae5bdee4d972}{set\+Parameter()}} 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_aec21a5e848457e2e2ed28e116855a86c}\label{classmodels_1_1FullModel_aec21a5e848457e2e2ed28e116855a86c}} 
+\index{models::FullModel@{models::FullModel}!dynamics@{dynamics}}
+\index{dynamics@{dynamics}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{dynamics}{dynamics}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{Chemical\+Reaction\+Network\+\_\+ptr}} models\+::\+Full\+Model\+::dynamics}
+
+
+
+The object containing the dynamics of the model. 
+
+\mbox{\Hypertarget{classmodels_1_1FullModel_a8f02e0b1a48e1a102437af51c9e1c5a7}\label{classmodels_1_1FullModel_a8f02e0b1a48e1a102437af51c9e1c5a7}} 
+\index{models::FullModel@{models::FullModel}!initial\_value\_provider@{initial\_value\_provider}}
+\index{initial\_value\_provider@{initial\_value\_provider}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{initial\_value\_provider}{initial\_value\_provider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}{Initial\+Value\+Provider\+\_\+ptr}} models\+::\+Full\+Model\+::initial\+\_\+value\+\_\+provider}
+
+The object containing the everything related to the computation of the initial state for the simulation of this model \mbox{\Hypertarget{classmodels_1_1FullModel_a61058f09df8ebc0ed6090e06d74dfe57}\label{classmodels_1_1FullModel_a61058f09df8ebc0ed6090e06d74dfe57}} 
+\index{models::FullModel@{models::FullModel}!measurement\_model@{measurement\_model}}
+\index{measurement\_model@{measurement\_model}!models::FullModel@{models::FullModel}}
+\doxysubsubsection{\texorpdfstring{measurement\_model}{measurement\_model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a61e4da4435717b9a02649d8897878c25}{Measurement\+Model\+\_\+ptr}} models\+::\+Full\+Model\+::measurement\+\_\+model}
+
+
+
+The object containing all information to simulate a measurement based on a particular state of the model. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{FullModel_8h}{Full\+Model.\+h}}\item 
+src/models/\mbox{\hyperlink{FullModel_8cpp}{Full\+Model.\+cpp}}\end{DoxyCompactItemize}

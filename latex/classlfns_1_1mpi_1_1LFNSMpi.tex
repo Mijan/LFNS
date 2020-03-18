@@ -1,0 +1,193 @@
+\hypertarget{classlfns_1_1mpi_1_1LFNSMpi}{}\doxysection{lfns\+::mpi\+::L\+F\+N\+S\+Mpi Class Reference}
+\label{classlfns_1_1mpi_1_1LFNSMpi}\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+
+
+{\ttfamily \#include $<$L\+F\+N\+S\+Mpi.\+h$>$}
+
+
+
+Inheritance diagram for lfns\+::mpi\+::L\+F\+N\+S\+Mpi\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classlfns_1_1mpi_1_1LFNSMpi__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lfns\+::mpi\+::L\+F\+N\+S\+Mpi\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlfns_1_1mpi_1_1LFNSMpi__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_af91f06c726ec30e26f1d01082d5c679e}{L\+F\+N\+S\+Mpi}} (\mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} \&lfns\+\_\+settings, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{lfns__mpi_8cpp_acabb76141a8e1b125551bab4cc352cf3}{num\+\_\+tasks}})
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a47a3a4ee8481b6bae12d8adbfb2f05a9}{$\sim$\+L\+F\+N\+S\+Mpi}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a773883e77996a9e4084d52c71d0dd8a3}{run\+L\+F\+NS}} () override
+\begin{DoxyCompactList}\small\item\em This function runs the main algorithm and is separately implemented in L\+F\+N\+S\+Seq amd \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi}{L\+F\+N\+S\+Mpi}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a829eec848d6467fb13c3cafbc21f5193}{\+\_\+update\+Sampler}} (\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} density\+\_\+estimation)
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_adc7fc6df67f343b8320867f069851f70}{\+\_\+request\+Likelihood}} (std\+::vector$<$ double $>$ \&theta)
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a259c5776619c0370a201d55f4dc7ca94}{\+\_\+sample\+Prior}} (\mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue}{lfns\+::mpi\+::\+Request\+Queue}} \&queue)
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a13855acdde4cdc5eee8fd075e4efaa9d}{\+\_\+sample\+Const\+Prior}} (\mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue}{Request\+Queue}} \&queue)
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_afdb00beb984652ad5dd2921d47d59d0d}{\+\_\+update\+Epsilon}} (double epsilon)
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_acad4d61f5f872b603c67ba8157a3bc82}{\+\_\+update\+Sampler}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_ae89f0833be3eb802be8e5f8b2fb56d24}{\+\_\+initialize\+Queue}} (\mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue}{Request\+Queue}} \&queue)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bmpi\+::communicator \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a051ea846adfb5d6fd04c25a5bc50cbb3}{world}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_ae3337692760d7cf34997fee07a997611}{\+\_\+num\+\_\+tasks}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a452b187961ac0f7f74e3af94eba23094}{time\+\_\+1}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_ae9af61bdd67bff6d1c9c5235ffcfe554}{time\+\_\+2}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a84f44d18becb0ebee39abc0695ee43b8}{time\+\_\+3}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a304da84872adc53a0a0bde7bf3b383e1}{time\+\_\+4}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a29d5b2038803aec7e1f881f259e5a9e8}{time\+\_\+5}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_af91f06c726ec30e26f1d01082d5c679e}\label{classlfns_1_1mpi_1_1LFNSMpi_af91f06c726ec30e26f1d01082d5c679e}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!LFNSMpi@{LFNSMpi}}
+\index{LFNSMpi@{LFNSMpi}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{LFNSMpi()}{LFNSMpi()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+L\+F\+N\+S\+Mpi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} \&}]{lfns\+\_\+settings,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+tasks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a47a3a4ee8481b6bae12d8adbfb2f05a9}\label{classlfns_1_1mpi_1_1LFNSMpi_a47a3a4ee8481b6bae12d8adbfb2f05a9}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!````~LFNSMpi@{$\sim$LFNSMpi}}
+\index{````~LFNSMpi@{$\sim$LFNSMpi}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{$\sim$LFNSMpi()}{~LFNSMpi()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::$\sim$\+L\+F\+N\+S\+Mpi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_ae89f0833be3eb802be8e5f8b2fb56d24}\label{classlfns_1_1mpi_1_1LFNSMpi_ae89f0833be3eb802be8e5f8b2fb56d24}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_initializeQueue@{\_initializeQueue}}
+\index{\_initializeQueue@{\_initializeQueue}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_initializeQueue()}{\_initializeQueue()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+initialize\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue}{Request\+Queue}} \&}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_adc7fc6df67f343b8320867f069851f70}\label{classlfns_1_1mpi_1_1LFNSMpi_adc7fc6df67f343b8320867f069851f70}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_requestLikelihood@{\_requestLikelihood}}
+\index{\_requestLikelihood@{\_requestLikelihood}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_requestLikelihood()}{\_requestLikelihood()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+request\+Likelihood (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a13855acdde4cdc5eee8fd075e4efaa9d}\label{classlfns_1_1mpi_1_1LFNSMpi_a13855acdde4cdc5eee8fd075e4efaa9d}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_sampleConstPrior@{\_sampleConstPrior}}
+\index{\_sampleConstPrior@{\_sampleConstPrior}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_sampleConstPrior()}{\_sampleConstPrior()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+sample\+Const\+Prior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue}{Request\+Queue}} \&}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a259c5776619c0370a201d55f4dc7ca94}\label{classlfns_1_1mpi_1_1LFNSMpi_a259c5776619c0370a201d55f4dc7ca94}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_samplePrior@{\_samplePrior}}
+\index{\_samplePrior@{\_samplePrior}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_samplePrior()}{\_samplePrior()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+sample\+Prior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1mpi_1_1RequestQueue}{lfns\+::mpi\+::\+Request\+Queue}} \&}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_afdb00beb984652ad5dd2921d47d59d0d}\label{classlfns_1_1mpi_1_1LFNSMpi_afdb00beb984652ad5dd2921d47d59d0d}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_updateEpsilon@{\_updateEpsilon}}
+\index{\_updateEpsilon@{\_updateEpsilon}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_updateEpsilon()}{\_updateEpsilon()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+update\+Epsilon (\begin{DoxyParamCaption}\item[{double}]{epsilon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_acad4d61f5f872b603c67ba8157a3bc82}\label{classlfns_1_1mpi_1_1LFNSMpi_acad4d61f5f872b603c67ba8157a3bc82}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_updateSampler@{\_updateSampler}}
+\index{\_updateSampler@{\_updateSampler}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_updateSampler()}{\_updateSampler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+update\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a829eec848d6467fb13c3cafbc21f5193}\label{classlfns_1_1mpi_1_1LFNSMpi_a829eec848d6467fb13c3cafbc21f5193}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_updateSampler@{\_updateSampler}}
+\index{\_updateSampler@{\_updateSampler}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_updateSampler()}{\_updateSampler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+update\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}}}]{density\+\_\+estimation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a773883e77996a9e4084d52c71d0dd8a3}\label{classlfns_1_1mpi_1_1LFNSMpi_a773883e77996a9e4084d52c71d0dd8a3}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!runLFNS@{runLFNS}}
+\index{runLFNS@{runLFNS}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{runLFNS()}{runLFNS()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::run\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function runs the main algorithm and is separately implemented in L\+F\+N\+S\+Seq amd \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi}{L\+F\+N\+S\+Mpi}}. 
+
+
+
+Implements \mbox{\hyperlink{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}{lfns\+::\+L\+F\+NS}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_ae3337692760d7cf34997fee07a997611}\label{classlfns_1_1mpi_1_1LFNSMpi_ae3337692760d7cf34997fee07a997611}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!\_num\_tasks@{\_num\_tasks}}
+\index{\_num\_tasks@{\_num\_tasks}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{\_num\_tasks}{\_num\_tasks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::\+\_\+num\+\_\+tasks\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a452b187961ac0f7f74e3af94eba23094}\label{classlfns_1_1mpi_1_1LFNSMpi_a452b187961ac0f7f74e3af94eba23094}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!time\_1@{time\_1}}
+\index{time\_1@{time\_1}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{time\_1}{time\_1}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::time\+\_\+1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_ae9af61bdd67bff6d1c9c5235ffcfe554}\label{classlfns_1_1mpi_1_1LFNSMpi_ae9af61bdd67bff6d1c9c5235ffcfe554}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!time\_2@{time\_2}}
+\index{time\_2@{time\_2}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{time\_2}{time\_2}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::time\+\_\+2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a84f44d18becb0ebee39abc0695ee43b8}\label{classlfns_1_1mpi_1_1LFNSMpi_a84f44d18becb0ebee39abc0695ee43b8}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!time\_3@{time\_3}}
+\index{time\_3@{time\_3}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{time\_3}{time\_3}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::time\+\_\+3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a304da84872adc53a0a0bde7bf3b383e1}\label{classlfns_1_1mpi_1_1LFNSMpi_a304da84872adc53a0a0bde7bf3b383e1}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!time\_4@{time\_4}}
+\index{time\_4@{time\_4}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{time\_4}{time\_4}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::time\+\_\+4\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a29d5b2038803aec7e1f881f259e5a9e8}\label{classlfns_1_1mpi_1_1LFNSMpi_a29d5b2038803aec7e1f881f259e5a9e8}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!time\_5@{time\_5}}
+\index{time\_5@{time\_5}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{time\_5}{time\_5}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::time\+\_\+5\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSMpi_a051ea846adfb5d6fd04c25a5bc50cbb3}\label{classlfns_1_1mpi_1_1LFNSMpi_a051ea846adfb5d6fd04c25a5bc50cbb3}} 
+\index{lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}!world@{world}}
+\index{world@{world}!lfns::mpi::LFNSMpi@{lfns::mpi::LFNSMpi}}
+\doxysubsubsection{\texorpdfstring{world}{world}}
+{\footnotesize\ttfamily bmpi\+::communicator lfns\+::mpi\+::\+L\+F\+N\+S\+Mpi\+::world\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{LFNSMpi_8h}{L\+F\+N\+S\+Mpi.\+h}}\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{LFNSMpi_8cpp}{L\+F\+N\+S\+Mpi.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+<map id="sampler::DensityEstimation" name="sampler::DensityEstimation">
+<area shape="rect" id="node1" title=" " alt="" coords="191,132,393,159"/>
+<area shape="rect" id="node3" href="$classMixutreSampler.html" title=" " alt="" coords="500,5,627,32"/>
+<area shape="rect" id="node4" href="$classsampler_1_1DpGmmSampler.html" title=" " alt="" coords="468,56,659,83"/>
+<area shape="rect" id="node5" href="$classsampler_1_1EllipsoidSampler.html" title=" " alt="" coords="467,107,659,133"/>
+<area shape="rect" id="node6" href="$classsampler_1_1KernelDensityEstimation.html" title=" " alt="" coords="441,157,685,184"/>
+<area shape="rect" id="node8" href="$classsampler_1_1RejectionSupportSampler.html" title=" " alt="" coords="466,209,661,250"/>
+<area shape="rect" id="node9" href="$classsampler_1_1SliceSampler.html" title=" " alt="" coords="479,275,647,301"/>
+<area shape="rect" id="node2" href="$classsampler_1_1Sampler.html" title=" " alt="" coords="5,132,143,159"/>
+<area shape="rect" id="node7" href="$classsampler_1_1KernelSupportEstimation.html" title=" " alt="" coords="733,157,977,184"/>
+</map>

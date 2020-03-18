@@ -1,0 +1,8 @@
+<map id="io::ParserReader" name="io::ParserReader">
+<area shape="rect" id="node1" title="A general class to read text files containing parameter definitions, species definitions,..." alt="" coords="185,81,313,108"/>
+<area shape="rect" id="node3" href="$classio_1_1InitialValueReader.html" title="A class that is used to read an initial value file." alt="" coords="390,5,551,32"/>
+<area shape="rect" id="node4" href="$classio_1_1MeasurementModelReader.html" title="A class used to read a measurement model file." alt="" coords="361,56,580,83"/>
+<area shape="rect" id="node5" href="$classio_1_1ModelAnaReader.html" title=" " alt="" coords="394,107,547,133"/>
+<area shape="rect" id="node6" href="$classio_1_1ModelReactionReader.html" title="A class used to read a model reactions from a model dynamics file." alt="" coords="378,157,563,184"/>
+<area shape="rect" id="node2" href="$classio_1_1TxtFileReader.html" title="A class that is used to read text files and provides some concenience functions." alt="" coords="5,81,137,108"/>
+</map>

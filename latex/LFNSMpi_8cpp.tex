@@ -1,0 +1,131 @@
+\hypertarget{LFNSMpi_8cpp}{}\doxysection{src/\+L\+F\+N\+S/mpi/\+L\+F\+N\+S\+Mpi.cpp File Reference}
+\label{LFNSMpi_8cpp}\index{src/LFNS/mpi/LFNSMpi.cpp@{src/LFNS/mpi/LFNSMpi.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}L\+F\+N\+S\+Mpi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Mpi\+Request.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../sampler/\+Dp\+Gmm\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../sampler/\+Ellipsoid\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../sampler/\+Gaussian\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../sampler/\+Kernel\+Density\+Estimation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../sampler/\+Kernel\+Support\+Estimation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../sampler/\+Rejection\+Support\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../sampler/\+Uniform\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../base/\+Io\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/serialization/export.\+hpp$>$}\newline
+Include dependency graph for L\+F\+N\+S\+Mpi.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LFNSMpi_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelfns}{lfns}}
+\item 
+ \mbox{\hyperlink{namespacelfns_1_1mpi}{lfns\+::mpi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_a7e5f816b34b5d0d108478235ceca3cbd}{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+CT}} (\mbox{\hyperlink{classsampler_1_1Sampler}{sampler\+::\+Sampler}})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_aae9d56b21ecc6a5c917b4c00de97290e}{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+CT}} (\mbox{\hyperlink{classsampler_1_1KernelSampler}{sampler\+::\+Kernel\+Sampler}})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_ae51b85c2ad31547394ad2c13c2bd992e}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1Sampler}{sampler\+::\+Sampler}}, \char`\"{}Sampler\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_a63f0efa426f379b24f0be20aeecdfce2}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1KernelSampler}{sampler\+::\+Kernel\+Sampler}}, \char`\"{}Kernel\+Sampler\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_acd9bc2b2c0420992f13d14f1a91eefbf}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1DensityEstimation}{sampler\+::\+Density\+Estimation}}, \char`\"{}Density\+Estimation\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_a074d587762bb8f78be0498b8eee7aeed}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1DpGmmSampler}{sampler\+::\+Dp\+Gmm\+Sampler}}, \char`\"{}Dp\+Gmm\+Sampler\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_afbdcb6002fcf909a222be0cdd945fe7a}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1EllipsoidSampler}{sampler\+::\+Ellipsoid\+Sampler}}, \char`\"{}Ellipsoid\+Sampler\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_af3b4e6b6db4acbc4e8d3824319db728e}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1KernelDensityEstimation}{sampler\+::\+Kernel\+Density\+Estimation}}, \char`\"{}Kernel\+Density\+Estimation\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_a85847c7569a87a89eb7261e0a347be51}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1KernelSupportEstimation}{sampler\+::\+Kernel\+Support\+Estimation}}, \char`\"{}Kernel\+Support\+Estimation\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_abee9e708eca1a4a91a29a7f83d038ff4}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1RejectionSupportSampler}{sampler\+::\+Rejection\+Support\+Sampler}}, \char`\"{}Rejection\+Support\+Sampler\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_ad2ce4b263f460dad57a9c0461f6bd525}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1UniformSampler}{sampler\+::\+Uniform\+Sampler}}, \char`\"{}Uniform\+Sampler\char`\"{})
+\item 
+\mbox{\hyperlink{LFNSMpi_8cpp_a752a25b9ae3ae3d92df655aa076f930c}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID}} (\mbox{\hyperlink{classsampler_1_1GaussianSampler}{sampler\+::\+Gaussian\+Sampler}}, \char`\"{}Gaussian\+Sampler\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{LFNSMpi_8cpp_acd9bc2b2c0420992f13d14f1a91eefbf}\label{LFNSMpi_8cpp_acd9bc2b2c0420992f13d14f1a91eefbf}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1DensityEstimation}{sampler\+::\+Density\+Estimation}}}]{,  }\item[{\char`\"{}Density\+Estimation\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_a074d587762bb8f78be0498b8eee7aeed}\label{LFNSMpi_8cpp_a074d587762bb8f78be0498b8eee7aeed}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1DpGmmSampler}{sampler\+::\+Dp\+Gmm\+Sampler}}}]{,  }\item[{\char`\"{}Dp\+Gmm\+Sampler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_afbdcb6002fcf909a222be0cdd945fe7a}\label{LFNSMpi_8cpp_afbdcb6002fcf909a222be0cdd945fe7a}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1EllipsoidSampler}{sampler\+::\+Ellipsoid\+Sampler}}}]{,  }\item[{\char`\"{}Ellipsoid\+Sampler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_a752a25b9ae3ae3d92df655aa076f930c}\label{LFNSMpi_8cpp_a752a25b9ae3ae3d92df655aa076f930c}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1GaussianSampler}{sampler\+::\+Gaussian\+Sampler}}}]{,  }\item[{\char`\"{}Gaussian\+Sampler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_af3b4e6b6db4acbc4e8d3824319db728e}\label{LFNSMpi_8cpp_af3b4e6b6db4acbc4e8d3824319db728e}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1KernelDensityEstimation}{sampler\+::\+Kernel\+Density\+Estimation}}}]{,  }\item[{\char`\"{}Kernel\+Density\+Estimation\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_a63f0efa426f379b24f0be20aeecdfce2}\label{LFNSMpi_8cpp_a63f0efa426f379b24f0be20aeecdfce2}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1KernelSampler}{sampler\+::\+Kernel\+Sampler}}}]{,  }\item[{\char`\"{}Kernel\+Sampler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_a85847c7569a87a89eb7261e0a347be51}\label{LFNSMpi_8cpp_a85847c7569a87a89eb7261e0a347be51}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1KernelSupportEstimation}{sampler\+::\+Kernel\+Support\+Estimation}}}]{,  }\item[{\char`\"{}Kernel\+Support\+Estimation\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_abee9e708eca1a4a91a29a7f83d038ff4}\label{LFNSMpi_8cpp_abee9e708eca1a4a91a29a7f83d038ff4}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1RejectionSupportSampler}{sampler\+::\+Rejection\+Support\+Sampler}}}]{,  }\item[{\char`\"{}Rejection\+Support\+Sampler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_ae51b85c2ad31547394ad2c13c2bd992e}\label{LFNSMpi_8cpp_ae51b85c2ad31547394ad2c13c2bd992e}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1Sampler}{sampler\+::\+Sampler}}}]{,  }\item[{\char`\"{}Sampler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_ad2ce4b263f460dad57a9c0461f6bd525}\label{LFNSMpi_8cpp_ad2ce4b263f460dad57a9c0461f6bd525}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}}
+\index{BOOST\_CLASS\_EXPORT\_GUID@{BOOST\_CLASS\_EXPORT\_GUID}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_EXPORT\_GUID()}{BOOST\_CLASS\_EXPORT\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1UniformSampler}{sampler\+::\+Uniform\+Sampler}}}]{,  }\item[{\char`\"{}Uniform\+Sampler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_aae9d56b21ecc6a5c917b4c00de97290e}\label{LFNSMpi_8cpp_aae9d56b21ecc6a5c917b4c00de97290e}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT@{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT}}
+\index{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT@{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT()}{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+CT (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1KernelSampler}{sampler\+::\+Kernel\+Sampler}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{LFNSMpi_8cpp_a7e5f816b34b5d0d108478235ceca3cbd}\label{LFNSMpi_8cpp_a7e5f816b34b5d0d108478235ceca3cbd}} 
+\index{LFNSMpi.cpp@{LFNSMpi.cpp}!BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT@{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT}}
+\index{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT@{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT}!LFNSMpi.cpp@{LFNSMpi.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT()}{BOOST\_SERIALIZATION\_ASSUME\_ABSTRACT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+CT (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsampler_1_1Sampler}{sampler\+::\+Sampler}}}]{ }\end{DoxyParamCaption})}
+

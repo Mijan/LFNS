@@ -1,0 +1,157 @@
+\hypertarget{namespacesimulator}{}\doxysection{simulator Namespace Reference}
+\label{namespacesimulator}\index{simulator@{simulator}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsimulator_1_1OdeSettings}{Ode\+Settings}}
+\item 
+struct \mbox{\hyperlink{structsimulator_1_1RhsData}{Rhs\+Data}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1SimulationAborted}{Simulation\+Aborted}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1Simulator}{Simulator}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid}{Simulator\+Hybrid}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1SimulatorOde}{Simulator\+Ode}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1SimulatorSsa}{Simulator\+Ssa}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1StoppingCrietrionHybridSimulation}{Stopping\+Crietrion\+Hybrid\+Simulation}}
+\item 
+class \mbox{\hyperlink{classsimulator_1_1StoppingCriterions}{Stopping\+Criterions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(double final\+\_\+t)$>$ \mbox{\hyperlink{namespacesimulator_abdfc3385e885e828662d564405d8ec52}{Simulation\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacesimulator_abdfc3385e885e828662d564405d8ec52}{Simulation\+Fct}} $>$ \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ \&state, double \&t)$>$ \mbox{\hyperlink{namespacesimulator_ab920595e6f765f0eec82c0bfa0b14179}{Reset\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacesimulator_ab920595e6f765f0eec82c0bfa0b14179}{Reset\+Fct}} $>$ \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsimulator_1_1Simulator}{Simulator}} $>$ \mbox{\hyperlink{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}{Simulator\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid}{Simulator\+Hybrid}} $>$ \mbox{\hyperlink{namespacesimulator_adf9f6fa7b6e0fdb15ed1d0bc44eba6dd}{Simulator\+Hybrid\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(double $\ast$dx, const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacesimulator_a7771e2b5c4a2961f846d474492de52ef}{Rhs\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacesimulator_a7771e2b5c4a2961f846d474492de52ef}{Rhs\+Fct}} $>$ \mbox{\hyperlink{namespacesimulator_aea0de4330eba514037e844442323b3de}{Rhs\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde}{Simulator\+Ode}} $>$ \mbox{\hyperlink{namespacesimulator_a322e73b52914203912392239426a7300}{Simulator\+Ode\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ \&propensities, std\+::vector$<$ double $>$ \&state, double t)$>$ \mbox{\hyperlink{namespacesimulator_a9ce5287187f8c16bc353c2633d523498}{Propensity\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacesimulator_a9ce5287187f8c16bc353c2633d523498}{Propensity\+Fct}} $>$ \mbox{\hyperlink{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}{Propensity\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ \&state, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} reaction\+\_\+index)$>$ \mbox{\hyperlink{namespacesimulator_a683b850f6183bdfd077e38fb169d401b}{Reaction\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacesimulator_a683b850f6183bdfd077e38fb169d401b}{Reaction\+Fct}} $>$ \mbox{\hyperlink{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}{Reaction\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsimulator_1_1SimulatorSsa}{Simulator\+Ssa}} $>$ \mbox{\hyperlink{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}{Simulator\+Ssa\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ bool()$>$ \mbox{\hyperlink{namespacesimulator_a0f975d9e116441df37cfa3579d206583}{Stopping\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacesimulator_a0f975d9e116441df37cfa3579d206583}{Stopping\+Fct}} $>$ \mbox{\hyperlink{namespacesimulator_a94387d9253f2f6666472764e510e65e7}{Stopping\+Fct\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacesimulator_a9ce5287187f8c16bc353c2633d523498}\label{namespacesimulator_a9ce5287187f8c16bc353c2633d523498}} 
+\index{simulator@{simulator}!PropensityFct@{PropensityFct}}
+\index{PropensityFct@{PropensityFct}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{PropensityFct}{PropensityFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(std\+::vector$<$double$>$ \&propensities, std\+::vector$<$double$>$ \&state, double t)$>$ \mbox{\hyperlink{namespacesimulator_a9ce5287187f8c16bc353c2633d523498}{simulator\+::\+Propensity\+Fct}}}
+
+\mbox{\Hypertarget{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}\label{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}} 
+\index{simulator@{simulator}!PropensityFct\_ptr@{PropensityFct\_ptr}}
+\index{PropensityFct\_ptr@{PropensityFct\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{PropensityFct\_ptr}{PropensityFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacesimulator_a9ce5287187f8c16bc353c2633d523498}{Propensity\+Fct}}$>$ \mbox{\hyperlink{namespacesimulator_afd34251b158c9cf2c06e1e6aac014f81}{simulator\+::\+Propensity\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_a683b850f6183bdfd077e38fb169d401b}\label{namespacesimulator_a683b850f6183bdfd077e38fb169d401b}} 
+\index{simulator@{simulator}!ReactionFct@{ReactionFct}}
+\index{ReactionFct@{ReactionFct}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{ReactionFct}{ReactionFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(std\+::vector$<$double$>$ \&state, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} reaction\+\_\+index)$>$ \mbox{\hyperlink{namespacesimulator_a683b850f6183bdfd077e38fb169d401b}{simulator\+::\+Reaction\+Fct}}}
+
+\mbox{\Hypertarget{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}\label{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}} 
+\index{simulator@{simulator}!ReactionFct\_ptr@{ReactionFct\_ptr}}
+\index{ReactionFct\_ptr@{ReactionFct\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{ReactionFct\_ptr}{ReactionFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacesimulator_a683b850f6183bdfd077e38fb169d401b}{Reaction\+Fct}}$>$ \mbox{\hyperlink{namespacesimulator_ae19118b795b2b0d313f03bab87f82926}{simulator\+::\+Reaction\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_ab920595e6f765f0eec82c0bfa0b14179}\label{namespacesimulator_ab920595e6f765f0eec82c0bfa0b14179}} 
+\index{simulator@{simulator}!ResetFct@{ResetFct}}
+\index{ResetFct@{ResetFct}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{ResetFct}{ResetFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(std\+::vector$<$double$>$ \&state, double \&t)$>$ \mbox{\hyperlink{namespacesimulator_ab920595e6f765f0eec82c0bfa0b14179}{simulator\+::\+Reset\+Fct}}}
+
+\mbox{\Hypertarget{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}\label{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}} 
+\index{simulator@{simulator}!ResetFct\_ptr@{ResetFct\_ptr}}
+\index{ResetFct\_ptr@{ResetFct\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{ResetFct\_ptr}{ResetFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacesimulator_ab920595e6f765f0eec82c0bfa0b14179}{Reset\+Fct}}$>$ \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{simulator\+::\+Reset\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_a7771e2b5c4a2961f846d474492de52ef}\label{namespacesimulator_a7771e2b5c4a2961f846d474492de52ef}} 
+\index{simulator@{simulator}!RhsFct@{RhsFct}}
+\index{RhsFct@{RhsFct}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{RhsFct}{RhsFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(double $\ast$dx, const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacesimulator_a7771e2b5c4a2961f846d474492de52ef}{simulator\+::\+Rhs\+Fct}}}
+
+\mbox{\Hypertarget{namespacesimulator_aea0de4330eba514037e844442323b3de}\label{namespacesimulator_aea0de4330eba514037e844442323b3de}} 
+\index{simulator@{simulator}!RhsFct\_ptr@{RhsFct\_ptr}}
+\index{RhsFct\_ptr@{RhsFct\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{RhsFct\_ptr}{RhsFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacesimulator_a7771e2b5c4a2961f846d474492de52ef}{Rhs\+Fct}}$>$ \mbox{\hyperlink{namespacesimulator_aea0de4330eba514037e844442323b3de}{simulator\+::\+Rhs\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_abdfc3385e885e828662d564405d8ec52}\label{namespacesimulator_abdfc3385e885e828662d564405d8ec52}} 
+\index{simulator@{simulator}!SimulationFct@{SimulationFct}}
+\index{SimulationFct@{SimulationFct}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{SimulationFct}{SimulationFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(double final\+\_\+t)$>$ \mbox{\hyperlink{namespacesimulator_abdfc3385e885e828662d564405d8ec52}{simulator\+::\+Simulation\+Fct}}}
+
+\mbox{\Hypertarget{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}\label{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}} 
+\index{simulator@{simulator}!SimulationFct\_ptr@{SimulationFct\_ptr}}
+\index{SimulationFct\_ptr@{SimulationFct\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{SimulationFct\_ptr}{SimulationFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacesimulator_abdfc3385e885e828662d564405d8ec52}{Simulation\+Fct}}$>$ \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{simulator\+::\+Simulation\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}\label{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}} 
+\index{simulator@{simulator}!Simulator\_ptr@{Simulator\_ptr}}
+\index{Simulator\_ptr@{Simulator\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{Simulator\_ptr}{Simulator\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsimulator_1_1Simulator}{Simulator}}$>$ \mbox{\hyperlink{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}{simulator\+::\+Simulator\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_adf9f6fa7b6e0fdb15ed1d0bc44eba6dd}\label{namespacesimulator_adf9f6fa7b6e0fdb15ed1d0bc44eba6dd}} 
+\index{simulator@{simulator}!SimulatorHybrid\_ptr@{SimulatorHybrid\_ptr}}
+\index{SimulatorHybrid\_ptr@{SimulatorHybrid\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{SimulatorHybrid\_ptr}{SimulatorHybrid\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsimulator_1_1SimulatorHybrid}{Simulator\+Hybrid}}$>$ \mbox{\hyperlink{namespacesimulator_adf9f6fa7b6e0fdb15ed1d0bc44eba6dd}{simulator\+::\+Simulator\+Hybrid\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_a322e73b52914203912392239426a7300}\label{namespacesimulator_a322e73b52914203912392239426a7300}} 
+\index{simulator@{simulator}!SimulatorOde\_ptr@{SimulatorOde\_ptr}}
+\index{SimulatorOde\_ptr@{SimulatorOde\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{SimulatorOde\_ptr}{SimulatorOde\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsimulator_1_1SimulatorOde}{Simulator\+Ode}}$>$ \mbox{\hyperlink{namespacesimulator_a322e73b52914203912392239426a7300}{simulator\+::\+Simulator\+Ode\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}\label{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}} 
+\index{simulator@{simulator}!SimulatorSsa\_ptr@{SimulatorSsa\_ptr}}
+\index{SimulatorSsa\_ptr@{SimulatorSsa\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{SimulatorSsa\_ptr}{SimulatorSsa\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsimulator_1_1SimulatorSsa}{Simulator\+Ssa}}$>$ \mbox{\hyperlink{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}{simulator\+::\+Simulator\+Ssa\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacesimulator_a0f975d9e116441df37cfa3579d206583}\label{namespacesimulator_a0f975d9e116441df37cfa3579d206583}} 
+\index{simulator@{simulator}!StoppingFct@{StoppingFct}}
+\index{StoppingFct@{StoppingFct}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{StoppingFct}{StoppingFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$bool()$>$ \mbox{\hyperlink{namespacesimulator_a0f975d9e116441df37cfa3579d206583}{simulator\+::\+Stopping\+Fct}}}
+
+\mbox{\Hypertarget{namespacesimulator_a94387d9253f2f6666472764e510e65e7}\label{namespacesimulator_a94387d9253f2f6666472764e510e65e7}} 
+\index{simulator@{simulator}!StoppingFct\_ptr@{StoppingFct\_ptr}}
+\index{StoppingFct\_ptr@{StoppingFct\_ptr}!simulator@{simulator}}
+\doxysubsubsection{\texorpdfstring{StoppingFct\_ptr}{StoppingFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacesimulator_a0f975d9e116441df37cfa3579d206583}{Stopping\+Fct}}$>$ \mbox{\hyperlink{namespacesimulator_a94387d9253f2f6666472764e510e65e7}{simulator\+::\+Stopping\+Fct\+\_\+ptr}}}
+

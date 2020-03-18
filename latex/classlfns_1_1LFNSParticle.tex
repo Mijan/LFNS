@@ -1,0 +1,86 @@
+\hypertarget{classlfns_1_1LFNSParticle}{}\doxysection{lfns\+::L\+F\+N\+S\+Particle Class Reference}
+\label{classlfns_1_1LFNSParticle}\index{lfns::LFNSParticle@{lfns::LFNSParticle}}
+
+
+{\ttfamily \#include $<$L\+F\+N\+S\+Particle.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNSParticle_af041ac5572ead0dc8bf05d37de718e15}{L\+F\+N\+S\+Particle}} (std\+::vector$<$ double $>$ theta, double log\+\_\+likelihood)
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNSParticle_a787b9c96e2cb42063172b35adc5c56bb}{L\+F\+N\+S\+Particle}} (const \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} \&rhs)
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1LFNSParticle_a3a6853769cd4da2c9d9e7f43623a040e}{$\sim$\+L\+F\+N\+S\+Particle}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LFNSParticle_a0e559c5666d23c0807c154dbae3254d6}{get\+Log\+Likelihood}} () const
+\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classlfns_1_1LFNSParticle_aa66d1b3d99ba57d8d983747f29cd8c36}{get\+Theta}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSParticle_a43346118eff70ca03dd4befdbc574eb5}{\+\_\+theta}}
+\item 
+double \mbox{\hyperlink{classlfns_1_1LFNSParticle_a9c31343e43ed83f51c2556b4d3d19d75}{\+\_\+log\+\_\+likelihood}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a particle for the \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithm, consisting of one parameter vector \mbox{\hyperlink{classlfns_1_1LFNSParticle_a43346118eff70ca03dd4befdbc574eb5}{\+\_\+theta}} and its log-\/likelihood \mbox{\hyperlink{classlfns_1_1LFNSParticle_a9c31343e43ed83f51c2556b4d3d19d75}{\+\_\+log\+\_\+likelihood}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNSParticle_af041ac5572ead0dc8bf05d37de718e15}\label{classlfns_1_1LFNSParticle_af041ac5572ead0dc8bf05d37de718e15}} 
+\index{lfns::LFNSParticle@{lfns::LFNSParticle}!LFNSParticle@{LFNSParticle}}
+\index{LFNSParticle@{LFNSParticle}!lfns::LFNSParticle@{lfns::LFNSParticle}}
+\doxysubsubsection{\texorpdfstring{LFNSParticle()}{LFNSParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lfns\+::\+L\+F\+N\+S\+Particle\+::\+L\+F\+N\+S\+Particle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{theta,  }\item[{double}]{log\+\_\+likelihood }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSParticle_a787b9c96e2cb42063172b35adc5c56bb}\label{classlfns_1_1LFNSParticle_a787b9c96e2cb42063172b35adc5c56bb}} 
+\index{lfns::LFNSParticle@{lfns::LFNSParticle}!LFNSParticle@{LFNSParticle}}
+\index{LFNSParticle@{LFNSParticle}!lfns::LFNSParticle@{lfns::LFNSParticle}}
+\doxysubsubsection{\texorpdfstring{LFNSParticle()}{LFNSParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lfns\+::\+L\+F\+N\+S\+Particle\+::\+L\+F\+N\+S\+Particle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSParticle_a3a6853769cd4da2c9d9e7f43623a040e}\label{classlfns_1_1LFNSParticle_a3a6853769cd4da2c9d9e7f43623a040e}} 
+\index{lfns::LFNSParticle@{lfns::LFNSParticle}!````~LFNSParticle@{$\sim$LFNSParticle}}
+\index{````~LFNSParticle@{$\sim$LFNSParticle}!lfns::LFNSParticle@{lfns::LFNSParticle}}
+\doxysubsubsection{\texorpdfstring{$\sim$LFNSParticle()}{~LFNSParticle()}}
+{\footnotesize\ttfamily lfns\+::\+L\+F\+N\+S\+Particle\+::$\sim$\+L\+F\+N\+S\+Particle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNSParticle_a0e559c5666d23c0807c154dbae3254d6}\label{classlfns_1_1LFNSParticle_a0e559c5666d23c0807c154dbae3254d6}} 
+\index{lfns::LFNSParticle@{lfns::LFNSParticle}!getLogLikelihood@{getLogLikelihood}}
+\index{getLogLikelihood@{getLogLikelihood}!lfns::LFNSParticle@{lfns::LFNSParticle}}
+\doxysubsubsection{\texorpdfstring{getLogLikelihood()}{getLogLikelihood()}}
+{\footnotesize\ttfamily double lfns\+::\+L\+F\+N\+S\+Particle\+::get\+Log\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSParticle_aa66d1b3d99ba57d8d983747f29cd8c36}\label{classlfns_1_1LFNSParticle_aa66d1b3d99ba57d8d983747f29cd8c36}} 
+\index{lfns::LFNSParticle@{lfns::LFNSParticle}!getTheta@{getTheta}}
+\index{getTheta@{getTheta}!lfns::LFNSParticle@{lfns::LFNSParticle}}
+\doxysubsubsection{\texorpdfstring{getTheta()}{getTheta()}}
+{\footnotesize\ttfamily const std\+::vector$<$ double $>$ \& lfns\+::\+L\+F\+N\+S\+Particle\+::get\+Theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNSParticle_a9c31343e43ed83f51c2556b4d3d19d75}\label{classlfns_1_1LFNSParticle_a9c31343e43ed83f51c2556b4d3d19d75}} 
+\index{lfns::LFNSParticle@{lfns::LFNSParticle}!\_log\_likelihood@{\_log\_likelihood}}
+\index{\_log\_likelihood@{\_log\_likelihood}!lfns::LFNSParticle@{lfns::LFNSParticle}}
+\doxysubsubsection{\texorpdfstring{\_log\_likelihood}{\_log\_likelihood}}
+{\footnotesize\ttfamily double lfns\+::\+L\+F\+N\+S\+Particle\+::\+\_\+log\+\_\+likelihood\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSParticle_a43346118eff70ca03dd4befdbc574eb5}\label{classlfns_1_1LFNSParticle_a43346118eff70ca03dd4befdbc574eb5}} 
+\index{lfns::LFNSParticle@{lfns::LFNSParticle}!\_theta@{\_theta}}
+\index{\_theta@{\_theta}!lfns::LFNSParticle@{lfns::LFNSParticle}}
+\doxysubsubsection{\texorpdfstring{\_theta}{\_theta}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Particle\+::\+\_\+theta\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LFNSParticle_8h}{L\+F\+N\+S\+Particle.\+h}}\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LFNSParticle_8cpp}{L\+F\+N\+S\+Particle.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{mcmc_8cpp}{}\doxysection{mcmc.\+cpp File Reference}
+\label{mcmc_8cpp}\index{mcmc.cpp@{mcmc.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}src/options/\+L\+F\+N\+S\+Options.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+F\+N\+S\+Setup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/base/\+Io\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/\+L\+F\+N\+S/seq/\+L\+F\+N\+S\+Seq.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}M\+C\+M\+C\+Setup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/\+M\+C\+M\+C/\+M\+C\+M\+C.\+h\char`\"{}}\newline
+Include dependency graph for mcmc.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mcmc_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{mcmc_8cpp_acc9fff617c19ec9c421ae840731dd56d}{run\+M\+C\+MC}} (\mbox{\hyperlink{classMCMCSetup}{M\+C\+M\+C\+Setup}} \&lfns\+\_\+setup)
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{mcmc_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{mcmc_8cpp_a6e4553ed16748bdad3046b6e9286ced4}{model\+\_\+summary\+\_\+suffix}} = \char`\"{}model\+\_\+summary\char`\"{}
+\item 
+static std\+::stringstream \mbox{\hyperlink{mcmc_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}{model\+\_\+summary\+\_\+stream}}
+\item 
+\mbox{\hyperlink{classoptions_1_1MCMCOptions}{options\+::\+M\+C\+M\+C\+Options}} \mbox{\hyperlink{mcmc_8cpp_a6e61cda79c45e07daa87a62115989100}{mcmc\+\_\+options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mcmc_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{mcmc_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{mcmc.cpp@{mcmc.cpp}!main@{main}}
+\index{main@{main}!mcmc.cpp@{mcmc.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mcmc_8cpp_acc9fff617c19ec9c421ae840731dd56d}\label{mcmc_8cpp_acc9fff617c19ec9c421ae840731dd56d}} 
+\index{mcmc.cpp@{mcmc.cpp}!runMCMC@{runMCMC}}
+\index{runMCMC@{runMCMC}!mcmc.cpp@{mcmc.cpp}}
+\doxysubsubsection{\texorpdfstring{runMCMC()}{runMCMC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} run\+M\+C\+MC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMCMCSetup}{M\+C\+M\+C\+Setup}} \&}]{lfns\+\_\+setup }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mcmc_8cpp_a6e61cda79c45e07daa87a62115989100}\label{mcmc_8cpp_a6e61cda79c45e07daa87a62115989100}} 
+\index{mcmc.cpp@{mcmc.cpp}!mcmc\_options@{mcmc\_options}}
+\index{mcmc\_options@{mcmc\_options}!mcmc.cpp@{mcmc.cpp}}
+\doxysubsubsection{\texorpdfstring{mcmc\_options}{mcmc\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1MCMCOptions}{options\+::\+M\+C\+M\+C\+Options}} mcmc\+\_\+options}
+
+\mbox{\Hypertarget{mcmc_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}\label{mcmc_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}} 
+\index{mcmc.cpp@{mcmc.cpp}!model\_summary\_stream@{model\_summary\_stream}}
+\index{model\_summary\_stream@{model\_summary\_stream}!mcmc.cpp@{mcmc.cpp}}
+\doxysubsubsection{\texorpdfstring{model\_summary\_stream}{model\_summary\_stream}}
+{\footnotesize\ttfamily std\+::stringstream model\+\_\+summary\+\_\+stream\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mcmc_8cpp_a6e4553ed16748bdad3046b6e9286ced4}\label{mcmc_8cpp_a6e4553ed16748bdad3046b6e9286ced4}} 
+\index{mcmc.cpp@{mcmc.cpp}!model\_summary\_suffix@{model\_summary\_suffix}}
+\index{model\_summary\_suffix@{model\_summary\_suffix}!mcmc.cpp@{mcmc.cpp}}
+\doxysubsubsection{\texorpdfstring{model\_summary\_suffix}{model\_summary\_suffix}}
+{\footnotesize\ttfamily std\+::string model\+\_\+summary\+\_\+suffix = \char`\"{}model\+\_\+summary\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

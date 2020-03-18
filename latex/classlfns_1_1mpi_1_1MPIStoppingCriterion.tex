@@ -1,0 +1,90 @@
+\hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion}{}\doxysection{lfns\+::mpi\+::M\+P\+I\+Stopping\+Criterion Class Reference}
+\label{classlfns_1_1mpi_1_1MPIStoppingCriterion}\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+
+
+{\ttfamily \#include $<$L\+F\+N\+S\+Worker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_a655d0b84229b0b4c047c298fe4d9d4fd}{M\+P\+I\+Stopping\+Criterion}} (boost\+::mpi\+::request $\ast$request, double checking\+\_\+interval=5.\+0)
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_a9b89950998de42023ab42f5ab39d4416}{$\sim$\+M\+P\+I\+Stopping\+Criterion}} ()
+\item 
+virtual bool \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_aada2bc3a42467404670a67585179035b}{process\+Stopped}} ()
+\item 
+virtual void \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_a9ec0001a187460ac7906cbd280be0ebe}{update\+Request}} (boost\+::mpi\+::request $\ast$request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::mpi\+::request $\ast$ \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_a5de9d380c91678dfc546380e1945fe80}{\+\_\+request}}
+\item 
+bool \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_a8152cd6933d664b9c220713890fe4124}{\+\_\+process\+\_\+stopped}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_a76ec682e8e23d5088efc07c372c40e70}{\+\_\+tic}}
+\item 
+double \mbox{\hyperlink{classlfns_1_1mpi_1_1MPIStoppingCriterion_a6195107d5a2a213711ebffb075d9a0bf}{\+\_\+checking\+\_\+interval}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_a655d0b84229b0b4c047c298fe4d9d4fd}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_a655d0b84229b0b4c047c298fe4d9d4fd}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!MPIStoppingCriterion@{MPIStoppingCriterion}}
+\index{MPIStoppingCriterion@{MPIStoppingCriterion}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{MPIStoppingCriterion()}{MPIStoppingCriterion()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::\+M\+P\+I\+Stopping\+Criterion (\begin{DoxyParamCaption}\item[{boost\+::mpi\+::request $\ast$}]{request,  }\item[{double}]{checking\+\_\+interval = {\ttfamily 5.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_a9b89950998de42023ab42f5ab39d4416}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_a9b89950998de42023ab42f5ab39d4416}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!````~MPIStoppingCriterion@{$\sim$MPIStoppingCriterion}}
+\index{````~MPIStoppingCriterion@{$\sim$MPIStoppingCriterion}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{$\sim$MPIStoppingCriterion()}{~MPIStoppingCriterion()}}
+{\footnotesize\ttfamily virtual lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::$\sim$\+M\+P\+I\+Stopping\+Criterion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_aada2bc3a42467404670a67585179035b}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_aada2bc3a42467404670a67585179035b}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!processStopped@{processStopped}}
+\index{processStopped@{processStopped}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{processStopped()}{processStopped()}}
+{\footnotesize\ttfamily virtual bool lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::process\+Stopped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_a9ec0001a187460ac7906cbd280be0ebe}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_a9ec0001a187460ac7906cbd280be0ebe}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!updateRequest@{updateRequest}}
+\index{updateRequest@{updateRequest}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{updateRequest()}{updateRequest()}}
+{\footnotesize\ttfamily virtual void lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::update\+Request (\begin{DoxyParamCaption}\item[{boost\+::mpi\+::request $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_a6195107d5a2a213711ebffb075d9a0bf}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_a6195107d5a2a213711ebffb075d9a0bf}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!\_checking\_interval@{\_checking\_interval}}
+\index{\_checking\_interval@{\_checking\_interval}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{\_checking\_interval}{\_checking\_interval}}
+{\footnotesize\ttfamily double lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::\+\_\+checking\+\_\+interval\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_a8152cd6933d664b9c220713890fe4124}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_a8152cd6933d664b9c220713890fe4124}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!\_process\_stopped@{\_process\_stopped}}
+\index{\_process\_stopped@{\_process\_stopped}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{\_process\_stopped}{\_process\_stopped}}
+{\footnotesize\ttfamily bool lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::\+\_\+process\+\_\+stopped\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_a5de9d380c91678dfc546380e1945fe80}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_a5de9d380c91678dfc546380e1945fe80}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!\_request@{\_request}}
+\index{\_request@{\_request}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{\_request}{\_request}}
+{\footnotesize\ttfamily boost\+::mpi\+::request$\ast$ lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::\+\_\+request\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MPIStoppingCriterion_a76ec682e8e23d5088efc07c372c40e70}\label{classlfns_1_1mpi_1_1MPIStoppingCriterion_a76ec682e8e23d5088efc07c372c40e70}} 
+\index{lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}!\_tic@{\_tic}}
+\index{\_tic@{\_tic}!lfns::mpi::MPIStoppingCriterion@{lfns::mpi::MPIStoppingCriterion}}
+\doxysubsubsection{\texorpdfstring{\_tic}{\_tic}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+M\+P\+I\+Stopping\+Criterion\+::\+\_\+tic\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{LFNSWorker_8h}{L\+F\+N\+S\+Worker.\+h}}\end{DoxyCompactItemize}

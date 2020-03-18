@@ -1,0 +1,8 @@
+<map id="models::MeasurementModel" name="models::MeasurementModel">
+<area shape="rect" id="node1" title=" " alt="" coords="116,273,324,300"/>
+<area shape="rect" id="node2" href="$classmodels_1_1ParserBaseObject.html" title="This class extends the BaseObject to be parsed from a file." alt="" coords="5,184,197,211"/>
+<area shape="rect" id="node3" href="$classmodels_1_1BaseObject.html" title=" " alt="" coords="25,95,177,121"/>
+<area shape="rect" id="node4" href="$classmodels_1_1BaseData.html" title="The base data needed for constructing the base objects. It requires a list of parameters and a list o..." alt="" coords="117,5,259,32"/>
+<area shape="rect" id="node5" href="$classmodels_1_1ParserData.html" title=" " alt="" coords="201,95,351,121"/>
+<area shape="rect" id="node6" href="$classmodels_1_1MeasurementModelData.html" title="This class contains all the data that can be read from the measurement model sfile." alt="" coords="222,184,461,211"/>
+</map>

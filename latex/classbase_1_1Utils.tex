@@ -1,0 +1,142 @@
+\hypertarget{classbase_1_1Utils}{}\doxysection{base\+::Utils Class Reference}
+\label{classbase_1_1Utils}\index{base::Utils@{base::Utils}}
+
+
+General utility functions.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1Utils_a38c11362734a3c1a5ff47d29d0fb3669}{Find\+Delimiter}} (std\+::string string, std\+::vector$<$ std\+::string $>$ delimiters=\{\char`\"{},\char`\"{}, \char`\"{} \char`\"{}, \char`\"{}\textbackslash{}t\char`\"{}\})
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classbase_1_1Utils_a87c0a7d52390954df10c19fe17c321bb}{String\+To\+Int\+Vector}} (std\+::string string)
+\item 
+static std\+::vector$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classbase_1_1Utils_a02ff27f5958dd8677410f194abeedc7e}{String\+To\+Size\+Vector}} (std\+::string string)
+\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase_1_1Utils_a0964474f773b8a38b58b1d871854b986}{String\+To\+Double\+Vector}} (std\+::string string)
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classbase_1_1Utils_a792eb41767525bea98804c26d4806426}{String\+To\+String\+Vector}} (std\+::string string)
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classbase_1_1Utils_a78539f56eaafd3aa3fc278c8fee36582}{String\+To\+Int\+Vector}} (std\+::string string, std\+::string delimiter)
+\item 
+static std\+::vector$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classbase_1_1Utils_a428eb9f278868ed5009e77f1287437a0}{String\+To\+Size\+Vector}} (std\+::string string, std\+::string delimiter)
+\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase_1_1Utils_a15b885feb006401e5fb24eafe65b61a9}{String\+To\+Double\+Vector}} (std\+::string string, std\+::string delimiter)
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classbase_1_1Utils_a7cd73411ecc329e577519ad3a9a18c69}{String\+To\+String\+Vector}} (std\+::string string, std\+::string delimiter)
+\item 
+static std\+::string \mbox{\hyperlink{classbase_1_1Utils_ae68646b40eee21d26128466255c2370f}{get\+Time\+From\+Clocks}} (time\+\_\+t clocks)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classbase_1_1Utils_adf20d85630af34af22f4bf21ef7527d6}{add\+Only\+New}} (std\+::vector$<$ T $>$ \&original\+\_\+vector, const std\+::vector$<$ T $>$ \&new\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{classbase_1_1Utils_a474bae1d0978efaf62e214895d4a706a}{elements\+Overlap}} (std\+::vector$<$ T $>$ \&original\+\_\+vector, const std\+::vector$<$ T $>$ \&new\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::vector$<$ T $>$ \mbox{\hyperlink{classbase_1_1Utils_a624aa41c21645056512ef2371b67b9a2}{get\+Overlapping\+Elements}} (std\+::vector$<$ T $>$ \&original\+\_\+vector, const std\+::vector$<$ T $>$ \&new\+\_\+vector)
+\item 
+{\footnotesize template$<$typename Identifier $>$ }\\static std\+::map$<$ Identifier, std\+::size\+\_\+t $>$ \mbox{\hyperlink{classbase_1_1Utils_a3fd18bc79965bd2847572babdc2daecf}{get\+Index\+Map\+From\+Vector}} (std\+::vector$<$ Identifier $>$ vector)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General utility functions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbase_1_1Utils_adf20d85630af34af22f4bf21ef7527d6}\label{classbase_1_1Utils_adf20d85630af34af22f4bf21ef7527d6}} 
+\index{base::Utils@{base::Utils}!addOnlyNew@{addOnlyNew}}
+\index{addOnlyNew@{addOnlyNew}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{addOnlyNew()}{addOnlyNew()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void base\+::\+Utils\+::add\+Only\+New (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{original\+\_\+vector,  }\item[{const std\+::vector$<$ T $>$ \&}]{new\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a474bae1d0978efaf62e214895d4a706a}\label{classbase_1_1Utils_a474bae1d0978efaf62e214895d4a706a}} 
+\index{base::Utils@{base::Utils}!elementsOverlap@{elementsOverlap}}
+\index{elementsOverlap@{elementsOverlap}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{elementsOverlap()}{elementsOverlap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static bool base\+::\+Utils\+::elements\+Overlap (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{original\+\_\+vector,  }\item[{const std\+::vector$<$ T $>$ \&}]{new\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a38c11362734a3c1a5ff47d29d0fb3669}\label{classbase_1_1Utils_a38c11362734a3c1a5ff47d29d0fb3669}} 
+\index{base::Utils@{base::Utils}!FindDelimiter@{FindDelimiter}}
+\index{FindDelimiter@{FindDelimiter}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{FindDelimiter()}{FindDelimiter()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Utils\+::\+Find\+Delimiter (\begin{DoxyParamCaption}\item[{std\+::string}]{string,  }\item[{std\+::vector$<$ std\+::string $>$}]{delimiters = {\ttfamily \{\char`\"{},\char`\"{},~\char`\"{}~\char`\"{},~\char`\"{}\textbackslash{}t\char`\"{}\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a3fd18bc79965bd2847572babdc2daecf}\label{classbase_1_1Utils_a3fd18bc79965bd2847572babdc2daecf}} 
+\index{base::Utils@{base::Utils}!getIndexMapFromVector@{getIndexMapFromVector}}
+\index{getIndexMapFromVector@{getIndexMapFromVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{getIndexMapFromVector()}{getIndexMapFromVector()}}
+{\footnotesize\ttfamily template$<$typename Identifier $>$ \\
+static std\+::map$<$Identifier, std\+::size\+\_\+t$>$ base\+::\+Utils\+::get\+Index\+Map\+From\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Identifier $>$}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a624aa41c21645056512ef2371b67b9a2}\label{classbase_1_1Utils_a624aa41c21645056512ef2371b67b9a2}} 
+\index{base::Utils@{base::Utils}!getOverlappingElements@{getOverlappingElements}}
+\index{getOverlappingElements@{getOverlappingElements}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{getOverlappingElements()}{getOverlappingElements()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::vector$<$T$>$ base\+::\+Utils\+::get\+Overlapping\+Elements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{original\+\_\+vector,  }\item[{const std\+::vector$<$ T $>$ \&}]{new\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_ae68646b40eee21d26128466255c2370f}\label{classbase_1_1Utils_ae68646b40eee21d26128466255c2370f}} 
+\index{base::Utils@{base::Utils}!getTimeFromClocks@{getTimeFromClocks}}
+\index{getTimeFromClocks@{getTimeFromClocks}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{getTimeFromClocks()}{getTimeFromClocks()}}
+{\footnotesize\ttfamily std\+::string base\+::\+Utils\+::get\+Time\+From\+Clocks (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{clocks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a0964474f773b8a38b58b1d871854b986}\label{classbase_1_1Utils_a0964474f773b8a38b58b1d871854b986}} 
+\index{base::Utils@{base::Utils}!StringToDoubleVector@{StringToDoubleVector}}
+\index{StringToDoubleVector@{StringToDoubleVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToDoubleVector()}{StringToDoubleVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::vector$<$double$>$ base\+::\+Utils\+::\+String\+To\+Double\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a15b885feb006401e5fb24eafe65b61a9}\label{classbase_1_1Utils_a15b885feb006401e5fb24eafe65b61a9}} 
+\index{base::Utils@{base::Utils}!StringToDoubleVector@{StringToDoubleVector}}
+\index{StringToDoubleVector@{StringToDoubleVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToDoubleVector()}{StringToDoubleVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ base\+::\+Utils\+::\+String\+To\+Double\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a87c0a7d52390954df10c19fe17c321bb}\label{classbase_1_1Utils_a87c0a7d52390954df10c19fe17c321bb}} 
+\index{base::Utils@{base::Utils}!StringToIntVector@{StringToIntVector}}
+\index{StringToIntVector@{StringToIntVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToIntVector()}{StringToIntVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ base\+::\+Utils\+::\+String\+To\+Int\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a78539f56eaafd3aa3fc278c8fee36582}\label{classbase_1_1Utils_a78539f56eaafd3aa3fc278c8fee36582}} 
+\index{base::Utils@{base::Utils}!StringToIntVector@{StringToIntVector}}
+\index{StringToIntVector@{StringToIntVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToIntVector()}{StringToIntVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ base\+::\+Utils\+::\+String\+To\+Int\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a02ff27f5958dd8677410f194abeedc7e}\label{classbase_1_1Utils_a02ff27f5958dd8677410f194abeedc7e}} 
+\index{base::Utils@{base::Utils}!StringToSizeVector@{StringToSizeVector}}
+\index{StringToSizeVector@{StringToSizeVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToSizeVector()}{StringToSizeVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::size\+\_\+t$>$ base\+::\+Utils\+::\+String\+To\+Size\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a428eb9f278868ed5009e77f1287437a0}\label{classbase_1_1Utils_a428eb9f278868ed5009e77f1287437a0}} 
+\index{base::Utils@{base::Utils}!StringToSizeVector@{StringToSizeVector}}
+\index{StringToSizeVector@{StringToSizeVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToSizeVector()}{StringToSizeVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::size\+\_\+t $>$ base\+::\+Utils\+::\+String\+To\+Size\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a792eb41767525bea98804c26d4806426}\label{classbase_1_1Utils_a792eb41767525bea98804c26d4806426}} 
+\index{base::Utils@{base::Utils}!StringToStringVector@{StringToStringVector}}
+\index{StringToStringVector@{StringToStringVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToStringVector()}{StringToStringVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::string$>$ base\+::\+Utils\+::\+String\+To\+String\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbase_1_1Utils_a7cd73411ecc329e577519ad3a9a18c69}\label{classbase_1_1Utils_a7cd73411ecc329e577519ad3a9a18c69}} 
+\index{base::Utils@{base::Utils}!StringToStringVector@{StringToStringVector}}
+\index{StringToStringVector@{StringToStringVector}!base::Utils@{base::Utils}}
+\doxysubsubsection{\texorpdfstring{StringToStringVector()}{StringToStringVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ base\+::\+Utils\+::\+String\+To\+String\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{string,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/base/\mbox{\hyperlink{Utils_8h}{Utils.\+h}}\item 
+src/base/\mbox{\hyperlink{Utils_8cpp}{Utils.\+cpp}}\end{DoxyCompactItemize}

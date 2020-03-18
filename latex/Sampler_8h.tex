@@ -1,0 +1,62 @@
+\hypertarget{Sampler_8h}{}\doxysection{src/sampler/\+Sampler.h File Reference}
+\label{Sampler_8h}\index{src/sampler/Sampler.h@{src/sampler/Sampler.h}}
+{\ttfamily \#include $<$boost/archive/text\+\_\+oarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/text\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/binary\+\_\+oarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/binary\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/base\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/vector.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/utility.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/complex.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/shared\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/split\+\_\+member.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}../base/\+Eigen\+Serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}../base/\+Eigen\+Matrices.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../base/\+Random\+Distributions.\+h\char`\"{}}\newline
+Include dependency graph for Sampler.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Sampler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Sampler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1SamplerData}{sampler\+::\+Sampler\+Data}}
+\item 
+class \mbox{\hyperlink{classsampler_1_1Sampler}{sampler\+::\+Sampler}}
+\item 
+class \mbox{\hyperlink{classsampler_1_1KernelSampler}{sampler\+::\+Kernel\+Sampler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesampler}{sampler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ double(const std\+::vector$<$ double $>$ \&)$>$ \mbox{\hyperlink{namespacesampler_a2db28d4dbee5f1969a28890091d6c40f}{sampler\+::\+Log\+Likelihod\+Eval\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Log\+Likelihod\+Eval\+Fct $>$ \mbox{\hyperlink{namespacesampler_ae78b846fc0bf0af368f1b6a08dc0026b}{sampler\+::\+Log\+Likelihod\+Eval\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Sampler\+Data $>$ \mbox{\hyperlink{namespacesampler_aba106ae1e8e74140f2302c051ba19287}{sampler\+::\+Sampler\+Data\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Sampler $>$ \mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Kernel\+Sampler $>$ \mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{sampler\+::\+Kernel\+Sampler\+\_\+ptr}}
+\end{DoxyCompactItemize}

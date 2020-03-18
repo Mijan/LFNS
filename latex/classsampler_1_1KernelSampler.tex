@@ -1,0 +1,132 @@
+\hypertarget{classsampler_1_1KernelSampler}{}\doxysection{sampler\+::Kernel\+Sampler Class Reference}
+\label{classsampler_1_1KernelSampler}\index{sampler::KernelSampler@{sampler::KernelSampler}}
+
+
+{\ttfamily \#include $<$Sampler.\+h$>$}
+
+
+
+Inheritance diagram for sampler\+::Kernel\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsampler_1_1KernelSampler__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsampler_1_1KernelSampler_a7cf29d6e27b83586d891b48a2694ed8f}{$\sim$\+Kernel\+Sampler}} ()
+\item 
+virtual std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classsampler_1_1KernelSampler_a397746d95cd57a2fbc82f0a17828b988}{sample}} (const std\+::vector$<$ double $>$ \&kernel\+\_\+center)=0
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1KernelSampler_adcb092e3e513b6f9969f862a6ce16ccc}{sample}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&sample, const std\+::vector$<$ double $>$ \&kernel\+\_\+center)=0
+\item 
+virtual double \mbox{\hyperlink{classsampler_1_1KernelSampler_a42c0e12dec71e5f103688eebb035dc59}{get\+Log\+Likelihood}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{classsampler_1_1KernelSampler_a397746d95cd57a2fbc82f0a17828b988}{sample}}, const std\+::vector$<$ double $>$ \&kernel\+\_\+center)=0
+\item 
+virtual double \mbox{\hyperlink{classsampler_1_1KernelSampler_acc549f1ffaa68223df10a399b4c41939}{get\+Log\+Likelihood}} (const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&\mbox{\hyperlink{classsampler_1_1KernelSampler_a397746d95cd57a2fbc82f0a17828b988}{sample}}, const std\+::vector$<$ double $>$ \&kernel\+\_\+center)=0
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1KernelSampler_a973c1940be550a923bc57c0b3fac4162}{update\+Kernel}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples)=0
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1KernelSampler_a49e151fd5ae9528cf9de0fbc229dd633}{write\+To\+Stream}} (std\+::ostream \&stream)=0
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classsampler_1_1KernelSampler_ab146519bbd32b3ef192e0ce8cf1ea0d8}{serialize}} (Archive \&ar, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1KernelSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_a7cf29d6e27b83586d891b48a2694ed8f}\label{classsampler_1_1KernelSampler_a7cf29d6e27b83586d891b48a2694ed8f}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!````~KernelSampler@{$\sim$KernelSampler}}
+\index{````~KernelSampler@{$\sim$KernelSampler}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{$\sim$KernelSampler()}{~KernelSampler()}}
+{\footnotesize\ttfamily virtual sampler\+::\+Kernel\+Sampler\+::$\sim$\+Kernel\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_acc549f1ffaa68223df10a399b4c41939}\label{classsampler_1_1KernelSampler_acc549f1ffaa68223df10a399b4c41939}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!getLogLikelihood@{getLogLikelihood}}
+\index{getLogLikelihood@{getLogLikelihood}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{getLogLikelihood()}{getLogLikelihood()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual double sampler\+::\+Kernel\+Sampler\+::get\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{sample,  }\item[{const std\+::vector$<$ double $>$ \&}]{kernel\+\_\+center }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1GaussianSampler_a3f2979b10f076134796988b8f865e9a4}{sampler\+::\+Gaussian\+Sampler}}, and \mbox{\hyperlink{classsampler_1_1UniformSampler_a886e8e620bb1d170ed3b6ed9889e54b2}{sampler\+::\+Uniform\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_a42c0e12dec71e5f103688eebb035dc59}\label{classsampler_1_1KernelSampler_a42c0e12dec71e5f103688eebb035dc59}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!getLogLikelihood@{getLogLikelihood}}
+\index{getLogLikelihood@{getLogLikelihood}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{getLogLikelihood()}{getLogLikelihood()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual double sampler\+::\+Kernel\+Sampler\+::get\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{sample,  }\item[{const std\+::vector$<$ double $>$ \&}]{kernel\+\_\+center }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1GaussianSampler_a95d3ffc5ce890bc08f6292325570f44d}{sampler\+::\+Gaussian\+Sampler}}, and \mbox{\hyperlink{classsampler_1_1UniformSampler_a75b9e0128655d5ab949dc242ac2c9d60}{sampler\+::\+Uniform\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_adcb092e3e513b6f9969f862a6ce16ccc}\label{classsampler_1_1KernelSampler_adcb092e3e513b6f9969f862a6ce16ccc}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!sample@{sample}}
+\index{sample@{sample}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{sample()}{sample()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void sampler\+::\+Kernel\+Sampler\+::sample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{sample,  }\item[{const std\+::vector$<$ double $>$ \&}]{kernel\+\_\+center }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1GaussianSampler_a44705d78b3473aaac4273065231ecb2d}{sampler\+::\+Gaussian\+Sampler}}, and \mbox{\hyperlink{classsampler_1_1UniformSampler_ad07003f74572a018a25c856b23572db3}{sampler\+::\+Uniform\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_a397746d95cd57a2fbc82f0a17828b988}\label{classsampler_1_1KernelSampler_a397746d95cd57a2fbc82f0a17828b988}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!sample@{sample}}
+\index{sample@{sample}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{sample()}{sample()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$\& sampler\+::\+Kernel\+Sampler\+::sample (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{kernel\+\_\+center }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1GaussianSampler_ae7c1c2951547cf29aa26466bd3b65d44}{sampler\+::\+Gaussian\+Sampler}}, and \mbox{\hyperlink{classsampler_1_1UniformSampler_a5f6e3364608e3d00ed77c47d5e9c205a}{sampler\+::\+Uniform\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_ab146519bbd32b3ef192e0ce8cf1ea0d8}\label{classsampler_1_1KernelSampler_ab146519bbd32b3ef192e0ce8cf1ea0d8}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!serialize@{serialize}}
+\index{serialize@{serialize}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void sampler\+::\+Kernel\+Sampler\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_a973c1940be550a923bc57c0b3fac4162}\label{classsampler_1_1KernelSampler_a973c1940be550a923bc57c0b3fac4162}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!updateKernel@{updateKernel}}
+\index{updateKernel@{updateKernel}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{updateKernel()}{updateKernel()}}
+{\footnotesize\ttfamily virtual void sampler\+::\+Kernel\+Sampler\+::update\+Kernel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1GaussianSampler_ab57af188615185038ac4d5625a5dc1ef}{sampler\+::\+Gaussian\+Sampler}}, and \mbox{\hyperlink{classsampler_1_1UniformSampler_a148f58474bc026152af74cdf7c374cf1}{sampler\+::\+Uniform\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_a49e151fd5ae9528cf9de0fbc229dd633}\label{classsampler_1_1KernelSampler_a49e151fd5ae9528cf9de0fbc229dd633}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!writeToStream@{writeToStream}}
+\index{writeToStream@{writeToStream}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{writeToStream()}{writeToStream()}}
+{\footnotesize\ttfamily virtual void sampler\+::\+Kernel\+Sampler\+::write\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1GaussianSampler_aa986e7174ce6364a4e0fa57925de2656}{sampler\+::\+Gaussian\+Sampler}}, and \mbox{\hyperlink{classsampler_1_1UniformSampler_a9c114a0ca5d5fe6f23045b73ca215886}{sampler\+::\+Uniform\+Sampler}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classsampler_1_1KernelSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{sampler::KernelSampler@{sampler::KernelSampler}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!sampler::KernelSampler@{sampler::KernelSampler}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/sampler/\mbox{\hyperlink{Sampler_8h}{Sampler.\+h}}\end{DoxyCompactItemize}

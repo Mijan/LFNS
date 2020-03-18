@@ -1,0 +1,47 @@
+\hypertarget{ChemicalReactionNetwork_8h}{}\doxysection{src/models/\+Chemical\+Reaction\+Network.h File Reference}
+\label{ChemicalReactionNetwork_8h}\index{src/models/ChemicalReactionNetwork.h@{src/models/ChemicalReactionNetwork.h}}
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}Parser\+Base\+Object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Model\+Reaction\+Data.\+h\char`\"{}}\newline
+Include dependency graph for Chemical\+Reaction\+Network.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ChemicalReactionNetwork_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ChemicalReactionNetwork_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork}{models\+::\+Chemical\+Reaction\+Network}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemodels}{models}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ \&propensities, std\+::vector$<$ double $>$ \&state, double t)$>$ \mbox{\hyperlink{namespacemodels_ad9f1d5c0c701e1c19be584073fd27106}{models\+::\+Propensity\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Propensity\+Fct $>$ \mbox{\hyperlink{namespacemodels_acda160e6ee95b4f58f5cdfdcc54c7658}{models\+::\+Propensity\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ \&state, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} reaction\+\_\+index)$>$ \mbox{\hyperlink{namespacemodels_afda84385ba72a610401cb0971b977349}{models\+::\+Reaction\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Reaction\+Fct $>$ \mbox{\hyperlink{namespacemodels_a3ece1335ccdfcc83fd0f8c0d4a094383}{models\+::\+Reaction\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(double $\ast$dx, const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacemodels_afbdfb3cd38ee5178a7c9cef73855242d}{models\+::\+Rhs\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Rhs\+Fct $>$ \mbox{\hyperlink{namespacemodels_abf7d50a7bfdaf23ec8d289f279b696c1}{models\+::\+Rhs\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Chemical\+Reaction\+Network $>$ \mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{models\+::\+Chemical\+Reaction\+Network\+\_\+ptr}}
+\end{DoxyCompactItemize}

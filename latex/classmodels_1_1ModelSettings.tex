@@ -1,0 +1,111 @@
+\hypertarget{classmodels_1_1ModelSettings}{}\doxysection{models\+::Model\+Settings Class Reference}
+\label{classmodels_1_1ModelSettings}\index{models::ModelSettings@{models::ModelSettings}}
+
+
+{\ttfamily \#include $<$Model\+Settings.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1ModelSettings_a17a21e0d0a226e4ae660bd4e4d7c35c6}{get\+Unfixed\+Parameters}} () const
+\item 
+void \mbox{\hyperlink{classmodels_1_1ModelSettings_a75557ca231a80ff00b049e0f54753e00}{print}} (std\+::ostream \&stream)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::vector$<$ \mbox{\hyperlink{structmodels_1_1InputData}{models\+::\+Input\+Data}} $>$ $>$ \mbox{\hyperlink{classmodels_1_1ModelSettings_acb8049b2834973658e873cedb7544e48}{input\+\_\+datas}} = \{\}
+\item 
+\mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{classmodels_1_1ModelSettings_ab5815d011e7ca8766daef5ef388d75cf}{model\+\_\+type}}
+\item 
+std\+::map$<$ std\+::string, double $>$ \mbox{\hyperlink{classmodels_1_1ModelSettings_a8655f68a9175b7bf2a0ee85c21a6347b}{fixed\+\_\+parameters}} = \{\}
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1ModelSettings_a22e121226430c75863cc819c1b2e80b9}{model\+\_\+file}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1ModelSettings_adbe2b553c0cdbe55c4a4b33fb82d4b8c}{initial\+\_\+value\+\_\+file}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1ModelSettings_aaac1b315be539e3a94423f5faf9bd21f}{measurement\+\_\+file}} = \char`\"{}\char`\"{}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1ModelSettings_a46cd4271119edbc429d8ed0e0e00aac5}{param\+\_\+names}} = \{\}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1ModelSettings_aaf086821ce3f7b79c55f75b94d642b1d}{det\+\_\+species\+\_\+names}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1ModelSettings_a6596c8111b8ade152bc161a980ea7ca8}{stoch\+\_\+species\+\_\+names}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_a17a21e0d0a226e4ae660bd4e4d7c35c6}\label{classmodels_1_1ModelSettings_a17a21e0d0a226e4ae660bd4e4d7c35c6}} 
+\index{models::ModelSettings@{models::ModelSettings}!getUnfixedParameters@{getUnfixedParameters}}
+\index{getUnfixedParameters@{getUnfixedParameters}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{getUnfixedParameters()}{getUnfixedParameters()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Model\+Settings\+::get\+Unfixed\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_a75557ca231a80ff00b049e0f54753e00}\label{classmodels_1_1ModelSettings_a75557ca231a80ff00b049e0f54753e00}} 
+\index{models::ModelSettings@{models::ModelSettings}!print@{print}}
+\index{print@{print}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void models\+::\+Model\+Settings\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_aaf086821ce3f7b79c55f75b94d642b1d}\label{classmodels_1_1ModelSettings_aaf086821ce3f7b79c55f75b94d642b1d}} 
+\index{models::ModelSettings@{models::ModelSettings}!det\_species\_names@{det\_species\_names}}
+\index{det\_species\_names@{det\_species\_names}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{det\_species\_names}{det\_species\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Model\+Settings\+::det\+\_\+species\+\_\+names}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_a8655f68a9175b7bf2a0ee85c21a6347b}\label{classmodels_1_1ModelSettings_a8655f68a9175b7bf2a0ee85c21a6347b}} 
+\index{models::ModelSettings@{models::ModelSettings}!fixed\_parameters@{fixed\_parameters}}
+\index{fixed\_parameters@{fixed\_parameters}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{fixed\_parameters}{fixed\_parameters}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, double$>$ models\+::\+Model\+Settings\+::fixed\+\_\+parameters = \{\}}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_adbe2b553c0cdbe55c4a4b33fb82d4b8c}\label{classmodels_1_1ModelSettings_adbe2b553c0cdbe55c4a4b33fb82d4b8c}} 
+\index{models::ModelSettings@{models::ModelSettings}!initial\_value\_file@{initial\_value\_file}}
+\index{initial\_value\_file@{initial\_value\_file}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{initial\_value\_file}{initial\_value\_file}}
+{\footnotesize\ttfamily std\+::string models\+::\+Model\+Settings\+::initial\+\_\+value\+\_\+file = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_acb8049b2834973658e873cedb7544e48}\label{classmodels_1_1ModelSettings_acb8049b2834973658e873cedb7544e48}} 
+\index{models::ModelSettings@{models::ModelSettings}!input\_datas@{input\_datas}}
+\index{input\_datas@{input\_datas}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{input\_datas}{input\_datas}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::vector$<$\mbox{\hyperlink{structmodels_1_1InputData}{models\+::\+Input\+Data}}$>$ $>$ models\+::\+Model\+Settings\+::input\+\_\+datas = \{\}}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_aaac1b315be539e3a94423f5faf9bd21f}\label{classmodels_1_1ModelSettings_aaac1b315be539e3a94423f5faf9bd21f}} 
+\index{models::ModelSettings@{models::ModelSettings}!measurement\_file@{measurement\_file}}
+\index{measurement\_file@{measurement\_file}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{measurement\_file}{measurement\_file}}
+{\footnotesize\ttfamily std\+::string models\+::\+Model\+Settings\+::measurement\+\_\+file = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_a22e121226430c75863cc819c1b2e80b9}\label{classmodels_1_1ModelSettings_a22e121226430c75863cc819c1b2e80b9}} 
+\index{models::ModelSettings@{models::ModelSettings}!model\_file@{model\_file}}
+\index{model\_file@{model\_file}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{model\_file}{model\_file}}
+{\footnotesize\ttfamily std\+::string models\+::\+Model\+Settings\+::model\+\_\+file = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_ab5815d011e7ca8766daef5ef388d75cf}\label{classmodels_1_1ModelSettings_ab5815d011e7ca8766daef5ef388d75cf}} 
+\index{models::ModelSettings@{models::ModelSettings}!model\_type@{model\_type}}
+\index{model\_type@{model\_type}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{model\_type}{model\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}} models\+::\+Model\+Settings\+::model\+\_\+type}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_a46cd4271119edbc429d8ed0e0e00aac5}\label{classmodels_1_1ModelSettings_a46cd4271119edbc429d8ed0e0e00aac5}} 
+\index{models::ModelSettings@{models::ModelSettings}!param\_names@{param\_names}}
+\index{param\_names@{param\_names}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{param\_names}{param\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Model\+Settings\+::param\+\_\+names = \{\}}
+
+\mbox{\Hypertarget{classmodels_1_1ModelSettings_a6596c8111b8ade152bc161a980ea7ca8}\label{classmodels_1_1ModelSettings_a6596c8111b8ade152bc161a980ea7ca8}} 
+\index{models::ModelSettings@{models::ModelSettings}!stoch\_species\_names@{stoch\_species\_names}}
+\index{stoch\_species\_names@{stoch\_species\_names}!models::ModelSettings@{models::ModelSettings}}
+\doxysubsubsection{\texorpdfstring{stoch\_species\_names}{stoch\_species\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Model\+Settings\+::stoch\+\_\+species\+\_\+names}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{ModelSettings_8h}{Model\+Settings.\+h}}\end{DoxyCompactItemize}

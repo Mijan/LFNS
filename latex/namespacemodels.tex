@@ -1,0 +1,319 @@
+\hypertarget{namespacemodels}{}\doxysection{models Namespace Reference}
+\label{namespacemodels}\index{models@{models}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}}
+\begin{DoxyCompactList}\small\item\em The base data needed for constructing the base objects. It requires a list of parameters and a list of species names. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}}
+\item 
+class \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork}{Chemical\+Reaction\+Network}}
+\item 
+class \mbox{\hyperlink{classmodels_1_1FullModel}{Full\+Model}}
+\item 
+class \mbox{\hyperlink{classmodels_1_1InitialValueData}{Initial\+Value\+Data}}
+\begin{DoxyCompactList}\small\item\em This class contains all the data that can be read from the initial value file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodels_1_1InitialValueProvider}{Initial\+Value\+Provider}}
+\begin{DoxyCompactList}\small\item\em This class provides a means to compute the initial state for a particular model. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmodels_1_1InputData}{Input\+Data}}
+\begin{DoxyCompactList}\small\item\em The data defining each \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}}
+\item 
+struct \mbox{\hyperlink{structmodels_1_1InputPulses}{Input\+Pulses}}
+\begin{DoxyCompactList}\small\item\em A collection of multiple \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} objects with some convenience functions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodels_1_1MeasurementModel}{Measurement\+Model}}
+\item 
+class \mbox{\hyperlink{classmodels_1_1MeasurementModelData}{Measurement\+Model\+Data}}
+\begin{DoxyCompactList}\small\item\em This class contains all the data that can be read from the measurement model sfile. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodels_1_1ModelException}{Model\+Exception}}
+\item 
+class \mbox{\hyperlink{classmodels_1_1ModelReactionData}{Model\+Reaction\+Data}}
+\begin{DoxyCompactList}\small\item\em This class contains all the data that can be read from the model dynamics file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodels_1_1ModelSettings}{Model\+Settings}}
+\item 
+class \mbox{\hyperlink{classmodels_1_1ParserBaseObject}{Parser\+Base\+Object}}
+\begin{DoxyCompactList}\small\item\em This class extends the \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} to be parsed from a file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} $>$ \mbox{\hyperlink{namespacemodels_ab37b09e02c5326dee2b521bf406d636e}{Base\+Data\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} $>$ \mbox{\hyperlink{namespacemodels_a385af4ab2249a8140b677eb0215a808b}{Base\+Object\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ \&propensities, std\+::vector$<$ double $>$ \&state, double t)$>$ \mbox{\hyperlink{namespacemodels_ad9f1d5c0c701e1c19be584073fd27106}{Propensity\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_ad9f1d5c0c701e1c19be584073fd27106}{Propensity\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_acda160e6ee95b4f58f5cdfdcc54c7658}{Propensity\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ \&state, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} reaction\+\_\+index)$>$ \mbox{\hyperlink{namespacemodels_afda84385ba72a610401cb0971b977349}{Reaction\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_afda84385ba72a610401cb0971b977349}{Reaction\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_a3ece1335ccdfcc83fd0f8c0d4a094383}{Reaction\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(double $\ast$dx, const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacemodels_afbdfb3cd38ee5178a7c9cef73855242d}{Rhs\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_afbdfb3cd38ee5178a7c9cef73855242d}{Rhs\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_abf7d50a7bfdaf23ec8d289f279b696c1}{Rhs\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork}{Chemical\+Reaction\+Network}} $>$ \mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{Chemical\+Reaction\+Network\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(const std\+::vector$<$ double $>$ \&theta)$>$ \mbox{\hyperlink{namespacemodels_aa571640a66133de8b53be86502442fcd}{Set\+Parameter\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_aa571640a66133de8b53be86502442fcd}{Set\+Parameter\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_a38a7dcebb0f7d38b15eb80570539c1b5}{Set\+Parameter\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ double(const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacemodels_a092c1b2484e41b5c785f5e6f5840cda0}{Root\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_a092c1b2484e41b5c785f5e6f5840cda0}{Root\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_a5e8cc9239db7be5bf7f7f47c5c2bbd48}{Root\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1FullModel}{Full\+Model}} $>$ \mbox{\hyperlink{namespacemodels_a14889aeb5f3d23dbb7c96c0f5e0b8b93}{Full\+Model\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ $\ast$state\+\_\+0, double $\ast$t\+\_\+0)$>$ \mbox{\hyperlink{namespacemodels_a5a02592bfb63dab678973756ae62b514}{Initial\+State\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_a5a02592bfb63dab678973756ae62b514}{Initial\+State\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_a9c2a931d33de5b784ef3faa14e27cf7c}{Initial\+State\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1InitialValueProvider}{Initial\+Value\+Provider}} $>$ \mbox{\hyperlink{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}{Initial\+Value\+Provider\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ double(const std\+::vector$<$ double $>$ \&state, const std\+::vector$<$ double $>$ \&data, double t)$>$ \mbox{\hyperlink{namespacemodels_a315072740d488241d92112923882c33c}{Likelihood\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_a315072740d488241d92112923882c33c}{Likelihood\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_aca2840f2b93c75087ce2ac7e33ac8e90}{Likelihood\+Fct\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(std\+::vector$<$ double $>$ $\ast$measurement, const std\+::vector$<$ double $>$ \&state, double t)$>$ \mbox{\hyperlink{namespacemodels_a4328256d47a0873c4ddabeaa0a6f74e0}{Measurement\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_a4328256d47a0873c4ddabeaa0a6f74e0}{Measurement\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_a5f1b891e949b36e6145ec03382bfa6dd}{Measurement\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1MeasurementModel}{Measurement\+Model}} $>$ \mbox{\hyperlink{namespacemodels_a61e4da4435717b9a02649d8897878c25}{Measurement\+Model\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1ModelReactionData}{Model\+Reaction\+Data}} $>$ \mbox{\hyperlink{namespacemodels_a8cd2592a8506ffacd324d17085290c99}{Model\+Data\+\_\+ptr}}
+\item 
+typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$ void(const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacemodels_a276e832674e0c2a3b148d6d1b723faeb}{Perturbation\+Fct}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemodels_a276e832674e0c2a3b148d6d1b723faeb}{Perturbation\+Fct}} $>$ \mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject}{Parser\+Base\+Object}} $>$ \mbox{\hyperlink{namespacemodels_aae757a57f690c52fef8c3ace1ed397d1}{Parser\+Base\+Object\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}} \{ \mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3da96f459e16830e7d7620bdbd8cfe660b7}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+P\+E\+::\+O\+DE}}, 
+\mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3dae9f86437641bd9af89232198e8964f26}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+P\+E\+::\+S\+T\+O\+CH}}, 
+\mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3da3bf07fe8ac3883060b1558113ba248d4}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+P\+E\+::\+H\+Y\+B\+R\+ID}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const static std\+::string \mbox{\hyperlink{namespacemodels_ad2c4a87413147a1c930c3b27d51dc2a3}{T\+I\+M\+E\+\_\+\+N\+A\+ME}} = \char`\"{}\+\_\+t\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacemodels_afc2952dc62cd5c7cf6cd16ce878cc274}{M\+A\+S\+S\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME}} = \char`\"{}\#ma\char`\"{}
+\item 
+static std\+::map$<$ std\+::string, \mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}} $>$ \mbox{\hyperlink{namespacemodels_afecc5e87259f57cd2444441e147a3912}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+ME}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacemodels_ab37b09e02c5326dee2b521bf406d636e}\label{namespacemodels_ab37b09e02c5326dee2b521bf406d636e}} 
+\index{models@{models}!BaseData\_ptr@{BaseData\_ptr}}
+\index{BaseData\_ptr@{BaseData\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{BaseData\_ptr}{BaseData\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}}$>$ \mbox{\hyperlink{namespacemodels_ab37b09e02c5326dee2b521bf406d636e}{models\+::\+Base\+Data\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a385af4ab2249a8140b677eb0215a808b}\label{namespacemodels_a385af4ab2249a8140b677eb0215a808b}} 
+\index{models@{models}!BaseObject\_ptr@{BaseObject\_ptr}}
+\index{BaseObject\_ptr@{BaseObject\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{BaseObject\_ptr}{BaseObject\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}}$>$ \mbox{\hyperlink{namespacemodels_a385af4ab2249a8140b677eb0215a808b}{models\+::\+Base\+Object\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}\label{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}} 
+\index{models@{models}!ChemicalReactionNetwork\_ptr@{ChemicalReactionNetwork\_ptr}}
+\index{ChemicalReactionNetwork\_ptr@{ChemicalReactionNetwork\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{ChemicalReactionNetwork\_ptr}{ChemicalReactionNetwork\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork}{Chemical\+Reaction\+Network}}$>$ \mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{models\+::\+Chemical\+Reaction\+Network\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a14889aeb5f3d23dbb7c96c0f5e0b8b93}\label{namespacemodels_a14889aeb5f3d23dbb7c96c0f5e0b8b93}} 
+\index{models@{models}!FullModel\_ptr@{FullModel\_ptr}}
+\index{FullModel\_ptr@{FullModel\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{FullModel\_ptr}{FullModel\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1FullModel}{Full\+Model}}$>$ \mbox{\hyperlink{namespacemodels_a14889aeb5f3d23dbb7c96c0f5e0b8b93}{models\+::\+Full\+Model\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a5a02592bfb63dab678973756ae62b514}\label{namespacemodels_a5a02592bfb63dab678973756ae62b514}} 
+\index{models@{models}!InitialStateFct@{InitialStateFct}}
+\index{InitialStateFct@{InitialStateFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{InitialStateFct}{InitialStateFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(std\+::vector$<$double$>$ $\ast$state\+\_\+0, double $\ast$t\+\_\+0)$>$ \mbox{\hyperlink{namespacemodels_a5a02592bfb63dab678973756ae62b514}{models\+::\+Initial\+State\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_a9c2a931d33de5b784ef3faa14e27cf7c}\label{namespacemodels_a9c2a931d33de5b784ef3faa14e27cf7c}} 
+\index{models@{models}!InitialStateFct\_ptr@{InitialStateFct\_ptr}}
+\index{InitialStateFct\_ptr@{InitialStateFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{InitialStateFct\_ptr}{InitialStateFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_a5a02592bfb63dab678973756ae62b514}{Initial\+State\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_a9c2a931d33de5b784ef3faa14e27cf7c}{models\+::\+Initial\+State\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}\label{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}} 
+\index{models@{models}!InitialValueProvider\_ptr@{InitialValueProvider\_ptr}}
+\index{InitialValueProvider\_ptr@{InitialValueProvider\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{InitialValueProvider\_ptr}{InitialValueProvider\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1InitialValueProvider}{Initial\+Value\+Provider}}$>$ \mbox{\hyperlink{namespacemodels_af9657cbc5f71520fdff9749a1ce60641}{models\+::\+Initial\+Value\+Provider\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a315072740d488241d92112923882c33c}\label{namespacemodels_a315072740d488241d92112923882c33c}} 
+\index{models@{models}!LikelihoodFct@{LikelihoodFct}}
+\index{LikelihoodFct@{LikelihoodFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{LikelihoodFct}{LikelihoodFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$double(const std\+::vector$<$double$>$ \&state, const std\+::vector$<$double$>$ \&data, double t)$>$ \mbox{\hyperlink{namespacemodels_a315072740d488241d92112923882c33c}{models\+::\+Likelihood\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_aca2840f2b93c75087ce2ac7e33ac8e90}\label{namespacemodels_aca2840f2b93c75087ce2ac7e33ac8e90}} 
+\index{models@{models}!LikelihoodFct\_ptr@{LikelihoodFct\_ptr}}
+\index{LikelihoodFct\_ptr@{LikelihoodFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{LikelihoodFct\_ptr}{LikelihoodFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_a315072740d488241d92112923882c33c}{Likelihood\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_aca2840f2b93c75087ce2ac7e33ac8e90}{models\+::\+Likelihood\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a4328256d47a0873c4ddabeaa0a6f74e0}\label{namespacemodels_a4328256d47a0873c4ddabeaa0a6f74e0}} 
+\index{models@{models}!MeasurementFct@{MeasurementFct}}
+\index{MeasurementFct@{MeasurementFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{MeasurementFct}{MeasurementFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(std\+::vector$<$double$>$ $\ast$measurement, const std\+::vector$<$double$>$ \&state, double t)$>$ \mbox{\hyperlink{namespacemodels_a4328256d47a0873c4ddabeaa0a6f74e0}{models\+::\+Measurement\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_a5f1b891e949b36e6145ec03382bfa6dd}\label{namespacemodels_a5f1b891e949b36e6145ec03382bfa6dd}} 
+\index{models@{models}!MeasurementFct\_ptr@{MeasurementFct\_ptr}}
+\index{MeasurementFct\_ptr@{MeasurementFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{MeasurementFct\_ptr}{MeasurementFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_a4328256d47a0873c4ddabeaa0a6f74e0}{Measurement\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_a5f1b891e949b36e6145ec03382bfa6dd}{models\+::\+Measurement\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a61e4da4435717b9a02649d8897878c25}\label{namespacemodels_a61e4da4435717b9a02649d8897878c25}} 
+\index{models@{models}!MeasurementModel\_ptr@{MeasurementModel\_ptr}}
+\index{MeasurementModel\_ptr@{MeasurementModel\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{MeasurementModel\_ptr}{MeasurementModel\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1MeasurementModel}{Measurement\+Model}}$>$ \mbox{\hyperlink{namespacemodels_a61e4da4435717b9a02649d8897878c25}{models\+::\+Measurement\+Model\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a8cd2592a8506ffacd324d17085290c99}\label{namespacemodels_a8cd2592a8506ffacd324d17085290c99}} 
+\index{models@{models}!ModelData\_ptr@{ModelData\_ptr}}
+\index{ModelData\_ptr@{ModelData\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{ModelData\_ptr}{ModelData\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1ModelReactionData}{Model\+Reaction\+Data}}$>$ \mbox{\hyperlink{namespacemodels_a8cd2592a8506ffacd324d17085290c99}{models\+::\+Model\+Data\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_aae757a57f690c52fef8c3ace1ed397d1}\label{namespacemodels_aae757a57f690c52fef8c3ace1ed397d1}} 
+\index{models@{models}!ParserBaseObject\_ptr@{ParserBaseObject\_ptr}}
+\index{ParserBaseObject\_ptr@{ParserBaseObject\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{ParserBaseObject\_ptr}{ParserBaseObject\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmodels_1_1ParserBaseObject}{Parser\+Base\+Object}}$>$ \mbox{\hyperlink{namespacemodels_aae757a57f690c52fef8c3ace1ed397d1}{models\+::\+Parser\+Base\+Object\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a276e832674e0c2a3b148d6d1b723faeb}\label{namespacemodels_a276e832674e0c2a3b148d6d1b723faeb}} 
+\index{models@{models}!PerturbationFct@{PerturbationFct}}
+\index{PerturbationFct@{PerturbationFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{PerturbationFct}{PerturbationFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(const double$\ast$ state, double t)$>$ \mbox{\hyperlink{namespacemodels_a276e832674e0c2a3b148d6d1b723faeb}{models\+::\+Perturbation\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}\label{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}} 
+\index{models@{models}!PerturbationFct\_ptr@{PerturbationFct\_ptr}}
+\index{PerturbationFct\_ptr@{PerturbationFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{PerturbationFct\_ptr}{PerturbationFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_a276e832674e0c2a3b148d6d1b723faeb}{Perturbation\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{models\+::\+Perturbation\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_ad9f1d5c0c701e1c19be584073fd27106}\label{namespacemodels_ad9f1d5c0c701e1c19be584073fd27106}} 
+\index{models@{models}!PropensityFct@{PropensityFct}}
+\index{PropensityFct@{PropensityFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{PropensityFct}{PropensityFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(std\+::vector$<$double$>$ \&propensities, std\+::vector$<$double$>$ \&state, double t)$>$ \mbox{\hyperlink{namespacemodels_ad9f1d5c0c701e1c19be584073fd27106}{models\+::\+Propensity\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_acda160e6ee95b4f58f5cdfdcc54c7658}\label{namespacemodels_acda160e6ee95b4f58f5cdfdcc54c7658}} 
+\index{models@{models}!PropensityFct\_ptr@{PropensityFct\_ptr}}
+\index{PropensityFct\_ptr@{PropensityFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{PropensityFct\_ptr}{PropensityFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_ad9f1d5c0c701e1c19be584073fd27106}{Propensity\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_acda160e6ee95b4f58f5cdfdcc54c7658}{models\+::\+Propensity\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_afda84385ba72a610401cb0971b977349}\label{namespacemodels_afda84385ba72a610401cb0971b977349}} 
+\index{models@{models}!ReactionFct@{ReactionFct}}
+\index{ReactionFct@{ReactionFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{ReactionFct}{ReactionFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(std\+::vector$<$double$>$ \&state, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} reaction\+\_\+index)$>$ \mbox{\hyperlink{namespacemodels_afda84385ba72a610401cb0971b977349}{models\+::\+Reaction\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_a3ece1335ccdfcc83fd0f8c0d4a094383}\label{namespacemodels_a3ece1335ccdfcc83fd0f8c0d4a094383}} 
+\index{models@{models}!ReactionFct\_ptr@{ReactionFct\_ptr}}
+\index{ReactionFct\_ptr@{ReactionFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{ReactionFct\_ptr}{ReactionFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_afda84385ba72a610401cb0971b977349}{Reaction\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_a3ece1335ccdfcc83fd0f8c0d4a094383}{models\+::\+Reaction\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_afbdfb3cd38ee5178a7c9cef73855242d}\label{namespacemodels_afbdfb3cd38ee5178a7c9cef73855242d}} 
+\index{models@{models}!RhsFct@{RhsFct}}
+\index{RhsFct@{RhsFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{RhsFct}{RhsFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(double $\ast$dx, const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacemodels_afbdfb3cd38ee5178a7c9cef73855242d}{models\+::\+Rhs\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_abf7d50a7bfdaf23ec8d289f279b696c1}\label{namespacemodels_abf7d50a7bfdaf23ec8d289f279b696c1}} 
+\index{models@{models}!RhsFct\_ptr@{RhsFct\_ptr}}
+\index{RhsFct\_ptr@{RhsFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{RhsFct\_ptr}{RhsFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_afbdfb3cd38ee5178a7c9cef73855242d}{Rhs\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_abf7d50a7bfdaf23ec8d289f279b696c1}{models\+::\+Rhs\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_a092c1b2484e41b5c785f5e6f5840cda0}\label{namespacemodels_a092c1b2484e41b5c785f5e6f5840cda0}} 
+\index{models@{models}!RootFct@{RootFct}}
+\index{RootFct@{RootFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{RootFct}{RootFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$double(const double $\ast$state, double t)$>$ \mbox{\hyperlink{namespacemodels_a092c1b2484e41b5c785f5e6f5840cda0}{models\+::\+Root\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_a5e8cc9239db7be5bf7f7f47c5c2bbd48}\label{namespacemodels_a5e8cc9239db7be5bf7f7f47c5c2bbd48}} 
+\index{models@{models}!RootFct\_ptr@{RootFct\_ptr}}
+\index{RootFct\_ptr@{RootFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{RootFct\_ptr}{RootFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_a092c1b2484e41b5c785f5e6f5840cda0}{Root\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_a5e8cc9239db7be5bf7f7f47c5c2bbd48}{models\+::\+Root\+Fct\+\_\+ptr}}}
+
+\mbox{\Hypertarget{namespacemodels_aa571640a66133de8b53be86502442fcd}\label{namespacemodels_aa571640a66133de8b53be86502442fcd}} 
+\index{models@{models}!SetParameterFct@{SetParameterFct}}
+\index{SetParameterFct@{SetParameterFct}!models@{models}}
+\doxysubsubsection{\texorpdfstring{SetParameterFct}{SetParameterFct}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{std\+::function}}$<$void(const std\+::vector$<$double$>$ \&theta)$>$ \mbox{\hyperlink{namespacemodels_aa571640a66133de8b53be86502442fcd}{models\+::\+Set\+Parameter\+Fct}}}
+
+\mbox{\Hypertarget{namespacemodels_a38a7dcebb0f7d38b15eb80570539c1b5}\label{namespacemodels_a38a7dcebb0f7d38b15eb80570539c1b5}} 
+\index{models@{models}!SetParameterFct\_ptr@{SetParameterFct\_ptr}}
+\index{SetParameterFct\_ptr@{SetParameterFct\_ptr}!models@{models}}
+\doxysubsubsection{\texorpdfstring{SetParameterFct\_ptr}{SetParameterFct\_ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemodels_aa571640a66133de8b53be86502442fcd}{Set\+Parameter\+Fct}}$>$ \mbox{\hyperlink{namespacemodels_a38a7dcebb0f7d38b15eb80570539c1b5}{models\+::\+Set\+Parameter\+Fct\+\_\+ptr}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}\label{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}} 
+\index{models@{models}!MODEL\_TYPE@{MODEL\_TYPE}}
+\index{MODEL\_TYPE@{MODEL\_TYPE}!models@{models}}
+\doxysubsubsection{\texorpdfstring{MODEL\_TYPE}{MODEL\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}{models\+::\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ODE@{ODE}!models@{models}}\index{models@{models}!ODE@{ODE}}}\mbox{\Hypertarget{namespacemodels_a85ae8e906cd56333edee106c1f405f3da96f459e16830e7d7620bdbd8cfe660b7}\label{namespacemodels_a85ae8e906cd56333edee106c1f405f3da96f459e16830e7d7620bdbd8cfe660b7}} 
+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOCH@{STOCH}!models@{models}}\index{models@{models}!STOCH@{STOCH}}}\mbox{\Hypertarget{namespacemodels_a85ae8e906cd56333edee106c1f405f3dae9f86437641bd9af89232198e8964f26}\label{namespacemodels_a85ae8e906cd56333edee106c1f405f3dae9f86437641bd9af89232198e8964f26}} 
+S\+T\+O\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HYBRID@{HYBRID}!models@{models}}\index{models@{models}!HYBRID@{HYBRID}}}\mbox{\Hypertarget{namespacemodels_a85ae8e906cd56333edee106c1f405f3da3bf07fe8ac3883060b1558113ba248d4}\label{namespacemodels_a85ae8e906cd56333edee106c1f405f3da3bf07fe8ac3883060b1558113ba248d4}} 
+H\+Y\+B\+R\+ID&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemodels_afc2952dc62cd5c7cf6cd16ce878cc274}\label{namespacemodels_afc2952dc62cd5c7cf6cd16ce878cc274}} 
+\index{models@{models}!MASS\_ACTION\_NAME@{MASS\_ACTION\_NAME}}
+\index{MASS\_ACTION\_NAME@{MASS\_ACTION\_NAME}!models@{models}}
+\doxysubsubsection{\texorpdfstring{MASS\_ACTION\_NAME}{MASS\_ACTION\_NAME}}
+{\footnotesize\ttfamily const std\+::string models\+::\+M\+A\+S\+S\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME = \char`\"{}\#ma\char`\"{}}
+
+\mbox{\Hypertarget{namespacemodels_afecc5e87259f57cd2444441e147a3912}\label{namespacemodels_afecc5e87259f57cd2444441e147a3912}} 
+\index{models@{models}!MODEL\_TYPE\_NAME@{MODEL\_TYPE\_NAME}}
+\index{MODEL\_TYPE\_NAME@{MODEL\_TYPE\_NAME}!models@{models}}
+\doxysubsubsection{\texorpdfstring{MODEL\_TYPE\_NAME}{MODEL\_TYPE\_NAME}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{namespacemodels_a85ae8e906cd56333edee106c1f405f3d}{M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}}$>$ models\+::\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+ME\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\{\textcolor{stringliteral}{"DET"},    MODEL\_TYPE::ODE\},}
+\DoxyCodeLine{                                                                \{\textcolor{stringliteral}{"STOCH"},  MODEL\_TYPE::STOCH\},}
+\DoxyCodeLine{                                                                \{\textcolor{stringliteral}{"HYBRID"}, MODEL\_TYPE::HYBRID\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacemodels_ad2c4a87413147a1c930c3b27d51dc2a3}\label{namespacemodels_ad2c4a87413147a1c930c3b27d51dc2a3}} 
+\index{models@{models}!TIME\_NAME@{TIME\_NAME}}
+\index{TIME\_NAME@{TIME\_NAME}!models@{models}}
+\doxysubsubsection{\texorpdfstring{TIME\_NAME}{TIME\_NAME}}
+{\footnotesize\ttfamily const static std\+::string models\+::\+T\+I\+M\+E\+\_\+\+N\+A\+ME = \char`\"{}\+\_\+t\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

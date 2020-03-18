@@ -1,0 +1,133 @@
+\hypertarget{classMixutreSampler}{}\doxysection{Mixutre\+Sampler Class Reference}
+\label{classMixutreSampler}\index{MixutreSampler@{MixutreSampler}}
+
+
+Inheritance diagram for Mixutre\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classMixutreSampler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mixutre\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classMixutreSampler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMixutreSampler_a9f52565a339bb5ecf3c94dfe98577875}{Mixutre\+Sampler}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set components, \mbox{\hyperlink{classsampler_1_1SamplerData}{sampler\+::\+Sampler\+Data}} data)
+\item 
+virtual \mbox{\hyperlink{classMixutreSampler_ae92b0ee9699116cc92367025ec736865}{$\sim$\+Mixutre\+Sampler}} ()
+\item 
+virtual std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classMixutreSampler_a7fa3c68ca7930bf69a42b3de1fbe3f3a}{sample}} ()
+\item 
+virtual double \mbox{\hyperlink{classMixutreSampler_af236d7569167a978584dd8071133e97d}{get\+Log\+Likelihood}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{classMixutreSampler_a7fa3c68ca7930bf69a42b3de1fbe3f3a}{sample}})
+\item 
+virtual void \mbox{\hyperlink{classMixutreSampler_ab898ddcc120ee363ef5a20618af3bf9e}{update\+Transformed\+Density\+Samples}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples)
+\item 
+virtual void \mbox{\hyperlink{classMixutreSampler_ab9154ae329ed9c65d82449ea05c493ed}{sample\+Transformed}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample)
+\item 
+virtual double \mbox{\hyperlink{classMixutreSampler_ad9a3614a491f1a204f2d2bed06449700}{get\+Transformed\+Log\+Likelihood}} (const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \mbox{\hyperlink{classMixutreSampler_a454790b42cef6c3bb20c419104c94fad}{comps}}
+\item 
+\mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} \mbox{\hyperlink{classMixutreSampler_a15bc177035bfe295e2743fc306d721c4}{\+\_\+dist}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMixutreSampler_a9f52565a339bb5ecf3c94dfe98577875}\label{classMixutreSampler_a9f52565a339bb5ecf3c94dfe98577875}} 
+\index{MixutreSampler@{MixutreSampler}!MixutreSampler@{MixutreSampler}}
+\index{MixutreSampler@{MixutreSampler}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{MixutreSampler()}{MixutreSampler()}}
+{\footnotesize\ttfamily Mixutre\+Sampler\+::\+Mixutre\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set}]{components,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerData}{sampler\+::\+Sampler\+Data}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMixutreSampler_ae92b0ee9699116cc92367025ec736865}\label{classMixutreSampler_ae92b0ee9699116cc92367025ec736865}} 
+\index{MixutreSampler@{MixutreSampler}!````~MixutreSampler@{$\sim$MixutreSampler}}
+\index{````~MixutreSampler@{$\sim$MixutreSampler}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{$\sim$MixutreSampler()}{~MixutreSampler()}}
+{\footnotesize\ttfamily virtual Mixutre\+Sampler\+::$\sim$\+Mixutre\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMixutreSampler_af236d7569167a978584dd8071133e97d}\label{classMixutreSampler_af236d7569167a978584dd8071133e97d}} 
+\index{MixutreSampler@{MixutreSampler}!getLogLikelihood@{getLogLikelihood}}
+\index{getLogLikelihood@{getLogLikelihood}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{getLogLikelihood()}{getLogLikelihood()}}
+{\footnotesize\ttfamily virtual double Mixutre\+Sampler\+::get\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1DensityEstimation_a39add62090adb4f194f43eb58e64de57}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classMixutreSampler_ad9a3614a491f1a204f2d2bed06449700}\label{classMixutreSampler_ad9a3614a491f1a204f2d2bed06449700}} 
+\index{MixutreSampler@{MixutreSampler}!getTransformedLogLikelihood@{getTransformedLogLikelihood}}
+\index{getTransformedLogLikelihood@{getTransformedLogLikelihood}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{getTransformedLogLikelihood()}{getTransformedLogLikelihood()}}
+{\footnotesize\ttfamily virtual double Mixutre\+Sampler\+::get\+Transformed\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classMixutreSampler_a7fa3c68ca7930bf69a42b3de1fbe3f3a}\label{classMixutreSampler_a7fa3c68ca7930bf69a42b3de1fbe3f3a}} 
+\index{MixutreSampler@{MixutreSampler}!sample@{sample}}
+\index{sample@{sample}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{sample()}{sample()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$\& Mixutre\+Sampler\+::sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classMixutreSampler_ab9154ae329ed9c65d82449ea05c493ed}\label{classMixutreSampler_ab9154ae329ed9c65d82449ea05c493ed}} 
+\index{MixutreSampler@{MixutreSampler}!sampleTransformed@{sampleTransformed}}
+\index{sampleTransformed@{sampleTransformed}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{sampleTransformed()}{sampleTransformed()}}
+{\footnotesize\ttfamily virtual void Mixutre\+Sampler\+::sample\+Transformed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classMixutreSampler_ab898ddcc120ee363ef5a20618af3bf9e}\label{classMixutreSampler_ab898ddcc120ee363ef5a20618af3bf9e}} 
+\index{MixutreSampler@{MixutreSampler}!updateTransformedDensitySamples@{updateTransformedDensitySamples}}
+\index{updateTransformedDensitySamples@{updateTransformedDensitySamples}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{updateTransformedDensitySamples()}{updateTransformedDensitySamples()}}
+{\footnotesize\ttfamily virtual void Mixutre\+Sampler\+::update\+Transformed\+Density\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}{sampler\+::\+Density\+Estimation}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMixutreSampler_a15bc177035bfe295e2743fc306d721c4}\label{classMixutreSampler_a15bc177035bfe295e2743fc306d721c4}} 
+\index{MixutreSampler@{MixutreSampler}!\_dist@{\_dist}}
+\index{\_dist@{\_dist}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{\_dist}{\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} Mixutre\+Sampler\+::\+\_\+dist}
+
+\mbox{\Hypertarget{classMixutreSampler_a454790b42cef6c3bb20c419104c94fad}\label{classMixutreSampler_a454790b42cef6c3bb20c419104c94fad}} 
+\index{MixutreSampler@{MixutreSampler}!comps@{comps}}
+\index{comps@{comps}!MixutreSampler@{MixutreSampler}}
+\doxysubsubsection{\texorpdfstring{comps}{comps}}
+{\footnotesize\ttfamily D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set Mixutre\+Sampler\+::comps}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{evaluateMIForMixtures_8cpp}{evaluate\+M\+I\+For\+Mixtures.\+cpp}}\end{DoxyCompactItemize}

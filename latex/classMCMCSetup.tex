@@ -1,0 +1,208 @@
+\hypertarget{classMCMCSetup}{}\doxysection{M\+C\+M\+C\+Setup Class Reference}
+\label{classMCMCSetup}\index{MCMCSetup@{MCMCSetup}}
+
+
+{\ttfamily \#include $<$M\+C\+M\+C\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for M\+C\+M\+C\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classMCMCSetup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for M\+C\+M\+C\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMCMCSetup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMCMCSetup_ab04504b4a8801ab5f888dedfd8c8c0e8}{M\+C\+M\+C\+Setup}} (\mbox{\hyperlink{classoptions_1_1MCMCOptions}{options\+::\+M\+C\+M\+C\+Options}} options)
+\item 
+virtual \mbox{\hyperlink{classMCMCSetup_a9c12cf15793053c8ad5eec3b613b6253}{$\sim$\+M\+C\+M\+C\+Setup}} ()
+\item 
+void \mbox{\hyperlink{classMCMCSetup_a57e41a505670614ed8c0a8e382758b0c}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{classMCMCSetup_aae8a5d5ebf1e0a572b42efed431e3dba}{print\+Settings}} (std\+::ostream \&os) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceparticle__filter_aa21cf3ac69734e515f30f71f1a55ebcc}{particle\+\_\+filter\+::\+Particle\+Filter\+\_\+ptr}} $>$ \mbox{\hyperlink{classMCMCSetup_abc9765afccfcddc117894946e21ae112}{particle\+\_\+filters}}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1MultLikelihoodEval}{particle\+\_\+filter\+::\+Mult\+Likelihood\+Eval}} \mbox{\hyperlink{classMCMCSetup_a0b594844517ed1c8c89b8848ac66bca8}{mult\+\_\+like\+\_\+eval}}
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \mbox{\hyperlink{classMCMCSetup_a856fb0169d7d61ae820b4809f8d5395b}{particle\+\_\+filter\+\_\+settings}}
+\item 
+\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \mbox{\hyperlink{classMCMCSetup_ae05ad1ed79b8d03567212323f6cb6f2b}{sampler\+\_\+settings}}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCSettings}{mcmc\+::\+M\+C\+M\+C\+Settings}} \mbox{\hyperlink{classMCMCSetup_a0a28c28e3a1284cfed52f9c545cba2d7}{mcmc\+\_\+settings}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} $>$ \mbox{\hyperlink{classMCMCSetup_ae40768ee7a110b9c71b8d15386d44062}{times\+\_\+vec}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} $>$ \mbox{\hyperlink{classMCMCSetup_a79f63144f2d7ea3b8a9592870978224a}{data\+\_\+vec}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMCMCSetup_a533c092094ed8f269105ec4bfd9c1e61}{\+\_\+read\+Settingsfrom\+File}} () override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMCMCSetup_adcaac838c591aeda493af3aa566c3d7d}{\+\_\+read\+Experiments}} () override
+\item 
+\mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} \mbox{\hyperlink{classMCMCSetup_aeea7fb404e1ddabb27b87736a7028527}{\+\_\+create\+Data}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+outputs, std\+::string experiment, \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&settings)
+\item 
+\mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} \mbox{\hyperlink{classMCMCSetup_ab9dff3526cd90858ca7edbf3aac7d1fe}{\+\_\+create\+Data\+Times}} (std\+::string experiment, \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&settings)
+\item 
+\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \mbox{\hyperlink{classMCMCSetup_a0bcab7ee94c1de085693540744815041}{\+\_\+read\+Particle\+Filter\+Settings}} ()
+\item 
+\mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} \mbox{\hyperlink{classMCMCSetup_a8f85f43102d695745740e20586652c04}{\+\_\+read\+Sampler\+Settings}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoptions_1_1MCMCOptions}{options\+::\+M\+C\+M\+C\+Options}} \mbox{\hyperlink{classMCMCSetup_ab6eb4c759ff76b9d6b67fdc38192ef83}{\+\_\+mcmc\+\_\+options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMCMCSetup_ab04504b4a8801ab5f888dedfd8c8c0e8}\label{classMCMCSetup_ab04504b4a8801ab5f888dedfd8c8c0e8}} 
+\index{MCMCSetup@{MCMCSetup}!MCMCSetup@{MCMCSetup}}
+\index{MCMCSetup@{MCMCSetup}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{MCMCSetup()}{MCMCSetup()}}
+{\footnotesize\ttfamily M\+C\+M\+C\+Setup\+::\+M\+C\+M\+C\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoptions_1_1MCMCOptions}{options\+::\+M\+C\+M\+C\+Options}}}]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMCMCSetup_a9c12cf15793053c8ad5eec3b613b6253}\label{classMCMCSetup_a9c12cf15793053c8ad5eec3b613b6253}} 
+\index{MCMCSetup@{MCMCSetup}!````~MCMCSetup@{$\sim$MCMCSetup}}
+\index{````~MCMCSetup@{$\sim$MCMCSetup}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{$\sim$MCMCSetup()}{~MCMCSetup()}}
+{\footnotesize\ttfamily M\+C\+M\+C\+Setup\+::$\sim$\+M\+C\+M\+C\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMCMCSetup_aeea7fb404e1ddabb27b87736a7028527}\label{classMCMCSetup_aeea7fb404e1ddabb27b87736a7028527}} 
+\index{MCMCSetup@{MCMCSetup}!\_createData@{\_createData}}
+\index{\_createData@{\_createData}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{\_createData()}{\_createData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}} M\+C\+M\+C\+Setup\+::\+\_\+create\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+outputs,  }\item[{std\+::string}]{experiment,  }\item[{\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMCMCSetup_ab9dff3526cd90858ca7edbf3aac7d1fe}\label{classMCMCSetup_ab9dff3526cd90858ca7edbf3aac7d1fe}} 
+\index{MCMCSetup@{MCMCSetup}!\_createDataTimes@{\_createDataTimes}}
+\index{\_createDataTimes@{\_createDataTimes}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{\_createDataTimes()}{\_createDataTimes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}} M\+C\+M\+C\+Setup\+::\+\_\+create\+Data\+Times (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment,  }\item[{\mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMCMCSetup_adcaac838c591aeda493af3aa566c3d7d}\label{classMCMCSetup_adcaac838c591aeda493af3aa566c3d7d}} 
+\index{MCMCSetup@{MCMCSetup}!\_readExperiments@{\_readExperiments}}
+\index{\_readExperiments@{\_readExperiments}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{\_readExperiments()}{\_readExperiments()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ M\+C\+M\+C\+Setup\+::\+\_\+read\+Experiments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGeneralSetup_a1a558d3ff0cbac30255b95e3f8baaed2}{General\+Setup}}.
+
+\mbox{\Hypertarget{classMCMCSetup_a0bcab7ee94c1de085693540744815041}\label{classMCMCSetup_a0bcab7ee94c1de085693540744815041}} 
+\index{MCMCSetup@{MCMCSetup}!\_readParticleFilterSettings@{\_readParticleFilterSettings}}
+\index{\_readParticleFilterSettings@{\_readParticleFilterSettings}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{\_readParticleFilterSettings()}{\_readParticleFilterSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} M\+C\+M\+C\+Setup\+::\+\_\+read\+Particle\+Filter\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMCMCSetup_a8f85f43102d695745740e20586652c04}\label{classMCMCSetup_a8f85f43102d695745740e20586652c04}} 
+\index{MCMCSetup@{MCMCSetup}!\_readSamplerSettings@{\_readSamplerSettings}}
+\index{\_readSamplerSettings@{\_readSamplerSettings}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSamplerSettings()}{\_readSamplerSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} M\+C\+M\+C\+Setup\+::\+\_\+read\+Sampler\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMCMCSetup_a533c092094ed8f269105ec4bfd9c1e61}\label{classMCMCSetup_a533c092094ed8f269105ec4bfd9c1e61}} 
+\index{MCMCSetup@{MCMCSetup}!\_readSettingsfromFile@{\_readSettingsfromFile}}
+\index{\_readSettingsfromFile@{\_readSettingsfromFile}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSettingsfromFile()}{\_readSettingsfromFile()}}
+{\footnotesize\ttfamily void M\+C\+M\+C\+Setup\+::\+\_\+read\+Settingsfrom\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a2832f825b34cf426b1f7604fd8d04fe0}{General\+Setup}}.
+
+\mbox{\Hypertarget{classMCMCSetup_aae8a5d5ebf1e0a572b42efed431e3dba}\label{classMCMCSetup_aae8a5d5ebf1e0a572b42efed431e3dba}} 
+\index{MCMCSetup@{MCMCSetup}!printSettings@{printSettings}}
+\index{printSettings@{printSettings}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{printSettings()}{printSettings()}}
+{\footnotesize\ttfamily void M\+C\+M\+C\+Setup\+::print\+Settings (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSetup_a4298cb4b3798a38969ed76bbc80a1fd8}{General\+Setup}}.
+
+\mbox{\Hypertarget{classMCMCSetup_a57e41a505670614ed8c0a8e382758b0c}\label{classMCMCSetup_a57e41a505670614ed8c0a8e382758b0c}} 
+\index{MCMCSetup@{MCMCSetup}!setUp@{setUp}}
+\index{setUp@{setUp}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void M\+C\+M\+C\+Setup\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMCMCSetup_ab6eb4c759ff76b9d6b67fdc38192ef83}\label{classMCMCSetup_ab6eb4c759ff76b9d6b67fdc38192ef83}} 
+\index{MCMCSetup@{MCMCSetup}!\_mcmc\_options@{\_mcmc\_options}}
+\index{\_mcmc\_options@{\_mcmc\_options}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{\_mcmc\_options}{\_mcmc\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1MCMCOptions}{options\+::\+M\+C\+M\+C\+Options}} M\+C\+M\+C\+Setup\+::\+\_\+mcmc\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMCMCSetup_a79f63144f2d7ea3b8a9592870978224a}\label{classMCMCSetup_a79f63144f2d7ea3b8a9592870978224a}} 
+\index{MCMCSetup@{MCMCSetup}!data\_vec@{data\_vec}}
+\index{data\_vec@{data\_vec}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{data\_vec}{data\_vec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{LFNSSetup_8h_a9b18a08167208d161ab62443b45ea424}{Trajectory\+Set}}$>$ M\+C\+M\+C\+Setup\+::data\+\_\+vec}
+
+\mbox{\Hypertarget{classMCMCSetup_a0a28c28e3a1284cfed52f9c545cba2d7}\label{classMCMCSetup_a0a28c28e3a1284cfed52f9c545cba2d7}} 
+\index{MCMCSetup@{MCMCSetup}!mcmc\_settings@{mcmc\_settings}}
+\index{mcmc\_settings@{mcmc\_settings}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{mcmc\_settings}{mcmc\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmcmc_1_1MCMCSettings}{mcmc\+::\+M\+C\+M\+C\+Settings}} M\+C\+M\+C\+Setup\+::mcmc\+\_\+settings}
+
+\mbox{\Hypertarget{classMCMCSetup_a0b594844517ed1c8c89b8848ac66bca8}\label{classMCMCSetup_a0b594844517ed1c8c89b8848ac66bca8}} 
+\index{MCMCSetup@{MCMCSetup}!mult\_like\_eval@{mult\_like\_eval}}
+\index{mult\_like\_eval@{mult\_like\_eval}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{mult\_like\_eval}{mult\_like\_eval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1MultLikelihoodEval}{particle\+\_\+filter\+::\+Mult\+Likelihood\+Eval}} M\+C\+M\+C\+Setup\+::mult\+\_\+like\+\_\+eval}
+
+\mbox{\Hypertarget{classMCMCSetup_a856fb0169d7d61ae820b4809f8d5395b}\label{classMCMCSetup_a856fb0169d7d61ae820b4809f8d5395b}} 
+\index{MCMCSetup@{MCMCSetup}!particle\_filter\_settings@{particle\_filter\_settings}}
+\index{particle\_filter\_settings@{particle\_filter\_settings}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{particle\_filter\_settings}{particle\_filter\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticle__filter_1_1ParticleFilterSettings}{particle\+\_\+filter\+::\+Particle\+Filter\+Settings}} M\+C\+M\+C\+Setup\+::particle\+\_\+filter\+\_\+settings}
+
+\mbox{\Hypertarget{classMCMCSetup_abc9765afccfcddc117894946e21ae112}\label{classMCMCSetup_abc9765afccfcddc117894946e21ae112}} 
+\index{MCMCSetup@{MCMCSetup}!particle\_filters@{particle\_filters}}
+\index{particle\_filters@{particle\_filters}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{particle\_filters}{particle\_filters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceparticle__filter_aa21cf3ac69734e515f30f71f1a55ebcc}{particle\+\_\+filter\+::\+Particle\+Filter\+\_\+ptr}}$>$ M\+C\+M\+C\+Setup\+::particle\+\_\+filters}
+
+\mbox{\Hypertarget{classMCMCSetup_ae05ad1ed79b8d03567212323f6cb6f2b}\label{classMCMCSetup_ae05ad1ed79b8d03567212323f6cb6f2b}} 
+\index{MCMCSetup@{MCMCSetup}!sampler\_settings@{sampler\_settings}}
+\index{sampler\_settings@{sampler\_settings}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{sampler\_settings}{sampler\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsampler_1_1SamplerSettings}{sampler\+::\+Sampler\+Settings}} M\+C\+M\+C\+Setup\+::sampler\+\_\+settings}
+
+\mbox{\Hypertarget{classMCMCSetup_ae40768ee7a110b9c71b8d15386d44062}\label{classMCMCSetup_ae40768ee7a110b9c71b8d15386d44062}} 
+\index{MCMCSetup@{MCMCSetup}!times\_vec@{times\_vec}}
+\index{times\_vec@{times\_vec}!MCMCSetup@{MCMCSetup}}
+\doxysubsubsection{\texorpdfstring{times\_vec}{times\_vec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{LFNSSetup_8h_a0330dac27f49cd377caf4afd36f94395}{Times}}$>$ M\+C\+M\+C\+Setup\+::times\+\_\+vec}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MCMCSetup_8h}{M\+C\+M\+C\+Setup.\+h}}\item 
+\mbox{\hyperlink{MCMCSetup_8cpp}{M\+C\+M\+C\+Setup.\+cpp}}\end{DoxyCompactItemize}

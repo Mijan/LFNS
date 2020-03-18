@@ -1,0 +1,100 @@
+\hypertarget{classsampler_1_1KernelSupportEstimation}{}\doxysection{sampler\+::Kernel\+Support\+Estimation Class Reference}
+\label{classsampler_1_1KernelSupportEstimation}\index{sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}}
+
+
+{\ttfamily \#include $<$Kernel\+Support\+Estimation.\+h$>$}
+
+
+
+Inheritance diagram for sampler\+::Kernel\+Support\+Estimation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classsampler_1_1KernelSupportEstimation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sampler\+::Kernel\+Support\+Estimation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classsampler_1_1KernelSupportEstimation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_a81fad25255a2e0aaea0dbdffc4a607ae}{Kernel\+Support\+Estimation}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{Kernel\+Sampler\+\_\+ptr}} kernel, \mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}} data)
+\item 
+virtual \mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_afe5d16a3a3c597bef108be5c460ab369}{$\sim$\+Kernel\+Support\+Estimation}} ()
+\item 
+void \mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_a4a777a372b5b2922a509a802f8c0b748}{update\+Transformed\+Density\+Samples}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples) override
+\item 
+{\footnotesize template$<$class Archive $>$ }\\friend \mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_aefc6d68f5541c1c7f9d399dcd804bb55}{void \+::boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (Archive \&ar, const \+::\mbox{\hyperlink{classsampler_1_1KernelSupportEstimation}{sampler\+::\+Kernel\+Support\+Estimation}} $\ast$t, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} file\+\_\+version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_aa65d20352765c655e06c8eae1984494a}{serialize}} (Archive \&ar, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelSupportEstimation_a81fad25255a2e0aaea0dbdffc4a607ae}\label{classsampler_1_1KernelSupportEstimation_a81fad25255a2e0aaea0dbdffc4a607ae}} 
+\index{sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}!KernelSupportEstimation@{KernelSupportEstimation}}
+\index{KernelSupportEstimation@{KernelSupportEstimation}!sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}}
+\doxysubsubsection{\texorpdfstring{KernelSupportEstimation()}{KernelSupportEstimation()}}
+{\footnotesize\ttfamily sampler\+::\+Kernel\+Support\+Estimation\+::\+Kernel\+Support\+Estimation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{namespacesampler_a65bad2cab0547d7b40c8f7bc4aef1410}{Kernel\+Sampler\+\_\+ptr}}}]{kernel,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}}}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1KernelSupportEstimation_afe5d16a3a3c597bef108be5c460ab369}\label{classsampler_1_1KernelSupportEstimation_afe5d16a3a3c597bef108be5c460ab369}} 
+\index{sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}!````~KernelSupportEstimation@{$\sim$KernelSupportEstimation}}
+\index{````~KernelSupportEstimation@{$\sim$KernelSupportEstimation}!sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}}
+\doxysubsubsection{\texorpdfstring{$\sim$KernelSupportEstimation()}{~KernelSupportEstimation()}}
+{\footnotesize\ttfamily virtual sampler\+::\+Kernel\+Support\+Estimation\+::$\sim$\+Kernel\+Support\+Estimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelSupportEstimation_aa65d20352765c655e06c8eae1984494a}\label{classsampler_1_1KernelSupportEstimation_aa65d20352765c655e06c8eae1984494a}} 
+\index{sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}!serialize@{serialize}}
+\index{serialize@{serialize}!sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void sampler\+::\+Kernel\+Support\+Estimation\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsampler_1_1KernelSupportEstimation_a4a777a372b5b2922a509a802f8c0b748}\label{classsampler_1_1KernelSupportEstimation_a4a777a372b5b2922a509a802f8c0b748}} 
+\index{sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}!updateTransformedDensitySamples@{updateTransformedDensitySamples}}
+\index{updateTransformedDensitySamples@{updateTransformedDensitySamples}!sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}}
+\doxysubsubsection{\texorpdfstring{updateTransformedDensitySamples()}{updateTransformedDensitySamples()}}
+{\footnotesize\ttfamily void sampler\+::\+Kernel\+Support\+Estimation\+::update\+Transformed\+Density\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a7d625a26c437520c81e352058d58370b}{sampler\+::\+Kernel\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1KernelSupportEstimation_aefc6d68f5541c1c7f9d399dcd804bb55}\label{classsampler_1_1KernelSupportEstimation_aefc6d68f5541c1c7f9d399dcd804bb55}} 
+\index{sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}!void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}}
+\index{void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}!sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}}
+\doxysubsubsection{\texorpdfstring{void ::boost::serialization::save\_construct\_data()}{void ::boost::serialization::save\_construct\_data()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+sampler\+::\+Kernel\+Support\+Estimation\+::void \+::\mbox{\hyperlink{namespaceboost_1_1serialization_a06e6584c879d27ff1f020d6e381ffa2a}{boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const \+::\mbox{\hyperlink{classsampler_1_1KernelSupportEstimation}{sampler\+::\+Kernel\+Support\+Estimation}} $\ast$}]{t,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{file\+\_\+version }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1KernelSupportEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classsampler_1_1KernelSupportEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!sampler::KernelSupportEstimation@{sampler::KernelSupportEstimation}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sampler/\mbox{\hyperlink{KernelSupportEstimation_8h}{Kernel\+Support\+Estimation.\+h}}\item 
+src/sampler/\mbox{\hyperlink{KernelSupportEstimation_8cpp}{Kernel\+Support\+Estimation.\+cpp}}\end{DoxyCompactItemize}

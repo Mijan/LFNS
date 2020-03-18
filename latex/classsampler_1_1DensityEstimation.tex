@@ -1,0 +1,234 @@
+\hypertarget{classsampler_1_1DensityEstimation}{}\doxysection{sampler\+::Density\+Estimation Class Reference}
+\label{classsampler_1_1DensityEstimation}\index{sampler::DensityEstimation@{sampler::DensityEstimation}}
+
+
+{\ttfamily \#include $<$Density\+Estimation.\+h$>$}
+
+
+
+Inheritance diagram for sampler\+::Density\+Estimation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsampler_1_1DensityEstimation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sampler\+::Density\+Estimation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classsampler_1_1DensityEstimation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsampler_1_1DensityEstimation_a7eb51c8adf5ebe1cb2b3876fe7c17982}{Density\+Estimation}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}} data)
+\item 
+virtual \mbox{\hyperlink{classsampler_1_1DensityEstimation_afba7b200356b231b190d54748d03c0fb}{$\sim$\+Density\+Estimation}} ()
+\item 
+void \mbox{\hyperlink{classsampler_1_1DensityEstimation_afb1b8b022f22023f445bc5eb98f1a4f8}{update\+Density\+Samples}} (\mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&samples)
+\item 
+virtual std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}{sample}} () override
+\item 
+virtual double \mbox{\hyperlink{classsampler_1_1DensityEstimation_a39add62090adb4f194f43eb58e64de57}{get\+Log\+Likelihood}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}{sample}})
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}{update\+Transformed\+Density\+Samples}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples)=0
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}{sample\+Transformed}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample)=0
+\item 
+virtual double \mbox{\hyperlink{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}{get\+Transformed\+Log\+Likelihood}} (const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample)=0
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1DensityEstimation_abbd9ff39ba6c06f616a248a3ae09c800}{update\+Acceptance\+Rate}} (double acceptance\+\_\+rate)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1DensityEstimation_a9c43ca6bafe251a51c1949395937b2a3}{transform\+Sample}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&\mbox{\hyperlink{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}{sample}})
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1DensityEstimation_adfd43b0e1835205c7b0756174d618fde}{retransform\+Sample}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&\mbox{\hyperlink{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}{sample}})
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classsampler_1_1DensityEstimation_a34145676be83fc9eb1f86486a15cc40d}{serialize}} (Archive \&ar, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \mbox{\hyperlink{classsampler_1_1DensityEstimation_a58f66e4ab10bbf3b67bfc573a0dc53e1}{\+\_\+mean}}
+\item 
+\mbox{\hyperlink{namespacebase_ae34ad8061b93bb5f50e8dcbe0801d2cc}{base\+::\+Ei\+MatrixC}} \mbox{\hyperlink{classsampler_1_1DensityEstimation_a87e5f12d36cf7dfb4c62dcf030545cc7}{\+\_\+evs}}
+\item 
+\mbox{\hyperlink{namespacebase_ae34ad8061b93bb5f50e8dcbe0801d2cc}{base\+::\+Ei\+MatrixC}} \mbox{\hyperlink{classsampler_1_1DensityEstimation_ad3ad61177198511f08d36565db1a0b3b}{\+\_\+inv\+\_\+evs}}
+\item 
+\mbox{\hyperlink{namespacebase_ada31eebfa9a48ef662ca0e348d68b57f}{base\+::\+Ei\+VectorC}} \mbox{\hyperlink{classsampler_1_1DensityEstimation_a59338b9b8e3b6d3c624ceb73e66c616b}{\+\_\+evals}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \mbox{\hyperlink{classsampler_1_1DensityEstimation_adff7d9569e0b1184e6096f408409d44e}{\+\_\+trans\+\_\+sample}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1DensityEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a7eb51c8adf5ebe1cb2b3876fe7c17982}\label{classsampler_1_1DensityEstimation_a7eb51c8adf5ebe1cb2b3876fe7c17982}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!DensityEstimation@{DensityEstimation}}
+\index{DensityEstimation@{DensityEstimation}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{DensityEstimation()}{DensityEstimation()}}
+{\footnotesize\ttfamily sampler\+::\+Density\+Estimation\+::\+Density\+Estimation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{classsampler_1_1SamplerData}{Sampler\+Data}}}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_afba7b200356b231b190d54748d03c0fb}\label{classsampler_1_1DensityEstimation_afba7b200356b231b190d54748d03c0fb}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!````~DensityEstimation@{$\sim$DensityEstimation}}
+\index{````~DensityEstimation@{$\sim$DensityEstimation}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{$\sim$DensityEstimation()}{~DensityEstimation()}}
+{\footnotesize\ttfamily virtual sampler\+::\+Density\+Estimation\+::$\sim$\+Density\+Estimation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a39add62090adb4f194f43eb58e64de57}\label{classsampler_1_1DensityEstimation_a39add62090adb4f194f43eb58e64de57}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!getLogLikelihood@{getLogLikelihood}}
+\index{getLogLikelihood@{getLogLikelihood}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{getLogLikelihood()}{getLogLikelihood()}}
+{\footnotesize\ttfamily double sampler\+::\+Density\+Estimation\+::get\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1Sampler_a9912b5ee147fc612732291603e0503a5}{sampler\+::\+Sampler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMixutreSampler_af236d7569167a978584dd8071133e97d}{Mixutre\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}\label{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!getTransformedLogLikelihood@{getTransformedLogLikelihood}}
+\index{getTransformedLogLikelihood@{getTransformedLogLikelihood}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{getTransformedLogLikelihood()}{getTransformedLogLikelihood()}}
+{\footnotesize\ttfamily virtual double sampler\+::\+Density\+Estimation\+::get\+Transformed\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_ab3f05a9ead6a3a710a59d4861f9f254a}{sampler\+::\+Rejection\+Support\+Sampler}}, \mbox{\hyperlink{classsampler_1_1DpGmmSampler_a616838393d619edd822ec6181a76d28b}{sampler\+::\+Dp\+Gmm\+Sampler}}, \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a4c62ee8c8fc8e8c8cf1e2dd7a527ddb4}{sampler\+::\+Kernel\+Density\+Estimation}}, \mbox{\hyperlink{classsampler_1_1SliceSampler_a99b2ac2b638500d977ed7c65d86e2ada}{sampler\+::\+Slice\+Sampler}}, \mbox{\hyperlink{classsampler_1_1EllipsoidSampler_a9317eb38b56ae40bd1644f9bbf35fe96}{sampler\+::\+Ellipsoid\+Sampler}}, and \mbox{\hyperlink{classMixutreSampler_ad9a3614a491f1a204f2d2bed06449700}{Mixutre\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_adfd43b0e1835205c7b0756174d618fde}\label{classsampler_1_1DensityEstimation_adfd43b0e1835205c7b0756174d618fde}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!retransformSample@{retransformSample}}
+\index{retransformSample@{retransformSample}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{retransformSample()}{retransformSample()}}
+{\footnotesize\ttfamily void sampler\+::\+Density\+Estimation\+::retransform\+Sample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}\label{classsampler_1_1DensityEstimation_adfc1e94af53afe9e380794c2094cb136}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!sample@{sample}}
+\index{sample@{sample}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{sample()}{sample()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ \& sampler\+::\+Density\+Estimation\+::sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1Sampler_af6949cdaf50fd79f019dfcb4af507e39}{sampler\+::\+Sampler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMixutreSampler_a7fa3c68ca7930bf69a42b3de1fbe3f3a}{Mixutre\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}\label{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!sampleTransformed@{sampleTransformed}}
+\index{sampleTransformed@{sampleTransformed}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{sampleTransformed()}{sampleTransformed()}}
+{\footnotesize\ttfamily virtual void sampler\+::\+Density\+Estimation\+::sample\+Transformed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_adc4aa050ee84d380b4558f519a369167}{sampler\+::\+Rejection\+Support\+Sampler}}, \mbox{\hyperlink{classsampler_1_1DpGmmSampler_ab6d6bff0f9a8d25c170308bcbf789c86}{sampler\+::\+Dp\+Gmm\+Sampler}}, \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_ab74a0587cde82a69b757461eac1a0237}{sampler\+::\+Kernel\+Density\+Estimation}}, \mbox{\hyperlink{classsampler_1_1SliceSampler_af88ffff98267861b568b2d9519a9f0db}{sampler\+::\+Slice\+Sampler}}, \mbox{\hyperlink{classsampler_1_1EllipsoidSampler_ae28c4e74bd06158b2aef85c8ac5274f2}{sampler\+::\+Ellipsoid\+Sampler}}, and \mbox{\hyperlink{classMixutreSampler_ab9154ae329ed9c65d82449ea05c493ed}{Mixutre\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a34145676be83fc9eb1f86486a15cc40d}\label{classsampler_1_1DensityEstimation_a34145676be83fc9eb1f86486a15cc40d}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!serialize@{serialize}}
+\index{serialize@{serialize}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void sampler\+::\+Density\+Estimation\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a9c43ca6bafe251a51c1949395937b2a3}\label{classsampler_1_1DensityEstimation_a9c43ca6bafe251a51c1949395937b2a3}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!transformSample@{transformSample}}
+\index{transformSample@{transformSample}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{transformSample()}{transformSample()}}
+{\footnotesize\ttfamily void sampler\+::\+Density\+Estimation\+::transform\+Sample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_abbd9ff39ba6c06f616a248a3ae09c800}\label{classsampler_1_1DensityEstimation_abbd9ff39ba6c06f616a248a3ae09c800}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!updateAcceptanceRate@{updateAcceptanceRate}}
+\index{updateAcceptanceRate@{updateAcceptanceRate}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{updateAcceptanceRate()}{updateAcceptanceRate()}}
+{\footnotesize\ttfamily virtual void sampler\+::\+Density\+Estimation\+::update\+Acceptance\+Rate (\begin{DoxyParamCaption}\item[{double}]{acceptance\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_ab48f87ade03dcac8d16ada9c1726e574}{sampler\+::\+Rejection\+Support\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_afb1b8b022f22023f445bc5eb98f1a4f8}\label{classsampler_1_1DensityEstimation_afb1b8b022f22023f445bc5eb98f1a4f8}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!updateDensitySamples@{updateDensitySamples}}
+\index{updateDensitySamples@{updateDensitySamples}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{updateDensitySamples()}{updateDensitySamples()}}
+{\footnotesize\ttfamily void sampler\+::\+Density\+Estimation\+::update\+Density\+Samples (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{samples }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}\label{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!updateTransformedDensitySamples@{updateTransformedDensitySamples}}
+\index{updateTransformedDensitySamples@{updateTransformedDensitySamples}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{updateTransformedDensitySamples()}{updateTransformedDensitySamples()}}
+{\footnotesize\ttfamily virtual void sampler\+::\+Density\+Estimation\+::update\+Transformed\+Density\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsampler_1_1DpGmmSampler_af3bcbd5959dc5cad948046401d77753e}{sampler\+::\+Dp\+Gmm\+Sampler}}, \mbox{\hyperlink{classsampler_1_1SliceSampler_af234643796a3d400f8e79ff7cb352cf8}{sampler\+::\+Slice\+Sampler}}, \mbox{\hyperlink{classsampler_1_1EllipsoidSampler_a424138de4640b99ab146b510323980b8}{sampler\+::\+Ellipsoid\+Sampler}}, \mbox{\hyperlink{classsampler_1_1KernelSupportEstimation_a4a777a372b5b2922a509a802f8c0b748}{sampler\+::\+Kernel\+Support\+Estimation}}, \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a9283d595fcdc3b0ee2323aa5270d0e8b}{sampler\+::\+Rejection\+Support\+Sampler}}, \mbox{\hyperlink{classMixutreSampler_ab898ddcc120ee363ef5a20618af3bf9e}{Mixutre\+Sampler}}, and \mbox{\hyperlink{classsampler_1_1KernelDensityEstimation_a7d625a26c437520c81e352058d58370b}{sampler\+::\+Kernel\+Density\+Estimation}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classsampler_1_1DensityEstimation_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a59338b9b8e3b6d3c624ceb73e66c616b}\label{classsampler_1_1DensityEstimation_a59338b9b8e3b6d3c624ceb73e66c616b}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!\_evals@{\_evals}}
+\index{\_evals@{\_evals}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_evals}{\_evals}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_ada31eebfa9a48ef662ca0e348d68b57f}{base\+::\+Ei\+VectorC}} sampler\+::\+Density\+Estimation\+::\+\_\+evals\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a87e5f12d36cf7dfb4c62dcf030545cc7}\label{classsampler_1_1DensityEstimation_a87e5f12d36cf7dfb4c62dcf030545cc7}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!\_evs@{\_evs}}
+\index{\_evs@{\_evs}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_evs}{\_evs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_ae34ad8061b93bb5f50e8dcbe0801d2cc}{base\+::\+Ei\+MatrixC}} sampler\+::\+Density\+Estimation\+::\+\_\+evs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_ad3ad61177198511f08d36565db1a0b3b}\label{classsampler_1_1DensityEstimation_ad3ad61177198511f08d36565db1a0b3b}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!\_inv\_evs@{\_inv\_evs}}
+\index{\_inv\_evs@{\_inv\_evs}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_inv\_evs}{\_inv\_evs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_ae34ad8061b93bb5f50e8dcbe0801d2cc}{base\+::\+Ei\+MatrixC}} sampler\+::\+Density\+Estimation\+::\+\_\+inv\+\_\+evs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_a58f66e4ab10bbf3b67bfc573a0dc53e1}\label{classsampler_1_1DensityEstimation_a58f66e4ab10bbf3b67bfc573a0dc53e1}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!\_mean@{\_mean}}
+\index{\_mean@{\_mean}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_mean}{\_mean}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} sampler\+::\+Density\+Estimation\+::\+\_\+mean\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsampler_1_1DensityEstimation_adff7d9569e0b1184e6096f408409d44e}\label{classsampler_1_1DensityEstimation_adff7d9569e0b1184e6096f408409d44e}} 
+\index{sampler::DensityEstimation@{sampler::DensityEstimation}!\_trans\_sample@{\_trans\_sample}}
+\index{\_trans\_sample@{\_trans\_sample}!sampler::DensityEstimation@{sampler::DensityEstimation}}
+\doxysubsubsection{\texorpdfstring{\_trans\_sample}{\_trans\_sample}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} sampler\+::\+Density\+Estimation\+::\+\_\+trans\+\_\+sample\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sampler/\mbox{\hyperlink{DensityEstimation_8h}{Density\+Estimation.\+h}}\item 
+src/sampler/\mbox{\hyperlink{DensityEstimation_8cpp}{Density\+Estimation.\+cpp}}\end{DoxyCompactItemize}

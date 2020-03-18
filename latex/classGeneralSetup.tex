@@ -1,0 +1,199 @@
+\hypertarget{classGeneralSetup}{}\doxysection{General\+Setup Class Reference}
+\label{classGeneralSetup}\index{GeneralSetup@{GeneralSetup}}
+
+
+{\ttfamily \#include $<$General\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for General\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSetup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for General\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSetup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneralSetup_a9e378e9c976a6b2a12d08e834514daf4}{General\+Setup}} (\mbox{\hyperlink{classoptions_1_1CommandLineOptions}{options\+::\+Command\+Line\+Options}} \&options, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} process\+\_\+nbr=1)
+\item 
+virtual \mbox{\hyperlink{classGeneralSetup_a0e9b3b755c56bbeb5a4be4409208d9ed}{$\sim$\+General\+Setup}} ()
+\item 
+virtual void \mbox{\hyperlink{classGeneralSetup_a4298cb4b3798a38969ed76bbc80a1fd8}{print\+Settings}} (std\+::ostream \&os)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1IoSettings}{io\+::\+Io\+Settings}} \mbox{\hyperlink{classGeneralSetup_ae950ba77baab061d2f26166ae40de99a}{io\+\_\+settings}}
+\item 
+\mbox{\hyperlink{classmodels_1_1ModelSettings}{models\+::\+Model\+Settings}} \mbox{\hyperlink{classGeneralSetup_afae2aef6d4dd098f6383ad9470c7754b}{model\+\_\+settings}}
+\item 
+\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} \mbox{\hyperlink{classGeneralSetup_a35e1ecfdca409048bf6ae2c2bff7e465}{rng}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}{simulator\+::\+Simulator\+\_\+ptr}} $>$ \mbox{\hyperlink{classGeneralSetup_ac37d0f2d4cba8197a034a8fffa8af078}{simulators}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacemodels_a14889aeb5f3d23dbb7c96c0f5e0b8b93}{models\+::\+Full\+Model\+\_\+ptr}} $>$ \mbox{\hyperlink{classGeneralSetup_a215970d5fc20b42096d942487d1f4629}{full\+\_\+models}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classGeneralSetup_a63814f02f15e2e55b22b1a51cf02e8d4}{experiments}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classGeneralSetup_a2832f825b34cf426b1f7604fd8d04fe0}{\+\_\+read\+Settingsfrom\+File}} ()
+\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classGeneralSetup_a1a558d3ff0cbac30255b95e3f8baaed2}{\+\_\+read\+Experiments}} ()=0
+\item 
+\mbox{\hyperlink{classmodels_1_1ModelSettings}{models\+::\+Model\+Settings}} \mbox{\hyperlink{classGeneralSetup_ab560a3dd27cf4cb412b6945332f454dd}{\+\_\+read\+Model\+Settings}} ()
+\item 
+\mbox{\hyperlink{structsimulator_1_1OdeSettings}{simulator\+::\+Ode\+Settings}} \mbox{\hyperlink{classGeneralSetup_a99c88dd0f872186329c0787afcf37af2}{\+\_\+read\+Ode\+Settings}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmodels_1_1InputData}{models\+::\+Input\+Data}} $>$ \mbox{\hyperlink{classGeneralSetup_a691822d32a4e1f3cfc797623bd9fcf93}{\+\_\+get\+Input\+Datas\+For\+Experiment}} (std\+::string experiment, double final\+\_\+time)
+\item 
+\mbox{\hyperlink{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}{simulator\+::\+Simulator\+\_\+ptr}} \mbox{\hyperlink{classGeneralSetup_a7e9ec3a4d670b7349da648f780331c12}{\+\_\+create\+Simulator}} (\mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{models\+::\+Chemical\+Reaction\+Network\+\_\+ptr}} dynamics)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1ConfigFileInterpreter}{io\+::\+Config\+File\+Interpreter}} \mbox{\hyperlink{classGeneralSetup_a79abcf249e0c39be50cc8329a4f75ef8}{interpreter}}
+\item 
+\mbox{\hyperlink{classoptions_1_1CommandLineOptions}{options\+::\+Command\+Line\+Options}} \mbox{\hyperlink{classGeneralSetup_a3933b170e0e1d76d7d565cebb78807b8}{\+\_\+command\+\_\+line\+\_\+options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGeneralSetup_a9e378e9c976a6b2a12d08e834514daf4}\label{classGeneralSetup_a9e378e9c976a6b2a12d08e834514daf4}} 
+\index{GeneralSetup@{GeneralSetup}!GeneralSetup@{GeneralSetup}}
+\index{GeneralSetup@{GeneralSetup}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{GeneralSetup()}{GeneralSetup()}}
+{\footnotesize\ttfamily General\+Setup\+::\+General\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoptions_1_1CommandLineOptions}{options\+::\+Command\+Line\+Options}} \&}]{options,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{process\+\_\+nbr = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGeneralSetup_a0e9b3b755c56bbeb5a4be4409208d9ed}\label{classGeneralSetup_a0e9b3b755c56bbeb5a4be4409208d9ed}} 
+\index{GeneralSetup@{GeneralSetup}!````~GeneralSetup@{$\sim$GeneralSetup}}
+\index{````~GeneralSetup@{$\sim$GeneralSetup}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{$\sim$GeneralSetup()}{~GeneralSetup()}}
+{\footnotesize\ttfamily General\+Setup\+::$\sim$\+General\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeneralSetup_a7e9ec3a4d670b7349da648f780331c12}\label{classGeneralSetup_a7e9ec3a4d670b7349da648f780331c12}} 
+\index{GeneralSetup@{GeneralSetup}!\_createSimulator@{\_createSimulator}}
+\index{\_createSimulator@{\_createSimulator}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{\_createSimulator()}{\_createSimulator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}{simulator\+::\+Simulator\+\_\+ptr}} General\+Setup\+::\+\_\+create\+Simulator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemodels_a890f90dc9c83a8ebb60aff600cec10ef}{models\+::\+Chemical\+Reaction\+Network\+\_\+ptr}}}]{dynamics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSetup_a691822d32a4e1f3cfc797623bd9fcf93}\label{classGeneralSetup_a691822d32a4e1f3cfc797623bd9fcf93}} 
+\index{GeneralSetup@{GeneralSetup}!\_getInputDatasForExperiment@{\_getInputDatasForExperiment}}
+\index{\_getInputDatasForExperiment@{\_getInputDatasForExperiment}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{\_getInputDatasForExperiment()}{\_getInputDatasForExperiment()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structmodels_1_1InputData}{models\+::\+Input\+Data}} $>$ General\+Setup\+::\+\_\+get\+Input\+Datas\+For\+Experiment (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment,  }\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSetup_a1a558d3ff0cbac30255b95e3f8baaed2}\label{classGeneralSetup_a1a558d3ff0cbac30255b95e3f8baaed2}} 
+\index{GeneralSetup@{GeneralSetup}!\_readExperiments@{\_readExperiments}}
+\index{\_readExperiments@{\_readExperiments}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{\_readExperiments()}{\_readExperiments()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ General\+Setup\+::\+\_\+read\+Experiments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLFNSSetup_a3f216958d12748e6970e4d783aec8ce0}{L\+F\+N\+S\+Setup}}, \mbox{\hyperlink{classLikelihoodSetup_aea178bfbe8affa09497dd47acc85c835}{Likelihood\+Setup}}, \mbox{\hyperlink{classSimulationSetup_aeffc0ff6e4620330e86150e6cd792a9a}{Simulation\+Setup}}, and \mbox{\hyperlink{classMCMCSetup_adcaac838c591aeda493af3aa566c3d7d}{M\+C\+M\+C\+Setup}}.
+
+\mbox{\Hypertarget{classGeneralSetup_ab560a3dd27cf4cb412b6945332f454dd}\label{classGeneralSetup_ab560a3dd27cf4cb412b6945332f454dd}} 
+\index{GeneralSetup@{GeneralSetup}!\_readModelSettings@{\_readModelSettings}}
+\index{\_readModelSettings@{\_readModelSettings}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{\_readModelSettings()}{\_readModelSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1ModelSettings}{models\+::\+Model\+Settings}} General\+Setup\+::\+\_\+read\+Model\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSetup_a99c88dd0f872186329c0787afcf37af2}\label{classGeneralSetup_a99c88dd0f872186329c0787afcf37af2}} 
+\index{GeneralSetup@{GeneralSetup}!\_readOdeSettings@{\_readOdeSettings}}
+\index{\_readOdeSettings@{\_readOdeSettings}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{\_readOdeSettings()}{\_readOdeSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsimulator_1_1OdeSettings}{simulator\+::\+Ode\+Settings}} General\+Setup\+::\+\_\+read\+Ode\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSetup_a2832f825b34cf426b1f7604fd8d04fe0}\label{classGeneralSetup_a2832f825b34cf426b1f7604fd8d04fe0}} 
+\index{GeneralSetup@{GeneralSetup}!\_readSettingsfromFile@{\_readSettingsfromFile}}
+\index{\_readSettingsfromFile@{\_readSettingsfromFile}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{\_readSettingsfromFile()}{\_readSettingsfromFile()}}
+{\footnotesize\ttfamily void General\+Setup\+::\+\_\+read\+Settingsfrom\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classLFNSSetup_a8d1de0a871ae41946671f5b896ed57f8}{L\+F\+N\+S\+Setup}}, \mbox{\hyperlink{classLikelihoodSetup_ac467408b2738eed5cacd16d116ad8d8b}{Likelihood\+Setup}}, \mbox{\hyperlink{classSimulationSetup_a196e061359d03e36342ce2beea820e46}{Simulation\+Setup}}, and \mbox{\hyperlink{classMCMCSetup_a533c092094ed8f269105ec4bfd9c1e61}{M\+C\+M\+C\+Setup}}.
+
+\mbox{\Hypertarget{classGeneralSetup_a4298cb4b3798a38969ed76bbc80a1fd8}\label{classGeneralSetup_a4298cb4b3798a38969ed76bbc80a1fd8}} 
+\index{GeneralSetup@{GeneralSetup}!printSettings@{printSettings}}
+\index{printSettings@{printSettings}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{printSettings()}{printSettings()}}
+{\footnotesize\ttfamily void General\+Setup\+::print\+Settings (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classLFNSSetup_a5ca7442a66b14b5ea16f6414184a1a97}{L\+F\+N\+S\+Setup}}, \mbox{\hyperlink{classLikelihoodSetup_a87f0204b025fe875e03abcb977e8a38b}{Likelihood\+Setup}}, \mbox{\hyperlink{classSimulationSetup_a9c88c6ab3fe180d2ce723134c9d87cbc}{Simulation\+Setup}}, and \mbox{\hyperlink{classMCMCSetup_aae8a5d5ebf1e0a572b42efed431e3dba}{M\+C\+M\+C\+Setup}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGeneralSetup_a3933b170e0e1d76d7d565cebb78807b8}\label{classGeneralSetup_a3933b170e0e1d76d7d565cebb78807b8}} 
+\index{GeneralSetup@{GeneralSetup}!\_command\_line\_options@{\_command\_line\_options}}
+\index{\_command\_line\_options@{\_command\_line\_options}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{\_command\_line\_options}{\_command\_line\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1CommandLineOptions}{options\+::\+Command\+Line\+Options}} General\+Setup\+::\+\_\+command\+\_\+line\+\_\+options\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSetup_a63814f02f15e2e55b22b1a51cf02e8d4}\label{classGeneralSetup_a63814f02f15e2e55b22b1a51cf02e8d4}} 
+\index{GeneralSetup@{GeneralSetup}!experiments@{experiments}}
+\index{experiments@{experiments}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{experiments}{experiments}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ General\+Setup\+::experiments}
+
+\mbox{\Hypertarget{classGeneralSetup_a215970d5fc20b42096d942487d1f4629}\label{classGeneralSetup_a215970d5fc20b42096d942487d1f4629}} 
+\index{GeneralSetup@{GeneralSetup}!full\_models@{full\_models}}
+\index{full\_models@{full\_models}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{full\_models}{full\_models}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacemodels_a14889aeb5f3d23dbb7c96c0f5e0b8b93}{models\+::\+Full\+Model\+\_\+ptr}}$>$ General\+Setup\+::full\+\_\+models}
+
+\mbox{\Hypertarget{classGeneralSetup_a79abcf249e0c39be50cc8329a4f75ef8}\label{classGeneralSetup_a79abcf249e0c39be50cc8329a4f75ef8}} 
+\index{GeneralSetup@{GeneralSetup}!interpreter@{interpreter}}
+\index{interpreter@{interpreter}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{interpreter}{interpreter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classio_1_1ConfigFileInterpreter}{io\+::\+Config\+File\+Interpreter}} General\+Setup\+::interpreter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSetup_ae950ba77baab061d2f26166ae40de99a}\label{classGeneralSetup_ae950ba77baab061d2f26166ae40de99a}} 
+\index{GeneralSetup@{GeneralSetup}!io\_settings@{io\_settings}}
+\index{io\_settings@{io\_settings}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{io\_settings}{io\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classio_1_1IoSettings}{io\+::\+Io\+Settings}} General\+Setup\+::io\+\_\+settings}
+
+\mbox{\Hypertarget{classGeneralSetup_afae2aef6d4dd098f6383ad9470c7754b}\label{classGeneralSetup_afae2aef6d4dd098f6383ad9470c7754b}} 
+\index{GeneralSetup@{GeneralSetup}!model\_settings@{model\_settings}}
+\index{model\_settings@{model\_settings}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{model\_settings}{model\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1ModelSettings}{models\+::\+Model\+Settings}} General\+Setup\+::model\+\_\+settings}
+
+\mbox{\Hypertarget{classGeneralSetup_a35e1ecfdca409048bf6ae2c2bff7e465}\label{classGeneralSetup_a35e1ecfdca409048bf6ae2c2bff7e465}} 
+\index{GeneralSetup@{GeneralSetup}!rng@{rng}}
+\index{rng@{rng}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{rng}{rng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} General\+Setup\+::rng}
+
+\mbox{\Hypertarget{classGeneralSetup_ac37d0f2d4cba8197a034a8fffa8af078}\label{classGeneralSetup_ac37d0f2d4cba8197a034a8fffa8af078}} 
+\index{GeneralSetup@{GeneralSetup}!simulators@{simulators}}
+\index{simulators@{simulators}!GeneralSetup@{GeneralSetup}}
+\doxysubsubsection{\texorpdfstring{simulators}{simulators}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacesimulator_a6aabaac420d5ce6cdb9aed2c5cf46ccb}{simulator\+::\+Simulator\+\_\+ptr}}$>$ General\+Setup\+::simulators}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{GeneralSetup_8h}{General\+Setup.\+h}}\item 
+\mbox{\hyperlink{GeneralSetup_8cpp}{General\+Setup.\+cpp}}\end{DoxyCompactItemize}

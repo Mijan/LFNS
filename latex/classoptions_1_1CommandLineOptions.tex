@@ -1,0 +1,120 @@
+\hypertarget{classoptions_1_1CommandLineOptions}{}\doxysection{options\+::Command\+Line\+Options Class Reference}
+\label{classoptions_1_1CommandLineOptions}\index{options::CommandLineOptions@{options::CommandLineOptions}}
+
+
+{\ttfamily \#include $<$Command\+Line\+Options.\+h$>$}
+
+
+
+Inheritance diagram for options\+::Command\+Line\+Options\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classoptions_1_1CommandLineOptions__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoptions_1_1CommandLineOptions_ad3c4b105b89e42afd6595358442fe3bc}{Command\+Line\+Options}} ()
+\item 
+virtual \mbox{\hyperlink{classoptions_1_1CommandLineOptions_a58473c6f332fd8447ee9dcd4614ff8f9}{$\sim$\+Command\+Line\+Options}} ()
+\item 
+virtual \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classoptions_1_1CommandLineOptions_a64131fffe8ff02aa6ee1e562c58628dd}{handle\+Command\+Line\+Options}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} argc, char $\ast$$\ast$argv)
+\item 
+bool \mbox{\hyperlink{classoptions_1_1CommandLineOptions_aa6592fa76ff001c7af2ca0fb54c54cb1}{model\+Type\+Set}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classoptions_1_1CommandLineOptions_ab5a377cf108241793f6c1e01ca50280f}{config\+\_\+file\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{classoptions_1_1CommandLineOptions_a94eba728bde9ab93b2b322e8e8dd9916}{output\+\_\+file\+\_\+name}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classoptions_1_1CommandLineOptions_af8ee4a28f36954ed3a1330c8e751d584}{experiments}}
+\item 
+po\+::options\+\_\+description \mbox{\hyperlink{classoptions_1_1CommandLineOptions_acfc7af8c3cfa5814df344a078789f58f}{desc}}
+\item 
+po\+::variables\+\_\+map \mbox{\hyperlink{classoptions_1_1CommandLineOptions_a88c3479972135e53c028c957df446206}{vm}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classoptions_1_1CommandLineOptions_a8e54fcc88c2d0677a3fa43fcdf4e6285}{model\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_ad3c4b105b89e42afd6595358442fe3bc}\label{classoptions_1_1CommandLineOptions_ad3c4b105b89e42afd6595358442fe3bc}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!CommandLineOptions@{CommandLineOptions}}
+\index{CommandLineOptions@{CommandLineOptions}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{CommandLineOptions()}{CommandLineOptions()}}
+{\footnotesize\ttfamily options\+::\+Command\+Line\+Options\+::\+Command\+Line\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_a58473c6f332fd8447ee9dcd4614ff8f9}\label{classoptions_1_1CommandLineOptions_a58473c6f332fd8447ee9dcd4614ff8f9}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!````~CommandLineOptions@{$\sim$CommandLineOptions}}
+\index{````~CommandLineOptions@{$\sim$CommandLineOptions}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{$\sim$CommandLineOptions()}{~CommandLineOptions()}}
+{\footnotesize\ttfamily options\+::\+Command\+Line\+Options\+::$\sim$\+Command\+Line\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_a64131fffe8ff02aa6ee1e562c58628dd}\label{classoptions_1_1CommandLineOptions_a64131fffe8ff02aa6ee1e562c58628dd}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!handleCommandLineOptions@{handleCommandLineOptions}}
+\index{handleCommandLineOptions@{handleCommandLineOptions}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{handleCommandLineOptions()}{handleCommandLineOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} options\+::\+Command\+Line\+Options\+::handle\+Command\+Line\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classoptions_1_1LFNSOptions_aade8bdf3448255f352093983b4560832}{options\+::\+L\+F\+N\+S\+Options}}, \mbox{\hyperlink{classoptions_1_1MCMCOptions_af1b644503ce49e3e705cb72989d097cb}{options\+::\+M\+C\+M\+C\+Options}}, \mbox{\hyperlink{classoptions_1_1ComputeLikelihoodOptions_a4d21dc979b929fe8b7d87ab2806eee01}{options\+::\+Compute\+Likelihood\+Options}}, and \mbox{\hyperlink{classoptions_1_1SimulationOptions_aa55b26387114a0b1f2e2f7fd927a31b2}{options\+::\+Simulation\+Options}}.
+
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_aa6592fa76ff001c7af2ca0fb54c54cb1}\label{classoptions_1_1CommandLineOptions_aa6592fa76ff001c7af2ca0fb54c54cb1}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!modelTypeSet@{modelTypeSet}}
+\index{modelTypeSet@{modelTypeSet}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{modelTypeSet()}{modelTypeSet()}}
+{\footnotesize\ttfamily bool options\+::\+Command\+Line\+Options\+::model\+Type\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_ab5a377cf108241793f6c1e01ca50280f}\label{classoptions_1_1CommandLineOptions_ab5a377cf108241793f6c1e01ca50280f}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!config\_file\_name@{config\_file\_name}}
+\index{config\_file\_name@{config\_file\_name}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{config\_file\_name}{config\_file\_name}}
+{\footnotesize\ttfamily std\+::string options\+::\+Command\+Line\+Options\+::config\+\_\+file\+\_\+name}
+
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_acfc7af8c3cfa5814df344a078789f58f}\label{classoptions_1_1CommandLineOptions_acfc7af8c3cfa5814df344a078789f58f}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!desc@{desc}}
+\index{desc@{desc}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{desc}{desc}}
+{\footnotesize\ttfamily po\+::options\+\_\+description options\+::\+Command\+Line\+Options\+::desc}
+
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_af8ee4a28f36954ed3a1330c8e751d584}\label{classoptions_1_1CommandLineOptions_af8ee4a28f36954ed3a1330c8e751d584}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!experiments@{experiments}}
+\index{experiments@{experiments}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{experiments}{experiments}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ options\+::\+Command\+Line\+Options\+::experiments}
+
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_a8e54fcc88c2d0677a3fa43fcdf4e6285}\label{classoptions_1_1CommandLineOptions_a8e54fcc88c2d0677a3fa43fcdf4e6285}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!model\_type@{model\_type}}
+\index{model\_type@{model\_type}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{model\_type}{model\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} options\+::\+Command\+Line\+Options\+::model\+\_\+type}
+
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_a94eba728bde9ab93b2b322e8e8dd9916}\label{classoptions_1_1CommandLineOptions_a94eba728bde9ab93b2b322e8e8dd9916}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!output\_file\_name@{output\_file\_name}}
+\index{output\_file\_name@{output\_file\_name}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{output\_file\_name}{output\_file\_name}}
+{\footnotesize\ttfamily std\+::string options\+::\+Command\+Line\+Options\+::output\+\_\+file\+\_\+name}
+
+\mbox{\Hypertarget{classoptions_1_1CommandLineOptions_a88c3479972135e53c028c957df446206}\label{classoptions_1_1CommandLineOptions_a88c3479972135e53c028c957df446206}} 
+\index{options::CommandLineOptions@{options::CommandLineOptions}!vm@{vm}}
+\index{vm@{vm}!options::CommandLineOptions@{options::CommandLineOptions}}
+\doxysubsubsection{\texorpdfstring{vm}{vm}}
+{\footnotesize\ttfamily po\+::variables\+\_\+map options\+::\+Command\+Line\+Options\+::vm}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/options/\mbox{\hyperlink{CommandLineOptions_8h}{Command\+Line\+Options.\+h}}\item 
+src/options/\mbox{\hyperlink{CommandLineOptions_8cpp}{Command\+Line\+Options.\+cpp}}\end{DoxyCompactItemize}

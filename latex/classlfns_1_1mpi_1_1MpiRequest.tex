@@ -1,0 +1,148 @@
+\hypertarget{classlfns_1_1mpi_1_1MpiRequest}{}\doxysection{lfns\+::mpi\+::Mpi\+Request Class Reference}
+\label{classlfns_1_1mpi_1_1MpiRequest}\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+
+
+{\ttfamily \#include $<$Mpi\+Request.\+h$>$}
+
+
+
+Inheritance diagram for lfns\+::mpi\+::Mpi\+Request\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlfns_1_1mpi_1_1MpiRequest__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a43dd3128c7288054a22bb8b6c3e25b86}{Mpi\+Request}} (std\+::size\+\_\+t rank)
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_aabef0e83e0e4917eafe041993ad645fd}{$\sim$\+Mpi\+Request}} ()
+\item 
+virtual bool \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a16cfa08549071e1dcad74751081eeaa5}{test}} ()
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a1c481dadade05d99856380403c400782}{get\+Rank}} ()
+\item 
+bool \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_afd626563c5621ddff2d019fef5a2486f}{process\+Stopped}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a56cedd39890cac8707d76a8b54026517}{interrupt\+Request}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_ace437e0a8a07ad40f4731f5b1f51455a}{prepare\+Stopping}} ()
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_aa7427b6669de63392dc1f3daf8d74d4d}{get\+Clocks\+Since\+Request}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a88f8f400a580459ebe373f189e4f23d2}{\+\_\+rank}}
+\item 
+bmpi\+::request \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_ad4b1499c62cb22b6a57bb273171f0b25}{\+\_\+request}}
+\item 
+bool \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a601677d54918445504bd19c36d1f729d}{\+\_\+request\+\_\+finished}}
+\item 
+clock\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a9ff017a6aa5a9957ee8c9e13fd849885}{\+\_\+request\+\_\+time}}
+\item 
+bmpi\+::communicator \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a4355d8d4eeec4326a0baea7e6f3e89af}{world}}
+\item 
+bool \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiRequest_a88e8df8172fadad2af46cf45bc186dc8}{\+\_\+process\+\_\+stopped}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a43dd3128c7288054a22bb8b6c3e25b86}\label{classlfns_1_1mpi_1_1MpiRequest_a43dd3128c7288054a22bb8b6c3e25b86}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!MpiRequest@{MpiRequest}}
+\index{MpiRequest@{MpiRequest}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{MpiRequest()}{MpiRequest()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+Mpi\+Request\+::\+Mpi\+Request (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{rank }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_aabef0e83e0e4917eafe041993ad645fd}\label{classlfns_1_1mpi_1_1MpiRequest_aabef0e83e0e4917eafe041993ad645fd}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!````~MpiRequest@{$\sim$MpiRequest}}
+\index{````~MpiRequest@{$\sim$MpiRequest}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{$\sim$MpiRequest()}{~MpiRequest()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+Mpi\+Request\+::$\sim$\+Mpi\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_aa7427b6669de63392dc1f3daf8d74d4d}\label{classlfns_1_1mpi_1_1MpiRequest_aa7427b6669de63392dc1f3daf8d74d4d}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!getClocksSinceRequest@{getClocksSinceRequest}}
+\index{getClocksSinceRequest@{getClocksSinceRequest}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{getClocksSinceRequest()}{getClocksSinceRequest()}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::mpi\+::\+Mpi\+Request\+::get\+Clocks\+Since\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a1c481dadade05d99856380403c400782}\label{classlfns_1_1mpi_1_1MpiRequest_a1c481dadade05d99856380403c400782}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!getRank@{getRank}}
+\index{getRank@{getRank}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{getRank()}{getRank()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t lfns\+::mpi\+::\+Mpi\+Request\+::get\+Rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a56cedd39890cac8707d76a8b54026517}\label{classlfns_1_1mpi_1_1MpiRequest_a56cedd39890cac8707d76a8b54026517}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!interruptRequest@{interruptRequest}}
+\index{interruptRequest@{interruptRequest}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{interruptRequest()}{interruptRequest()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+Mpi\+Request\+::interrupt\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_ace437e0a8a07ad40f4731f5b1f51455a}\label{classlfns_1_1mpi_1_1MpiRequest_ace437e0a8a07ad40f4731f5b1f51455a}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!prepareStopping@{prepareStopping}}
+\index{prepareStopping@{prepareStopping}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{prepareStopping()}{prepareStopping()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+Mpi\+Request\+::prepare\+Stopping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_afd626563c5621ddff2d019fef5a2486f}\label{classlfns_1_1mpi_1_1MpiRequest_afd626563c5621ddff2d019fef5a2486f}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!processStopped@{processStopped}}
+\index{processStopped@{processStopped}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{processStopped()}{processStopped()}}
+{\footnotesize\ttfamily bool lfns\+::mpi\+::\+Mpi\+Request\+::process\+Stopped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a16cfa08549071e1dcad74751081eeaa5}\label{classlfns_1_1mpi_1_1MpiRequest_a16cfa08549071e1dcad74751081eeaa5}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!test@{test}}
+\index{test@{test}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily bool lfns\+::mpi\+::\+Mpi\+Request\+::test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a88e8df8172fadad2af46cf45bc186dc8}\label{classlfns_1_1mpi_1_1MpiRequest_a88e8df8172fadad2af46cf45bc186dc8}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!\_process\_stopped@{\_process\_stopped}}
+\index{\_process\_stopped@{\_process\_stopped}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{\_process\_stopped}{\_process\_stopped}}
+{\footnotesize\ttfamily bool lfns\+::mpi\+::\+Mpi\+Request\+::\+\_\+process\+\_\+stopped\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a88f8f400a580459ebe373f189e4f23d2}\label{classlfns_1_1mpi_1_1MpiRequest_a88f8f400a580459ebe373f189e4f23d2}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!\_rank@{\_rank}}
+\index{\_rank@{\_rank}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{\_rank}{\_rank}}
+{\footnotesize\ttfamily std\+::size\+\_\+t lfns\+::mpi\+::\+Mpi\+Request\+::\+\_\+rank\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_ad4b1499c62cb22b6a57bb273171f0b25}\label{classlfns_1_1mpi_1_1MpiRequest_ad4b1499c62cb22b6a57bb273171f0b25}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!\_request@{\_request}}
+\index{\_request@{\_request}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{\_request}{\_request}}
+{\footnotesize\ttfamily bmpi\+::request lfns\+::mpi\+::\+Mpi\+Request\+::\+\_\+request\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a601677d54918445504bd19c36d1f729d}\label{classlfns_1_1mpi_1_1MpiRequest_a601677d54918445504bd19c36d1f729d}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!\_request\_finished@{\_request\_finished}}
+\index{\_request\_finished@{\_request\_finished}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{\_request\_finished}{\_request\_finished}}
+{\footnotesize\ttfamily bool lfns\+::mpi\+::\+Mpi\+Request\+::\+\_\+request\+\_\+finished\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a9ff017a6aa5a9957ee8c9e13fd849885}\label{classlfns_1_1mpi_1_1MpiRequest_a9ff017a6aa5a9957ee8c9e13fd849885}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!\_request\_time@{\_request\_time}}
+\index{\_request\_time@{\_request\_time}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{\_request\_time}{\_request\_time}}
+{\footnotesize\ttfamily clock\+\_\+t lfns\+::mpi\+::\+Mpi\+Request\+::\+\_\+request\+\_\+time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiRequest_a4355d8d4eeec4326a0baea7e6f3e89af}\label{classlfns_1_1mpi_1_1MpiRequest_a4355d8d4eeec4326a0baea7e6f3e89af}} 
+\index{lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}!world@{world}}
+\index{world@{world}!lfns::mpi::MpiRequest@{lfns::mpi::MpiRequest}}
+\doxysubsubsection{\texorpdfstring{world}{world}}
+{\footnotesize\ttfamily bmpi\+::communicator lfns\+::mpi\+::\+Mpi\+Request\+::world\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{MpiRequest_8h}{Mpi\+Request.\+h}}\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{MpiRequest_8cpp}{Mpi\+Request.\+cpp}}\end{DoxyCompactItemize}

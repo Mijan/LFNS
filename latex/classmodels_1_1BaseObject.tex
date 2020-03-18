@@ -1,0 +1,356 @@
+\hypertarget{classmodels_1_1BaseObject}{}\doxysection{models\+::Base\+Object Class Reference}
+\label{classmodels_1_1BaseObject}\index{models::BaseObject@{models::BaseObject}}
+
+
+{\ttfamily \#include $<$Base\+Object.\+h$>$}
+
+
+
+Inheritance diagram for models\+::Base\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodels_1_1BaseObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for models\+::Base\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classmodels_1_1BaseObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1BaseObject_aad72bcf4c6c2f41dfb526de0b6766dd6}{Base\+Object}} (\mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} data)
+\item 
+\mbox{\hyperlink{classmodels_1_1BaseObject_ac33597c3bac58ae95def20c82e60f3d1}{Base\+Object}} (std\+::vector$<$ std\+::string $>$ parameter\+\_\+names, std\+::vector$<$ std\+::string $>$ species\+\_\+names)
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}{set\+Pointer}} (double $\ast$ptr, std\+::string name)
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1BaseObject_ad9991ca2235c9cd18774a7fe4d17c745}{set\+Pointers}} (std\+::vector$<$ double $\ast$ $>$ ptrs, std\+::vector$<$ std\+::string $>$ names)
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1BaseObject_a0c5c9762b6e9dd9968acb8830a822045}{print\+Pointer}} (std\+::ostream \&os) const
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1BaseObject_a0b592f5e9bcd51b1d12a2617e9e5bbbf}{print\+Pointer\+Value}} (std\+::ostream \&os) const
+\item 
+double $\ast$ \mbox{\hyperlink{classmodels_1_1BaseObject_a71227b9a79739f5e68ada2b05f94344d}{parameter\+Ptr}} (std\+::size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em direct access to ith parameter pointer \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classmodels_1_1BaseObject_a59106f572c438ac3f7a463030f1649e4}{state\+Ptr}} (std\+::size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em direct access to ith state pointer \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classmodels_1_1BaseObject_a1c55d8d02e5fe955a9cc17a8254ea7e2}{time\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em direct access to time pointer \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1BaseObject_a8259c12139569ac05de448afa22c2490}{get\+Species\+Names}} () const
+\item 
+const \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classmodels_1_1BaseObject_a73661b3a693f4676219d7c1ec99ad7a5}{get\+Num\+Species}} () const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1BaseObject_aa5b844f9a96733723d0a0b43c14b2f91}{get\+Parameter\+Names}} () const
+\item 
+const \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classmodels_1_1BaseObject_a432cef2dc03ebcee7d0aba4148883a34}{get\+Num\+Parameters}} () const
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1BaseObject_a4ea5a43946acce3bcc2185eed0d16c01}{print\+Info}} (std\+::ostream \&os) const
+\item 
+\mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} \& \mbox{\hyperlink{classmodels_1_1BaseObject_a2beee66783f710f28a6608589bd1d613}{get\+Base\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Access function to the base data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classmodels_1_1BaseObject_ac8546dc616d68918a55e5a62c82cf5a5}{\+\_\+all\+Pointer\+Set}} () const
+\begin{DoxyCompactList}\small\item\em Check if all the pointers for parameters and species have been set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmodels_1_1BaseObject_aa6f8bfae327d6e49b200d79ec16fd401}{\+\_\+parameter\+Pointer\+Set}} () const
+\begin{DoxyCompactList}\small\item\em Check if all the pointers for parameters have been set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmodels_1_1BaseObject_afdf1a4314612a59a99c8657e9e33db47}{\+\_\+state\+Pointer\+Set}} () const
+\begin{DoxyCompactList}\small\item\em Check if all the pointers for states have been set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmodels_1_1BaseObject_a7cc1abf90d0f2cfd503485682f09bae9}{\+\_\+time\+Pointer\+Set}} () const
+\begin{DoxyCompactList}\small\item\em Check if the pointer for the time has been set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $\ast$ $>$ \mbox{\hyperlink{classmodels_1_1BaseObject_a93a5e1aa42b2e3f985deee266b77c989}{\+\_\+parameter\+\_\+ptrs}}
+\begin{DoxyCompactList}\small\item\em the stored pointers to the parameter values \end{DoxyCompactList}\item 
+std\+::vector$<$ double $\ast$ $>$ \mbox{\hyperlink{classmodels_1_1BaseObject_a36bb8bdb12a5ea2539eaf7c2230c3ace}{\+\_\+state\+\_\+ptrs}}
+\begin{DoxyCompactList}\small\item\em the stored pointer to the state values \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classmodels_1_1BaseObject_aae00d13db7f9830e0c9b67cf2d98189c}{\+\_\+time\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em the stored pointer to the time value \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} \mbox{\hyperlink{classmodels_1_1BaseObject_abcda47d7811561cd05792572e563bcc7}{\+\_\+base\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em the base data, containing the names and number of parameters and states \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The basic class for the general modelling object that stores pointers to the parameter values, the state values and the time value. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_aad72bcf4c6c2f41dfb526de0b6766dd6}\label{classmodels_1_1BaseObject_aad72bcf4c6c2f41dfb526de0b6766dd6}} 
+\index{models::BaseObject@{models::BaseObject}!BaseObject@{BaseObject}}
+\index{BaseObject@{BaseObject}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{BaseObject()}{BaseObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily models\+::\+Base\+Object\+::\+Base\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}}}]{data }\end{DoxyParamCaption})}
+
+The basic constructor taking already constructed \mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} 
+\begin{DoxyParams}{Parameters}
+{\em data} & the base data containing parameter names and species names \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_ac33597c3bac58ae95def20c82e60f3d1}\label{classmodels_1_1BaseObject_ac33597c3bac58ae95def20c82e60f3d1}} 
+\index{models::BaseObject@{models::BaseObject}!BaseObject@{BaseObject}}
+\index{BaseObject@{BaseObject}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{BaseObject()}{BaseObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily models\+::\+Base\+Object\+::\+Base\+Object (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{parameter\+\_\+names,  }\item[{std\+::vector$<$ std\+::string $>$}]{species\+\_\+names }\end{DoxyParamCaption})}
+
+The basic constructor taking a list of parameter and species names 
+\begin{DoxyParams}{Parameters}
+{\em parameter\+\_\+names} & \\
+\hline
+{\em species\+\_\+names} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_ac8546dc616d68918a55e5a62c82cf5a5}\label{classmodels_1_1BaseObject_ac8546dc616d68918a55e5a62c82cf5a5}} 
+\index{models::BaseObject@{models::BaseObject}!\_allPointerSet@{\_allPointerSet}}
+\index{\_allPointerSet@{\_allPointerSet}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_allPointerSet()}{\_allPointerSet()}}
+{\footnotesize\ttfamily bool models\+::\+Base\+Object\+::\+\_\+all\+Pointer\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Check if all the pointers for parameters and species have been set. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classmodels_1_1MeasurementModel_a8e6964031549edfbac0cf3c7961a36c5}{models\+::\+Measurement\+Model}}.
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_aa6f8bfae327d6e49b200d79ec16fd401}\label{classmodels_1_1BaseObject_aa6f8bfae327d6e49b200d79ec16fd401}} 
+\index{models::BaseObject@{models::BaseObject}!\_parameterPointerSet@{\_parameterPointerSet}}
+\index{\_parameterPointerSet@{\_parameterPointerSet}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_parameterPointerSet()}{\_parameterPointerSet()}}
+{\footnotesize\ttfamily bool models\+::\+Base\+Object\+::\+\_\+parameter\+Pointer\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if all the pointers for parameters have been set. 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_afdf1a4314612a59a99c8657e9e33db47}\label{classmodels_1_1BaseObject_afdf1a4314612a59a99c8657e9e33db47}} 
+\index{models::BaseObject@{models::BaseObject}!\_statePointerSet@{\_statePointerSet}}
+\index{\_statePointerSet@{\_statePointerSet}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_statePointerSet()}{\_statePointerSet()}}
+{\footnotesize\ttfamily bool models\+::\+Base\+Object\+::\+\_\+state\+Pointer\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if all the pointers for states have been set. 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a7cc1abf90d0f2cfd503485682f09bae9}\label{classmodels_1_1BaseObject_a7cc1abf90d0f2cfd503485682f09bae9}} 
+\index{models::BaseObject@{models::BaseObject}!\_timePointerSet@{\_timePointerSet}}
+\index{\_timePointerSet@{\_timePointerSet}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_timePointerSet()}{\_timePointerSet()}}
+{\footnotesize\ttfamily bool models\+::\+Base\+Object\+::\+\_\+time\+Pointer\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if the pointer for the time has been set. 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a2beee66783f710f28a6608589bd1d613}\label{classmodels_1_1BaseObject_a2beee66783f710f28a6608589bd1d613}} 
+\index{models::BaseObject@{models::BaseObject}!getBaseData@{getBaseData}}
+\index{getBaseData@{getBaseData}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{getBaseData()}{getBaseData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} \& models\+::\+Base\+Object\+::get\+Base\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access function to the base data. 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a432cef2dc03ebcee7d0aba4148883a34}\label{classmodels_1_1BaseObject_a432cef2dc03ebcee7d0aba4148883a34}} 
+\index{models::BaseObject@{models::BaseObject}!getNumParameters@{getNumParameters}}
+\index{getNumParameters@{getNumParameters}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{getNumParameters()}{getNumParameters()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} models\+::\+Base\+Object\+::get\+Num\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of parameters \begin{DoxyReturn}{Returns}
+number of parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a73661b3a693f4676219d7c1ec99ad7a5}\label{classmodels_1_1BaseObject_a73661b3a693f4676219d7c1ec99ad7a5}} 
+\index{models::BaseObject@{models::BaseObject}!getNumSpecies@{getNumSpecies}}
+\index{getNumSpecies@{getNumSpecies}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{getNumSpecies()}{getNumSpecies()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} models\+::\+Base\+Object\+::get\+Num\+Species (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of species \begin{DoxyReturn}{Returns}
+number of species 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_aa5b844f9a96733723d0a0b43c14b2f91}\label{classmodels_1_1BaseObject_aa5b844f9a96733723d0a0b43c14b2f91}} 
+\index{models::BaseObject@{models::BaseObject}!getParameterNames@{getParameterNames}}
+\index{getParameterNames@{getParameterNames}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{getParameterNames()}{getParameterNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Base\+Object\+::get\+Parameter\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get all parameter names \begin{DoxyReturn}{Returns}
+vector of parameter names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a8259c12139569ac05de448afa22c2490}\label{classmodels_1_1BaseObject_a8259c12139569ac05de448afa22c2490}} 
+\index{models::BaseObject@{models::BaseObject}!getSpeciesNames@{getSpeciesNames}}
+\index{getSpeciesNames@{getSpeciesNames}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{getSpeciesNames()}{getSpeciesNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Base\+Object\+::get\+Species\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get all species names \begin{DoxyReturn}{Returns}
+vector of species names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a71227b9a79739f5e68ada2b05f94344d}\label{classmodels_1_1BaseObject_a71227b9a79739f5e68ada2b05f94344d}} 
+\index{models::BaseObject@{models::BaseObject}!parameterPtr@{parameterPtr}}
+\index{parameterPtr@{parameterPtr}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{parameterPtr()}{parameterPtr()}}
+{\footnotesize\ttfamily double $\ast$ models\+::\+Base\+Object\+::parameter\+Ptr (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+direct access to ith parameter pointer 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a4ea5a43946acce3bcc2185eed0d16c01}\label{classmodels_1_1BaseObject_a4ea5a43946acce3bcc2185eed0d16c01}} 
+\index{models::BaseObject@{models::BaseObject}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily void models\+::\+Base\+Object\+::print\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints all the parameter and species names to a output stream 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the output will be written. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a4e450820210184733f67e786108812d7}{models\+::\+Chemical\+Reaction\+Network}}, and \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8ae4969ab66509c0e}{models\+::\+Parser\+Base\+Object}}.
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a0c5c9762b6e9dd9968acb8830a822045}\label{classmodels_1_1BaseObject_a0c5c9762b6e9dd9968acb8830a822045}} 
+\index{models::BaseObject@{models::BaseObject}!printPointer@{printPointer}}
+\index{printPointer@{printPointer}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{printPointer()}{printPointer()}}
+{\footnotesize\ttfamily void models\+::\+Base\+Object\+::print\+Pointer (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints all the parameter and species pointer to the stream os 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the list of pointers is printed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmodels_1_1MeasurementModel_aefd98a3db3982a09175d0b4ffd2a758c}{models\+::\+Measurement\+Model}}.
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a0b592f5e9bcd51b1d12a2617e9e5bbbf}\label{classmodels_1_1BaseObject_a0b592f5e9bcd51b1d12a2617e9e5bbbf}} 
+\index{models::BaseObject@{models::BaseObject}!printPointerValue@{printPointerValue}}
+\index{printPointerValue@{printPointerValue}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{printPointerValue()}{printPointerValue()}}
+{\footnotesize\ttfamily void models\+::\+Base\+Object\+::print\+Pointer\+Value (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints all the parameter and species values to the stream os 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the list of values is printed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmodels_1_1MeasurementModel_a7a1ada6cd0ce3ad4ef7ba537cd92d16c}{models\+::\+Measurement\+Model}}.
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}\label{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}} 
+\index{models::BaseObject@{models::BaseObject}!setPointer@{setPointer}}
+\index{setPointer@{setPointer}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{setPointer()}{setPointer()}}
+{\footnotesize\ttfamily void models\+::\+Base\+Object\+::set\+Pointer (\begin{DoxyParamCaption}\item[{double $\ast$}]{ptr,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets a pointer for the parameter or species with corresponding name. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & the provided pointer \\
+\hline
+{\em name} & the name of the parameter or species for which the pointer is provided \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}{models\+::\+Parser\+Base\+Object}}.
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_ad9991ca2235c9cd18774a7fe4d17c745}\label{classmodels_1_1BaseObject_ad9991ca2235c9cd18774a7fe4d17c745}} 
+\index{models::BaseObject@{models::BaseObject}!setPointers@{setPointers}}
+\index{setPointers@{setPointers}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{setPointers()}{setPointers()}}
+{\footnotesize\ttfamily void models\+::\+Base\+Object\+::set\+Pointers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $\ast$ $>$}]{ptrs,  }\item[{std\+::vector$<$ std\+::string $>$}]{names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets a list of pointers for the parameters and species specified in names 
+\begin{DoxyParams}{Parameters}
+{\em ptrs} & a vector of the provided pointers \\
+\hline
+{\em names} & the names of parameters and species for which the pointers are provided \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a59106f572c438ac3f7a463030f1649e4}\label{classmodels_1_1BaseObject_a59106f572c438ac3f7a463030f1649e4}} 
+\index{models::BaseObject@{models::BaseObject}!statePtr@{statePtr}}
+\index{statePtr@{statePtr}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{statePtr()}{statePtr()}}
+{\footnotesize\ttfamily double $\ast$ models\+::\+Base\+Object\+::state\+Ptr (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+direct access to ith state pointer 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a1c55d8d02e5fe955a9cc17a8254ea7e2}\label{classmodels_1_1BaseObject_a1c55d8d02e5fe955a9cc17a8254ea7e2}} 
+\index{models::BaseObject@{models::BaseObject}!timePtr@{timePtr}}
+\index{timePtr@{timePtr}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{timePtr()}{timePtr()}}
+{\footnotesize\ttfamily double $\ast$ models\+::\+Base\+Object\+::time\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+direct access to time pointer 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1BaseObject_abcda47d7811561cd05792572e563bcc7}\label{classmodels_1_1BaseObject_abcda47d7811561cd05792572e563bcc7}} 
+\index{models::BaseObject@{models::BaseObject}!\_base\_data@{\_base\_data}}
+\index{\_base\_data@{\_base\_data}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_base\_data}{\_base\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} models\+::\+Base\+Object\+::\+\_\+base\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the base data, containing the names and number of parameters and states 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a93a5e1aa42b2e3f985deee266b77c989}\label{classmodels_1_1BaseObject_a93a5e1aa42b2e3f985deee266b77c989}} 
+\index{models::BaseObject@{models::BaseObject}!\_parameter\_ptrs@{\_parameter\_ptrs}}
+\index{\_parameter\_ptrs@{\_parameter\_ptrs}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_parameter\_ptrs}{\_parameter\_ptrs}}
+{\footnotesize\ttfamily std\+::vector$<$double $\ast$$>$ models\+::\+Base\+Object\+::\+\_\+parameter\+\_\+ptrs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the stored pointers to the parameter values 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_a36bb8bdb12a5ea2539eaf7c2230c3ace}\label{classmodels_1_1BaseObject_a36bb8bdb12a5ea2539eaf7c2230c3ace}} 
+\index{models::BaseObject@{models::BaseObject}!\_state\_ptrs@{\_state\_ptrs}}
+\index{\_state\_ptrs@{\_state\_ptrs}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_state\_ptrs}{\_state\_ptrs}}
+{\footnotesize\ttfamily std\+::vector$<$double $\ast$$>$ models\+::\+Base\+Object\+::\+\_\+state\+\_\+ptrs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the stored pointer to the state values 
+
+\mbox{\Hypertarget{classmodels_1_1BaseObject_aae00d13db7f9830e0c9b67cf2d98189c}\label{classmodels_1_1BaseObject_aae00d13db7f9830e0c9b67cf2d98189c}} 
+\index{models::BaseObject@{models::BaseObject}!\_time\_ptr@{\_time\_ptr}}
+\index{\_time\_ptr@{\_time\_ptr}!models::BaseObject@{models::BaseObject}}
+\doxysubsubsection{\texorpdfstring{\_time\_ptr}{\_time\_ptr}}
+{\footnotesize\ttfamily double$\ast$ models\+::\+Base\+Object\+::\+\_\+time\+\_\+ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the stored pointer to the time value 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{BaseObject_8h}{Base\+Object.\+h}}\item 
+src/models/\mbox{\hyperlink{BaseObject_8cpp}{Base\+Object.\+cpp}}\end{DoxyCompactItemize}

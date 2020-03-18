@@ -1,0 +1,172 @@
+\hypertarget{classmodels_1_1BaseData}{}\doxysection{models\+::Base\+Data Class Reference}
+\label{classmodels_1_1BaseData}\index{models::BaseData@{models::BaseData}}
+
+
+The base data needed for constructing the base objects. It requires a list of parameters and a list of species names.  
+
+
+
+
+{\ttfamily \#include $<$Base\+Data.\+h$>$}
+
+
+
+Inheritance diagram for models\+::Base\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodels_1_1BaseData__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1BaseData_afa3682c91a49858b216c06e2d4f8ed80}{Base\+Data}} (std\+::vector$<$ std\+::string $>$ parameter\+\_\+names\+\_\+, std\+::vector$<$ std\+::string $>$ species\+\_\+names\+\_\+)
+\item 
+\mbox{\hyperlink{classmodels_1_1BaseData_a21b31f4cee52a91146f13f372506deb2}{Base\+Data}} ()
+\item 
+\mbox{\hyperlink{classmodels_1_1BaseData_a9b06bf0ab2a00d80415425c029dc17d9}{Base\+Data}} (const \mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} \&rhs)
+\item 
+virtual \mbox{\hyperlink{classmodels_1_1BaseData_a5b8febc90501982c9ec7594a3849451c}{$\sim$\+Base\+Data}} ()
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1BaseData_af7dafc31ef79cb0ce18b912e71fa9068}{get\+Num\+Paramters}} () const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1BaseData_a9a19bf9689bb51a3dd516ccdb3b972b7}{get\+Num\+Species}} () const
+\item 
+bool \mbox{\hyperlink{classmodels_1_1BaseData_a6c730da9f8a6c082e80f89b3662889f3}{is\+Species\+Name}} (std\+::string name) const
+\item 
+bool \mbox{\hyperlink{classmodels_1_1BaseData_a2fb0cc09342dc172b6bf237c393859f0}{is\+Param\+Name}} (std\+::string name) const
+\item 
+bool \mbox{\hyperlink{classmodels_1_1BaseData_a3866f79d4633b4f8a40118516239cf42}{is\+Time\+Name}} (std\+::string name) const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1BaseData_a7efbb4a423fa49dc83517b396f9c265b}{get\+Species\+Index}} (std\+::string species\+\_\+name) const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1BaseData_a64ffd523341a99b9eb499bdf1a34a168}{get\+Param\+Index}} (std\+::string param\+\_\+name) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1BaseData_a6aa01aa4571f7c468e39ee8e793b657b}{get\+Parameter\+Names}} () const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1BaseData_a21473b8a9beb98903ef8f6e23d64ac61}{get\+Species\+Names}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1BaseData_a5cbbb528a26b7a425f529ab5d8f86e76}{get\+Time\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1BaseData_af78e74ea7342303778e13cf49f4b509c}{parameter\+\_\+names}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1BaseData_a17ecdb3c1e1012ce92ca38486df24cd8}{species\+\_\+names}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base data needed for constructing the base objects. It requires a list of parameters and a list of species names. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1BaseData_afa3682c91a49858b216c06e2d4f8ed80}\label{classmodels_1_1BaseData_afa3682c91a49858b216c06e2d4f8ed80}} 
+\index{models::BaseData@{models::BaseData}!BaseData@{BaseData}}
+\index{BaseData@{BaseData}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{BaseData()}{BaseData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily models\+::\+Base\+Data\+::\+Base\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{parameter\+\_\+names\+\_\+,  }\item[{std\+::vector$<$ std\+::string $>$}]{species\+\_\+names\+\_\+ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a21b31f4cee52a91146f13f372506deb2}\label{classmodels_1_1BaseData_a21b31f4cee52a91146f13f372506deb2}} 
+\index{models::BaseData@{models::BaseData}!BaseData@{BaseData}}
+\index{BaseData@{BaseData}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{BaseData()}{BaseData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily models\+::\+Base\+Data\+::\+Base\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a9b06bf0ab2a00d80415425c029dc17d9}\label{classmodels_1_1BaseData_a9b06bf0ab2a00d80415425c029dc17d9}} 
+\index{models::BaseData@{models::BaseData}!BaseData@{BaseData}}
+\index{BaseData@{BaseData}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{BaseData()}{BaseData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily models\+::\+Base\+Data\+::\+Base\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmodels_1_1BaseData}{Base\+Data}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a5b8febc90501982c9ec7594a3849451c}\label{classmodels_1_1BaseData_a5b8febc90501982c9ec7594a3849451c}} 
+\index{models::BaseData@{models::BaseData}!````~BaseData@{$\sim$BaseData}}
+\index{````~BaseData@{$\sim$BaseData}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{$\sim$BaseData()}{~BaseData()}}
+{\footnotesize\ttfamily models\+::\+Base\+Data\+::$\sim$\+Base\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1BaseData_af7dafc31ef79cb0ce18b912e71fa9068}\label{classmodels_1_1BaseData_af7dafc31ef79cb0ce18b912e71fa9068}} 
+\index{models::BaseData@{models::BaseData}!getNumParamters@{getNumParamters}}
+\index{getNumParamters@{getNumParamters}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{getNumParamters()}{getNumParamters()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Base\+Data\+::get\+Num\+Paramters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a9a19bf9689bb51a3dd516ccdb3b972b7}\label{classmodels_1_1BaseData_a9a19bf9689bb51a3dd516ccdb3b972b7}} 
+\index{models::BaseData@{models::BaseData}!getNumSpecies@{getNumSpecies}}
+\index{getNumSpecies@{getNumSpecies}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{getNumSpecies()}{getNumSpecies()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Base\+Data\+::get\+Num\+Species (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a6aa01aa4571f7c468e39ee8e793b657b}\label{classmodels_1_1BaseData_a6aa01aa4571f7c468e39ee8e793b657b}} 
+\index{models::BaseData@{models::BaseData}!getParameterNames@{getParameterNames}}
+\index{getParameterNames@{getParameterNames}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{getParameterNames()}{getParameterNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Base\+Data\+::get\+Parameter\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a64ffd523341a99b9eb499bdf1a34a168}\label{classmodels_1_1BaseData_a64ffd523341a99b9eb499bdf1a34a168}} 
+\index{models::BaseData@{models::BaseData}!getParamIndex@{getParamIndex}}
+\index{getParamIndex@{getParamIndex}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{getParamIndex()}{getParamIndex()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Base\+Data\+::get\+Param\+Index (\begin{DoxyParamCaption}\item[{std\+::string}]{param\+\_\+name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a7efbb4a423fa49dc83517b396f9c265b}\label{classmodels_1_1BaseData_a7efbb4a423fa49dc83517b396f9c265b}} 
+\index{models::BaseData@{models::BaseData}!getSpeciesIndex@{getSpeciesIndex}}
+\index{getSpeciesIndex@{getSpeciesIndex}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{getSpeciesIndex()}{getSpeciesIndex()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Base\+Data\+::get\+Species\+Index (\begin{DoxyParamCaption}\item[{std\+::string}]{species\+\_\+name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a21473b8a9beb98903ef8f6e23d64ac61}\label{classmodels_1_1BaseData_a21473b8a9beb98903ef8f6e23d64ac61}} 
+\index{models::BaseData@{models::BaseData}!getSpeciesNames@{getSpeciesNames}}
+\index{getSpeciesNames@{getSpeciesNames}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{getSpeciesNames()}{getSpeciesNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Base\+Data\+::get\+Species\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a5cbbb528a26b7a425f529ab5d8f86e76}\label{classmodels_1_1BaseData_a5cbbb528a26b7a425f529ab5d8f86e76}} 
+\index{models::BaseData@{models::BaseData}!getTimeName@{getTimeName}}
+\index{getTimeName@{getTimeName}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{getTimeName()}{getTimeName()}}
+{\footnotesize\ttfamily std\+::string models\+::\+Base\+Data\+::get\+Time\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a2fb0cc09342dc172b6bf237c393859f0}\label{classmodels_1_1BaseData_a2fb0cc09342dc172b6bf237c393859f0}} 
+\index{models::BaseData@{models::BaseData}!isParamName@{isParamName}}
+\index{isParamName@{isParamName}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{isParamName()}{isParamName()}}
+{\footnotesize\ttfamily bool models\+::\+Base\+Data\+::is\+Param\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a6c730da9f8a6c082e80f89b3662889f3}\label{classmodels_1_1BaseData_a6c730da9f8a6c082e80f89b3662889f3}} 
+\index{models::BaseData@{models::BaseData}!isSpeciesName@{isSpeciesName}}
+\index{isSpeciesName@{isSpeciesName}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{isSpeciesName()}{isSpeciesName()}}
+{\footnotesize\ttfamily bool models\+::\+Base\+Data\+::is\+Species\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a3866f79d4633b4f8a40118516239cf42}\label{classmodels_1_1BaseData_a3866f79d4633b4f8a40118516239cf42}} 
+\index{models::BaseData@{models::BaseData}!isTimeName@{isTimeName}}
+\index{isTimeName@{isTimeName}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{isTimeName()}{isTimeName()}}
+{\footnotesize\ttfamily bool models\+::\+Base\+Data\+::is\+Time\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1BaseData_af78e74ea7342303778e13cf49f4b509c}\label{classmodels_1_1BaseData_af78e74ea7342303778e13cf49f4b509c}} 
+\index{models::BaseData@{models::BaseData}!parameter\_names@{parameter\_names}}
+\index{parameter\_names@{parameter\_names}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{parameter\_names}{parameter\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Base\+Data\+::parameter\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1BaseData_a17ecdb3c1e1012ce92ca38486df24cd8}\label{classmodels_1_1BaseData_a17ecdb3c1e1012ce92ca38486df24cd8}} 
+\index{models::BaseData@{models::BaseData}!species\_names@{species\_names}}
+\index{species\_names@{species\_names}!models::BaseData@{models::BaseData}}
+\doxysubsubsection{\texorpdfstring{species\_names}{species\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Base\+Data\+::species\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{BaseData_8h}{Base\+Data.\+h}}\item 
+src/models/\mbox{\hyperlink{BaseData_8cpp}{Base\+Data.\+cpp}}\end{DoxyCompactItemize}

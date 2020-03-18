@@ -1,0 +1,401 @@
+\hypertarget{classlfns_1_1LFNSLogger}{}\doxysection{lfns\+::L\+F\+N\+S\+Logger Class Reference}
+\label{classlfns_1_1LFNSLogger}\index{lfns::LFNSLogger@{lfns::LFNSLogger}}
+
+
+{\ttfamily \#include $<$L\+F\+N\+S\+Logger.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1LFNSLogger_a825a8cc816813b7577173562ce73b868}{L\+F\+N\+S\+Logger}} (\mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} settings)
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1LFNSLogger_a82df6f0b648e3b824a1ed20d584eabbf}{$\sim$\+L\+F\+N\+S\+Logger}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_a7d75b050379b5006e9ae05556e92f613}{lfns\+Started}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} i, double d)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_ad2b823e8d6eb52e15fc9a3eeef259e20}{lfns\+Resume}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} m, double epsilon)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_a3011eb782c411fcd1f683b74ee1ff745}{iteration\+Started}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} i)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_ab3ae6763fe1bf3420dcb2644d00cb569}{dead\+Point\+Added}} (const \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} \&particle)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_ac5b1965aa63a56687df4a6b3e8a48884}{epsilon\+Updated}} (double d)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_aa04e823276cf9931c1bb296df0168c37}{sampler\+Updated}} (\mbox{\hyperlink{classlfns_1_1LFNSSampler}{L\+F\+N\+S\+Sampler}} \&sampler, time\+\_\+t clocks\+\_\+for\+\_\+sampler\+\_\+update)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_acfbd4ee3b6132b26eb27dd9e228ad1b0}{theta\+Sampled}} (const std\+::vector$<$ double $>$ \&vector, time\+\_\+t clocks\+\_\+sampling)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_ace225a488abf798d8caddba8cc87b681}{likelihood\+Computed}} (double likelihood)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_aeadeb992e8befe1fed3a24361a215e10}{particle\+Accepted}} (const std\+::vector$<$ double $>$ \&theta, double l)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_ab82ac2e2be9e54113cc87ee8ce2f7afc}{particle\+Accepted}} (const std\+::vector$<$ double $>$ \&theta, double l, time\+\_\+t clocks\+\_\+particle, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} origin\+\_\+process=0)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_af8275b224e8096c75ca0cf2478ebe1f7}{log\+Iteration\+Results}} (\mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} \&post\+\_\+quant)
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_a6aaa13c1c358b67f432a1559f28ca100}{log\+Iteration\+Stats}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_a2f6b7125f78b7846c8025dbf64b93506}{lfns\+Terminated}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_a58d854ca008e0bdd4edfdfdcf398e1b8}{write\+To\+File}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_a2af175a6b98287bdd58efa50d21c3ba3}{read\+From\+File}} (std\+::string previous\+\_\+log\+\_\+file\+\_\+name)
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNSLogger_a50e2adf704bbbf32410f0e84534c4e25}{iteration\+Number}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LFNSLogger_a42e7f413d3af7515e52315f4af01afb0}{last\+Epsilon}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LFNSLogger_a173d8efd8c2f22e0d96950928763d01f}{last\+Acceptance\+Rate}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlfns_1_1LFNSLogger_a381d1b652526ccf6c539e471d012bc83}{\+\_\+print\+Acceptance\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNSLogger_ab8ebecc3994470aab088402fb7c64ab4}{\+\_\+remaining\+\_\+required\+\_\+particles\+\_\+iteration}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNSLogger_a230cf529812b8495549d5136ab267465}{\+\_\+num\+\_\+samples\+\_\+iteration}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNSLogger_a37d444a8b0a9fd599504e91f07ef5da8}{\+\_\+num\+\_\+samples\+\_\+particle}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNSLogger_a51382831ad64e3346e66c5e996a03ce3}{\+\_\+num\+\_\+accepted\+\_\+iteration}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNSLogger_a53c9fcb688f5d16272daacb317358561}{\+\_\+print\+\_\+interval}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNSLogger_ad8c69fe5da119761cd2ae412e17e9392}{\+\_\+acceptance\+\_\+info\+\_\+print\+\_\+interval}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1LFNSLogger_a215950573f1d0f877a8a255a02a54094}{\+\_\+particle\+\_\+tic}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1LFNSLogger_a41dee8742abcad87257c1aef19d0532b}{\+\_\+algorithm\+\_\+tic}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classlfns_1_1LFNSLogger_ae933013daa7f38ef4b129180c7d0d470}{\+\_\+iteration\+\_\+tic}}
+\item 
+double \mbox{\hyperlink{classlfns_1_1LFNSLogger_a2219c6b78d38dc61b04df097146a01f8}{\+\_\+sampling\+\_\+seconds}}
+\item 
+std\+::string \mbox{\hyperlink{classlfns_1_1LFNSLogger_ab1ae0e52dbf1a6ac249054a97fe03362}{\+\_\+output\+\_\+file\+\_\+name}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a490d5cab7950a4d96c16afbeb9320a5f}{\+\_\+acceptance\+\_\+rates}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a6ab7ed27752c48e46e567f0f3366511f}{\+\_\+epsilons}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a84d1810b771b6fbb5eda202d17d2b180}{\+\_\+iteration\+\_\+nbrs}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a37ab872272ba68be17d2e173959e8827}{\+\_\+seconds\+\_\+for\+\_\+iteration}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a92642ba0b294707d0beaa04935335067}{\+\_\+sampling\+\_\+seconds\+\_\+for\+\_\+iteration}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a1c1c549e7ccb693a0fa009c56aa0ee17}{\+\_\+log\+\_\+zd}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_af9f30db7d8858e198ebd02a315f675ab}{\+\_\+log\+\_\+var\+\_\+zd}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a9849b3eb28183c3278e32a4a5805c689}{\+\_\+log\+\_\+zl}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a0426c546bbe250424bf35a4bcf60e7b7}{\+\_\+log\+\_\+var\+\_\+zl}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a96496773bc63d3e8f2aefa77a29fb754}{\+\_\+log\+\_\+ztot}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a75943bc767df6aad040674876529d27a}{\+\_\+log\+\_\+var\+\_\+ztot}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_acd469c46261e2a517a5fdc332d73310c}{\+\_\+log\+\_\+v\+\_\+min}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_ab1ca5f74de9574131f474e07d88dfb39}{\+\_\+var\+\_\+\+L\+\_\+contribution}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1LFNSLogger_a3d551fafb1ef6d17bece7a6bc356e2c7}{\+\_\+max\+\_\+\+L\+\_\+contribution}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class keeps track of the progress of the \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithm and tracks the development of all quantities, like iteration numbers, error estimates and runtime. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a825a8cc816813b7577173562ce73b868}\label{classlfns_1_1LFNSLogger_a825a8cc816813b7577173562ce73b868}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!LFNSLogger@{LFNSLogger}}
+\index{LFNSLogger@{LFNSLogger}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{LFNSLogger()}{LFNSLogger()}}
+{\footnotesize\ttfamily lfns\+::\+L\+F\+N\+S\+Logger\+::\+L\+F\+N\+S\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}}}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a82df6f0b648e3b824a1ed20d584eabbf}\label{classlfns_1_1LFNSLogger_a82df6f0b648e3b824a1ed20d584eabbf}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!````~LFNSLogger@{$\sim$LFNSLogger}}
+\index{````~LFNSLogger@{$\sim$LFNSLogger}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{$\sim$LFNSLogger()}{~LFNSLogger()}}
+{\footnotesize\ttfamily lfns\+::\+L\+F\+N\+S\+Logger\+::$\sim$\+L\+F\+N\+S\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a381d1b652526ccf6c539e471d012bc83}\label{classlfns_1_1LFNSLogger_a381d1b652526ccf6c539e471d012bc83}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_printAcceptanceInfo@{\_printAcceptanceInfo}}
+\index{\_printAcceptanceInfo@{\_printAcceptanceInfo}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_printAcceptanceInfo()}{\_printAcceptanceInfo()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+print\+Acceptance\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ab3ae6763fe1bf3420dcb2644d00cb569}\label{classlfns_1_1LFNSLogger_ab3ae6763fe1bf3420dcb2644d00cb569}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!deadPointAdded@{deadPointAdded}}
+\index{deadPointAdded@{deadPointAdded}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{deadPointAdded()}{deadPointAdded()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::dead\+Point\+Added (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} \&}]{particle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ac5b1965aa63a56687df4a6b3e8a48884}\label{classlfns_1_1LFNSLogger_ac5b1965aa63a56687df4a6b3e8a48884}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!epsilonUpdated@{epsilonUpdated}}
+\index{epsilonUpdated@{epsilonUpdated}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{epsilonUpdated()}{epsilonUpdated()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::epsilon\+Updated (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a50e2adf704bbbf32410f0e84534c4e25}\label{classlfns_1_1LFNSLogger_a50e2adf704bbbf32410f0e84534c4e25}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!iterationNumber@{iterationNumber}}
+\index{iterationNumber@{iterationNumber}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{iterationNumber()}{iterationNumber()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+Logger\+::iteration\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a3011eb782c411fcd1f683b74ee1ff745}\label{classlfns_1_1LFNSLogger_a3011eb782c411fcd1f683b74ee1ff745}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!iterationStarted@{iterationStarted}}
+\index{iterationStarted@{iterationStarted}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{iterationStarted()}{iterationStarted()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::iteration\+Started (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a173d8efd8c2f22e0d96950928763d01f}\label{classlfns_1_1LFNSLogger_a173d8efd8c2f22e0d96950928763d01f}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!lastAcceptanceRate@{lastAcceptanceRate}}
+\index{lastAcceptanceRate@{lastAcceptanceRate}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{lastAcceptanceRate()}{lastAcceptanceRate()}}
+{\footnotesize\ttfamily double lfns\+::\+L\+F\+N\+S\+Logger\+::last\+Acceptance\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a42e7f413d3af7515e52315f4af01afb0}\label{classlfns_1_1LFNSLogger_a42e7f413d3af7515e52315f4af01afb0}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!lastEpsilon@{lastEpsilon}}
+\index{lastEpsilon@{lastEpsilon}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{lastEpsilon()}{lastEpsilon()}}
+{\footnotesize\ttfamily double lfns\+::\+L\+F\+N\+S\+Logger\+::last\+Epsilon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ad2b823e8d6eb52e15fc9a3eeef259e20}\label{classlfns_1_1LFNSLogger_ad2b823e8d6eb52e15fc9a3eeef259e20}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!lfnsResume@{lfnsResume}}
+\index{lfnsResume@{lfnsResume}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{lfnsResume()}{lfnsResume()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::lfns\+Resume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{m,  }\item[{double}]{epsilon }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a7d75b050379b5006e9ae05556e92f613}\label{classlfns_1_1LFNSLogger_a7d75b050379b5006e9ae05556e92f613}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!lfnsStarted@{lfnsStarted}}
+\index{lfnsStarted@{lfnsStarted}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{lfnsStarted()}{lfnsStarted()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::lfns\+Started (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{i,  }\item[{double}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a2f6b7125f78b7846c8025dbf64b93506}\label{classlfns_1_1LFNSLogger_a2f6b7125f78b7846c8025dbf64b93506}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!lfnsTerminated@{lfnsTerminated}}
+\index{lfnsTerminated@{lfnsTerminated}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{lfnsTerminated()}{lfnsTerminated()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::lfns\+Terminated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ace225a488abf798d8caddba8cc87b681}\label{classlfns_1_1LFNSLogger_ace225a488abf798d8caddba8cc87b681}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!likelihoodComputed@{likelihoodComputed}}
+\index{likelihoodComputed@{likelihoodComputed}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{likelihoodComputed()}{likelihoodComputed()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::likelihood\+Computed (\begin{DoxyParamCaption}\item[{double}]{likelihood }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_af8275b224e8096c75ca0cf2478ebe1f7}\label{classlfns_1_1LFNSLogger_af8275b224e8096c75ca0cf2478ebe1f7}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!logIterationResults@{logIterationResults}}
+\index{logIterationResults@{logIterationResults}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{logIterationResults()}{logIterationResults()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::log\+Iteration\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} \&}]{post\+\_\+quant }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a6aaa13c1c358b67f432a1559f28ca100}\label{classlfns_1_1LFNSLogger_a6aaa13c1c358b67f432a1559f28ca100}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!logIterationStats@{logIterationStats}}
+\index{logIterationStats@{logIterationStats}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{logIterationStats()}{logIterationStats()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::log\+Iteration\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_aeadeb992e8befe1fed3a24361a215e10}\label{classlfns_1_1LFNSLogger_aeadeb992e8befe1fed3a24361a215e10}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!particleAccepted@{particleAccepted}}
+\index{particleAccepted@{particleAccepted}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{particleAccepted()}{particleAccepted()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::particle\+Accepted (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{theta,  }\item[{double}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ab82ac2e2be9e54113cc87ee8ce2f7afc}\label{classlfns_1_1LFNSLogger_ab82ac2e2be9e54113cc87ee8ce2f7afc}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!particleAccepted@{particleAccepted}}
+\index{particleAccepted@{particleAccepted}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{particleAccepted()}{particleAccepted()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::particle\+Accepted (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{theta,  }\item[{double}]{l,  }\item[{time\+\_\+t}]{clocks\+\_\+particle,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{origin\+\_\+process = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a2af175a6b98287bdd58efa50d21c3ba3}\label{classlfns_1_1LFNSLogger_a2af175a6b98287bdd58efa50d21c3ba3}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{previous\+\_\+log\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_aa04e823276cf9931c1bb296df0168c37}\label{classlfns_1_1LFNSLogger_aa04e823276cf9931c1bb296df0168c37}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!samplerUpdated@{samplerUpdated}}
+\index{samplerUpdated@{samplerUpdated}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{samplerUpdated()}{samplerUpdated()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::sampler\+Updated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LFNSSampler}{L\+F\+N\+S\+Sampler}} \&}]{sampler,  }\item[{time\+\_\+t}]{clocks\+\_\+for\+\_\+sampler\+\_\+update }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_acfbd4ee3b6132b26eb27dd9e228ad1b0}\label{classlfns_1_1LFNSLogger_acfbd4ee3b6132b26eb27dd9e228ad1b0}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!thetaSampled@{thetaSampled}}
+\index{thetaSampled@{thetaSampled}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{thetaSampled()}{thetaSampled()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::theta\+Sampled (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{vector,  }\item[{time\+\_\+t}]{clocks\+\_\+sampling }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a58d854ca008e0bdd4edfdfdcf398e1b8}\label{classlfns_1_1LFNSLogger_a58d854ca008e0bdd4edfdfdcf398e1b8}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+Logger\+::write\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ad8c69fe5da119761cd2ae412e17e9392}\label{classlfns_1_1LFNSLogger_ad8c69fe5da119761cd2ae412e17e9392}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_acceptance\_info\_print\_interval@{\_acceptance\_info\_print\_interval}}
+\index{\_acceptance\_info\_print\_interval@{\_acceptance\_info\_print\_interval}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_acceptance\_info\_print\_interval}{\_acceptance\_info\_print\_interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+acceptance\+\_\+info\+\_\+print\+\_\+interval\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a490d5cab7950a4d96c16afbeb9320a5f}\label{classlfns_1_1LFNSLogger_a490d5cab7950a4d96c16afbeb9320a5f}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_acceptance\_rates@{\_acceptance\_rates}}
+\index{\_acceptance\_rates@{\_acceptance\_rates}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_acceptance\_rates}{\_acceptance\_rates}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+acceptance\+\_\+rates\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a41dee8742abcad87257c1aef19d0532b}\label{classlfns_1_1LFNSLogger_a41dee8742abcad87257c1aef19d0532b}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_algorithm\_tic@{\_algorithm\_tic}}
+\index{\_algorithm\_tic@{\_algorithm\_tic}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_algorithm\_tic}{\_algorithm\_tic}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+algorithm\+\_\+tic\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a6ab7ed27752c48e46e567f0f3366511f}\label{classlfns_1_1LFNSLogger_a6ab7ed27752c48e46e567f0f3366511f}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_epsilons@{\_epsilons}}
+\index{\_epsilons@{\_epsilons}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_epsilons}{\_epsilons}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+epsilons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a84d1810b771b6fbb5eda202d17d2b180}\label{classlfns_1_1LFNSLogger_a84d1810b771b6fbb5eda202d17d2b180}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_iteration\_nbrs@{\_iteration\_nbrs}}
+\index{\_iteration\_nbrs@{\_iteration\_nbrs}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_iteration\_nbrs}{\_iteration\_nbrs}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+iteration\+\_\+nbrs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ae933013daa7f38ef4b129180c7d0d470}\label{classlfns_1_1LFNSLogger_ae933013daa7f38ef4b129180c7d0d470}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_iteration\_tic@{\_iteration\_tic}}
+\index{\_iteration\_tic@{\_iteration\_tic}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_iteration\_tic}{\_iteration\_tic}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+iteration\+\_\+tic\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_acd469c46261e2a517a5fdc332d73310c}\label{classlfns_1_1LFNSLogger_acd469c46261e2a517a5fdc332d73310c}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_log\_v\_min@{\_log\_v\_min}}
+\index{\_log\_v\_min@{\_log\_v\_min}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_v\_min}{\_log\_v\_min}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+log\+\_\+v\+\_\+min\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_af9f30db7d8858e198ebd02a315f675ab}\label{classlfns_1_1LFNSLogger_af9f30db7d8858e198ebd02a315f675ab}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_log\_var\_zd@{\_log\_var\_zd}}
+\index{\_log\_var\_zd@{\_log\_var\_zd}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_var\_zd}{\_log\_var\_zd}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+log\+\_\+var\+\_\+zd\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a0426c546bbe250424bf35a4bcf60e7b7}\label{classlfns_1_1LFNSLogger_a0426c546bbe250424bf35a4bcf60e7b7}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_log\_var\_zl@{\_log\_var\_zl}}
+\index{\_log\_var\_zl@{\_log\_var\_zl}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_var\_zl}{\_log\_var\_zl}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+log\+\_\+var\+\_\+zl\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a75943bc767df6aad040674876529d27a}\label{classlfns_1_1LFNSLogger_a75943bc767df6aad040674876529d27a}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_log\_var\_ztot@{\_log\_var\_ztot}}
+\index{\_log\_var\_ztot@{\_log\_var\_ztot}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_var\_ztot}{\_log\_var\_ztot}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+log\+\_\+var\+\_\+ztot\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a1c1c549e7ccb693a0fa009c56aa0ee17}\label{classlfns_1_1LFNSLogger_a1c1c549e7ccb693a0fa009c56aa0ee17}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_log\_zd@{\_log\_zd}}
+\index{\_log\_zd@{\_log\_zd}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_zd}{\_log\_zd}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+log\+\_\+zd\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a9849b3eb28183c3278e32a4a5805c689}\label{classlfns_1_1LFNSLogger_a9849b3eb28183c3278e32a4a5805c689}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_log\_zl@{\_log\_zl}}
+\index{\_log\_zl@{\_log\_zl}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_zl}{\_log\_zl}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+log\+\_\+zl\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a96496773bc63d3e8f2aefa77a29fb754}\label{classlfns_1_1LFNSLogger_a96496773bc63d3e8f2aefa77a29fb754}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_log\_ztot@{\_log\_ztot}}
+\index{\_log\_ztot@{\_log\_ztot}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_ztot}{\_log\_ztot}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+log\+\_\+ztot\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a3d551fafb1ef6d17bece7a6bc356e2c7}\label{classlfns_1_1LFNSLogger_a3d551fafb1ef6d17bece7a6bc356e2c7}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_max\_L\_contribution@{\_max\_L\_contribution}}
+\index{\_max\_L\_contribution@{\_max\_L\_contribution}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_max\_L\_contribution}{\_max\_L\_contribution}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+max\+\_\+\+L\+\_\+contribution\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a51382831ad64e3346e66c5e996a03ce3}\label{classlfns_1_1LFNSLogger_a51382831ad64e3346e66c5e996a03ce3}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_num\_accepted\_iteration@{\_num\_accepted\_iteration}}
+\index{\_num\_accepted\_iteration@{\_num\_accepted\_iteration}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_num\_accepted\_iteration}{\_num\_accepted\_iteration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+num\+\_\+accepted\+\_\+iteration\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a230cf529812b8495549d5136ab267465}\label{classlfns_1_1LFNSLogger_a230cf529812b8495549d5136ab267465}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_num\_samples\_iteration@{\_num\_samples\_iteration}}
+\index{\_num\_samples\_iteration@{\_num\_samples\_iteration}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_num\_samples\_iteration}{\_num\_samples\_iteration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+num\+\_\+samples\+\_\+iteration\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a37d444a8b0a9fd599504e91f07ef5da8}\label{classlfns_1_1LFNSLogger_a37d444a8b0a9fd599504e91f07ef5da8}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_num\_samples\_particle@{\_num\_samples\_particle}}
+\index{\_num\_samples\_particle@{\_num\_samples\_particle}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_num\_samples\_particle}{\_num\_samples\_particle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+num\+\_\+samples\+\_\+particle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ab1ae0e52dbf1a6ac249054a97fe03362}\label{classlfns_1_1LFNSLogger_ab1ae0e52dbf1a6ac249054a97fe03362}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_output\_file\_name@{\_output\_file\_name}}
+\index{\_output\_file\_name@{\_output\_file\_name}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_output\_file\_name}{\_output\_file\_name}}
+{\footnotesize\ttfamily std\+::string lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+output\+\_\+file\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a215950573f1d0f877a8a255a02a54094}\label{classlfns_1_1LFNSLogger_a215950573f1d0f877a8a255a02a54094}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_particle\_tic@{\_particle\_tic}}
+\index{\_particle\_tic@{\_particle\_tic}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_particle\_tic}{\_particle\_tic}}
+{\footnotesize\ttfamily time\+\_\+t lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+particle\+\_\+tic\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a53c9fcb688f5d16272daacb317358561}\label{classlfns_1_1LFNSLogger_a53c9fcb688f5d16272daacb317358561}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_print\_interval@{\_print\_interval}}
+\index{\_print\_interval@{\_print\_interval}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_print\_interval}{\_print\_interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+print\+\_\+interval\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ab8ebecc3994470aab088402fb7c64ab4}\label{classlfns_1_1LFNSLogger_ab8ebecc3994470aab088402fb7c64ab4}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_remaining\_required\_particles\_iteration@{\_remaining\_required\_particles\_iteration}}
+\index{\_remaining\_required\_particles\_iteration@{\_remaining\_required\_particles\_iteration}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_remaining\_required\_particles\_iteration}{\_remaining\_required\_particles\_iteration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+remaining\+\_\+required\+\_\+particles\+\_\+iteration\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a2219c6b78d38dc61b04df097146a01f8}\label{classlfns_1_1LFNSLogger_a2219c6b78d38dc61b04df097146a01f8}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_sampling\_seconds@{\_sampling\_seconds}}
+\index{\_sampling\_seconds@{\_sampling\_seconds}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_sampling\_seconds}{\_sampling\_seconds}}
+{\footnotesize\ttfamily double lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+sampling\+\_\+seconds\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a92642ba0b294707d0beaa04935335067}\label{classlfns_1_1LFNSLogger_a92642ba0b294707d0beaa04935335067}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_sampling\_seconds\_for\_iteration@{\_sampling\_seconds\_for\_iteration}}
+\index{\_sampling\_seconds\_for\_iteration@{\_sampling\_seconds\_for\_iteration}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_sampling\_seconds\_for\_iteration}{\_sampling\_seconds\_for\_iteration}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+sampling\+\_\+seconds\+\_\+for\+\_\+iteration\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_a37ab872272ba68be17d2e173959e8827}\label{classlfns_1_1LFNSLogger_a37ab872272ba68be17d2e173959e8827}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_seconds\_for\_iteration@{\_seconds\_for\_iteration}}
+\index{\_seconds\_for\_iteration@{\_seconds\_for\_iteration}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_seconds\_for\_iteration}{\_seconds\_for\_iteration}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+seconds\+\_\+for\+\_\+iteration\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1LFNSLogger_ab1ca5f74de9574131f474e07d88dfb39}\label{classlfns_1_1LFNSLogger_ab1ca5f74de9574131f474e07d88dfb39}} 
+\index{lfns::LFNSLogger@{lfns::LFNSLogger}!\_var\_L\_contribution@{\_var\_L\_contribution}}
+\index{\_var\_L\_contribution@{\_var\_L\_contribution}!lfns::LFNSLogger@{lfns::LFNSLogger}}
+\doxysubsubsection{\texorpdfstring{\_var\_L\_contribution}{\_var\_L\_contribution}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+L\+F\+N\+S\+Logger\+::\+\_\+var\+\_\+\+L\+\_\+contribution\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LFNSLogger_8h}{L\+F\+N\+S\+Logger.\+h}}\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LFNSLogger_8cpp}{L\+F\+N\+S\+Logger.\+cpp}}\end{DoxyCompactItemize}

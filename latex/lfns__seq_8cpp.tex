@@ -1,0 +1,71 @@
+\hypertarget{lfns__seq_8cpp}{}\doxysection{lfns\+\_\+seq.\+cpp File Reference}
+\label{lfns__seq_8cpp}\index{lfns\_seq.cpp@{lfns\_seq.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}src/options/\+L\+F\+N\+S\+Options.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+F\+N\+S\+Setup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/base/\+Io\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/\+L\+F\+N\+S/seq/\+L\+F\+N\+S\+Seq.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Uniform\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Ellipsoid\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Dp\+Gmm\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Gaussian\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Kernel\+Density\+Estimation.\+h\char`\"{}}\newline
+Include dependency graph for lfns\+\_\+seq.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lfns__seq_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{lfns__seq_8cpp_ad13afac244da1386bf28019be1d0f650}{run\+L\+F\+NS}} (\mbox{\hyperlink{classLFNSSetup}{L\+F\+N\+S\+Setup}} \&lfns\+\_\+setup)
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{lfns__seq_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{lfns__seq_8cpp_a6e4553ed16748bdad3046b6e9286ced4}{model\+\_\+summary\+\_\+suffix}} = \char`\"{}model\+\_\+summary\char`\"{}
+\item 
+static std\+::stringstream \mbox{\hyperlink{lfns__seq_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}{model\+\_\+summary\+\_\+stream}}
+\item 
+\mbox{\hyperlink{classoptions_1_1LFNSOptions}{options\+::\+L\+F\+N\+S\+Options}} \mbox{\hyperlink{lfns__seq_8cpp_a25ac7bf3cc4d42d2813635f524d4dc34}{lfns\+\_\+options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lfns__seq_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{lfns__seq_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{lfns\_seq.cpp@{lfns\_seq.cpp}!main@{main}}
+\index{main@{main}!lfns\_seq.cpp@{lfns\_seq.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lfns__seq_8cpp_ad13afac244da1386bf28019be1d0f650}\label{lfns__seq_8cpp_ad13afac244da1386bf28019be1d0f650}} 
+\index{lfns\_seq.cpp@{lfns\_seq.cpp}!runLFNS@{runLFNS}}
+\index{runLFNS@{runLFNS}!lfns\_seq.cpp@{lfns\_seq.cpp}}
+\doxysubsubsection{\texorpdfstring{runLFNS()}{runLFNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} run\+L\+F\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLFNSSetup}{L\+F\+N\+S\+Setup}} \&}]{lfns\+\_\+setup }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{lfns__seq_8cpp_a25ac7bf3cc4d42d2813635f524d4dc34}\label{lfns__seq_8cpp_a25ac7bf3cc4d42d2813635f524d4dc34}} 
+\index{lfns\_seq.cpp@{lfns\_seq.cpp}!lfns\_options@{lfns\_options}}
+\index{lfns\_options@{lfns\_options}!lfns\_seq.cpp@{lfns\_seq.cpp}}
+\doxysubsubsection{\texorpdfstring{lfns\_options}{lfns\_options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoptions_1_1LFNSOptions}{options\+::\+L\+F\+N\+S\+Options}} lfns\+\_\+options}
+
+\mbox{\Hypertarget{lfns__seq_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}\label{lfns__seq_8cpp_a43dc83b516d37cc7cfdd59b06041fa94}} 
+\index{lfns\_seq.cpp@{lfns\_seq.cpp}!model\_summary\_stream@{model\_summary\_stream}}
+\index{model\_summary\_stream@{model\_summary\_stream}!lfns\_seq.cpp@{lfns\_seq.cpp}}
+\doxysubsubsection{\texorpdfstring{model\_summary\_stream}{model\_summary\_stream}}
+{\footnotesize\ttfamily std\+::stringstream model\+\_\+summary\+\_\+stream\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{lfns__seq_8cpp_a6e4553ed16748bdad3046b6e9286ced4}\label{lfns__seq_8cpp_a6e4553ed16748bdad3046b6e9286ced4}} 
+\index{lfns\_seq.cpp@{lfns\_seq.cpp}!model\_summary\_suffix@{model\_summary\_suffix}}
+\index{model\_summary\_suffix@{model\_summary\_suffix}!lfns\_seq.cpp@{lfns\_seq.cpp}}
+\doxysubsubsection{\texorpdfstring{model\_summary\_suffix}{model\_summary\_suffix}}
+{\footnotesize\ttfamily std\+::string model\+\_\+summary\+\_\+suffix = \char`\"{}model\+\_\+summary\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

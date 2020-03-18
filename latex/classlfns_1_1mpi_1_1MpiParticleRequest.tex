@@ -1,0 +1,86 @@
+\hypertarget{classlfns_1_1mpi_1_1MpiParticleRequest}{}\doxysection{lfns\+::mpi\+::Mpi\+Particle\+Request Class Reference}
+\label{classlfns_1_1mpi_1_1MpiParticleRequest}\index{lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}}
+
+
+{\ttfamily \#include $<$Mpi\+Request.\+h$>$}
+
+
+
+Inheritance diagram for lfns\+::mpi\+::Mpi\+Particle\+Request\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classlfns_1_1mpi_1_1MpiParticleRequest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lfns\+::mpi\+::Mpi\+Particle\+Request\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classlfns_1_1mpi_1_1MpiParticleRequest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest_aafd06a8aa2cfec3ed84a54c179531db1}{Mpi\+Particle\+Request}} (std\+::size\+\_\+t rank, bool sample\+\_\+prior=false)
+\item 
+\mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest_a0cb562891793a8260a44f5712816150b}{$\sim$\+Mpi\+Particle\+Request}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest_a1fc6dd2cc3a1f4491037d8f0a2d260a7}{request\+New\+Particle}} (bool sample\+\_\+prior=false)
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest_aad3ac243ea43685e01eca5fdbd1799c0}{receive\+Particle}} (double $\ast$log\+\_\+likelihood, std\+::vector$<$ double $>$ $\ast$particle\+\_\+ptr, time\+\_\+t $\ast$sampling\+\_\+clocks\+\_\+ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498}{M\+P\+I\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} \mbox{\hyperlink{classlfns_1_1mpi_1_1MpiParticleRequest_a44432e36d409db304788771cd024816c}{instruction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiParticleRequest_aafd06a8aa2cfec3ed84a54c179531db1}\label{classlfns_1_1mpi_1_1MpiParticleRequest_aafd06a8aa2cfec3ed84a54c179531db1}} 
+\index{lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}!MpiParticleRequest@{MpiParticleRequest}}
+\index{MpiParticleRequest@{MpiParticleRequest}!lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}}
+\doxysubsubsection{\texorpdfstring{MpiParticleRequest()}{MpiParticleRequest()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+Mpi\+Particle\+Request\+::\+Mpi\+Particle\+Request (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{rank,  }\item[{bool}]{sample\+\_\+prior = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiParticleRequest_a0cb562891793a8260a44f5712816150b}\label{classlfns_1_1mpi_1_1MpiParticleRequest_a0cb562891793a8260a44f5712816150b}} 
+\index{lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}!````~MpiParticleRequest@{$\sim$MpiParticleRequest}}
+\index{````~MpiParticleRequest@{$\sim$MpiParticleRequest}!lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}}
+\doxysubsubsection{\texorpdfstring{$\sim$MpiParticleRequest()}{~MpiParticleRequest()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+Mpi\+Particle\+Request\+::$\sim$\+Mpi\+Particle\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiParticleRequest_aad3ac243ea43685e01eca5fdbd1799c0}\label{classlfns_1_1mpi_1_1MpiParticleRequest_aad3ac243ea43685e01eca5fdbd1799c0}} 
+\index{lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}!receiveParticle@{receiveParticle}}
+\index{receiveParticle@{receiveParticle}!lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}}
+\doxysubsubsection{\texorpdfstring{receiveParticle()}{receiveParticle()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+Mpi\+Particle\+Request\+::receive\+Particle (\begin{DoxyParamCaption}\item[{double $\ast$}]{log\+\_\+likelihood,  }\item[{std\+::vector$<$ double $>$ $\ast$}]{particle\+\_\+ptr,  }\item[{time\+\_\+t $\ast$}]{sampling\+\_\+clocks\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiParticleRequest_a1fc6dd2cc3a1f4491037d8f0a2d260a7}\label{classlfns_1_1mpi_1_1MpiParticleRequest_a1fc6dd2cc3a1f4491037d8f0a2d260a7}} 
+\index{lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}!requestNewParticle@{requestNewParticle}}
+\index{requestNewParticle@{requestNewParticle}!lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}}
+\doxysubsubsection{\texorpdfstring{requestNewParticle()}{requestNewParticle()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+Mpi\+Particle\+Request\+::request\+New\+Particle (\begin{DoxyParamCaption}\item[{bool}]{sample\+\_\+prior = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1MpiParticleRequest_a44432e36d409db304788771cd024816c}\label{classlfns_1_1mpi_1_1MpiParticleRequest_a44432e36d409db304788771cd024816c}} 
+\index{lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}!instruction@{instruction}}
+\index{instruction@{instruction}!lfns::mpi::MpiParticleRequest@{lfns::mpi::MpiParticleRequest}}
+\doxysubsubsection{\texorpdfstring{instruction}{instruction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelfns_1_1mpi_af40db00a46c998b0cbaac5374223e498}{M\+P\+I\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} lfns\+::mpi\+::\+Mpi\+Particle\+Request\+::instruction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{MpiRequest_8h}{Mpi\+Request.\+h}}\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{MpiRequest_8cpp}{Mpi\+Request.\+cpp}}\end{DoxyCompactItemize}

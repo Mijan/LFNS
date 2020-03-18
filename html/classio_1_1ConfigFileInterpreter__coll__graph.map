@@ -1,0 +1,4 @@
+<map id="io::ConfigFileInterpreter" name="io::ConfigFileInterpreter">
+<area shape="rect" id="node1" title="This class is used to read a config file and access all the information provided there." alt="" coords="5,95,180,121"/>
+<area shape="rect" id="node2" href="$classio_1_1XmlFileReader.html" title=" " alt="" coords="24,5,161,32"/>
+</map>

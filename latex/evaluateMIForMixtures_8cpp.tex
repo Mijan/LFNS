@@ -1,0 +1,145 @@
+\hypertarget{evaluateMIForMixtures_8cpp}{}\doxysection{evaluate\+M\+I\+For\+Mixtures.\+cpp File Reference}
+\label{evaluateMIForMixtures_8cpp}\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\newline
+{\ttfamily \#include $<$D\+P\+G\+M\+M\+Estimator.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}src/base/\+Io\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/base//\+Eigen\+Matrices.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/\+L\+F\+N\+S/\+L\+F\+N\+S\+Settings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/\+L\+F\+N\+S/\+L\+F\+N\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/\+L\+F\+N\+S/seq/\+L\+F\+N\+S\+Seq.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Dp\+Gmm\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Rejection\+Support\+Sampler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/base/\+Multivariate\+Normal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/sampler/\+Uniform\+Sampler.\+h\char`\"{}}\newline
+Include dependency graph for evaluate\+M\+I\+For\+Mixtures.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{evaluateMIForMixtures_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMixutreSampler}{Mixutre\+Sampler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a00b5396855622fba254fa99cbe035c42}{read\+Mixture}} (std\+::string \mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}})
+\item 
+D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a5de1cc51058e14eabb01cd7d7bef2b74}{get\+X\+Mixtures}} (D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \&mixtures)
+\item 
+D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \mbox{\hyperlink{evaluateMIForMixtures_8cpp_ab59e10b724094087d44e463f55221630}{get\+Y\+Mixtures}} (D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \&mixtures)
+\item 
+double \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a56d21509f3c18be3a8ec53b104cbced4}{log\+Like}} (const std\+::vector$<$ double $>$ \&sample)
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a4a734fc0ff0da830f10118dce68cd741}{config\+\_\+file\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}{output\+\_\+file\+\_\+name}}
+\item 
+po\+::variables\+\_\+map \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a54a89781019d4e6744356458c3b73819}{vm}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a7722c8ecbb62d99aee7ce68b1752f337}{N}} = 200
+\item 
+\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} \mbox{\hyperlink{evaluateMIForMixtures_8cpp_ac4d60fc7ce08022aa81f6cea26528ad8}{sampler\+\_\+\+XY}}
+\item 
+\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8b7d76ed8364ccb168ca2b1248e692c5}{sampler\+\_\+X}}
+\item 
+\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} \mbox{\hyperlink{evaluateMIForMixtures_8cpp_ab43e6b025377989d7c9efb51ff1a3b4a}{sampler\+\_\+Y}}
+\item 
+bool \mbox{\hyperlink{evaluateMIForMixtures_8cpp_ace7fd52c7421cf6801fb1f661a286f74}{H\+\_\+computation}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a5de1cc51058e14eabb01cd7d7bef2b74}\label{evaluateMIForMixtures_8cpp_a5de1cc51058e14eabb01cd7d7bef2b74}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!getXMixtures@{getXMixtures}}
+\index{getXMixtures@{getXMixtures}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{getXMixtures()}{getXMixtures()}}
+{\footnotesize\ttfamily D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set get\+X\+Mixtures (\begin{DoxyParamCaption}\item[{D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \&}]{mixtures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_ab59e10b724094087d44e463f55221630}\label{evaluateMIForMixtures_8cpp_ab59e10b724094087d44e463f55221630}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!getYMixtures@{getYMixtures}}
+\index{getYMixtures@{getYMixtures}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{getYMixtures()}{getYMixtures()}}
+{\footnotesize\ttfamily D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set get\+Y\+Mixtures (\begin{DoxyParamCaption}\item[{D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set \&}]{mixtures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a56d21509f3c18be3a8ec53b104cbced4}\label{evaluateMIForMixtures_8cpp_a56d21509f3c18be3a8ec53b104cbced4}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!logLike@{logLike}}
+\index{logLike@{logLike}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{logLike()}{logLike()}}
+{\footnotesize\ttfamily double log\+Like (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{sample }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{evaluateMIForMixtures_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!main@{main}}
+\index{main@{main}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a00b5396855622fba254fa99cbe035c42}\label{evaluateMIForMixtures_8cpp_a00b5396855622fba254fa99cbe035c42}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!readMixture@{readMixture}}
+\index{readMixture@{readMixture}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{readMixture()}{readMixture()}}
+{\footnotesize\ttfamily D\+P\+\_\+\+G\+M\+M\+::\+Gauss\+Mixture\+Component\+Set read\+Mixture (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a4a734fc0ff0da830f10118dce68cd741}\label{evaluateMIForMixtures_8cpp_a4a734fc0ff0da830f10118dce68cd741}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!config\_file\_name@{config\_file\_name}}
+\index{config\_file\_name@{config\_file\_name}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{config\_file\_name}{config\_file\_name}}
+{\footnotesize\ttfamily std\+::string config\+\_\+file\+\_\+name}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_ace7fd52c7421cf6801fb1f661a286f74}\label{evaluateMIForMixtures_8cpp_ace7fd52c7421cf6801fb1f661a286f74}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!H\_computation@{H\_computation}}
+\index{H\_computation@{H\_computation}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{H\_computation}{H\_computation}}
+{\footnotesize\ttfamily bool H\+\_\+computation = false}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a7722c8ecbb62d99aee7ce68b1752f337}\label{evaluateMIForMixtures_8cpp_a7722c8ecbb62d99aee7ce68b1752f337}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!N@{N}}
+\index{N@{N}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} N = 200}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}\label{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!output\_file\_name@{output\_file\_name}}
+\index{output\_file\_name@{output\_file\_name}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{output\_file\_name}{output\_file\_name}}
+{\footnotesize\ttfamily std\+::string output\+\_\+file\+\_\+name}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a8b7d76ed8364ccb168ca2b1248e692c5}\label{evaluateMIForMixtures_8cpp_a8b7d76ed8364ccb168ca2b1248e692c5}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!sampler\_X@{sampler\_X}}
+\index{sampler\_X@{sampler\_X}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{sampler\_X}{sampler\_X}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} sampler\+\_\+X}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_ac4d60fc7ce08022aa81f6cea26528ad8}\label{evaluateMIForMixtures_8cpp_ac4d60fc7ce08022aa81f6cea26528ad8}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!sampler\_XY@{sampler\_XY}}
+\index{sampler\_XY@{sampler\_XY}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{sampler\_XY}{sampler\_XY}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} sampler\+\_\+\+XY}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_ab43e6b025377989d7c9efb51ff1a3b4a}\label{evaluateMIForMixtures_8cpp_ab43e6b025377989d7c9efb51ff1a3b4a}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!sampler\_Y@{sampler\_Y}}
+\index{sampler\_Y@{sampler\_Y}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{sampler\_Y}{sampler\_Y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} sampler\+\_\+Y}
+
+\mbox{\Hypertarget{evaluateMIForMixtures_8cpp_a54a89781019d4e6744356458c3b73819}\label{evaluateMIForMixtures_8cpp_a54a89781019d4e6744356458c3b73819}} 
+\index{evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}!vm@{vm}}
+\index{vm@{vm}!evaluateMIForMixtures.cpp@{evaluateMIForMixtures.cpp}}
+\doxysubsubsection{\texorpdfstring{vm}{vm}}
+{\footnotesize\ttfamily po\+::variables\+\_\+map vm}
+

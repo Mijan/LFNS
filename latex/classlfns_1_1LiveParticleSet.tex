@@ -1,0 +1,147 @@
+\hypertarget{classlfns_1_1LiveParticleSet}{}\doxysection{lfns\+::Live\+Particle\+Set Class Reference}
+\label{classlfns_1_1LiveParticleSet}\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+
+
+{\ttfamily \#include $<$Live\+Particle\+Set.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1LiveParticleSet_a6bdb2685edf16edd18def1b884713645}{Live\+Particle\+Set}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LiveParticleSet_af36089db81d266a61c8c6acea76a0596}{number\+Particles}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a2dfe0f9be9f9fea2cbcb91a8d84362d5}{push\+\_\+back}} (std\+::vector$<$ double $>$ vector, double log\+\_\+likelihood)
+\item 
+const \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} \mbox{\hyperlink{classlfns_1_1LiveParticleSet_ad853b9c19ea06de080c550bd28b09ace}{remove\+Lowest\+Partcile}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a2f33270f22bf2f2743139c187ec10f6f}{get\+Lowest\+Likelihood}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a44073349f52843d438dfc309ca204d75}{get\+Highest\+Log\+Likelihood}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a97c0caeb22d2bd744b28153f0b821980}{get\+Log\+AverageL}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a144078ca8865342d4847334f0f0f1e71}{get\+Log\+Variance}} ()
+\item 
+double \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a174075744ecaeeea2f3e92f89df31b04}{get\+Log\+Variance}} (double log\+\_\+average)
+\item 
+std\+::multiset$<$ \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} $>$\+::iterator \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a9eae9cf980b0b4093485091d9531a6b3}{begin}} ()
+\item 
+std\+::multiset$<$ \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} $>$\+::iterator \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a54c4353c3dcfaba2d933b8f783086cfc}{end}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1LiveParticleSet_a6ba40737096246ac7ae5d2927b121bd7}{write\+To\+File}} (std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}{output\+\_\+file\+\_\+name}}, std\+::string suffix=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{classlfns_1_1LiveParticleSet_afc71251079f64c501777d3c341f42d78}{read\+From\+File}} (std\+::string input\+\_\+file\+\_\+name)
+\item 
+\mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \mbox{\hyperlink{classlfns_1_1LiveParticleSet_ab49bf853cf352848fe8bb20309734a8d}{to\+Matrix}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::multiset$<$ \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}}, \mbox{\hyperlink{structlfns_1_1lfns__particle__comp}{lfns\+\_\+particle\+\_\+comp}} $>$ \mbox{\hyperlink{classlfns_1_1LiveParticleSet_abee8d1d2aa618a093de0000b1c74a887}{\+\_\+live\+\_\+points}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a6bdb2685edf16edd18def1b884713645}\label{classlfns_1_1LiveParticleSet_a6bdb2685edf16edd18def1b884713645}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!LiveParticleSet@{LiveParticleSet}}
+\index{LiveParticleSet@{LiveParticleSet}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{LiveParticleSet()}{LiveParticleSet()}}
+{\footnotesize\ttfamily lfns\+::\+Live\+Particle\+Set\+::\+Live\+Particle\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a9eae9cf980b0b4093485091d9531a6b3}\label{classlfns_1_1LiveParticleSet_a9eae9cf980b0b4093485091d9531a6b3}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!begin@{begin}}
+\index{begin@{begin}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily std\+::multiset$<$ \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} $>$\+::iterator lfns\+::\+Live\+Particle\+Set\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a54c4353c3dcfaba2d933b8f783086cfc}\label{classlfns_1_1LiveParticleSet_a54c4353c3dcfaba2d933b8f783086cfc}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!end@{end}}
+\index{end@{end}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily std\+::multiset$<$ \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} $>$\+::iterator lfns\+::\+Live\+Particle\+Set\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a44073349f52843d438dfc309ca204d75}\label{classlfns_1_1LiveParticleSet_a44073349f52843d438dfc309ca204d75}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!getHighestLogLikelihood@{getHighestLogLikelihood}}
+\index{getHighestLogLikelihood@{getHighestLogLikelihood}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{getHighestLogLikelihood()}{getHighestLogLikelihood()}}
+{\footnotesize\ttfamily double lfns\+::\+Live\+Particle\+Set\+::get\+Highest\+Log\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a97c0caeb22d2bd744b28153f0b821980}\label{classlfns_1_1LiveParticleSet_a97c0caeb22d2bd744b28153f0b821980}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!getLogAverageL@{getLogAverageL}}
+\index{getLogAverageL@{getLogAverageL}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{getLogAverageL()}{getLogAverageL()}}
+{\footnotesize\ttfamily double lfns\+::\+Live\+Particle\+Set\+::get\+Log\+AverageL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a144078ca8865342d4847334f0f0f1e71}\label{classlfns_1_1LiveParticleSet_a144078ca8865342d4847334f0f0f1e71}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!getLogVariance@{getLogVariance}}
+\index{getLogVariance@{getLogVariance}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{getLogVariance()}{getLogVariance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double lfns\+::\+Live\+Particle\+Set\+::get\+Log\+Variance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a174075744ecaeeea2f3e92f89df31b04}\label{classlfns_1_1LiveParticleSet_a174075744ecaeeea2f3e92f89df31b04}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!getLogVariance@{getLogVariance}}
+\index{getLogVariance@{getLogVariance}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{getLogVariance()}{getLogVariance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double lfns\+::\+Live\+Particle\+Set\+::get\+Log\+Variance (\begin{DoxyParamCaption}\item[{double}]{log\+\_\+average }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a2f33270f22bf2f2743139c187ec10f6f}\label{classlfns_1_1LiveParticleSet_a2f33270f22bf2f2743139c187ec10f6f}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!getLowestLikelihood@{getLowestLikelihood}}
+\index{getLowestLikelihood@{getLowestLikelihood}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{getLowestLikelihood()}{getLowestLikelihood()}}
+{\footnotesize\ttfamily double lfns\+::\+Live\+Particle\+Set\+::get\+Lowest\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_af36089db81d266a61c8c6acea76a0596}\label{classlfns_1_1LiveParticleSet_af36089db81d266a61c8c6acea76a0596}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!numberParticles@{numberParticles}}
+\index{numberParticles@{numberParticles}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{numberParticles()}{numberParticles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+Live\+Particle\+Set\+::number\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a2dfe0f9be9f9fea2cbcb91a8d84362d5}\label{classlfns_1_1LiveParticleSet_a2dfe0f9be9f9fea2cbcb91a8d84362d5}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void lfns\+::\+Live\+Particle\+Set\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{vector,  }\item[{double}]{log\+\_\+likelihood }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_afc71251079f64c501777d3c341f42d78}\label{classlfns_1_1LiveParticleSet_afc71251079f64c501777d3c341f42d78}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void lfns\+::\+Live\+Particle\+Set\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_ad853b9c19ea06de080c550bd28b09ace}\label{classlfns_1_1LiveParticleSet_ad853b9c19ea06de080c550bd28b09ace}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!removeLowestPartcile@{removeLowestPartcile}}
+\index{removeLowestPartcile@{removeLowestPartcile}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{removeLowestPartcile()}{removeLowestPartcile()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}} lfns\+::\+Live\+Particle\+Set\+::remove\+Lowest\+Partcile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_ab49bf853cf352848fe8bb20309734a8d}\label{classlfns_1_1LiveParticleSet_ab49bf853cf352848fe8bb20309734a8d}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!toMatrix@{toMatrix}}
+\index{toMatrix@{toMatrix}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{toMatrix()}{toMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} lfns\+::\+Live\+Particle\+Set\+::to\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_a6ba40737096246ac7ae5d2927b121bd7}\label{classlfns_1_1LiveParticleSet_a6ba40737096246ac7ae5d2927b121bd7}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void lfns\+::\+Live\+Particle\+Set\+::write\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+name,  }\item[{std\+::string}]{suffix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1LiveParticleSet_abee8d1d2aa618a093de0000b1c74a887}\label{classlfns_1_1LiveParticleSet_abee8d1d2aa618a093de0000b1c74a887}} 
+\index{lfns::LiveParticleSet@{lfns::LiveParticleSet}!\_live\_points@{\_live\_points}}
+\index{\_live\_points@{\_live\_points}!lfns::LiveParticleSet@{lfns::LiveParticleSet}}
+\doxysubsubsection{\texorpdfstring{\_live\_points}{\_live\_points}}
+{\footnotesize\ttfamily std\+::multiset$<$\mbox{\hyperlink{classlfns_1_1LFNSParticle}{L\+F\+N\+S\+Particle}}, \mbox{\hyperlink{structlfns_1_1lfns__particle__comp}{lfns\+\_\+particle\+\_\+comp}}$>$ lfns\+::\+Live\+Particle\+Set\+::\+\_\+live\+\_\+points\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LiveParticleSet_8h}{Live\+Particle\+Set.\+h}}\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{LiveParticleSet_8cpp}{Live\+Particle\+Set.\+cpp}}\end{DoxyCompactItemize}

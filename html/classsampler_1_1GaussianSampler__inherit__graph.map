@@ -1,0 +1,5 @@
+<map id="sampler::GaussianSampler" name="sampler::GaussianSampler">
+<area shape="rect" id="node1" title=" " alt="" coords="66,80,263,107"/>
+<area shape="rect" id="node2" href="$classsampler_1_1Sampler.html" title=" " alt="" coords="5,5,143,32"/>
+<area shape="rect" id="node3" href="$classsampler_1_1KernelSampler.html" title=" " alt="" coords="167,5,346,32"/>
+</map>

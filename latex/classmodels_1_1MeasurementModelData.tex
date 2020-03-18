@@ -1,0 +1,165 @@
+\hypertarget{classmodels_1_1MeasurementModelData}{}\doxysection{models\+::Measurement\+Model\+Data Class Reference}
+\label{classmodels_1_1MeasurementModelData}\index{models::MeasurementModelData@{models::MeasurementModelData}}
+
+
+This class contains all the data that can be read from the measurement model sfile.  
+
+
+
+
+{\ttfamily \#include $<$Measurement\+Model\+Data.\+h$>$}
+
+
+
+Inheritance diagram for models\+::Measurement\+Model\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classmodels_1_1MeasurementModelData__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for models\+::Measurement\+Model\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classmodels_1_1MeasurementModelData__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1MeasurementModelData_a9bca89b8c88bcb32e5042e05bb34212e}{Measurement\+Model\+Data}} (std\+::string measurement\+\_\+model\+\_\+file\+\_\+name)
+\item 
+\mbox{\hyperlink{classmodels_1_1MeasurementModelData_adb8bf33e31f85d51665c54c19cb9cd58}{Measurement\+Model\+Data}} (const \mbox{\hyperlink{classmodels_1_1MeasurementModelData}{Measurement\+Model\+Data}} \&rhs)
+\item 
+virtual \mbox{\hyperlink{classmodels_1_1MeasurementModelData_ae803f3b9642d2fce346d9c245d79fb80}{$\sim$\+Measurement\+Model\+Data}} ()
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a52dff583ae8a7d9e42cecd899f093c31}{get\+Num\+Measurements}} () const
+\item 
+void \mbox{\hyperlink{classmodels_1_1MeasurementModelData_acdebf3c22ceb774b21fdee8941f38518}{set\+Measurement\+Equation}} (std\+::string measurement, std\+::string equation)
+\item 
+void \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a4a4ac4edb7ab816fe8bc2edf236ff0a4}{set\+Log\+Likelihood\+Equation}} (std\+::string measurement, std\+::string equation)
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a8d5578613c8dbeb54ea608ca7f7ff013}{get\+Measurement\+Equation\+For\+Measurment}} (std\+::string measurement\+\_\+name) const
+\item 
+std\+::string \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a82b3be71b5a3742acefe5e461874f744}{get\+Log\+Likelihood\+Equation\+For\+Measurment}} (std\+::string measurement\+\_\+name) const
+\item 
+bool \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a42bed604b639e74acfab9b5d0ed92896}{is\+Measurement\+Name}} (std\+::string name) const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a1e0a98906a77a05273760d2cb604fc87}{get\+Measurement\+Index}} (std\+::string measurement\+\_\+name) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1MeasurementModelData_abafdb68f6cdd1cc6ef0a09161c177fcf}{get\+Measurement\+Names}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a08f530ec9cd720fc790656c07430cb5c}{measurement\+\_\+names}}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classmodels_1_1MeasurementModelData_a7752639936c3c76fcbab9be6cb9f5254}{measurement\+\_\+equations\+\_\+by\+\_\+name}}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classmodels_1_1MeasurementModelData_aa417d4b13ad9b59f4405a654049345ef}{log\+\_\+likelihoods\+\_\+by\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class contains all the data that can be read from the measurement model sfile. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a9bca89b8c88bcb32e5042e05bb34212e}\label{classmodels_1_1MeasurementModelData_a9bca89b8c88bcb32e5042e05bb34212e}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!MeasurementModelData@{MeasurementModelData}}
+\index{MeasurementModelData@{MeasurementModelData}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{MeasurementModelData()}{MeasurementModelData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily models\+::\+Measurement\+Model\+Data\+::\+Measurement\+Model\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{measurement\+\_\+model\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_adb8bf33e31f85d51665c54c19cb9cd58}\label{classmodels_1_1MeasurementModelData_adb8bf33e31f85d51665c54c19cb9cd58}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!MeasurementModelData@{MeasurementModelData}}
+\index{MeasurementModelData@{MeasurementModelData}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{MeasurementModelData()}{MeasurementModelData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily models\+::\+Measurement\+Model\+Data\+::\+Measurement\+Model\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmodels_1_1MeasurementModelData}{Measurement\+Model\+Data}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_ae803f3b9642d2fce346d9c245d79fb80}\label{classmodels_1_1MeasurementModelData_ae803f3b9642d2fce346d9c245d79fb80}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!````~MeasurementModelData@{$\sim$MeasurementModelData}}
+\index{````~MeasurementModelData@{$\sim$MeasurementModelData}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{$\sim$MeasurementModelData()}{~MeasurementModelData()}}
+{\footnotesize\ttfamily models\+::\+Measurement\+Model\+Data\+::$\sim$\+Measurement\+Model\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a82b3be71b5a3742acefe5e461874f744}\label{classmodels_1_1MeasurementModelData_a82b3be71b5a3742acefe5e461874f744}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!getLogLikelihoodEquationForMeasurment@{getLogLikelihoodEquationForMeasurment}}
+\index{getLogLikelihoodEquationForMeasurment@{getLogLikelihoodEquationForMeasurment}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{getLogLikelihoodEquationForMeasurment()}{getLogLikelihoodEquationForMeasurment()}}
+{\footnotesize\ttfamily std\+::string models\+::\+Measurement\+Model\+Data\+::get\+Log\+Likelihood\+Equation\+For\+Measurment (\begin{DoxyParamCaption}\item[{std\+::string}]{measurement\+\_\+name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a8d5578613c8dbeb54ea608ca7f7ff013}\label{classmodels_1_1MeasurementModelData_a8d5578613c8dbeb54ea608ca7f7ff013}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!getMeasurementEquationForMeasurment@{getMeasurementEquationForMeasurment}}
+\index{getMeasurementEquationForMeasurment@{getMeasurementEquationForMeasurment}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{getMeasurementEquationForMeasurment()}{getMeasurementEquationForMeasurment()}}
+{\footnotesize\ttfamily std\+::string models\+::\+Measurement\+Model\+Data\+::get\+Measurement\+Equation\+For\+Measurment (\begin{DoxyParamCaption}\item[{std\+::string}]{measurement\+\_\+name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a1e0a98906a77a05273760d2cb604fc87}\label{classmodels_1_1MeasurementModelData_a1e0a98906a77a05273760d2cb604fc87}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!getMeasurementIndex@{getMeasurementIndex}}
+\index{getMeasurementIndex@{getMeasurementIndex}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{getMeasurementIndex()}{getMeasurementIndex()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Measurement\+Model\+Data\+::get\+Measurement\+Index (\begin{DoxyParamCaption}\item[{std\+::string}]{measurement\+\_\+name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_abafdb68f6cdd1cc6ef0a09161c177fcf}\label{classmodels_1_1MeasurementModelData_abafdb68f6cdd1cc6ef0a09161c177fcf}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!getMeasurementNames@{getMeasurementNames}}
+\index{getMeasurementNames@{getMeasurementNames}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{getMeasurementNames()}{getMeasurementNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Measurement\+Model\+Data\+::get\+Measurement\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a52dff583ae8a7d9e42cecd899f093c31}\label{classmodels_1_1MeasurementModelData_a52dff583ae8a7d9e42cecd899f093c31}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!getNumMeasurements@{getNumMeasurements}}
+\index{getNumMeasurements@{getNumMeasurements}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{getNumMeasurements()}{getNumMeasurements()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Measurement\+Model\+Data\+::get\+Num\+Measurements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a42bed604b639e74acfab9b5d0ed92896}\label{classmodels_1_1MeasurementModelData_a42bed604b639e74acfab9b5d0ed92896}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!isMeasurementName@{isMeasurementName}}
+\index{isMeasurementName@{isMeasurementName}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{isMeasurementName()}{isMeasurementName()}}
+{\footnotesize\ttfamily bool models\+::\+Measurement\+Model\+Data\+::is\+Measurement\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a4a4ac4edb7ab816fe8bc2edf236ff0a4}\label{classmodels_1_1MeasurementModelData_a4a4ac4edb7ab816fe8bc2edf236ff0a4}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!setLogLikelihoodEquation@{setLogLikelihoodEquation}}
+\index{setLogLikelihoodEquation@{setLogLikelihoodEquation}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{setLogLikelihoodEquation()}{setLogLikelihoodEquation()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+Data\+::set\+Log\+Likelihood\+Equation (\begin{DoxyParamCaption}\item[{std\+::string}]{measurement,  }\item[{std\+::string}]{equation }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_acdebf3c22ceb774b21fdee8941f38518}\label{classmodels_1_1MeasurementModelData_acdebf3c22ceb774b21fdee8941f38518}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!setMeasurementEquation@{setMeasurementEquation}}
+\index{setMeasurementEquation@{setMeasurementEquation}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{setMeasurementEquation()}{setMeasurementEquation()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+Data\+::set\+Measurement\+Equation (\begin{DoxyParamCaption}\item[{std\+::string}]{measurement,  }\item[{std\+::string}]{equation }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_aa417d4b13ad9b59f4405a654049345ef}\label{classmodels_1_1MeasurementModelData_aa417d4b13ad9b59f4405a654049345ef}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!log\_likelihoods\_by\_name@{log\_likelihoods\_by\_name}}
+\index{log\_likelihoods\_by\_name@{log\_likelihoods\_by\_name}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{log\_likelihoods\_by\_name}{log\_likelihoods\_by\_name}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ models\+::\+Measurement\+Model\+Data\+::log\+\_\+likelihoods\+\_\+by\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a7752639936c3c76fcbab9be6cb9f5254}\label{classmodels_1_1MeasurementModelData_a7752639936c3c76fcbab9be6cb9f5254}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!measurement\_equations\_by\_name@{measurement\_equations\_by\_name}}
+\index{measurement\_equations\_by\_name@{measurement\_equations\_by\_name}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{measurement\_equations\_by\_name}{measurement\_equations\_by\_name}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ models\+::\+Measurement\+Model\+Data\+::measurement\+\_\+equations\+\_\+by\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModelData_a08f530ec9cd720fc790656c07430cb5c}\label{classmodels_1_1MeasurementModelData_a08f530ec9cd720fc790656c07430cb5c}} 
+\index{models::MeasurementModelData@{models::MeasurementModelData}!measurement\_names@{measurement\_names}}
+\index{measurement\_names@{measurement\_names}!models::MeasurementModelData@{models::MeasurementModelData}}
+\doxysubsubsection{\texorpdfstring{measurement\_names}{measurement\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Measurement\+Model\+Data\+::measurement\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{MeasurementModelData_8h}{Measurement\+Model\+Data.\+h}}\item 
+src/models/\mbox{\hyperlink{MeasurementModelData_8cpp}{Measurement\+Model\+Data.\+cpp}}\end{DoxyCompactItemize}

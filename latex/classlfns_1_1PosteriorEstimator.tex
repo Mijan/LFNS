@@ -1,0 +1,246 @@
+\hypertarget{classlfns_1_1PosteriorEstimator}{}\doxysection{lfns\+::Posterior\+Estimator Class Reference}
+\label{classlfns_1_1PosteriorEstimator}\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+
+
+{\ttfamily \#include $<$Posterior\+Estimator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a1549f3ff4cca81d2535791e43fe6968e}{Posterior\+Estimator}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a7722c8ecbb62d99aee7ce68b1752f337}{N}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} r)
+\item 
+\mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a1691e517c6e0f3f6d8b6e5639a610468}{estimate\+Posterior\+Quantities}} (\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&live\+\_\+points, \mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points)
+\item 
+void \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a22f7d1e53d8ace705cac7beb4baab21b}{write\+To\+File}} (std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}{output\+\_\+file\+\_\+name}}, \mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&live\+\_\+points, \mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points, \mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} \&post\+\_\+quant)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a2f57cd3e75da573b165372ee5961f5c6}{E\+\_\+t}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} j)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a11db763dc1e4e7d784c831848b4329c8}{E\+\_\+t2}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} j)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_ae6e8a22f3600c932734583768cee09af}{get\+Deltas}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} m)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_ac49d005b101158a41f048852759324c6}{\+\_\+compute\+Log\+Zd\+Var}} (\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points, double \mbox{\hyperlink{plotBE_8m_a0722fa12bf691df3860f507fffe5a8e2}{log\+\_\+zd}})
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a81ff22902fc34514965498b0b6d2a0f4}{\+\_\+compute\+Log\+Bi}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} i)
+\item 
+void \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a4c31f9a79ca95f4f9874982a5100ff09}{\+\_\+computeE}} (\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a4e598fec57b187694e4520187e275823}{\+\_\+compute\+Log\+Zl\+Var}} (\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&live\+\_\+points, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} m)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a2bbaeda0b9d79a50eb0112feb97a74ee}{\+\_\+compute\+Log\+Ztot\+Var}} (double \mbox{\hyperlink{plotBE_8m_a0722fa12bf691df3860f507fffe5a8e2}{log\+\_\+zd}}, double log\+\_\+zd\+\_\+var, double \mbox{\hyperlink{plotBE_8m_ac7d17e80e1e730127d2cd84a2cec7993}{log\+\_\+zl}}, double log\+\_\+zl\+\_\+var, \mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&live\+\_\+points, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} m)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a81e57d9be65b70402d884a2f9f66a7e2}{\+\_\+compute\+Log\+Zd\+Var\+\_\+2}} (\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points, double zd)
+\item 
+void \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_afa1b7111a02cd4543bcd1b86f66e5ec0}{\+\_\+compute\+Log\+Zd\+Var\+Part\+First\+\_\+2}} (\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} l, double $\ast$log\+\_\+result, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$sing\+\_\+result)
+\item 
+void \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_acd444660dbb4649430d72407a5b75072}{\+\_\+compute\+Log\+Zd\+Var\+Part\+Second\+\_\+2}} (\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} l, double $\ast$log\+\_\+result, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$sing\+\_\+result)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_acbe6a428cad358df002282961bbac573}{\+\_\+compute\+Log\+Zd\+Var\+\_\+3}} (\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points, double zd)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a70ef0ef3d775f5b28d51ad13e2858414}{\+\_\+cov\+\_\+t}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} i, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} j)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_abfcccf0e6f229725939c8561409ded45}{\+\_\+cov\+\_\+diff\+\_\+t}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} i, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} j)
+\item 
+double \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a0652b9a37397d54957b1851b42ab1f3a}{\+\_\+varX}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} i, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} j)
+\item 
+void \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a6f497b6d8ae1245a68b03b6d8141db33}{\+\_\+compute\+Cov\+Term}} (\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&dead\+\_\+points, \mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&live\+\_\+points, double $\ast$log\+\_\+cov, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$sign\+\_\+cov)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_ab3ac00b74b475ae166d9264d207a0aac}{\+\_\+N}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_abfad9dcc1b0277d01ad82ce1a9a3675c}{\+\_\+r}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_ac61807308ef96a88995b22d3acf1bb83}{\+\_\+\+E\+\_\+t}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a4d81bf05adccfa9be4570dfad085b9d7}{\+\_\+\+E\+\_\+t2}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a0804a39299960b9f8f0fdd97ac3378ee}{\+\_\+e\+\_\+normalized}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a56d7abca3c5b9fc09f0a399748fc27a3}{\+\_\+e\+\_\+log\+\_\+scale}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_a4be369e81019acda33e61e9dfa2e92cd}{\+\_\+epsilons\+\_\+normalized}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classlfns_1_1PosteriorEstimator_aeddfeb0eb4ab2b20b067e8f8af24863c}{\+\_\+epsilons\+\_\+log\+\_\+scale}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a1549f3ff4cca81d2535791e43fe6968e}\label{classlfns_1_1PosteriorEstimator_a1549f3ff4cca81d2535791e43fe6968e}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!PosteriorEstimator@{PosteriorEstimator}}
+\index{PosteriorEstimator@{PosteriorEstimator}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{PosteriorEstimator()}{PosteriorEstimator()}}
+{\footnotesize\ttfamily lfns\+::\+Posterior\+Estimator\+::\+Posterior\+Estimator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{N,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{r }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a6f497b6d8ae1245a68b03b6d8141db33}\label{classlfns_1_1PosteriorEstimator_a6f497b6d8ae1245a68b03b6d8141db33}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeCovTerm@{\_computeCovTerm}}
+\index{\_computeCovTerm@{\_computeCovTerm}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeCovTerm()}{\_computeCovTerm()}}
+{\footnotesize\ttfamily void lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Cov\+Term (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points,  }\item[{\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&}]{live\+\_\+points,  }\item[{double $\ast$}]{log\+\_\+cov,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$}]{sign\+\_\+cov }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a4c31f9a79ca95f4f9874982a5100ff09}\label{classlfns_1_1PosteriorEstimator_a4c31f9a79ca95f4f9874982a5100ff09}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeE@{\_computeE}}
+\index{\_computeE@{\_computeE}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeE()}{\_computeE()}}
+{\footnotesize\ttfamily void lfns\+::\+Posterior\+Estimator\+::\+\_\+computeE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a81ff22902fc34514965498b0b6d2a0f4}\label{classlfns_1_1PosteriorEstimator_a81ff22902fc34514965498b0b6d2a0f4}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogBi@{\_computeLogBi}}
+\index{\_computeLogBi@{\_computeLogBi}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogBi()}{\_computeLogBi()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Bi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_ac49d005b101158a41f048852759324c6}\label{classlfns_1_1PosteriorEstimator_ac49d005b101158a41f048852759324c6}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogZdVar@{\_computeLogZdVar}}
+\index{\_computeLogZdVar@{\_computeLogZdVar}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogZdVar()}{\_computeLogZdVar()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Zd\+Var (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points,  }\item[{double}]{log\+\_\+zd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a81e57d9be65b70402d884a2f9f66a7e2}\label{classlfns_1_1PosteriorEstimator_a81e57d9be65b70402d884a2f9f66a7e2}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogZdVar\_2@{\_computeLogZdVar\_2}}
+\index{\_computeLogZdVar\_2@{\_computeLogZdVar\_2}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogZdVar\_2()}{\_computeLogZdVar\_2()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Zd\+Var\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points,  }\item[{double}]{zd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_acbe6a428cad358df002282961bbac573}\label{classlfns_1_1PosteriorEstimator_acbe6a428cad358df002282961bbac573}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogZdVar\_3@{\_computeLogZdVar\_3}}
+\index{\_computeLogZdVar\_3@{\_computeLogZdVar\_3}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogZdVar\_3()}{\_computeLogZdVar\_3()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Zd\+Var\+\_\+3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points,  }\item[{double}]{zd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_afa1b7111a02cd4543bcd1b86f66e5ec0}\label{classlfns_1_1PosteriorEstimator_afa1b7111a02cd4543bcd1b86f66e5ec0}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogZdVarPartFirst\_2@{\_computeLogZdVarPartFirst\_2}}
+\index{\_computeLogZdVarPartFirst\_2@{\_computeLogZdVarPartFirst\_2}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogZdVarPartFirst\_2()}{\_computeLogZdVarPartFirst\_2()}}
+{\footnotesize\ttfamily void lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Zd\+Var\+Part\+First\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{l,  }\item[{double $\ast$}]{log\+\_\+result,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$}]{sing\+\_\+result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_acd444660dbb4649430d72407a5b75072}\label{classlfns_1_1PosteriorEstimator_acd444660dbb4649430d72407a5b75072}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogZdVarPartSecond\_2@{\_computeLogZdVarPartSecond\_2}}
+\index{\_computeLogZdVarPartSecond\_2@{\_computeLogZdVarPartSecond\_2}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogZdVarPartSecond\_2()}{\_computeLogZdVarPartSecond\_2()}}
+{\footnotesize\ttfamily void lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Zd\+Var\+Part\+Second\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{l,  }\item[{double $\ast$}]{log\+\_\+result,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $\ast$}]{sing\+\_\+result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a4e598fec57b187694e4520187e275823}\label{classlfns_1_1PosteriorEstimator_a4e598fec57b187694e4520187e275823}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogZlVar@{\_computeLogZlVar}}
+\index{\_computeLogZlVar@{\_computeLogZlVar}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogZlVar()}{\_computeLogZlVar()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Zl\+Var (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&}]{live\+\_\+points,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a2bbaeda0b9d79a50eb0112feb97a74ee}\label{classlfns_1_1PosteriorEstimator_a2bbaeda0b9d79a50eb0112feb97a74ee}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_computeLogZtotVar@{\_computeLogZtotVar}}
+\index{\_computeLogZtotVar@{\_computeLogZtotVar}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_computeLogZtotVar()}{\_computeLogZtotVar()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+compute\+Log\+Ztot\+Var (\begin{DoxyParamCaption}\item[{double}]{log\+\_\+zd,  }\item[{double}]{log\+\_\+zd\+\_\+var,  }\item[{double}]{log\+\_\+zl,  }\item[{double}]{log\+\_\+zl\+\_\+var,  }\item[{\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&}]{live\+\_\+points,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_abfcccf0e6f229725939c8561409ded45}\label{classlfns_1_1PosteriorEstimator_abfcccf0e6f229725939c8561409ded45}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_cov\_diff\_t@{\_cov\_diff\_t}}
+\index{\_cov\_diff\_t@{\_cov\_diff\_t}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_cov\_diff\_t()}{\_cov\_diff\_t()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+cov\+\_\+diff\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{i,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a70ef0ef3d775f5b28d51ad13e2858414}\label{classlfns_1_1PosteriorEstimator_a70ef0ef3d775f5b28d51ad13e2858414}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_cov\_t@{\_cov\_t}}
+\index{\_cov\_t@{\_cov\_t}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_cov\_t()}{\_cov\_t()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+cov\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{i,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a0652b9a37397d54957b1851b42ab1f3a}\label{classlfns_1_1PosteriorEstimator_a0652b9a37397d54957b1851b42ab1f3a}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_varX@{\_varX}}
+\index{\_varX@{\_varX}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_varX()}{\_varX()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+\_\+varX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{i,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a2f57cd3e75da573b165372ee5961f5c6}\label{classlfns_1_1PosteriorEstimator_a2f57cd3e75da573b165372ee5961f5c6}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!E\_t@{E\_t}}
+\index{E\_t@{E\_t}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{E\_t()}{E\_t()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+E\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a11db763dc1e4e7d784c831848b4329c8}\label{classlfns_1_1PosteriorEstimator_a11db763dc1e4e7d784c831848b4329c8}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!E\_t2@{E\_t2}}
+\index{E\_t2@{E\_t2}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{E\_t2()}{E\_t2()}}
+{\footnotesize\ttfamily double lfns\+::\+Posterior\+Estimator\+::\+E\+\_\+t2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a1691e517c6e0f3f6d8b6e5639a610468}\label{classlfns_1_1PosteriorEstimator_a1691e517c6e0f3f6d8b6e5639a610468}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!estimatePosteriorQuantities@{estimatePosteriorQuantities}}
+\index{estimatePosteriorQuantities@{estimatePosteriorQuantities}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{estimatePosteriorQuantities()}{estimatePosteriorQuantities()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} lfns\+::\+Posterior\+Estimator\+::estimate\+Posterior\+Quantities (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&}]{live\+\_\+points,  }\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_ae6e8a22f3600c932734583768cee09af}\label{classlfns_1_1PosteriorEstimator_ae6e8a22f3600c932734583768cee09af}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!getDeltas@{getDeltas}}
+\index{getDeltas@{getDeltas}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{getDeltas()}{getDeltas()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ lfns\+::\+Posterior\+Estimator\+::get\+Deltas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a22f7d1e53d8ace705cac7beb4baab21b}\label{classlfns_1_1PosteriorEstimator_a22f7d1e53d8ace705cac7beb4baab21b}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void lfns\+::\+Posterior\+Estimator\+::write\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+name,  }\item[{\mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \&}]{live\+\_\+points,  }\item[{\mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \&}]{dead\+\_\+points,  }\item[{\mbox{\hyperlink{structlfns_1_1PosteriorQuantitites}{Posterior\+Quantitites}} \&}]{post\+\_\+quant }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a56d7abca3c5b9fc09f0a399748fc27a3}\label{classlfns_1_1PosteriorEstimator_a56d7abca3c5b9fc09f0a399748fc27a3}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_e\_log\_scale@{\_e\_log\_scale}}
+\index{\_e\_log\_scale@{\_e\_log\_scale}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_e\_log\_scale}{\_e\_log\_scale}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+Posterior\+Estimator\+::\+\_\+e\+\_\+log\+\_\+scale\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a0804a39299960b9f8f0fdd97ac3378ee}\label{classlfns_1_1PosteriorEstimator_a0804a39299960b9f8f0fdd97ac3378ee}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_e\_normalized@{\_e\_normalized}}
+\index{\_e\_normalized@{\_e\_normalized}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_e\_normalized}{\_e\_normalized}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ lfns\+::\+Posterior\+Estimator\+::\+\_\+e\+\_\+normalized\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_ac61807308ef96a88995b22d3acf1bb83}\label{classlfns_1_1PosteriorEstimator_ac61807308ef96a88995b22d3acf1bb83}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_E\_t@{\_E\_t}}
+\index{\_E\_t@{\_E\_t}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_E\_t}{\_E\_t}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+Posterior\+Estimator\+::\+\_\+\+E\+\_\+t\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a4d81bf05adccfa9be4570dfad085b9d7}\label{classlfns_1_1PosteriorEstimator_a4d81bf05adccfa9be4570dfad085b9d7}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_E\_t2@{\_E\_t2}}
+\index{\_E\_t2@{\_E\_t2}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_E\_t2}{\_E\_t2}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+Posterior\+Estimator\+::\+\_\+\+E\+\_\+t2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_aeddfeb0eb4ab2b20b067e8f8af24863c}\label{classlfns_1_1PosteriorEstimator_aeddfeb0eb4ab2b20b067e8f8af24863c}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_epsilons\_log\_scale@{\_epsilons\_log\_scale}}
+\index{\_epsilons\_log\_scale@{\_epsilons\_log\_scale}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_epsilons\_log\_scale}{\_epsilons\_log\_scale}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lfns\+::\+Posterior\+Estimator\+::\+\_\+epsilons\+\_\+log\+\_\+scale\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_a4be369e81019acda33e61e9dfa2e92cd}\label{classlfns_1_1PosteriorEstimator_a4be369e81019acda33e61e9dfa2e92cd}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_epsilons\_normalized@{\_epsilons\_normalized}}
+\index{\_epsilons\_normalized@{\_epsilons\_normalized}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_epsilons\_normalized}{\_epsilons\_normalized}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ lfns\+::\+Posterior\+Estimator\+::\+\_\+epsilons\+\_\+normalized\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_ab3ac00b74b475ae166d9264d207a0aac}\label{classlfns_1_1PosteriorEstimator_ab3ac00b74b475ae166d9264d207a0aac}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_N@{\_N}}
+\index{\_N@{\_N}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_N}{\_N}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+Posterior\+Estimator\+::\+\_\+N\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlfns_1_1PosteriorEstimator_abfad9dcc1b0277d01ad82ce1a9a3675c}\label{classlfns_1_1PosteriorEstimator_abfad9dcc1b0277d01ad82ce1a9a3675c}} 
+\index{lfns::PosteriorEstimator@{lfns::PosteriorEstimator}!\_r@{\_r}}
+\index{\_r@{\_r}!lfns::PosteriorEstimator@{lfns::PosteriorEstimator}}
+\doxysubsubsection{\texorpdfstring{\_r}{\_r}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} lfns\+::\+Posterior\+Estimator\+::\+\_\+r\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{PosteriorEstimator_8h}{Posterior\+Estimator.\+h}}\item 
+src/\+L\+F\+N\+S/\mbox{\hyperlink{PosteriorEstimator_8cpp}{Posterior\+Estimator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,185 @@
+\hypertarget{classsimulator_1_1SimulatorHybrid}{}\doxysection{simulator\+::Simulator\+Hybrid Class Reference}
+\label{classsimulator_1_1SimulatorHybrid}\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+
+
+{\ttfamily \#include $<$Simulator\+Hybrid.\+h$>$}
+
+
+
+Inheritance diagram for simulator\+::Simulator\+Hybrid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classsimulator_1_1SimulatorHybrid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for simulator\+::Simulator\+Hybrid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulator_1_1SimulatorHybrid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_abd2a83950977ef757a480ea7249d5924}{Simulator\+Hybrid}} (\mbox{\hyperlink{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}{Simulator\+Ssa\+\_\+ptr}} simulator\+\_\+ssa, \mbox{\hyperlink{namespacesimulator_a322e73b52914203912392239426a7300}{Simulator\+Ode\+\_\+ptr}} simulator\+\_\+ode, std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&stoch\+\_\+state\+\_\+indices, std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&det\+\_\+state\+\_\+indices)
+\item 
+virtual \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_acde9fd21d2ee53dfb5cccdb1b81b2c7e}{$\sim$\+Simulator\+Hybrid}} ()
+\item 
+virtual \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_ab2f3fce0ad1445d6847502cdc8c18189}{get\+Simulation\+Fct}} ()
+\item 
+void \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_ab98b11b845c53c38050dd5e8f8d6d65b}{simulate}} (double final\+\_\+time) override
+\item 
+virtual \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a9513badb7d625077e33b5b44a00ad5ea}{get\+Reset\+Fct}} ()
+\item 
+virtual void \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a445661f1063ca5378a6edc5039279623}{reset}} (std\+::vector$<$ double $>$ \&state, double \&t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a873312a1f6722f99ae4a8fc177bfba2f}{update\+Output\+State}} (double output\+\_\+time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesimulator_a322e73b52914203912392239426a7300}{Simulator\+Ode\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a0da363771b7453639e15009e327c4693}{\+\_\+simulator\+\_\+ode}}
+\item 
+\mbox{\hyperlink{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}{Simulator\+Ssa\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_aa511c40771f828a7ec7ab392fb290589}{\+\_\+simulator\+\_\+ssa}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a401207c004736bec2cca75a146d8c7dc}{\+\_\+stoch\+\_\+state\+\_\+indices}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a94f75a3317b91c079ae7099350eb04be}{\+\_\+det\+\_\+state\+\_\+indices}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_ae53fe60d7cde5c97259e2a8a9c782c7a}{\+\_\+determining\+\_\+states\+\_\+indices}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a9a8fb3c32a34b052ce5cf560696074dc}{\+\_\+stoch\+\_\+state}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_acca0d764f5ba0e606341fcc8fb1677bf}{\+\_\+det\+\_\+state}}
+\item 
+\mbox{\hyperlink{classsimulator_1_1StoppingCrietrionHybridSimulation}{Stopping\+Crietrion\+Hybrid\+Simulation}} \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_ae1d21507533e580e8e02883a066dede4}{\+\_\+stopping\+\_\+criterion\+\_\+hybrid}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_abd2a83950977ef757a480ea7249d5924}\label{classsimulator_1_1SimulatorHybrid_abd2a83950977ef757a480ea7249d5924}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!SimulatorHybrid@{SimulatorHybrid}}
+\index{SimulatorHybrid@{SimulatorHybrid}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{SimulatorHybrid()}{SimulatorHybrid()}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+Hybrid\+::\+Simulator\+Hybrid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}{Simulator\+Ssa\+\_\+ptr}}}]{simulator\+\_\+ssa,  }\item[{\mbox{\hyperlink{namespacesimulator_a322e73b52914203912392239426a7300}{Simulator\+Ode\+\_\+ptr}}}]{simulator\+\_\+ode,  }\item[{std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&}]{stoch\+\_\+state\+\_\+indices,  }\item[{std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \&}]{det\+\_\+state\+\_\+indices }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_acde9fd21d2ee53dfb5cccdb1b81b2c7e}\label{classsimulator_1_1SimulatorHybrid_acde9fd21d2ee53dfb5cccdb1b81b2c7e}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!````~SimulatorHybrid@{$\sim$SimulatorHybrid}}
+\index{````~SimulatorHybrid@{$\sim$SimulatorHybrid}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimulatorHybrid()}{~SimulatorHybrid()}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+Hybrid\+::$\sim$\+Simulator\+Hybrid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_a9513badb7d625077e33b5b44a00ad5ea}\label{classsimulator_1_1SimulatorHybrid_a9513badb7d625077e33b5b44a00ad5ea}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!getResetFct@{getResetFct}}
+\index{getResetFct@{getResetFct}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{getResetFct()}{getResetFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Hybrid\+::get\+Reset\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a0df0905d6e73446e39fb3021395d11c9}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_ab2f3fce0ad1445d6847502cdc8c18189}\label{classsimulator_1_1SimulatorHybrid_ab2f3fce0ad1445d6847502cdc8c18189}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!getSimulationFct@{getSimulationFct}}
+\index{getSimulationFct@{getSimulationFct}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{getSimulationFct()}{getSimulationFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+Hybrid\+::get\+Simulation\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a833bcbc098992ac34610a8bf75c88865}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_a445661f1063ca5378a6edc5039279623}\label{classsimulator_1_1SimulatorHybrid_a445661f1063ca5378a6edc5039279623}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!reset@{reset}}
+\index{reset@{reset}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Hybrid\+::reset (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{state,  }\item[{double \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsimulator_1_1Simulator_a178c313f7f42d2c314d2f7a2cb8e3845}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_ab98b11b845c53c38050dd5e8f8d6d65b}\label{classsimulator_1_1SimulatorHybrid_ab98b11b845c53c38050dd5e8f8d6d65b}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!simulate@{simulate}}
+\index{simulate@{simulate}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Hybrid\+::simulate (\begin{DoxyParamCaption}\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a7483d21dde301a5390392539169a7aa1}{simulator\+::\+Simulator}}.
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_a873312a1f6722f99ae4a8fc177bfba2f}\label{classsimulator_1_1SimulatorHybrid_a873312a1f6722f99ae4a8fc177bfba2f}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!updateOutputState@{updateOutputState}}
+\index{updateOutputState@{updateOutputState}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{updateOutputState()}{updateOutputState()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+Hybrid\+::update\+Output\+State (\begin{DoxyParamCaption}\item[{double}]{output\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_acca0d764f5ba0e606341fcc8fb1677bf}\label{classsimulator_1_1SimulatorHybrid_acca0d764f5ba0e606341fcc8fb1677bf}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_det\_state@{\_det\_state}}
+\index{\_det\_state@{\_det\_state}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_det\_state}{\_det\_state}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ simulator\+::\+Simulator\+Hybrid\+::\+\_\+det\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_a94f75a3317b91c079ae7099350eb04be}\label{classsimulator_1_1SimulatorHybrid_a94f75a3317b91c079ae7099350eb04be}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_det\_state\_indices@{\_det\_state\_indices}}
+\index{\_det\_state\_indices@{\_det\_state\_indices}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_det\_state\_indices}{\_det\_state\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ simulator\+::\+Simulator\+Hybrid\+::\+\_\+det\+\_\+state\+\_\+indices\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_ae53fe60d7cde5c97259e2a8a9c782c7a}\label{classsimulator_1_1SimulatorHybrid_ae53fe60d7cde5c97259e2a8a9c782c7a}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_determining\_states\_indices@{\_determining\_states\_indices}}
+\index{\_determining\_states\_indices@{\_determining\_states\_indices}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_determining\_states\_indices}{\_determining\_states\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ simulator\+::\+Simulator\+Hybrid\+::\+\_\+determining\+\_\+states\+\_\+indices\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_a0da363771b7453639e15009e327c4693}\label{classsimulator_1_1SimulatorHybrid_a0da363771b7453639e15009e327c4693}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_simulator\_ode@{\_simulator\_ode}}
+\index{\_simulator\_ode@{\_simulator\_ode}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_simulator\_ode}{\_simulator\_ode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a322e73b52914203912392239426a7300}{Simulator\+Ode\+\_\+ptr}} simulator\+::\+Simulator\+Hybrid\+::\+\_\+simulator\+\_\+ode\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_aa511c40771f828a7ec7ab392fb290589}\label{classsimulator_1_1SimulatorHybrid_aa511c40771f828a7ec7ab392fb290589}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_simulator\_ssa@{\_simulator\_ssa}}
+\index{\_simulator\_ssa@{\_simulator\_ssa}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_simulator\_ssa}{\_simulator\_ssa}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesimulator_a96bbf0efbb7cc64f00b6e247c32502e1}{Simulator\+Ssa\+\_\+ptr}} simulator\+::\+Simulator\+Hybrid\+::\+\_\+simulator\+\_\+ssa\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_a9a8fb3c32a34b052ce5cf560696074dc}\label{classsimulator_1_1SimulatorHybrid_a9a8fb3c32a34b052ce5cf560696074dc}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_stoch\_state@{\_stoch\_state}}
+\index{\_stoch\_state@{\_stoch\_state}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_stoch\_state}{\_stoch\_state}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ simulator\+::\+Simulator\+Hybrid\+::\+\_\+stoch\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_a401207c004736bec2cca75a146d8c7dc}\label{classsimulator_1_1SimulatorHybrid_a401207c004736bec2cca75a146d8c7dc}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_stoch\_state\_indices@{\_stoch\_state\_indices}}
+\index{\_stoch\_state\_indices@{\_stoch\_state\_indices}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_stoch\_state\_indices}{\_stoch\_state\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ simulator\+::\+Simulator\+Hybrid\+::\+\_\+stoch\+\_\+state\+\_\+indices\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsimulator_1_1SimulatorHybrid_ae1d21507533e580e8e02883a066dede4}\label{classsimulator_1_1SimulatorHybrid_ae1d21507533e580e8e02883a066dede4}} 
+\index{simulator::SimulatorHybrid@{simulator::SimulatorHybrid}!\_stopping\_criterion\_hybrid@{\_stopping\_criterion\_hybrid}}
+\index{\_stopping\_criterion\_hybrid@{\_stopping\_criterion\_hybrid}!simulator::SimulatorHybrid@{simulator::SimulatorHybrid}}
+\doxysubsubsection{\texorpdfstring{\_stopping\_criterion\_hybrid}{\_stopping\_criterion\_hybrid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsimulator_1_1StoppingCrietrionHybridSimulation}{Stopping\+Crietrion\+Hybrid\+Simulation}} simulator\+::\+Simulator\+Hybrid\+::\+\_\+stopping\+\_\+criterion\+\_\+hybrid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/simulator/\mbox{\hyperlink{SimulatorHybrid_8h}{Simulator\+Hybrid.\+h}}\item 
+src/simulator/\mbox{\hyperlink{SimulatorHybrid_8cpp}{Simulator\+Hybrid.\+cpp}}\end{DoxyCompactItemize}

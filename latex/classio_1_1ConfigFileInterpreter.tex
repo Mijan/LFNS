@@ -1,0 +1,431 @@
+\hypertarget{classio_1_1ConfigFileInterpreter}{}\doxysection{io\+::Config\+File\+Interpreter Class Reference}
+\label{classio_1_1ConfigFileInterpreter}\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+
+
+This class is used to read a config file and access all the information provided there.  
+
+
+
+
+{\ttfamily \#include $<$Config\+File\+Interpreter.\+h$>$}
+
+
+
+Collaboration diagram for io\+::Config\+File\+Interpreter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classio_1_1ConfigFileInterpreter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1ConfigFileInterpreter_add6836747264fdeeb33ce7cc96ddf08c}{Config\+File\+Interpreter}} (std\+::string instance\+\_\+file\+\_\+name)
+\item 
+virtual \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a2df9f9d0d4eadef0883642cec9b8580a}{$\sim$\+Config\+File\+Interpreter}} ()
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a7a6409d2a86bbef0e387a9b9922bb3f7}{get\+Model\+File\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a379a76d5087b24898e07859b7877cfea}{get\+Measurement\+Model\+File}} ()
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a80d2c0fb2056435550ec6a4c3919df22}{get\+Initial\+Conditions\+File}} ()
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a9e57695cc7eb0927e45560efa5633e00}{get\+Model\+Type}} ()
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_af536dc9be7438b4eb3e61a066b127640}{get\+Parameter\+Scales}} ()
+\item 
+std\+::map$<$ std\+::string, std\+::pair$<$ double, double $>$ $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a5cb9f247f568f0ad8af88cba654d84a5}{get\+Parameter\+Bounds}} ()
+\item 
+std\+::map$<$ std\+::string, double $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ac692f1094b7bb5a9b0900a49da66b367}{get\+Fixed\+Parameters}} ()
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ab2378a17eba57d3507dc2e4595e8c08d}{get\+Data\+Files}} (std\+::vector$<$ std\+::string $>$ experiments)
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a9568426cdf103a3207e6bf1afc6c1c5e}{get\+Times\+Files}} (std\+::vector$<$ std\+::string $>$ experiments)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a470003577ca251be5516892cd6b94691}{get\+Experiments\+For\+L\+F\+NS}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a1d2968537f1a9a4db7fd1f3552eff4b7}{get\+Experiments\+For\+Simulations}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ab4ef6f2b8e0605ca960671f3f436cddd}{get\+Experiments\+For\+Evaluate\+Likelihood}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a4ea80084f2b2cfc7524ae40524ad6319}{get\+N\+For\+L\+F\+NS}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ae0abbb9352c14fbf6d7e4554f5486062}{get\+R\+For\+L\+F\+NS}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ab667bccf27a1a3d0f5d77ed0ad8125e4}{get\+H\+For\+L\+F\+NS}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a87022ec025a160694d6f0149513c175c}{get\+H\+For\+Evaluate\+Likelihood}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ab315ee06463b5a3fd2f0c0a1651c12a5}{get\+D\+P\+G\+M\+M\+It\+For\+L\+F\+NS}} ()
+\item 
+double \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a219100cf8e0e48ce841c6a4962a17063}{get\+Epsilon\+For\+L\+F\+NS}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ab0f254e73e1692a4f184b2daa3cd5e1c}{get\+Pulse\+Periods}} (std\+::string experiment\+\_\+name)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_ac7b1e5d75644cfbc4728ea85b5f44099}{get\+Pulse\+Strengths}} (std\+::string experiment\+\_\+name)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a84124922fc6c9f67ddad79147f6f22e6}{get\+Pulse\+Durations}} (std\+::string experiment\+\_\+name)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_af54404af8b905c2d663ddcd05d3a83fb}{get\+Num\+Pulse}} (std\+::string experiment\+\_\+name)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a6ce4305a816e7f0f1e1654f8d044a33a}{get\+Pulse\+Input\+Names}} (std\+::string experiment\+\_\+name)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a45873b1de63dc237233ae99cfb463c16}{get\+Starting\+Times}} (std\+::string experiment\+\_\+name)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a8923ef4242752ed874b9d0aee6e8cc9f}{get\+Param\+For\+Simulation}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_aac1a5434fdf2bf9c76d326dc0ff5401e}{get\+Param\+For\+Evaluate\+Likelihood}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a57637a346366496149e81799b2fcb663}{get\+N\+For\+Simulation}} ()
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a3e790f3140c39bc948a6ffee251aa507}{get\+Parameter\+Filefor\+Simulation}} ()
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a14fde8821129e5efc2a50bfceb87d1c8}{get\+Parameter\+Filefor\+Evaluate\+Likelihood}} ()
+\item 
+double \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a1591699f18eecf631083a2d852a8e3a6}{get\+Initial\+Time\+For\+Simulation}} ()
+\item 
+double \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a7be1d55950e141b6081d69f9385c050e}{get\+Final\+Time\+For\+Simulation}} ()
+\item 
+double \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a18168218d8b38591dcb74a2eebfbedf3}{get\+Interval\+For\+Simulation}} ()
+\item 
+bool \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a13f8c609824096d18d3d044b12b4ae83}{det\+Species\+Provided}} ()
+\item 
+bool \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_aa0bf367b7dcb6c18498786eaaf1cde0d}{stoch\+Species\+Provided}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a582f3bb76263b06059aceec11a9283c2}{get\+Det\+Species}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_aff227983090c32fbf28e2724aefcbfd3}{get\+Stoch\+Species}} ()
+\item 
+double \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a77a201375d98abf4d757dd3c7586f899}{get\+Min\+Step\+Size}} ()
+\item 
+double \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a80f8f1e66bd793469a3c0222732d036f}{get\+Rel\+Tol}} ()
+\item 
+double \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a562053ec1dd0cbb5aef37ce564d42cbc}{get\+Abs\+Tol}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a4c1aec5d1921f2f2431a4501f7fd3cc2}{get\+Max\+Error\+Fails}} ()
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a8e71e6eb1df64af80e29e247dafdc565}{get\+Max\+Number\+Steps}} ()
+\item 
+bool \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a79afcb28c87a5c284f3ace3d82592bf6}{parameters\+Provided}} ()
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a69b1782e8671cebc94c34a42d434399d}{ger\+Provided\+Parameters\+File}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_a645379bb2ab9bc7bc7d06fc529376955}{get\+Provided\+Parameters}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_acf0499da652df2c5cca43904ddc37291}{\+\_\+get\+Input\+Values}} (std\+::string experiment\+\_\+name, std\+::string field\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1XmlFileReader}{Xml\+File\+Reader}} \mbox{\hyperlink{classio_1_1ConfigFileInterpreter_afd3eb15862a2eb4c0ff07e2db5f7cfaa}{\+\_\+reader}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to read a config file and access all the information provided there. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_add6836747264fdeeb33ce7cc96ddf08c}\label{classio_1_1ConfigFileInterpreter_add6836747264fdeeb33ce7cc96ddf08c}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!ConfigFileInterpreter@{ConfigFileInterpreter}}
+\index{ConfigFileInterpreter@{ConfigFileInterpreter}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{ConfigFileInterpreter()}{ConfigFileInterpreter()}}
+{\footnotesize\ttfamily io\+::\+Config\+File\+Interpreter\+::\+Config\+File\+Interpreter (\begin{DoxyParamCaption}\item[{std\+::string}]{instance\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a2df9f9d0d4eadef0883642cec9b8580a}\label{classio_1_1ConfigFileInterpreter_a2df9f9d0d4eadef0883642cec9b8580a}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!````~ConfigFileInterpreter@{$\sim$ConfigFileInterpreter}}
+\index{````~ConfigFileInterpreter@{$\sim$ConfigFileInterpreter}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConfigFileInterpreter()}{~ConfigFileInterpreter()}}
+{\footnotesize\ttfamily io\+::\+Config\+File\+Interpreter\+::$\sim$\+Config\+File\+Interpreter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_acf0499da652df2c5cca43904ddc37291}\label{classio_1_1ConfigFileInterpreter_acf0499da652df2c5cca43904ddc37291}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!\_getInputValues@{\_getInputValues}}
+\index{\_getInputValues@{\_getInputValues}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{\_getInputValues()}{\_getInputValues()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::\+\_\+get\+Input\+Values (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment\+\_\+name,  }\item[{std\+::string}]{field\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a13f8c609824096d18d3d044b12b4ae83}\label{classio_1_1ConfigFileInterpreter_a13f8c609824096d18d3d044b12b4ae83}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!detSpeciesProvided@{detSpeciesProvided}}
+\index{detSpeciesProvided@{detSpeciesProvided}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{detSpeciesProvided()}{detSpeciesProvided()}}
+{\footnotesize\ttfamily bool io\+::\+Config\+File\+Interpreter\+::det\+Species\+Provided (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a69b1782e8671cebc94c34a42d434399d}\label{classio_1_1ConfigFileInterpreter_a69b1782e8671cebc94c34a42d434399d}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!gerProvidedParametersFile@{gerProvidedParametersFile}}
+\index{gerProvidedParametersFile@{gerProvidedParametersFile}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{gerProvidedParametersFile()}{gerProvidedParametersFile()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Config\+File\+Interpreter\+::ger\+Provided\+Parameters\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a562053ec1dd0cbb5aef37ce564d42cbc}\label{classio_1_1ConfigFileInterpreter_a562053ec1dd0cbb5aef37ce564d42cbc}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getAbsTol@{getAbsTol}}
+\index{getAbsTol@{getAbsTol}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getAbsTol()}{getAbsTol()}}
+{\footnotesize\ttfamily double io\+::\+Config\+File\+Interpreter\+::get\+Abs\+Tol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ab2378a17eba57d3507dc2e4595e8c08d}\label{classio_1_1ConfigFileInterpreter_ab2378a17eba57d3507dc2e4595e8c08d}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getDataFiles@{getDataFiles}}
+\index{getDataFiles@{getDataFiles}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getDataFiles()}{getDataFiles()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Data\+Files (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{experiments }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a582f3bb76263b06059aceec11a9283c2}\label{classio_1_1ConfigFileInterpreter_a582f3bb76263b06059aceec11a9283c2}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getDetSpecies@{getDetSpecies}}
+\index{getDetSpecies@{getDetSpecies}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getDetSpecies()}{getDetSpecies()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Det\+Species (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ab315ee06463b5a3fd2f0c0a1651c12a5}\label{classio_1_1ConfigFileInterpreter_ab315ee06463b5a3fd2f0c0a1651c12a5}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getDPGMMItForLFNS@{getDPGMMItForLFNS}}
+\index{getDPGMMItForLFNS@{getDPGMMItForLFNS}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getDPGMMItForLFNS()}{getDPGMMItForLFNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+D\+P\+G\+M\+M\+It\+For\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a219100cf8e0e48ce841c6a4962a17063}\label{classio_1_1ConfigFileInterpreter_a219100cf8e0e48ce841c6a4962a17063}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getEpsilonForLFNS@{getEpsilonForLFNS}}
+\index{getEpsilonForLFNS@{getEpsilonForLFNS}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getEpsilonForLFNS()}{getEpsilonForLFNS()}}
+{\footnotesize\ttfamily double io\+::\+Config\+File\+Interpreter\+::get\+Epsilon\+For\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ab4ef6f2b8e0605ca960671f3f436cddd}\label{classio_1_1ConfigFileInterpreter_ab4ef6f2b8e0605ca960671f3f436cddd}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getExperimentsForEvaluateLikelihood@{getExperimentsForEvaluateLikelihood}}
+\index{getExperimentsForEvaluateLikelihood@{getExperimentsForEvaluateLikelihood}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getExperimentsForEvaluateLikelihood()}{getExperimentsForEvaluateLikelihood()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Experiments\+For\+Evaluate\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a470003577ca251be5516892cd6b94691}\label{classio_1_1ConfigFileInterpreter_a470003577ca251be5516892cd6b94691}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getExperimentsForLFNS@{getExperimentsForLFNS}}
+\index{getExperimentsForLFNS@{getExperimentsForLFNS}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getExperimentsForLFNS()}{getExperimentsForLFNS()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Experiments\+For\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a1d2968537f1a9a4db7fd1f3552eff4b7}\label{classio_1_1ConfigFileInterpreter_a1d2968537f1a9a4db7fd1f3552eff4b7}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getExperimentsForSimulations@{getExperimentsForSimulations}}
+\index{getExperimentsForSimulations@{getExperimentsForSimulations}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getExperimentsForSimulations()}{getExperimentsForSimulations()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Experiments\+For\+Simulations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a7be1d55950e141b6081d69f9385c050e}\label{classio_1_1ConfigFileInterpreter_a7be1d55950e141b6081d69f9385c050e}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getFinalTimeForSimulation@{getFinalTimeForSimulation}}
+\index{getFinalTimeForSimulation@{getFinalTimeForSimulation}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getFinalTimeForSimulation()}{getFinalTimeForSimulation()}}
+{\footnotesize\ttfamily double io\+::\+Config\+File\+Interpreter\+::get\+Final\+Time\+For\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ac692f1094b7bb5a9b0900a49da66b367}\label{classio_1_1ConfigFileInterpreter_ac692f1094b7bb5a9b0900a49da66b367}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getFixedParameters@{getFixedParameters}}
+\index{getFixedParameters@{getFixedParameters}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getFixedParameters()}{getFixedParameters()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, double $>$ io\+::\+Config\+File\+Interpreter\+::get\+Fixed\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a87022ec025a160694d6f0149513c175c}\label{classio_1_1ConfigFileInterpreter_a87022ec025a160694d6f0149513c175c}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getHForEvaluateLikelihood@{getHForEvaluateLikelihood}}
+\index{getHForEvaluateLikelihood@{getHForEvaluateLikelihood}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getHForEvaluateLikelihood()}{getHForEvaluateLikelihood()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+H\+For\+Evaluate\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ab667bccf27a1a3d0f5d77ed0ad8125e4}\label{classio_1_1ConfigFileInterpreter_ab667bccf27a1a3d0f5d77ed0ad8125e4}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getHForLFNS@{getHForLFNS}}
+\index{getHForLFNS@{getHForLFNS}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getHForLFNS()}{getHForLFNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+H\+For\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a80d2c0fb2056435550ec6a4c3919df22}\label{classio_1_1ConfigFileInterpreter_a80d2c0fb2056435550ec6a4c3919df22}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getInitialConditionsFile@{getInitialConditionsFile}}
+\index{getInitialConditionsFile@{getInitialConditionsFile}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getInitialConditionsFile()}{getInitialConditionsFile()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Config\+File\+Interpreter\+::get\+Initial\+Conditions\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a1591699f18eecf631083a2d852a8e3a6}\label{classio_1_1ConfigFileInterpreter_a1591699f18eecf631083a2d852a8e3a6}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getInitialTimeForSimulation@{getInitialTimeForSimulation}}
+\index{getInitialTimeForSimulation@{getInitialTimeForSimulation}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getInitialTimeForSimulation()}{getInitialTimeForSimulation()}}
+{\footnotesize\ttfamily double io\+::\+Config\+File\+Interpreter\+::get\+Initial\+Time\+For\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a18168218d8b38591dcb74a2eebfbedf3}\label{classio_1_1ConfigFileInterpreter_a18168218d8b38591dcb74a2eebfbedf3}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getIntervalForSimulation@{getIntervalForSimulation}}
+\index{getIntervalForSimulation@{getIntervalForSimulation}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getIntervalForSimulation()}{getIntervalForSimulation()}}
+{\footnotesize\ttfamily double io\+::\+Config\+File\+Interpreter\+::get\+Interval\+For\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a4c1aec5d1921f2f2431a4501f7fd3cc2}\label{classio_1_1ConfigFileInterpreter_a4c1aec5d1921f2f2431a4501f7fd3cc2}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getMaxErrorFails@{getMaxErrorFails}}
+\index{getMaxErrorFails@{getMaxErrorFails}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getMaxErrorFails()}{getMaxErrorFails()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+Max\+Error\+Fails (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a8e71e6eb1df64af80e29e247dafdc565}\label{classio_1_1ConfigFileInterpreter_a8e71e6eb1df64af80e29e247dafdc565}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getMaxNumberSteps@{getMaxNumberSteps}}
+\index{getMaxNumberSteps@{getMaxNumberSteps}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getMaxNumberSteps()}{getMaxNumberSteps()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+Max\+Number\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a379a76d5087b24898e07859b7877cfea}\label{classio_1_1ConfigFileInterpreter_a379a76d5087b24898e07859b7877cfea}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getMeasurementModelFile@{getMeasurementModelFile}}
+\index{getMeasurementModelFile@{getMeasurementModelFile}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getMeasurementModelFile()}{getMeasurementModelFile()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Config\+File\+Interpreter\+::get\+Measurement\+Model\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a77a201375d98abf4d757dd3c7586f899}\label{classio_1_1ConfigFileInterpreter_a77a201375d98abf4d757dd3c7586f899}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getMinStepSize@{getMinStepSize}}
+\index{getMinStepSize@{getMinStepSize}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getMinStepSize()}{getMinStepSize()}}
+{\footnotesize\ttfamily double io\+::\+Config\+File\+Interpreter\+::get\+Min\+Step\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a7a6409d2a86bbef0e387a9b9922bb3f7}\label{classio_1_1ConfigFileInterpreter_a7a6409d2a86bbef0e387a9b9922bb3f7}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getModelFileName@{getModelFileName}}
+\index{getModelFileName@{getModelFileName}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getModelFileName()}{getModelFileName()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Config\+File\+Interpreter\+::get\+Model\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a9e57695cc7eb0927e45560efa5633e00}\label{classio_1_1ConfigFileInterpreter_a9e57695cc7eb0927e45560efa5633e00}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getModelType@{getModelType}}
+\index{getModelType@{getModelType}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getModelType()}{getModelType()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Config\+File\+Interpreter\+::get\+Model\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a4ea80084f2b2cfc7524ae40524ad6319}\label{classio_1_1ConfigFileInterpreter_a4ea80084f2b2cfc7524ae40524ad6319}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getNForLFNS@{getNForLFNS}}
+\index{getNForLFNS@{getNForLFNS}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getNForLFNS()}{getNForLFNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+N\+For\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a57637a346366496149e81799b2fcb663}\label{classio_1_1ConfigFileInterpreter_a57637a346366496149e81799b2fcb663}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getNForSimulation@{getNForSimulation}}
+\index{getNForSimulation@{getNForSimulation}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getNForSimulation()}{getNForSimulation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+N\+For\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_af54404af8b905c2d663ddcd05d3a83fb}\label{classio_1_1ConfigFileInterpreter_af54404af8b905c2d663ddcd05d3a83fb}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getNumPulse@{getNumPulse}}
+\index{getNumPulse@{getNumPulse}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getNumPulse()}{getNumPulse()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ io\+::\+Config\+File\+Interpreter\+::get\+Num\+Pulse (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a5cb9f247f568f0ad8af88cba654d84a5}\label{classio_1_1ConfigFileInterpreter_a5cb9f247f568f0ad8af88cba654d84a5}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getParameterBounds@{getParameterBounds}}
+\index{getParameterBounds@{getParameterBounds}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getParameterBounds()}{getParameterBounds()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::pair$<$ double, double $>$ $>$ io\+::\+Config\+File\+Interpreter\+::get\+Parameter\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a14fde8821129e5efc2a50bfceb87d1c8}\label{classio_1_1ConfigFileInterpreter_a14fde8821129e5efc2a50bfceb87d1c8}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getParameterFileforEvaluateLikelihood@{getParameterFileforEvaluateLikelihood}}
+\index{getParameterFileforEvaluateLikelihood@{getParameterFileforEvaluateLikelihood}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getParameterFileforEvaluateLikelihood()}{getParameterFileforEvaluateLikelihood()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Config\+File\+Interpreter\+::get\+Parameter\+Filefor\+Evaluate\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a3e790f3140c39bc948a6ffee251aa507}\label{classio_1_1ConfigFileInterpreter_a3e790f3140c39bc948a6ffee251aa507}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getParameterFileforSimulation@{getParameterFileforSimulation}}
+\index{getParameterFileforSimulation@{getParameterFileforSimulation}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getParameterFileforSimulation()}{getParameterFileforSimulation()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Config\+File\+Interpreter\+::get\+Parameter\+Filefor\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_af536dc9be7438b4eb3e61a066b127640}\label{classio_1_1ConfigFileInterpreter_af536dc9be7438b4eb3e61a066b127640}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getParameterScales@{getParameterScales}}
+\index{getParameterScales@{getParameterScales}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getParameterScales()}{getParameterScales()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Parameter\+Scales (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_aac1a5434fdf2bf9c76d326dc0ff5401e}\label{classio_1_1ConfigFileInterpreter_aac1a5434fdf2bf9c76d326dc0ff5401e}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getParamForEvaluateLikelihood@{getParamForEvaluateLikelihood}}
+\index{getParamForEvaluateLikelihood@{getParamForEvaluateLikelihood}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getParamForEvaluateLikelihood()}{getParamForEvaluateLikelihood()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ io\+::\+Config\+File\+Interpreter\+::get\+Param\+For\+Evaluate\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a8923ef4242752ed874b9d0aee6e8cc9f}\label{classio_1_1ConfigFileInterpreter_a8923ef4242752ed874b9d0aee6e8cc9f}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getParamForSimulation@{getParamForSimulation}}
+\index{getParamForSimulation@{getParamForSimulation}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getParamForSimulation()}{getParamForSimulation()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ io\+::\+Config\+File\+Interpreter\+::get\+Param\+For\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a645379bb2ab9bc7bc7d06fc529376955}\label{classio_1_1ConfigFileInterpreter_a645379bb2ab9bc7bc7d06fc529376955}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getProvidedParameters@{getProvidedParameters}}
+\index{getProvidedParameters@{getProvidedParameters}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getProvidedParameters()}{getProvidedParameters()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Provided\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a84124922fc6c9f67ddad79147f6f22e6}\label{classio_1_1ConfigFileInterpreter_a84124922fc6c9f67ddad79147f6f22e6}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getPulseDurations@{getPulseDurations}}
+\index{getPulseDurations@{getPulseDurations}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getPulseDurations()}{getPulseDurations()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ io\+::\+Config\+File\+Interpreter\+::get\+Pulse\+Durations (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a6ce4305a816e7f0f1e1654f8d044a33a}\label{classio_1_1ConfigFileInterpreter_a6ce4305a816e7f0f1e1654f8d044a33a}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getPulseInputNames@{getPulseInputNames}}
+\index{getPulseInputNames@{getPulseInputNames}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getPulseInputNames()}{getPulseInputNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Pulse\+Input\+Names (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ab0f254e73e1692a4f184b2daa3cd5e1c}\label{classio_1_1ConfigFileInterpreter_ab0f254e73e1692a4f184b2daa3cd5e1c}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getPulsePeriods@{getPulsePeriods}}
+\index{getPulsePeriods@{getPulsePeriods}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getPulsePeriods()}{getPulsePeriods()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ io\+::\+Config\+File\+Interpreter\+::get\+Pulse\+Periods (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ac7b1e5d75644cfbc4728ea85b5f44099}\label{classio_1_1ConfigFileInterpreter_ac7b1e5d75644cfbc4728ea85b5f44099}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getPulseStrengths@{getPulseStrengths}}
+\index{getPulseStrengths@{getPulseStrengths}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getPulseStrengths()}{getPulseStrengths()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ io\+::\+Config\+File\+Interpreter\+::get\+Pulse\+Strengths (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a80f8f1e66bd793469a3c0222732d036f}\label{classio_1_1ConfigFileInterpreter_a80f8f1e66bd793469a3c0222732d036f}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getRelTol@{getRelTol}}
+\index{getRelTol@{getRelTol}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getRelTol()}{getRelTol()}}
+{\footnotesize\ttfamily double io\+::\+Config\+File\+Interpreter\+::get\+Rel\+Tol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_ae0abbb9352c14fbf6d7e4554f5486062}\label{classio_1_1ConfigFileInterpreter_ae0abbb9352c14fbf6d7e4554f5486062}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getRForLFNS@{getRForLFNS}}
+\index{getRForLFNS@{getRForLFNS}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getRForLFNS()}{getRForLFNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} io\+::\+Config\+File\+Interpreter\+::get\+R\+For\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a45873b1de63dc237233ae99cfb463c16}\label{classio_1_1ConfigFileInterpreter_a45873b1de63dc237233ae99cfb463c16}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getStartingTimes@{getStartingTimes}}
+\index{getStartingTimes@{getStartingTimes}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getStartingTimes()}{getStartingTimes()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ io\+::\+Config\+File\+Interpreter\+::get\+Starting\+Times (\begin{DoxyParamCaption}\item[{std\+::string}]{experiment\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_aff227983090c32fbf28e2724aefcbfd3}\label{classio_1_1ConfigFileInterpreter_aff227983090c32fbf28e2724aefcbfd3}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getStochSpecies@{getStochSpecies}}
+\index{getStochSpecies@{getStochSpecies}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getStochSpecies()}{getStochSpecies()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Stoch\+Species (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a9568426cdf103a3207e6bf1afc6c1c5e}\label{classio_1_1ConfigFileInterpreter_a9568426cdf103a3207e6bf1afc6c1c5e}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!getTimesFiles@{getTimesFiles}}
+\index{getTimesFiles@{getTimesFiles}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{getTimesFiles()}{getTimesFiles()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::string $>$ io\+::\+Config\+File\+Interpreter\+::get\+Times\+Files (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{experiments }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_a79afcb28c87a5c284f3ace3d82592bf6}\label{classio_1_1ConfigFileInterpreter_a79afcb28c87a5c284f3ace3d82592bf6}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!parametersProvided@{parametersProvided}}
+\index{parametersProvided@{parametersProvided}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{parametersProvided()}{parametersProvided()}}
+{\footnotesize\ttfamily bool io\+::\+Config\+File\+Interpreter\+::parameters\+Provided (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_aa0bf367b7dcb6c18498786eaaf1cde0d}\label{classio_1_1ConfigFileInterpreter_aa0bf367b7dcb6c18498786eaaf1cde0d}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!stochSpeciesProvided@{stochSpeciesProvided}}
+\index{stochSpeciesProvided@{stochSpeciesProvided}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{stochSpeciesProvided()}{stochSpeciesProvided()}}
+{\footnotesize\ttfamily bool io\+::\+Config\+File\+Interpreter\+::stoch\+Species\+Provided (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classio_1_1ConfigFileInterpreter_afd3eb15862a2eb4c0ff07e2db5f7cfaa}\label{classio_1_1ConfigFileInterpreter_afd3eb15862a2eb4c0ff07e2db5f7cfaa}} 
+\index{io::ConfigFileInterpreter@{io::ConfigFileInterpreter}!\_reader@{\_reader}}
+\index{\_reader@{\_reader}!io::ConfigFileInterpreter@{io::ConfigFileInterpreter}}
+\doxysubsubsection{\texorpdfstring{\_reader}{\_reader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classio_1_1XmlFileReader}{Xml\+File\+Reader}} io\+::\+Config\+File\+Interpreter\+::\+\_\+reader\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/io/\mbox{\hyperlink{ConfigFileInterpreter_8h}{Config\+File\+Interpreter.\+h}}\item 
+src/io/\mbox{\hyperlink{ConfigFileInterpreter_8cpp}{Config\+File\+Interpreter.\+cpp}}\end{DoxyCompactItemize}

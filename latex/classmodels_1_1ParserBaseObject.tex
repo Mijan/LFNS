@@ -1,0 +1,280 @@
+\hypertarget{classmodels_1_1ParserBaseObject}{}\doxysection{models\+::Parser\+Base\+Object Class Reference}
+\label{classmodels_1_1ParserBaseObject}\index{models::ParserBaseObject@{models::ParserBaseObject}}
+
+
+This class extends the \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} to be parsed from a file.  
+
+
+
+
+{\ttfamily \#include $<$Parser\+Base\+Object.\+h$>$}
+
+
+
+Inheritance diagram for models\+::Parser\+Base\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodels_1_1ParserBaseObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for models\+::Parser\+Base\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classmodels_1_1ParserBaseObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1ParserBaseObject_ab2d41dd79f758e705abde561cdb55c90}{Parser\+Base\+Object}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}} parser\+\_\+data)
+\item 
+\mbox{\hyperlink{classmodels_1_1ParserBaseObject_a66b81f25e410252d3f4cf301946e01f6}{Parser\+Base\+Object}} (\mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}} parser\+\_\+data)
+\item 
+virtual \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a46a7a15ebb588d6e4b18bad3a2d5ecde}{$\sim$\+Parser\+Base\+Object}} ()
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}{set\+Pointer}} (double $\ast$ptr, std\+::string name)
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8ae4969ab66509c0e}{print\+Info}} (std\+::ostream \&os) const
+\item 
+void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a26032b123a38e52a0c7ef2d5bc2ae408}{set\+State\+Order}} (std\+::vector$<$ std\+::string $>$ state\+\_\+order)
+\item 
+void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a26c34eb1eb323124144f49b26d164e46}{set\+Perturbation\+Fct}} (\mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}} perturb\+\_\+fct)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_adf5b8cb7c7b24ea6c3424de74c568cd0}{\+\_\+initialize\+Parser}} (mu\+::\+Parser \&p)
+\begin{DoxyCompactList}\small\item\em This function intializes the provided parser {\ttfamily p} by linking it to the proper pointers for states and variables and defining all necessary math functions for it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a1e6ca2d67b7110c8e3c149a1e0bc9dd9}{\+\_\+create\+Random\+Numbers}} ()
+\item 
+void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a2a04bd15fcc17870318af79bcf8344fb}{\+\_\+update\+State}} (const double $\ast$state)
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a906f920881a5012beaaa8c7c3379c387}{\+\_\+initialize}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} \mbox{\hyperlink{classmodels_1_1ParserBaseObject_aa5cbc9d23afb690c3cf6fa37558900fc}{\+\_\+rng}}
+\item 
+\mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}} \mbox{\hyperlink{classmodels_1_1ParserBaseObject_aa9c67e908d00e7fd7cd5bfe09a7ba667}{\+\_\+parser\+\_\+data}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_ad7871b3ec0874d16f7edfd3aff44ab97}{\+\_\+normal\+\_\+numbers}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_ad5a9c4f46b22557942d7aae5e001b688}{\+\_\+uniform\+\_\+numbers}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a5715ef56ca00ea498edab5e09b2a172b}{\+\_\+uniform\+\_\+int\+\_\+numbers}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacebase_a1dd0fd6e8aca96ecef1a18fa365a4d41}{base\+::\+Normal\+Distribution}} $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a14480a67487e723930ce4db836f7f6ba}{\+\_\+normal\+\_\+dists}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a81c2b94c04871df71444fc0791e575f5}{\+\_\+uniform\+\_\+dists}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacebase_a81cf40e8e5bca9f2fbf772f9add6fa06}{base\+::\+Uniform\+Int\+Distribution}} $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_aa69850ab523e09f34c8647c8cf3c720b}{\+\_\+uniform\+\_\+int\+\_\+dists}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_aa3a79afe7ded0cd7ffe5d4edfd6b7f19}{\+\_\+state}}
+\item 
+double \mbox{\hyperlink{classmodels_1_1ParserBaseObject_af247bee09ae52621ac760bbfd5ac0d19}{\+\_\+time}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classmodels_1_1ParserBaseObject_aa066868887dd585dd974a2e288b67a60}{\+\_\+input\+\_\+state\+\_\+ext\+\_\+by\+\_\+int}}
+\item 
+\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classmodels_1_1ParserBaseObject_ac97d41c024fc524b758ae4212909a875}{\+\_\+num\+\_\+input\+\_\+param}}
+\item 
+\mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a1d2fb54b9864c1a0a9f5a6682e32d19c}{\+\_\+perturbation\+\_\+fct}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class extends the \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} to be parsed from a file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ab2d41dd79f758e705abde561cdb55c90}\label{classmodels_1_1ParserBaseObject_ab2d41dd79f758e705abde561cdb55c90}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!ParserBaseObject@{ParserBaseObject}}
+\index{ParserBaseObject@{ParserBaseObject}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{ParserBaseObject()}{ParserBaseObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily models\+::\+Parser\+Base\+Object\+::\+Parser\+Base\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}}}]{parser\+\_\+data }\end{DoxyParamCaption})}
+
+This constructor contains a random number generator {\ttfamily rng} and needs to be used when random numbers are required. \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a66b81f25e410252d3f4cf301946e01f6}\label{classmodels_1_1ParserBaseObject_a66b81f25e410252d3f4cf301946e01f6}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!ParserBaseObject@{ParserBaseObject}}
+\index{ParserBaseObject@{ParserBaseObject}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{ParserBaseObject()}{ParserBaseObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily models\+::\+Parser\+Base\+Object\+::\+Parser\+Base\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}}}]{parser\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a46a7a15ebb588d6e4b18bad3a2d5ecde}\label{classmodels_1_1ParserBaseObject_a46a7a15ebb588d6e4b18bad3a2d5ecde}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!````~ParserBaseObject@{$\sim$ParserBaseObject}}
+\index{````~ParserBaseObject@{$\sim$ParserBaseObject}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$ParserBaseObject()}{~ParserBaseObject()}}
+{\footnotesize\ttfamily models\+::\+Parser\+Base\+Object\+::$\sim$\+Parser\+Base\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a1e6ca2d67b7110c8e3c149a1e0bc9dd9}\label{classmodels_1_1ParserBaseObject_a1e6ca2d67b7110c8e3c149a1e0bc9dd9}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_createRandomNumbers@{\_createRandomNumbers}}
+\index{\_createRandomNumbers@{\_createRandomNumbers}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_createRandomNumbers()}{\_createRandomNumbers()}}
+{\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::\+\_\+create\+Random\+Numbers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a906f920881a5012beaaa8c7c3379c387}\label{classmodels_1_1ParserBaseObject_a906f920881a5012beaaa8c7c3379c387}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_initialize@{\_initialize}}
+\index{\_initialize@{\_initialize}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_initialize()}{\_initialize()}}
+{\footnotesize\ttfamily virtual void models\+::\+Parser\+Base\+Object\+::\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classmodels_1_1MeasurementModel_a1c654002519995208d76f95b6df0a224}{models\+::\+Measurement\+Model}}, \mbox{\hyperlink{classmodels_1_1InitialValueProvider_ab5c9584429cf6043d293706a0a22bb65}{models\+::\+Initial\+Value\+Provider}}, and \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a1cfb92c980cc75fc880d7dcad5c53849}{models\+::\+Chemical\+Reaction\+Network}}.
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_adf5b8cb7c7b24ea6c3424de74c568cd0}\label{classmodels_1_1ParserBaseObject_adf5b8cb7c7b24ea6c3424de74c568cd0}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_initializeParser@{\_initializeParser}}
+\index{\_initializeParser@{\_initializeParser}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_initializeParser()}{\_initializeParser()}}
+{\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::\+\_\+initialize\+Parser (\begin{DoxyParamCaption}\item[{mu\+::\+Parser \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This function intializes the provided parser {\ttfamily p} by linking it to the proper pointers for states and variables and defining all necessary math functions for it. 
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a2a04bd15fcc17870318af79bcf8344fb}\label{classmodels_1_1ParserBaseObject_a2a04bd15fcc17870318af79bcf8344fb}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_updateState@{\_updateState}}
+\index{\_updateState@{\_updateState}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_updateState()}{\_updateState()}}
+{\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::\+\_\+update\+State (\begin{DoxyParamCaption}\item[{const double $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8ae4969ab66509c0e}\label{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8ae4969ab66509c0e}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::print\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints all the parameter and species names to a output stream 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the output will be written. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_a4ea5a43946acce3bcc2185eed0d16c01}{models\+::\+Base\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a4e450820210184733f67e786108812d7}{models\+::\+Chemical\+Reaction\+Network}}.
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a26c34eb1eb323124144f49b26d164e46}\label{classmodels_1_1ParserBaseObject_a26c34eb1eb323124144f49b26d164e46}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!setPerturbationFct@{setPerturbationFct}}
+\index{setPerturbationFct@{setPerturbationFct}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{setPerturbationFct()}{setPerturbationFct()}}
+{\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::set\+Perturbation\+Fct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}}}]{perturb\+\_\+fct }\end{DoxyParamCaption})}
+
+Sets the input function corresponding to a particular experiment. When an input is provided this function pointer is set. This allows any class, inheriting from \mbox{\hyperlink{classmodels_1_1ParserBaseObject}{Parser\+Base\+Object}} to evaluate the perturbation function before calling any other functions \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}\label{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!setPointer@{setPointer}}
+\index{setPointer@{setPointer}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{setPointer()}{setPointer()}}
+{\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::set\+Pointer (\begin{DoxyParamCaption}\item[{double $\ast$}]{ptr,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets a pointer for the parameter or species with corresponding name by calling the base function \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}{Base\+Object\+::set\+Pointer()}} and initializes all parsers once all pointers have been set. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & the provided pointer \\
+\hline
+{\em name} & the name of the parameter or species for which the pointer is provided \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}{models\+::\+Base\+Object}}.
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a26032b123a38e52a0c7ef2d5bc2ae408}\label{classmodels_1_1ParserBaseObject_a26032b123a38e52a0c7ef2d5bc2ae408}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!setStateOrder@{setStateOrder}}
+\index{setStateOrder@{setStateOrder}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{setStateOrder()}{setStateOrder()}}
+{\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::set\+State\+Order (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{state\+\_\+order }\end{DoxyParamCaption})}
+
+Sets the states order to the order specified in {\ttfamily state\+\_\+order}. The corresponding order is saved in the map \mbox{\hyperlink{classmodels_1_1ParserBaseObject_aa066868887dd585dd974a2e288b67a60}{\+\_\+input\+\_\+state\+\_\+ext\+\_\+by\+\_\+int}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_aa066868887dd585dd974a2e288b67a60}\label{classmodels_1_1ParserBaseObject_aa066868887dd585dd974a2e288b67a60}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_input\_state\_ext\_by\_int@{\_input\_state\_ext\_by\_int}}
+\index{\_input\_state\_ext\_by\_int@{\_input\_state\_ext\_by\_int}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_input\_state\_ext\_by\_int}{\_input\_state\_ext\_by\_int}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+input\+\_\+state\+\_\+ext\+\_\+by\+\_\+int\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a14480a67487e723930ce4db836f7f6ba}\label{classmodels_1_1ParserBaseObject_a14480a67487e723930ce4db836f7f6ba}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_normal\_dists@{\_normal\_dists}}
+\index{\_normal\_dists@{\_normal\_dists}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_normal\_dists}{\_normal\_dists}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacebase_a1dd0fd6e8aca96ecef1a18fa365a4d41}{base\+::\+Normal\+Distribution}}$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+normal\+\_\+dists\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ad7871b3ec0874d16f7edfd3aff44ab97}\label{classmodels_1_1ParserBaseObject_ad7871b3ec0874d16f7edfd3aff44ab97}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_normal\_numbers@{\_normal\_numbers}}
+\index{\_normal\_numbers@{\_normal\_numbers}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_normal\_numbers}{\_normal\_numbers}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+normal\+\_\+numbers\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ac97d41c024fc524b758ae4212909a875}\label{classmodels_1_1ParserBaseObject_ac97d41c024fc524b758ae4212909a875}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_num\_input\_param@{\_num\_input\_param}}
+\index{\_num\_input\_param@{\_num\_input\_param}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_num\_input\_param}{\_num\_input\_param}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} models\+::\+Parser\+Base\+Object\+::\+\_\+num\+\_\+input\+\_\+param\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_aa9c67e908d00e7fd7cd5bfe09a7ba667}\label{classmodels_1_1ParserBaseObject_aa9c67e908d00e7fd7cd5bfe09a7ba667}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_parser\_data@{\_parser\_data}}
+\index{\_parser\_data@{\_parser\_data}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_parser\_data}{\_parser\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}} models\+::\+Parser\+Base\+Object\+::\+\_\+parser\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a1d2fb54b9864c1a0a9f5a6682e32d19c}\label{classmodels_1_1ParserBaseObject_a1d2fb54b9864c1a0a9f5a6682e32d19c}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_perturbation\_fct@{\_perturbation\_fct}}
+\index{\_perturbation\_fct@{\_perturbation\_fct}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_perturbation\_fct}{\_perturbation\_fct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}} models\+::\+Parser\+Base\+Object\+::\+\_\+perturbation\+\_\+fct\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_aa5cbc9d23afb690c3cf6fa37558900fc}\label{classmodels_1_1ParserBaseObject_aa5cbc9d23afb690c3cf6fa37558900fc}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_rng@{\_rng}}
+\index{\_rng@{\_rng}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_rng}{\_rng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} models\+::\+Parser\+Base\+Object\+::\+\_\+rng\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_aa3a79afe7ded0cd7ffe5d4edfd6b7f19}\label{classmodels_1_1ParserBaseObject_aa3a79afe7ded0cd7ffe5d4edfd6b7f19}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_state@{\_state}}
+\index{\_state@{\_state}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_state}{\_state}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+state\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_af247bee09ae52621ac760bbfd5ac0d19}\label{classmodels_1_1ParserBaseObject_af247bee09ae52621ac760bbfd5ac0d19}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_time@{\_time}}
+\index{\_time@{\_time}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_time}{\_time}}
+{\footnotesize\ttfamily double models\+::\+Parser\+Base\+Object\+::\+\_\+time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a81c2b94c04871df71444fc0791e575f5}\label{classmodels_1_1ParserBaseObject_a81c2b94c04871df71444fc0791e575f5}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_uniform\_dists@{\_uniform\_dists}}
+\index{\_uniform\_dists@{\_uniform\_dists}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_dists}{\_uniform\_dists}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}}$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+uniform\+\_\+dists\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_aa69850ab523e09f34c8647c8cf3c720b}\label{classmodels_1_1ParserBaseObject_aa69850ab523e09f34c8647c8cf3c720b}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_uniform\_int\_dists@{\_uniform\_int\_dists}}
+\index{\_uniform\_int\_dists@{\_uniform\_int\_dists}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_int\_dists}{\_uniform\_int\_dists}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacebase_a81cf40e8e5bca9f2fbf772f9add6fa06}{base\+::\+Uniform\+Int\+Distribution}}$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+uniform\+\_\+int\+\_\+dists\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a5715ef56ca00ea498edab5e09b2a172b}\label{classmodels_1_1ParserBaseObject_a5715ef56ca00ea498edab5e09b2a172b}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_uniform\_int\_numbers@{\_uniform\_int\_numbers}}
+\index{\_uniform\_int\_numbers@{\_uniform\_int\_numbers}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_int\_numbers}{\_uniform\_int\_numbers}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+uniform\+\_\+int\+\_\+numbers\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ad5a9c4f46b22557942d7aae5e001b688}\label{classmodels_1_1ParserBaseObject_ad5a9c4f46b22557942d7aae5e001b688}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!\_uniform\_numbers@{\_uniform\_numbers}}
+\index{\_uniform\_numbers@{\_uniform\_numbers}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_numbers}{\_uniform\_numbers}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Parser\+Base\+Object\+::\+\_\+uniform\+\_\+numbers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{ParserBaseObject_8h}{Parser\+Base\+Object.\+h}}\item 
+src/models/\mbox{\hyperlink{ParserBaseObject_8cpp}{Parser\+Base\+Object.\+cpp}}\end{DoxyCompactItemize}

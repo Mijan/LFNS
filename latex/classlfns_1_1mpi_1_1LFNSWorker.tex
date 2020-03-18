@@ -1,0 +1,222 @@
+\hypertarget{classlfns_1_1mpi_1_1LFNSWorker}{}\doxysection{lfns\+::mpi\+::L\+F\+N\+S\+Worker Class Reference}
+\label{classlfns_1_1mpi_1_1LFNSWorker}\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+
+
+{\ttfamily \#include $<$L\+F\+N\+S\+Worker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a6b6e261bfb92a51d5589c8e1134552e3}{L\+F\+N\+S\+Worker}} (std\+::size\+\_\+t \mbox{\hyperlink{lfns__mpi_8cpp_a36683b6f0eb124ab5a7c462b3f3ca1cc}{my\+\_\+rank}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+parameters, \mbox{\hyperlink{namespacelfns_ac4c233b0365aa1fa76e9a3b6db0a037d}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} log\+\_\+likelihood\+\_\+evaluation)
+\item 
+virtual \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a654c70f062d5d6cf26c672a01bd1d070}{$\sim$\+L\+F\+N\+S\+Worker}} ()
+\item 
+\mbox{\hyperlink{namespacelfns_1_1mpi_a8fa1b43266ce4c891c63320ff0eb0e0a}{Stopping\+Fct\+\_\+ptr}} \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a222002df78171dc818bc5214eae97615}{get\+Stopping\+Fct}} ()
+\item 
+virtual void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_affa3981a9b121bed778782bef9259665}{run}} ()
+\item 
+double $\ast$ \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a666d9da9bb806f571b3979fe4a6c4b30}{get\+Epsilon\+Ptr}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_ab507c1555e0a50a67cbb1e5b359c2169}{set\+Sampler}} (\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} prior, \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} density\+\_\+estimation, \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng)
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a37e0bac9cb9cb07a5a5ccb408dd67248}{set\+Log\+Params}} (std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ log\+\_\+params)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a70167e7e23e29814dbfae19596d29914}{\+\_\+compute\+Likelihood}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_ae7c3d09e29d8e0e4108454625b5f62e9}{\+\_\+sample\+Constr\+Prior}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_aa7092f81545b8f64c5f5be486291703a}{\+\_\+sample\+Prior}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_aeb6a3673ba6f47d67cbebed5dd67293b}{\+\_\+update\+Sampler}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_ab1c057184e4d8a3a7b3de37ede4fb5d2}{\+\_\+prepare\+Stopping\+Flag}} ()
+\item 
+void \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a072c614ae13a366de08583876ffc73d2}{\+\_\+update\+Epsilon}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::size\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a01cce0185731acf387665536ef84d64f}{\+\_\+my\+\_\+rank}}
+\item 
+const std\+::size\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_aad4da0475fbc4732f2362ce99793be7a}{\+\_\+num\+\_\+parameters}}
+\item 
+double $\ast$ \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a5a10be05a9ee8ecf747efd22c1194904}{\+\_\+particle}}
+\item 
+double \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a0c9f409cbf5461fede4bba559027d3ba}{\+\_\+epsilon}}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a8c9ea29fa6a28f7c4d6bcdc389fc1f23}{\+\_\+sampler\+\_\+size}}
+\item 
+bmpi\+::request $\ast$ \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a9bbdb149f153ec23e54601270cd3360d}{\+\_\+stopping\+\_\+flag\+\_\+request}}
+\item 
+\mbox{\hyperlink{namespacelfns_1_1mpi_aa45287a407c30935f3831a42118ab6e5}{M\+P\+I\+Stopping\+Criterion\+\_\+ptr}} \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a5a180c6d7b4181656befbc11ffe8e340}{\+\_\+mpi\+\_\+stopping\+\_\+criterion}}
+\item 
+\mbox{\hyperlink{namespacelfns_ac4c233b0365aa1fa76e9a3b6db0a037d}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_aec75d854451925dcde743d48cd613923}{\+\_\+log\+\_\+likelihood\+\_\+evaluation}}
+\item 
+bool \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a7691ceaa3534febb4d8954d6e08fb9d3}{\+\_\+stop\+\_\+iteration}}
+\item 
+bmpi\+::communicator \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a2fa65a4835b13edc993e8652c79609f8}{world}}
+\item 
+\mbox{\hyperlink{namespacelfns_a5835e36fed9bf89b0325286c4ef3dc1f}{L\+F\+N\+S\+Sampler\+\_\+ptr}} \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSWorker_a864165dfe74c18b25fd7fa4ec25a8252}{\+\_\+sampler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a6b6e261bfb92a51d5589c8e1134552e3}\label{classlfns_1_1mpi_1_1LFNSWorker_a6b6e261bfb92a51d5589c8e1134552e3}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!LFNSWorker@{LFNSWorker}}
+\index{LFNSWorker@{LFNSWorker}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{LFNSWorker()}{LFNSWorker()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+L\+F\+N\+S\+Worker (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{my\+\_\+rank,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+parameters,  }\item[{\mbox{\hyperlink{namespacelfns_ac4c233b0365aa1fa76e9a3b6db0a037d}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}}}]{log\+\_\+likelihood\+\_\+evaluation }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a654c70f062d5d6cf26c672a01bd1d070}\label{classlfns_1_1mpi_1_1LFNSWorker_a654c70f062d5d6cf26c672a01bd1d070}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!````~LFNSWorker@{$\sim$LFNSWorker}}
+\index{````~LFNSWorker@{$\sim$LFNSWorker}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{$\sim$LFNSWorker()}{~LFNSWorker()}}
+{\footnotesize\ttfamily lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::$\sim$\+L\+F\+N\+S\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a70167e7e23e29814dbfae19596d29914}\label{classlfns_1_1mpi_1_1LFNSWorker_a70167e7e23e29814dbfae19596d29914}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_computeLikelihood@{\_computeLikelihood}}
+\index{\_computeLikelihood@{\_computeLikelihood}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_computeLikelihood()}{\_computeLikelihood()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+compute\+Likelihood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_ab1c057184e4d8a3a7b3de37ede4fb5d2}\label{classlfns_1_1mpi_1_1LFNSWorker_ab1c057184e4d8a3a7b3de37ede4fb5d2}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_prepareStoppingFlag@{\_prepareStoppingFlag}}
+\index{\_prepareStoppingFlag@{\_prepareStoppingFlag}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_prepareStoppingFlag()}{\_prepareStoppingFlag()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+prepare\+Stopping\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_ae7c3d09e29d8e0e4108454625b5f62e9}\label{classlfns_1_1mpi_1_1LFNSWorker_ae7c3d09e29d8e0e4108454625b5f62e9}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_sampleConstrPrior@{\_sampleConstrPrior}}
+\index{\_sampleConstrPrior@{\_sampleConstrPrior}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_sampleConstrPrior()}{\_sampleConstrPrior()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+sample\+Constr\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_aa7092f81545b8f64c5f5be486291703a}\label{classlfns_1_1mpi_1_1LFNSWorker_aa7092f81545b8f64c5f5be486291703a}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_samplePrior@{\_samplePrior}}
+\index{\_samplePrior@{\_samplePrior}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_samplePrior()}{\_samplePrior()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+sample\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a072c614ae13a366de08583876ffc73d2}\label{classlfns_1_1mpi_1_1LFNSWorker_a072c614ae13a366de08583876ffc73d2}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_updateEpsilon@{\_updateEpsilon}}
+\index{\_updateEpsilon@{\_updateEpsilon}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_updateEpsilon()}{\_updateEpsilon()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+update\+Epsilon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_aeb6a3673ba6f47d67cbebed5dd67293b}\label{classlfns_1_1mpi_1_1LFNSWorker_aeb6a3673ba6f47d67cbebed5dd67293b}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_updateSampler@{\_updateSampler}}
+\index{\_updateSampler@{\_updateSampler}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_updateSampler()}{\_updateSampler()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+update\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a666d9da9bb806f571b3979fe4a6c4b30}\label{classlfns_1_1mpi_1_1LFNSWorker_a666d9da9bb806f571b3979fe4a6c4b30}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!getEpsilonPtr@{getEpsilonPtr}}
+\index{getEpsilonPtr@{getEpsilonPtr}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{getEpsilonPtr()}{getEpsilonPtr()}}
+{\footnotesize\ttfamily double $\ast$ lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::get\+Epsilon\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a222002df78171dc818bc5214eae97615}\label{classlfns_1_1mpi_1_1LFNSWorker_a222002df78171dc818bc5214eae97615}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!getStoppingFct@{getStoppingFct}}
+\index{getStoppingFct@{getStoppingFct}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{getStoppingFct()}{getStoppingFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelfns_1_1mpi_a8fa1b43266ce4c891c63320ff0eb0e0a}{Stopping\+Fct\+\_\+ptr}} lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::get\+Stopping\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_affa3981a9b121bed778782bef9259665}\label{classlfns_1_1mpi_1_1LFNSWorker_affa3981a9b121bed778782bef9259665}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!run@{run}}
+\index{run@{run}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a37e0bac9cb9cb07a5a5ccb408dd67248}\label{classlfns_1_1mpi_1_1LFNSWorker_a37e0bac9cb9cb07a5a5ccb408dd67248}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!setLogParams@{setLogParams}}
+\index{setLogParams@{setLogParams}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{setLogParams()}{setLogParams()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::set\+Log\+Params (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$}]{log\+\_\+params }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_ab507c1555e0a50a67cbb1e5b359c2169}\label{classlfns_1_1mpi_1_1LFNSWorker_ab507c1555e0a50a67cbb1e5b359c2169}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!setSampler@{setSampler}}
+\index{setSampler@{setSampler}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{setSampler()}{setSampler()}}
+{\footnotesize\ttfamily void lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::set\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}}}]{prior,  }\item[{\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}}}]{density\+\_\+estimation,  }\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a0c9f409cbf5461fede4bba559027d3ba}\label{classlfns_1_1mpi_1_1LFNSWorker_a0c9f409cbf5461fede4bba559027d3ba}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_epsilon@{\_epsilon}}
+\index{\_epsilon@{\_epsilon}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_epsilon}{\_epsilon}}
+{\footnotesize\ttfamily double lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+epsilon\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_aec75d854451925dcde743d48cd613923}\label{classlfns_1_1mpi_1_1LFNSWorker_aec75d854451925dcde743d48cd613923}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_log\_likelihood\_evaluation@{\_log\_likelihood\_evaluation}}
+\index{\_log\_likelihood\_evaluation@{\_log\_likelihood\_evaluation}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_log\_likelihood\_evaluation}{\_log\_likelihood\_evaluation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelfns_ac4c233b0365aa1fa76e9a3b6db0a037d}{Log\+Likelihod\+Eval\+Fct\+\_\+ptr}} lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+log\+\_\+likelihood\+\_\+evaluation\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a5a180c6d7b4181656befbc11ffe8e340}\label{classlfns_1_1mpi_1_1LFNSWorker_a5a180c6d7b4181656befbc11ffe8e340}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_mpi\_stopping\_criterion@{\_mpi\_stopping\_criterion}}
+\index{\_mpi\_stopping\_criterion@{\_mpi\_stopping\_criterion}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_mpi\_stopping\_criterion}{\_mpi\_stopping\_criterion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelfns_1_1mpi_aa45287a407c30935f3831a42118ab6e5}{M\+P\+I\+Stopping\+Criterion\+\_\+ptr}} lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+mpi\+\_\+stopping\+\_\+criterion\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a01cce0185731acf387665536ef84d64f}\label{classlfns_1_1mpi_1_1LFNSWorker_a01cce0185731acf387665536ef84d64f}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_my\_rank@{\_my\_rank}}
+\index{\_my\_rank@{\_my\_rank}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_my\_rank}{\_my\_rank}}
+{\footnotesize\ttfamily const std\+::size\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+my\+\_\+rank\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_aad4da0475fbc4732f2362ce99793be7a}\label{classlfns_1_1mpi_1_1LFNSWorker_aad4da0475fbc4732f2362ce99793be7a}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_num\_parameters@{\_num\_parameters}}
+\index{\_num\_parameters@{\_num\_parameters}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_num\_parameters}{\_num\_parameters}}
+{\footnotesize\ttfamily const std\+::size\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+num\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a5a10be05a9ee8ecf747efd22c1194904}\label{classlfns_1_1mpi_1_1LFNSWorker_a5a10be05a9ee8ecf747efd22c1194904}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_particle@{\_particle}}
+\index{\_particle@{\_particle}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_particle}{\_particle}}
+{\footnotesize\ttfamily double$\ast$ lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+particle\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a864165dfe74c18b25fd7fa4ec25a8252}\label{classlfns_1_1mpi_1_1LFNSWorker_a864165dfe74c18b25fd7fa4ec25a8252}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_sampler@{\_sampler}}
+\index{\_sampler@{\_sampler}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_sampler}{\_sampler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelfns_a5835e36fed9bf89b0325286c4ef3dc1f}{L\+F\+N\+S\+Sampler\+\_\+ptr}} lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+sampler\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a8c9ea29fa6a28f7c4d6bcdc389fc1f23}\label{classlfns_1_1mpi_1_1LFNSWorker_a8c9ea29fa6a28f7c4d6bcdc389fc1f23}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_sampler\_size@{\_sampler\_size}}
+\index{\_sampler\_size@{\_sampler\_size}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_sampler\_size}{\_sampler\_size}}
+{\footnotesize\ttfamily std\+::size\+\_\+t lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+sampler\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a7691ceaa3534febb4d8954d6e08fb9d3}\label{classlfns_1_1mpi_1_1LFNSWorker_a7691ceaa3534febb4d8954d6e08fb9d3}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_stop\_iteration@{\_stop\_iteration}}
+\index{\_stop\_iteration@{\_stop\_iteration}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_stop\_iteration}{\_stop\_iteration}}
+{\footnotesize\ttfamily bool lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+stop\+\_\+iteration\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a9bbdb149f153ec23e54601270cd3360d}\label{classlfns_1_1mpi_1_1LFNSWorker_a9bbdb149f153ec23e54601270cd3360d}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!\_stopping\_flag\_request@{\_stopping\_flag\_request}}
+\index{\_stopping\_flag\_request@{\_stopping\_flag\_request}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{\_stopping\_flag\_request}{\_stopping\_flag\_request}}
+{\footnotesize\ttfamily bmpi\+::request$\ast$ lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::\+\_\+stopping\+\_\+flag\+\_\+request\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classlfns_1_1mpi_1_1LFNSWorker_a2fa65a4835b13edc993e8652c79609f8}\label{classlfns_1_1mpi_1_1LFNSWorker_a2fa65a4835b13edc993e8652c79609f8}} 
+\index{lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}!world@{world}}
+\index{world@{world}!lfns::mpi::LFNSWorker@{lfns::mpi::LFNSWorker}}
+\doxysubsubsection{\texorpdfstring{world}{world}}
+{\footnotesize\ttfamily bmpi\+::communicator lfns\+::mpi\+::\+L\+F\+N\+S\+Worker\+::world\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{LFNSWorker_8h}{L\+F\+N\+S\+Worker.\+h}}\item 
+src/\+L\+F\+N\+S/mpi/\mbox{\hyperlink{LFNSWorker_8cpp}{L\+F\+N\+S\+Worker.\+cpp}}\end{DoxyCompactItemize}

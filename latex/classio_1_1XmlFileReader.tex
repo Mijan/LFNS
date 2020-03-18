@@ -1,0 +1,142 @@
+\hypertarget{classio_1_1XmlFileReader}{}\doxysection{io\+::Xml\+File\+Reader Class Reference}
+\label{classio_1_1XmlFileReader}\index{io::XmlFileReader@{io::XmlFileReader}}
+
+
+{\ttfamily \#include $<$Xml\+File\+Reader.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1XmlFileReader_a1c9cdbdcbd523bee262fa935e19b9175}{Xml\+File\+Reader}} (std\+::string \mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}})
+\item 
+\mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} \mbox{\hyperlink{classio_1_1XmlFileReader_aa69f1e3cd5bf0cfbc331f1c081d3fb67}{get\+Entry\+Map}} (std\+::string parent\+\_\+path, std\+::string sub\+\_\+tree\+\_\+name)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} $>$ \mbox{\hyperlink{classio_1_1XmlFileReader_a7e5c46bdc82f72e8e9e7513a4f64293a}{get\+Entry\+Maps}} (std\+::string parent\+\_\+path, std\+::string sub\+\_\+tree\+\_\+name, std\+::string sub\+\_\+tree\+\_\+key=\char`\"{}\char`\"{}, std\+::string sub\+\_\+tree\+\_\+value=\char`\"{}\char`\"{})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} $>$ \mbox{\hyperlink{classio_1_1XmlFileReader_a984eca0201d7a6fed19856b44491030d}{get\+Entry\+Maps}} (\mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} root\+\_\+node, std\+::string sub\+\_\+tree\+\_\+name, std\+::string sub\+\_\+tree\+\_\+key=\char`\"{}\char`\"{}, std\+::string sub\+\_\+tree\+\_\+value=\char`\"{}\char`\"{})
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1XmlFileReader_a6220654cb4196a1700085b3612e8448c}{get\+Entry}} (std\+::string path)
+\item 
+\mbox{\hyperlink{classio_1_1XmlEntry}{Xml\+Entry}} \mbox{\hyperlink{classio_1_1XmlFileReader_a842cdac7aaebee6d25472c0b6ffed590}{get\+Xml\+Entry}} (std\+::string path)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classio_1_1XmlEntry}{Xml\+Entry}} $>$ \mbox{\hyperlink{classio_1_1XmlFileReader_a9b22ef2743ed60b9eca2f0d435a744df}{get\+Entries}} (std\+::string path, std\+::string node\+\_\+name)
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1XmlFileReader_ac8f2573afa0f66639412328e22ed5da1}{get\+Xml\+File\+Path}} ()
+\item 
+\mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} \mbox{\hyperlink{classio_1_1XmlFileReader_a91f52aaaf6c891d2e048e2d9fccc43f7}{get\+Entries\+For\+Tree}} (\mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} \&p\+\_\+tree)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} $>$ \mbox{\hyperlink{classio_1_1XmlFileReader_a02fc13315b9436b8a9b3fbdb3bad128b}{get\+Subtrees}} (\mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} root\+\_\+node, std\+::string sub\+\_\+tree\+\_\+name, std\+::string sub\+\_\+tree\+\_\+key=\char`\"{}\char`\"{}, std\+::string sub\+\_\+tree\+\_\+value=\char`\"{}\char`\"{})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} $>$ \mbox{\hyperlink{classio_1_1XmlFileReader_a164626f53c9d48f5d51a50a528fe97c6}{get\+Subtrees}} (std\+::string parent\+\_\+path, std\+::string sub\+\_\+tree\+\_\+name, std\+::string sub\+\_\+tree\+\_\+key=\char`\"{}\char`\"{}, std\+::string sub\+\_\+tree\+\_\+value=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1XmlFileReader_a47b5e0137d46440f72e452613331007a}{\+\_\+xml\+\_\+file\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{classio_1_1XmlFileReader_a3f479cb8895c6fbabca9ffc1fe7d30af}{\+\_\+xml\+\_\+file\+\_\+path}}
+\item 
+\mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} \mbox{\hyperlink{classio_1_1XmlFileReader_ac9f4023f5809006e0b2f8b1bc9d33f91}{\+\_\+pt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to make reading X\+ML files slightly more convenient. It utilizes boost/property\+\_\+tree but provides several convenience functions 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a1c9cdbdcbd523bee262fa935e19b9175}\label{classio_1_1XmlFileReader_a1c9cdbdcbd523bee262fa935e19b9175}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!XmlFileReader@{XmlFileReader}}
+\index{XmlFileReader@{XmlFileReader}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{XmlFileReader()}{XmlFileReader()}}
+{\footnotesize\ttfamily io\+::\+Xml\+File\+Reader\+::\+Xml\+File\+Reader (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a9b22ef2743ed60b9eca2f0d435a744df}\label{classio_1_1XmlFileReader_a9b22ef2743ed60b9eca2f0d435a744df}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getEntries@{getEntries}}
+\index{getEntries@{getEntries}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getEntries()}{getEntries()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classio_1_1XmlEntry}{Xml\+Entry}} $>$ io\+::\+Xml\+File\+Reader\+::get\+Entries (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{std\+::string}]{node\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a91f52aaaf6c891d2e048e2d9fccc43f7}\label{classio_1_1XmlFileReader_a91f52aaaf6c891d2e048e2d9fccc43f7}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getEntriesForTree@{getEntriesForTree}}
+\index{getEntriesForTree@{getEntriesForTree}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getEntriesForTree()}{getEntriesForTree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} io\+::\+Xml\+File\+Reader\+::get\+Entries\+For\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} \&}]{p\+\_\+tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a6220654cb4196a1700085b3612e8448c}\label{classio_1_1XmlFileReader_a6220654cb4196a1700085b3612e8448c}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getEntry@{getEntry}}
+\index{getEntry@{getEntry}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getEntry()}{getEntry()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Xml\+File\+Reader\+::get\+Entry (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_aa69f1e3cd5bf0cfbc331f1c081d3fb67}\label{classio_1_1XmlFileReader_aa69f1e3cd5bf0cfbc331f1c081d3fb67}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getEntryMap@{getEntryMap}}
+\index{getEntryMap@{getEntryMap}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getEntryMap()}{getEntryMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} io\+::\+Xml\+File\+Reader\+::get\+Entry\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{parent\+\_\+path,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a984eca0201d7a6fed19856b44491030d}\label{classio_1_1XmlFileReader_a984eca0201d7a6fed19856b44491030d}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getEntryMaps@{getEntryMaps}}
+\index{getEntryMaps@{getEntryMaps}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getEntryMaps()}{getEntryMaps()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} $>$ io\+::\+Xml\+File\+Reader\+::get\+Entry\+Maps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}}}]{root\+\_\+node,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+name,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+key = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+value = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a7e5c46bdc82f72e8e9e7513a4f64293a}\label{classio_1_1XmlFileReader_a7e5c46bdc82f72e8e9e7513a4f64293a}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getEntryMaps@{getEntryMaps}}
+\index{getEntryMaps@{getEntryMaps}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getEntryMaps()}{getEntryMaps()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceio_aba5f811b1ed704e4a10d3eb399e61d36}{Xml\+Map}} $>$ io\+::\+Xml\+File\+Reader\+::get\+Entry\+Maps (\begin{DoxyParamCaption}\item[{std\+::string}]{parent\+\_\+path,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+name,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+key = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+value = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a02fc13315b9436b8a9b3fbdb3bad128b}\label{classio_1_1XmlFileReader_a02fc13315b9436b8a9b3fbdb3bad128b}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getSubtrees@{getSubtrees}}
+\index{getSubtrees@{getSubtrees}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getSubtrees()}{getSubtrees()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} $>$ io\+::\+Xml\+File\+Reader\+::get\+Subtrees (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}}}]{root\+\_\+node,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+name,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+key = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+value = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a164626f53c9d48f5d51a50a528fe97c6}\label{classio_1_1XmlFileReader_a164626f53c9d48f5d51a50a528fe97c6}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getSubtrees@{getSubtrees}}
+\index{getSubtrees@{getSubtrees}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getSubtrees()}{getSubtrees()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} $>$ io\+::\+Xml\+File\+Reader\+::get\+Subtrees (\begin{DoxyParamCaption}\item[{std\+::string}]{parent\+\_\+path,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+name,  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+key = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{sub\+\_\+tree\+\_\+value = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a842cdac7aaebee6d25472c0b6ffed590}\label{classio_1_1XmlFileReader_a842cdac7aaebee6d25472c0b6ffed590}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getXmlEntry@{getXmlEntry}}
+\index{getXmlEntry@{getXmlEntry}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getXmlEntry()}{getXmlEntry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classio_1_1XmlEntry}{Xml\+Entry}} io\+::\+Xml\+File\+Reader\+::get\+Xml\+Entry (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_ac8f2573afa0f66639412328e22ed5da1}\label{classio_1_1XmlFileReader_ac8f2573afa0f66639412328e22ed5da1}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!getXmlFilePath@{getXmlFilePath}}
+\index{getXmlFilePath@{getXmlFilePath}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{getXmlFilePath()}{getXmlFilePath()}}
+{\footnotesize\ttfamily std\+::string io\+::\+Xml\+File\+Reader\+::get\+Xml\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classio_1_1XmlFileReader_ac9f4023f5809006e0b2f8b1bc9d33f91}\label{classio_1_1XmlFileReader_ac9f4023f5809006e0b2f8b1bc9d33f91}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!\_pt@{\_pt}}
+\index{\_pt@{\_pt}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{\_pt}{\_pt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceio_a367543a7e42c7fb1f8b59527e31b7076}{bt\+\_\+ptree}} io\+::\+Xml\+File\+Reader\+::\+\_\+pt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a47b5e0137d46440f72e452613331007a}\label{classio_1_1XmlFileReader_a47b5e0137d46440f72e452613331007a}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!\_xml\_file\_name@{\_xml\_file\_name}}
+\index{\_xml\_file\_name@{\_xml\_file\_name}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{\_xml\_file\_name}{\_xml\_file\_name}}
+{\footnotesize\ttfamily std\+::string io\+::\+Xml\+File\+Reader\+::\+\_\+xml\+\_\+file\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classio_1_1XmlFileReader_a3f479cb8895c6fbabca9ffc1fe7d30af}\label{classio_1_1XmlFileReader_a3f479cb8895c6fbabca9ffc1fe7d30af}} 
+\index{io::XmlFileReader@{io::XmlFileReader}!\_xml\_file\_path@{\_xml\_file\_path}}
+\index{\_xml\_file\_path@{\_xml\_file\_path}!io::XmlFileReader@{io::XmlFileReader}}
+\doxysubsubsection{\texorpdfstring{\_xml\_file\_path}{\_xml\_file\_path}}
+{\footnotesize\ttfamily std\+::string io\+::\+Xml\+File\+Reader\+::\+\_\+xml\+\_\+file\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/io/\mbox{\hyperlink{XmlFileReader_8h}{Xml\+File\+Reader.\+h}}\item 
+src/io/\mbox{\hyperlink{XmlFileReader_8cpp}{Xml\+File\+Reader.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="GeneralSetup" name="GeneralSetup">
+<area shape="rect" id="node1" title=" " alt="" coords="197,5,308,32"/>
+<area shape="rect" id="node2" href="$classLFNSSetup.html" title=" " alt="" coords="5,80,97,107"/>
+<area shape="rect" id="node3" href="$classLikelihoodSetup.html" title=" " alt="" coords="122,80,247,107"/>
+<area shape="rect" id="node4" href="$classMCMCSetup.html" title=" " alt="" coords="271,80,373,107"/>
+<area shape="rect" id="node5" href="$classSimulationSetup.html" title=" " alt="" coords="397,80,527,107"/>
+</map>

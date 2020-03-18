@@ -1,0 +1,251 @@
+\hypertarget{classmodels_1_1MeasurementModel}{}\doxysection{models\+::Measurement\+Model Class Reference}
+\label{classmodels_1_1MeasurementModel}\index{models::MeasurementModel@{models::MeasurementModel}}
+
+
+{\ttfamily \#include $<$Measurement\+Model.\+h$>$}
+
+
+
+Inheritance diagram for models\+::Measurement\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classmodels_1_1MeasurementModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for models\+::Measurement\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodels_1_1MeasurementModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1MeasurementModel_a1aba1593332ba22e20bb7ee206ee6798}{Measurement\+Model}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{classmodels_1_1MeasurementModelData}{Measurement\+Model\+Data}} measurement\+\_\+model\+\_\+data)
+\item 
+virtual \mbox{\hyperlink{classmodels_1_1MeasurementModel_a637913432ee61c26f7d96aebf4f8f223}{$\sim$\+Measurement\+Model}} ()
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1MeasurementModel_abec10147bccba09823d8a2a80bb1f329}{compute\+Measurement}} (std\+::vector$<$ double $>$ $\ast$measurement, const std\+::vector$<$ double $>$ \&state, double t)
+\item 
+virtual double \mbox{\hyperlink{classmodels_1_1MeasurementModel_a4c8a37b67b8b4d484ee10e87ed580a92}{get\+Log\+Likelihood}} (const std\+::vector$<$ double $>$ \&state, const std\+::vector$<$ double $>$ \&measurements, double t)
+\item 
+\mbox{\hyperlink{namespacemodels_aca2840f2b93c75087ce2ac7e33ac8e90}{Likelihood\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1MeasurementModel_abd8f474679c037a9b1c2be726749b63a}{get\+Likelihood\+Fct}} ()
+\begin{DoxyCompactList}\small\item\em Provides a pointer the the \mbox{\hyperlink{classmodels_1_1MeasurementModel_a4c8a37b67b8b4d484ee10e87ed580a92}{get\+Log\+Likelihood()}} function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodels_1_1MeasurementModel_aa796f19517fdc42f1599073953fdbabb}{print\+Info}} (std\+::ostream \&os)
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1MeasurementModel_aefd98a3db3982a09175d0b4ffd2a758c}{print\+Pointer}} (std\+::ostream \&os) const
+\item 
+virtual void \mbox{\hyperlink{classmodels_1_1MeasurementModel_a7a1ada6cd0ce3ad4ef7ba537cd92d16c}{print\+Pointer\+Value}} (std\+::ostream \&os) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classmodels_1_1MeasurementModel_adea64513f9d6305467c076327666ad11}{get\+Measurement\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Returns all the measurement names. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1MeasurementModel_abc07a74387b08912d007e47d72762f35}{get\+Num\+Measurements}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodels_1_1MeasurementModel_a1c654002519995208d76f95b6df0a224}{\+\_\+initialize}} ()
+\item 
+virtual bool \mbox{\hyperlink{classmodels_1_1MeasurementModel_a8e6964031549edfbac0cf3c7961a36c5}{\+\_\+all\+Pointer\+Set}} () const
+\item 
+void \mbox{\hyperlink{classmodels_1_1MeasurementModel_ad1e6bee0ac707ba741787c0dfa87b572}{\+\_\+update\+Measurement}} (const std\+::vector$<$ double $>$ \&measurement)
+\begin{DoxyCompactList}\small\item\em Updates the value of the measurement, this is needed in order to compute the log-\/likelihood. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classmodels_1_1MeasurementModel_a985dcae54329a3a1b199f9b5b2ca83ba}{\+\_\+initialized}}
+\item 
+std\+::vector$<$ mu\+::\+Parser $>$ \mbox{\hyperlink{classmodels_1_1MeasurementModel_afcbf3f5f4a222f75c7a14b850d3b01c9}{\+\_\+measurement\+\_\+parsers}}
+\item 
+std\+::vector$<$ mu\+::\+Parser $>$ \mbox{\hyperlink{classmodels_1_1MeasurementModel_aa1c21a6906729b0df1f37ace69891e6a}{\+\_\+log\+\_\+likelihood\+\_\+parsers}}
+\item 
+\mbox{\hyperlink{classmodels_1_1MeasurementModelData}{Measurement\+Model\+Data}} \mbox{\hyperlink{classmodels_1_1MeasurementModel_a70242f06815cdf5757608c6aed4e9c33}{\+\_\+measurement\+\_\+model\+\_\+data}}
+\item 
+std\+::vector$<$ double $\ast$ $>$ \mbox{\hyperlink{classmodels_1_1MeasurementModel_ad1d430902cc1ce2832279d7fbb083b36}{\+\_\+measurement\+\_\+ptr}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1MeasurementModel_aeb2e543c436bda76920db79a54598426}{\+\_\+measurement}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible to simulate a measurement of a simulated experiment and to compute the likelihood of any given experimental outcome for a particular underlying model state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a1aba1593332ba22e20bb7ee206ee6798}\label{classmodels_1_1MeasurementModel_a1aba1593332ba22e20bb7ee206ee6798}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!MeasurementModel@{MeasurementModel}}
+\index{MeasurementModel@{MeasurementModel}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{MeasurementModel()}{MeasurementModel()}}
+{\footnotesize\ttfamily models\+::\+Measurement\+Model\+::\+Measurement\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{classmodels_1_1MeasurementModelData}{Measurement\+Model\+Data}}}]{measurement\+\_\+model\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a637913432ee61c26f7d96aebf4f8f223}\label{classmodels_1_1MeasurementModel_a637913432ee61c26f7d96aebf4f8f223}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!````~MeasurementModel@{$\sim$MeasurementModel}}
+\index{````~MeasurementModel@{$\sim$MeasurementModel}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{$\sim$MeasurementModel()}{~MeasurementModel()}}
+{\footnotesize\ttfamily models\+::\+Measurement\+Model\+::$\sim$\+Measurement\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a8e6964031549edfbac0cf3c7961a36c5}\label{classmodels_1_1MeasurementModel_a8e6964031549edfbac0cf3c7961a36c5}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_allPointerSet@{\_allPointerSet}}
+\index{\_allPointerSet@{\_allPointerSet}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_allPointerSet()}{\_allPointerSet()}}
+{\footnotesize\ttfamily bool models\+::\+Measurement\+Model\+::\+\_\+all\+Pointer\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Indicates if all the pointers have been set. In particular it checks if the pointers for \mbox{\hyperlink{classmodels_1_1MeasurementModel_ad1d430902cc1ce2832279d7fbb083b36}{\+\_\+measurement\+\_\+ptr}} are set and then calls the base function \mbox{\hyperlink{classmodels_1_1BaseObject_ac8546dc616d68918a55e5a62c82cf5a5}{Base\+Object\+::\+\_\+all\+Pointer\+Set()}} 
+
+Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_ac8546dc616d68918a55e5a62c82cf5a5}{models\+::\+Base\+Object}}.
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a1c654002519995208d76f95b6df0a224}\label{classmodels_1_1MeasurementModel_a1c654002519995208d76f95b6df0a224}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_initialize@{\_initialize}}
+\index{\_initialize@{\_initialize}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_initialize()}{\_initialize()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+::\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+This function needs to be called to initialize the parsers for the measuremnet model. Before this function is called all pointers for the underlying \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} have to be set using for instance the \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}{Base\+Object\+::set\+Pointer()}} function. After successful initialization the field \mbox{\hyperlink{classmodels_1_1MeasurementModel_a985dcae54329a3a1b199f9b5b2ca83ba}{\+\_\+initialized}} to true. 
+
+Implements \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a906f920881a5012beaaa8c7c3379c387}{models\+::\+Parser\+Base\+Object}}.
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_ad1e6bee0ac707ba741787c0dfa87b572}\label{classmodels_1_1MeasurementModel_ad1e6bee0ac707ba741787c0dfa87b572}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_updateMeasurement@{\_updateMeasurement}}
+\index{\_updateMeasurement@{\_updateMeasurement}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_updateMeasurement()}{\_updateMeasurement()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+::\+\_\+update\+Measurement (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{measurement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the value of the measurement, this is needed in order to compute the log-\/likelihood. 
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_abec10147bccba09823d8a2a80bb1f329}\label{classmodels_1_1MeasurementModel_abec10147bccba09823d8a2a80bb1f329}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!computeMeasurement@{computeMeasurement}}
+\index{computeMeasurement@{computeMeasurement}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{computeMeasurement()}{computeMeasurement()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+::compute\+Measurement (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ $\ast$}]{measurement,  }\item[{const std\+::vector$<$ double $>$ \&}]{state,  }\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function computes the output for the underlying {\ttfamily state} at time {\ttfamily t} and saves it into the vector {\ttfamily measurement} \mbox{\Hypertarget{classmodels_1_1MeasurementModel_abd8f474679c037a9b1c2be726749b63a}\label{classmodels_1_1MeasurementModel_abd8f474679c037a9b1c2be726749b63a}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!getLikelihoodFct@{getLikelihoodFct}}
+\index{getLikelihoodFct@{getLikelihoodFct}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{getLikelihoodFct()}{getLikelihoodFct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_aca2840f2b93c75087ce2ac7e33ac8e90}{Likelihood\+Fct\+\_\+ptr}} models\+::\+Measurement\+Model\+::get\+Likelihood\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Provides a pointer the the \mbox{\hyperlink{classmodels_1_1MeasurementModel_a4c8a37b67b8b4d484ee10e87ed580a92}{get\+Log\+Likelihood()}} function. 
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a4c8a37b67b8b4d484ee10e87ed580a92}\label{classmodels_1_1MeasurementModel_a4c8a37b67b8b4d484ee10e87ed580a92}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!getLogLikelihood@{getLogLikelihood}}
+\index{getLogLikelihood@{getLogLikelihood}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{getLogLikelihood()}{getLogLikelihood()}}
+{\footnotesize\ttfamily double models\+::\+Measurement\+Model\+::get\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{state,  }\item[{const std\+::vector$<$ double $>$ \&}]{measurements,  }\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function computes the likelihood of a given {\ttfamily measurement} for some underlying state {\ttfamily state} at a time {\ttfamily t} \mbox{\Hypertarget{classmodels_1_1MeasurementModel_adea64513f9d6305467c076327666ad11}\label{classmodels_1_1MeasurementModel_adea64513f9d6305467c076327666ad11}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!getMeasurementNames@{getMeasurementNames}}
+\index{getMeasurementNames@{getMeasurementNames}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{getMeasurementNames()}{getMeasurementNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& models\+::\+Measurement\+Model\+::get\+Measurement\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns all the measurement names. 
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_abc07a74387b08912d007e47d72762f35}\label{classmodels_1_1MeasurementModel_abc07a74387b08912d007e47d72762f35}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!getNumMeasurements@{getNumMeasurements}}
+\index{getNumMeasurements@{getNumMeasurements}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{getNumMeasurements()}{getNumMeasurements()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Measurement\+Model\+::get\+Num\+Measurements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of measurements. 
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_aa796f19517fdc42f1599073953fdbabb}\label{classmodels_1_1MeasurementModel_aa796f19517fdc42f1599073953fdbabb}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+::print\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+Prints all information about the measurement model to {\ttfamily os} stream 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the information is printed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_aefd98a3db3982a09175d0b4ffd2a758c}\label{classmodels_1_1MeasurementModel_aefd98a3db3982a09175d0b4ffd2a758c}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!printPointer@{printPointer}}
+\index{printPointer@{printPointer}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{printPointer()}{printPointer()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+::print\+Pointer (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints all the pointer in \mbox{\hyperlink{classmodels_1_1MeasurementModel_ad1d430902cc1ce2832279d7fbb083b36}{\+\_\+measurement\+\_\+ptr}} and calls the base function \mbox{\hyperlink{classmodels_1_1BaseObject_a0c5c9762b6e9dd9968acb8830a822045}{Base\+Object\+::print\+Pointer()}} 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the list of pointers is printed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_a0c5c9762b6e9dd9968acb8830a822045}{models\+::\+Base\+Object}}.
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a7a1ada6cd0ce3ad4ef7ba537cd92d16c}\label{classmodels_1_1MeasurementModel_a7a1ada6cd0ce3ad4ef7ba537cd92d16c}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!printPointerValue@{printPointerValue}}
+\index{printPointerValue@{printPointerValue}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{printPointerValue()}{printPointerValue()}}
+{\footnotesize\ttfamily void models\+::\+Measurement\+Model\+::print\+Pointer\+Value (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints all the values in \mbox{\hyperlink{classmodels_1_1MeasurementModel_aeb2e543c436bda76920db79a54598426}{\+\_\+measurement}} and calls the base function \mbox{\hyperlink{classmodels_1_1BaseObject_a0b592f5e9bcd51b1d12a2617e9e5bbbf}{Base\+Object\+::print\+Pointer\+Value()}} 
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream to which the list of pointers is printed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_a0b592f5e9bcd51b1d12a2617e9e5bbbf}{models\+::\+Base\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a985dcae54329a3a1b199f9b5b2ca83ba}\label{classmodels_1_1MeasurementModel_a985dcae54329a3a1b199f9b5b2ca83ba}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_initialized@{\_initialized}}
+\index{\_initialized@{\_initialized}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_initialized}{\_initialized}}
+{\footnotesize\ttfamily bool models\+::\+Measurement\+Model\+::\+\_\+initialized\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_aa1c21a6906729b0df1f37ace69891e6a}\label{classmodels_1_1MeasurementModel_aa1c21a6906729b0df1f37ace69891e6a}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_log\_likelihood\_parsers@{\_log\_likelihood\_parsers}}
+\index{\_log\_likelihood\_parsers@{\_log\_likelihood\_parsers}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_log\_likelihood\_parsers}{\_log\_likelihood\_parsers}}
+{\footnotesize\ttfamily std\+::vector$<$mu\+::\+Parser$>$ models\+::\+Measurement\+Model\+::\+\_\+log\+\_\+likelihood\+\_\+parsers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_aeb2e543c436bda76920db79a54598426}\label{classmodels_1_1MeasurementModel_aeb2e543c436bda76920db79a54598426}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_measurement@{\_measurement}}
+\index{\_measurement@{\_measurement}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_measurement}{\_measurement}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Measurement\+Model\+::\+\_\+measurement\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_a70242f06815cdf5757608c6aed4e9c33}\label{classmodels_1_1MeasurementModel_a70242f06815cdf5757608c6aed4e9c33}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_measurement\_model\_data@{\_measurement\_model\_data}}
+\index{\_measurement\_model\_data@{\_measurement\_model\_data}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_measurement\_model\_data}{\_measurement\_model\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1MeasurementModelData}{Measurement\+Model\+Data}} models\+::\+Measurement\+Model\+::\+\_\+measurement\+\_\+model\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_afcbf3f5f4a222f75c7a14b850d3b01c9}\label{classmodels_1_1MeasurementModel_afcbf3f5f4a222f75c7a14b850d3b01c9}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_measurement\_parsers@{\_measurement\_parsers}}
+\index{\_measurement\_parsers@{\_measurement\_parsers}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_measurement\_parsers}{\_measurement\_parsers}}
+{\footnotesize\ttfamily std\+::vector$<$mu\+::\+Parser$>$ models\+::\+Measurement\+Model\+::\+\_\+measurement\+\_\+parsers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmodels_1_1MeasurementModel_ad1d430902cc1ce2832279d7fbb083b36}\label{classmodels_1_1MeasurementModel_ad1d430902cc1ce2832279d7fbb083b36}} 
+\index{models::MeasurementModel@{models::MeasurementModel}!\_measurement\_ptr@{\_measurement\_ptr}}
+\index{\_measurement\_ptr@{\_measurement\_ptr}!models::MeasurementModel@{models::MeasurementModel}}
+\doxysubsubsection{\texorpdfstring{\_measurement\_ptr}{\_measurement\_ptr}}
+{\footnotesize\ttfamily std\+::vector$<$double $\ast$$>$ models\+::\+Measurement\+Model\+::\+\_\+measurement\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{MeasurementModel_8h}{Measurement\+Model.\+h}}\item 
+src/models/\mbox{\hyperlink{MeasurementModel_8cpp}{Measurement\+Model.\+cpp}}\end{DoxyCompactItemize}

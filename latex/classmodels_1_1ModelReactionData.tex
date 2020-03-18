@@ -1,0 +1,142 @@
+\hypertarget{classmodels_1_1ModelReactionData}{}\doxysection{models\+::Model\+Reaction\+Data Class Reference}
+\label{classmodels_1_1ModelReactionData}\index{models::ModelReactionData@{models::ModelReactionData}}
+
+
+This class contains all the data that can be read from the model dynamics file.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Reaction\+Data.\+h$>$}
+
+
+
+Inheritance diagram for models\+::Model\+Reaction\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classmodels_1_1ModelReactionData__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for models\+::Model\+Reaction\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classmodels_1_1ModelReactionData__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodels_1_1ModelReactionData_a7f90cdea30db76109ea1fe53e5ece68c}{Model\+Reaction\+Data}} (std\+::vector$<$ std\+::string $>$ parameter\+\_\+names\+\_\+, std\+::vector$<$ std\+::string $>$ species\+\_\+names\+\_\+)
+\item 
+\mbox{\hyperlink{classmodels_1_1ModelReactionData_a3e5bdc2f9a8ec8b442857654b38d6b07}{Model\+Reaction\+Data}} (std\+::string model\+\_\+file\+\_\+name)
+\item 
+\mbox{\hyperlink{classmodels_1_1ModelReactionData_a0c76e72fbb3871b9cc63298e19037695}{Model\+Reaction\+Data}} (const \mbox{\hyperlink{classmodels_1_1ModelReactionData}{Model\+Reaction\+Data}} \&rhs)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1ModelReactionData_a02a7ba7ecc05ae5ae096564cef5f2f4d}{get\+Num\+Reactions}} () const
+\item 
+bool \mbox{\hyperlink{classmodels_1_1ModelReactionData_a8843b4edee58b4acfc198ab4361f9a1d}{is\+Prop\+Mass\+Action}} (std\+::size\+\_\+t reaction\+\_\+index) const
+\item 
+void \mbox{\hyperlink{classmodels_1_1ModelReactionData_afcb85a611aacb03a7c437b8aad9e779c}{create\+Stoichiometry}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classmodels_1_1ModelReactionData_af2c5819d715ea818bbf91408069da6ff}{production\+\_\+species}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classmodels_1_1ModelReactionData_a6897ad91351fbc78d2e118c44adcef0a}{product\+\_\+species}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classmodels_1_1ModelReactionData_a93d273ba4ee3219e445fd7999afd1db6}{reaction\+\_\+variables}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmodels_1_1ModelReactionData_a6859e70b11d86d6a7264595fab756868}{propensities}}
+\item 
+std\+::vector$<$ std\+::map$<$ std\+::size\+\_\+t, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ $>$ \mbox{\hyperlink{classmodels_1_1ModelReactionData_aa44ba1bb14db86d8fc55103abbd71152}{stoichiometry\+\_\+for\+\_\+reaction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class contains all the data that can be read from the model dynamics file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a7f90cdea30db76109ea1fe53e5ece68c}\label{classmodels_1_1ModelReactionData_a7f90cdea30db76109ea1fe53e5ece68c}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!ModelReactionData@{ModelReactionData}}
+\index{ModelReactionData@{ModelReactionData}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{ModelReactionData()}{ModelReactionData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily models\+::\+Model\+Reaction\+Data\+::\+Model\+Reaction\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{parameter\+\_\+names\+\_\+,  }\item[{std\+::vector$<$ std\+::string $>$}]{species\+\_\+names\+\_\+ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a3e5bdc2f9a8ec8b442857654b38d6b07}\label{classmodels_1_1ModelReactionData_a3e5bdc2f9a8ec8b442857654b38d6b07}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!ModelReactionData@{ModelReactionData}}
+\index{ModelReactionData@{ModelReactionData}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{ModelReactionData()}{ModelReactionData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily models\+::\+Model\+Reaction\+Data\+::\+Model\+Reaction\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{model\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a0c76e72fbb3871b9cc63298e19037695}\label{classmodels_1_1ModelReactionData_a0c76e72fbb3871b9cc63298e19037695}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!ModelReactionData@{ModelReactionData}}
+\index{ModelReactionData@{ModelReactionData}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{ModelReactionData()}{ModelReactionData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily models\+::\+Model\+Reaction\+Data\+::\+Model\+Reaction\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmodels_1_1ModelReactionData}{Model\+Reaction\+Data}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_afcb85a611aacb03a7c437b8aad9e779c}\label{classmodels_1_1ModelReactionData_afcb85a611aacb03a7c437b8aad9e779c}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!createStoichiometry@{createStoichiometry}}
+\index{createStoichiometry@{createStoichiometry}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{createStoichiometry()}{createStoichiometry()}}
+{\footnotesize\ttfamily void models\+::\+Model\+Reaction\+Data\+::create\+Stoichiometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a02a7ba7ecc05ae5ae096564cef5f2f4d}\label{classmodels_1_1ModelReactionData_a02a7ba7ecc05ae5ae096564cef5f2f4d}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!getNumReactions@{getNumReactions}}
+\index{getNumReactions@{getNumReactions}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{getNumReactions()}{getNumReactions()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t models\+::\+Model\+Reaction\+Data\+::get\+Num\+Reactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a8843b4edee58b4acfc198ab4361f9a1d}\label{classmodels_1_1ModelReactionData_a8843b4edee58b4acfc198ab4361f9a1d}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!isPropMassAction@{isPropMassAction}}
+\index{isPropMassAction@{isPropMassAction}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{isPropMassAction()}{isPropMassAction()}}
+{\footnotesize\ttfamily bool models\+::\+Model\+Reaction\+Data\+::is\+Prop\+Mass\+Action (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{reaction\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a6897ad91351fbc78d2e118c44adcef0a}\label{classmodels_1_1ModelReactionData_a6897ad91351fbc78d2e118c44adcef0a}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!product\_species@{product\_species}}
+\index{product\_species@{product\_species}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{product\_species}{product\_species}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::string$>$ $>$ models\+::\+Model\+Reaction\+Data\+::product\+\_\+species}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_af2c5819d715ea818bbf91408069da6ff}\label{classmodels_1_1ModelReactionData_af2c5819d715ea818bbf91408069da6ff}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!production\_species@{production\_species}}
+\index{production\_species@{production\_species}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{production\_species}{production\_species}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::string$>$ $>$ models\+::\+Model\+Reaction\+Data\+::production\+\_\+species}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a6859e70b11d86d6a7264595fab756868}\label{classmodels_1_1ModelReactionData_a6859e70b11d86d6a7264595fab756868}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!propensities@{propensities}}
+\index{propensities@{propensities}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{propensities}{propensities}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ models\+::\+Model\+Reaction\+Data\+::propensities}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_a93d273ba4ee3219e445fd7999afd1db6}\label{classmodels_1_1ModelReactionData_a93d273ba4ee3219e445fd7999afd1db6}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!reaction\_variables@{reaction\_variables}}
+\index{reaction\_variables@{reaction\_variables}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{reaction\_variables}{reaction\_variables}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::string$>$ $>$ models\+::\+Model\+Reaction\+Data\+::reaction\+\_\+variables}
+
+\mbox{\Hypertarget{classmodels_1_1ModelReactionData_aa44ba1bb14db86d8fc55103abbd71152}\label{classmodels_1_1ModelReactionData_aa44ba1bb14db86d8fc55103abbd71152}} 
+\index{models::ModelReactionData@{models::ModelReactionData}!stoichiometry\_for\_reaction@{stoichiometry\_for\_reaction}}
+\index{stoichiometry\_for\_reaction@{stoichiometry\_for\_reaction}!models::ModelReactionData@{models::ModelReactionData}}
+\doxysubsubsection{\texorpdfstring{stoichiometry\_for\_reaction}{stoichiometry\_for\_reaction}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::map$<$std\+::size\+\_\+t, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ $>$ models\+::\+Model\+Reaction\+Data\+::stoichiometry\+\_\+for\+\_\+reaction}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/\mbox{\hyperlink{ModelReactionData_8h}{Model\+Reaction\+Data.\+h}}\item 
+src/models/\mbox{\hyperlink{ModelReactionData_8cpp}{Model\+Reaction\+Data.\+cpp}}\end{DoxyCompactItemize}

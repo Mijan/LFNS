@@ -1,0 +1,152 @@
+\hypertarget{classio_1_1ParserReader}{}\doxysection{io\+::Parser\+Reader Class Reference}
+\label{classio_1_1ParserReader}\index{io::ParserReader@{io::ParserReader}}
+
+
+A general class to read text files containing parameter definitions, species definitions, random numbers and so on.  
+
+
+
+
+{\ttfamily \#include $<$Parser\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for io\+::Parser\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classio_1_1ParserReader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for io\+::Parser\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classio_1_1ParserReader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1ParserReader_a58043c77a3b8759ed097ac86f76b4eec}{Parser\+Reader}} (std\+::string parser\+\_\+file\+\_\+name)
+\item 
+virtual \mbox{\hyperlink{classio_1_1ParserReader_a83e4b075d0c7c0f06008dd2140b8ea3d}{$\sim$\+Parser\+Reader}} ()
+\item 
+bool \mbox{\hyperlink{classio_1_1ParserReader_ae03fb37316cd19e651ecd75a5036dfda}{parameters\+Defined}} () const
+\item 
+bool \mbox{\hyperlink{classio_1_1ParserReader_ac7f0ba6ed4262fc5b61c0a3056164147}{species\+Defined}} () const
+\item 
+bool \mbox{\hyperlink{classio_1_1ParserReader_a1243655f401cd10ccd2dd6ac4540c0c1}{random\+Numbers\+Defined}} () const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ParserReader_a6cba1160446783752c78c9db6c9a5347}{read\+Parameter\+Names}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ParserReader_afdaa6910b5550f8c96119f7d2a4610ad}{read\+Species\+Names}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ParserReader_ac9c2d36c1b1ad926f5355119b6225c9b}{read\+Normal\+Rdn}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ParserReader_a384ec22084f7293b7c69ea9f867fc907}{read\+Uniform\+Rdn}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classio_1_1ParserReader_a351e394562c9a4563d99f219b0ff13e5}{read\+Uniform\+Int\+Rdn}} ()
+\item 
+std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \mbox{\hyperlink{classio_1_1ParserReader_aadd3798a6cbf0b7d89e3583cbbbc23e9}{read\+Normal\+Params}} ()
+\item 
+std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \mbox{\hyperlink{classio_1_1ParserReader_a7ec3b94b6192fb193d879a47146992cd}{read\+Uniform\+Params}} ()
+\item 
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ $>$ \mbox{\hyperlink{classio_1_1ParserReader_a56a5d654b62f5d8e81b0de656b4b0b49}{read\+Uniform\+Int\+Params}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A general class to read text files containing parameter definitions, species definitions, random numbers and so on. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classio_1_1ParserReader_a58043c77a3b8759ed097ac86f76b4eec}\label{classio_1_1ParserReader_a58043c77a3b8759ed097ac86f76b4eec}} 
+\index{io::ParserReader@{io::ParserReader}!ParserReader@{ParserReader}}
+\index{ParserReader@{ParserReader}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{ParserReader()}{ParserReader()}}
+{\footnotesize\ttfamily io\+::\+Parser\+Reader\+::\+Parser\+Reader (\begin{DoxyParamCaption}\item[{std\+::string}]{parser\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_a83e4b075d0c7c0f06008dd2140b8ea3d}\label{classio_1_1ParserReader_a83e4b075d0c7c0f06008dd2140b8ea3d}} 
+\index{io::ParserReader@{io::ParserReader}!````~ParserReader@{$\sim$ParserReader}}
+\index{````~ParserReader@{$\sim$ParserReader}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{$\sim$ParserReader()}{~ParserReader()}}
+{\footnotesize\ttfamily io\+::\+Parser\+Reader\+::$\sim$\+Parser\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classio_1_1ParserReader_ae03fb37316cd19e651ecd75a5036dfda}\label{classio_1_1ParserReader_ae03fb37316cd19e651ecd75a5036dfda}} 
+\index{io::ParserReader@{io::ParserReader}!parametersDefined@{parametersDefined}}
+\index{parametersDefined@{parametersDefined}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{parametersDefined()}{parametersDefined()}}
+{\footnotesize\ttfamily bool io\+::\+Parser\+Reader\+::parameters\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_a1243655f401cd10ccd2dd6ac4540c0c1}\label{classio_1_1ParserReader_a1243655f401cd10ccd2dd6ac4540c0c1}} 
+\index{io::ParserReader@{io::ParserReader}!randomNumbersDefined@{randomNumbersDefined}}
+\index{randomNumbersDefined@{randomNumbersDefined}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{randomNumbersDefined()}{randomNumbersDefined()}}
+{\footnotesize\ttfamily bool io\+::\+Parser\+Reader\+::random\+Numbers\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_aadd3798a6cbf0b7d89e3583cbbbc23e9}\label{classio_1_1ParserReader_aadd3798a6cbf0b7d89e3583cbbbc23e9}} 
+\index{io::ParserReader@{io::ParserReader}!readNormalParams@{readNormalParams}}
+\index{readNormalParams@{readNormalParams}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readNormalParams()}{readNormalParams()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ io\+::\+Parser\+Reader\+::read\+Normal\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_ac9c2d36c1b1ad926f5355119b6225c9b}\label{classio_1_1ParserReader_ac9c2d36c1b1ad926f5355119b6225c9b}} 
+\index{io::ParserReader@{io::ParserReader}!readNormalRdn@{readNormalRdn}}
+\index{readNormalRdn@{readNormalRdn}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readNormalRdn()}{readNormalRdn()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Parser\+Reader\+::read\+Normal\+Rdn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_a6cba1160446783752c78c9db6c9a5347}\label{classio_1_1ParserReader_a6cba1160446783752c78c9db6c9a5347}} 
+\index{io::ParserReader@{io::ParserReader}!readParameterNames@{readParameterNames}}
+\index{readParameterNames@{readParameterNames}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readParameterNames()}{readParameterNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Parser\+Reader\+::read\+Parameter\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_afdaa6910b5550f8c96119f7d2a4610ad}\label{classio_1_1ParserReader_afdaa6910b5550f8c96119f7d2a4610ad}} 
+\index{io::ParserReader@{io::ParserReader}!readSpeciesNames@{readSpeciesNames}}
+\index{readSpeciesNames@{readSpeciesNames}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readSpeciesNames()}{readSpeciesNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Parser\+Reader\+::read\+Species\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_a56a5d654b62f5d8e81b0de656b4b0b49}\label{classio_1_1ParserReader_a56a5d654b62f5d8e81b0de656b4b0b49}} 
+\index{io::ParserReader@{io::ParserReader}!readUniformIntParams@{readUniformIntParams}}
+\index{readUniformIntParams@{readUniformIntParams}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readUniformIntParams()}{readUniformIntParams()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ $>$ io\+::\+Parser\+Reader\+::read\+Uniform\+Int\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_a351e394562c9a4563d99f219b0ff13e5}\label{classio_1_1ParserReader_a351e394562c9a4563d99f219b0ff13e5}} 
+\index{io::ParserReader@{io::ParserReader}!readUniformIntRdn@{readUniformIntRdn}}
+\index{readUniformIntRdn@{readUniformIntRdn}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readUniformIntRdn()}{readUniformIntRdn()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Parser\+Reader\+::read\+Uniform\+Int\+Rdn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_a7ec3b94b6192fb193d879a47146992cd}\label{classio_1_1ParserReader_a7ec3b94b6192fb193d879a47146992cd}} 
+\index{io::ParserReader@{io::ParserReader}!readUniformParams@{readUniformParams}}
+\index{readUniformParams@{readUniformParams}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readUniformParams()}{readUniformParams()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ io\+::\+Parser\+Reader\+::read\+Uniform\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_a384ec22084f7293b7c69ea9f867fc907}\label{classio_1_1ParserReader_a384ec22084f7293b7c69ea9f867fc907}} 
+\index{io::ParserReader@{io::ParserReader}!readUniformRdn@{readUniformRdn}}
+\index{readUniformRdn@{readUniformRdn}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{readUniformRdn()}{readUniformRdn()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ io\+::\+Parser\+Reader\+::read\+Uniform\+Rdn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classio_1_1ParserReader_ac7f0ba6ed4262fc5b61c0a3056164147}\label{classio_1_1ParserReader_ac7f0ba6ed4262fc5b61c0a3056164147}} 
+\index{io::ParserReader@{io::ParserReader}!speciesDefined@{speciesDefined}}
+\index{speciesDefined@{speciesDefined}!io::ParserReader@{io::ParserReader}}
+\doxysubsubsection{\texorpdfstring{speciesDefined()}{speciesDefined()}}
+{\footnotesize\ttfamily bool io\+::\+Parser\+Reader\+::species\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/io/\mbox{\hyperlink{ParserReader_8h}{Parser\+Reader.\+h}}\item 
+src/io/\mbox{\hyperlink{ParserReader_8cpp}{Parser\+Reader.\+cpp}}\end{DoxyCompactItemize}

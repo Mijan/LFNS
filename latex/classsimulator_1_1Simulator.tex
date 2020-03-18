@@ -1,0 +1,172 @@
+\hypertarget{classsimulator_1_1Simulator}{}\doxysection{simulator\+::Simulator Class Reference}
+\label{classsimulator_1_1Simulator}\index{simulator::Simulator@{simulator::Simulator}}
+
+
+{\ttfamily \#include $<$Simulator.\+h$>$}
+
+
+
+Inheritance diagram for simulator\+::Simulator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulator_1_1Simulator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for simulator\+::Simulator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classsimulator_1_1Simulator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsimulator_1_1Simulator_a7e32a773b62c97a64f5c80c4daa097a8}{Simulator}} ()
+\item 
+virtual \mbox{\hyperlink{classsimulator_1_1Simulator_a7f782df3f0ca5316833feda654feb7e2}{$\sim$\+Simulator}} ()
+\item 
+virtual void \mbox{\hyperlink{classsimulator_1_1Simulator_a6419551e964713521feaedd1bdffadf0}{add\+Stopping\+Criterion}} (\mbox{\hyperlink{namespacesimulator_a94387d9253f2f6666472764e510e65e7}{Stopping\+Fct\+\_\+ptr}} stopping\+\_\+criterion)
+\item 
+virtual \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1Simulator_a833bcbc098992ac34610a8bf75c88865}{get\+Simulation\+Fct}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsimulator_1_1Simulator_a7483d21dde301a5390392539169a7aa1}{simulate}} (double final\+\_\+time)=0
+\item 
+virtual \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} \mbox{\hyperlink{classsimulator_1_1Simulator_a0df0905d6e73446e39fb3021395d11c9}{get\+Reset\+Fct}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsimulator_1_1Simulator_a178c313f7f42d2c314d2f7a2cb8e3845}{reset}} (std\+::vector$<$ double $>$ \&state, double \&t)
+\item 
+virtual void \mbox{\hyperlink{classsimulator_1_1Simulator_a24b69a3af6ca02165ed008c197bc34bc}{clear\+Stopping\+Criterions}} ()
+\item 
+void \mbox{\hyperlink{classsimulator_1_1Simulator_ab7bd2bbb7ed6ea623312fc85a4117207}{set\+Discont\+Times}} (std\+::vector$<$ double $>$ discont\+\_\+times)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsimulator_1_1StoppingCriterions}{Stopping\+Criterions}} \mbox{\hyperlink{classsimulator_1_1Simulator_a2591b155e8e61544ebf76c463393cfb9}{\+\_\+stopping\+\_\+criterions}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classsimulator_1_1Simulator_a1aad152fcf52a791a940a39c7b24a6e3}{\+\_\+discont\+\_\+times}}
+\item 
+std\+::vector$<$ double $>$\+::iterator \mbox{\hyperlink{classsimulator_1_1Simulator_ad5e0c461c917ff38371e7edb90b59233}{\+\_\+discont\+\_\+it}}
+\item 
+std\+::vector$<$ double $>$ $\ast$ \mbox{\hyperlink{classsimulator_1_1Simulator_a0c0b93c848f2725b43f374a9e4c8a700}{\+\_\+states\+\_\+ptr}}
+\item 
+double $\ast$ \mbox{\hyperlink{classsimulator_1_1Simulator_aa04874d73e2c1c975c4bf0def26ea735}{\+\_\+t\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a7e32a773b62c97a64f5c80c4daa097a8}\label{classsimulator_1_1Simulator_a7e32a773b62c97a64f5c80c4daa097a8}} 
+\index{simulator::Simulator@{simulator::Simulator}!Simulator@{Simulator}}
+\index{Simulator@{Simulator}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{Simulator()}{Simulator()}}
+{\footnotesize\ttfamily simulator\+::\+Simulator\+::\+Simulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a7f782df3f0ca5316833feda654feb7e2}\label{classsimulator_1_1Simulator_a7f782df3f0ca5316833feda654feb7e2}} 
+\index{simulator::Simulator@{simulator::Simulator}!````~Simulator@{$\sim$Simulator}}
+\index{````~Simulator@{$\sim$Simulator}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{$\sim$Simulator()}{~Simulator()}}
+{\footnotesize\ttfamily virtual simulator\+::\+Simulator\+::$\sim$\+Simulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a6419551e964713521feaedd1bdffadf0}\label{classsimulator_1_1Simulator_a6419551e964713521feaedd1bdffadf0}} 
+\index{simulator::Simulator@{simulator::Simulator}!addStoppingCriterion@{addStoppingCriterion}}
+\index{addStoppingCriterion@{addStoppingCriterion}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{addStoppingCriterion()}{addStoppingCriterion()}}
+{\footnotesize\ttfamily virtual void simulator\+::\+Simulator\+::add\+Stopping\+Criterion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesimulator_a94387d9253f2f6666472764e510e65e7}{Stopping\+Fct\+\_\+ptr}}}]{stopping\+\_\+criterion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a24b69a3af6ca02165ed008c197bc34bc}\label{classsimulator_1_1Simulator_a24b69a3af6ca02165ed008c197bc34bc}} 
+\index{simulator::Simulator@{simulator::Simulator}!clearStoppingCriterions@{clearStoppingCriterions}}
+\index{clearStoppingCriterions@{clearStoppingCriterions}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{clearStoppingCriterions()}{clearStoppingCriterions()}}
+{\footnotesize\ttfamily virtual void simulator\+::\+Simulator\+::clear\+Stopping\+Criterions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a0df0905d6e73446e39fb3021395d11c9}\label{classsimulator_1_1Simulator_a0df0905d6e73446e39fb3021395d11c9}} 
+\index{simulator::Simulator@{simulator::Simulator}!getResetFct@{getResetFct}}
+\index{getResetFct@{getResetFct}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{getResetFct()}{getResetFct()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesimulator_a12b38b9097c6b5f7bb1b4294424612d9}{Reset\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+::get\+Reset\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a5d835ff20e07c85dcabc3c706e4ecda5}{simulator\+::\+Simulator\+Ssa}}, \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a6e82fb17e3591d3fecfbe1df068e0872}{simulator\+::\+Simulator\+Ode}}, and \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a9513badb7d625077e33b5b44a00ad5ea}{simulator\+::\+Simulator\+Hybrid}}.
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a833bcbc098992ac34610a8bf75c88865}\label{classsimulator_1_1Simulator_a833bcbc098992ac34610a8bf75c88865}} 
+\index{simulator::Simulator@{simulator::Simulator}!getSimulationFct@{getSimulationFct}}
+\index{getSimulationFct@{getSimulationFct}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{getSimulationFct()}{getSimulationFct()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesimulator_a82c182bc88718bcd99ffaf4d04d96c5e}{Simulation\+Fct\+\_\+ptr}} simulator\+::\+Simulator\+::get\+Simulation\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a3504227c6b449fcf86781f725c844ec5}{simulator\+::\+Simulator\+Ode}}, \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_a6a92dc0c230367c50d4b57d0512244ad}{simulator\+::\+Simulator\+Ssa}}, and \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_ab2f3fce0ad1445d6847502cdc8c18189}{simulator\+::\+Simulator\+Hybrid}}.
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a178c313f7f42d2c314d2f7a2cb8e3845}\label{classsimulator_1_1Simulator_a178c313f7f42d2c314d2f7a2cb8e3845}} 
+\index{simulator::Simulator@{simulator::Simulator}!reset@{reset}}
+\index{reset@{reset}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void simulator\+::\+Simulator\+::reset (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{state,  }\item[{double \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a08c990089813a4998e4f4515f910a7e1}{simulator\+::\+Simulator\+Ode}}, and \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_a445661f1063ca5378a6edc5039279623}{simulator\+::\+Simulator\+Hybrid}}.
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_ab7bd2bbb7ed6ea623312fc85a4117207}\label{classsimulator_1_1Simulator_ab7bd2bbb7ed6ea623312fc85a4117207}} 
+\index{simulator::Simulator@{simulator::Simulator}!setDiscontTimes@{setDiscontTimes}}
+\index{setDiscontTimes@{setDiscontTimes}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{setDiscontTimes()}{setDiscontTimes()}}
+{\footnotesize\ttfamily void simulator\+::\+Simulator\+::set\+Discont\+Times (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{discont\+\_\+times }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a7483d21dde301a5390392539169a7aa1}\label{classsimulator_1_1Simulator_a7483d21dde301a5390392539169a7aa1}} 
+\index{simulator::Simulator@{simulator::Simulator}!simulate@{simulate}}
+\index{simulate@{simulate}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily virtual void simulator\+::\+Simulator\+::simulate (\begin{DoxyParamCaption}\item[{double}]{final\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsimulator_1_1SimulatorHybrid_ab98b11b845c53c38050dd5e8f8d6d65b}{simulator\+::\+Simulator\+Hybrid}}, \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ac87b3e81b11ccf24b5e8af4c1962b62d}{simulator\+::\+Simulator\+Ode}}, and \mbox{\hyperlink{classsimulator_1_1SimulatorSsa_abdf1f52531d8702ba1e4ecc5a1abba9d}{simulator\+::\+Simulator\+Ssa}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsimulator_1_1Simulator_ad5e0c461c917ff38371e7edb90b59233}\label{classsimulator_1_1Simulator_ad5e0c461c917ff38371e7edb90b59233}} 
+\index{simulator::Simulator@{simulator::Simulator}!\_discont\_it@{\_discont\_it}}
+\index{\_discont\_it@{\_discont\_it}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{\_discont\_it}{\_discont\_it}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$\+::iterator simulator\+::\+Simulator\+::\+\_\+discont\+\_\+it\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a1aad152fcf52a791a940a39c7b24a6e3}\label{classsimulator_1_1Simulator_a1aad152fcf52a791a940a39c7b24a6e3}} 
+\index{simulator::Simulator@{simulator::Simulator}!\_discont\_times@{\_discont\_times}}
+\index{\_discont\_times@{\_discont\_times}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{\_discont\_times}{\_discont\_times}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ simulator\+::\+Simulator\+::\+\_\+discont\+\_\+times\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a0c0b93c848f2725b43f374a9e4c8a700}\label{classsimulator_1_1Simulator_a0c0b93c848f2725b43f374a9e4c8a700}} 
+\index{simulator::Simulator@{simulator::Simulator}!\_states\_ptr@{\_states\_ptr}}
+\index{\_states\_ptr@{\_states\_ptr}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{\_states\_ptr}{\_states\_ptr}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$$\ast$ simulator\+::\+Simulator\+::\+\_\+states\+\_\+ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a2591b155e8e61544ebf76c463393cfb9}\label{classsimulator_1_1Simulator_a2591b155e8e61544ebf76c463393cfb9}} 
+\index{simulator::Simulator@{simulator::Simulator}!\_stopping\_criterions@{\_stopping\_criterions}}
+\index{\_stopping\_criterions@{\_stopping\_criterions}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{\_stopping\_criterions}{\_stopping\_criterions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsimulator_1_1StoppingCriterions}{Stopping\+Criterions}} simulator\+::\+Simulator\+::\+\_\+stopping\+\_\+criterions\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsimulator_1_1Simulator_aa04874d73e2c1c975c4bf0def26ea735}\label{classsimulator_1_1Simulator_aa04874d73e2c1c975c4bf0def26ea735}} 
+\index{simulator::Simulator@{simulator::Simulator}!\_t\_ptr@{\_t\_ptr}}
+\index{\_t\_ptr@{\_t\_ptr}!simulator::Simulator@{simulator::Simulator}}
+\doxysubsubsection{\texorpdfstring{\_t\_ptr}{\_t\_ptr}}
+{\footnotesize\ttfamily double$\ast$ simulator\+::\+Simulator\+::\+\_\+t\+\_\+ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/simulator/\mbox{\hyperlink{Simulator_8h}{Simulator.\+h}}\end{DoxyCompactItemize}

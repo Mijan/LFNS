@@ -1,0 +1,241 @@
+\hypertarget{classsampler_1_1RejectionSupportSampler}{}\doxysection{sampler\+::Rejection\+Support\+Sampler Class Reference}
+\label{classsampler_1_1RejectionSupportSampler}\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+
+
+{\ttfamily \#include $<$Rejection\+Support\+Sampler.\+h$>$}
+
+
+
+Inheritance diagram for sampler\+::Rejection\+Support\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classsampler_1_1RejectionSupportSampler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sampler\+::Rejection\+Support\+Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsampler_1_1RejectionSupportSampler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a7ec4190a1dc971f683b6b30408b02822}{Rejection\+Support\+Sampler}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng, \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{Density\+Estimation\+\_\+ptr}} sampler, \mbox{\hyperlink{classsampler_1_1RejectionSamplerData}{Rejection\+Sampler\+Data}} data)
+\item 
+\mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a5bae88ac8abca4cc7e996939e581b93e}{$\sim$\+Rejection\+Support\+Sampler}} () override
+\item 
+void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a5fc965714c37e104c90c317b79982a83}{write\+To\+Stream}} (std\+::ostream \&stream) override
+\item 
+void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a39be8d82e78d3af1fdf061c1aeb0195f}{compute\+Rejection\+Const}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples)
+\item 
+void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a42c9d1112fc236dc61574117814ad494}{update\+Seed}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} seed) override
+\item 
+void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_ab48f87ade03dcac8d16ada9c1726e574}{update\+Acceptance\+Rate}} (double acceptance\+\_\+rate)
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a9283d595fcdc3b0ee2323aa5270d0e8b}{update\+Transformed\+Density\+Samples}} (const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&transformed\+\_\+samples)
+\item 
+void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_adc4aa050ee84d380b4558f519a369167}{sample\+Transformed}} (\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\item 
+double \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_ab3f05a9ead6a3a710a59d4861f9f254a}{get\+Transformed\+Log\+Likelihood}} (const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&trans\+\_\+sample) override
+\item 
+void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_ab34ea2b4e4df60fd2f00ea262e078a80}{set\+Rng}} (\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng) override
+\item 
+virtual void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a159eaa876ab0346ddc81a84634dd6705}{set\+Log\+Scale}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} param\+\_\+index) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\friend \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a2d1f27e8c095508f5fd63821df746e66}{void \+::boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (Archive \&ar, const \+::\mbox{\hyperlink{classsampler_1_1RejectionSupportSampler}{sampler\+::\+Rejection\+Support\+Sampler}} $\ast$t, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} file\+\_\+version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_af92be6073d779315316508394faf9e00}{serialize}} (Archive \&ar, const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_af292c828ec0005aba3904053d65deb69}{\+\_\+dist}}
+\item 
+\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{Density\+Estimation\+\_\+ptr}} \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a7854ae66685a14fbc811a1096c05bd7c}{\+\_\+current\+\_\+sampler}}
+\item 
+\mbox{\hyperlink{classsampler_1_1RejectionSamplerData}{Rejection\+Sampler\+Data}} \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a140300527e0b27e26b294391856fc0ee}{\+\_\+rejection\+\_\+data}}
+\item 
+double \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_a1caef487b5030551594f09540ac1f71b}{\+\_\+log\+\_\+rejection\+\_\+const}}
+\item 
+double \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_ae98c3a846d87128dbf4ac112ead683eb}{\+\_\+rejection\+\_\+quantile}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsampler_1_1RejectionSupportSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a7ec4190a1dc971f683b6b30408b02822}\label{classsampler_1_1RejectionSupportSampler_a7ec4190a1dc971f683b6b30408b02822}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!RejectionSupportSampler@{RejectionSupportSampler}}
+\index{RejectionSupportSampler@{RejectionSupportSampler}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{RejectionSupportSampler()}{RejectionSupportSampler()}}
+{\footnotesize\ttfamily sampler\+::\+Rejection\+Support\+Sampler\+::\+Rejection\+Support\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{Density\+Estimation\+\_\+ptr}}}]{sampler,  }\item[{\mbox{\hyperlink{classsampler_1_1RejectionSamplerData}{Rejection\+Sampler\+Data}}}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a5bae88ac8abca4cc7e996939e581b93e}\label{classsampler_1_1RejectionSupportSampler_a5bae88ac8abca4cc7e996939e581b93e}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!````~RejectionSupportSampler@{$\sim$RejectionSupportSampler}}
+\index{````~RejectionSupportSampler@{$\sim$RejectionSupportSampler}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{$\sim$RejectionSupportSampler()}{~RejectionSupportSampler()}}
+{\footnotesize\ttfamily sampler\+::\+Rejection\+Support\+Sampler\+::$\sim$\+Rejection\+Support\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a39be8d82e78d3af1fdf061c1aeb0195f}\label{classsampler_1_1RejectionSupportSampler_a39be8d82e78d3af1fdf061c1aeb0195f}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!computeRejectionConst@{computeRejectionConst}}
+\index{computeRejectionConst@{computeRejectionConst}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{computeRejectionConst()}{computeRejectionConst()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::compute\+Rejection\+Const (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_ab3f05a9ead6a3a710a59d4861f9f254a}\label{classsampler_1_1RejectionSupportSampler_ab3f05a9ead6a3a710a59d4861f9f254a}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!getTransformedLogLikelihood@{getTransformedLogLikelihood}}
+\index{getTransformedLogLikelihood@{getTransformedLogLikelihood}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{getTransformedLogLikelihood()}{getTransformedLogLikelihood()}}
+{\footnotesize\ttfamily double sampler\+::\+Rejection\+Support\+Sampler\+::get\+Transformed\+Log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a72d62f6f6993e5067ef54262a70d4362}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_adc4aa050ee84d380b4558f519a369167}\label{classsampler_1_1RejectionSupportSampler_adc4aa050ee84d380b4558f519a369167}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!sampleTransformed@{sampleTransformed}}
+\index{sampleTransformed@{sampleTransformed}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{sampleTransformed()}{sampleTransformed()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::sample\+Transformed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_a78690d09419852618e296f0ae5caa653}{base\+::\+Ei\+Vector}} \&}]{trans\+\_\+sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_a13cfa4428cdaeb5e3f4c9727b56a9e10}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_af92be6073d779315316508394faf9e00}\label{classsampler_1_1RejectionSupportSampler_af92be6073d779315316508394faf9e00}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!serialize@{serialize}}
+\index{serialize@{serialize}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void sampler\+::\+Rejection\+Support\+Sampler\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a159eaa876ab0346ddc81a84634dd6705}\label{classsampler_1_1RejectionSupportSampler_a159eaa876ab0346ddc81a84634dd6705}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!setLogScale@{setLogScale}}
+\index{setLogScale@{setLogScale}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{setLogScale()}{setLogScale()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::set\+Log\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{param\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_ab9aeb41addaec8b0a2dd7515af049867}{sampler\+::\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_ab34ea2b4e4df60fd2f00ea262e078a80}\label{classsampler_1_1RejectionSupportSampler_ab34ea2b4e4df60fd2f00ea262e078a80}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!setRng@{setRng}}
+\index{setRng@{setRng}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{setRng()}{setRng()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::set\+Rng (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_aaf71502a75c29244c170925e5731c2d3}{sampler\+::\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_ab48f87ade03dcac8d16ada9c1726e574}\label{classsampler_1_1RejectionSupportSampler_ab48f87ade03dcac8d16ada9c1726e574}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!updateAcceptanceRate@{updateAcceptanceRate}}
+\index{updateAcceptanceRate@{updateAcceptanceRate}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{updateAcceptanceRate()}{updateAcceptanceRate()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::update\+Acceptance\+Rate (\begin{DoxyParamCaption}\item[{double}]{acceptance\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1DensityEstimation_abbd9ff39ba6c06f616a248a3ae09c800}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a42c9d1112fc236dc61574117814ad494}\label{classsampler_1_1RejectionSupportSampler_a42c9d1112fc236dc61574117814ad494}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!updateSeed@{updateSeed}}
+\index{updateSeed@{updateSeed}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{updateSeed()}{updateSeed()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::update\+Seed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_adc521359739dfdc5cc633a8ae3ee9e02}{sampler\+::\+Sampler}}.
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a9283d595fcdc3b0ee2323aa5270d0e8b}\label{classsampler_1_1RejectionSupportSampler_a9283d595fcdc3b0ee2323aa5270d0e8b}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!updateTransformedDensitySamples@{updateTransformedDensitySamples}}
+\index{updateTransformedDensitySamples@{updateTransformedDensitySamples}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{updateTransformedDensitySamples()}{updateTransformedDensitySamples()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::update\+Transformed\+Density\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebase_ac5227e4f6ccc08ad3a5ea1cb0668ed5c}{base\+::\+Ei\+Matrix}} \&}]{transformed\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsampler_1_1DensityEstimation_acfaac510767ce35864cba0b0e8135261}{sampler\+::\+Density\+Estimation}}.
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a2d1f27e8c095508f5fd63821df746e66}\label{classsampler_1_1RejectionSupportSampler_a2d1f27e8c095508f5fd63821df746e66}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}}
+\index{void ::boost::serialization::save\_construct\_data@{void ::boost::serialization::save\_construct\_data}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{void ::boost::serialization::save\_construct\_data()}{void ::boost::serialization::save\_construct\_data()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+sampler\+::\+Rejection\+Support\+Sampler\+::void \+::\mbox{\hyperlink{namespaceboost_1_1serialization_a06e6584c879d27ff1f020d6e381ffa2a}{boost\+::serialization\+::save\+\_\+construct\+\_\+data}} (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const \+::\mbox{\hyperlink{classsampler_1_1RejectionSupportSampler}{sampler\+::\+Rejection\+Support\+Sampler}} $\ast$}]{t,  }\item[{const unsigned \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{file\+\_\+version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a5fc965714c37e104c90c317b79982a83}\label{classsampler_1_1RejectionSupportSampler_a5fc965714c37e104c90c317b79982a83}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!writeToStream@{writeToStream}}
+\index{writeToStream@{writeToStream}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{writeToStream()}{writeToStream()}}
+{\footnotesize\ttfamily void sampler\+::\+Rejection\+Support\+Sampler\+::write\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsampler_1_1Sampler_ad1143ee047e139371910e9b7887df330}{sampler\+::\+Sampler}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classsampler_1_1RejectionSupportSampler_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a7854ae66685a14fbc811a1096c05bd7c}\label{classsampler_1_1RejectionSupportSampler_a7854ae66685a14fbc811a1096c05bd7c}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!\_current\_sampler@{\_current\_sampler}}
+\index{\_current\_sampler@{\_current\_sampler}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{\_current\_sampler}{\_current\_sampler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{Density\+Estimation\+\_\+ptr}} sampler\+::\+Rejection\+Support\+Sampler\+::\+\_\+current\+\_\+sampler\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_af292c828ec0005aba3904053d65deb69}\label{classsampler_1_1RejectionSupportSampler_af292c828ec0005aba3904053d65deb69}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!\_dist@{\_dist}}
+\index{\_dist@{\_dist}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{\_dist}{\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase_afa68169ebe005f238869fb94a62c25e6}{base\+::\+Uniform\+Real\+Distribution}} sampler\+::\+Rejection\+Support\+Sampler\+::\+\_\+dist\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a1caef487b5030551594f09540ac1f71b}\label{classsampler_1_1RejectionSupportSampler_a1caef487b5030551594f09540ac1f71b}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!\_log\_rejection\_const@{\_log\_rejection\_const}}
+\index{\_log\_rejection\_const@{\_log\_rejection\_const}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{\_log\_rejection\_const}{\_log\_rejection\_const}}
+{\footnotesize\ttfamily double sampler\+::\+Rejection\+Support\+Sampler\+::\+\_\+log\+\_\+rejection\+\_\+const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_a140300527e0b27e26b294391856fc0ee}\label{classsampler_1_1RejectionSupportSampler_a140300527e0b27e26b294391856fc0ee}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!\_rejection\_data@{\_rejection\_data}}
+\index{\_rejection\_data@{\_rejection\_data}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{\_rejection\_data}{\_rejection\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsampler_1_1RejectionSamplerData}{Rejection\+Sampler\+Data}} sampler\+::\+Rejection\+Support\+Sampler\+::\+\_\+rejection\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsampler_1_1RejectionSupportSampler_ae98c3a846d87128dbf4ac112ead683eb}\label{classsampler_1_1RejectionSupportSampler_ae98c3a846d87128dbf4ac112ead683eb}} 
+\index{sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}!\_rejection\_quantile@{\_rejection\_quantile}}
+\index{\_rejection\_quantile@{\_rejection\_quantile}!sampler::RejectionSupportSampler@{sampler::RejectionSupportSampler}}
+\doxysubsubsection{\texorpdfstring{\_rejection\_quantile}{\_rejection\_quantile}}
+{\footnotesize\ttfamily double sampler\+::\+Rejection\+Support\+Sampler\+::\+\_\+rejection\+\_\+quantile\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sampler/\mbox{\hyperlink{RejectionSupportSampler_8h}{Rejection\+Support\+Sampler.\+h}}\item 
+src/sampler/\mbox{\hyperlink{RejectionSupportSampler_8cpp}{Rejection\+Support\+Sampler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{classmcmc_1_1MCMCParticles}{}\doxysection{mcmc\+::M\+C\+M\+C\+Particles Class Reference}
+\label{classmcmc_1_1MCMCParticles}\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+
+
+{\ttfamily \#include $<$M\+C\+M\+C\+Particles.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCParticles_a44c71f13dfe97a83ec45466647dccda8}{M\+C\+M\+C\+Particles}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+particles=0)
+\item 
+virtual \mbox{\hyperlink{classmcmc_1_1MCMCParticles_aa10046fed429e98ee7da416c1f24b585}{$\sim$\+M\+C\+M\+C\+Particles}} ()
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCParticles_ad7f08af785bf9f6a5dde1fcfdc1b98d7}{reserve}} (std\+::size\+\_\+t num\+\_\+particles)
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCParticles_aebf18ebe2442dfb22146badbbf8e950e}{push\+\_\+back}} (\mbox{\hyperlink{classmcmc_1_1MCMCParticle}{M\+C\+M\+C\+Particle}} particle)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmcmc_1_1MCMCParticles_a2de256b9334da0f2d671b1d052f83bb8}{size}} ()
+\item 
+\mbox{\hyperlink{classmcmc_1_1MCMCParticle}{M\+C\+M\+C\+Particle}} \& \mbox{\hyperlink{classmcmc_1_1MCMCParticles_a5917d35da2f350e78e5b5fcd0aa81edf}{back}} ()
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCParticles_aba9d593d6a7b6e2e2e9aa2ee1ca85c9b}{write\+To\+File}} (std\+::string \mbox{\hyperlink{evaluateMIForMixtures_8cpp_a8a6a68d6facb6f661377dfd4ea5b0e56}{output\+\_\+file\+\_\+name}}, std\+::string suffix=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{classmcmc_1_1MCMCParticles_a121f704eeb3a8153ad9cd956d824ae57}{read\+From\+File}} (std\+::string input\+\_\+file\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classmcmc_1_1MCMCParticle}{M\+C\+M\+C\+Particle}} $>$ \mbox{\hyperlink{classmcmc_1_1MCMCParticles_ac09783a2dcc1974574104b0461f0a0ce}{\+\_\+particles}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_a44c71f13dfe97a83ec45466647dccda8}\label{classmcmc_1_1MCMCParticles_a44c71f13dfe97a83ec45466647dccda8}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!MCMCParticles@{MCMCParticles}}
+\index{MCMCParticles@{MCMCParticles}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{MCMCParticles()}{MCMCParticles()}}
+{\footnotesize\ttfamily mcmc\+::\+M\+C\+M\+C\+Particles\+::\+M\+C\+M\+C\+Particles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{num\+\_\+particles = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_aa10046fed429e98ee7da416c1f24b585}\label{classmcmc_1_1MCMCParticles_aa10046fed429e98ee7da416c1f24b585}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!````~MCMCParticles@{$\sim$MCMCParticles}}
+\index{````~MCMCParticles@{$\sim$MCMCParticles}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{$\sim$MCMCParticles()}{~MCMCParticles()}}
+{\footnotesize\ttfamily mcmc\+::\+M\+C\+M\+C\+Particles\+::$\sim$\+M\+C\+M\+C\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_a5917d35da2f350e78e5b5fcd0aa81edf}\label{classmcmc_1_1MCMCParticles_a5917d35da2f350e78e5b5fcd0aa81edf}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!back@{back}}
+\index{back@{back}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmcmc_1_1MCMCParticle}{M\+C\+M\+C\+Particle}} \& mcmc\+::\+M\+C\+M\+C\+Particles\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_aebf18ebe2442dfb22146badbbf8e950e}\label{classmcmc_1_1MCMCParticles_aebf18ebe2442dfb22146badbbf8e950e}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Particles\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmcmc_1_1MCMCParticle}{M\+C\+M\+C\+Particle}}}]{particle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_a121f704eeb3a8153ad9cd956d824ae57}\label{classmcmc_1_1MCMCParticles_a121f704eeb3a8153ad9cd956d824ae57}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Particles\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_ad7f08af785bf9f6a5dde1fcfdc1b98d7}\label{classmcmc_1_1MCMCParticles_ad7f08af785bf9f6a5dde1fcfdc1b98d7}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!reserve@{reserve}}
+\index{reserve@{reserve}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Particles\+::reserve (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{num\+\_\+particles }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_a2de256b9334da0f2d671b1d052f83bb8}\label{classmcmc_1_1MCMCParticles_a2de256b9334da0f2d671b1d052f83bb8}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!size@{size}}
+\index{size@{size}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mcmc\+::\+M\+C\+M\+C\+Particles\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_aba9d593d6a7b6e2e2e9aa2ee1ca85c9b}\label{classmcmc_1_1MCMCParticles_aba9d593d6a7b6e2e2e9aa2ee1ca85c9b}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void mcmc\+::\+M\+C\+M\+C\+Particles\+::write\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+name,  }\item[{std\+::string}]{suffix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmcmc_1_1MCMCParticles_ac09783a2dcc1974574104b0461f0a0ce}\label{classmcmc_1_1MCMCParticles_ac09783a2dcc1974574104b0461f0a0ce}} 
+\index{mcmc::MCMCParticles@{mcmc::MCMCParticles}!\_particles@{\_particles}}
+\index{\_particles@{\_particles}!mcmc::MCMCParticles@{mcmc::MCMCParticles}}
+\doxysubsubsection{\texorpdfstring{\_particles}{\_particles}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classmcmc_1_1MCMCParticle}{M\+C\+M\+C\+Particle}}$>$ mcmc\+::\+M\+C\+M\+C\+Particles\+::\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMCParticles_8h}{M\+C\+M\+C\+Particles.\+h}}\item 
+src/\+M\+C\+M\+C/\mbox{\hyperlink{MCMCParticles_8cpp}{M\+C\+M\+C\+Particles.\+cpp}}\end{DoxyCompactItemize}
