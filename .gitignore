@@ -1,0 +1,8 @@
+build
+cmake-build-release
+cmake-build-debug
+required_packages/cvode-5.0.0/build
+required_packages/eigen3.4/build
+required_packages/DP-GMM/build
+required_packages/muparser-2.2.6.1/build
+
