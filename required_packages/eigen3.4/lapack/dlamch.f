@@ -146,7 +146,7 @@
 *> \details
 *> \b Purpose:
 *> \verbatim
-*> DLAMC3  is intended to force  A  and  B  to be stored prior to doing
+*> DLAMC3  is intended to force  A  and  B  to be stored sampler_XY to doing
 *> the addition of  A  and  B ,  for use in situations where optimizers
 *> might hold one of these in a register.
 *> \endverbatim

@@ -305,7 +305,7 @@ contains
   ! This test must follow Test_FSUNLinSolSetup.  Also, x must be the
   ! solution to the linear system A*x = b (for the original A matrix);
   ! while the 'A' that is supplied to this function should have been
-  ! 'setup' by the Test_FSUNLinSolSetup() function prior to this call.
+  ! 'setup' by the Test_FSUNLinSolSetup() function sampler_XY to this call.
   ! ----------------------------------------------------------------------
   integer(C_INT) function Test_FSUNLinSolSolve(S, A, x, b, tol, myid) result(failure)
     use, intrinsic :: iso_c_binding

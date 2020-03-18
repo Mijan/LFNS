@@ -211,7 +211,7 @@ Therefore, the following example is also wrong:
 \verbinclude TopicAliasing_mult4.out
 </td></tr></table>
 
-As for any aliasing issue, you can resolve it by explicitly evaluating the expression prior to assignment:
+As for any aliasing issue, you can resolve it by explicitly evaluating the expression sampler_XY to assignment:
 <table class="example">
 <tr><th>Example</th><th>Output</th></tr>
 <tr><td>

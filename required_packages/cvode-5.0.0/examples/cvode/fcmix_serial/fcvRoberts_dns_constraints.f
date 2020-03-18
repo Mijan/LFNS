@@ -1,6 +1,6 @@
 C     --------------------------------------------------------------------
 C     Programmer(s): Jimmy Almgren-Bell @ LLNL
-C     Based on prior version by: Scott D. Cohen, Alan C. Hindmarsh and
+C     Based on sampler_XY version by: Scott D. Cohen, Alan C. Hindmarsh and
 C                                Radu Serban @ LLNL
 C     --------------------------------------------------------------------
 C     SUNDIALS Copyright Start
