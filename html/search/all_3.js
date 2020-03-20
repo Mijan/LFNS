@@ -7,7 +7,7 @@ var searchData=
   ['basedata_2ecpp_312',['BaseData.cpp',['../BaseData_8cpp.html',1,'']]],
   ['basedata_2eh_313',['BaseData.h',['../BaseData_8h.html',1,'']]],
   ['basedata_5fptr_314',['BaseData_ptr',['../namespacemodels.html#ab37b09e02c5326dee2b521bf406d636e',1,'models']]],
-  ['baseobject_315',['BaseObject',['../classmodels_1_1BaseObject.html',1,'models::BaseObject'],['../classmodels_1_1BaseObject.html#aad72bcf4c6c2f41dfb526de0b6766dd6',1,'models::BaseObject::BaseObject(BaseData data)'],['../classmodels_1_1BaseObject.html#ac33597c3bac58ae95def20c82e60f3d1',1,'models::BaseObject::BaseObject(std::vector&lt; std::string &gt; parameter_names, std::vector&lt; std::string &gt; species_names)']]],
+  ['baseobject_315',['BaseObject',['../classmodels_1_1BaseObject.html',1,'models::BaseObject'],['../classmodels_1_1BaseObject.html#a6d62514a28209f7c46f5828656467034',1,'models::BaseObject::BaseObject(BaseData)'],['../classmodels_1_1BaseObject.html#ac33597c3bac58ae95def20c82e60f3d1',1,'models::BaseObject::BaseObject(std::vector&lt; std::string &gt; parameter_names, std::vector&lt; std::string &gt; species_names)']]],
   ['baseobject_2ecpp_316',['BaseObject.cpp',['../BaseObject_8cpp.html',1,'']]],
   ['baseobject_2eh_317',['BaseObject.h',['../BaseObject_8h.html',1,'']]],
   ['baseobject_5fptr_318',['BaseObject_ptr',['../namespacemodels.html#a385af4ab2249a8140b677eb0215a808b',1,'models']]],

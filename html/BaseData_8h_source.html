@@ -84,50 +84,50 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemodels.html">models</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespacemodels.html#ad2c4a87413147a1c930c3b27d51dc2a3">   14</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> std::string <a class="code" href="namespacemodels.html#ad2c4a87413147a1c930c3b27d51dc2a3">TIME_NAME</a> = <span class="stringliteral">&quot;_t&quot;</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classmodels_1_1BaseData.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classmodels_1_1BaseData.html">BaseData</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classmodels_1_1BaseData.html#a21b31f4cee52a91146f13f372506deb2">BaseData</a>(std::vector&lt;std::string&gt; parameter_names_,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                 std::vector&lt;std::string&gt; species_names_);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classmodels_1_1BaseData.html#a21b31f4cee52a91146f13f372506deb2">BaseData</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classmodels_1_1BaseData.html#a21b31f4cee52a91146f13f372506deb2">BaseData</a>(<span class="keyword">const</span> <a class="code" href="classmodels_1_1BaseData.html">BaseData</a> &amp;rhs);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classmodels_1_1BaseData.html#a5b8febc90501982c9ec7594a3849451c">~BaseData</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#af7dafc31ef79cb0ce18b912e71fa9068">getNumParamters</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#a9a19bf9689bb51a3dd516ccdb3b972b7">getNumSpecies</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classmodels_1_1BaseData.html#a6c730da9f8a6c082e80f89b3662889f3">isSpeciesName</a>(std::string name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classmodels_1_1BaseData.html#a2fb0cc09342dc172b6bf237c393859f0">isParamName</a>(std::string name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classmodels_1_1BaseData.html#a3866f79d4633b4f8a40118516239cf42">isTimeName</a>(std::string name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#a7efbb4a423fa49dc83517b396f9c265b">getSpeciesIndex</a>(std::string species_name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#a64ffd523341a99b9eb499bdf1a34a168">getParamIndex</a>(std::string param_name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code" href="classmodels_1_1BaseData.html#a6aa01aa4571f7c468e39ee8e793b657b">getParameterNames</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code" href="classmodels_1_1BaseData.html#a21473b8a9beb98903ef8f6e23d64ac61">getSpeciesNames</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::string <a class="code" href="classmodels_1_1BaseData.html#a5cbbb528a26b7a425f529ab5d8f86e76">getTimeName</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmodels_1_1BaseData.html#af78e74ea7342303778e13cf49f4b509c">   49</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="classmodels_1_1BaseData.html#af78e74ea7342303778e13cf49f4b509c">parameter_names</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classmodels_1_1BaseData.html#a17ecdb3c1e1012ce92ca38486df24cd8">   50</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="classmodels_1_1BaseData.html#a17ecdb3c1e1012ce92ca38486df24cd8">species_names</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespacemodels.html#ab37b09e02c5326dee2b521bf406d636e">   53</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;BaseData&gt; <a class="code" href="namespacemodels.html#ab37b09e02c5326dee2b521bf406d636e">BaseData_ptr</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classmodels_1_1BaseData.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classmodels_1_1BaseData.html">BaseData</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classmodels_1_1BaseData.html#a21b31f4cee52a91146f13f372506deb2">BaseData</a>(std::vector&lt;std::string&gt; parameter_names_,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                 std::vector&lt;std::string&gt; species_names_);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classmodels_1_1BaseData.html#a21b31f4cee52a91146f13f372506deb2">BaseData</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classmodels_1_1BaseData.html#a21b31f4cee52a91146f13f372506deb2">BaseData</a>(<span class="keyword">const</span> <a class="code" href="classmodels_1_1BaseData.html">BaseData</a> &amp;rhs);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classmodels_1_1BaseData.html#a5b8febc90501982c9ec7594a3849451c">~BaseData</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#af7dafc31ef79cb0ce18b912e71fa9068">getNumParamters</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#a9a19bf9689bb51a3dd516ccdb3b972b7">getNumSpecies</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classmodels_1_1BaseData.html#a6c730da9f8a6c082e80f89b3662889f3">isSpeciesName</a>(std::string name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classmodels_1_1BaseData.html#a2fb0cc09342dc172b6bf237c393859f0">isParamName</a>(std::string name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classmodels_1_1BaseData.html#a3866f79d4633b4f8a40118516239cf42">isTimeName</a>(std::string name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#a7efbb4a423fa49dc83517b396f9c265b">getSpeciesIndex</a>(std::string species_name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::size_t <a class="code" href="classmodels_1_1BaseData.html#a64ffd523341a99b9eb499bdf1a34a168">getParamIndex</a>(std::string param_name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code" href="classmodels_1_1BaseData.html#a6aa01aa4571f7c468e39ee8e793b657b">getParameterNames</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code" href="classmodels_1_1BaseData.html#a21473b8a9beb98903ef8f6e23d64ac61">getSpeciesNames</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::string <a class="code" href="classmodels_1_1BaseData.html#a5cbbb528a26b7a425f529ab5d8f86e76">getTimeName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classmodels_1_1BaseData.html#af78e74ea7342303778e13cf49f4b509c">   48</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="classmodels_1_1BaseData.html#af78e74ea7342303778e13cf49f4b509c">parameter_names</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmodels_1_1BaseData.html#a17ecdb3c1e1012ce92ca38486df24cd8">   49</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="classmodels_1_1BaseData.html#a17ecdb3c1e1012ce92ca38486df24cd8">species_names</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacemodels.html#ab37b09e02c5326dee2b521bf406d636e">   52</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;BaseData&gt; <a class="code" href="namespacemodels.html#ab37b09e02c5326dee2b521bf406d636e">BaseData_ptr</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif //LFNS_BASEDATA_H</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif //LFNS_BASEDATA_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassmodels_1_1BaseData_html"><div class="ttname"><a href="classmodels_1_1BaseData.html">models::BaseData</a></div><div class="ttdoc">The base data needed for constructing the base objects. It requires a list of parameters and a list o...</div><div class="ttdef"><b>Definition:</b> BaseData.h:17</div></div>
-<div class="ttc" id="aclassmodels_1_1BaseData_html_a17ecdb3c1e1012ce92ca38486df24cd8"><div class="ttname"><a href="classmodels_1_1BaseData.html#a17ecdb3c1e1012ce92ca38486df24cd8">models::BaseData::species_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; species_names</div><div class="ttdef"><b>Definition:</b> BaseData.h:50</div></div>
+<div class="ttc" id="aclassmodels_1_1BaseData_html"><div class="ttname"><a href="classmodels_1_1BaseData.html">models::BaseData</a></div><div class="ttdef"><b>Definition:</b> BaseData.h:16</div></div>
+<div class="ttc" id="aclassmodels_1_1BaseData_html_a17ecdb3c1e1012ce92ca38486df24cd8"><div class="ttname"><a href="classmodels_1_1BaseData.html#a17ecdb3c1e1012ce92ca38486df24cd8">models::BaseData::species_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; species_names</div><div class="ttdef"><b>Definition:</b> BaseData.h:49</div></div>
 <div class="ttc" id="anamespacemodels_html_ad2c4a87413147a1c930c3b27d51dc2a3"><div class="ttname"><a href="namespacemodels.html#ad2c4a87413147a1c930c3b27d51dc2a3">models::TIME_NAME</a></div><div class="ttdeci">const static std::string TIME_NAME</div><div class="ttdef"><b>Definition:</b> BaseData.h:14</div></div>
 <div class="ttc" id="anamespacemodels_html"><div class="ttname"><a href="namespacemodels.html">models</a></div><div class="ttdef"><b>Definition:</b> BaseData.cpp:12</div></div>
 <div class="ttc" id="aclassmodels_1_1BaseData_html_a6c730da9f8a6c082e80f89b3662889f3"><div class="ttname"><a href="classmodels_1_1BaseData.html#a6c730da9f8a6c082e80f89b3662889f3">models::BaseData::isSpeciesName</a></div><div class="ttdeci">bool isSpeciesName(std::string name) const</div><div class="ttdef"><b>Definition:</b> BaseData.cpp:27</div></div>
@@ -139,9 +139,9 @@ $(function() {
 <div class="ttc" id="aclassmodels_1_1BaseData_html_a6aa01aa4571f7c468e39ee8e793b657b"><div class="ttname"><a href="classmodels_1_1BaseData.html#a6aa01aa4571f7c468e39ee8e793b657b">models::BaseData::getParameterNames</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; getParameterNames() const</div><div class="ttdef"><b>Definition:</b> BaseData.cpp:61</div></div>
 <div class="ttc" id="aclassmodels_1_1BaseData_html_a2fb0cc09342dc172b6bf237c393859f0"><div class="ttname"><a href="classmodels_1_1BaseData.html#a2fb0cc09342dc172b6bf237c393859f0">models::BaseData::isParamName</a></div><div class="ttdeci">bool isParamName(std::string name) const</div><div class="ttdef"><b>Definition:</b> BaseData.cpp:31</div></div>
 <div class="ttc" id="aclassmodels_1_1BaseData_html_a21b31f4cee52a91146f13f372506deb2"><div class="ttname"><a href="classmodels_1_1BaseData.html#a21b31f4cee52a91146f13f372506deb2">models::BaseData::BaseData</a></div><div class="ttdeci">BaseData()</div><div class="ttdef"><b>Definition:</b> BaseData.cpp:17</div></div>
-<div class="ttc" id="aclassmodels_1_1BaseData_html_af78e74ea7342303778e13cf49f4b509c"><div class="ttname"><a href="classmodels_1_1BaseData.html#af78e74ea7342303778e13cf49f4b509c">models::BaseData::parameter_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; parameter_names</div><div class="ttdef"><b>Definition:</b> BaseData.h:49</div></div>
+<div class="ttc" id="aclassmodels_1_1BaseData_html_af78e74ea7342303778e13cf49f4b509c"><div class="ttname"><a href="classmodels_1_1BaseData.html#af78e74ea7342303778e13cf49f4b509c">models::BaseData::parameter_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; parameter_names</div><div class="ttdef"><b>Definition:</b> BaseData.h:48</div></div>
 <div class="ttc" id="aclassmodels_1_1BaseData_html_a5b8febc90501982c9ec7594a3849451c"><div class="ttname"><a href="classmodels_1_1BaseData.html#a5b8febc90501982c9ec7594a3849451c">models::BaseData::~BaseData</a></div><div class="ttdeci">virtual ~BaseData()</div><div class="ttdef"><b>Definition:</b> BaseData.cpp:21</div></div>
-<div class="ttc" id="anamespacemodels_html_ab37b09e02c5326dee2b521bf406d636e"><div class="ttname"><a href="namespacemodels.html#ab37b09e02c5326dee2b521bf406d636e">models::BaseData_ptr</a></div><div class="ttdeci">std::shared_ptr&lt; BaseData &gt; BaseData_ptr</div><div class="ttdef"><b>Definition:</b> BaseData.h:53</div></div>
+<div class="ttc" id="anamespacemodels_html_ab37b09e02c5326dee2b521bf406d636e"><div class="ttname"><a href="namespacemodels.html#ab37b09e02c5326dee2b521bf406d636e">models::BaseData_ptr</a></div><div class="ttdeci">std::shared_ptr&lt; BaseData &gt; BaseData_ptr</div><div class="ttdef"><b>Definition:</b> BaseData.h:52</div></div>
 <div class="ttc" id="aclassmodels_1_1BaseData_html_af7dafc31ef79cb0ce18b912e71fa9068"><div class="ttname"><a href="classmodels_1_1BaseData.html#af7dafc31ef79cb0ce18b912e71fa9068">models::BaseData::getNumParamters</a></div><div class="ttdeci">std::size_t getNumParamters() const</div><div class="ttdef"><b>Definition:</b> BaseData.cpp:23</div></div>
 <div class="ttc" id="aclassmodels_1_1BaseData_html_a7efbb4a423fa49dc83517b396f9c265b"><div class="ttname"><a href="classmodels_1_1BaseData.html#a7efbb4a423fa49dc83517b396f9c265b">models::BaseData::getSpeciesIndex</a></div><div class="ttdeci">std::size_t getSpeciesIndex(std::string species_name) const</div><div class="ttdef"><b>Definition:</b> BaseData.cpp:37</div></div>
 <!-- start footer part -->

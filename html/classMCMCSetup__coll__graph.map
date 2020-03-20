@@ -1,8 +1,8 @@
 <map id="MCMCSetup" name="MCMCSetup">
 <area shape="rect" id="node1" title=" " alt="" coords="1093,263,1195,289"/>
 <area shape="rect" id="node2" href="$classGeneralSetup.html" title=" " alt="" coords="721,107,832,133"/>
-<area shape="rect" id="node3" href="$classio_1_1IoSettings.html" title="User provided program options related to Input/Ooutput." alt="" coords="363,56,470,83"/>
-<area shape="rect" id="node4" href="$classio_1_1ConfigFileInterpreter.html" title="This class is used to read a config file and access all the information provided there." alt="" coords="329,107,504,133"/>
+<area shape="rect" id="node3" href="$classio_1_1IoSettings.html" title=" " alt="" coords="363,56,470,83"/>
+<area shape="rect" id="node4" href="$classio_1_1ConfigFileInterpreter.html" title=" " alt="" coords="329,107,504,133"/>
 <area shape="rect" id="node5" href="$classio_1_1XmlFileReader.html" title=" " alt="" coords="48,107,185,133"/>
 <area shape="rect" id="node6" href="$classoptions_1_1CommandLineOptions.html" title=" " alt="" coords="5,181,228,208"/>
 <area shape="rect" id="node10" href="$classoptions_1_1DataOptions.html" title=" " alt="" coords="337,220,496,247"/>

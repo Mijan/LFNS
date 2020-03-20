@@ -83,55 +83,55 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="XmlFileReader_8h.html">XmlFileReader.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceio.html">io</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classio_1_1XmlPropertyMap.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classio_1_1XmlPropertyMap.html">XmlPropertyMap</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classio_1_1XmlPropertyMap.html#a028557c460c4fd36091a307867642818">XmlPropertyMap</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classio_1_1XmlPropertyMap.html#a028557c460c4fd36091a307867642818">XmlPropertyMap</a>(<a class="code" href="namespaceio.html#aba5f811b1ed704e4a10d3eb399e61d36">XmlMap</a> map);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classio_1_1XmlPropertyMap.html#ac25e9369a51800d0346ec4e51ccbbfac">~XmlPropertyMap</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::string <a class="code" href="classio_1_1XmlPropertyMap.html#ab9f6b0348a82129d716a4e789efba349">at</a>(std::string);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::string <a class="code" href="classio_1_1XmlPropertyMap.html#a489f0bfa277fda5a5781d836fac0eca2">safeAt</a>(std::string);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::string <a class="code" href="classio_1_1XmlPropertyMap.html#abddf2969f0a837ff502f8b373f299bda">getValueForKey</a>(std::string key_list_name, std::string key, std::string value_list_name);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classio_1_1XmlPropertyMap.html#aadd8257de7baa61fc5a3952f3f105077">empty</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classio_1_1XmlPropertyMap.html#a80f35b60468583a2e545fcf8a5efdbf1">   32</a></span>&#160;        <span class="keyword">friend</span> std::ostream &amp;<a class="code" href="classio_1_1XmlPropertyMap.html#a80f35b60468583a2e545fcf8a5efdbf1">operator&lt;&lt;</a>(std::ostream &amp;output, <span class="keyword">const</span> <a class="code" href="classio_1_1XmlPropertyMap.html">XmlPropertyMap</a> &amp;prop_map) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            output &lt;&lt; <span class="stringliteral">&quot;Key: \t \tValue: \t\tAttributes&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">for</span> (XmlMap::const_iterator it = prop_map.<a class="code" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">_map</a>.cbegin();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                 it != prop_map.<a class="code" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">_map</a>.cend(); it++) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                output &lt;&lt; it-&gt;first &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span> &lt;&lt; it-&gt;second.entry;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">if</span> (!it-&gt;second.attributes.empty()) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    output &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::pair&lt;std::string, std::string&gt; &amp;att : it-&gt;second.attributes) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        output &lt;&lt; att.first &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; att.second &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    output &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    output &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> output;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">   52</a></span>&#160;        <a class="code" href="namespaceio.html#aba5f811b1ed704e4a10d3eb399e61d36">XmlMap</a> <a class="code" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">_map</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classio_1_1XmlPropertyMap.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classio_1_1XmlPropertyMap.html">XmlPropertyMap</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classio_1_1XmlPropertyMap.html#a028557c460c4fd36091a307867642818">XmlPropertyMap</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classio_1_1XmlPropertyMap.html#a028557c460c4fd36091a307867642818">XmlPropertyMap</a>(<a class="code" href="namespaceio.html#aba5f811b1ed704e4a10d3eb399e61d36">XmlMap</a> map);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classio_1_1XmlPropertyMap.html#ac25e9369a51800d0346ec4e51ccbbfac">~XmlPropertyMap</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::string <a class="code" href="classio_1_1XmlPropertyMap.html#ab9f6b0348a82129d716a4e789efba349">at</a>(std::string);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        std::string <a class="code" href="classio_1_1XmlPropertyMap.html#a489f0bfa277fda5a5781d836fac0eca2">safeAt</a>(std::string);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::string <a class="code" href="classio_1_1XmlPropertyMap.html#abddf2969f0a837ff502f8b373f299bda">getValueForKey</a>(std::string key_list_name, std::string key, std::string value_list_name);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classio_1_1XmlPropertyMap.html#aadd8257de7baa61fc5a3952f3f105077">empty</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classio_1_1XmlPropertyMap.html#a80f35b60468583a2e545fcf8a5efdbf1">   31</a></span>&#160;        <span class="keyword">friend</span> std::ostream &amp;<a class="code" href="classio_1_1XmlPropertyMap.html#a80f35b60468583a2e545fcf8a5efdbf1">operator&lt;&lt;</a>(std::ostream &amp;output, <span class="keyword">const</span> <a class="code" href="classio_1_1XmlPropertyMap.html">XmlPropertyMap</a> &amp;prop_map) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            output &lt;&lt; <span class="stringliteral">&quot;Key: \t \tValue: \t\tAttributes&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">for</span> (XmlMap::const_iterator it = prop_map.<a class="code" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">_map</a>.cbegin();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                 it != prop_map.<a class="code" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">_map</a>.cend(); it++) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                output &lt;&lt; it-&gt;first &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span> &lt;&lt; it-&gt;second.entry;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">if</span> (!it-&gt;second.attributes.empty()) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    output &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::pair&lt;std::string, std::string&gt; &amp;att : it-&gt;second.attributes) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        output &lt;&lt; att.first &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; att.second &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    output &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    output &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">   51</a></span>&#160;        <a class="code" href="namespaceio.html#aba5f811b1ed704e4a10d3eb399e61d36">XmlMap</a> <a class="code" href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">_map</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif //LFNS_XMLPROPERTYMAP_H</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif //LFNS_XMLPROPERTYMAP_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassio_1_1XmlPropertyMap_html_a40e31118a46c9fbc7d8efa7384d5ef6c"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">io::XmlPropertyMap::_map</a></div><div class="ttdeci">XmlMap _map</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.h:52</div></div>
+<div class="ttc" id="aclassio_1_1XmlPropertyMap_html_a40e31118a46c9fbc7d8efa7384d5ef6c"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html#a40e31118a46c9fbc7d8efa7384d5ef6c">io::XmlPropertyMap::_map</a></div><div class="ttdeci">XmlMap _map</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.h:51</div></div>
 <div class="ttc" id="aclassio_1_1XmlPropertyMap_html_ab9f6b0348a82129d716a4e789efba349"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html#ab9f6b0348a82129d716a4e789efba349">io::XmlPropertyMap::at</a></div><div class="ttdeci">std::string at(std::string)</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.cpp:16</div></div>
 <div class="ttc" id="aXmlFileReader_8h_html"><div class="ttname"><a href="XmlFileReader_8h.html">XmlFileReader.h</a></div></div>
 <div class="ttc" id="aclassio_1_1XmlPropertyMap_html_ac25e9369a51800d0346ec4e51ccbbfac"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html#ac25e9369a51800d0346ec4e51ccbbfac">io::XmlPropertyMap::~XmlPropertyMap</a></div><div class="ttdeci">virtual ~XmlPropertyMap()</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.cpp:14</div></div>
-<div class="ttc" id="aclassio_1_1XmlPropertyMap_html_a80f35b60468583a2e545fcf8a5efdbf1"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html#a80f35b60468583a2e545fcf8a5efdbf1">io::XmlPropertyMap::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;output, const XmlPropertyMap &amp;prop_map)</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.h:32</div></div>
-<div class="ttc" id="aclassio_1_1XmlPropertyMap_html"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html">io::XmlPropertyMap</a></div><div class="ttdoc">A custom implementation of a XML property map.</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.h:16</div></div>
+<div class="ttc" id="aclassio_1_1XmlPropertyMap_html_a80f35b60468583a2e545fcf8a5efdbf1"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html#a80f35b60468583a2e545fcf8a5efdbf1">io::XmlPropertyMap::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;output, const XmlPropertyMap &amp;prop_map)</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.h:31</div></div>
+<div class="ttc" id="aclassio_1_1XmlPropertyMap_html"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html">io::XmlPropertyMap</a></div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.h:15</div></div>
 <div class="ttc" id="anamespaceio_html_aba5f811b1ed704e4a10d3eb399e61d36"><div class="ttname"><a href="namespaceio.html#aba5f811b1ed704e4a10d3eb399e61d36">io::XmlMap</a></div><div class="ttdeci">std::map&lt; std::string, XmlEntry &gt; XmlMap</div><div class="ttdef"><b>Definition:</b> XmlFileReader.h:47</div></div>
 <div class="ttc" id="anamespaceio_html"><div class="ttname"><a href="namespaceio.html">io</a></div><div class="ttdef"><b>Definition:</b> ConfigFileInterpreter.cpp:16</div></div>
 <div class="ttc" id="aclassio_1_1XmlPropertyMap_html_a028557c460c4fd36091a307867642818"><div class="ttname"><a href="classio_1_1XmlPropertyMap.html#a028557c460c4fd36091a307867642818">io::XmlPropertyMap::XmlPropertyMap</a></div><div class="ttdeci">XmlPropertyMap()</div><div class="ttdef"><b>Definition:</b> XmlPropertyMap.cpp:10</div></div>

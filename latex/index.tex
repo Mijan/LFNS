@@ -1,2 +1,63 @@
-\#\+L\+F\+NS Toolbox This toolbox contains the programms lfns\+\_\+mpi, lfns\+\_\+seq and simulate. To run any of these commands one must provide a config file that contains all the information about the required ~\newline
+\hypertarget{index_General}{}\doxysection{Information}\label{index_General}
+\begin{DoxyAuthor}{Author}
+Jan Mikelson \href{mailto:jan.mikelson@bsse.ethz.ch}{\texttt{ jan.\+mikelson@bsse.\+ethz.\+ch}}
+\end{DoxyAuthor}
+This toolbox provides mainly and implementation of the likelihood-\/free Nested Sampling algorithm as described in Mikelson, Jan, and Mustafa Khammash. \char`\"{}\+Likelihood-\/free nested sampling for biochemical reaction networks.\char`\"{} bio\+Rxiv (2019)\+: 564047.
+
+During the development of the L\+F\+NS algorithm several other features had to be implemented as well, such as the simulation of deterministic, stochastic and hybrid models of chemical reaction networks, particle filters and various sampling schemes. All these subroutines and methods are collected in this toolbox.\hypertarget{index_Installation}{}\doxysection{Installation}\label{index_Installation}
+\hypertarget{index_Required}{}\doxysubsection{Libraries}\label{index_Required}
+The L\+F\+NS toolbox depends on several packages that are all provided in the \href{https://github.com/Mijan/LFNS/tree/publishable/required_packages}{\texttt{ required\+\_\+packages}} folder, but can also be downloaded from their corresponding websites
+\begin{DoxyItemize}
+\item The \href{http://eigen.tuxfamily.org/index.php?title=Main_Page}{\texttt{ Eigen}} library. Very powerful linear algebra library that provides very convenient matrix and vector classes
+\item The \href{https://beltoforion.de/article.php?a=muparser}{\texttt{ mu\+Parser}} library. A parsing library that simplifies parsing mathematical formulas from text files.
+\item The \href{https://www.boost.org/}{\texttt{ boost}} library. General utility library.
+\item The \href{https://github.com/Mijan/DPGMM}{\texttt{ D\+P-\/\+G\+MM}} library. A library that implements density estimation through a Gaussian Mixture.
+\item The \href{https://computing.llnl.gov/projects/sundials/cvode}{\texttt{ cvode}} library.
+\end{DoxyItemize}\hypertarget{index_Running}{}\doxysubsection{cmake}\label{index_Running}
+The installation is based on cmake, which means cmake needs to be installed $<$a href="\href{https://cmake.org/'}{\texttt{ https\+://cmake.\+org/\textquotesingle{}}}$>$\href{https://cmake.org/}{\texttt{ https\+://cmake.\+org/}}. To install the L\+F\+N\+S-\/toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of an installation procedure on a linux system.
+
+First, we pick a folder to which the toolbox and the required libraries are to be installed. In this example we pick the location to be /usr/local. Note that on most linux systems this folder will already exists and will be appropriately linked, so the following steps will most likely not be necessary.
+\begin{DoxyItemize}
+\item First create the folder, including subfolders for libraries, header files and executables. Some of these commands may require super user privileges (use these commands with \char`\"{}sudo\char`\"{}) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo mkdir /usr/local /usr/local/lib /usr/local/include /usr/local/bin}
+\end{DoxyCode}
+
+\item Make sure this folder is linked whenever a new termina is opemend. For this open the .bashrc file in the home directory and add the following lines. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export LD\_LIBRARY\_PATH=/usr/local/lib:\$LD\_LIBRARY\_PATH}
+\DoxyCodeLine{export LIBRARY\_PATH=/usr/local/lib:\$LIBRARY\_PATH}
+\DoxyCodeLine{export CPATH=/usr/local/include:\$CPATH}
+\DoxyCodeLine{export PATH=/usr/local/bin:\$PATH}
+\end{DoxyCode}
+ -\/Then install all required libraries. For this assume that the folder containing the L\+F\+NS toolbox is in $\sim$/\+L\+F\+NS. The libraries are all installed using cmake. For this change to each of the build subdirectories and call cmake and make install 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~/LFNS/requred\_packages/cvode-\/5.0.0/build}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{make install}
+\end{DoxyCode}
  
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~/LFNS/requred\_packages/DP-\/GMM/build}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{make install}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~/LFNS/requred\_packages/muparser-\/2.2.6.1/build}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{make install}
+\end{DoxyCode}
+ Eigen is a pure header library and can be either installed through the systems package manager (for Ubuntu for instance \char`\"{}apt-\/get install eigen\char`\"{}) or the content of the eigen.\+34 folder can just be copied in the /usr/local/include directory.
+\item After all these libraries have been installed, the L\+F\+NS toolbox can be installed by switching into the build directory and calling again cmake and make install 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~/LFNS/build}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{make install}
+\end{DoxyCode}
+ To check if everything has been installed correctly, try typing
+\begin{DoxyCode}{0}
+\DoxyCodeLine{lfns\_seq -\/-\/help }
+\end{DoxyCode}
+ This should produce a help message. 
+\end{DoxyItemize}

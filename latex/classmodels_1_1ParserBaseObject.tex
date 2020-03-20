@@ -2,11 +2,6 @@
 \label{classmodels_1_1ParserBaseObject}\index{models::ParserBaseObject@{models::ParserBaseObject}}
 
 
-This class extends the \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} to be parsed from a file.  
-
-
-
-
 {\ttfamily \#include $<$Parser\+Base\+Object.\+h$>$}
 
 
@@ -42,13 +37,17 @@ virtual void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8a
 \item 
 void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a26032b123a38e52a0c7ef2d5bc2ae408}{set\+State\+Order}} (std\+::vector$<$ std\+::string $>$ state\+\_\+order)
 \item 
+bool \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a80b6853ac8ba062ef7e95a44408f5906}{is\+Parameter}} (std\+::string param\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a105ad88207fa7c4da1caf7b18cb31e91}{is\+Species}} (std\+::string species\+\_\+name)
+\item 
 void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a26c34eb1eb323124144f49b26d164e46}{set\+Perturbation\+Fct}} (\mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}} perturb\+\_\+fct)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_adf5b8cb7c7b24ea6c3424de74c568cd0}{\+\_\+initialize\+Parser}} (mu\+::\+Parser \&p)
-\begin{DoxyCompactList}\small\item\em This function intializes the provided parser {\ttfamily p} by linking it to the proper pointers for states and variables and defining all necessary math functions for it. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a1e6ca2d67b7110c8e3c149a1e0bc9dd9}{\+\_\+create\+Random\+Numbers}} ()
 \item 
 void \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a2a04bd15fcc17870318af79bcf8344fb}{\+\_\+update\+State}} (const double $\ast$state)
@@ -86,9 +85,6 @@ std\+::map$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-This class extends the \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} to be parsed from a file. 
-
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ab2d41dd79f758e705abde561cdb55c90}\label{classmodels_1_1ParserBaseObject_ab2d41dd79f758e705abde561cdb55c90}} 
 \index{models::ParserBaseObject@{models::ParserBaseObject}!ParserBaseObject@{ParserBaseObject}}
@@ -96,7 +92,7 @@ This class extends the \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}
 \doxysubsubsection{\texorpdfstring{ParserBaseObject()}{ParserBaseObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily models\+::\+Parser\+Base\+Object\+::\+Parser\+Base\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng,  }\item[{\mbox{\hyperlink{classmodels_1_1ParserData}{Parser\+Data}}}]{parser\+\_\+data }\end{DoxyParamCaption})}
 
-This constructor contains a random number generator {\ttfamily rng} and needs to be used when random numbers are required. \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a66b81f25e410252d3f4cf301946e01f6}\label{classmodels_1_1ParserBaseObject_a66b81f25e410252d3f4cf301946e01f6}} 
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a66b81f25e410252d3f4cf301946e01f6}\label{classmodels_1_1ParserBaseObject_a66b81f25e410252d3f4cf301946e01f6}} 
 \index{models::ParserBaseObject@{models::ParserBaseObject}!ParserBaseObject@{ParserBaseObject}}
 \index{ParserBaseObject@{ParserBaseObject}!models::ParserBaseObject@{models::ParserBaseObject}}
 \doxysubsubsection{\texorpdfstring{ParserBaseObject()}{ParserBaseObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -133,15 +129,23 @@ Implemented in \mbox{\hyperlink{classmodels_1_1MeasurementModel_a1c6540025199952
 \doxysubsubsection{\texorpdfstring{\_initializeParser()}{\_initializeParser()}}
 {\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::\+\_\+initialize\+Parser (\begin{DoxyParamCaption}\item[{mu\+::\+Parser \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-This function intializes the provided parser {\ttfamily p} by linking it to the proper pointers for states and variables and defining all necessary math functions for it. 
-
 \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a2a04bd15fcc17870318af79bcf8344fb}\label{classmodels_1_1ParserBaseObject_a2a04bd15fcc17870318af79bcf8344fb}} 
 \index{models::ParserBaseObject@{models::ParserBaseObject}!\_updateState@{\_updateState}}
 \index{\_updateState@{\_updateState}!models::ParserBaseObject@{models::ParserBaseObject}}
 \doxysubsubsection{\texorpdfstring{\_updateState()}{\_updateState()}}
 {\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::\+\_\+update\+State (\begin{DoxyParamCaption}\item[{const double $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a80b6853ac8ba062ef7e95a44408f5906}\label{classmodels_1_1ParserBaseObject_a80b6853ac8ba062ef7e95a44408f5906}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!isParameter@{isParameter}}
+\index{isParameter@{isParameter}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{isParameter()}{isParameter()}}
+{\footnotesize\ttfamily bool models\+::\+Parser\+Base\+Object\+::is\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{param\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a105ad88207fa7c4da1caf7b18cb31e91}\label{classmodels_1_1ParserBaseObject_a105ad88207fa7c4da1caf7b18cb31e91}} 
+\index{models::ParserBaseObject@{models::ParserBaseObject}!isSpecies@{isSpecies}}
+\index{isSpecies@{isSpecies}!models::ParserBaseObject@{models::ParserBaseObject}}
+\doxysubsubsection{\texorpdfstring{isSpecies()}{isSpecies()}}
+{\footnotesize\ttfamily bool models\+::\+Parser\+Base\+Object\+::is\+Species (\begin{DoxyParamCaption}\item[{std\+::string}]{species\+\_\+name }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8ae4969ab66509c0e}\label{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8ae4969ab66509c0e}} 
 \index{models::ParserBaseObject@{models::ParserBaseObject}!printInfo@{printInfo}}
@@ -149,11 +153,6 @@ This function intializes the provided parser {\ttfamily p} by linking it to the 
 \doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
 {\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::print\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Prints all the parameter and species names to a output stream 
-\begin{DoxyParams}{Parameters}
-{\em os} & the stream to which the output will be written. \\
-\hline
-\end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_a4ea5a43946acce3bcc2185eed0d16c01}{models\+::\+Base\+Object}}.
@@ -168,19 +167,12 @@ Reimplemented in \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a4e4508
 \doxysubsubsection{\texorpdfstring{setPerturbationFct()}{setPerturbationFct()}}
 {\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::set\+Perturbation\+Fct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemodels_a9b6d95af46cca5d19fc40aa04de42145}{Perturbation\+Fct\+\_\+ptr}}}]{perturb\+\_\+fct }\end{DoxyParamCaption})}
 
-Sets the input function corresponding to a particular experiment. When an input is provided this function pointer is set. This allows any class, inheriting from \mbox{\hyperlink{classmodels_1_1ParserBaseObject}{Parser\+Base\+Object}} to evaluate the perturbation function before calling any other functions \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}\label{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}} 
+\mbox{\Hypertarget{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}\label{classmodels_1_1ParserBaseObject_ad1cfbca8c287e1b485ff6c722c99b20f}} 
 \index{models::ParserBaseObject@{models::ParserBaseObject}!setPointer@{setPointer}}
 \index{setPointer@{setPointer}!models::ParserBaseObject@{models::ParserBaseObject}}
 \doxysubsubsection{\texorpdfstring{setPointer()}{setPointer()}}
 {\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::set\+Pointer (\begin{DoxyParamCaption}\item[{double $\ast$}]{ptr,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Sets a pointer for the parameter or species with corresponding name by calling the base function \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}{Base\+Object\+::set\+Pointer()}} and initializes all parsers once all pointers have been set. 
-\begin{DoxyParams}{Parameters}
-{\em ptr} & the provided pointer \\
-\hline
-{\em name} & the name of the parameter or species for which the pointer is provided \\
-\hline
-\end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}{models\+::\+Base\+Object}}.
@@ -191,7 +183,7 @@ Reimplemented from \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9
 \doxysubsubsection{\texorpdfstring{setStateOrder()}{setStateOrder()}}
 {\footnotesize\ttfamily void models\+::\+Parser\+Base\+Object\+::set\+State\+Order (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{state\+\_\+order }\end{DoxyParamCaption})}
 
-Sets the states order to the order specified in {\ttfamily state\+\_\+order}. The corresponding order is saved in the map \mbox{\hyperlink{classmodels_1_1ParserBaseObject_aa066868887dd585dd974a2e288b67a60}{\+\_\+input\+\_\+state\+\_\+ext\+\_\+by\+\_\+int}} 
+
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classmodels_1_1ParserBaseObject_aa066868887dd585dd974a2e288b67a60}\label{classmodels_1_1ParserBaseObject_aa066868887dd585dd974a2e288b67a60}} 

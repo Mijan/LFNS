@@ -1,7 +1,7 @@
 <map id="models::BaseData" name="models::BaseData">
-<area shape="rect" id="node1" title="The base data needed for constructing the base objects. It requires a list of parameters and a list o..." alt="" coords="261,5,402,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="261,5,402,32"/>
 <area shape="rect" id="node2" href="$classmodels_1_1ParserData.html" title=" " alt="" coords="257,80,406,107"/>
-<area shape="rect" id="node3" href="$classmodels_1_1InitialValueData.html" title="This class contains all the data that can be read from the initial value file." alt="" coords="5,155,188,181"/>
-<area shape="rect" id="node4" href="$classmodels_1_1MeasurementModelData.html" title="This class contains all the data that can be read from the measurement model sfile." alt="" coords="212,155,451,181"/>
-<area shape="rect" id="node5" href="$classmodels_1_1ModelReactionData.html" title="This class contains all the data that can be read from the model dynamics file." alt="" coords="475,155,681,181"/>
+<area shape="rect" id="node3" href="$classmodels_1_1InitialValueData.html" title=" " alt="" coords="5,155,188,181"/>
+<area shape="rect" id="node4" href="$classmodels_1_1MeasurementModelData.html" title=" " alt="" coords="212,155,451,181"/>
+<area shape="rect" id="node5" href="$classmodels_1_1ModelReactionData.html" title=" " alt="" coords="475,155,681,181"/>
 </map>

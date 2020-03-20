@@ -2,11 +2,6 @@
 \label{classmodels_1_1InitialValueProvider}\index{models::InitialValueProvider@{models::InitialValueProvider}}
 
 
-This class provides a means to compute the initial state for a particular model.  
-
-
-
-
 {\ttfamily \#include $<$Initial\+Value\+Provider.\+h$>$}
 
 
@@ -36,10 +31,10 @@ Collaboration diagram for models\+::Initial\+Value\+Provider\+:\nopagebreak
 \item 
 virtual \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a3ea53d380423ee977d9f95c70f1f6ad4}{$\sim$\+Initial\+Value\+Provider}} ()
 \item 
-virtual void \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a83e9d96d718843e83d80058131459097}{compute\+Initial\+State}} (std\+::vector$<$ double $>$ $\ast$state\+\_\+0, double $\ast$t\+\_\+0)
+virtual void \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a96e4fab9055be2ed1663c231853ded89}{compute\+Initial\+State}} (std\+::vector$<$ double $>$ $\ast$state\+\_\+0, double $\ast$t\+\_\+0a)
 \item 
 \mbox{\hyperlink{namespacemodels_a9c2a931d33de5b784ef3faa14e27cf7c}{Initial\+State\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a950da83542100afff8f8d1f80e7fd489}{get\+Initial\+State\+Fct}} ()
-\begin{DoxyCompactList}\small\item\em Provides a pointer to the \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a83e9d96d718843e83d80058131459097}{compute\+Initial\+State()}} function. \end{DoxyCompactList}\item 
+\item 
 virtual void \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a36114cbc95839f0f040e8d94c5153cf9}{print\+Info}} (std\+::ostream \&os)
 \item 
 void \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a106e060317a7c83813d7524153a3c35e}{set\+Output\+State\+Mapping}} (std\+::vector$<$ std\+::string $>$ state\+\_\+order)
@@ -53,20 +48,19 @@ virtual void \mbox{\hyperlink{classmodels_1_1InitialValueProvider_ab5c9584429cf6
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classmodels_1_1InitialValueProvider_ad8cc3b4bbcb8f93f638bedecebe7bed8}{\+\_\+initialized}}
-\begin{DoxyCompactList}\small\item\em indicates if the parsers have been identified \end{DoxyCompactList}\item 
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a46eacc274281f8cc510d09fa4857fe32}{\+\_\+parameter}}
+\item 
 std\+::vector$<$ mu\+::\+Parser $>$ \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a3b593cb6098766d8bfb0764bbee9d51c}{\+\_\+initial\+\_\+state\+\_\+equations}}
-\begin{DoxyCompactList}\small\item\em Parsers for the initial states. \end{DoxyCompactList}\item 
+\item 
 mu\+::\+Parser \mbox{\hyperlink{classmodels_1_1InitialValueProvider_af46cd40e952d7955cac233291279cdce}{\+\_\+initial\+\_\+time}}
-\begin{DoxyCompactList}\small\item\em Parser for the initial time. \end{DoxyCompactList}\item 
+\item 
 \mbox{\hyperlink{classmodels_1_1InitialValueData}{Initial\+Value\+Data}} \mbox{\hyperlink{classmodels_1_1InitialValueProvider_adee3bf26514edcf245f2e6db06628021}{\+\_\+initial\+\_\+data}}
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmodels_1_1InitialValueData}{Initial\+Value\+Data}} as read from the initial states file. \end{DoxyCompactList}\item 
+\item 
 std\+::map$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a74ba0b4986838faea7c9a8a30f9147a1}{\+\_\+output\+\_\+state\+\_\+mapping}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
-
-\doxysubsection{Detailed Description}
-This class provides a means to compute the initial state for a particular model. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmodels_1_1InitialValueProvider_ad42355cdc306ae911a720c30b305d6d0}\label{classmodels_1_1InitialValueProvider_ad42355cdc306ae911a720c30b305d6d0}} 
@@ -96,25 +90,21 @@ This class provides a means to compute the initial state for a particular model.
 \doxysubsubsection{\texorpdfstring{\_initialize()}{\_initialize()}}
 {\footnotesize\ttfamily void models\+::\+Initial\+Value\+Provider\+::\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
 
-This function needs to be called to initialize the parsers for the initial states. Before this function is called all pointers for the underlying \mbox{\hyperlink{classmodels_1_1BaseObject}{Base\+Object}} have to be set using for instance the \mbox{\hyperlink{classmodels_1_1BaseObject_aa8590e093656ec6a9cc8e73029374684}{Base\+Object\+::set\+Pointer()}} function. After successful initialization the field \mbox{\hyperlink{classmodels_1_1InitialValueProvider_ad8cc3b4bbcb8f93f638bedecebe7bed8}{\+\_\+initialized}} to true. 
+
 
 Implements \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a906f920881a5012beaaa8c7c3379c387}{models\+::\+Parser\+Base\+Object}}.
 
-\mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a83e9d96d718843e83d80058131459097}\label{classmodels_1_1InitialValueProvider_a83e9d96d718843e83d80058131459097}} 
+\mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a96e4fab9055be2ed1663c231853ded89}\label{classmodels_1_1InitialValueProvider_a96e4fab9055be2ed1663c231853ded89}} 
 \index{models::InitialValueProvider@{models::InitialValueProvider}!computeInitialState@{computeInitialState}}
 \index{computeInitialState@{computeInitialState}!models::InitialValueProvider@{models::InitialValueProvider}}
 \doxysubsubsection{\texorpdfstring{computeInitialState()}{computeInitialState()}}
-{\footnotesize\ttfamily void models\+::\+Initial\+Value\+Provider\+::compute\+Initial\+State (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ $\ast$}]{state\+\_\+0,  }\item[{double $\ast$}]{t\+\_\+0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void models\+::\+Initial\+Value\+Provider\+::compute\+Initial\+State (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ $\ast$}]{state\+\_\+0,  }\item[{double $\ast$}]{t\+\_\+0a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-This function computes the initial state and the initial time and saves it into the pointers {\ttfamily state\+\_\+0} and {\ttfamily t\+\_\+0} \mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a950da83542100afff8f8d1f80e7fd489}\label{classmodels_1_1InitialValueProvider_a950da83542100afff8f8d1f80e7fd489}} 
+\mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a950da83542100afff8f8d1f80e7fd489}\label{classmodels_1_1InitialValueProvider_a950da83542100afff8f8d1f80e7fd489}} 
 \index{models::InitialValueProvider@{models::InitialValueProvider}!getInitialStateFct@{getInitialStateFct}}
 \index{getInitialStateFct@{getInitialStateFct}!models::InitialValueProvider@{models::InitialValueProvider}}
 \doxysubsubsection{\texorpdfstring{getInitialStateFct()}{getInitialStateFct()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a9c2a931d33de5b784ef3faa14e27cf7c}{Initial\+State\+Fct\+\_\+ptr}} models\+::\+Initial\+Value\+Provider\+::get\+Initial\+State\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Provides a pointer to the \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a83e9d96d718843e83d80058131459097}{compute\+Initial\+State()}} function. 
 
 \mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a36114cbc95839f0f040e8d94c5153cf9}\label{classmodels_1_1InitialValueProvider_a36114cbc95839f0f040e8d94c5153cf9}} 
 \index{models::InitialValueProvider@{models::InitialValueProvider}!printInfo@{printInfo}}
@@ -128,11 +118,6 @@ Provides a pointer to the \mbox{\hyperlink{classmodels_1_1InitialValueProvider_a
 \doxysubsubsection{\texorpdfstring{setOutputStateMapping()}{setOutputStateMapping()}}
 {\footnotesize\ttfamily void models\+::\+Initial\+Value\+Provider\+::set\+Output\+State\+Mapping (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{state\+\_\+order }\end{DoxyParamCaption})}
 
-Sets the order of the states to be computed. This needs to be done to guarantee that the state order is tha same for all objects in the \mbox{\hyperlink{classmodels_1_1FullModel}{Full\+Model}} class. 
-\begin{DoxyParams}{Parameters}
-{\em state\+\_\+order} & \\
-\hline
-\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -142,19 +127,11 @@ Sets the order of the states to be computed. This needs to be done to guarantee 
 \doxysubsubsection{\texorpdfstring{\_initial\_data}{\_initial\_data}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1InitialValueData}{Initial\+Value\+Data}} models\+::\+Initial\+Value\+Provider\+::\+\_\+initial\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-\mbox{\hyperlink{classmodels_1_1InitialValueData}{Initial\+Value\+Data}} as read from the initial states file. 
-
 \mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a3b593cb6098766d8bfb0764bbee9d51c}\label{classmodels_1_1InitialValueProvider_a3b593cb6098766d8bfb0764bbee9d51c}} 
 \index{models::InitialValueProvider@{models::InitialValueProvider}!\_initial\_state\_equations@{\_initial\_state\_equations}}
 \index{\_initial\_state\_equations@{\_initial\_state\_equations}!models::InitialValueProvider@{models::InitialValueProvider}}
 \doxysubsubsection{\texorpdfstring{\_initial\_state\_equations}{\_initial\_state\_equations}}
 {\footnotesize\ttfamily std\+::vector$<$mu\+::\+Parser$>$ models\+::\+Initial\+Value\+Provider\+::\+\_\+initial\+\_\+state\+\_\+equations\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Parsers for the initial states. 
 
 \mbox{\Hypertarget{classmodels_1_1InitialValueProvider_af46cd40e952d7955cac233291279cdce}\label{classmodels_1_1InitialValueProvider_af46cd40e952d7955cac233291279cdce}} 
 \index{models::InitialValueProvider@{models::InitialValueProvider}!\_initial\_time@{\_initial\_time}}
@@ -162,19 +139,11 @@ Parsers for the initial states.
 \doxysubsubsection{\texorpdfstring{\_initial\_time}{\_initial\_time}}
 {\footnotesize\ttfamily mu\+::\+Parser models\+::\+Initial\+Value\+Provider\+::\+\_\+initial\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-Parser for the initial time. 
-
 \mbox{\Hypertarget{classmodels_1_1InitialValueProvider_ad8cc3b4bbcb8f93f638bedecebe7bed8}\label{classmodels_1_1InitialValueProvider_ad8cc3b4bbcb8f93f638bedecebe7bed8}} 
 \index{models::InitialValueProvider@{models::InitialValueProvider}!\_initialized@{\_initialized}}
 \index{\_initialized@{\_initialized}!models::InitialValueProvider@{models::InitialValueProvider}}
 \doxysubsubsection{\texorpdfstring{\_initialized}{\_initialized}}
 {\footnotesize\ttfamily bool models\+::\+Initial\+Value\+Provider\+::\+\_\+initialized\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-indicates if the parsers have been identified 
 
 \mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a74ba0b4986838faea7c9a8a30f9147a1}\label{classmodels_1_1InitialValueProvider_a74ba0b4986838faea7c9a8a30f9147a1}} 
 \index{models::InitialValueProvider@{models::InitialValueProvider}!\_output\_state\_mapping@{\_output\_state\_mapping}}
@@ -182,7 +151,13 @@ indicates if the parsers have been identified
 \doxysubsubsection{\texorpdfstring{\_output\_state\_mapping}{\_output\_state\_mapping}}
 {\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}$>$ models\+::\+Initial\+Value\+Provider\+::\+\_\+output\+\_\+state\+\_\+mapping\hspace{0.3cm}{\ttfamily [private]}}
 
-The mapping between the state order in the internal \mbox{\hyperlink{classmodels_1_1ParserBaseObject}{Parser\+Base\+Object}} object and the needed output state order 
+\mbox{\Hypertarget{classmodels_1_1InitialValueProvider_a46eacc274281f8cc510d09fa4857fe32}\label{classmodels_1_1InitialValueProvider_a46eacc274281f8cc510d09fa4857fe32}} 
+\index{models::InitialValueProvider@{models::InitialValueProvider}!\_parameter@{\_parameter}}
+\index{\_parameter@{\_parameter}!models::InitialValueProvider@{models::InitialValueProvider}}
+\doxysubsubsection{\texorpdfstring{\_parameter}{\_parameter}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ models\+::\+Initial\+Value\+Provider\+::\+\_\+parameter\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

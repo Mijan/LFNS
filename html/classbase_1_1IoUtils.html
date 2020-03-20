@@ -97,8 +97,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a9ade7c26ede8099c553a910b55020199"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76abd9cc8bc3f27610560428069df7fc"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_1_1IoUtils.html#a76abd9cc8bc3f27610560428069df7fc">readVector</a> (std::string input_file_name)</td></tr>
 <tr class="separator:a76abd9cc8bc3f27610560428069df7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3febde93be63054c29b51e135e87a2a"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_1_1IoUtils.html#aa3febde93be63054c29b51e135e87a2a">readColVector</a> (std::string input_file_name)</td></tr>
-<tr class="separator:aa3febde93be63054c29b51e135e87a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b9a34c5a0bf9f63bfc4a04db99f6f70"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_1_1IoUtils.html#a2b9a34c5a0bf9f63bfc4a04db99f6f70">readVectorOfVectors</a> (std::string input_file_name)</td></tr>
 <tr class="separator:a2b9a34c5a0bf9f63bfc4a04db99f6f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf955712302670d73bd5222a5a709be5"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_1_1IoUtils.html#abf955712302670d73bd5222a5a709be5">readMultiline</a> (std::string input_file_name, <a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> num_lines_for_multiline, <a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> max_traj=1000)</td></tr>
@@ -330,32 +328,6 @@ Static Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa3febde93be63054c29b51e135e87a2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3febde93be63054c29b51e135e87a2a">&#9670;&nbsp;</a></span>readColVector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; double &gt; base::IoUtils::readColVector </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>input_file_name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -639,21 +611,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes a vector of vectors to a file. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>the type of data to be written </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">output_file_name</td><td></td></tr>
-    <tr><td class="paramname">out_vectors</td><td></td></tr>
-    <tr><td class="paramname">transposed</td><td>indicates if the matrix to be written needs to be transposed </td></tr>
-    <tr><td class="paramname">mode</td><td>indicates the mode in which the destimation file needs to be open. In particular if the new data should overwrite its current content or if it should append the new content. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

@@ -30,7 +30,7 @@ Collaboration diagram for lfns\+::L\+F\+NS\+:\nopagebreak
 virtual \mbox{\hyperlink{classlfns_1_1LFNS_a7f64614660641a6f1af9b0365f7eb26e}{$\sim$\+L\+F\+NS}} ()
 \item 
 virtual void \mbox{\hyperlink{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}{run\+L\+F\+NS}} ()=0
-\begin{DoxyCompactList}\small\item\em This function runs the main algorithm and is separately implemented in L\+F\+N\+S\+Seq amd L\+F\+N\+S\+Mpi. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classlfns_1_1LFNS_a42644638bcbb315f59c2f7264d00ca6e}{resume\+Rum}} (std\+::string previous\+\_\+log\+\_\+file)
 \item 
 double $\ast$ \mbox{\hyperlink{classlfns_1_1LFNS_aef9efe9b3b1bf4f3329dfdf3b31db521}{get\+Pointer\+To\+Threshold}} ()
@@ -40,7 +40,7 @@ bool \mbox{\hyperlink{classlfns_1_1LFNS_a85d456d1c0144b8a3f57d8ef214b36e2}{check
 void \mbox{\hyperlink{classlfns_1_1LFNS_ae3669dc67b074bde494417d0d83213cb}{set\+Sampler}} (\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}} prior, \mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}} density\+\_\+estimation, \mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}} rng)
 \item 
 void \mbox{\hyperlink{classlfns_1_1LFNS_a5c330f5342d2fb088f61738836c3478b}{set\+Log\+Params}} (std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ log\+\_\+params)
-\begin{DoxyCompactList}\small\item\em This function provides the indices of those parameters that are considered to be sampled in the log-\/space. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}{set\+Threshold\+Pointer}} (double $\ast$epsilon\+\_\+ptr)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
@@ -54,7 +54,7 @@ bool \mbox{\hyperlink{classlfns_1_1LFNS_ad46e384ac0637f2dc40d8b3d5d86bf11}{\+\_\
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} \mbox{\hyperlink{classlfns_1_1LFNS_a106ca1cd6211477b407b3cbac857f4b7}{\+\_\+settings}}
-\begin{DoxyCompactList}\small\item\em All the settings as read from the config file or provided through the command line. \end{DoxyCompactList}\item 
+\item 
 \mbox{\hyperlink{classlfns_1_1LiveParticleSet}{Live\+Particle\+Set}} \mbox{\hyperlink{classlfns_1_1LFNS_a00c56757226dd3d1a7e526cb24342892}{\+\_\+live\+\_\+points}}
 \item 
 \mbox{\hyperlink{classlfns_1_1DeadParticleSet}{Dead\+Particle\+Set}} \mbox{\hyperlink{classlfns_1_1LFNS_aea91813b638b98f68496c3f583790a45}{\+\_\+dead\+\_\+points}}
@@ -74,10 +74,6 @@ double \mbox{\hyperlink{classlfns_1_1LFNS_a5c91c58436aa9b9a453fec8516d6dd9c}{\+\
 \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classlfns_1_1LFNS_a4e27a1b99dcc1d27b979c045224541a5}{\+\_\+num\+\_\+parameters}}
 \end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-This is the common ancestor class for the sequential (L\+F\+N\+S\+Seq) and parallel (L\+F\+N\+S\+Mpi) \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithms. It is based on the publication Mikelson, Jan, and Mustafa Khammash. \char`\"{}\+Likelihood-\/free nested sampling for biochemical
-reaction networks.\char`\"{} bio\+Rxiv (2019)\+: 564047. See this publication for all details on the functioning ond parameters of this algorithm 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classlfns_1_1LFNS_ae7d9668718c7a9f631c3582d8c70af9d}\label{classlfns_1_1LFNS_ae7d9668718c7a9f631c3582d8c70af9d}} 
@@ -101,7 +97,7 @@ reaction networks.\char`\"{} bio\+Rxiv (2019)\+: 564047. See this publication fo
 \doxysubsubsection{\texorpdfstring{\_postIteration()}{\_postIteration()}}
 {\footnotesize\ttfamily bool lfns\+::\+L\+F\+N\+S\+::\+\_\+post\+Iteration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-This function contains all the procedures that are done after an itretion finishes, such as writing the current live and dead partile sets to file, updating the logger and so on \mbox{\Hypertarget{classlfns_1_1LFNS_a216d491ac3d258748c79b03693c7a2eb}\label{classlfns_1_1LFNS_a216d491ac3d258748c79b03693c7a2eb}} 
+\mbox{\Hypertarget{classlfns_1_1LFNS_a216d491ac3d258748c79b03693c7a2eb}\label{classlfns_1_1LFNS_a216d491ac3d258748c79b03693c7a2eb}} 
 \index{lfns::LFNS@{lfns::LFNS}!\_testTermination@{\_testTermination}}
 \index{\_testTermination@{\_testTermination}!lfns::LFNS@{lfns::LFNS}}
 \doxysubsubsection{\texorpdfstring{\_testTermination()}{\_testTermination()}}
@@ -125,15 +121,11 @@ This function contains all the procedures that are done after an itretion finish
 \doxysubsubsection{\texorpdfstring{resumeRum()}{resumeRum()}}
 {\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::resume\+Rum (\begin{DoxyParamCaption}\item[{std\+::string}]{previous\+\_\+log\+\_\+file }\end{DoxyParamCaption})}
 
-This function needs to be called when the \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithm is a continuation of a previous run. In that case a {\ttfamily previous\+\_\+log\+\_\+file} needs to be provided. This file needs to be the $\ast$\+\_\+log\+\_\+file.txt from a previous run. To continue a run it is important that the number of samples (N and r) stay the same between runs. \mbox{\Hypertarget{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}\label{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}} 
+\mbox{\Hypertarget{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}\label{classlfns_1_1LFNS_a525fc96b0eda6df3e1c464a6271105f2}} 
 \index{lfns::LFNS@{lfns::LFNS}!runLFNS@{runLFNS}}
 \index{runLFNS@{runLFNS}!lfns::LFNS@{lfns::LFNS}}
 \doxysubsubsection{\texorpdfstring{runLFNS()}{runLFNS()}}
 {\footnotesize\ttfamily virtual void lfns\+::\+L\+F\+N\+S\+::run\+L\+F\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-This function runs the main algorithm and is separately implemented in L\+F\+N\+S\+Seq amd L\+F\+N\+S\+Mpi. 
 
 
 
@@ -145,23 +137,19 @@ Implemented in \mbox{\hyperlink{classlfns_1_1mpi_1_1LFNSMpi_a773883e77996a9e4084
 \doxysubsubsection{\texorpdfstring{setLogParams()}{setLogParams()}}
 {\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::set\+Log\+Params (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$}]{log\+\_\+params }\end{DoxyParamCaption})}
 
-
-
-This function provides the indices of those parameters that are considered to be sampled in the log-\/space. 
-
 \mbox{\Hypertarget{classlfns_1_1LFNS_ae3669dc67b074bde494417d0d83213cb}\label{classlfns_1_1LFNS_ae3669dc67b074bde494417d0d83213cb}} 
 \index{lfns::LFNS@{lfns::LFNS}!setSampler@{setSampler}}
 \index{setSampler@{setSampler}!lfns::LFNS@{lfns::LFNS}}
 \doxysubsubsection{\texorpdfstring{setSampler()}{setSampler()}}
 {\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::set\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesampler_ac29641e93eb4f185825cdfe7a858443f}{sampler\+::\+Sampler\+\_\+ptr}}}]{prior,  }\item[{\mbox{\hyperlink{namespacesampler_ae2d7c7037da4cd48e4ec629b71160984}{sampler\+::\+Density\+Estimation\+\_\+ptr}}}]{density\+\_\+estimation,  }\item[{\mbox{\hyperlink{namespacebase_aa4f2d1f673f986baf8545dea24aa68b2}{base\+::\+Rng\+Ptr}}}]{rng }\end{DoxyParamCaption})}
 
-This function sets the prior sampler (in {\ttfamily prior}) the density estimation ind ({\ttfamily density\+\_\+estimation}) and the random number generator ({\ttfamily rng}) for the \mbox{\hyperlink{classlfns_1_1LFNS}{L\+F\+NS}} algorithm. These objects need to be set before the algorithm can be run. \mbox{\Hypertarget{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}\label{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}} 
+\mbox{\Hypertarget{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}\label{classlfns_1_1LFNS_ae2df9db31b96551ef843e710bcf4e7e0}} 
 \index{lfns::LFNS@{lfns::LFNS}!setThresholdPointer@{setThresholdPointer}}
 \index{setThresholdPointer@{setThresholdPointer}!lfns::LFNS@{lfns::LFNS}}
 \doxysubsubsection{\texorpdfstring{setThresholdPointer()}{setThresholdPointer()}}
 {\footnotesize\ttfamily void lfns\+::\+L\+F\+N\+S\+::set\+Threshold\+Pointer (\begin{DoxyParamCaption}\item[{double $\ast$}]{epsilon\+\_\+ptr }\end{DoxyParamCaption})}
 
-This function allows for the setting of a pointer in which the threshold in each iteration can be saved. This is convenient if the threshold needs to be read in another object. This is used in some likelihood evaluator that aborts the likelihood computation when the resulting log-\/likelihood of a sample parameter cannot be higher than the current threshold. See for instance the function Particle\+Filter\+::set\+Threshold\+Ptr() 
+
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classlfns_1_1LFNS_aea91813b638b98f68496c3f583790a45}\label{classlfns_1_1LFNS_aea91813b638b98f68496c3f583790a45}} 
@@ -223,10 +211,6 @@ This function allows for the setting of a pointer in which the threshold in each
 \index{\_settings@{\_settings}!lfns::LFNS@{lfns::LFNS}}
 \doxysubsubsection{\texorpdfstring{\_settings}{\_settings}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlfns_1_1LFNSSettings}{L\+F\+N\+S\+Settings}} lfns\+::\+L\+F\+N\+S\+::\+\_\+settings\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-All the settings as read from the config file or provided through the command line. 
 
 
 

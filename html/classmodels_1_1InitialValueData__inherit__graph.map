@@ -1,5 +1,5 @@
 <map id="models::InitialValueData" name="models::InitialValueData">
-<area shape="rect" id="node1" title="This class contains all the data that can be read from the initial value file." alt="" coords="5,155,188,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,155,188,181"/>
 <area shape="rect" id="node2" href="$classmodels_1_1ParserData.html" title=" " alt="" coords="22,80,171,107"/>
-<area shape="rect" id="node3" href="$classmodels_1_1BaseData.html" title="The base data needed for constructing the base objects. It requires a list of parameters and a list o..." alt="" coords="26,5,167,32"/>
+<area shape="rect" id="node3" href="$classmodels_1_1BaseData.html" title=" " alt="" coords="26,5,167,32"/>
 </map>
