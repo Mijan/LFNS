@@ -12,7 +12,7 @@
 virtual \mbox{\hyperlink{classmodels_1_1InputPulse_a5d298a3cbf460d181818d1e70921aa41}{$\sim$\+Input\+Pulse}} ()
 \item 
 std\+::vector$<$ double $>$ \mbox{\hyperlink{classmodels_1_1InputPulse_abf3da2e9f8c2be70126aa5e715dcd042}{get\+Dis\+Cont\+Times}} ()
-\begin{DoxyCompactList}\small\item\em This function returns the timpoints of all beginnings and endings of each pulse. \end{DoxyCompactList}\item 
+\item 
 bool \mbox{\hyperlink{classmodels_1_1InputPulse_a741fc1e74c6b5cf332c8917f78fc4dfb}{pulse\+Active}} (double t)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -29,9 +29,6 @@ double \mbox{\hyperlink{classmodels_1_1InputPulse_a9995edaedf1b0b7688bdda9d00523
 \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classmodels_1_1InputPulse_ae2695610d685553ac4b898dc319e54b9}{parameter\+\_\+index}}
 \end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-This class implements the input pulses for different experiments. Each \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} contains information about the input parameter, which is the parameter to be modified by the \mbox{\hyperlink{classmodels_1_1InputPulse}{Input\+Pulse}} and information about the time during which the pulse should be applied. It also containes the value of the input. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmodels_1_1InputPulse_a0877c61bc2793d848b5d60db84170435}\label{classmodels_1_1InputPulse_a0877c61bc2793d848b5d60db84170435}} 
@@ -55,24 +52,12 @@ This class implements the input pulses for different experiments. Each \mbox{\hy
 \doxysubsubsection{\texorpdfstring{getDisContTimes()}{getDisContTimes()}}
 {\footnotesize\ttfamily std\+::vector$<$ double $>$ models\+::\+Input\+Pulse\+::get\+Dis\+Cont\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-This function returns the timpoints of all beginnings and endings of each pulse. 
-
 \mbox{\Hypertarget{classmodels_1_1InputPulse_a741fc1e74c6b5cf332c8917f78fc4dfb}\label{classmodels_1_1InputPulse_a741fc1e74c6b5cf332c8917f78fc4dfb}} 
 \index{models::InputPulse@{models::InputPulse}!pulseActive@{pulseActive}}
 \index{pulseActive@{pulseActive}!models::InputPulse@{models::InputPulse}}
 \doxysubsubsection{\texorpdfstring{pulseActive()}{pulseActive()}}
 {\footnotesize\ttfamily bool models\+::\+Input\+Pulse\+::pulse\+Active (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
 
-Indicates if the pulse is active at a particular time {\ttfamily t}. 
-\begin{DoxyParams}{Parameters}
-{\em t} & The time for which the input is checked. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true if the pulse is active at time {\ttfamily t} 
-\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}

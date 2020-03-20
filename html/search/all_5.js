@@ -23,10 +23,11 @@ var searchData=
   ['digamma_392',['diGamma',['../classbase_1_1MathUtils.html#a96eea258975385b54975bc973911b401',1,'base::MathUtils']]],
   ['documentation_393',['Documentation',['../README_8txt.html#a1e70e8b8b84194e0520f0d071f66e40f',1,'README.txt']]],
   ['doesfileexists_394',['doesFileExists',['../classbase_1_1IoUtils.html#a9f1448675df7150f6eeee470e458f266',1,'base::IoUtils']]],
-  ['dpgmmsampler_395',['DpGmmSampler',['../classsampler_1_1DpGmmSampler.html',1,'sampler::DpGmmSampler'],['../classsampler_1_1DpGmmSampler.html#a5f70bc1fd05de9e45a3f6781060ddfe3',1,'sampler::DpGmmSampler::DpGmmSampler(base::RngPtr rng, DpGmmSamplerData data)'],['../classsampler_1_1DpGmmSampler.html#a9caf1f53921c41cfbeec2e4ce7773c8d',1,'sampler::DpGmmSampler::DpGmmSampler(base::RngPtr rng, DpGmmSamplerData data, std::vector&lt; DP_GMM::GaussMixtureComponent &gt; mixture_components)']]],
-  ['dpgmmsampler_2ecpp_396',['DpGmmSampler.cpp',['../DpGmmSampler_8cpp.html',1,'']]],
-  ['dpgmmsampler_2eh_397',['DpGmmSampler.h',['../DpGmmSampler_8h.html',1,'']]],
-  ['dpgmmsampler_5fptr_398',['DpGmmSampler_ptr',['../namespacesampler.html#a68ffdaf3a79ebf3540369ffbf58a9c6a',1,'sampler']]],
-  ['dpgmmsamplerdata_399',['DpGmmSamplerData',['../classsampler_1_1DpGmmSamplerData.html',1,'sampler::DpGmmSamplerData'],['../classsampler_1_1DpGmmSamplerData.html#aef05d1c4704104e83f1b8dcbf31a9ddc',1,'sampler::DpGmmSamplerData::DpGmmSamplerData(int n)'],['../classsampler_1_1DpGmmSamplerData.html#a50ca51be624e9edf362392898c76c3dd',1,'sampler::DpGmmSamplerData::DpGmmSamplerData(const SamplerData &amp;rhs)']]],
-  ['dynamics_400',['dynamics',['../classmodels_1_1FullModel.html#aec21a5e848457e2e2ed28e116855a86c',1,'models::FullModel']]]
+  ['doxygen_5fmain_5fpage_2eh_395',['doxygen_main_page.h',['../doxygen__main__page_8h.html',1,'']]],
+  ['dpgmmsampler_396',['DpGmmSampler',['../classsampler_1_1DpGmmSampler.html',1,'sampler::DpGmmSampler'],['../classsampler_1_1DpGmmSampler.html#a5f70bc1fd05de9e45a3f6781060ddfe3',1,'sampler::DpGmmSampler::DpGmmSampler(base::RngPtr rng, DpGmmSamplerData data)'],['../classsampler_1_1DpGmmSampler.html#a9caf1f53921c41cfbeec2e4ce7773c8d',1,'sampler::DpGmmSampler::DpGmmSampler(base::RngPtr rng, DpGmmSamplerData data, std::vector&lt; DP_GMM::GaussMixtureComponent &gt; mixture_components)']]],
+  ['dpgmmsampler_2ecpp_397',['DpGmmSampler.cpp',['../DpGmmSampler_8cpp.html',1,'']]],
+  ['dpgmmsampler_2eh_398',['DpGmmSampler.h',['../DpGmmSampler_8h.html',1,'']]],
+  ['dpgmmsampler_5fptr_399',['DpGmmSampler_ptr',['../namespacesampler.html#a68ffdaf3a79ebf3540369ffbf58a9c6a',1,'sampler']]],
+  ['dpgmmsamplerdata_400',['DpGmmSamplerData',['../classsampler_1_1DpGmmSamplerData.html',1,'sampler::DpGmmSamplerData'],['../classsampler_1_1DpGmmSamplerData.html#aef05d1c4704104e83f1b8dcbf31a9ddc',1,'sampler::DpGmmSamplerData::DpGmmSamplerData(int n)'],['../classsampler_1_1DpGmmSamplerData.html#a50ca51be624e9edf362392898c76c3dd',1,'sampler::DpGmmSamplerData::DpGmmSamplerData(const SamplerData &amp;rhs)']]],
+  ['dynamics_401',['dynamics',['../classmodels_1_1FullModel.html#aec21a5e848457e2e2ed28e116855a86c',1,'models::FullModel']]]
 ];

@@ -25,8 +25,6 @@ static bool \mbox{\hyperlink{classbase_1_1IoUtils_a9f1448675df7150f6eeee470e458f
 \item 
 static std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase_1_1IoUtils_a76abd9cc8bc3f27610560428069df7fc}{read\+Vector}} (std\+::string input\+\_\+file\+\_\+name)
 \item 
-static std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase_1_1IoUtils_aa3febde93be63054c29b51e135e87a2a}{read\+Col\+Vector}} (std\+::string input\+\_\+file\+\_\+name)
-\item 
 static std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classbase_1_1IoUtils_a2b9a34c5a0bf9f63bfc4a04db99f6f70}{read\+Vector\+Of\+Vectors}} (std\+::string input\+\_\+file\+\_\+name)
 \item 
 static std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \mbox{\hyperlink{classbase_1_1IoUtils_abf955712302670d73bd5222a5a709be5}{read\+Multiline}} (std\+::string input\+\_\+file\+\_\+name, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} num\+\_\+lines\+\_\+for\+\_\+multiline, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} max\+\_\+traj=1000)
@@ -90,12 +88,6 @@ static std\+::string \mbox{\hyperlink{classbase_1_1IoUtils_ac821bc085f002e1ded21
 \doxysubsubsection{\texorpdfstring{isPathAbsolute()}{isPathAbsolute()}}
 {\footnotesize\ttfamily bool base\+::\+Io\+Utils\+::is\+Path\+Absolute (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\mbox{\Hypertarget{classbase_1_1IoUtils_aa3febde93be63054c29b51e135e87a2a}\label{classbase_1_1IoUtils_aa3febde93be63054c29b51e135e87a2a}} 
-\index{base::IoUtils@{base::IoUtils}!readColVector@{readColVector}}
-\index{readColVector@{readColVector}!base::IoUtils@{base::IoUtils}}
-\doxysubsubsection{\texorpdfstring{readColVector()}{readColVector()}}
-{\footnotesize\ttfamily std\+::vector$<$ double $>$ base\+::\+Io\+Utils\+::read\+Col\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
 \mbox{\Hypertarget{classbase_1_1IoUtils_abf955712302670d73bd5222a5a709be5}\label{classbase_1_1IoUtils_abf955712302670d73bd5222a5a709be5}} 
 \index{base::IoUtils@{base::IoUtils}!readMultiline@{readMultiline}}
 \index{readMultiline@{readMultiline}!base::IoUtils@{base::IoUtils}}
@@ -141,22 +133,6 @@ static void base\+::\+Io\+Utils\+::write\+Vector\+Col (\begin{DoxyParamCaption}\
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 static void base\+::\+Io\+Utils\+::write\+Vector\+Of\+Vectors (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+file\+\_\+name,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{out\+\_\+vectors,  }\item[{bool}]{transposed = {\ttfamily false},  }\item[{std\+::ios\+\_\+base\+::openmode}]{mode = {\ttfamily std\+:\+:ios\+\_\+base\+:\+:out} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-Writes a vector of vectors to a file. 
-\begin{DoxyTemplParams}{Template Parameters}
-{\em T} & the type of data to be written \\
-\hline
-\end{DoxyTemplParams}
-
-\begin{DoxyParams}{Parameters}
-{\em output\+\_\+file\+\_\+name} & \\
-\hline
-{\em out\+\_\+vectors} & \\
-\hline
-{\em transposed} & indicates if the matrix to be written needs to be transposed \\
-\hline
-{\em mode} & indicates the mode in which the destimation file needs to be open. In particular if the new data should overwrite its current content or if it should append the new content. \\
-\hline
-\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

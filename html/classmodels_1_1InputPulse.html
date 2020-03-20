@@ -83,7 +83,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d298a3cbf460d181818d1e70921aa41"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1InputPulse.html#a5d298a3cbf460d181818d1e70921aa41">~InputPulse</a> ()</td></tr>
 <tr class="separator:a5d298a3cbf460d181818d1e70921aa41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf3da2e9f8c2be70126aa5e715dcd042"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1InputPulse.html#abf3da2e9f8c2be70126aa5e715dcd042">getDisContTimes</a> ()</td></tr>
-<tr class="memdesc:abf3da2e9f8c2be70126aa5e715dcd042"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the timpoints of all beginnings and endings of each pulse.  <a href="classmodels_1_1InputPulse.html#abf3da2e9f8c2be70126aa5e715dcd042">More...</a><br /></td></tr>
 <tr class="separator:abf3da2e9f8c2be70126aa5e715dcd042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741fc1e74c6b5cf332c8917f78fc4dfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1InputPulse.html#a741fc1e74c6b5cf332c8917f78fc4dfb">pulseActive</a> (double t)</td></tr>
 <tr class="separator:a741fc1e74c6b5cf332c8917f78fc4dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,9 +100,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ae2695610d685553ac4b898dc319e54b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1InputPulse.html#ae2695610d685553ac4b898dc319e54b9">parameter_index</a></td></tr>
 <tr class="separator:ae2695610d685553ac4b898dc319e54b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class implements the input pulses for different experiments. Each <a class="el" href="classmodels_1_1InputPulse.html">InputPulse</a> contains information about the input parameter, which is the parameter to be modified by the <a class="el" href="classmodels_1_1InputPulse.html">InputPulse</a> and information about the time during which the pulse should be applied. It also containes the value of the input. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0877c61bc2793d848b5d60db84170435"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0877c61bc2793d848b5d60db84170435">&#9670;&nbsp;</a></span>InputPulse()</h2>
 
@@ -163,8 +160,6 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function returns the timpoints of all beginnings and endings of each pulse. </p>
-
 </div>
 </div>
 <a id="a741fc1e74c6b5cf332c8917f78fc4dfb"></a>
@@ -182,13 +177,6 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Indicates if the pulse is active at a particular time <code>t</code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">t</td><td>The time for which the input is checked. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the pulse is active at time <code>t</code> </dd></dl>
 
 </div>
 </div>

@@ -151,15 +151,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Performs a binary search and returns the iterator pointing to the element before entry </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">begin</td><td></td></tr>
-    <tr><td class="paramname">end</td><td></td></tr>
-    <tr><td class="paramname">entry</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -202,15 +193,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Performs a binary search and returns the iterator pointing to the element after entry </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">begin</td><td></td></tr>
-    <tr><td class="paramname">end</td><td></td></tr>
-    <tr><td class="paramname">entry</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -309,14 +291,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compute the log of the difference of two number that are both given as logarithms </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">log_1</td><td></td></tr>
-    <tr><td class="paramname">log_2</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>log(exp(log_1) - exp(log_2)) </dd></dl>
 
 </div>
 </div>
@@ -379,14 +353,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Finds the first element in a vector that contains an element larger than entry </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vec</td><td></td></tr>
-    <tr><td class="paramname">entry</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>returns the index of the entry of interest </dd></dl>
 
 </div>
 </div>
@@ -423,14 +389,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Finds the last element in a vector that contains an element smaller than entry </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vec</td><td></td></tr>
-    <tr><td class="paramname">entry</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>returns the index of the entry of interest </dd></dl>
 
 </div>
 </div>
@@ -485,13 +443,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes the sum of a vector of numbers, assuming they are all positive </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">log_s</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -534,15 +485,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes the sum of a vector of numbers, with different signs </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">log_s</td><td></td></tr>
-    <tr><td class="paramname">signs</td><td></td></tr>
-    <tr><td class="paramname">max_log</td><td>the log of the largest of the numbers to be added </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -597,16 +539,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes the sum of a vector of numbers, with different signs </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">log_s</td><td></td></tr>
-    <tr><td class="paramname">signs</td><td></td></tr>
-    <tr><td class="paramname">max_log</td><td>the log of the largest of the numbers to be added </td></tr>
-    <tr><td class="paramname">log_result</td><td></td></tr>
-    <tr><td class="paramname">sign_result</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -643,14 +575,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes the sum of a vector of numbers, with different signs </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logs</td><td>the logs of the numbers to be added </td></tr>
-    <tr><td class="paramname">signs</td><td>the sign of each number </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -699,15 +623,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes the sum of a vector of numbers </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logs</td><td>the logs of the numbers to be added </td></tr>
-    <tr><td class="paramname">signs</td><td>the sign of each number </td></tr>
-    <tr><td class="paramname">log_result</td><td>the log of the sum of all of the numbers </td></tr>
-    <tr><td class="paramname">sign_result</td><td>the sign of the sum of all of the number </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -744,14 +659,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes the sum of a vector of numbers, assuming they are all positive </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logs</td><td></td></tr>
-    <tr><td class="paramname">max_log</td><td>the log of the largest of the numbers to be added </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -788,14 +695,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compute the log of the sum of two number that are both given as logarithms </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">log_1</td><td></td></tr>
-    <tr><td class="paramname">log_2</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>log(exp(log_1) + exp(log_2)) </dd></dl>
 
 </div>
 </div>

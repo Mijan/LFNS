@@ -30,17 +30,17 @@ Collaboration diagram for models\+::Chemical\+Reaction\+Network\+:\nopagebreak
 virtual \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_addae57e4772b95a61e0824aca743ddcb}{$\sim$\+Chemical\+Reaction\+Network}} ()
 \item 
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a624fab13d0f4aa5034aa9ee0ec007d1b}{update\+Propensities}} (std\+::vector$<$ double $>$ \&propensities, std\+::vector$<$ double $>$ \&state, double t)
-\begin{DoxyCompactList}\small\item\em function to update propensities \end{DoxyCompactList}\item 
+\item 
 \mbox{\hyperlink{namespacemodels_acda160e6ee95b4f58f5cdfdcc54c7658}{Propensity\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a474400a0b2a3e8b5b4df1151fafab7b1}{get\+Propensity\+Fct}} ()
-\begin{DoxyCompactList}\small\item\em Function pointer to propensity function. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a6d8a383d59deb00ea0e91c1164465bde}{fire\+Reaction}} (std\+::vector$<$ double $>$ \&state, \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} reaction\+\_\+index)
-\begin{DoxyCompactList}\small\item\em fires the reaction corresponding to reaction\+\_\+index and updates the state \end{DoxyCompactList}\item 
+\item 
 \mbox{\hyperlink{namespacemodels_a3ece1335ccdfcc83fd0f8c0d4a094383}{Reaction\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a77a91328abf9066f571aa412536230f0}{get\+Reaction\+Fct}} ()
-\begin{DoxyCompactList}\small\item\em Function pointer to reaction function. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a89f297f8b807d7dab083fc9c7987b61e}{rhs}} (double $\ast$dx, const double $\ast$state, double t)
-\begin{DoxyCompactList}\small\item\em evaluates the right hand side function for the ode formulation of the chemical reaction network \end{DoxyCompactList}\item 
+\item 
 \mbox{\hyperlink{namespacemodels_abf7d50a7bfdaf23ec8d289f279b696c1}{Rhs\+Fct\+\_\+ptr}} \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a1349d487353cbf774db46376c620a070}{get\+Rhs\+Fct}} ()
-\begin{DoxyCompactList}\small\item\em Function pointer to right hand side function. \end{DoxyCompactList}\item 
+\item 
 std\+::size\+\_\+t \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a05811f5bc57889aae18fcce73c19d794}{get\+Num\+Reactions}} ()
 \item 
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a1cfb92c980cc75fc880d7dcad5c53849}{\+\_\+initialize}} ()
@@ -50,18 +50,18 @@ void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a73a4f3346b863079d0
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a9644852944676b953022d676bb7c90d5}{set\+Stoch\+States\+For\+Hybrid\+Model}} (std\+::vector$<$ std\+::string $>$ stoch\+\_\+state\+\_\+name)
 \item 
 std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a9dcdc26af336526d22da7ce90281c9d7}{get\+Stoch\+Indices}} ()
-\begin{DoxyCompactList}\small\item\em Getter function for the indices of the species that are treated stochastically. \end{DoxyCompactList}\item 
+\item 
 std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_aab0559068ba63d02ecb76deda37bba8b}{get\+Det\+Species\+Indices}} ()
-\begin{DoxyCompactList}\small\item\em Getter function for the indices of the species that are treated deterministically. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a4e450820210184733f67e786108812d7}{print\+Info}} (std\+::ostream \&os) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a2f41d186c279d35e390d3693add2e323}{\+\_\+create\+Propensity\+Parsers}} ()
-\begin{DoxyCompactList}\small\item\em creates the parser objects for the propensities from the strings provided in the model data objects \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a9f6ee5cbecc1a1415a5fa08295941197}{\+\_\+create\+Rhs\+Parsers}} ()
-\begin{DoxyCompactList}\small\item\em creates the parser objects for the right hand side function from the strings provided in the model data objects \end{DoxyCompactList}\item 
+\item 
 std\+::string \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_aec1e7f1fe7434ca59cda5f710fc58bff}{\+\_\+get\+Stoch\+Mass\+Action\+Propensity}} (std\+::size\+\_\+t reaction\+\_\+nbr)
 \item 
 std\+::map$<$ size\+\_\+t, std\+::vector$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a1119a91c5672483dcd33d4c02366dfff}{\+\_\+get\+Reaction\+By\+Species}} () const
@@ -74,22 +74,19 @@ std\+::string \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a22a2dad92
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a9107dc50fb6e064e4235c8ba5196e1e7}{\+\_\+initialized}}
-\begin{DoxyCompactList}\small\item\em indicates if the parsers have been identified \end{DoxyCompactList}\item 
+\item 
 std\+::vector$<$ mu\+::\+Parser $>$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_ac42455a3e8d6412c223d3164f59b1c2d}{\+\_\+propensity\+\_\+parsers}}
-\begin{DoxyCompactList}\small\item\em Parsers for the propensities. \end{DoxyCompactList}\item 
+\item 
 std\+::vector$<$ mu\+::\+Parser $>$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a96619584cd17fd7cc768672e0c33de21}{\+\_\+rhs\+\_\+parsers}}
-\begin{DoxyCompactList}\small\item\em Parsers for the right hand side. \end{DoxyCompactList}\item 
+\item 
 \mbox{\hyperlink{classmodels_1_1ModelReactionData}{Model\+Reaction\+Data}} \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a1be79fdff06fe4d34bdd24b521b8ae81}{\+\_\+model\+\_\+data}}
-\begin{DoxyCompactList}\small\item\em Reaction data as read from the dynamics file. \end{DoxyCompactList}\item 
+\item 
 std\+::vector$<$ bool $>$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_aa0b5081c4ff1716452198d3d9ff9962d}{\+\_\+det\+\_\+index\+\_\+hybrid\+\_\+model}}
-\begin{DoxyCompactList}\small\item\em Indices of the deterministic species for a hybrid model. \end{DoxyCompactList}\item 
+\item 
 std\+::vector$<$ bool $>$ \mbox{\hyperlink{classmodels_1_1ChemicalReactionNetwork_a0d7bd94ff15f55d0802c3ea8b6dce5a6}{\+\_\+active\+\_\+reactions\+\_\+hybrid\+\_\+model}}
-\begin{DoxyCompactList}\small\item\em indices of the reactions that are treated stochastically for hybrid models \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
-
-\doxysubsection{Detailed Description}
-An implementation of a chemical reaction network. This class contains pointers to all the parameters and all the species of the network, has a list of all the reactions and has functions to provide access to all the stored information as well as provide the data to be simulated by and O\+DE solver, Hybrid solver or S\+SA 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a9e1c70a29f1cfc283a32db33879a7856}\label{classmodels_1_1ChemicalReactionNetwork_a9e1c70a29f1cfc283a32db33879a7856}} 
@@ -113,19 +110,11 @@ An implementation of a chemical reaction network. This class contains pointers t
 \doxysubsubsection{\texorpdfstring{\_createPropensityParsers()}{\_createPropensityParsers()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::\+\_\+create\+Propensity\+Parsers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-creates the parser objects for the propensities from the strings provided in the model data objects 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a9f6ee5cbecc1a1415a5fa08295941197}\label{classmodels_1_1ChemicalReactionNetwork_a9f6ee5cbecc1a1415a5fa08295941197}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_createRhsParsers@{\_createRhsParsers}}
 \index{\_createRhsParsers@{\_createRhsParsers}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{\_createRhsParsers()}{\_createRhsParsers()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::\+\_\+create\+Rhs\+Parsers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-creates the parser objects for the right hand side function from the strings provided in the model data objects 
 
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a22a2dad9256b409c432e95cd1cc5c910}\label{classmodels_1_1ChemicalReactionNetwork_a22a2dad9256b409c432e95cd1cc5c910}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_getDetMassActionKinetics@{\_getDetMassActionKinetics}}
@@ -133,14 +122,6 @@ creates the parser objects for the right hand side function from the strings pro
 \doxysubsubsection{\texorpdfstring{\_getDetMassActionKinetics()}{\_getDetMassActionKinetics()}}
 {\footnotesize\ttfamily std\+::string models\+::\+Chemical\+Reaction\+Network\+::\+\_\+get\+Det\+Mass\+Action\+Kinetics (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{reaction\+\_\+nbr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-creates the deterministic mass action propensity string for a given reaction. For this it only uses the information about stoichiometry of the given reaction and the name of the parameter. 
-\begin{DoxyParams}{Parameters}
-{\em reaction\+\_\+nbr} & the index of the reaction for which the mass action propensity is required. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-the mass action propensity string for the required reaction 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a511c3d9d52e2547dac424cb4e37a94d8}\label{classmodels_1_1ChemicalReactionNetwork_a511c3d9d52e2547dac424cb4e37a94d8}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_getOdeEquationForSpecies@{\_getOdeEquationForSpecies}}
 \index{\_getOdeEquationForSpecies@{\_getOdeEquationForSpecies}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
@@ -153,30 +134,19 @@ the mass action propensity string for the required reaction
 \doxysubsubsection{\texorpdfstring{\_getReactionBySpecies()}{\_getReactionBySpecies()}}
 {\footnotesize\ttfamily std\+::map$<$ size\+\_\+t, std\+::vector$<$ size\+\_\+t $>$ $>$ models\+::\+Chemical\+Reaction\+Network\+::\+\_\+get\+Reaction\+By\+Species (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
-Proved a map of involved reactions by species \begin{DoxyReturn}{Returns}
-a map with the species as keys and a vector of indices of all the reactions that involve the species in key 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_aec1e7f1fe7434ca59cda5f710fc58bff}\label{classmodels_1_1ChemicalReactionNetwork_aec1e7f1fe7434ca59cda5f710fc58bff}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_getStochMassActionPropensity@{\_getStochMassActionPropensity}}
 \index{\_getStochMassActionPropensity@{\_getStochMassActionPropensity}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{\_getStochMassActionPropensity()}{\_getStochMassActionPropensity()}}
 {\footnotesize\ttfamily std\+::string models\+::\+Chemical\+Reaction\+Network\+::\+\_\+get\+Stoch\+Mass\+Action\+Propensity (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{reaction\+\_\+nbr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-creates the stochastic mass action propensity string for a given reaction. For this it only uses the information about stoichiometry of the given reaction and the name of the parameter. 
-\begin{DoxyParams}{Parameters}
-{\em reaction\+\_\+nbr} & the index of the reaction for which the mass action propensity is required. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-the mass action propensity string for the required reaction 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a1cfb92c980cc75fc880d7dcad5c53849}\label{classmodels_1_1ChemicalReactionNetwork_a1cfb92c980cc75fc880d7dcad5c53849}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_initialize@{\_initialize}}
 \index{\_initialize@{\_initialize}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{\_initialize()}{\_initialize()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-This function initializes the chemical reaction network by creating all the parser objects and connects them to the proper parameter and species pointers. This function should only be called once all the pointers for all the parameters and species pointers have been set, otherwise the parsers cannot be created 
+
 
 Implements \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a906f920881a5012beaaa8c7c3379c387}{models\+::\+Parser\+Base\+Object}}.
 
@@ -186,19 +156,11 @@ Implements \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a906f920881a5012beaa
 \doxysubsubsection{\texorpdfstring{fireReaction()}{fireReaction()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::fire\+Reaction (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{state,  }\item[{\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{reaction\+\_\+index }\end{DoxyParamCaption})}
 
-
-
-fires the reaction corresponding to reaction\+\_\+index and updates the state 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_aab0559068ba63d02ecb76deda37bba8b}\label{classmodels_1_1ChemicalReactionNetwork_aab0559068ba63d02ecb76deda37bba8b}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!getDetSpeciesIndices@{getDetSpeciesIndices}}
 \index{getDetSpeciesIndices@{getDetSpeciesIndices}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{getDetSpeciesIndices()}{getDetSpeciesIndices()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ models\+::\+Chemical\+Reaction\+Network\+::get\+Det\+Species\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Getter function for the indices of the species that are treated deterministically. 
 
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a05811f5bc57889aae18fcce73c19d794}\label{classmodels_1_1ChemicalReactionNetwork_a05811f5bc57889aae18fcce73c19d794}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!getNumReactions@{getNumReactions}}
@@ -212,19 +174,11 @@ Getter function for the indices of the species that are treated deterministicall
 \doxysubsubsection{\texorpdfstring{getPropensityFct()}{getPropensityFct()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_acda160e6ee95b4f58f5cdfdcc54c7658}{Propensity\+Fct\+\_\+ptr}} models\+::\+Chemical\+Reaction\+Network\+::get\+Propensity\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Function pointer to propensity function. 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a77a91328abf9066f571aa412536230f0}\label{classmodels_1_1ChemicalReactionNetwork_a77a91328abf9066f571aa412536230f0}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!getReactionFct@{getReactionFct}}
 \index{getReactionFct@{getReactionFct}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{getReactionFct()}{getReactionFct()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_a3ece1335ccdfcc83fd0f8c0d4a094383}{Reaction\+Fct\+\_\+ptr}} models\+::\+Chemical\+Reaction\+Network\+::get\+Reaction\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Function pointer to reaction function. 
 
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a1349d487353cbf774db46376c620a070}\label{classmodels_1_1ChemicalReactionNetwork_a1349d487353cbf774db46376c620a070}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!getRhsFct@{getRhsFct}}
@@ -232,19 +186,11 @@ Function pointer to reaction function.
 \doxysubsubsection{\texorpdfstring{getRhsFct()}{getRhsFct()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemodels_abf7d50a7bfdaf23ec8d289f279b696c1}{Rhs\+Fct\+\_\+ptr}} models\+::\+Chemical\+Reaction\+Network\+::get\+Rhs\+Fct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Function pointer to right hand side function. 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a9dcdc26af336526d22da7ce90281c9d7}\label{classmodels_1_1ChemicalReactionNetwork_a9dcdc26af336526d22da7ce90281c9d7}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!getStochIndices@{getStochIndices}}
 \index{getStochIndices@{getStochIndices}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{getStochIndices()}{getStochIndices()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} $>$ models\+::\+Chemical\+Reaction\+Network\+::get\+Stoch\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Getter function for the indices of the species that are treated stochastically. 
 
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a4e450820210184733f67e786108812d7}\label{classmodels_1_1ChemicalReactionNetwork_a4e450820210184733f67e786108812d7}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!printInfo@{printInfo}}
@@ -252,11 +198,6 @@ Getter function for the indices of the species that are treated stochastically.
 \doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::print\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Prints all the parameter and species names to a output stream 
-\begin{DoxyParams}{Parameters}
-{\em os} & the stream to which the output will be written. \\
-\hline
-\end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a4a862b5c64460eb8ae4969ab66509c0e}{models\+::\+Parser\+Base\+Object}}.
@@ -267,31 +208,23 @@ Reimplemented from \mbox{\hyperlink{classmodels_1_1ParserBaseObject_a4a862b5c644
 \doxysubsubsection{\texorpdfstring{rhs()}{rhs()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::rhs (\begin{DoxyParamCaption}\item[{double $\ast$}]{dx,  }\item[{const double $\ast$}]{state,  }\item[{double}]{t }\end{DoxyParamCaption})}
 
-
-
-evaluates the right hand side function for the ode formulation of the chemical reaction network 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a73a4f3346b863079d0f1e19a632efba3}\label{classmodels_1_1ChemicalReactionNetwork_a73a4f3346b863079d0f1e19a632efba3}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!setDetStatesForHybridModel@{setDetStatesForHybridModel}}
 \index{setDetStatesForHybridModel@{setDetStatesForHybridModel}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{setDetStatesForHybridModel()}{setDetStatesForHybridModel()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::set\+Det\+States\+For\+Hybrid\+Model (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{det\+\_\+state\+\_\+names }\end{DoxyParamCaption})}
 
-This function defines which of the states are considered to be governed by deterministic dynamics when simulating using a hybrid simulator. \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a9644852944676b953022d676bb7c90d5}\label{classmodels_1_1ChemicalReactionNetwork_a9644852944676b953022d676bb7c90d5}} 
+\mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a9644852944676b953022d676bb7c90d5}\label{classmodels_1_1ChemicalReactionNetwork_a9644852944676b953022d676bb7c90d5}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!setStochStatesForHybridModel@{setStochStatesForHybridModel}}
 \index{setStochStatesForHybridModel@{setStochStatesForHybridModel}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{setStochStatesForHybridModel()}{setStochStatesForHybridModel()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::set\+Stoch\+States\+For\+Hybrid\+Model (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{stoch\+\_\+state\+\_\+name }\end{DoxyParamCaption})}
 
-This function defines which of the states are considered to be governed by stochastic dynamics when simulating using a hybrid simulator. \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a624fab13d0f4aa5034aa9ee0ec007d1b}\label{classmodels_1_1ChemicalReactionNetwork_a624fab13d0f4aa5034aa9ee0ec007d1b}} 
+\mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a624fab13d0f4aa5034aa9ee0ec007d1b}\label{classmodels_1_1ChemicalReactionNetwork_a624fab13d0f4aa5034aa9ee0ec007d1b}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!updatePropensities@{updatePropensities}}
 \index{updatePropensities@{updatePropensities}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{updatePropensities()}{updatePropensities()}}
 {\footnotesize\ttfamily void models\+::\+Chemical\+Reaction\+Network\+::update\+Propensities (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{propensities,  }\item[{std\+::vector$<$ double $>$ \&}]{state,  }\item[{double}]{t }\end{DoxyParamCaption})}
-
-
-
-function to update propensities 
 
 
 
@@ -302,19 +235,11 @@ function to update propensities
 \doxysubsubsection{\texorpdfstring{\_active\_reactions\_hybrid\_model}{\_active\_reactions\_hybrid\_model}}
 {\footnotesize\ttfamily std\+::vector$<$bool$>$ models\+::\+Chemical\+Reaction\+Network\+::\+\_\+active\+\_\+reactions\+\_\+hybrid\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-indices of the reactions that are treated stochastically for hybrid models 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_aa0b5081c4ff1716452198d3d9ff9962d}\label{classmodels_1_1ChemicalReactionNetwork_aa0b5081c4ff1716452198d3d9ff9962d}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_det\_index\_hybrid\_model@{\_det\_index\_hybrid\_model}}
 \index{\_det\_index\_hybrid\_model@{\_det\_index\_hybrid\_model}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{\_det\_index\_hybrid\_model}{\_det\_index\_hybrid\_model}}
 {\footnotesize\ttfamily std\+::vector$<$bool$>$ models\+::\+Chemical\+Reaction\+Network\+::\+\_\+det\+\_\+index\+\_\+hybrid\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Indices of the deterministic species for a hybrid model. 
 
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a9107dc50fb6e064e4235c8ba5196e1e7}\label{classmodels_1_1ChemicalReactionNetwork_a9107dc50fb6e064e4235c8ba5196e1e7}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_initialized@{\_initialized}}
@@ -322,19 +247,11 @@ Indices of the deterministic species for a hybrid model.
 \doxysubsubsection{\texorpdfstring{\_initialized}{\_initialized}}
 {\footnotesize\ttfamily bool models\+::\+Chemical\+Reaction\+Network\+::\+\_\+initialized\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-indicates if the parsers have been identified 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a1be79fdff06fe4d34bdd24b521b8ae81}\label{classmodels_1_1ChemicalReactionNetwork_a1be79fdff06fe4d34bdd24b521b8ae81}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_model\_data@{\_model\_data}}
 \index{\_model\_data@{\_model\_data}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{\_model\_data}{\_model\_data}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classmodels_1_1ModelReactionData}{Model\+Reaction\+Data}} models\+::\+Chemical\+Reaction\+Network\+::\+\_\+model\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Reaction data as read from the dynamics file. 
 
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_ac42455a3e8d6412c223d3164f59b1c2d}\label{classmodels_1_1ChemicalReactionNetwork_ac42455a3e8d6412c223d3164f59b1c2d}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_propensity\_parsers@{\_propensity\_parsers}}
@@ -342,19 +259,11 @@ Reaction data as read from the dynamics file.
 \doxysubsubsection{\texorpdfstring{\_propensity\_parsers}{\_propensity\_parsers}}
 {\footnotesize\ttfamily std\+::vector$<$mu\+::\+Parser$>$ models\+::\+Chemical\+Reaction\+Network\+::\+\_\+propensity\+\_\+parsers\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-Parsers for the propensities. 
-
 \mbox{\Hypertarget{classmodels_1_1ChemicalReactionNetwork_a96619584cd17fd7cc768672e0c33de21}\label{classmodels_1_1ChemicalReactionNetwork_a96619584cd17fd7cc768672e0c33de21}} 
 \index{models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}!\_rhs\_parsers@{\_rhs\_parsers}}
 \index{\_rhs\_parsers@{\_rhs\_parsers}!models::ChemicalReactionNetwork@{models::ChemicalReactionNetwork}}
 \doxysubsubsection{\texorpdfstring{\_rhs\_parsers}{\_rhs\_parsers}}
 {\footnotesize\ttfamily std\+::vector$<$mu\+::\+Parser$>$ models\+::\+Chemical\+Reaction\+Network\+::\+\_\+rhs\+\_\+parsers\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Parsers for the right hand side. 
 
 
 

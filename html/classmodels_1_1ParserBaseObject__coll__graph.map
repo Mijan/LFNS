@@ -1,6 +1,6 @@
 <map id="models::ParserBaseObject" name="models::ParserBaseObject">
-<area shape="rect" id="node1" title="This class extends the BaseObject to be parsed from a file." alt="" coords="72,184,264,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="72,184,264,211"/>
 <area shape="rect" id="node2" href="$classmodels_1_1BaseObject.html" title=" " alt="" coords="5,95,157,121"/>
-<area shape="rect" id="node3" href="$classmodels_1_1BaseData.html" title="The base data needed for constructing the base objects. It requires a list of parameters and a list o..." alt="" coords="97,5,239,32"/>
+<area shape="rect" id="node3" href="$classmodels_1_1BaseData.html" title=" " alt="" coords="97,5,239,32"/>
 <area shape="rect" id="node4" href="$classmodels_1_1ParserData.html" title=" " alt="" coords="181,95,331,121"/>
 </map>

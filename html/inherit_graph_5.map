@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" title=" " alt="" coords="5,81,92,108"/>
-<area shape="rect" id="node2" href="$classio_1_1ConfigFileException.html" title="An extension that can be thrown when the config file contains syntax errors." alt="" coords="161,5,332,32"/>
+<area shape="rect" id="node2" href="$classio_1_1ConfigFileException.html" title=" " alt="" coords="161,5,332,32"/>
 <area shape="rect" id="node3" href="$classio_1_1ReaderException.html" title=" " alt="" coords="171,56,323,83"/>
 <area shape="rect" id="node5" href="$classmodels_1_1ModelException.html" title=" " alt="" coords="155,107,338,133"/>
 <area shape="rect" id="node6" href="$classsimulator_1_1SimulationAborted.html" title=" " alt="" coords="140,157,353,184"/>
