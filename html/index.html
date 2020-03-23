@@ -68,12 +68,12 @@ $(function() {
 <div class="textblock"><h1><a class="anchor" id="General"></a>
 Information</h1>
 <dl class="section author"><dt>Author</dt><dd>Jan Mikelson <a href="#" onclick="location.href='mai'+'lto:'+'jan'+'.m'+'ike'+'ls'+'on@'+'bs'+'se.'+'et'+'hz.'+'ch'; return false;">jan.m<span style="display: none;">.nosp@m.</span>ikel<span style="display: none;">.nosp@m.</span>son@b<span style="display: none;">.nosp@m.</span>sse.<span style="display: none;">.nosp@m.</span>ethz.<span style="display: none;">.nosp@m.</span>ch</a></dd></dl>
-<p>This toolbox provides mainly and implementation of the likelihood-free Nested Sampling algorithm as described in Mikelson, Jan, and Mustafa Khammash. "Likelihood-free nested sampling for biochemical reaction networks." bioRxiv (2019): 564047.</p>
+<p>This toolbox provides mainly an implementation of the likelihood-free Nested Sampling algorithm as described in Mikelson, Jan, and Mustafa Khammash. "Likelihood-free nested sampling for biochemical reaction networks." bioRxiv (2019): 564047.</p>
 <p>During the development of the LFNS algorithm several other features had to be implemented as well, such as the simulation of deterministic, stochastic and hybrid models of chemical reaction networks, particle filters and various sampling schemes. All these subroutines and methods are collected in this toolbox.</p>
 <h1><a class="anchor" id="Installation"></a>
 Installation</h1>
-<h2><a class="anchor" id="Required"></a>
-Libraries</h2>
+<h2><a class="anchor" id="Required_Libraries"></a>
+Required_Libraries</h2>
 <p>The LFNS toolbox depends on several packages that are all provided in the <a href="https://github.com/Mijan/LFNS/tree/publishable/required_packages">required_packages</a> folder, but can also be downloaded from their corresponding websites</p><ul>
 <li>The <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a> library. Very powerful linear algebra library that provides very convenient matrix and vector classes</li>
 <li>The <a href="https://beltoforion.de/article.php?a=muparser">muParser</a> library. A parsing library that simplifies parsing mathematical formulas from text files.</li>
@@ -81,32 +81,53 @@ Libraries</h2>
 <li>The <a href="https://github.com/Mijan/DPGMM">DP-GMM</a> library. A library that implements density estimation through a Gaussian Mixture.</li>
 <li>The <a href="https://computing.llnl.gov/projects/sundials/cvode">cvode</a> library.</li>
 </ul>
-<h2><a class="anchor" id="Running"></a>
-cmake</h2>
+<h2><a class="anchor" id="setting_up_folder"></a>
+Setting up installation folder</h2>
 <p>The installation is based on cmake, which means cmake needs to be installed &lt;a href="<a href="https://cmake.org/'">https://cmake.org/'</a>&gt;<a href="https://cmake.org/">https://cmake.org/</a>. To install the LFNS-toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of an installation procedure on a linux system.</p>
-<p>First, we pick a folder to which the toolbox and the required libraries are to be installed. In this example we pick the location to be /usr/local. Note that on most linux systems this folder will already exists and will be appropriately linked, so the following steps will most likely not be necessary.</p><ul>
-<li>First create the folder, including subfolders for libraries, header files and executables. Some of these commands may require super user privileges (use these commands with "sudo") <div class="fragment"><div class="line">sudo mkdir /usr/local /usr/local/lib /usr/local/include /usr/local/bin</div>
+<p>First, we pick a folder to which the toolbox and the required libraries are to be installed. We will denote this folder with /home/install_dest. On Linux based systems we would usually use the folder /usr/local. On most Linux distributions this folder is already existent and properly linked. I</p><ul>
+<li>In the case where the install folder does not exist yet, we create the folder including subfolders for libraries, header files and executables. So assuming we want to install the toolbox into the folder /home/install_dest we type <div class="fragment"><div class="line">mkdir  /home/install_dest/lib /home/install_dest/include /home/install_dest/bin</div>
 </div><!-- fragment --></li>
-<li>Make sure this folder is linked whenever a new termina is opemend. For this open the .bashrc file in the home directory and add the following lines. <div class="fragment"><div class="line">export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH</div>
-<div class="line">export LIBRARY_PATH=/usr/local/lib:$LIBRARY_PATH</div>
-<div class="line">export CPATH=/usr/local/include:$CPATH</div>
-<div class="line">export PATH=/usr/local/bin:$PATH</div>
-</div><!-- fragment --> -Then install all required libraries. For this assume that the folder containing the LFNS toolbox is in ~/LFNS. The libraries are all installed using cmake. For this change to each of the build subdirectories and call cmake and make install <div class="fragment"><div class="line">cd ~/LFNS/requred_packages/cvode-5.0.0/build</div>
+<li>Make sure this folder is linked whenever a new terminal is opened. For this open the .bashrc file in the home directory and add the following lines. <div class="fragment"><div class="line">export LD_LIBRARY_PATH=/home/install_dest/lib:$LD_LIBRARY_PATH</div>
+<div class="line">export LIBRARY_PATH=/home/install_dest/lib:$LIBRARY_PATH</div>
+<div class="line">export CPATH=/home/install_dest/include:$CPATH</div>
+<div class="line">export PATH=/home/install_dest/bin:$PATH</div>
+</div><!-- fragment --></li>
+</ul>
+<h2><a class="anchor" id="install_required_libs"></a>
+Installing required libraries</h2>
+<ul>
+<li>Then install all required libraries. For this assume that the folder containing the LFNS toolbox is in /home/LFNS. The libraries are all installed using cmake. For this change to each of the build subdirectories and call cmake and make install <div class="fragment"><div class="line">cd /home/LFNS/requred_packages/cvode-5.0.0/build</div>
 <div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/</div>
 <div class="line">make install</div>
-</div><!-- fragment --> <div class="fragment"><div class="line">cd ~/LFNS/requred_packages/DP-GMM/build</div>
+</div><!-- fragment --> <div class="fragment"><div class="line">cd /home/LFNS/requred_packages/DP-GMM/build</div>
 <div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/</div>
 <div class="line">make install</div>
-</div><!-- fragment --> <div class="fragment"><div class="line">cd ~/LFNS/requred_packages/muparser-2.2.6.1/build</div>
+</div><!-- fragment --> <div class="fragment"><div class="line">cd /home/LFNS/requred_packages/muparser-2.2.6.1/build</div>
 <div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/</div>
 <div class="line">make install</div>
 </div><!-- fragment --> Eigen is a pure header library and can be either installed through the systems package manager (for Ubuntu for instance "apt-get install eigen") or the content of the eigen.34 folder can just be copied in the /usr/local/include directory.</li>
-<li>After all these libraries have been installed, the LFNS toolbox can be installed by switching into the build directory and calling again cmake and make install <div class="fragment"><div class="line">cd ~/LFNS/build</div>
-<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/</div>
+</ul>
+<h2><a class="anchor" id="install_lfns"></a>
+Installing the LFNS toolbox</h2>
+<ul>
+<li>After all these libraries have been installed, the LFNS toolbox can be installed by switching into the build directory and calling again cmake and make install <div class="fragment"><div class="line">cd /home/LFNS/build</div>
+<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest</div>
 <div class="line">make install</div>
 </div><!-- fragment --> To check if everything has been installed correctly, try typing<div class="fragment"><div class="line">lfns_seq --help </div>
-</div><!-- fragment --> This should produce a help message. </li>
+</div><!-- fragment --> This should produce a help message.</li>
 </ul>
+<h1><a class="anchor" id="running_lfns"></a>
+Using the toolbox</h1>
+<p>Currently the toolbox provides four callable functions:</p><ul>
+<li><em>lfns_seq</em> runs the LFNS algorithm sequentially (i.e. using only one thread)</li>
+<li><em>lfns_mpi</em> runs the LFNS algorithm in parallel, using MPI.</li>
+<li><em>simulation</em> runs a simulation algorithm to simulate a ODE system, run the SSA algorithm or perform a hybrid simulation</li>
+<li><em>compute_likelihood</em> runs a particle filter to estimate the likelihood of a particular observation for a given model and a parameter vector</li>
+</ul>
+<p>In the following we will briefly outline how to use these commands. All these commands have in common that they take a configuration file as the first arguments, containing all the necessary information about the model under ocnsideration.</p>
+<h2><a class="anchor" id="config_file"></a>
+Configuration file</h2>
+<p>To run any of the above mentioned commands we need to provide a configuration file containing all the required information about the model, the data, parameter priors and so on. We will not describe the configuration file here in all detail, but will rather briefly outline their structure and refer to the examples <a href="https://github.com/Mijan/LFNS/tree/publishable/examples">here</a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

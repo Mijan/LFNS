@@ -2,10 +2,10 @@
 \begin{DoxyAuthor}{Author}
 Jan Mikelson \href{mailto:jan.mikelson@bsse.ethz.ch}{\texttt{ jan.\+mikelson@bsse.\+ethz.\+ch}}
 \end{DoxyAuthor}
-This toolbox provides mainly and implementation of the likelihood-\/free Nested Sampling algorithm as described in Mikelson, Jan, and Mustafa Khammash. \char`\"{}\+Likelihood-\/free nested sampling for biochemical reaction networks.\char`\"{} bio\+Rxiv (2019)\+: 564047.
+This toolbox provides mainly an implementation of the likelihood-\/free Nested Sampling algorithm as described in Mikelson, Jan, and Mustafa Khammash. \char`\"{}\+Likelihood-\/free nested sampling for biochemical reaction networks.\char`\"{} bio\+Rxiv (2019)\+: 564047.
 
 During the development of the L\+F\+NS algorithm several other features had to be implemented as well, such as the simulation of deterministic, stochastic and hybrid models of chemical reaction networks, particle filters and various sampling schemes. All these subroutines and methods are collected in this toolbox.\hypertarget{index_Installation}{}\doxysection{Installation}\label{index_Installation}
-\hypertarget{index_Required}{}\doxysubsection{Libraries}\label{index_Required}
+\hypertarget{index_Required_Libraries}{}\doxysubsection{Required\+\_\+\+Libraries}\label{index_Required_Libraries}
 The L\+F\+NS toolbox depends on several packages that are all provided in the \href{https://github.com/Mijan/LFNS/tree/publishable/required_packages}{\texttt{ required\+\_\+packages}} folder, but can also be downloaded from their corresponding websites
 \begin{DoxyItemize}
 \item The \href{http://eigen.tuxfamily.org/index.php?title=Main_Page}{\texttt{ Eigen}} library. Very powerful linear algebra library that provides very convenient matrix and vector classes
@@ -13,51 +13,68 @@ The L\+F\+NS toolbox depends on several packages that are all provided in the \h
 \item The \href{https://www.boost.org/}{\texttt{ boost}} library. General utility library.
 \item The \href{https://github.com/Mijan/DPGMM}{\texttt{ D\+P-\/\+G\+MM}} library. A library that implements density estimation through a Gaussian Mixture.
 \item The \href{https://computing.llnl.gov/projects/sundials/cvode}{\texttt{ cvode}} library.
-\end{DoxyItemize}\hypertarget{index_Running}{}\doxysubsection{cmake}\label{index_Running}
+\end{DoxyItemize}\hypertarget{index_setting_up_folder}{}\doxysubsection{Setting up installation folder}\label{index_setting_up_folder}
 The installation is based on cmake, which means cmake needs to be installed $<$a href="\href{https://cmake.org/'}{\texttt{ https\+://cmake.\+org/\textquotesingle{}}}$>$\href{https://cmake.org/}{\texttt{ https\+://cmake.\+org/}}. To install the L\+F\+N\+S-\/toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of an installation procedure on a linux system.
 
-First, we pick a folder to which the toolbox and the required libraries are to be installed. In this example we pick the location to be /usr/local. Note that on most linux systems this folder will already exists and will be appropriately linked, so the following steps will most likely not be necessary.
+First, we pick a folder to which the toolbox and the required libraries are to be installed. We will denote this folder with /home/install\+\_\+dest. On Linux based systems we would usually use the folder /usr/local. On most Linux distributions this folder is already existent and properly linked. I
 \begin{DoxyItemize}
-\item First create the folder, including subfolders for libraries, header files and executables. Some of these commands may require super user privileges (use these commands with \char`\"{}sudo\char`\"{}) 
+\item In the case where the install folder does not exist yet, we create the folder including subfolders for libraries, header files and executables. So assuming we want to install the toolbox into the folder /home/install\+\_\+dest we type 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{sudo mkdir /usr/local /usr/local/lib /usr/local/include /usr/local/bin}
+\DoxyCodeLine{mkdir  /home/install\_dest/lib /home/install\_dest/include /home/install\_dest/bin}
 \end{DoxyCode}
 
-\item Make sure this folder is linked whenever a new termina is opemend. For this open the .bashrc file in the home directory and add the following lines. 
+\item Make sure this folder is linked whenever a new terminal is opened. For this open the .bashrc file in the home directory and add the following lines. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{export LD\_LIBRARY\_PATH=/usr/local/lib:\$LD\_LIBRARY\_PATH}
-\DoxyCodeLine{export LIBRARY\_PATH=/usr/local/lib:\$LIBRARY\_PATH}
-\DoxyCodeLine{export CPATH=/usr/local/include:\$CPATH}
-\DoxyCodeLine{export PATH=/usr/local/bin:\$PATH}
+\DoxyCodeLine{export LD\_LIBRARY\_PATH=/home/install\_dest/lib:\$LD\_LIBRARY\_PATH}
+\DoxyCodeLine{export LIBRARY\_PATH=/home/install\_dest/lib:\$LIBRARY\_PATH}
+\DoxyCodeLine{export CPATH=/home/install\_dest/include:\$CPATH}
+\DoxyCodeLine{export PATH=/home/install\_dest/bin:\$PATH}
 \end{DoxyCode}
- -\/Then install all required libraries. For this assume that the folder containing the L\+F\+NS toolbox is in $\sim$/\+L\+F\+NS. The libraries are all installed using cmake. For this change to each of the build subdirectories and call cmake and make install 
+
+\end{DoxyItemize}\hypertarget{index_install_required_libs}{}\doxysubsection{Installing required libraries}\label{index_install_required_libs}
+
+\begin{DoxyItemize}
+\item Then install all required libraries. For this assume that the folder containing the L\+F\+NS toolbox is in /home/\+L\+F\+NS. The libraries are all installed using cmake. For this change to each of the build subdirectories and call cmake and make install 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{cd \string~/LFNS/requred\_packages/cvode-\/5.0.0/build}
+\DoxyCodeLine{cd /home/LFNS/requred\_packages/cvode-\/5.0.0/build}
 \DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
 \DoxyCodeLine{make install}
 \end{DoxyCode}
  
 \begin{DoxyCode}{0}
-\DoxyCodeLine{cd \string~/LFNS/requred\_packages/DP-\/GMM/build}
+\DoxyCodeLine{cd /home/LFNS/requred\_packages/DP-\/GMM/build}
 \DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
 \DoxyCodeLine{make install}
 \end{DoxyCode}
  
 \begin{DoxyCode}{0}
-\DoxyCodeLine{cd \string~/LFNS/requred\_packages/muparser-\/2.2.6.1/build}
+\DoxyCodeLine{cd /home/LFNS/requred\_packages/muparser-\/2.2.6.1/build}
 \DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
 \DoxyCodeLine{make install}
 \end{DoxyCode}
  Eigen is a pure header library and can be either installed through the systems package manager (for Ubuntu for instance \char`\"{}apt-\/get install eigen\char`\"{}) or the content of the eigen.\+34 folder can just be copied in the /usr/local/include directory.
+\end{DoxyItemize}\hypertarget{index_install_lfns}{}\doxysubsection{Installing the L\+F\+N\+S toolbox}\label{index_install_lfns}
+
+\begin{DoxyItemize}
 \item After all these libraries have been installed, the L\+F\+NS toolbox can be installed by switching into the build directory and calling again cmake and make install 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{cd \string~/LFNS/build}
-\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{cd /home/LFNS/build}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/home/install\_dest}
 \DoxyCodeLine{make install}
 \end{DoxyCode}
  To check if everything has been installed correctly, try typing
 \begin{DoxyCode}{0}
 \DoxyCodeLine{lfns\_seq -\/-\/help }
 \end{DoxyCode}
- This should produce a help message. 
+ This should produce a help message.
+\end{DoxyItemize}\hypertarget{index_running_lfns}{}\doxysection{Using the toolbox}\label{index_running_lfns}
+Currently the toolbox provides four callable functions\+:
+\begin{DoxyItemize}
+\item {\itshape lfns\+\_\+seq} runs the L\+F\+NS algorithm sequentially (i.\+e. using only one thread)
+\item {\itshape lfns\+\_\+mpi} runs the L\+F\+NS algorithm in parallel, using M\+PI.
+\item {\itshape simulation} runs a simulation algorithm to simulate a O\+DE system, run the S\+SA algorithm or perform a hybrid simulation
+\item {\itshape compute\+\_\+likelihood} runs a particle filter to estimate the likelihood of a particular observation for a given model and a parameter vector
 \end{DoxyItemize}
+
+In the following we will briefly outline how to use these commands. All these commands have in common that they take a configuration file as the first arguments, containing all the necessary information about the model under ocnsideration.\hypertarget{index_config_file}{}\doxysubsection{Configuration file}\label{index_config_file}
+To run any of the above mentioned commands we need to provide a configuration file containing all the required information about the model, the data, parameter priors and so on. We will not describe the configuration file here in all detail, but will rather briefly outline their structure and refer to the examples \href{https://github.com/Mijan/LFNS/tree/publishable/examples}{\texttt{ here}}. 

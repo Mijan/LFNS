@@ -8,7 +8,7 @@
  * \section General Information
  * \author Jan Mikelson <jan.mikelson@bsse.ethz.ch>
  *
- * This toolbox provides mainly and implementation of the likelihood-free Nested Sampling algorithm as described in
+ * This toolbox provides mainly an implementation of the likelihood-free Nested Sampling algorithm as described in
  * Mikelson, Jan, and Mustafa Khammash. "Likelihood-free nested sampling for biochemical reaction networks." bioRxiv (2019): 564047.
  *
  * During the development of the LFNS algorithm several other features had to be implemented as well, such as the simulation of deterministic,
@@ -16,7 +16,7 @@
  * collected in this toolbox.
  *
  * \section Installation
- * \subsection Required Libraries
+ * \subsection Required_Libraries
  *
  * The LFNS toolbox depends on several packages that are all provided in the <a href="https://github.com/Mijan/LFNS/tree/publishable/required_packages">required_packages</a> folder,
  * but can also be downloaded from their corresponding websites
@@ -26,52 +26,71 @@
  *  - The <a href="https://github.com/Mijan/DPGMM">DP-GMM</a> library. A library that implements density estimation through a Gaussian Mixture.
  *  - The <a href="https://computing.llnl.gov/projects/sundials/cvode">cvode</a> library.
  *
- * \subsection Running cmake
+ * \subsection setting_up_folder Setting up installation folder
  *
  * The installation is based on cmake, which means cmake needs to be installed <a href="https://cmake.org/'>https://cmake.org/</a>.
  * To install the LFNS-toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of
  * an installation procedure on a linux system.
  *
- * First, we pick a folder to which the toolbox and the required libraries are to be installed. In this example we pick the
- * location to be /usr/local. Note that on most linux systems this folder will already exists and will be appropriately linked,
- * so the following steps will most likely not be necessary.
- *  - First create the folder, including subfolders for libraries, header files and executables. Some of these commands may require super user privileges (use these commands with "sudo")
+ * First, we pick a folder to which the toolbox and the required libraries are to be installed. We will denote this folder with /home/install_dest. On Linux based systems we would usually use the folder /usr/local.
+ * On most Linux distributions this folder is already existent and properly linked. I
+ *  - In the case where the install folder does not exist yet, we create the folder including subfolders for libraries, header files and executables. So assuming we want to install the toolbox into the folder /home/install_dest we type
  *   \code{.sh}
- *  sudo mkdir /usr/local /usr/local/lib /usr/local/include /usr/local/bin
+ *  mkdir  /home/install_dest/lib /home/install_dest/include /home/install_dest/bin
  *  \endcode
  *
- *  - Make sure this folder is linked whenever a new termina is opemend. For this open the .bashrc file in the home directory and add the following lines.
+ *  - Make sure this folder is linked whenever a new terminal is opened. For this open the .bashrc file in the home directory and add the following lines.
  *  \code{.sh}
- *  export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
- *  export LIBRARY_PATH=/usr/local/lib:$LIBRARY_PATH
- *  export CPATH=/usr/local/include:$CPATH
- *  export PATH=/usr/local/bin:$PATH
+ *  export LD_LIBRARY_PATH=/home/install_dest/lib:$LD_LIBRARY_PATH
+ *  export LIBRARY_PATH=/home/install_dest/lib:$LIBRARY_PATH
+ *  export CPATH=/home/install_dest/include:$CPATH
+ *  export PATH=/home/install_dest/bin:$PATH
  *  \endcode
- *  -Then install all required libraries. For this assume that the folder containing the LFNS toolbox is in ~/LFNS. The libraries are all installed using cmake.
+ *
+ * \subsection install_required_libs Installing required libraries
+ *  - Then install all required libraries. For this assume that the folder containing the LFNS toolbox is in /home/LFNS. The libraries are all installed using cmake.
  *  For this change to each of the build subdirectories and call cmake and make install
  * \code{.sh}
- *  cd ~/LFNS/requred_packages/cvode-5.0.0/build
+ *  cd /home/LFNS/requred_packages/cvode-5.0.0/build
  *  cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/
  *  make install
  *  \endcode
  * \code{.sh}
- *  cd ~/LFNS/requred_packages/DP-GMM/build
+ *  cd /home/LFNS/requred_packages/DP-GMM/build
  *  cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/
  *  make install
  *  \endcode
  * \code{.sh}
- *  cd ~/LFNS/requred_packages/muparser-2.2.6.1/build
+ *  cd /home/LFNS/requred_packages/muparser-2.2.6.1/build
  *  cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/
  *  make install
  *  \endcode
  *  Eigen is a pure header library and can be either installed through the systems package manager (for Ubuntu for instance
  *  "apt-get install eigen") or the content of the eigen.34 folder can just be copied in the /usr/local/include directory.
+ *
+ *  \subsection  install_lfns Installing the LFNS toolbox
  *  - After all these libraries have been installed, the LFNS toolbox can be installed by switching into the build directory and calling again cmake and make install
  * \code{.sh}
- *  cd ~/LFNS/build
- *  cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/
+ *  cd /home/LFNS/build
+ *  cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest
  *  make install
  *  \endcode
  *  To check if everything has been installed correctly, try typing \code{.sh} lfns_seq --help \endcode
  *  This should produce a help message.
+ *
+ *  \section running_lfns Using the toolbox
+ *  Currently the toolbox provides four callable functions:
+ *      - \a lfns_seq runs the LFNS algorithm sequentially (i.e. using only one thread)
+ *      - \a lfns_mpi runs the LFNS algorithm in parallel, using MPI.
+ *      - \a simulation runs a simulation algorithm to simulate a ODE system, run the SSA algorithm or perform a hybrid simulation
+ *      - \a compute_likelihood runs a particle filter to estimate the likelihood of a particular observation for a given model and a parameter vector
+ *
+ *  In the following we will briefly outline how to use these commands. All these commands have in common that they take a configuration file as the first arguments, containing all the necessary information about the model under ocnsideration.
+ *
+ *  \subsection config_file Configuration file
+ *
+ *  To run any of the above mentioned commands we need to provide a configuration file containing all the required information about the model, the data, parameter priors and so on.
+ *  We will not describe the configuration file here in all detail, but will rather briefly outline their structure and refer to the examples <a href="https://github.com/Mijan/LFNS/tree/publishable/examples">here</a>.
+ *
+ *
  */
