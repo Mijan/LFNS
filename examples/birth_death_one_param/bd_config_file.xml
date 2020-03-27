@@ -28,11 +28,11 @@
 	</dataset>
 </data>
 <Simulation>
-	<modelconfigurations>0 </modelconfigurations>
+	<experiments>0 </experiments>
 	<initialtime>0</initialtime>
 	<finaltime>100</finaltime>
 	<interval>0.05</interval>
-	<parameter>1 0.1</parameter>
+	<parameter>1</parameter>
 </Simulation>
 <ComputeLikelihood>
 	<experiments>0</experiments>
@@ -44,7 +44,7 @@
 	<experiments>0</experiments>
 	<N>1000</N>
 	<H>1</H>
-	<r>100</r>
+	<r>500</r>
     <epsilon>0.001</epsilon>
 	<dpgmmiterations>50</dpgmmiterations>
 </LFNS>

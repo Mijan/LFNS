@@ -11,8 +11,8 @@
 	<bounds>
         <bound>
 			<parameters>k gamma</parameters>
-			<lowerbounds>0.6310</lowerbounds>
-			<upperbounds>2.5119</upperbounds>
+			<lowerbounds>1e-2</lowerbounds>
+			<upperbounds>10</upperbounds>
 		</bound>
     </bounds>
     <fixedparams>
@@ -31,7 +31,7 @@
 	<experiments>0</experiments>
 	<initialtime>0</initialtime>
 	<finaltime>100</finaltime>
-	<interval>10</interval>
+	<interval>1</interval>
     <parameter>1 0.1</parameter>
 </Simulation>
 <ComputeLikelihood>
@@ -44,7 +44,7 @@
 	<experiments>0</experiments>
 	<N>1000</N>
 	<H>1</H>
-	<r>100</r>
+	<r>500</r>
     <epsilon>0.001</epsilon>
 	<dpgmmiterations>50</dpgmmiterations>
 </LFNS>
