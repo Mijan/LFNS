@@ -1,8 +1,8 @@
 function [] = plotSystem(summary_file_name)
-%% The input is 
+%% The input is
 %   summary_file_name: The path and name of the model summary file. The
 %                       path can be absolute or relative
-%                       (./results/birth_death_model_summary.txt for 
+%                       (./results/birth_death_model_summary.txt for
 %                       instance. The model summary file must be in the
 %                       same folder as all other results files
 
@@ -20,13 +20,12 @@ folder_name = summary_file_name(1:folder_index(end));
 file_name = [folder_name, summary_file_name(folder_index(end) +1 : file_name_index)];
 
 
-[param_names, species_names, model_configurations, num_simulations] = readParametesSpecies(summary_file_name);
+[param_names, species_names, scales, bounds, experiments, provided_params, provided_params_file] = readModelDescription(summary_file_name);
 
-for model_configuration_nbr = model_configurations{:}
-    latent_states_file = [file_name, 'latent_states_', model_configuration_nbr, '.txt'];
-    measurement_states_file = [file_name, 'measurements_', model_configuration_nbr, '.txt'];
+for experiment = experiments{:}
+    latent_states_file = [file_name,  experiment, '_latent_states.txt'];
+    measurement_states_file = [file_name,  experiment, '_measurements.txt'];
     times_file = [file_name, 'times.txt'];
-    model_summary_file = summary_file_name;
     
     t = dlmread(times_file);
     latent_states = dlmread(latent_states_file);
@@ -45,25 +44,24 @@ for model_configuration_nbr = model_configurations{:}
     num_rows = ceil(num_states / 2);
     
     
+    figure(1);
     if num_simulations == 1
-        figure(1);
         plot(t, measurement, 'o');
         xlabel('time');
         ylabel('measurement');
-        title(['Measurments ', model_configuration_nbr]);
+        title(['Measurments ', experiment]);
     else
-        figure(1);
         subplot(1, 2, 1);
         plot(t, measurement, 'o');
         xlabel('time');
         ylabel('measurement');
-        title(['Measurments ',model_configuration_nbr]);
+        title(['Measurments ',experiment]);
         
         subplot(1, 2, 2);
         plot(t, mean(measurement), 'o');
         xlabel('time');
         ylabel('measurement');
-        title(['Mean measurments ', model_configuration_nbr]);
+        title(['Mean measurments ', experiment]);
         
     end
     
@@ -73,7 +71,7 @@ for model_configuration_nbr = model_configurations{:}
         plot(t, latent_states(i : num_states : end, :), 'LineWidth', 2);
         xlabel('time');
         ylabel('state');
-        title([species_names{i}, model_configuration_nbr]);
+        title([species_names{i}, ' ', experiment]);
     end
     
     if num_simulations > 1
@@ -83,7 +81,7 @@ for model_configuration_nbr = model_configurations{:}
             plot(t, mean(latent_states(i : num_states : end, :)), 'LineWidth', 2);
             xlabel('time');
             ylabel('state');
-            title(['mean ', species_names{i}, ' ', model_configuration_nbr]);
+            title(['mean ', species_names{i}, ' ', experiment]);
         end
     end
     

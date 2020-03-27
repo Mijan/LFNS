@@ -2,12 +2,6 @@ function [] = plotBE(log_file_name)
 folder_index = strfind(log_file_name, '/');
 file_name_index = strfind(log_file_name, 'log_file.txt');
 
-folder_name = log_file_name(1:folder_index(end));
-file_name = log_file_name(1: file_name_index -1);
-
-posterior = dlmread([file_name, 'posterior.txt']);
-log_weights = dlmread([file_name, 'posterior_log_weights.txt']);
-weights = exp(log_weights);
 
 logs = dlmread(log_file_name, '\t', 1, 0);
 max_iteration_nbr = size(logs, 1);
@@ -22,33 +16,33 @@ log_var_ztot = logs(:, 6);
 log_var_min = logs(:, 11);
 indices(:, 1) = 1: max_iteration_nbr;
 
-% log_std_zd = 0.5*log_var_zd;
-% max_log = max(log_zd, log_std_zd);
-% zd_down = log(max(exp(log_zd-max_log) -exp(log_std_zd -max_log), 0)) +max_log;
-% zd_up = log(exp(log_zd-max_log) + exp(log_std_zd-max_log)) +max_log;
-% zd_down(isinf(zd_down)) = min(log_zd);
-% fill([indices;flipud(indices)],[zd_down;flipud(zd_up)],[.93 .84 .84],'linestyle','none');
-% hold on;
-%
-%
-% log_std_zl = 0.5*log_var_zl;
-% max_log = max(log_zl, log_std_zl);
-% zl_down = log(max(exp(log_zl-max_log) -exp(log_std_zl -max_log), 0)) +max_log;
-% zl_up = log(exp(log_zl-max_log) + exp(log_std_zl-max_log)) +max_log;
-% zl_down(isinf(zl_down)) = min(log_zd);
-% fill([indices(1:end);flipud(indices(1:end))],[zl_down;flipud(zl_up)],[.76 .87 .78],'linestyle','none');
-%
-%
-% log_std_ztot = 0.5*log_var_ztot;
-% max_log = max(log_ztot, log_std_ztot);
-% zLFNS_down = log(max(exp(log_ztot-max_log) -exp(log_std_ztot -max_log), 0)) +max_log;
-% zLFNS_up = log(exp(log_ztot-max_log) + exp(log_std_ztot-max_log)) +max_log;
-% zLFNS_down(isinf(zLFNS_down)) = min(log_zd);
-% fill([indices;flipud(indices)],[zLFNS_down;flipud(zLFNS_up)],[.73 .83 .96],'linestyle','none');
-%
-% plot(log_zd, 'Linewidth', 1);
-% plot(log_zl, 'Linewidth', 1);
-% plot(log_ztot, 'Linewidth', 1);
+log_std_zd = 0.5*log_var_zd;
+max_log = max(log_zd, log_std_zd);
+zd_down = log(max(exp(log_zd-max_log) -exp(log_std_zd -max_log), 0)) +max_log;
+zd_up = log(exp(log_zd-max_log) + exp(log_std_zd-max_log)) +max_log;
+zd_down(isinf(zd_down)) = min(log_zd);
+fill([indices;flipud(indices)],[zd_down;flipud(zd_up)],[.93 .84 .84],'linestyle','none');
+hold on;
+
+
+log_std_zl = 0.5*log_var_zl;
+max_log = max(log_zl, log_std_zl);
+zl_down = log(max(exp(log_zl-max_log) -exp(log_std_zl -max_log), 0)) +max_log;
+zl_up = log(exp(log_zl-max_log) + exp(log_std_zl-max_log)) +max_log;
+zl_down(isinf(zl_down)) = min(log_zd);
+fill([indices(1:end);flipud(indices(1:end))],[zl_down;flipud(zl_up)],[.76 .87 .78],'linestyle','none');
+
+
+log_std_ztot = 0.5*log_var_ztot;
+max_log = max(log_ztot, log_std_ztot);
+zLFNS_down = log(max(exp(log_ztot-max_log) -exp(log_std_ztot -max_log), 0)) +max_log;
+zLFNS_up = log(exp(log_ztot-max_log) + exp(log_std_ztot-max_log)) +max_log;
+zLFNS_down(isinf(zLFNS_down)) = min(log_zd);
+fill([indices;flipud(indices)],[zLFNS_down;flipud(zLFNS_up)],[.73 .83 .96],'linestyle','none');
+
+plot(log_zd, 'Linewidth', 1);
+plot(log_zl, 'Linewidth', 1);
+plot(log_ztot, 'Linewidth', 1);
 
 
 %% plot lin scale
