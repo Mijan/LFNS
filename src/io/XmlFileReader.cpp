@@ -36,7 +36,11 @@ namespace io {
     std::vector<XmlMap>
     XmlFileReader::getEntryMaps(std::string parent_path, std::string sub_tree_name, std::string sub_tree_key,
                                 std::string sub_tree_value) {
-        return getEntryMaps(_pt.get_child(parent_path), sub_tree_name, sub_tree_key, sub_tree_value);
+        try {
+            return getEntryMaps(_pt.get_child(parent_path), sub_tree_name, sub_tree_key, sub_tree_value);
+        }catch(const boost::property_tree::ptree_bad_path& e){
+            throw EntryNotFoundException(e.what());
+        }
     }
 
 
