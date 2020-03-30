@@ -1,0 +1,83 @@
+Config file: /home/jan/crypt/CLionProjects/LFNS/examples/CTSB_tutorial/antithetic_config_file_pert.xml
+Output file: /home/jan/crypt/CLionProjects/LFNS/examples/CTSB_tutorial/sim.txt
+
+
+---------- Simulation Settings ----------
+
+Parameters for simulation:
+Name         simulation value
+   mu                       1
+  eta                       1
+theta                       1
+    k                       1
+gamma                       1
+
+Experiments for simulation: 0, 
+
+---------- Model Settings ----------
+Model file:	/home/jan/crypt/CLionProjects/LFNS/examples/CTSB_tutorial/./antithetic_model_pert.txt
+Initial value file:	/home/jan/crypt/CLionProjects/LFNS/examples/CTSB_tutorial/./antithetic_initial.txt
+Measurement file:	/home/jan/crypt/CLionProjects/LFNS/examples/CTSB_tutorial/./antithetic_measurement.txt
+
+Model parameters 
+   mu
+  eta
+theta
+    k
+gamma
+ pert              fixed to 0
+
+
+The following experiments will be performed: 
+Experiment 0: 
+pulses of strength 10 of parameter pert for 0.5 time units, every 1000, starting from 20
+
+An ODE simulator will be used
+Settings for ODE simulator:
+Minimal step size:            0
+Maximal number of steps:      10000
+Maximal error fails:          20
+Absolute tolerance:           1e-10
+Relative tolerance:           1e-10
+
+
+
+-----------   Model   -----------
+Parameters: mu eta theta k gamma pert 
+
+Species: z1 z2 x1 
+
+
+Reaction 0 :	Propencity: k*z1+pert  		Stoichiometry: x1 +1, 
+Reaction 1 :	Propencity: gamma*x1   		Stoichiometry: x1 -1, 
+Reaction 2 :	Propencity: mu         		Stoichiometry: z1 +1, 
+Reaction 3 :	Propencity: theta*x1   		Stoichiometry: z2 +1, 
+Reaction 4 :	Propencity: eta*z1*z2  		Stoichiometry: z1 -1, z2 -1, 
+
+
+Ode equations:
+(d z1)/dt = (mu)-(eta * z1 * z2) 
+(d z2)/dt = (theta * x1)-(eta * z1 * z2) 
+(d x1)/dt = (k*z1+pert)-(gamma * x1) 
+
+
+
+----------   Initial Values   ---------- 
+State z1:	0 
+State z2:	0 
+State x1:	0 
+Time:    	0 
+
+----------   Measurement Model   ----------
+
+Species: x1 
+
+Normal numbers:
+r_1:	mean: 0	std: 1
+
+
+Measurements:
+x1_read        = x1+0.1*r_1 
+
+Log Likelihood:
+x1_read       :	-(x1_read-x1)*(x1_read-x1)/(2*2*2)-log(2*sqrt(2*_pi)) 

@@ -1,0 +1,45 @@
+<model>
+	<type>DET</type>
+	<model>./antithetic_model_pert.txt</model>
+	<initialvalue>./antithetic_initial.txt</initialvalue>
+	<measurement>./antithetic_measurement.txt</measurement>
+</model>
+<Simulation>
+	<experiments>0</experiments>
+	<initialtime>0</initialtime>
+	<finaltime>100</finaltime>
+	<interval>1</interval>
+    <parameter>1 1 1 1 1</parameter>
+</Simulation>
+<inputs>
+    <input>
+		<experiments>0</experiments>
+		<period>1000</period>
+		<strength>10</strength>
+		<duration>0.5</duration>
+		<numpulses>1</numpulses>
+		<inputparam>pert</inputparam>
+		<startingtime>20</startingtime>
+    </input>
+</inputs>
+<parameters>
+    <fixedparams>
+        <parameters>pert</parameters>
+        <values>0</values>
+    </fixedparams>
+</parameters>
+<data>
+	<dataset>
+		<experiments>0</experiments>
+		<datafile>./sim_2_0_measurements.txt</datafile>
+		<timefile>./sim_times.txt</timefile>		
+	</dataset>
+</data>
+<LFNS>
+	<experiments>0</experiments>
+	<N>1000</N>
+	<H>1</H>
+	<r>500</r>
+    <epsilon>0.001</epsilon>
+	<dpgmmiterations>50</dpgmmiterations>
+</LFNS>

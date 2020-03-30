@@ -1,0 +1,11 @@
+Random numbers:
+r_1 = Normal(0, 1)
+
+Species:
+x1
+
+Measurement:
+x1_read = x1 + 0.1 *r_1
+
+Loglikelihood:
+x1_read:	 -(x1_read - x1)*(x1_read - x1) / (2 * 2 * 2) - log(2 * sqrt(2 * _pi))
