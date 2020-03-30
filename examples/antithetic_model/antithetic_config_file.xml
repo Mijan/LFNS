@@ -1,5 +1,5 @@
 <model>
-	<type>STOCH</type>
+	<type>DET</type>
 	<model>./antithetic_model.txt</model>
 	<initialvalue>./antithetic_initial.txt</initialvalue>
 	<measurement>./antithetic_measurement.txt</measurement>
@@ -7,7 +7,7 @@
 <Simulation>
 	<experiments>0</experiments>
 	<initialtime>0</initialtime>
-	<finaltime>10</finaltime>
-	<interval>0.005</interval>
+	<finaltime>100</finaltime>
+	<interval>1</interval>
     <parameter>1 1 1 1 1</parameter>
 </Simulation>

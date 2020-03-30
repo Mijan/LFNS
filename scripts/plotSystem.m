@@ -16,8 +16,14 @@ if isempty(file_name_index)
     return;
 end
 
-folder_name = summary_file_name(1:folder_index(end));
+if(~isempty(folder_index))
+    folder_name = summary_file_name(1:folder_index(end));
 file_name = [folder_name, summary_file_name(folder_index(end) +1 : file_name_index)];
+else
+    folder_name = './';
+    
+file_name = [folder_name, summary_file_name(1: file_name_index)];
+end
 
 
 [param_names, species_names, scales, bounds, experiments, provided_params, provided_params_file] = readModelDescription(summary_file_name);

@@ -1,11 +1,11 @@
 Random numbers:
-r_1 = Normal(0, 2)
+r_1 = Normal(0, 1)
 
 Species:
-P
+x1
 
 Measurement:
-P_read = P + r_1
+x1_read = x1 + 0.1*x1
 
 Loglikelihood:
-P_read:	 -(P_read - P)*(P_read - P) / (2 * 2 * 2) - log(2 * sqrt(2 * _pi))
+x1_read:	 -(x1_read - x1)*(x1_read - x1) / (2 * 2 * 2) - log(2 * sqrt(2 * _pi))
