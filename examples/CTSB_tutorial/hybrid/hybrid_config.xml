@@ -1,0 +1,14 @@
+<model>
+	<type>HYBRID</type>
+	<model>./hybrid_model.txt</model>
+	<measurement>./hybrid_measurement.txt</measurement>
+    <stochspecies>gene_on gene_off</stochspecies>
+	<initialvalue>hybrid_initial.txt</initialvalue>
+</model>
+<Simulation>
+	<experiments>0</experiments>
+	<initialtime>0</initialtime>
+	<finaltime>100</finaltime>
+	<interval>1</interval>
+	<parameter>1 0.1 1 0.1 5 0.5</parameter>
+</Simulation>

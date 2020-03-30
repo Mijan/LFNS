@@ -1,0 +1,11 @@
+Species:
+Protein
+
+Random numbers:
+r_1 = Normal(0, 5)
+
+Measurement:
+Protein_measure  = Protein + r_1
+
+Loglikelihood:
+Protein_measure:	-(((Protein_measure - Protein)* (Protein_measure - Protein)) / (2 * 5 * 5)) -  log(5 * sqrt(2 * _pi))

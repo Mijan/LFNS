@@ -1,0 +1,5 @@
+Initial Values:
+mRNA:	0
+Protein: 0
+gene_on: 0
+gene_off: 1

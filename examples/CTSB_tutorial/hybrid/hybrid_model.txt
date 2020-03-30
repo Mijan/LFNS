@@ -1,0 +1,14 @@
+Parameters:
+k, gamma, k_mrna, gamma_mrna, k_P, gamma_P
+
+Species:
+gene_off, gene_on, mRNA, Protein
+
+Reactions:
+gene_on		-->	mRNA 		    	Variables: k_mrna		Propensity: #ma
+mRNA		-->	0		        Variables: gamma_mrna			Propensity: #ma
+mRNA		-->	Protein + mRNA		Variables: k_P			    	Propensity: #ma
+Protein		-->	0		        Variables: gamma_P		    	Propensity: #ma
+gene_off	-->	gene_on 	Variables: k		Propensity: #ma
+gene_on		-->	gene_off	Variables: gamma	Propensity: #ma
+
