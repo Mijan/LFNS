@@ -28,7 +28,8 @@ end
 
 [param_names, species_names, scales, bounds, experiments, provided_params, provided_params_file] = readModelDescription(summary_file_name);
 
-for experiment = experiments{:}
+for experiment = experiments
+    experiment = experiment{1};
     latent_states_file = [file_name,  experiment, '_latent_states.txt'];
     measurement_states_file = [file_name,  experiment, '_measurements.txt'];
     times_file = [file_name, 'times.txt'];
