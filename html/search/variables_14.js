@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['variables_5fcaption_2712',['VARIABLES_CAPTION',['../namespaceio.html#a1d8e482ad7e15c3d2d5a471f4ac51feb',1,'io']]],
-  ['verbose_2713',['verbose',['../classoptions_1_1LFNSOptions.html#a2de8b2f363b3a2a4db40e3c1eb05106d',1,'options::LFNSOptions::verbose()'],['../classoptions_1_1MCMCOptions.html#aa8e39dedf43a7428965678c2eedfdad1',1,'options::MCMCOptions::verbose()']]],
-  ['vm_2714',['vm',['../classoptions_1_1CommandLineOptions.html#a88c3479972135e53c028c957df446206',1,'options::CommandLineOptions::vm()'],['../evaluateMIForMixtures_8cpp.html#a54a89781019d4e6744356458c3b73819',1,'vm():&#160;evaluateMIForMixtures.cpp']]]
+  ['widths_2796',['widths',['../classsampler_1_1UniformSamplerData.html#a8c02dbc715850a87adc2833bcc904e0e',1,'sampler::UniformSamplerData']]],
+  ['world_2797',['world',['../classlfns_1_1mpi_1_1LFNSMpi.html#a051ea846adfb5d6fd04c25a5bc50cbb3',1,'lfns::mpi::LFNSMpi::world()'],['../classlfns_1_1mpi_1_1LFNSWorker.html#a2fa65a4835b13edc993e8652c79609f8',1,'lfns::mpi::LFNSWorker::world()'],['../classlfns_1_1mpi_1_1MpiRequest.html#a4355d8d4eeec4326a0baea7e6f3e89af',1,'lfns::mpi::MpiRequest::world()']]]
 ];

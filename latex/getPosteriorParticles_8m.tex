@@ -1,0 +1,117 @@
+\hypertarget{getPosteriorParticles_8m}{}\doxysection{scripts/get\+Posterior\+Particles.m File Reference}
+\label{getPosteriorParticles_8m}\index{scripts/getPosteriorParticles.m@{scripts/getPosteriorParticles.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} \mbox{\hyperlink{getPosteriorParticles_8m_ac533227803fc36ceb61588c572c53b4a}{length}} (varargin) $>$ 0 max\+\_\+it
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} \mbox{\hyperlink{getPosteriorParticles_8m_aec53be854d79b7da614c807fdff97abc}{isempty}} (\mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}}) fprintf(\textquotesingle{}The provided file musst be the $\ast$\+\_\+model \mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{summary.\+txt}} file. It must be in the same folder as the other output files($\ast$\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{\+\_\+times.\+txt}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{getPosteriorParticles_8m_a0c0d8ae4f871c9e64f823b11db00f1c6}{function}} \mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a2b3836c2c7ab035e0467b869e08ab2e2}{posterior\+\_\+particles}}, \mbox{\hyperlink{getPosteriorParticles_8m_a1af47751e5010713232c2cb35afb312b}{full\+\_\+weights}}\mbox{]}
+\item 
+end \mbox{\hyperlink{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}{folder\+\_\+index}} = strfind(summary\+\_\+file\+\_\+name, \textquotesingle{}/\textquotesingle{})
+\item 
+\mbox{\hyperlink{getPosteriorParticles_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}} = strfind(summary\+\_\+file\+\_\+name, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{\+\_\+model\+\_\+summary.\+txt}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} \+\_\+latent\+\_\+states $\ast$ \mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{txt}}
+\item 
+\mbox{\hyperlink{getPosteriorParticles_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+end \mbox{\hyperlink{getPosteriorParticles_8m_a6a437ac36e859d05f745bf6c6f01ea6c}{folder\+\_\+name}} = summary\+\_\+file\+\_\+name(1\+:\mbox{\hyperlink{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}{folder\+\_\+index}}(end))
+\item 
+\mbox{\hyperlink{getPosteriorParticles_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}} = \mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a6a437ac36e859d05f745bf6c6f01ea6c}{folder\+\_\+name}}, summary\+\_\+file\+\_\+name(\mbox{\hyperlink{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}{folder\+\_\+index}}(end) +1 \+: \mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}})\mbox{]}
+\item 
+\mbox{\hyperlink{getPosteriorParticles_8m_a2b3836c2c7ab035e0467b869e08ab2e2}{posterior\+\_\+particles}} = dlmread(\mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{posterior.\+txt}}\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{getPosteriorParticles_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}} = dlmread(\mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{posterior\+\_\+log\+\_\+weights.\+txt}}\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{getPosteriorParticles_8m_a1af47751e5010713232c2cb35afb312b}{full\+\_\+weights}} = \mbox{\hyperlink{plotBE_8m_ac1891773839ad608e7e0f1b7b0b1b3a5}{exp}}(\mbox{\hyperlink{getPosteriorParticles_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}} -\/ max(\mbox{\hyperlink{getPosteriorParticles_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{getPosteriorParticles_8m_aec53be854d79b7da614c807fdff97abc}\label{getPosteriorParticles_8m_aec53be854d79b7da614c807fdff97abc}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!isempty@{isempty}}
+\index{isempty@{isempty}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_ac533227803fc36ceb61588c572c53b4a}\label{getPosteriorParticles_8m_ac533227803fc36ceb61588c572c53b4a}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!length@{length}}
+\index{length@{length}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} length (\begin{DoxyParamCaption}\item[{varargin}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{getPosteriorParticles_8m_a58ed1f4fc05e40edea694d9f889da543}\label{getPosteriorParticles_8m_a58ed1f4fc05e40edea694d9f889da543}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!file\_name@{file\_name}}
+\index{file\_name@{file\_name}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{file\_name}{file\_name}}
+{\footnotesize\ttfamily file\+\_\+name = \mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a6a437ac36e859d05f745bf6c6f01ea6c}{folder\+\_\+name}}, summary\+\_\+file\+\_\+name(\mbox{\hyperlink{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}{folder\+\_\+index}}(end) +1 \+: \mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}})\mbox{]}}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_a2ab5ce6e8b1a531280b42997912a47a9}\label{getPosteriorParticles_8m_a2ab5ce6e8b1a531280b42997912a47a9}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!file\_name\_index@{file\_name\_index}}
+\index{file\_name\_index@{file\_name\_index}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{file\_name\_index}{file\_name\_index}}
+{\footnotesize\ttfamily file\+\_\+name\+\_\+index = strfind(summary\+\_\+file\+\_\+name, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{\+\_\+model\+\_\+summary.\+txt}}\textquotesingle{})}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}\label{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!folder\_index@{folder\_index}}
+\index{folder\_index@{folder\_index}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{folder\_index}{folder\_index}}
+{\footnotesize\ttfamily end folder\+\_\+index = strfind(summary\+\_\+file\+\_\+name, \textquotesingle{}/\textquotesingle{})}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_a6a437ac36e859d05f745bf6c6f01ea6c}\label{getPosteriorParticles_8m_a6a437ac36e859d05f745bf6c6f01ea6c}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!folder\_name@{folder\_name}}
+\index{folder\_name@{folder\_name}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{folder\_name}{folder\_name}}
+{\footnotesize\ttfamily end folder\+\_\+name = summary\+\_\+file\+\_\+name(1\+:\mbox{\hyperlink{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}{folder\+\_\+index}}(end))}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_a1af47751e5010713232c2cb35afb312b}\label{getPosteriorParticles_8m_a1af47751e5010713232c2cb35afb312b}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!full\_weights@{full\_weights}}
+\index{full\_weights@{full\_weights}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{full\_weights}{full\_weights}}
+{\footnotesize\ttfamily full\+\_\+weights = \mbox{\hyperlink{plotBE_8m_ac1891773839ad608e7e0f1b7b0b1b3a5}{exp}}(\mbox{\hyperlink{getPosteriorParticles_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}} -\/ max(\mbox{\hyperlink{getPosteriorParticles_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}}))}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_a0c0d8ae4f871c9e64f823b11db00f1c6}\label{getPosteriorParticles_8m_a0c0d8ae4f871c9e64f823b11db00f1c6}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!function@{function}}
+\index{function@{function}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a2b3836c2c7ab035e0467b869e08ab2e2}{posterior\+\_\+particles}}, \mbox{\hyperlink{getPosteriorParticles_8m_a1af47751e5010713232c2cb35afb312b}{full\+\_\+weights}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= getPosteriorParticles(summary\_file\_name, varargin)}
+\DoxyCodeLine{}
+\DoxyCodeLine{max\_it = 1e6}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{getPosteriorParticles_8m_a2b392b5ddffff83337c93de2288ebad4}\label{getPosteriorParticles_8m_a2b392b5ddffff83337c93de2288ebad4}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!log\_weights@{log\_weights}}
+\index{log\_weights@{log\_weights}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{log\_weights}{log\_weights}}
+{\footnotesize\ttfamily log\+\_\+weights = dlmread(\mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{posterior\+\_\+log\+\_\+weights.\+txt}}\textquotesingle{}\mbox{]})}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_a2b3836c2c7ab035e0467b869e08ab2e2}\label{getPosteriorParticles_8m_a2b3836c2c7ab035e0467b869e08ab2e2}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!posterior\_particles@{posterior\_particles}}
+\index{posterior\_particles@{posterior\_particles}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{posterior\_particles}{posterior\_particles}}
+{\footnotesize\ttfamily posterior\+\_\+particles = dlmread(\mbox{[}\mbox{\hyperlink{getPosteriorParticles_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{posterior.\+txt}}\textquotesingle{}\mbox{]})}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{getPosteriorParticles_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!return@{return}}
+\index{return@{return}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}\label{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}} 
+\index{getPosteriorParticles.m@{getPosteriorParticles.m}!txt@{txt}}
+\index{txt@{txt}!getPosteriorParticles.m@{getPosteriorParticles.m}}
+\doxysubsubsection{\texorpdfstring{txt}{txt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} \+\_\+latent\+\_\+states $\ast$\+\_\+measurements txt}
+

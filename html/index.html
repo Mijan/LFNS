@@ -83,7 +83,7 @@ Required_Libraries</h2>
 </ul>
 <h2><a class="anchor" id="setting_up_folder"></a>
 Setting up installation folder</h2>
-<p>The installation is based on cmake, which means cmake needs to be installed &lt;a href="<a href="https://cmake.org/'">https://cmake.org/'</a>&gt;<a href="https://cmake.org/">https://cmake.org/</a>. To install the LFNS-toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of an installation procedure on a linux system.</p>
+<p>The installation is based on cmake, which means cmake needs to be installed <a href="https://cmake.org/">https://cmake.org/</a>. To install the LFNS-toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of an installation procedure on a linux system.</p>
 <p>First, we pick a folder to which the toolbox and the required libraries are to be installed. We will denote this folder with /home/install_dest. On Linux based systems we would usually use the folder /usr/local. On most Linux distributions this folder is already existent and properly linked. I</p><ul>
 <li>In the case where the install folder does not exist yet, we create the folder including subfolders for libraries, header files and executables. So assuming we want to install the toolbox into the folder /home/install_dest we type <div class="fragment"><div class="line">mkdir  /home/install_dest/lib /home/install_dest/include /home/install_dest/bin</div>
 </div><!-- fragment --></li>
@@ -96,14 +96,15 @@ Setting up installation folder</h2>
 <h2><a class="anchor" id="install_required_libs"></a>
 Installing required libraries</h2>
 <ul>
+<li>The Boost library is a standard utility library and can be installed using the standard package manager (for Ubuntu it would be "apt-get install boost") or downloaded and install from the official website <a href="https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html">here</a></li>
 <li>Then install all required libraries. For this assume that the folder containing the LFNS toolbox is in /home/LFNS. The libraries are all installed using cmake. For this change to each of the build subdirectories and call cmake and make install <div class="fragment"><div class="line">cd /home/LFNS/requred_packages/cvode-5.0.0/build</div>
-<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/</div>
+<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest/</div>
 <div class="line">make install</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">cd /home/LFNS/requred_packages/DP-GMM/build</div>
-<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/</div>
+<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest/</div>
 <div class="line">make install</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">cd /home/LFNS/requred_packages/muparser-2.2.6.1/build</div>
-<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/</div>
+<div class="line">cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest/</div>
 <div class="line">make install</div>
 </div><!-- fragment --> Eigen is a pure header library and can be either installed through the systems package manager (for Ubuntu for instance "apt-get install eigen") or the content of the eigen.34 folder can just be copied in the /usr/local/include directory.</li>
 </ul>

@@ -28,7 +28,7 @@
  *
  * \subsection setting_up_folder Setting up installation folder
  *
- * The installation is based on cmake, which means cmake needs to be installed <a href="https://cmake.org/'>https://cmake.org/</a>.
+ * The installation is based on cmake, which means cmake needs to be installed <a href="https://cmake.org/">https://cmake.org/</a>.
  * To install the LFNS-toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of
  * an installation procedure on a linux system.
  *
@@ -48,21 +48,23 @@
  *  \endcode
  *
  * \subsection install_required_libs Installing required libraries
+ *  - The Boost library is a standard utility library and can be installed using the standard package manager (for Ubuntu it would be "apt-get install boost")
+ *  or downloaded and install from the official website <a href="https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html">here</a>
  *  - Then install all required libraries. For this assume that the folder containing the LFNS toolbox is in /home/LFNS. The libraries are all installed using cmake.
  *  For this change to each of the build subdirectories and call cmake and make install
  * \code{.sh}
  *  cd /home/LFNS/requred_packages/cvode-5.0.0/build
- *  cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/
+ *  cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest/
  *  make install
  *  \endcode
  * \code{.sh}
  *  cd /home/LFNS/requred_packages/DP-GMM/build
- *  cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/
+ *  cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest/
  *  make install
  *  \endcode
  * \code{.sh}
  *  cd /home/LFNS/requred_packages/muparser-2.2.6.1/build
- *  cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/local/
+ *  cmake ../ -DCMAKE_INSTALL_PREFIX=/home/install_dest/
  *  make install
  *  \endcode
  *  Eigen is a pure header library and can be either installed through the systems package manager (for Ubuntu for instance

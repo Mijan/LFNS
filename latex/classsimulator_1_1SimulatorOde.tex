@@ -51,7 +51,7 @@ void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ac1b271a02d92f565ec3bb41f39
 \item 
 static \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a27cb0caa82c243e7259613241a6a85e3}{cv\+Ode\+Rhs\+\_\+static}} (realtype t, N\+\_\+\+Vector y, N\+\_\+\+Vector ydot, void $\ast$user\+\_\+data)
 \item 
-static void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data)
+static void \mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}} (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{readModelDescription_8m_a26480f1977235d7dc7ed7a1b4e4bbbb7}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -75,7 +75,7 @@ S\+U\+N\+Linear\+Solver \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ab4d55f6
 \doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static constexpr void($\ast$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ad7ff176a899827448738bb34cf07bbc7}{C\+V\+Err\+Handler\+Fn}} )(\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}}
+static constexpr void($\ast$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ad7ff176a899827448738bb34cf07bbc7}{C\+V\+Err\+Handler\+Fn}} )(\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{readModelDescription_8m_a26480f1977235d7dc7ed7a1b4e4bbbb7}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}}
 \item 
 static constexpr \mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}}($\ast$ \mbox{\hyperlink{classsimulator_1_1SimulatorOde_ade67d68d65aa05f7427f2239d2cee1ea}{C\+V\+Rhs\+Fn}} )(realtype t, N\+\_\+\+Vector y, N\+\_\+\+Vector ydot, void $\ast$user\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a27cb0caa82c243e7259613241a6a85e3}{cv\+Ode\+Rhs\+\_\+static}}
 \end{DoxyCompactItemize}
@@ -223,7 +223,7 @@ Implements \mbox{\hyperlink{classsimulator_1_1Simulator_a7483d21dde301a539039253
 \index{simulator::SimulatorOde@{simulator::SimulatorOde}!CVErrHandlerFn@{CVErrHandlerFn}}
 \index{CVErrHandlerFn@{CVErrHandlerFn}!simulator::SimulatorOde@{simulator::SimulatorOde}}
 \doxysubsubsection{\texorpdfstring{CVErrHandlerFn}{CVErrHandlerFn}}
-{\footnotesize\ttfamily constexpr void($\ast$ simulator\+::\+Simulator\+Ode\+::\+C\+V\+Err\+Handler\+Fn) (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily constexpr void($\ast$ simulator\+::\+Simulator\+Ode\+::\+C\+V\+Err\+Handler\+Fn) (\mbox{\hyperlink{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}{int}} error\+\_\+code, const char $\ast$module, const char $\ast$\mbox{\hyperlink{readModelDescription_8m_a26480f1977235d7dc7ed7a1b4e4bbbb7}{function}}, char $\ast$msg, void $\ast$eh\+\_\+data) = \&\mbox{\hyperlink{classsimulator_1_1SimulatorOde_a2e988d0185149b58f3c5c779423ce8f6}{cv\+Ode\+Error\+Handling\+\_\+static}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
 
 \mbox{\Hypertarget{classsimulator_1_1SimulatorOde_ade67d68d65aa05f7427f2239d2cee1ea}\label{classsimulator_1_1SimulatorOde_ade67d68d65aa05f7427f2239d2cee1ea}} 
 \index{simulator::SimulatorOde@{simulator::SimulatorOde}!CVRhsFn@{CVRhsFn}}

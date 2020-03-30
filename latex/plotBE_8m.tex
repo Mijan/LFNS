@@ -1,5 +1,5 @@
-\hypertarget{plotBE_8m}{}\doxysection{plot\+B\+E.\+m File Reference}
-\label{plotBE_8m}\index{plotBE.m@{plotBE.m}}
+\hypertarget{plotBE_8m}{}\doxysection{scripts/plot\+BE.m File Reference}
+\label{plotBE_8m}\index{scripts/plotBE.m@{scripts/plotBE.m}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,7 +19,7 @@
 \item 
 \mbox{\hyperlink{plotBE_8m_a1d9b7739b99b11741669c60f9263f7ed}{plot}} (\mbox{\hyperlink{plotBE_8m_ac1fd0a2d98b224dae71c9b875e5d1d3c}{log\+\_\+ztot}}, \textquotesingle{}Linewidth\textquotesingle{}, 1)
 \item 
-\mbox{\hyperlink{plotBE_8m_a4c3e3278d2e592d9b3a090cc1b765599}{plot}} lin scale \mbox{\hyperlink{plotBE_8m_af5b71ddd4ba1cd1a7d446855ceb09fef}{figure}} ()
+\mbox{\hyperlink{plotBE_8m_a4c3e3278d2e592d9b3a090cc1b765599}{plot}} lin \mbox{\hyperlink{readModelDescription_8m_acec6d8ad52a28972fa74e071c1a63b6a}{scale}} \mbox{\hyperlink{plotBE_8m_af5b71ddd4ba1cd1a7d446855ceb09fef}{figure}} ()
 \item 
 \mbox{\hyperlink{plotBE_8m_aceee8c98610353ebacb6e105ac05f3a7}{subplot}} (1, 4, 1)
 \item 
@@ -51,7 +51,7 @@
 \item 
 \mbox{\hyperlink{plotBE_8m_a013e3f01d6f65a4b89ddf20242fb8538}{subplot}} (1, 4, 3)
 \item 
-\mbox{\hyperlink{plotBE_8m_a0938f1597a67c1ff12d899bc70244e46}{if}} \mbox{\hyperlink{plotBE_8m_ac1891773839ad608e7e0f1b7b0b1b3a5}{exp}} (\mbox{\hyperlink{plotBE_8m_ac1fd0a2d98b224dae71c9b875e5d1d3c}{log\+\_\+ztot}}(end)) $>$ 0 \mbox{\hyperlink{plotBE_8m_a30225e1ac1a91d5ee73d6e228b0b03b0}{norm\+\_\+const}}=0
+\mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} \mbox{\hyperlink{plotBE_8m_ac1891773839ad608e7e0f1b7b0b1b3a5}{exp}} (\mbox{\hyperlink{plotBE_8m_ac1fd0a2d98b224dae71c9b875e5d1d3c}{log\+\_\+ztot}}(end)) $>$ 0 \mbox{\hyperlink{plotBE_8m_a30225e1ac1a91d5ee73d6e228b0b03b0}{norm\+\_\+const}}=0
 \item 
 \mbox{\hyperlink{plotBE_8m_a452ca011c61fe2f47f9e631778449019}{plot}} (\mbox{\hyperlink{plotBE_8m_a3bfbdeff211ad5fc6e8f6483afa7fa29}{zd\+\_\+norm}}, \textquotesingle{}Linewidth\textquotesingle{}, 2, \textquotesingle{}Color\textquotesingle{}, \mbox{[}.\+49 .\+18 .\+56\mbox{]})
 \item 
@@ -66,17 +66,7 @@
 \item 
 \mbox{\hyperlink{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} \mbox{[}$\,$\mbox{]}
 \item 
-\mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}} = strfind(log\+\_\+file\+\_\+name, \textquotesingle{}log\+\_\+file.\+txt\textquotesingle{})
-\item 
-\mbox{\hyperlink{plotBE_8m_a2d0d8f2b2c577104b11337af58cbe498}{folder\+\_\+name}} = log\+\_\+file\+\_\+name(1\+:folder\+\_\+index(end))
-\item 
-\mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}} = log\+\_\+file\+\_\+name(1\+: \mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}} -\/1)
-\item 
-\mbox{\hyperlink{plotBE_8m_a3c19f7a3a39e427b9d2426e7d9c04ff5}{posterior}} = dlmread(\mbox{[}\mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}posterior.\+txt\textquotesingle{}\mbox{]})
-\item 
-\mbox{\hyperlink{plotBE_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}} = dlmread(\mbox{[}\mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}posterior\+\_\+log\+\_\+weights.\+txt\textquotesingle{}\mbox{]})
-\item 
-\mbox{\hyperlink{plotBE_8m_a025e7807c1d898d829ddfc91a937fc78}{weights}} = \mbox{\hyperlink{plotBE_8m_ac1891773839ad608e7e0f1b7b0b1b3a5}{exp}}(\mbox{\hyperlink{plotBE_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}})
+\mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}} = strfind(log\+\_\+file\+\_\+name, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{log\+\_\+file.\+txt}}\textquotesingle{})
 \item 
 \mbox{\hyperlink{plotBE_8m_a37d874d1d45bc2e5bfa013cddacb8e68}{logs}} = dlmread(log\+\_\+file\+\_\+name, \textquotesingle{}\textbackslash{}t\textquotesingle{}, 1, 0)
 \item 
@@ -165,13 +155,13 @@ end \mbox{\hyperlink{plotBE_8m_a3bfbdeff211ad5fc6e8f6483afa7fa29}{zd\+\_\+norm}}
 \index{plotBE.m@{plotBE.m}!exp@{exp}}
 \index{exp@{exp}!plotBE.m@{plotBE.m}}
 \doxysubsubsection{\texorpdfstring{exp()}{exp()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a0938f1597a67c1ff12d899bc70244e46}{if}} exp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_ac1fd0a2d98b224dae71c9b875e5d1d3c}{log\+\_\+ztot}}(end)}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} exp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plotBE_8m_ac1fd0a2d98b224dae71c9b875e5d1d3c}{log\+\_\+ztot}}(end)}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 \mbox{\Hypertarget{plotBE_8m_af5b71ddd4ba1cd1a7d446855ceb09fef}\label{plotBE_8m_af5b71ddd4ba1cd1a7d446855ceb09fef}} 
 \index{plotBE.m@{plotBE.m}!figure@{figure}}
 \index{figure@{figure}!plotBE.m@{plotBE.m}}
 \doxysubsubsection{\texorpdfstring{figure()}{figure()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a4c3e3278d2e592d9b3a090cc1b765599}{plot}} lin scale figure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{plotBE_8m_a4c3e3278d2e592d9b3a090cc1b765599}{plot}} lin \mbox{\hyperlink{readModelDescription_8m_acec6d8ad52a28972fa74e071c1a63b6a}{scale}} figure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{plotBE_8m_a9bbea121a81a50bb8fe4e25278f1ca4d}\label{plotBE_8m_a9bbea121a81a50bb8fe4e25278f1ca4d}} 
 \index{plotBE.m@{plotBE.m}!fill@{fill}}
@@ -344,23 +334,11 @@ end \mbox{\hyperlink{plotBE_8m_a3bfbdeff211ad5fc6e8f6483afa7fa29}{zd\+\_\+norm}}
 \doxysubsubsection{\texorpdfstring{acceptance}{acceptance}}
 {\footnotesize\ttfamily acceptance = \mbox{\hyperlink{plotBE_8m_a37d874d1d45bc2e5bfa013cddacb8e68}{logs}}(\+:, 3)}
 
-\mbox{\Hypertarget{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}\label{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}} 
-\index{plotBE.m@{plotBE.m}!file\_name@{file\_name}}
-\index{file\_name@{file\_name}!plotBE.m@{plotBE.m}}
-\doxysubsubsection{\texorpdfstring{file\_name}{file\_name}}
-{\footnotesize\ttfamily file\+\_\+name = log\+\_\+file\+\_\+name(1\+: \mbox{\hyperlink{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}{file\+\_\+name\+\_\+index}} -\/1)}
-
 \mbox{\Hypertarget{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}\label{plotBE_8m_a2ab5ce6e8b1a531280b42997912a47a9}} 
 \index{plotBE.m@{plotBE.m}!file\_name\_index@{file\_name\_index}}
 \index{file\_name\_index@{file\_name\_index}!plotBE.m@{plotBE.m}}
 \doxysubsubsection{\texorpdfstring{file\_name\_index}{file\_name\_index}}
-{\footnotesize\ttfamily file\+\_\+name\+\_\+index = strfind(log\+\_\+file\+\_\+name, \textquotesingle{}log\+\_\+file.\+txt\textquotesingle{})}
-
-\mbox{\Hypertarget{plotBE_8m_a2d0d8f2b2c577104b11337af58cbe498}\label{plotBE_8m_a2d0d8f2b2c577104b11337af58cbe498}} 
-\index{plotBE.m@{plotBE.m}!folder\_name@{folder\_name}}
-\index{folder\_name@{folder\_name}!plotBE.m@{plotBE.m}}
-\doxysubsubsection{\texorpdfstring{folder\_name}{folder\_name}}
-{\footnotesize\ttfamily folder\+\_\+name = log\+\_\+file\+\_\+name(1\+:folder\+\_\+index(end))}
+{\footnotesize\ttfamily file\+\_\+name\+\_\+index = strfind(log\+\_\+file\+\_\+name, \textquotesingle{}\mbox{\hyperlink{getPosteriorParticles_8m_ab1f89beb4fc74d984b22958fac744931}{log\+\_\+file.\+txt}}\textquotesingle{})}
 
 \mbox{\Hypertarget{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}\label{plotBE_8m_a2420833d971716e9bab41cc9fb3abba1}} 
 \index{plotBE.m@{plotBE.m}!function@{function}}
@@ -371,7 +349,7 @@ end \mbox{\hyperlink{plotBE_8m_a3bfbdeff211ad5fc6e8f6483afa7fa29}{zd\+\_\+norm}}
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{= plotBE(log\_file\_name)}
-\DoxyCodeLine{folder\_index = strfind(log\_file\_name, \textcolor{charliteral}{'/'})}
+\DoxyCodeLine{\mbox{\hyperlink{getPosteriorParticles_8m_aef1d449eb612dede4b232092dbcba3ad}{folder\_index}} = strfind(log\_file\_name, \textcolor{charliteral}{'/'})}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}\label{plotBE_8m_a61569f2965b7a369eb10b6d75d410d11}} 
@@ -452,12 +430,6 @@ end \mbox{\hyperlink{plotBE_8m_a3bfbdeff211ad5fc6e8f6483afa7fa29}{zd\+\_\+norm}}
 \doxysubsubsection{\texorpdfstring{log\_var\_ztot\_norm}{log\_var\_ztot\_norm}}
 {\footnotesize\ttfamily log\+\_\+var\+\_\+ztot\+\_\+norm = \mbox{\hyperlink{plotBE_8m_a1657d7da05028d36dae0e8a6b98f2247}{log\+\_\+var\+\_\+ztot}} -\/ 2$\ast$\mbox{\hyperlink{plotBE_8m_a30225e1ac1a91d5ee73d6e228b0b03b0}{norm\+\_\+const}}}
 
-\mbox{\Hypertarget{plotBE_8m_a2b392b5ddffff83337c93de2288ebad4}\label{plotBE_8m_a2b392b5ddffff83337c93de2288ebad4}} 
-\index{plotBE.m@{plotBE.m}!log\_weights@{log\_weights}}
-\index{log\_weights@{log\_weights}!plotBE.m@{plotBE.m}}
-\doxysubsubsection{\texorpdfstring{log\_weights}{log\_weights}}
-{\footnotesize\ttfamily log\+\_\+weights = dlmread(\mbox{[}\mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}posterior\+\_\+log\+\_\+weights.\+txt\textquotesingle{}\mbox{]})}
-
 \mbox{\Hypertarget{plotBE_8m_a0722fa12bf691df3860f507fffe5a8e2}\label{plotBE_8m_a0722fa12bf691df3860f507fffe5a8e2}} 
 \index{plotBE.m@{plotBE.m}!log\_zd@{log\_zd}}
 \index{log\_zd@{log\_zd}!plotBE.m@{plotBE.m}}
@@ -518,12 +490,6 @@ end \mbox{\hyperlink{plotBE_8m_a3bfbdeff211ad5fc6e8f6483afa7fa29}{zd\+\_\+norm}}
 \doxysubsubsection{\texorpdfstring{on}{on}}
 {\footnotesize\ttfamily hold on}
 
-\mbox{\Hypertarget{plotBE_8m_a3c19f7a3a39e427b9d2426e7d9c04ff5}\label{plotBE_8m_a3c19f7a3a39e427b9d2426e7d9c04ff5}} 
-\index{plotBE.m@{plotBE.m}!posterior@{posterior}}
-\index{posterior@{posterior}!plotBE.m@{plotBE.m}}
-\doxysubsubsection{\texorpdfstring{posterior}{posterior}}
-{\footnotesize\ttfamily posterior = dlmread(\mbox{[}\mbox{\hyperlink{plotBE_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}}, \textquotesingle{}posterior.\+txt\textquotesingle{}\mbox{]})}
-
 \mbox{\Hypertarget{plotBE_8m_a3cbdab1db3ca694a2792fb294a6d7b92}\label{plotBE_8m_a3cbdab1db3ca694a2792fb294a6d7b92}} 
 \index{plotBE.m@{plotBE.m}!std\_std\_min\_norm@{std\_std\_min\_norm}}
 \index{std\_std\_min\_norm@{std\_std\_min\_norm}!plotBE.m@{plotBE.m}}
@@ -553,12 +519,6 @@ end \mbox{\hyperlink{plotBE_8m_a3bfbdeff211ad5fc6e8f6483afa7fa29}{zd\+\_\+norm}}
 \index{times@{times}!plotBE.m@{plotBE.m}}
 \doxysubsubsection{\texorpdfstring{times}{times}}
 {\footnotesize\ttfamily times = \mbox{\hyperlink{plotBE_8m_a37d874d1d45bc2e5bfa013cddacb8e68}{logs}}(\+:, 4)}
-
-\mbox{\Hypertarget{plotBE_8m_a025e7807c1d898d829ddfc91a937fc78}\label{plotBE_8m_a025e7807c1d898d829ddfc91a937fc78}} 
-\index{plotBE.m@{plotBE.m}!weights@{weights}}
-\index{weights@{weights}!plotBE.m@{plotBE.m}}
-\doxysubsubsection{\texorpdfstring{weights}{weights}}
-{\footnotesize\ttfamily weights = \mbox{\hyperlink{plotBE_8m_ac1891773839ad608e7e0f1b7b0b1b3a5}{exp}}(\mbox{\hyperlink{plotBE_8m_a2b392b5ddffff83337c93de2288ebad4}{log\+\_\+weights}})}
 
 \mbox{\Hypertarget{plotBE_8m_aeadf5c085a85705a33adf154410de281}\label{plotBE_8m_aeadf5c085a85705a33adf154410de281}} 
 \index{plotBE.m@{plotBE.m}!zd\_down@{zd\_down}}

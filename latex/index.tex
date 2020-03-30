@@ -14,7 +14,7 @@ The L\+F\+NS toolbox depends on several packages that are all provided in the \h
 \item The \href{https://github.com/Mijan/DPGMM}{\texttt{ D\+P-\/\+G\+MM}} library. A library that implements density estimation through a Gaussian Mixture.
 \item The \href{https://computing.llnl.gov/projects/sundials/cvode}{\texttt{ cvode}} library.
 \end{DoxyItemize}\hypertarget{index_setting_up_folder}{}\doxysubsection{Setting up installation folder}\label{index_setting_up_folder}
-The installation is based on cmake, which means cmake needs to be installed $<$a href="\href{https://cmake.org/'}{\texttt{ https\+://cmake.\+org/\textquotesingle{}}}$>$\href{https://cmake.org/}{\texttt{ https\+://cmake.\+org/}}. To install the L\+F\+N\+S-\/toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of an installation procedure on a linux system.
+The installation is based on cmake, which means cmake needs to be installed \href{https://cmake.org/}{\texttt{ https\+://cmake.\+org/}}. To install the L\+F\+N\+S-\/toolbox, a c++ compiler is required and the above mentioned libraries need to be installed and linked. In the following we give an example of an installation procedure on a linux system.
 
 First, we pick a folder to which the toolbox and the required libraries are to be installed. We will denote this folder with /home/install\+\_\+dest. On Linux based systems we would usually use the folder /usr/local. On most Linux distributions this folder is already existent and properly linked. I
 \begin{DoxyItemize}
@@ -34,22 +34,23 @@ First, we pick a folder to which the toolbox and the required libraries are to b
 \end{DoxyItemize}\hypertarget{index_install_required_libs}{}\doxysubsection{Installing required libraries}\label{index_install_required_libs}
 
 \begin{DoxyItemize}
+\item The Boost library is a standard utility library and can be installed using the standard package manager (for Ubuntu it would be \char`\"{}apt-\/get install boost\char`\"{}) or downloaded and install from the official website \href{https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html}{\texttt{ here}}
 \item Then install all required libraries. For this assume that the folder containing the L\+F\+NS toolbox is in /home/\+L\+F\+NS. The libraries are all installed using cmake. For this change to each of the build subdirectories and call cmake and make install 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{cd /home/LFNS/requred\_packages/cvode-\/5.0.0/build}
-\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/home/install\_dest/}
 \DoxyCodeLine{make install}
 \end{DoxyCode}
  
 \begin{DoxyCode}{0}
 \DoxyCodeLine{cd /home/LFNS/requred\_packages/DP-\/GMM/build}
-\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/home/install\_dest/}
 \DoxyCodeLine{make install}
 \end{DoxyCode}
  
 \begin{DoxyCode}{0}
 \DoxyCodeLine{cd /home/LFNS/requred\_packages/muparser-\/2.2.6.1/build}
-\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/usr/local/}
+\DoxyCodeLine{cmake ../ -\/DCMAKE\_INSTALL\_PREFIX=/home/install\_dest/}
 \DoxyCodeLine{make install}
 \end{DoxyCode}
  Eigen is a pure header library and can be either installed through the systems package manager (for Ubuntu for instance \char`\"{}apt-\/get install eigen\char`\"{}) or the content of the eigen.\+34 folder can just be copied in the /usr/local/include directory.

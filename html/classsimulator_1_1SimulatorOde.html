@@ -139,7 +139,7 @@ Private Member Functions</h2></td></tr>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a27cb0caa82c243e7259613241a6a85e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsimulator_1_1SimulatorOde.html#a27cb0caa82c243e7259613241a6a85e3">cvOdeRhs_static</a> (realtype t, N_Vector y, N_Vector ydot, void *user_data)</td></tr>
 <tr class="separator:a27cb0caa82c243e7259613241a6a85e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e988d0185149b58f3c5c779423ce8f6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsimulator_1_1SimulatorOde.html#a2e988d0185149b58f3c5c779423ce8f6">cvOdeErrorHandling_static</a> (<a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> error_code, const char *module, const char *<a class="el" href="plotBE_8m.html#a2420833d971716e9bab41cc9fb3abba1">function</a>, char *msg, void *eh_data)</td></tr>
+<tr class="memitem:a2e988d0185149b58f3c5c779423ce8f6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsimulator_1_1SimulatorOde.html#a2e988d0185149b58f3c5c779423ce8f6">cvOdeErrorHandling_static</a> (<a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> error_code, const char *module, const char *<a class="el" href="readModelDescription_8m.html#a26480f1977235d7dc7ed7a1b4e4bbbb7">function</a>, char *msg, void *eh_data)</td></tr>
 <tr class="separator:a2e988d0185149b58f3c5c779423ce8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -163,7 +163,7 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:ad7ff176a899827448738bb34cf07bbc7"><td class="memItemLeft" align="right" valign="top">static constexpr void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsimulator_1_1SimulatorOde.html#ad7ff176a899827448738bb34cf07bbc7">CVErrHandlerFn</a> )(<a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> error_code, const char *module, const char *<a class="el" href="plotBE_8m.html#a2420833d971716e9bab41cc9fb3abba1">function</a>, char *msg, void *eh_data) = &amp;<a class="el" href="classsimulator_1_1SimulatorOde.html#a2e988d0185149b58f3c5c779423ce8f6">cvOdeErrorHandling_static</a></td></tr>
+<tr class="memitem:ad7ff176a899827448738bb34cf07bbc7"><td class="memItemLeft" align="right" valign="top">static constexpr void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsimulator_1_1SimulatorOde.html#ad7ff176a899827448738bb34cf07bbc7">CVErrHandlerFn</a> )(<a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> error_code, const char *module, const char *<a class="el" href="readModelDescription_8m.html#a26480f1977235d7dc7ed7a1b4e4bbbb7">function</a>, char *msg, void *eh_data) = &amp;<a class="el" href="classsimulator_1_1SimulatorOde.html#a2e988d0185149b58f3c5c779423ce8f6">cvOdeErrorHandling_static</a></td></tr>
 <tr class="separator:ad7ff176a899827448738bb34cf07bbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade67d68d65aa05f7427f2239d2cee1ea"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsimulator_1_1SimulatorOde.html#ade67d68d65aa05f7427f2239d2cee1ea">CVRhsFn</a> )(realtype t, N_Vector y, N_Vector ydot, void *user_data) = &amp;<a class="el" href="classsimulator_1_1SimulatorOde.html#a27cb0caa82c243e7259613241a6a85e3">cvOdeRhs_static</a></td></tr>
 <tr class="separator:ade67d68d65aa05f7427f2239d2cee1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -742,7 +742,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr void(* simulator::SimulatorOde::CVErrHandlerFn) (<a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> error_code, const char *module, const char *<a class="el" href="plotBE_8m.html#a2420833d971716e9bab41cc9fb3abba1">function</a>, char *msg, void *eh_data) = &amp;<a class="el" href="classsimulator_1_1SimulatorOde.html#a2e988d0185149b58f3c5c779423ce8f6">cvOdeErrorHandling_static</a></td>
+          <td class="memname">constexpr void(* simulator::SimulatorOde::CVErrHandlerFn) (<a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> error_code, const char *module, const char *<a class="el" href="readModelDescription_8m.html#a26480f1977235d7dc7ed7a1b4e4bbbb7">function</a>, char *msg, void *eh_data) = &amp;<a class="el" href="classsimulator_1_1SimulatorOde.html#a2e988d0185149b58f3c5c779423ce8f6">cvOdeErrorHandling_static</a></td>
         </tr>
       </table>
   </td>

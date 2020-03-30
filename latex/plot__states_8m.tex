@@ -1,0 +1,77 @@
+\hypertarget{plot__states_8m}{}\doxysection{scripts/plot\+\_\+states.m File Reference}
+\label{plot__states_8m}\index{scripts/plot\_states.m@{scripts/plot\_states.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} \mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}} (varargin) $>$ 0 experiment
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plot__states_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} \mbox{[}$\,$\mbox{]}
+\item 
+end \mbox{\hyperlink{plot__states_8m_a116c9be86301fca1fc0a6176cb6a607a}{species\+\_\+of\+\_\+interest}}
+\item 
+\mbox{\hyperlink{plot__states_8m_aad3c42e1d06f17a3811dda27a3fc5f42}{title\+\_\+index}} = 1
+\item 
+for \mbox{\hyperlink{plot__states_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{plot__states_8m_a122db86829e146dc213067663c8b9eb3}\label{plot__states_8m_a122db86829e146dc213067663c8b9eb3}} 
+\index{plot\_states.m@{plot\_states.m}!length@{length}}
+\index{length@{length}!plot\_states.m@{plot\_states.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} length (\begin{DoxyParamCaption}\item[{varargin}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{plot__states_8m_a2420833d971716e9bab41cc9fb3abba1}\label{plot__states_8m_a2420833d971716e9bab41cc9fb3abba1}} 
+\index{plot\_states.m@{plot\_states.m}!function@{function}}
+\index{function@{function}!plot\_states.m@{plot\_states.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= plot\_states( t, sim, \mbox{\hyperlink{readModelDescription_8m_a3f60fff813608d64910c493d1b7edb04}{species\_names}}, varargin)}
+\DoxyCodeLine{}
+\DoxyCodeLine{experiment = \textcolor{stringliteral}{''}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{plot__states_8m_a6f6ccfcf58b31cb6412107d9d5281426}\label{plot__states_8m_a6f6ccfcf58b31cb6412107d9d5281426}} 
+\index{plot\_states.m@{plot\_states.m}!i@{i}}
+\index{i@{i}!plot\_states.m@{plot\_states.m}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily for i}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1: \mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(\mbox{\hyperlink{plot__states_8m_a116c9be86301fca1fc0a6176cb6a607a}{species\_of\_interest}})}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} j = 1: \mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(\mbox{\hyperlink{readModelDescription_8m_a3f60fff813608d64910c493d1b7edb04}{species\_names}})}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} strcmp(\mbox{\hyperlink{readModelDescription_8m_a3f60fff813608d64910c493d1b7edb04}{species\_names}}\{j\}, \mbox{\hyperlink{plot__states_8m_a116c9be86301fca1fc0a6176cb6a607a}{species\_of\_interest}}\{\mbox{\hyperlink{plot__states_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}\})}
+\DoxyCodeLine{            \textcolor{keywordtype}{string} = strsplit(\mbox{\hyperlink{plot__states_8m_a116c9be86301fca1fc0a6176cb6a607a}{species\_of\_interest}}\{\mbox{\hyperlink{plot__states_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}\}, \textcolor{charliteral}{'\_'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{plot__states_8m_a116c9be86301fca1fc0a6176cb6a607a}\label{plot__states_8m_a116c9be86301fca1fc0a6176cb6a607a}} 
+\index{plot\_states.m@{plot\_states.m}!species\_of\_interest@{species\_of\_interest}}
+\index{species\_of\_interest@{species\_of\_interest}!plot\_states.m@{plot\_states.m}}
+\doxysubsubsection{\texorpdfstring{species\_of\_interest}{species\_of\_interest}}
+{\footnotesize\ttfamily end species\+\_\+of\+\_\+interest}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\textcolor{stringliteral}{'optoSos'}, \textcolor{stringliteral}{'optoSos\_acc'}, \textcolor{stringliteral}{'optoSos\_star'}, \textcolor{stringliteral}{'FgfR'}, \textcolor{stringliteral}{'FgfR\_exc'}, \textcolor{stringliteral}{'FgfR\_star'}, \textcolor{stringliteral}{'FgfR\_endo'}, \textcolor{stringliteral}{'FgfR\_auto'}, \textcolor{stringliteral}{'OptoFgfR\_star'}, ...}
+\DoxyCodeLine{    \textcolor{stringliteral}{'Sos\_star'}, \textcolor{stringliteral}{'NfbSos\_star'}, \textcolor{stringliteral}{'Ras\_star'}, \textcolor{stringliteral}{'Raf\_star'}, \textcolor{stringliteral}{'NfbRaf\_star'}, \textcolor{stringliteral}{'Nfb\_star'},\textcolor{stringliteral}{'Mek\_star'}, ...}
+\DoxyCodeLine{    \textcolor{stringliteral}{'Erk\_star'},  \textcolor{stringliteral}{'NfbCal\_star'},  \textcolor{stringliteral}{'KTR\_star'}, \textcolor{stringliteral}{'Ktr\_star'},  \textcolor{stringliteral}{'Iff\_star'}, \textcolor{stringliteral}{'Chan\_acc'}, ...}
+\DoxyCodeLine{    \textcolor{stringliteral}{'ChanOut\_acc'}, \textcolor{stringliteral}{'ChanIn\_acc'}, \textcolor{stringliteral}{'Cal'}, \textcolor{stringliteral}{'Cal\_star'}, \textcolor{stringliteral}{'Calcin\_star'}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{plot__states_8m_aad3c42e1d06f17a3811dda27a3fc5f42}\label{plot__states_8m_aad3c42e1d06f17a3811dda27a3fc5f42}} 
+\index{plot\_states.m@{plot\_states.m}!title\_index@{title\_index}}
+\index{title\_index@{title\_index}!plot\_states.m@{plot\_states.m}}
+\doxysubsubsection{\texorpdfstring{title\_index}{title\_index}}
+{\footnotesize\ttfamily title\+\_\+index = 1}
+

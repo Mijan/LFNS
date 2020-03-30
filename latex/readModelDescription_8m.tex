@@ -1,0 +1,377 @@
+\hypertarget{readModelDescription_8m}{}\doxysection{scripts/read\+Model\+Description.m File Reference}
+\label{readModelDescription_8m}\index{scripts/readModelDescription.m@{scripts/readModelDescription.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a825dc6b0982bcb116611f4d33a837b97}{if}} (\mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(\mbox{\hyperlink{readModelDescription_8m_a2647aa722bf92bd939afc8e8fec6f164}{model\+\_\+configurations\+\_\+index}}) $>$ 0) \mbox{\hyperlink{readModelDescription_8m_a493135d678a0d891f7ca33608d75b28f}{model\+\_\+conf\+\_\+lines}}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a556f72dfcf6a51b168e0472017d75272}{if}} (\mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(\mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}}\{\mbox{\hyperlink{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}\})==0) \mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}}(\mbox{\hyperlink{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a23c2408658675b711d89997234d7ba05}{bounds\+\_\+lines}} (1)
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} (\mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(entries) $>$2) param\+\_\+name
+\item 
+\mbox{\hyperlink{readModelDescription_8m_afdb0a5fe25287e8b6129c15d85ba3ffa}{species\+\_\+names}} (1)
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} \mbox{\hyperlink{readModelDescription_8m_a955b14bf06633c288b727ba59895e6be}{$\sim$isempty}} (\mbox{\hyperlink{readModelDescription_8m_a7e3f93b1e8872a62e85a565693d27047}{provided\+\_\+params\+\_\+index}}) provided\+\_\+param\+\_\+file\+\_\+key
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a26480f1977235d7dc7ed7a1b4e4bbbb7}{function}} \mbox{[}\mbox{\hyperlink{readModelDescription_8m_a6faa65f7d8f0a752f2c1e0634ea7300b}{param\+\_\+names}}, \mbox{\hyperlink{readModelDescription_8m_afdb0a5fe25287e8b6129c15d85ba3ffa}{species\+\_\+names}}, \mbox{\hyperlink{readModelDescription_8m_a775cccb23b2cc2f7d50e0ad6a46a4e0a}{scales}}, \mbox{\hyperlink{readModelDescription_8m_aa88cd70ec11880aa8a698595d0bc7aaa}{bounds}}, \mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}}, \mbox{\hyperlink{readModelDescription_8m_a1c7304c7ac5caf492e3eb7e3955ef219}{provided\+\_\+params}}, \mbox{\hyperlink{readModelDescription_8m_a4e083749f23cf8a49419280df0346802}{provided\+\_\+params\+\_\+file}}\mbox{]}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a73c3c6176e544a572a26a8bdc0e0bea5}{model\+\_\+key}} = \textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Model -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a7dd4c392384ae61a2f562c72fa1dd687}{initial\+\_\+value\+\_\+key}} = \textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Initial Values -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a2b02848e0501d3ae8b2594bcd4bc20a0}{lfns\+\_\+substring\+\_\+index}} = strfind(model\+\_\+summary,\mbox{\hyperlink{readModelDescription_8m_a73c3c6176e544a572a26a8bdc0e0bea5}{model\+\_\+key}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}{lfns\+\_\+info\+\_\+substr}} = model\+\_\+summary(1 \+: \mbox{\hyperlink{readModelDescription_8m_a2b02848e0501d3ae8b2594bcd4bc20a0}{lfns\+\_\+substring\+\_\+index}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_aa19fb17f60d5fcd0ee82194174a3d96d}{model\+\_\+substring\+\_\+index}} = strfind(model\+\_\+summary,\mbox{\hyperlink{readModelDescription_8m_a7dd4c392384ae61a2f562c72fa1dd687}{initial\+\_\+value\+\_\+key}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a6cd6e4395ab23121e71dc2664454ed24}{model\+\_\+info\+\_\+substr}} = model\+\_\+summary(\mbox{\hyperlink{readModelDescription_8m_a2b02848e0501d3ae8b2594bcd4bc20a0}{lfns\+\_\+substring\+\_\+index}} +1 \+: \mbox{\hyperlink{readModelDescription_8m_aa19fb17f60d5fcd0ee82194174a3d96d}{model\+\_\+substring\+\_\+index}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_adcf328f361b144ba67b7877b16d43d57}{model\+\_\+conf\+\_\+key}} = \textquotesingle{}Experiments for\textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a2647aa722bf92bd939afc8e8fec6f164}{model\+\_\+configurations\+\_\+index}} = strfind( \mbox{\hyperlink{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}{lfns\+\_\+info\+\_\+substr}}, \mbox{\hyperlink{readModelDescription_8m_adcf328f361b144ba67b7877b16d43d57}{model\+\_\+conf\+\_\+key}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a493135d678a0d891f7ca33608d75b28f}{model\+\_\+conf\+\_\+lines}} = model\+\_\+conf\+\_\+lines\{1\}
+\item 
+for \mbox{\hyperlink{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}
+\item 
+end end end \mbox{\hyperlink{readModelDescription_8m_aa6755085068d22e937065cbd00691c9c}{bounds\+\_\+key}} = \textquotesingle{}Name Bounds Scale\textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_afe0122d1e8383f069513ab70d6b7e16c}{bounds\+\_\+index}} = strfind( \mbox{\hyperlink{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}{lfns\+\_\+info\+\_\+substr}}, \mbox{\hyperlink{readModelDescription_8m_aa6755085068d22e937065cbd00691c9c}{bounds\+\_\+key}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_ad1f8b5a43b65da796becc57f1a52ff61}{bounds\+\_\+lines}} = splitlines(\mbox{\hyperlink{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}{lfns\+\_\+info\+\_\+substr}}(\mbox{\hyperlink{readModelDescription_8m_afe0122d1e8383f069513ab70d6b7e16c}{bounds\+\_\+index}} \+: end))
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a91cf6fbebedd86150a36e5ac3d5d3bfc}{break}}
+\item 
+end end \mbox{\hyperlink{readModelDescription_8m_a6faa65f7d8f0a752f2c1e0634ea7300b}{param\+\_\+names}} = \{\}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a775cccb23b2cc2f7d50e0ad6a46a4e0a}{scales}} = \{\}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_aa88cd70ec11880aa8a698595d0bc7aaa}{bounds}} = \mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{readModelDescription_8m_a2bd48d1d0e8c4fbb15a4db48af871f60}{line\+\_\+nbr}}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_acec6d8ad52a28972fa74e071c1a63b6a}{scale}} = entries\{end\}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_aafaf72196acaed87a31f2f634865a8f9}{r\+\_\+bound}} = entries\{end-\/1\}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_aa91f623b731a07b029d83848afb762e6}{l\+\_\+bound}} = entries\{end-\/2\}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a890a2d48ebeb9a808ab724551057a03f}{bound}} = \mbox{[}\mbox{\hyperlink{readModelDescription_8m_aa91f623b731a07b029d83848afb762e6}{l\+\_\+bound}}, \mbox{\hyperlink{readModelDescription_8m_aafaf72196acaed87a31f2f634865a8f9}{r\+\_\+bound}}\mbox{]}
+\item 
+end end \mbox{\hyperlink{readModelDescription_8m_a9805a37c9d46aff3940669e067322980}{species\+\_\+key}} = \textquotesingle{}Species\+:\textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a32cb6b311e57219bf9395a4b885006c3}{species\+\_\+index}} = strfind( \mbox{\hyperlink{readModelDescription_8m_a6cd6e4395ab23121e71dc2664454ed24}{model\+\_\+info\+\_\+substr}}, \mbox{\hyperlink{readModelDescription_8m_a9805a37c9d46aff3940669e067322980}{species\+\_\+key}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_ad7f52d0a5b74e406857679b164c77640}{species\+\_\+lines}} = splitlines(\mbox{\hyperlink{readModelDescription_8m_a6cd6e4395ab23121e71dc2664454ed24}{model\+\_\+info\+\_\+substr}}(\mbox{\hyperlink{readModelDescription_8m_a32cb6b311e57219bf9395a4b885006c3}{species\+\_\+index}} \+: end -\/ 1))
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a6c1a29c8cacdb4df99b79889c529176b}{species\+\_\+line}} = \mbox{\hyperlink{readModelDescription_8m_ad7f52d0a5b74e406857679b164c77640}{species\+\_\+lines}}\{1\}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a3f60fff813608d64910c493d1b7edb04}{species\+\_\+names}} = strsplit(strip(\mbox{\hyperlink{readModelDescription_8m_a6c1a29c8cacdb4df99b79889c529176b}{species\+\_\+line}}), \textquotesingle{} \textquotesingle{})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a604b7b95c536888f5d161eed14759511}{provided\+\_\+params\+\_\+key}} = \textquotesingle{}provided the parameters\textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a7e3f93b1e8872a62e85a565693d27047}{provided\+\_\+params\+\_\+index}} = strfind(model\+\_\+summary, \mbox{\hyperlink{readModelDescription_8m_a604b7b95c536888f5d161eed14759511}{provided\+\_\+params\+\_\+key}})
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a4e083749f23cf8a49419280df0346802}{provided\+\_\+params\+\_\+file}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a1c7304c7ac5caf492e3eb7e3955ef219}{provided\+\_\+params}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a7559f406aa6c4587d01a39a4d72a9334}{provided\+\_\+param\+\_\+file\+\_\+index}} = strfind(model\+\_\+summary, provided\+\_\+param\+\_\+file\+\_\+key)
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a811512359bb67face279ac856bbea019}{provided\+\_\+params\+\_\+str}} = model\+\_\+summary(\mbox{\hyperlink{readModelDescription_8m_a7e3f93b1e8872a62e85a565693d27047}{provided\+\_\+params\+\_\+index}} +24 \+: \mbox{\hyperlink{readModelDescription_8m_a7559f406aa6c4587d01a39a4d72a9334}{provided\+\_\+param\+\_\+file\+\_\+index}} -\/3)
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a5381a26e3f3e1919eb9df2bfaa8f2b04}{sampled\+\_\+params\+\_\+key}} = \textquotesingle{}Parameters to be sampled\+:\textquotesingle{}
+\item 
+\mbox{\hyperlink{readModelDescription_8m_a5dbe05d38d69b8520d9656e5eb521d0b}{sampled\+\_\+params\+\_\+index}} = strfind(model\+\_\+summary, \mbox{\hyperlink{readModelDescription_8m_a5381a26e3f3e1919eb9df2bfaa8f2b04}{sampled\+\_\+params\+\_\+key}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{readModelDescription_8m_a23c2408658675b711d89997234d7ba05}\label{readModelDescription_8m_a23c2408658675b711d89997234d7ba05}} 
+\index{readModelDescription.m@{readModelDescription.m}!bounds\_lines@{bounds\_lines}}
+\index{bounds\_lines@{bounds\_lines}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{bounds\_lines()}{bounds\_lines()}}
+{\footnotesize\ttfamily bounds\+\_\+lines (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}\label{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}} 
+\index{readModelDescription.m@{readModelDescription.m}!if@{if}}
+\index{if@{if}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(entries)}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a556f72dfcf6a51b168e0472017d75272}\label{readModelDescription_8m_a556f72dfcf6a51b168e0472017d75272}} 
+\index{readModelDescription.m@{readModelDescription.m}!if@{if}}
+\index{if@{if}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(\mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}}\{\mbox{\hyperlink{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}\})}]{ = {\ttfamily =0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a825dc6b0982bcb116611f4d33a837b97}\label{readModelDescription_8m_a825dc6b0982bcb116611f4d33a837b97}} 
+\index{readModelDescription.m@{readModelDescription.m}!if@{if}}
+\index{if@{if}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plot__states_8m_a122db86829e146dc213067663c8b9eb3}{length}}(\mbox{\hyperlink{readModelDescription_8m_a2647aa722bf92bd939afc8e8fec6f164}{model\+\_\+configurations\+\_\+index}})}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{readModelDescription_8m_afdb0a5fe25287e8b6129c15d85ba3ffa}\label{readModelDescription_8m_afdb0a5fe25287e8b6129c15d85ba3ffa}} 
+\index{readModelDescription.m@{readModelDescription.m}!species\_names@{species\_names}}
+\index{species\_names@{species\_names}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{species\_names()}{species\_names()}}
+{\footnotesize\ttfamily species\+\_\+names (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a955b14bf06633c288b727ba59895e6be}\label{readModelDescription_8m_a955b14bf06633c288b727ba59895e6be}} 
+\index{readModelDescription.m@{readModelDescription.m}!````~isempty@{$\sim$isempty}}
+\index{````~isempty@{$\sim$isempty}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isempty()}{~isempty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readModelDescription_8m_a281e9764fbcac6a9f0dad9c367337d74}{if}} $\sim$\mbox{\hyperlink{getPosteriorParticles_8m_aec53be854d79b7da614c807fdff97abc}{isempty}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{readModelDescription_8m_a7e3f93b1e8872a62e85a565693d27047}{provided\+\_\+params\+\_\+index}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{readModelDescription_8m_a890a2d48ebeb9a808ab724551057a03f}\label{readModelDescription_8m_a890a2d48ebeb9a808ab724551057a03f}} 
+\index{readModelDescription.m@{readModelDescription.m}!bound@{bound}}
+\index{bound@{bound}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{bound}{bound}}
+{\footnotesize\ttfamily bound = \mbox{[}\mbox{\hyperlink{readModelDescription_8m_aa91f623b731a07b029d83848afb762e6}{l\+\_\+bound}}, \mbox{\hyperlink{readModelDescription_8m_aafaf72196acaed87a31f2f634865a8f9}{r\+\_\+bound}}\mbox{]}}
+
+\mbox{\Hypertarget{readModelDescription_8m_aa88cd70ec11880aa8a698595d0bc7aaa}\label{readModelDescription_8m_aa88cd70ec11880aa8a698595d0bc7aaa}} 
+\index{readModelDescription.m@{readModelDescription.m}!bounds@{bounds}}
+\index{bounds@{bounds}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{bounds}{bounds}}
+{\footnotesize\ttfamily bounds = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{readModelDescription_8m_afe0122d1e8383f069513ab70d6b7e16c}\label{readModelDescription_8m_afe0122d1e8383f069513ab70d6b7e16c}} 
+\index{readModelDescription.m@{readModelDescription.m}!bounds\_index@{bounds\_index}}
+\index{bounds\_index@{bounds\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{bounds\_index}{bounds\_index}}
+{\footnotesize\ttfamily bounds\+\_\+index = strfind( \mbox{\hyperlink{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}{lfns\+\_\+info\+\_\+substr}}, \mbox{\hyperlink{readModelDescription_8m_aa6755085068d22e937065cbd00691c9c}{bounds\+\_\+key}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_aa6755085068d22e937065cbd00691c9c}\label{readModelDescription_8m_aa6755085068d22e937065cbd00691c9c}} 
+\index{readModelDescription.m@{readModelDescription.m}!bounds\_key@{bounds\_key}}
+\index{bounds\_key@{bounds\_key}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{bounds\_key}{bounds\_key}}
+{\footnotesize\ttfamily end end end bounds\+\_\+key = \textquotesingle{}Name Bounds Scale\textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_ad1f8b5a43b65da796becc57f1a52ff61}\label{readModelDescription_8m_ad1f8b5a43b65da796becc57f1a52ff61}} 
+\index{readModelDescription.m@{readModelDescription.m}!bounds\_lines@{bounds\_lines}}
+\index{bounds\_lines@{bounds\_lines}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{bounds\_lines}{bounds\_lines}}
+{\footnotesize\ttfamily bounds\+\_\+lines = splitlines(\mbox{\hyperlink{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}{lfns\+\_\+info\+\_\+substr}}(\mbox{\hyperlink{readModelDescription_8m_afe0122d1e8383f069513ab70d6b7e16c}{bounds\+\_\+index}} \+: end))}
+
+\mbox{\Hypertarget{readModelDescription_8m_a91cf6fbebedd86150a36e5ac3d5d3bfc}\label{readModelDescription_8m_a91cf6fbebedd86150a36e5ac3d5d3bfc}} 
+\index{readModelDescription.m@{readModelDescription.m}!break@{break}}
+\index{break@{break}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{break}{break}}
+{\footnotesize\ttfamily break}
+
+\mbox{\Hypertarget{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}\label{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}} 
+\index{readModelDescription.m@{readModelDescription.m}!experiments@{experiments}}
+\index{experiments@{experiments}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{experiments}{experiments}}
+{\footnotesize\ttfamily experiments = \textquotesingle{}\textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a26480f1977235d7dc7ed7a1b4e4bbbb7}\label{readModelDescription_8m_a26480f1977235d7dc7ed7a1b4e4bbbb7}} 
+\index{readModelDescription.m@{readModelDescription.m}!function@{function}}
+\index{function@{function}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{readModelDescription_8m_a6faa65f7d8f0a752f2c1e0634ea7300b}{param\+\_\+names}}, \mbox{\hyperlink{readModelDescription_8m_afdb0a5fe25287e8b6129c15d85ba3ffa}{species\+\_\+names}}, \mbox{\hyperlink{readModelDescription_8m_a775cccb23b2cc2f7d50e0ad6a46a4e0a}{scales}}, \mbox{\hyperlink{readModelDescription_8m_aa88cd70ec11880aa8a698595d0bc7aaa}{bounds}}, \mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}}, \mbox{\hyperlink{readModelDescription_8m_a1c7304c7ac5caf492e3eb7e3955ef219}{provided\+\_\+params}}, \mbox{\hyperlink{readModelDescription_8m_a4e083749f23cf8a49419280df0346802}{provided\+\_\+params\+\_\+file}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= readModelDescription(path\_to\_model\_description)}
+\DoxyCodeLine{}
+\DoxyCodeLine{model\_summary = fileread(path\_to\_model\_description)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}\label{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}} 
+\index{readModelDescription.m@{readModelDescription.m}!i@{i}}
+\index{i@{i}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily for i}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1: \mbox{\hyperlink{getPosteriorParticles_8m_ac533227803fc36ceb61588c572c53b4a}{length}}(\mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}})}
+\DoxyCodeLine{        \mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}}\{\mbox{\hyperlink{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}\} = strip(\mbox{\hyperlink{readModelDescription_8m_a0ada5eecb44f5b32c5ff5d38e545cc7e}{experiments}}\{\mbox{\hyperlink{readModelDescription_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}\} )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{readModelDescription_8m_a7dd4c392384ae61a2f562c72fa1dd687}\label{readModelDescription_8m_a7dd4c392384ae61a2f562c72fa1dd687}} 
+\index{readModelDescription.m@{readModelDescription.m}!initial\_value\_key@{initial\_value\_key}}
+\index{initial\_value\_key@{initial\_value\_key}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{initial\_value\_key}{initial\_value\_key}}
+{\footnotesize\ttfamily initial\+\_\+value\+\_\+key = \textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Initial Values -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_aa91f623b731a07b029d83848afb762e6}\label{readModelDescription_8m_aa91f623b731a07b029d83848afb762e6}} 
+\index{readModelDescription.m@{readModelDescription.m}!l\_bound@{l\_bound}}
+\index{l\_bound@{l\_bound}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{l\_bound}{l\_bound}}
+{\footnotesize\ttfamily l\+\_\+bound = entries\{end-\/2\}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}\label{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}} 
+\index{readModelDescription.m@{readModelDescription.m}!lfns\_info\_substr@{lfns\_info\_substr}}
+\index{lfns\_info\_substr@{lfns\_info\_substr}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{lfns\_info\_substr}{lfns\_info\_substr}}
+{\footnotesize\ttfamily lfns\+\_\+info\+\_\+substr = model\+\_\+summary(1 \+: \mbox{\hyperlink{readModelDescription_8m_a2b02848e0501d3ae8b2594bcd4bc20a0}{lfns\+\_\+substring\+\_\+index}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a2b02848e0501d3ae8b2594bcd4bc20a0}\label{readModelDescription_8m_a2b02848e0501d3ae8b2594bcd4bc20a0}} 
+\index{readModelDescription.m@{readModelDescription.m}!lfns\_substring\_index@{lfns\_substring\_index}}
+\index{lfns\_substring\_index@{lfns\_substring\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{lfns\_substring\_index}{lfns\_substring\_index}}
+{\footnotesize\ttfamily lfns\+\_\+substring\+\_\+index = strfind(model\+\_\+summary,\mbox{\hyperlink{readModelDescription_8m_a73c3c6176e544a572a26a8bdc0e0bea5}{model\+\_\+key}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a2bd48d1d0e8c4fbb15a4db48af871f60}\label{readModelDescription_8m_a2bd48d1d0e8c4fbb15a4db48af871f60}} 
+\index{readModelDescription.m@{readModelDescription.m}!line\_nbr@{line\_nbr}}
+\index{line\_nbr@{line\_nbr}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{line\_nbr}{line\_nbr}}
+{\footnotesize\ttfamily for line\+\_\+nbr}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1 : \mbox{\hyperlink{getPosteriorParticles_8m_ac533227803fc36ceb61588c572c53b4a}{length}}(\mbox{\hyperlink{readModelDescription_8m_ad1f8b5a43b65da796becc57f1a52ff61}{bounds\_lines}})}
+\DoxyCodeLine{    entries = strsplit(strip(\mbox{\hyperlink{readModelDescription_8m_ad1f8b5a43b65da796becc57f1a52ff61}{bounds\_lines}}\{\mbox{\hyperlink{readModelDescription_8m_a2bd48d1d0e8c4fbb15a4db48af871f60}{line\_nbr}}\}), \textcolor{charliteral}{' '})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{readModelDescription_8m_adcf328f361b144ba67b7877b16d43d57}\label{readModelDescription_8m_adcf328f361b144ba67b7877b16d43d57}} 
+\index{readModelDescription.m@{readModelDescription.m}!model\_conf\_key@{model\_conf\_key}}
+\index{model\_conf\_key@{model\_conf\_key}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{model\_conf\_key}{model\_conf\_key}}
+{\footnotesize\ttfamily model\+\_\+conf\+\_\+key = \textquotesingle{}Experiments for\textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a493135d678a0d891f7ca33608d75b28f}\label{readModelDescription_8m_a493135d678a0d891f7ca33608d75b28f}} 
+\index{readModelDescription.m@{readModelDescription.m}!model\_conf\_lines@{model\_conf\_lines}}
+\index{model\_conf\_lines@{model\_conf\_lines}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{model\_conf\_lines}{model\_conf\_lines}}
+{\footnotesize\ttfamily model\+\_\+conf\+\_\+lines = model\+\_\+conf\+\_\+lines\{1\}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a2647aa722bf92bd939afc8e8fec6f164}\label{readModelDescription_8m_a2647aa722bf92bd939afc8e8fec6f164}} 
+\index{readModelDescription.m@{readModelDescription.m}!model\_configurations\_index@{model\_configurations\_index}}
+\index{model\_configurations\_index@{model\_configurations\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{model\_configurations\_index}{model\_configurations\_index}}
+{\footnotesize\ttfamily model\+\_\+configurations\+\_\+index = strfind( \mbox{\hyperlink{readModelDescription_8m_a92d13b58402391c90efbdd232db6c05e}{lfns\+\_\+info\+\_\+substr}}, \mbox{\hyperlink{readModelDescription_8m_adcf328f361b144ba67b7877b16d43d57}{model\+\_\+conf\+\_\+key}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a6cd6e4395ab23121e71dc2664454ed24}\label{readModelDescription_8m_a6cd6e4395ab23121e71dc2664454ed24}} 
+\index{readModelDescription.m@{readModelDescription.m}!model\_info\_substr@{model\_info\_substr}}
+\index{model\_info\_substr@{model\_info\_substr}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{model\_info\_substr}{model\_info\_substr}}
+{\footnotesize\ttfamily model\+\_\+info\+\_\+substr = model\+\_\+summary(\mbox{\hyperlink{readModelDescription_8m_a2b02848e0501d3ae8b2594bcd4bc20a0}{lfns\+\_\+substring\+\_\+index}} +1 \+: \mbox{\hyperlink{readModelDescription_8m_aa19fb17f60d5fcd0ee82194174a3d96d}{model\+\_\+substring\+\_\+index}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a73c3c6176e544a572a26a8bdc0e0bea5}\label{readModelDescription_8m_a73c3c6176e544a572a26a8bdc0e0bea5}} 
+\index{readModelDescription.m@{readModelDescription.m}!model\_key@{model\_key}}
+\index{model\_key@{model\_key}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{model\_key}{model\_key}}
+{\footnotesize\ttfamily model\+\_\+key = \textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Model -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_aa19fb17f60d5fcd0ee82194174a3d96d}\label{readModelDescription_8m_aa19fb17f60d5fcd0ee82194174a3d96d}} 
+\index{readModelDescription.m@{readModelDescription.m}!model\_substring\_index@{model\_substring\_index}}
+\index{model\_substring\_index@{model\_substring\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{model\_substring\_index}{model\_substring\_index}}
+{\footnotesize\ttfamily model\+\_\+substring\+\_\+index = strfind(model\+\_\+summary,\mbox{\hyperlink{readModelDescription_8m_a7dd4c392384ae61a2f562c72fa1dd687}{initial\+\_\+value\+\_\+key}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a6faa65f7d8f0a752f2c1e0634ea7300b}\label{readModelDescription_8m_a6faa65f7d8f0a752f2c1e0634ea7300b}} 
+\index{readModelDescription.m@{readModelDescription.m}!param\_names@{param\_names}}
+\index{param\_names@{param\_names}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{param\_names}{param\_names}}
+{\footnotesize\ttfamily param\+\_\+names = \{\}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a7559f406aa6c4587d01a39a4d72a9334}\label{readModelDescription_8m_a7559f406aa6c4587d01a39a4d72a9334}} 
+\index{readModelDescription.m@{readModelDescription.m}!provided\_param\_file\_index@{provided\_param\_file\_index}}
+\index{provided\_param\_file\_index@{provided\_param\_file\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{provided\_param\_file\_index}{provided\_param\_file\_index}}
+{\footnotesize\ttfamily provided\+\_\+param\+\_\+file\+\_\+index = strfind(model\+\_\+summary, provided\+\_\+param\+\_\+file\+\_\+key)}
+
+\mbox{\Hypertarget{readModelDescription_8m_a1c7304c7ac5caf492e3eb7e3955ef219}\label{readModelDescription_8m_a1c7304c7ac5caf492e3eb7e3955ef219}} 
+\index{readModelDescription.m@{readModelDescription.m}!provided\_params@{provided\_params}}
+\index{provided\_params@{provided\_params}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{provided\_params}{provided\_params}}
+{\footnotesize\ttfamily provided\+\_\+params = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a4e083749f23cf8a49419280df0346802}\label{readModelDescription_8m_a4e083749f23cf8a49419280df0346802}} 
+\index{readModelDescription.m@{readModelDescription.m}!provided\_params\_file@{provided\_params\_file}}
+\index{provided\_params\_file@{provided\_params\_file}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{provided\_params\_file}{provided\_params\_file}}
+{\footnotesize\ttfamily provided\+\_\+params\+\_\+file = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a7e3f93b1e8872a62e85a565693d27047}\label{readModelDescription_8m_a7e3f93b1e8872a62e85a565693d27047}} 
+\index{readModelDescription.m@{readModelDescription.m}!provided\_params\_index@{provided\_params\_index}}
+\index{provided\_params\_index@{provided\_params\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{provided\_params\_index}{provided\_params\_index}}
+{\footnotesize\ttfamily provided\+\_\+params\+\_\+index = strfind(model\+\_\+summary, \mbox{\hyperlink{readModelDescription_8m_a604b7b95c536888f5d161eed14759511}{provided\+\_\+params\+\_\+key}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a604b7b95c536888f5d161eed14759511}\label{readModelDescription_8m_a604b7b95c536888f5d161eed14759511}} 
+\index{readModelDescription.m@{readModelDescription.m}!provided\_params\_key@{provided\_params\_key}}
+\index{provided\_params\_key@{provided\_params\_key}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{provided\_params\_key}{provided\_params\_key}}
+{\footnotesize\ttfamily provided\+\_\+params\+\_\+key = \textquotesingle{}provided the parameters\textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a811512359bb67face279ac856bbea019}\label{readModelDescription_8m_a811512359bb67face279ac856bbea019}} 
+\index{readModelDescription.m@{readModelDescription.m}!provided\_params\_str@{provided\_params\_str}}
+\index{provided\_params\_str@{provided\_params\_str}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{provided\_params\_str}{provided\_params\_str}}
+{\footnotesize\ttfamily provided\+\_\+params\+\_\+str = model\+\_\+summary(\mbox{\hyperlink{readModelDescription_8m_a7e3f93b1e8872a62e85a565693d27047}{provided\+\_\+params\+\_\+index}} +24 \+: \mbox{\hyperlink{readModelDescription_8m_a7559f406aa6c4587d01a39a4d72a9334}{provided\+\_\+param\+\_\+file\+\_\+index}} -\/3)}
+
+\mbox{\Hypertarget{readModelDescription_8m_aafaf72196acaed87a31f2f634865a8f9}\label{readModelDescription_8m_aafaf72196acaed87a31f2f634865a8f9}} 
+\index{readModelDescription.m@{readModelDescription.m}!r\_bound@{r\_bound}}
+\index{r\_bound@{r\_bound}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{r\_bound}{r\_bound}}
+{\footnotesize\ttfamily r\+\_\+bound = entries\{end-\/1\}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a5dbe05d38d69b8520d9656e5eb521d0b}\label{readModelDescription_8m_a5dbe05d38d69b8520d9656e5eb521d0b}} 
+\index{readModelDescription.m@{readModelDescription.m}!sampled\_params\_index@{sampled\_params\_index}}
+\index{sampled\_params\_index@{sampled\_params\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{sampled\_params\_index}{sampled\_params\_index}}
+{\footnotesize\ttfamily sampled\+\_\+params\+\_\+index = strfind(model\+\_\+summary, \mbox{\hyperlink{readModelDescription_8m_a5381a26e3f3e1919eb9df2bfaa8f2b04}{sampled\+\_\+params\+\_\+key}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a5381a26e3f3e1919eb9df2bfaa8f2b04}\label{readModelDescription_8m_a5381a26e3f3e1919eb9df2bfaa8f2b04}} 
+\index{readModelDescription.m@{readModelDescription.m}!sampled\_params\_key@{sampled\_params\_key}}
+\index{sampled\_params\_key@{sampled\_params\_key}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{sampled\_params\_key}{sampled\_params\_key}}
+{\footnotesize\ttfamily sampled\+\_\+params\+\_\+key = \textquotesingle{}Parameters to be sampled\+:\textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_acec6d8ad52a28972fa74e071c1a63b6a}\label{readModelDescription_8m_acec6d8ad52a28972fa74e071c1a63b6a}} 
+\index{readModelDescription.m@{readModelDescription.m}!scale@{scale}}
+\index{scale@{scale}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily scale = entries\{end\}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a775cccb23b2cc2f7d50e0ad6a46a4e0a}\label{readModelDescription_8m_a775cccb23b2cc2f7d50e0ad6a46a4e0a}} 
+\index{readModelDescription.m@{readModelDescription.m}!scales@{scales}}
+\index{scales@{scales}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{scales}{scales}}
+{\footnotesize\ttfamily scales = \{\}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a32cb6b311e57219bf9395a4b885006c3}\label{readModelDescription_8m_a32cb6b311e57219bf9395a4b885006c3}} 
+\index{readModelDescription.m@{readModelDescription.m}!species\_index@{species\_index}}
+\index{species\_index@{species\_index}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{species\_index}{species\_index}}
+{\footnotesize\ttfamily species\+\_\+index = strfind( \mbox{\hyperlink{readModelDescription_8m_a6cd6e4395ab23121e71dc2664454ed24}{model\+\_\+info\+\_\+substr}}, \mbox{\hyperlink{readModelDescription_8m_a9805a37c9d46aff3940669e067322980}{species\+\_\+key}})}
+
+\mbox{\Hypertarget{readModelDescription_8m_a9805a37c9d46aff3940669e067322980}\label{readModelDescription_8m_a9805a37c9d46aff3940669e067322980}} 
+\index{readModelDescription.m@{readModelDescription.m}!species\_key@{species\_key}}
+\index{species\_key@{species\_key}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{species\_key}{species\_key}}
+{\footnotesize\ttfamily end end species\+\_\+key = \textquotesingle{}Species\+:\textquotesingle{}}
+
+\mbox{\Hypertarget{readModelDescription_8m_a6c1a29c8cacdb4df99b79889c529176b}\label{readModelDescription_8m_a6c1a29c8cacdb4df99b79889c529176b}} 
+\index{readModelDescription.m@{readModelDescription.m}!species\_line@{species\_line}}
+\index{species\_line@{species\_line}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{species\_line}{species\_line}}
+{\footnotesize\ttfamily species\+\_\+line = \mbox{\hyperlink{readModelDescription_8m_ad7f52d0a5b74e406857679b164c77640}{species\+\_\+lines}}\{1\}}
+
+\mbox{\Hypertarget{readModelDescription_8m_ad7f52d0a5b74e406857679b164c77640}\label{readModelDescription_8m_ad7f52d0a5b74e406857679b164c77640}} 
+\index{readModelDescription.m@{readModelDescription.m}!species\_lines@{species\_lines}}
+\index{species\_lines@{species\_lines}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{species\_lines}{species\_lines}}
+{\footnotesize\ttfamily species\+\_\+lines = splitlines(\mbox{\hyperlink{readModelDescription_8m_a6cd6e4395ab23121e71dc2664454ed24}{model\+\_\+info\+\_\+substr}}(\mbox{\hyperlink{readModelDescription_8m_a32cb6b311e57219bf9395a4b885006c3}{species\+\_\+index}} \+: end -\/ 1))}
+
+\mbox{\Hypertarget{readModelDescription_8m_a3f60fff813608d64910c493d1b7edb04}\label{readModelDescription_8m_a3f60fff813608d64910c493d1b7edb04}} 
+\index{readModelDescription.m@{readModelDescription.m}!species\_names@{species\_names}}
+\index{species\_names@{species\_names}!readModelDescription.m@{readModelDescription.m}}
+\doxysubsubsection{\texorpdfstring{species\_names}{species\_names}}
+{\footnotesize\ttfamily species\+\_\+names = strsplit(strip(\mbox{\hyperlink{readModelDescription_8m_a6c1a29c8cacdb4df99b79889c529176b}{species\+\_\+line}}), \textquotesingle{} \textquotesingle{})}
+

@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['thresh_5faccept_5frate_2692',['thresh_accept_rate',['../classlfns_1_1LFNSSettings.html#aa28e2da4ae42f4ffb0af4a970eef74e5',1,'lfns::LFNSSettings::thresh_accept_rate()'],['../classoptions_1_1LFNSOptions.html#a071932d17eb754e85de7c7b04e853dae',1,'options::LFNSOptions::thresh_accept_rate()'],['../classsampler_1_1RejectionSamplerData.html#a29afdc73e8e9634b86919f5920447cd2',1,'sampler::RejectionSamplerData::thresh_accept_rate()']]],
-  ['threshold_2693',['threshold',['../classLFNSSetup.html#a2f72cdb4f70558a1fe25a6ab7d14aef4',1,'LFNSSetup']]],
-  ['time_2694',['time',['../classparticle__filter_1_1SmcParticle.html#ab2962a7c2627afd82479061ef4b6dfc1',1,'particle_filter::SmcParticle']]],
-  ['time_5f1_2695',['time_1',['../classlfns_1_1mpi_1_1LFNSMpi.html#a452b187961ac0f7f74e3af94eba23094',1,'lfns::mpi::LFNSMpi']]],
-  ['time_5f2_2696',['time_2',['../classlfns_1_1mpi_1_1LFNSMpi.html#ae9af61bdd67bff6d1c9c5235ffcfe554',1,'lfns::mpi::LFNSMpi']]],
-  ['time_5f3_2697',['time_3',['../classlfns_1_1mpi_1_1LFNSMpi.html#a84f44d18becb0ebee39abc0695ee43b8',1,'lfns::mpi::LFNSMpi']]],
-  ['time_5f4_2698',['time_4',['../classlfns_1_1mpi_1_1LFNSMpi.html#a304da84872adc53a0a0bde7bf3b383e1',1,'lfns::mpi::LFNSMpi']]],
-  ['time_5f5_2699',['time_5',['../classlfns_1_1mpi_1_1LFNSMpi.html#a29d5b2038803aec7e1f881f259e5a9e8',1,'lfns::mpi::LFNSMpi']]],
-  ['time_5ffiles_2700',['time_files',['../classparticle__filter_1_1ParticleFilterSettings.html#a20e9baccc6542d3acec51035ea74fc7a',1,'particle_filter::ParticleFilterSettings']]],
-  ['time_5fname_2701',['TIME_NAME',['../namespacemodels.html#ad2c4a87413147a1c930c3b27d51dc2a3',1,'models']]],
-  ['time_5fpoints_2702',['time_points',['../classoptions_1_1SimulationOptions.html#a4a8656fe8d2b6f382760e5f952255e7b',1,'options::SimulationOptions']]],
-  ['times_2703',['times',['../classSimulationSetup.html#a15b1e3b01afc091bd8bc19b6b758f611',1,'SimulationSetup::times()'],['../plotBE_8m.html#ac150111bafc331bafb353619452c5c5c',1,'times():&#160;plotBE.m']]],
-  ['times_5fsuffix_2704',['times_suffix',['../simulate_8cpp.html#a836c53f409949b5dd8a51cf2f9b14dd4',1,'simulate.cpp']]],
-  ['times_5fvec_2705',['times_vec',['../classLFNSSetup.html#a4a0b37953dc826de8e4ca69e2c42b59d',1,'LFNSSetup::times_vec()'],['../classLikelihoodSetup.html#ae3396176c7c7011478298d51924e4c9b',1,'LikelihoodSetup::times_vec()'],['../classMCMCSetup.html#ae40768ee7a110b9c71b8d15386d44062',1,'MCMCSetup::times_vec()']]]
+  ['uniform_5fcaption_2787',['UNIFORM_CAPTION',['../namespaceio.html#a1e629d4c2ee3cbbd290bda1206e34bc4',1,'io']]],
+  ['uniform_5fint_5fcaption_2788',['UNIFORM_INT_CAPTION',['../namespaceio.html#aaadd30e9082e4d990c02d10ea1f9d648',1,'io']]],
+  ['uniform_5fprior_2789',['uniform_prior',['../classlfns_1_1LFNSSettings.html#a0efc40cef31884a6819961c190eb2773',1,'lfns::LFNSSettings::uniform_prior()'],['../classmcmc_1_1MCMCSettings.html#ad4696863af7c3e37848904e26a241c00',1,'mcmc::MCMCSettings::uniform_prior()']]],
+  ['use_5fpremature_5fcancelation_2790',['use_premature_cancelation',['../classoptions_1_1LFNSOptions.html#aa28c1fe3de95131f83a167f9695df988',1,'options::LFNSOptions::use_premature_cancelation()'],['../classparticle__filter_1_1ParticleFilterSettings.html#a3867b41a33c3cce3d3f23930b3e515bb',1,'particle_filter::ParticleFilterSettings::use_premature_cancelation()']]],
+  ['use_5fproper_5fresampling_2791',['use_proper_resampling',['../classoptions_1_1ComputeLikelihoodOptions.html#ac18933bbaa9d62be6091fee53bb5b498',1,'options::ComputeLikelihoodOptions']]],
+  ['used_5fprocess_2792',['used_process',['../classlfns_1_1mpi_1_1RequestQueue.html#aa005d33cebfd9267412d16fe3cd10798',1,'lfns::mpi::RequestQueue']]]
 ];
