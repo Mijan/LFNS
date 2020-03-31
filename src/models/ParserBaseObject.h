@@ -51,24 +51,16 @@ namespace models {
         std::vector<double> _state;
         double _time;
 
-//        std::map<int, int> _input_parameter_ext_by_int;
         std::map<int, int> _input_state_ext_by_int;
         int _num_input_param;
-//        bool _all_inputs_defined;
 
         void _initializeParser(mu::Parser &p);
 
         void _createRandomNumbers();
 
-//        void _evaluateInput(const double *state, double t, const std::vector<double> &theta);
-
         void _updateState(const double *state);
 
         PerturbationFct_ptr _perturbation_fct;
-
-//        virtual bool _allInputsDefined();
-
-//        virtual void _printInputs();
 
         virtual void _initialize() = 0;
     };
