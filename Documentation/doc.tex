@@ -1,0 +1,258 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)}
+%\usepackage{biblatex}
+%\addbibresource{phd_thesis.bib}
+\usepackage{filecontents}
+\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\nobibliography*
+
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{url}
+\usepackage{bm}
+\usepackage{amssymb}
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Configuration files}
+\date{\today} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+In order to use the tools provided in the LFNS toolbox, several configuration files containing information about the model, data and algorithm specifications need to be defined. In the following we give a detailed description about the syntax of these files. 
+
+\part{Model}
+The models used by the LFNS toolbox are model of chemical reaction networks. The next two subsections are copied from the PhD thesis 
+
+
+  \parbox{\textwidth}{
+\bibentry{mikelson2019nested}
+}
+%\cite{mikelson2019nested}
+%  \parbox{\textwidth}{
+%\begin{refsection}[phd_thesis]
+%    \small
+%    \nocite{*} % is local to to the enclosing refsection
+%    \DeclareFieldFormat{labelnumberwidth}{}
+%    \printbibliography[omitnumbers=true,heading=none]
+%\end{refsection}
+%}
+
+
+\section{Chemical Reaction Networks}
+\label{sec:crn}
+The dynamics within biological cells are determined by the interaction between different proteins, metabolites and other biomolecules. For each considered model, the involved $U$ biomolecules (or species) are denoted  with $\bm{X}_1, \bm{X}_2, \ldots, \bm{X}_U$. The count of species $\bm{X}_u$ at a time $t$ will be denoted with $X_u(t)$ and the full vector of the counts of all species with $X(t) = \{X_u(t)\}_{u = 1, \ldots, U}$. 
+These species interact through $R$ reactions $\mathcal{R}_1, \mathcal{R}_2, \ldots, \mathcal{R}_R$ written as 
+\begin{equation}
+\mathcal{R}_r :\qquad \sum\limits_{u}^U p_{ru}\bm{X}_u \rightarrow \sum\limits_{u}^Uq_{ru} \bm{X}_u,
+\label{eq:reactions}
+\end{equation}
+where $p_{ru}$ is the numbers of molecules of species $\bm{X}_u$  consumed in reaction $r$, and $q_{ru}$ is the number of molecules of species $\bm{X}_u$ produced by that reaction. These reactions usually represent biological processes within a cell, such as phosphorylation, degradation or translocation. These reactions fire according to propensities $\lambda_1\left(X(t)\right), \ldots, \lambda_R\left(X(t)\right)$ that depend on the current state of the system $X(t)$ and a $d$-dimensional parameter vector $\theta$. 
+
+Each reaction $\mathcal{R}_r$ is fully defined by their propensity $\lambda_r\left(X(t)\right)$ and the corresponding stoichiometry vector $\nu_r$, where $\nu_r$ indicates how many molecules of each species are consumed and produced at each reaction
+$$\nu_{r}= \left( \begin{array}{c} q_{r1} - p_{r1} \\ \vdots \\  q_{rU} - p_{rU}\end{array}\right).$$
+
+The propensities have an intuitive interpretation, as they represent the probability at which each reaction $\mathcal{R}_r$ happens. 
+The probability that a reaction $\mathcal{R}_r$ occurs in the time interval $[t, t + h]$ for some infinitesimal $h$ is given by 
+$$\mathbb{P}\left(\textnormal{Reaction }\mathcal{R}_r\textnormal{ occurs in time interval} [t, t+h]\right) = \lambda_r\left(X(t)\right)h.$$
+
+\subsection{Propensities}
+In general, these propensity functions can take any arbitrary form\footnote{As long as they satisfy some basic growth conditions, as being non-negative or being zero whenever any involved species with a negative stoichiometry is zero. }. In the following, we mention three frequently used forms of propensity functions for a state vector $X$. 
+
+\begin{description}
+\item[Mass action kinetics] These reactions describe the most simple interactions in a chemical reaction network. In this case, the propensity is directly proportional to the product of the concentrations of the involved species.
+$$\lambda_r\left(X\right) = k_r\prod_{u = 1}^U\left(\begin{array}{c} X_u \\ p_{ru}\end{array}\right),$$
+where $k_r$ is some rate constant.
+\item[Hill kinetics]
+Taking into account effects like ligand saturation, multiple binding sites, and general nonlinearity, hill kinetics allow for biological plausibility while avoiding mass action kinetics.
+$$\lambda_r\left(X\right) =k_r\frac{X_{i_r}^{n_r}}{K_r + X_{i_r}^{n_r} },$$
+for some index $i_r$, a rate $k_r$, the hill coefficient $n_r$ and some constant $K_r$. 
+\item[Michaelis-Menten kinetics]
+Usually used for enzyme kinetics, Michaelis-Menten kinetics are a special case of Hill kinetics with $n_r= 1$.
+$$\lambda_r\left(X\right) =k_r\frac{X_{i_r}}{K_r + X_{i_r} }.$$
+\end{description}
+
+The parameters such as $k_r, K_r$ or $n_r$ are usually encoded within the parameter vector $\theta$. 
+
+\subsection{Measurement model}
+In the context of systems biology, it is usually impossible to observe the involved species $\bm{X}$ directly. Instead, one must rely on noisy readouts from the considered system, such as fluorescent measurements or Western blot readouts. Modelling accounts for this by setting the measurement $Y(t)$ to be a $P$-dimensional random variable depending on the current state of the system $X(t)$ (also referred to as the latent state)
+$$Y(t) \sim p(\cdot | X(t), \theta),$$
+where $p$ is some probability distribution. Note that in this formulation we allow for the measurement $Y(t)$ to also depend on the model parameters $\theta$. 
+
+We assume that the variable $Y$ is not observed at all times but only on $T$ time points $t_1, \ldots, t_T$. For time point $t_\tau$ we also write $Y_\tau = Y(t_\tau)$ (and analogously $X_\tau = X(t_\tau)$ for the latent states). We denote with $Y = \{Y_\tau\}_{\tau = 1, \ldots, T}$ all observations at all time points. 
+
+\section{The model files}
+The LFNS toolbox reads the particular definition of the above described models from several text files that are being parsed by the toolbox. Three files are required for the full definition of a model: 
+\begin{description}
+\item[The dynamics file] This file contains the definition of the reactions in the model 
+\item[The initial conditions file] This file contains information about the initial states used for the simulation of the model. 
+\item[The measurement model file] This file contains informatin about the taken measurement and the definition of the likelihood function for each measurement. 
+\end{description}
+
+\subsection{General remarks about the model files}
+The model files are plain .txt files that are parsed by the LFNS toolbox (in particular by the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/io/ParserReader.cpp}{ParserReader.cpp} in the namespace io). There are several implemented keywords available. The keywords are always written at the beginning of a line and are followed by a ":" and a line break. The keywords can also be found in the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/io/ParserReader.h}{ParserReader.h}.
+\begin{description}
+\item[Species:] After this keyword a list of the involved species follows, either separated by "," or " ".
+\item[Parameters:] After this keyword a list of the involved parameters follows, either separated by "," or " ".
+\item[Random numbers:] This keyword allows to define random variables that are used within the same .txt file. After this keyword the random numbers can be defined by writing the random number name, then a "=" and then the desired distribution for that random number. The currently available distributions are: 
+\begin{description}
+\item[Normal($\mu$, $\sigma$)] Creates a normal random number with mean $\mu$ and variance $\sigma^2$. Note that $\mu$ and $\sigma$ need to be numeric values and not parameters!
+\item[Uniform($a$, $b$)] Creates a uniform random number between $a$ and $b$. Note that $a$ and $b$ need to be numeric values and not parameters!
+\item[UniformInt($a$, $b$)] Creates an integer uniform random number between $a$ and $b$. Note that $a$ and $b$ need to be numeric values and not parameters!
+
+\end{description}
+\end{description}
+
+\subsection{The dynamics file}
+The model dynamics file must contain the keyword "Species:" followed by a list of involved species in the next line (separated by "," or " "), the keyword "Parameters:" followed by a list of involved parameters in the next line (separated by "," or " ") and a list of the model reactions. 
+The model reactions follow after the "Reachtions:" keyword and each reaction needs to be written in its own line. 
+Each reaction consists of three parts
+\begin{enumerate}
+\item The first part defines the stoichiometry. It consists of the production species, followed by a "-$>$" and a product species. So a reaction that converts the species $A$ into the species $B$ would look like 
+\begin{verbatim}
+A -> B
+\end{verbatim}
+If multiple species are involved (for instance in katalytic reaction) these species are combined using a "+". A catalytic reaction where the species $A$ acts as a catalyst to convert specie $B$ to $A$ would be written as 
+\begin{verbatim}
+A + B-> A + A
+\end{verbatim}
+If a species gets created ex-nihilo or gets degraded the symbol "0" (zero) can be used, for instance
+\begin{verbatim}
+0-> A
+\end{verbatim}
+would encode a reaction where the species A gets created ex-nihilo. 
+
+\item The second part needs to contain the keyword "Variables:" followed by a list of parameters associated with this reaction. 
+\item The third part contains the keyword "Propensity:" followed by a mathematical expression of the propensity including the involved species and parameters. For the definition of the propensity all parameters and species defined in the dynamics file under the "Parameters:" and "Species:" keyword can be used. For a Hill type propensity the full line could look like this
+\begin{verbatim}
+A -> B	          Variables:k,K	          Propensity:k * A / (K + A)
+\end{verbatim}
+Note that for the propensities the standard math notation can be used including symbols like "+", "-", "\textasciicircum", "/", "log", "log10", "sqrt", "exp", "\_ pi" (containing the constant $\pi$), "binom" (the binomial coefficient with $n$ and $k$), "ceil" and "floor". The list of all supported math operations can be found in the muParser description \href{https://beltoforion.de/article.php?a=muparser&p=features&s=idDef1#idDef1}{here} and additionally defined functions in the \href{https://github.com/Mijan/LFNS/blob/publishable/src/models/ParserBaseObject.cpp}{ParserBaseObject.cpp} file in the function "\_ initializeParser".
+
+Alternatively one can also write $\#ma$ after the "Propensity:" keyword to automatically use mass action kinetics. For example:
+\begin{verbatim}
+A -> B	          Variables:k	          Propensity:#ma
+\end{verbatim}
+In this case the propensity will be parsed as "A*k". When using the $\#ma$ keyword the variable in the "Variables:" keyword will be used for the automated propensity generation!
+
+\end{enumerate}
+A full dynamics file for simple gene expression could look like this: 
+
+\begin{verbatim}
+Parameters:
+k, gamma, k_P, gamma_P
+
+Species:
+mRNA, P
+
+Reactions:
+0 -> mRNA         Variables:k          Propensities:#ma
+mRNA -> 0         Variables:gamma      Propensities:#ma
+mRNA -> mRNA + P  Variables:k_P	   	   Propensities:k_P*mRNA
+P -> 0            Variables:gamma_P    Propensities:#ma
+\end{verbatim}
+
+\subsection{The initial conditions file}
+This file contains the initial conditions for the simulation of the model. It usually contains the "Parameters:" keyword, defining the involved parameters for the initial conditions (separated by "," or " "), the "Random numbers:" keyword, and the "Initial Values:" keyword. After the "Initial Values:" keyword, each line contains a species name, followed by a ":" and the corresponding initial value. An example of such an initial conditions file for the gene expression example is
+
+\begin{verbatim}
+Parameters:
+mRNA_mu
+
+Random numbers:
+r_1 = Normal(0, 1)
+
+Initial Values:
+mRNA: mRNA_mu + r_1*0.1
+P: 0
+\end{verbatim}
+This file would create normally distributed initial mRNA counds, with a mean read from the parameter "mRNA\_ mu" and standard deviation of 0.1, and zero initial protein. 
+
+\subsection{The measurement model file}
+This file contains all the information about the simulation of the measurement for the model. The file contains a "Parameters:" keyword with the involved parameters, a "Species:" as well as "Random numbers:" keyword. Additionally it also contains the keyword "Measurement:" and the keyword "Loglikelihood:". These last two keywords define the measurement as well as the formula for the log-likelihood computation. 
+
+\subsubsection{Measurement:}
+Any given number of measurements can be encoded, corresponding to various real-life experimental measurements such as fluorescent read-outs of the different involved species. The measurement keyword is followed by the formulas for each measurement, where each measurement needs to be written in its own line. The first entry in each line is a name for that measurement. This name can be freely chosen, but each measurement needs to have a corresponding line in after the "Loglikelihood:" keyword. After the measurement name a "=" follows and then the formula for the measurement, containing the species defined in the "Species:" keyword and parameters in after the "Parameters:" keyword. 
+
+\subsubsection{Loglikelihood:}
+Each measurement needs to have an associated line after the "Loglikelihood:" keyword that contains a formula on how to compute the log-likelihood for this measurement. Currently it is assumed that the measurements are independent so that the total likelihood is just the product of the likelihoods for each measurement. Each line after the "Loglikelihood:" keyword begins with the name of the measurement, followed by a ":" and then the formula for the log-likelihood. In this formula the name of the measurement can be used as a variable. 
+Here is an example of a full measurement model file for the gene expression model:
+
+\begin{verbatim}
+Parameters:
+mRNA_scale, P_scale
+
+Random numbers:
+r_mRNA = Normal(0, 1)
+r_P = Normal(0, 1)
+
+Measurement:
+mRNA_read  = mRNA_scale * mRNA + r_mRNA
+P_read = P_scale * P + r_P
+
+Loglikelihood:
+mRNA_read: - (mRNA_read -  mRNA_scale * mRNA)^2 / (2) - log(sqrt(2 * _pi))
+P_read: - (P_read -  P_scale * P)^2 / (2) - log(sqrt(2 * _pi))
+
+\end{verbatim}
+In this case two measurements are simulated, one for the mRNA and one for the protein. Each measurement is assumed to be a normal random number centered around the scaled means of the corresponding species and with variance equal to 1. The log-likelihood functions are thus just the log-pdf of normal distributions.
+%
+%\part{The config.xml file}
+%Once the model is defined as described above, 
+
+
+\bibliographystyle{plainnat}
+\bibliography{phd_thesis}
+
+\end{document}

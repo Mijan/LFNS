@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Mikelson(2019)]{mikelson2019nested}
+Jan Mikelson.
+\newblock \emph{Nested Sampling for biochemical reaction networks with
+  applications to ERK signalling: A likelihood-free approach}.
+\newblock PhD thesis, ETH Zurich, 2019.
+
+\end{thebibliography}
