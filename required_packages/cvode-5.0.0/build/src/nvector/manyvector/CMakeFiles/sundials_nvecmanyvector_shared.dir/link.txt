@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC   -shared -Wl,-soname,libsundials_nvecmanyvector.so.5 -o libsundials_nvecmanyvector.so.5.0.0 CMakeFiles/sundials_nvecmanyvector_shared.dir/nvector_manyvector.c.o CMakeFiles/sundials_nvecmanyvector_shared.dir/__/__/sundials/sundials_nvector.c.o CMakeFiles/sundials_nvecmanyvector_shared.dir/__/__/sundials/sundials_math.c.o -lm 
