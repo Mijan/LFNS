@@ -69,6 +69,7 @@
          % otherwise the current date is printed 
 
 \begin{document}
+\tableofcontents
 \maketitle
 In order to use the tools provided in the LFNS toolbox, several configuration files containing information about the model, data and algorithm specifications need to be defined. In the following we give a detailed description about the syntax of these files. 
 
@@ -247,11 +248,41 @@ P_read: - (P_read -  P_scale * P)^2 / (2) - log(sqrt(2 * _pi))
 
 \end{verbatim}
 In this case two measurements are simulated, one for the mRNA and one for the protein. Each measurement is assumed to be a normal random number centered around the scaled means of the corresponding species and with variance equal to 1. The log-likelihood functions are thus just the log-pdf of normal distributions.
-%
-%\part{The config.xml file}
-%Once the model is defined as described above, 
+
+\part{The config.xml file}
+Once the model is defined as described above, an additional  .xml file (we will refer to it as the config.xml file) needs to be created containing all the information about the model files. The config.xml file is an xml file with usual xml syntax. In the following we will describe the different blocks of this file and indicate which of these are minimally required for simulation, for likelihood computation and for running the full LFNS-inference. 
+
+\section{The model block}
+The model block is indicated with the "model" keyword and contains the information about the model type, and the location of the model files. In particular it contains the following entries: 
+\begin{description}
+\item[type (required)] This entry indicates how the model needs to be simulated. The options are DET (determinsitic ODE models), STOCH (stochastic models) and HYBRID (hybrid models). These options can be found in the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/models/ModelSettings.h}{ModelSettings.h}. If DET is chosen, an ODE simulator is used for simulation, if STOCH is chosen the model gets simulated by the SSA and if HYBRID is chosen, some reactions will be simulated stochastically and some will be solved using an ODE simulator. To specify which species should be simulated stochastically, an additional field "stochspecies" (or "detspecies") needs to be provided to indicate the corresponding species. The remaining specie will automatically be considered deterministic (or stochastic respectively). Note that currently the hybrid model will only be simulated correctly if the stocahstic species do not depend on the determinsitic one (the reason for this is that in this case the stochastic simulator would need to integrate the ODE for the determinsitic cases to compute the stochastic reaction propensity and this has not been implemented yet). 
+\item[model (required)] This is the relative path to the model dynamics file. 
+\item[initialvalue (required)]This is the relative path to the initial states file.
+\item[measurement (required)] This is the relative path to the measurement model file. 
+\end{description}
+A full model block could look as following:
 
 
+\begin{verbatim}
+<model>
+   <type>DET</type>
+   <model>./gene_expression_dynamics.txt</model>
+   <initialvalue>./gene_expression_initial_value.txt</initialvalue>
+   <measurement>./gene_expression_measurement.txt</measurement>
+</model>
+\end{verbatim}
+
+Another example, where the model is simulated with a hybrid simulator where the species mRNA is simulated stochastically would look like this: 
+
+\begin{verbatim}
+<model>
+   <type>HYBRID</type>
+   <model>./gene_expression_dynamics.txt</model>
+   <initialvalue>./gene_expression_initial_value.txt</initialvalue>
+   <measurement>./gene_expression_measurement.txt</measurement>
+   <stochspecies>mRNA</stochspecies>
+</model>
+\end{verbatim}
 \bibliographystyle{plainnat}
 \bibliography{phd_thesis}
 
