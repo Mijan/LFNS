@@ -193,7 +193,7 @@ LFNSSetup::_createDensityEstimation(lfns::LFNSSettings lfns_settings, sampler::S
     switch (lfns_settings.estimator) {
         case lfns::REJECT_DPGMM  : {
             sampler::DpGmmSamplerData dpgmm_data(sampler_data);
-            dpgmm_data.num_dp_iterations = 50;
+            dpgmm_data.num_dp_iterations = lfns_settings.num_dpgmm_iterations;
             sampler::DpGmmSampler_ptr dpgmm_sampler = std::make_shared<sampler::DpGmmSampler>(rng, dpgmm_data);
 
 
@@ -353,6 +353,15 @@ lfns::LFNSSettings LFNSSetup::_readLFNSSettings() {
             std::cout
                     << "\tNo number of paralle samples r for LFNS provided (either with -r through the command line or 'LFNS.r' in the config file). Assume r = "
                     << lfns_setting.r << std::endl;
+        }
+    }
+    if (_lfns_options.vm.count("dpgmmiterations") > 0) { lfns_setting.num_dpgmm_iterations = _lfns_options.num_dpgmm_iterations; }
+    else {
+        try { lfns_setting.num_dpgmm_iterations = interpreter.getDPGMMItForLFNS(); }
+        catch (const std::runtime_error &e) {
+            std::cout
+                    << "\tNo number of dp-gmm iterations for LFNS provided (either with -d through the command line or 'LFNS.dpgmmiterations' in the config file). Assume default value of "
+                    << lfns_setting.num_dpgmm_iterations << std::endl;
         }
     }
     if (_lfns_options.vm.count("tolerance") > 0) {

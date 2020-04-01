@@ -33,6 +33,7 @@ namespace lfns {
         double thresh_accept_rate = -1;
         double rejection_quantile_low_accept = -1;
         std::string output_file = "";
+        int num_dpgmm_iterations = 50;
 
 
         void print(std::ostream &stream) {
@@ -57,6 +58,7 @@ namespace lfns {
                                << " the rejection constant will be set to the " << rejection_quantile_low_accept * 100
                                << "% quantile" << std::endl;
                     }
+                    stream << "The number of iterations for the DP-GMM algorithm is " << num_dpgmm_iterations << std::endl;
                     break;
                 }
                 case KDE_GAUSS: {
