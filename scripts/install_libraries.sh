@@ -19,7 +19,8 @@ printf "\nInstalling muParser!\n"
 cd ../required_packages/muparser-2.2.6.1/build # the location of the library
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/local
 make install
-make clear
+cd ../
+rm -r build
 cd ../../
 
 ######## installing DPGMM #########################
