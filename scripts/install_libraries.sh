@@ -16,7 +16,7 @@ export PATH=$HOME/local/bin:$PATH
 ######## installing muparser ######################
 # This library is needed for the parsing of math formulas #
 printf "\nInstalling muParser!\n"
-cd ../required_packages/muParser-2.2.6.1
+cd ../required_packages/muparser-2.2.6.1
 if [ ! -d ./build ]; then
     mkdir ./build
 fi
