@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-printf "\n\nInstalling LFNS!\n"
+cd ../
 ## installing the toolbox
 if [ ! -d ./build ]; then
     mkdir ./build
