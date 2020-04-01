@@ -298,7 +298,8 @@ In this case two measurements are simulated, one for the mRNA and one for the pr
 \part{The config.xml file}
 Once the model is defined as described above, an additional  .xml file (we will refer to it as the config.xml file) needs to be created containing all the information about the model files. The config.xml file is an xml file with usual xml syntax. In the following we will describe the different blocks of this file and indicate which of these are minimally required for simulation, for likelihood computation and for running the full LFNS-inference. All these options are read through the class \href{https://github.com/Mijan/LFNS/blob/publishable/src/io/ConfigFileInterpreter.cpp}{ConfigFileInterpreter.cpp}.
 
-\section{The \texttt{<model>} block}
+\section{Basic blocks}
+\subsection{The \texttt{<model>} block}
 The \texttt{<model>} block is indicated with the "model" keyword and contains the information about the model type, and the location of the model files. In particular it contains the following entries: 
 \begin{description}
 \item[\texttt{<type>} (required)] This entry indicates how the model needs to be simulated. The options are DET (determinsitic ODE models), STOCH (stochastic models) and HYBRID (hybrid models). These options can be found in the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/models/ModelSettings.h}{ModelSettings.h}. If DET is chosen, an ODE simulator is used for simulation, if STOCH is chosen the model gets simulated by the SSA and if HYBRID is chosen, some reactions will be simulated stochastically and some will be solved using an ODE simulator. To specify which species should be simulated stochastically, an additional field "stochspecies" (or "detspecies") needs to be provided to indicate the corresponding species. The remaining specie will automatically be considered deterministic (or stochastic respectively). Note that currently the hybrid model will only be simulated correctly if the stocahstic species do not depend on the determinsitic one (the reason for this is that in this case the stochastic simulator would need to integrate the ODE for the determinsitic cases to compute the stochastic reaction propensity and this has not been implemented yet). 
@@ -334,7 +335,7 @@ Another example, where the model is simulated with a hybrid simulator where the 
 \end{verbatim}
 \end{tcolorbox}
 
-\section{The \texttt{<Simulation>} block}
+\subsection{The \texttt{<Simulation>} block}
 The simulation block contains the information needed to simulate the defined model. It contains several options, most of which do not necessary need to be provided and in the case where they are not provided default values will be picked.  
 
 \begin{description}
@@ -369,7 +370,7 @@ Another example for the same model could look like this
 \end{tcolorbox}
 
 
-\section{The \texttt{<LFNS>} block}
+\subsection{The \texttt{<LFNS>} block}
 This block contains all the information needed to run the LFNS algorithm. All the default values can be found in the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/LFNS/LFNSSettings.h}{LFNSSettings.h} in the lfns namespace. 
 \begin{description}
 \item[\texttt{<experiments>} (required)] Provides a list of experiments to be used for the parameter inference separated by "," or " ". Each provided experiment must have a \texttt{<dataset>} (\ref{it:data}) associated with it. In general each experiment will also have its own \texttt{<input>}. 
@@ -400,16 +401,187 @@ A simple example of a full \texttt{<LFNS>} block can look like this:
 \end{verbatim}
 \end{tcolorbox}
 
-%\section{The \texttt{<parameters>} block}
-%\begin{description}
-%\item[fixedvalues]\label{it:fixed_values}
-%\end{description}
-%
-%\section{The \texttt{data} block}
-%\begin{description}
-%\item[\texttt{<data>}]\label{it:data}asdf
-%\end{description}
+\section{Defining different experiments}
+\subsection{The \texttt{<data>} block}
+\begin{description}
+\item[\texttt{<data>}]\label{it:data}The data block provides the information about the location of the data files for each of the experiments used for the LFNS inference. The \texttt{<data>} block can contain multiple \texttt{<dataset> (required for LFNS)} blocks defining each individual dataset. 
+\begin{description}
+\item[\texttt{<dataset>} (required for LFNS)] The \texttt{<dataset>} block contains the locations for the data files the files with the measurement timepoints for each experiment. It is understood that the files provided in each dataset block correspond to the experiment provided in the dataset block. 
+\begin{description}
+\item[\texttt{<experiment>} (required for LFNS)] Provides the name of the experiment corresponding to the data and time files in the same \texttt{<dataset>} block. 
+\item[\texttt{<datafile>} (required for LFNS)] Provides the relative path for the datafile of the corresponding experiment. Each measurement is expected to be in a separate row and each row should have exactly as many entries as there are measurement timepoints. A data file can contain one or multiple measurements (depending on the measurement model file) and can contain one or multiple timeseries trajectories. 
+\item[\texttt{<timefile>} (required for LFNS)] Provides the relative path for the timefile of the corresponding experiment and data file. It must have one row with exactly the same number of entries as each row of the data file. 
+\end{description}
+\end{description}
+\end{description}
+This is an example of a \texttt{<data>} block for two experiments
+
+\begin{tcolorbox}
+\begin{verbatim}
+<data>
+   <dataset>
+      <experiments>0</experiments>
+      <datafile>./data_exp_0.txt</datafile>
+      <timefile>./times_exp_0.txt</timefile>		
+   </dataset>
+   <dataset>
+      <experiments>ctrl</experiments>
+      <datafile>./data_exp_ctrl.txt</datafile>
+      <timefile>./times_exp_ctrl.txt</timefile>		
+   </dataset>
+</data>
+\end{verbatim}
+\end{tcolorbox}
+Since in real inference settings then number of experiments used for the inference can get rather large, it is unpractical to have a \texttt{<dataset>} block for each experiment. To avoid this it is possible to provide several entries for each entry of a \texttt{dataset} block. The example above can thus be written as 
+\begin{tcolorbox}
+\begin{verbatim}
+<data>
+   <dataset>
+      <experiments>0 ctrl</experiments>
+      <datafile>./data_exp_0.txt ./data_exp_ctrl.txt</datafile>
+      <timefile>./times_exp_0.txt ./times_exp_ctrl.txt</timefile>		
+   </dataset>
+</data>
+\end{verbatim}
+\end{tcolorbox}
+
+If the files \texttt{times\_exp\_0.txt} and \texttt{times\_exp\_ctrl.txt} are identical we can also write 
+\begin{tcolorbox}
+\begin{verbatim}
+<data>
+   <dataset>
+      <experiments>0 ctrl</experiments>
+      <datafile>./data_exp_0.txt ./data_exp_ctrl.txt</datafile>
+      <timefile>./times_exp_0.txt</timefile>		
+   </dataset>
+</data>
+\end{verbatim}
+\end{tcolorbox}
+
+In this case the file \texttt{times\_exp\_0.txt} will be used as \texttt{<timefile>} argument for both experiments. 
+
+\subsection{The \texttt{<inputs>} block}
+\begin{description}
+\item[\texttt{<inputs>}]
+The \texttt{<inputs>} block defines the different experiments. This block allow to define to set parameters to certain values in various pulses in time. It provides possibilities to define the input parameters, the number, duration and strength of the pulses. The \texttt{<inputs>} block can contain several \texttt{<input>} block each defining particular inputs to the system. 
+\begin{description}
+\item[\texttt{<input>}]Each \texttt{<input>} block contains the information about each particular input. 
+\begin{description}
+\item[\texttt{<experiments>}] Provides the name of the experiment corresponding input defined in the \texttt{<input>} block. 
+\item[\texttt{<inputparam>}] The parameter affected by the defined input. The parameter defined will be set to zero (regardless of any previous provided value for this parameter) and will then attain the value provided in the \texttt{<strength>} entry of the \texttt{<input>} block whenever the pulse is active. If multiple \texttt{<input>} blocks are defined for the same parameter and multiple pulses are active at the same time, their strengths are added. 
+\item[\texttt{<period>}] The period at which the input pulse is applied. 
+\item[\texttt{<strength>}] The strength of the applied pulse.
+\item[\texttt{<duration>}] The duration of the applied pulse.
+\item[\texttt{<numpulses>}] The number of the applied pulses.
+\item[\texttt{<startingtime>}] The time of the first applied pulse.
+\end{description}
+\end{description}
+\end{description}
+An example of such an input definition might look as follows
+
+\begin{tcolorbox}
+\begin{verbatim}
+<inputs>
+   <input>
+      <experiments>0</experiments>
+      <period>20</period>
+      <strength>10</strength>
+      <duration>2</duration>
+      <numpulses>2</numpulses>
+      <inputparam>k_P</inputparam>
+      <startingtime>20</startingtime>
+   </input>
+   <input>
+      <experiments>ctrl</experiments>
+      <period>1000</period>
+      <strength>2</strength>
+      <duration>100</duration>
+      <numpulses>1</numpulses>
+      <inputparam>k_P</inputparam>
+      <startingtime>20</startingtime>
+   </input>
+</inputs>
+\end{verbatim}
+\end{tcolorbox}
+This block defines two experiments 0 and ctrl. The experiment 0 gives 2 pulses of strength 10 to theparameter \texttt{k\_P}. This means the parameter \texttt{k\_P} will be set to 0, except during the timpoints $[20, 22]$ and $[40, 42]$ during which it will be set to 10. Similarly for the experiment ctrl, the parameter \texttt{k\_P} will be set to 2 starting from timepoint 20 till at the timepoint 120. 
+
+Similarly as for the \texttt{<data>} block, multiple inputs can be defined at once, so the above \texttt{<inputs>} block can also be written as 
+
+\begin{tcolorbox}
+\begin{verbatim}
+<inputs>
+   <input>
+      <experiments>0 ctrl</experiments>
+      <period>20 1000</period>
+      <strength>10 2</strength>
+      <duration>2 100</duration>
+      <numpulses>2 1</numpulses>
+      <inputparam>k_P</inputparam>
+      <startingtime>20</startingtime>
+   </input>
+</inputs>
+\end{verbatim}
+\end{tcolorbox}
+
+We note that the input will be applied even when the input parameter is fixed as through the \texttt{<fixedparam>} entry. So to avoid confusion we recommend to fix each input parameter to 0 using the \texttt{<fixedparam>} entry. 
+
+\section{Defining priors: the \texttt{<parameter>} block}
+The parameter block can be used to define the priors for the inference of the parameters (currently only Uniform and Log-Uniform distributions are available), define their bounds and fix parameters to particular values.  
+\begin{description}
+	\item[\texttt{<bounds>}] The \texttt{<bounds>} block can contain multiple \texttt{<bound>} blocks that can each define the upper and lower bounds for a number of parameters. 
+	\begin{description}
+		\item[\texttt{<bound>}] Each \texttt{<bound>} block contains three entries: \texttt{<parameters>}, \texttt{<lowerbounds>} and \texttt{<upperbounds>}
+			\begin{description}
+				\item[\texttt{<parameters>}] This entry contains a list of parameters (separated by "," or " ") for which the bounds are defined. 
+				\item[\texttt{<lowerbounds>}] The lower bound for all the parameters in the \texttt{<parameters>} entry. Alternatively a number of lower bounds equal to the numbers of parameters in \texttt{<parameters>} can be provided, where each number is interpreted to be the lower bound for the corresponding parameter. 
+				\item[\texttt{<upperbounds>}] The upper bound for all the parameters in the \texttt{<parameters>} entry. Alternatively a number of upper bounds equal to the numbers of parameters in \texttt{<parameters>} can be provided, where each number is interpreted to be the upper bound for the corresponding parameter. 
+			\end{description}
+	\end{description}
+	\item[\texttt{<fixedvalues>}]\label{it:fixed_values} This block provides the possibility fix some of the model parameters to a particular value. If a model parameter is fixed, it will be treated as if it was hard coded into the program. It will not need to be provided as an input for the \texttt{simulate} command and will not be inferred by the LFNS algorithm. This can be useful when one would like to keep a general model but only wants to infer some of the parameters while keeping the other ones fixed. 
+		\begin{description}
+			\item[\texttt{<parameters>}] A list of the parameter that should be fixed separated by "," or " ".
+			\item[\texttt{values}] A list of the parameter values corresponding to the parameter names in the \texttt{<parameters>} entry separated by "," or " ".
+		\end{description}
+	\item[\texttt{<scales>}] This entry allows to set the scale of certain parameters to \texttt{linear} or \texttt{log}. In practice this indicates weather a uniform or a log-uniform prior is applied to the parameters. The \texttt{<scales>} block contains only one entry, with the names of the parameters and scale as an attribute.  An example of a \texttt{<scales>} block is shown here: 
+\begin{tcolorbox}
+\begin{verbatim}
+<scales>
+   <parameters scale="linear">k_P gamma_P</parameters>
+</scales>
+\end{verbatim}
+\end{tcolorbox}
+\end{description}
+
+A full example of the \texttt{<parameter>} block is illustrated in the following
+
+\begin{tcolorbox}
+\begin{verbatim}
+<parameters>
+   <fixedparams>
+      <parameters>mRNA_mu</parameters>
+      <values>10</values>
+   </fixedparams>
+   <scales>
+      <parameters scale="linear">mRNA_scale P_scale</parameters>
+   </scales>
+   <bounds>
+      <bound>
+         <parameters>k gamma k_P gamma_P</parameters>
+         <lowerbounds>1e-5</lowerbounds>
+         <upperbounds>1e1</upperbounds>
+      </bound>
+      <bound>
+         <parameters>mRNA_scale P_scale</parameters>
+         <lowerbounds>1</lowerbounds>
+         <upperbounds>100</upperbounds>
+      </bound>		
+   </bounds>
+</parameters>
+\end{verbatim}
+\end{tcolorbox}
+
 \bibliographystyle{plainnat}
 \bibliography{bibliography}
+
 
 \end{document}
