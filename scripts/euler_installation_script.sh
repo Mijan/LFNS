@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+## This script installs the simulation code into the subdirectory $HOME/LNSv4/local_euler_installs, which is assumed to exist allready.
+## if it does not, make sure to run the 'install_libraries.sh' script first
+
+
+## this load the boost library to euler
+module load open_mpi boost/1.59.0
+export CPPFLAGS="${CPPFLAGS} -I${BOOST_INCLUDEDIR}"
+export LDFLAGS="-L${BOOST_LIBRARYDIR} ${LDFLAGS}"
+
+printf "\n\nInstalling Libraries\n"
+source install_libraries.sh
+
+printf "\n\nInstalling aNS!\n"
+source install_lfns.sh
+
+
