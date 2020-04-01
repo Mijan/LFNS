@@ -11,7 +11,7 @@ export LDFLAGS="-L${BOOST_LIBRARYDIR} ${LDFLAGS}"
 printf "\n\nInstalling Libraries\n"
 source install_libraries.sh
 
-printf "\n\nInstalling aNS!\n"
+printf "\n\nInstalling LFNS!\n"
 source install_lfns.sh
 
 
