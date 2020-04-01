@@ -12,6 +12,6 @@ printf "\n\nInstalling Libraries\n"
 source install_libraries.sh
 
 printf "\n\nInstalling LFNS!\n"
-source install_lfns.sh
+source install_LFNS.sh
 
 
