@@ -4,7 +4,7 @@
 
 
 ## this load the boost library to euler
-module load open_mpi boost/1.59.0 cmake/3.3.1 cmake/3.5.2
+module load open_mpi boost/1.59.0 cmake/3.5.2
 export CPPFLAGS="${CPPFLAGS} -I${BOOST_INCLUDEDIR}"
 export LDFLAGS="-L${BOOST_LIBRARYDIR} ${LDFLAGS}"
 export EIGEN3_ROOT=$HOME/LFNS/required_packages/eigen3.4
