@@ -49,4 +49,4 @@ cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/local/
 make
 make install
-cd ../../scripts
+cd ../../../scripts
