@@ -23,9 +23,7 @@ fi
 cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/local
 make install
-cd ../
-rm -r build
-cd ../../
+cd ../../../
 
 ######## installing DPGMM #########################
 # This library is needed for the density approximation#
@@ -38,9 +36,7 @@ cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/local/
 make
 make install
-cd ../
-rm -r build
-cd ../../
+cd ../../../
 
 
 ######## installing cvode #########################
@@ -53,6 +49,4 @@ cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/local/
 make
 make install
-cd ../
-rm -r build
-cd ../../
+cd ../../scripts
