@@ -13,7 +13,7 @@ set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${LFNS_SOURCE_DIR}/cmake/Modules/")
 
 ## Boost
-find_package(Boost 1.54.0 REQUIRED COMPONENTS program_options system filesystem mpi serialization)
+find_package(Boost 1.59.0 REQUIRED COMPONENTS program_options system filesystem mpi serialization)
 include_directories(${Boost_INCLUDE_DIR})
 
 ## Eigen
