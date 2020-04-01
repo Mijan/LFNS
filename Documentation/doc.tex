@@ -5,7 +5,24 @@
 % See "book", "report", "letter" for other types of document.
 
 \documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage[most]{tcolorbox}
 
+\tcbset{
+    frame code={}
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=lightgray!70,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=5pt,
+    arc=0pt,outer arc=0pt,
+    }
+    
+    
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)}
 %\usepackage{biblatex}
 %\addbibresource{phd_thesis.bib}
@@ -161,35 +178,57 @@ The model reactions follow after the "Reachtions:" keyword and each reaction nee
 Each reaction consists of three parts
 \begin{enumerate}
 \item The first part defines the stoichiometry. It consists of the production species, followed by a "-$>$" and a product species. So a reaction that converts the species $A$ into the species $B$ would look like 
+
+\begin{tcolorbox}
 \begin{verbatim}
 A -> B
 \end{verbatim}
+\end{tcolorbox}
+
+
 If multiple species are involved (for instance in katalytic reaction) these species are combined using a "+". A catalytic reaction where the species $A$ acts as a catalyst to convert specie $B$ to $A$ would be written as 
+
+\begin{tcolorbox}
 \begin{verbatim}
 A + B-> A + A
 \end{verbatim}
+\end{tcolorbox}
+
 If a species gets created ex-nihilo or gets degraded the symbol "0" (zero) can be used, for instance
+
+\begin{tcolorbox}
 \begin{verbatim}
 0-> A
 \end{verbatim}
+\end{tcolorbox}
+
 would encode a reaction where the species A gets created ex-nihilo. 
 
 \item The second part needs to contain the keyword "Variables:" followed by a list of parameters associated with this reaction. 
 \item The third part contains the keyword "Propensity:" followed by a mathematical expression of the propensity including the involved species and parameters. For the definition of the propensity all parameters and species defined in the dynamics file under the "Parameters:" and "Species:" keyword can be used. For a Hill type propensity the full line could look like this
+
+\begin{tcolorbox}
 \begin{verbatim}
 A -> B	          Variables:k,K	          Propensity:k * A / (K + A)
 \end{verbatim}
+\end{tcolorbox}
+
 Note that for the propensities the standard math notation can be used including symbols like "+", "-", "\textasciicircum", "/", "log", "log10", "sqrt", "exp", "\_ pi" (containing the constant $\pi$), "binom" (the binomial coefficient with $n$ and $k$), "ceil" and "floor". The list of all supported math operations can be found in the muParser description \href{https://beltoforion.de/article.php?a=muparser&p=features&s=idDef1#idDef1}{here} and additionally defined functions in the \href{https://github.com/Mijan/LFNS/blob/publishable/src/models/ParserBaseObject.cpp}{ParserBaseObject.cpp} file in the function "\_ initializeParser".
 
 Alternatively one can also write $\#ma$ after the "Propensity:" keyword to automatically use mass action kinetics. For example:
+
+\begin{tcolorbox}
 \begin{verbatim}
 A -> B	          Variables:k	          Propensity:#ma
 \end{verbatim}
+\end{tcolorbox}
+
 In this case the propensity will be parsed as "A*k". When using the $\#ma$ keyword the variable in the "Variables:" keyword will be used for the automated propensity generation!
 
 \end{enumerate}
 A full dynamics file for simple gene expression could look like this: 
 
+\begin{tcolorbox}
 \begin{verbatim}
 Parameters:
 k, gamma, k_P, gamma_P
@@ -203,10 +242,12 @@ mRNA -> 0         Variables:gamma      Propensities:#ma
 mRNA -> mRNA + P  Variables:k_P	   	   Propensities:k_P*mRNA
 P -> 0            Variables:gamma_P    Propensities:#ma
 \end{verbatim}
+\end{tcolorbox}
 
 \subsection{The initial conditions file}
 This file contains the initial conditions for the simulation of the model. It usually contains the "Parameters:" keyword, defining the involved parameters for the initial conditions (separated by "," or " "), the "Random numbers:" keyword, and the "Initial Values:" keyword. After the "Initial Values:" keyword, each line contains a species name, followed by a ":" and the corresponding initial value. An example of such an initial conditions file for the gene expression example is
 
+\begin{tcolorbox}
 \begin{verbatim}
 Parameters:
 mRNA_mu
@@ -218,6 +259,8 @@ Initial Values:
 mRNA: mRNA_mu + r_1*0.1
 P: 0
 \end{verbatim}
+\end{tcolorbox}
+
 This file would create normally distributed initial mRNA counds, with a mean read from the parameter "mRNA\_ mu" and standard deviation of 0.1, and zero initial protein. 
 
 \subsection{The measurement model file}
@@ -230,6 +273,7 @@ Any given number of measurements can be encoded, corresponding to various real-l
 Each measurement needs to have an associated line after the "Loglikelihood:" keyword that contains a formula on how to compute the log-likelihood for this measurement. Currently it is assumed that the measurements are independent so that the total likelihood is just the product of the likelihoods for each measurement. Each line after the "Loglikelihood:" keyword begins with the name of the measurement, followed by a ":" and then the formula for the log-likelihood. In this formula the name of the measurement can be used as a variable. 
 Here is an example of a full measurement model file for the gene expression model:
 
+\begin{tcolorbox}
 \begin{verbatim}
 Parameters:
 mRNA_scale, P_scale
@@ -245,24 +289,27 @@ P_read = P_scale * P + r_P
 Loglikelihood:
 mRNA_read: - (mRNA_read -  mRNA_scale * mRNA)^2 / (2) - log(sqrt(2 * _pi))
 P_read: - (P_read -  P_scale * P)^2 / (2) - log(sqrt(2 * _pi))
-
 \end{verbatim}
+\end{tcolorbox}
+
+
 In this case two measurements are simulated, one for the mRNA and one for the protein. Each measurement is assumed to be a normal random number centered around the scaled means of the corresponding species and with variance equal to 1. The log-likelihood functions are thus just the log-pdf of normal distributions.
 
 \part{The config.xml file}
-Once the model is defined as described above, an additional  .xml file (we will refer to it as the config.xml file) needs to be created containing all the information about the model files. The config.xml file is an xml file with usual xml syntax. In the following we will describe the different blocks of this file and indicate which of these are minimally required for simulation, for likelihood computation and for running the full LFNS-inference. 
+Once the model is defined as described above, an additional  .xml file (we will refer to it as the config.xml file) needs to be created containing all the information about the model files. The config.xml file is an xml file with usual xml syntax. In the following we will describe the different blocks of this file and indicate which of these are minimally required for simulation, for likelihood computation and for running the full LFNS-inference. All these options are read through the class \href{https://github.com/Mijan/LFNS/blob/publishable/src/io/ConfigFileInterpreter.cpp}{ConfigFileInterpreter.cpp}.
 
-\section{The model block}
-The model block is indicated with the "model" keyword and contains the information about the model type, and the location of the model files. In particular it contains the following entries: 
+\section{The \texttt{<model>} block}
+The \texttt{<model>} block is indicated with the "model" keyword and contains the information about the model type, and the location of the model files. In particular it contains the following entries: 
 \begin{description}
-\item[type (required)] This entry indicates how the model needs to be simulated. The options are DET (determinsitic ODE models), STOCH (stochastic models) and HYBRID (hybrid models). These options can be found in the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/models/ModelSettings.h}{ModelSettings.h}. If DET is chosen, an ODE simulator is used for simulation, if STOCH is chosen the model gets simulated by the SSA and if HYBRID is chosen, some reactions will be simulated stochastically and some will be solved using an ODE simulator. To specify which species should be simulated stochastically, an additional field "stochspecies" (or "detspecies") needs to be provided to indicate the corresponding species. The remaining specie will automatically be considered deterministic (or stochastic respectively). Note that currently the hybrid model will only be simulated correctly if the stocahstic species do not depend on the determinsitic one (the reason for this is that in this case the stochastic simulator would need to integrate the ODE for the determinsitic cases to compute the stochastic reaction propensity and this has not been implemented yet). 
-\item[model (required)] This is the relative path to the model dynamics file. 
-\item[initialvalue (required)]This is the relative path to the initial states file.
-\item[measurement (required)] This is the relative path to the measurement model file. 
+\item[\texttt{<type>} (required)] This entry indicates how the model needs to be simulated. The options are DET (determinsitic ODE models), STOCH (stochastic models) and HYBRID (hybrid models). These options can be found in the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/models/ModelSettings.h}{ModelSettings.h}. If DET is chosen, an ODE simulator is used for simulation, if STOCH is chosen the model gets simulated by the SSA and if HYBRID is chosen, some reactions will be simulated stochastically and some will be solved using an ODE simulator. To specify which species should be simulated stochastically, an additional field "stochspecies" (or "detspecies") needs to be provided to indicate the corresponding species. The remaining specie will automatically be considered deterministic (or stochastic respectively). Note that currently the hybrid model will only be simulated correctly if the stocahstic species do not depend on the determinsitic one (the reason for this is that in this case the stochastic simulator would need to integrate the ODE for the determinsitic cases to compute the stochastic reaction propensity and this has not been implemented yet). 
+\item[\texttt{<model>} (required)] This is the relative path to the model dynamics file. 
+\item[\texttt{<initialvalue>} (required)]This is the relative path to the initial states file.
+\item[\texttt{<measurement>} (required)] This is the relative path to the measurement model file. 
 \end{description}
 A full model block could look as following:
 
 
+\begin{tcolorbox}
 \begin{verbatim}
 <model>
    <type>DET</type>
@@ -271,9 +318,11 @@ A full model block could look as following:
    <measurement>./gene_expression_measurement.txt</measurement>
 </model>
 \end{verbatim}
+\end{tcolorbox}
 
 Another example, where the model is simulated with a hybrid simulator where the species mRNA is simulated stochastically would look like this: 
 
+\begin{tcolorbox}
 \begin{verbatim}
 <model>
    <type>HYBRID</type>
@@ -283,7 +332,84 @@ Another example, where the model is simulated with a hybrid simulator where the 
    <stochspecies>mRNA</stochspecies>
 </model>
 \end{verbatim}
+\end{tcolorbox}
+
+\section{The \texttt{<Simulation>} block}
+The simulation block contains the information needed to simulate the defined model. It contains several options, most of which do not necessary need to be provided and in the case where they are not provided default values will be picked.  
+
+\begin{description}
+\item[\texttt{<parameter>} (required for simulation)] This entry contains a list of the particular values for the simulated parameters. It needs exactly as many entries as the model has parameters (in the dynamics file, the initial value file and measurement model file), separated by "," or " ". The order of entries usually corresponds to the the order of parameters in the dynamics file, the initial value file and the measurement model file. However some options might change this order and one should always check the produced model summary file to verify that the parameters are assigned in the right order. 
+Parameters that have been fixed through the \texttt{<fixedvalues>} (\ref{it:fixed_values}) keyword do not need to be provided. This provided parameters can always we overwritten with the command line option \texttt{-p}. 
+\item[\texttt{<experiments>}] Provides a list of experiments to be simulated separated by "," or " ". This is useful if there are several experiments defined in the \texttt{<inputs>} fields and only a selected number of experiments needs to be simulated. If this field is not defined only one experiment without inputs will be performed and given the dummy name "0". This provided experiments can be overwritten with the command line option \texttt{-E}. 
+\item[\texttt{<num\_simulations>}] This entry provides the number of simulations performed. It can be overwritten with the command line option \texttt{-n} and is set to 1 as default. 
+\item[\texttt{<parameter\_file>}] Instead of one parameter in \texttt{<parameter>} or through the command line \texttt{-p}, the user can also provide a file with a list of parameters to be simulated. This file needs to have each parameter vector in a new row and each row should have as many entries as parameters are needed. The values can be separated by "," or " ". This entry can be overwritten with the command line option \texttt{-P}. 
+\item[\texttt{<initialtime>}] This provides the initial time for the simulation. A default value of 0 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-I}. 
+\item[\texttt{<finaltime>}] This provides the final time for the simulation. A default value of 100 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-F}. 
+\item[\texttt{<interval>}] This provides the read-out interval for the simulation (i.e. after what time the next output of the simulation should be written). A default value of 1 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-i}. 
+\end{description}
+
+A first minimal example of the \texttt{<Simulation>} block for the above used gene expression model (not that it has a total of 7 parameters: \texttt{k, gamma, k\_P, gamma\_P} for the dynamics file, \texttt{mRNA\_mu} for the initial conditions file and \texttt{mRNA\_scale, P\_scale} for the measurement model file) could look as follows
+\begin{tcolorbox}
+\begin{verbatim}
+<Simulation>
+    <parameter>1 0.1 1 0.1 10 1 1</parameter>
+</Simulation>
+\end{verbatim}
+\end{tcolorbox}
+Another example for the same model could look like this
+\begin{tcolorbox}
+\begin{verbatim}
+<Simulation>
+    <parameter>1 0.1 1 0.1 10 1 1</parameter>
+    <initialtime>0</initialtime>
+    <finaltime>250</finaltime>
+    <interval>15</interval>
+</Simulation>
+\end{verbatim}
+\end{tcolorbox}
+
+
+\section{The \texttt{<LFNS>} block}
+This block contains all the information needed to run the LFNS algorithm. All the default values can be found in the file \href{https://github.com/Mijan/LFNS/blob/publishable/src/LFNS/LFNSSettings.h}{LFNSSettings.h} in the lfns namespace. 
+\begin{description}
+\item[\texttt{<experiments>} (required)] Provides a list of experiments to be used for the parameter inference separated by "," or " ". Each provided experiment must have a \texttt{<dataset>} (\ref{it:data}) associated with it. In general each experiment will also have its own \texttt{<input>}. 
+\item[\texttt{<N>}] Provides the total number of LFNS particles. A default value of 1000 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-N}.   
+\item[\texttt{<r>}] Provides the number of LFNS particles resampled in each iteration. A default value of 100 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-r}.   
+\item[\texttt{<H>}] Provides the number of particle filter particles for the LFNS algorithm. A default value of 200 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-H}. Note that \texttt{H} should only be chose to be larger than 1 if the model needs a likelihood approximation (i.e. if the model is stochastic or has at least random initial conditions). If the model is purely deterministic H=1 is enough to compute the full likelihood.   
+\item[\texttt{<dpgmmiterations>}] Provides the number of iterations for the DP-GMM sampler for the LFNS algorithm. A default value of 50 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-d}.   
+\item[\texttt{<epsilon>}] Provides the tolerance for the LFNS algorithm. This is the value used for the $\Delta_{LFNS}$ termination criterion as defined in \cite{mikelson2019likelihood}. A default value of 0.01 is assumed if this entry is not provided. This value can be overwritten with the command line options \texttt{-t}.   
+\item[\texttt{<providedparameters>}] This is an advanced option and is used for the case where a distribution for some of the model parameters already has been found and samples from this distribution have been written in a file (say \texttt{provided\_params.txt}, each row needs to correspond to one parameter sample). In this case this file can be used to infer the remaining parameters conditioned on the already provided parameter posterior. It is important to know that this option does not infer the joint posterior of all the parameters, but rather a conditional posterior. 
+This entry needs to contain a list of the parameters for which a distribution is already provided in the same order as they are in the \texttt{provided\_params.txt} file. This option requires an attribute pointing to the relative path of the provided parameter distribution. Here is an example: 
+\begin{tcolorbox}
+\begin{verbatim}
+<providedparameters file="provided_params.txt">k_P gamma_P</providedparameters>
+\end{verbatim}
+\end{tcolorbox}
+\end{description}
+A simple example of a full \texttt{<LFNS>} block can look like this: 
+\begin{tcolorbox}
+\begin{verbatim}
+<LFNS>
+    <experiments>0</experiments>
+    <N>1000</N>
+    <H>1</H>
+    <r>500</r>
+    <epsilon>0.001</epsilon>
+    <dpgmmiterations>100</dpgmmiterations>
+</LFNS>
+\end{verbatim}
+\end{tcolorbox}
+
+%\section{The \texttt{<parameters>} block}
+%\begin{description}
+%\item[fixedvalues]\label{it:fixed_values}
+%\end{description}
+%
+%\section{The \texttt{data} block}
+%\begin{description}
+%\item[\texttt{<data>}]\label{it:data}asdf
+%\end{description}
 \bibliographystyle{plainnat}
-\bibliography{phd_thesis}
+\bibliography{bibliography}
 
 \end{document}
