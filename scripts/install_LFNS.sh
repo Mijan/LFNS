@@ -7,6 +7,7 @@ if [ ! -d ./build ]; then
 fi
 cd build
 printf "\nCalling CMake\n"
+export EIGEN3_ROOT=$HOME/LFNS/required_packages/eigen3.4
 cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/local/
 printf "\nCalling Make\n"
 make
