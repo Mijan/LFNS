@@ -1,0 +1,9 @@
+<model>
+	<type>------ insert model type here ----------</type>
+	<model>------ insert relative path of model dynamics file here ----------</model>
+	<initialvalue>------ insert relative path of initial value file here ----------t</initialvalue>
+	<measurement>------ insert relative path of measurement model file here ----------</measurement>
+</model>
+<Simulation>
+	------ specify simulation models here ----------
+</Simulation>

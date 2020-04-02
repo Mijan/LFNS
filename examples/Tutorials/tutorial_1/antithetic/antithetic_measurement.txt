@@ -1,0 +1,11 @@
+Random numbers:
+------ add random number here -------
+
+Species:
+------ add species needed to compute a measurement here -------
+
+Measurement:
+x1_read = ------ define simulated measurement here -------
+
+Loglikelihood:
+x1_read:	 ------ define log-likelihood function here -------

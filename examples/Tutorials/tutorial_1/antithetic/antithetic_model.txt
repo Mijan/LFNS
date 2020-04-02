@@ -1,0 +1,10 @@
+Parameters:
+------ insert parameters here -------
+
+Species:
+------ insert species here -------
+
+Reactions:
+z1	 	--> 	z1+ x1 		Variables: k					Propensity: #ma
+------ insert second reaction here -------
+------ insert third reaction here -------

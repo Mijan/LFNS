@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Installation}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Install the toolbox on a Unix-based system}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Use LFNS in a Docker container \(all system\)}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Install LFNS on Euler}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{The antithetic controller}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Write the model files}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Write the config file}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Add a perturbation to the antithetic model}{section.2}% 8
