@@ -6,8 +6,11 @@
 #include <stdexcept>
 #include "ParserReader.h"
 #include "ReaderExceptions.h"
+#include "../base/IoUtils.h"
+#include "../base/Utils.h"
 #include <sstream>
 #include <iostream>
+#include <ParserReader.h>
 
 namespace io {
     ParserReader::ParserReader(std::string parser_file_name) : TxtFileReader(parser_file_name) {}
@@ -36,50 +39,33 @@ namespace io {
         return species_names;
     }
 
-
-    std::vector<std::string> ParserReader::readNormalRdn() {
-        std::vector<std::string> normal_number;
+    std::vector<std::string> ParserReader::readRdn(RNDNBR_TYPE type) {
+        std::vector<std::string> rnd_number;
         try {
             std::vector<std::string> all_random_numbers = _readCaptionLines(RANDOM_NUMBER_CAPTION);
             for (std::string &random_line : all_random_numbers) {
                 std::vector<std::string> random_line_split = _splitInTwo(random_line, "=");
-                if (random_line_split[1].find(NORMAL_CAPTION) != std::string::npos) {
-                    normal_number.push_back(random_line_split[0]);
+                if (random_line_split[1].find(RNDNBR_NAME[type])  != std::string::npos) {
+                    rnd_number.push_back(random_line_split[0]);
                 }
             }
         } catch (const ReaderException &e) {};
-        normal_number.erase(std::unique(normal_number.begin(), normal_number.end()), normal_number.end());
-        return normal_number;
+        rnd_number.erase(std::unique(rnd_number.begin(), rnd_number.end()), rnd_number.end());
+        return rnd_number;
     }
+
+    std::vector<std::string> ParserReader::readNormalRdn() { return readRdn(RNDNBR_TYPE::NORMAL); }
 
     std::vector<std::string> ParserReader::readUniformRdn() {
-        std::vector<std::string> uniform_number;
-        try {
-            std::vector<std::string> all_random_numbers = _readCaptionLines(RANDOM_NUMBER_CAPTION);
-            for (std::string &random_line : all_random_numbers) {
-                std::vector<std::string> random_line_split = _splitInTwo(random_line, "=");
-                if (random_line_split[1].find(UNIFORM_INT_CAPTION) == std::string::npos &&
-                    random_line_split[1].find(UNIFORM_CAPTION) != std::string::npos) {
-                    uniform_number.push_back(random_line_split[0]);
-                }
-            }
-        } catch (const ReaderException &e) {};
-        return uniform_number;
+        std::vector<std::string> uniform_int = readUniformIntRdn();
+        std::vector<std::string> uniform = readRdn(RNDNBR_TYPE::UNIFORM);
+        base::Utils::removeElementsFromVector<std::string>(uniform, uniform_int);
+        return uniform;
     }
 
-    std::vector<std::string> ParserReader::readUniformIntRdn() {
-        std::vector<std::string> uniform_number;
-        try {
-            std::vector<std::string> all_random_numbers = _readCaptionLines(RANDOM_NUMBER_CAPTION);
-            for (std::string &random_line : all_random_numbers) {
-                std::vector<std::string> random_line_split = _splitInTwo(random_line, "=");
-                if (random_line_split[1].find(UNIFORM_INT_CAPTION) != std::string::npos) {
-                    uniform_number.push_back(random_line_split[0]);
-                }
-            }
-        } catch (const ReaderException &e) {};
-        return uniform_number;
-    }
+    std::vector<std::string> ParserReader::readUniformIntRdn() {        return readRdn(RNDNBR_TYPE::UNIFORM_INT); }
+
+    std::vector<std::string> ParserReader::readPoissonRdn() { return readRdn(RNDNBR_TYPE::POISSON); }
 
     std::vector<std::pair<double, double> > ParserReader::readNormalParams() {
         std::vector<std::pair<double, double> > normal_params;
@@ -88,7 +74,7 @@ namespace io {
 
             for (std::size_t i = 0; i < random_number_lines.size(); i++) {
                 std::vector<std::string> random_line_split = _splitInTwo(random_number_lines[i], "=");
-                if (random_line_split[1].find(NORMAL_CAPTION) != std::string::npos) {
+                if (random_line_split[1].find(RNDNBR_NAME[RNDNBR_TYPE::NORMAL]) != std::string::npos) {
                     std::size_t begin_index = random_line_split[1].find_first_of("(") + 1;
                     std::size_t end_index = random_line_split[1].find_last_of(")");
 
@@ -115,8 +101,8 @@ namespace io {
             for (std::size_t i = 0; i < random_number_lines.size(); i++) {
                 std::vector<std::string> random_line_split = _splitInTwo(random_number_lines[i], "=");
 
-                if (random_line_split[1].find(UNIFORM_INT_CAPTION) == std::string::npos &&
-                    random_line_split[1].find(UNIFORM_CAPTION) != std::string::npos) {
+                if (random_line_split[1].find(RNDNBR_NAME[RNDNBR_TYPE::UNIFORM_INT]) == std::string::npos &&
+                    random_line_split[1].find(RNDNBR_NAME[RNDNBR_TYPE::UNIFORM]) != std::string::npos) {
                     std::size_t begin_index = random_line_split[1].find("(") + 1;
                     std::size_t end_index = random_line_split[1].find(")");
 
@@ -129,7 +115,8 @@ namespace io {
         } catch (const std::exception &e) {
             std::stringstream ss;
             ss << "Could not read parameters for Uniform random numbers:\n\t" << e.what() << std::endl;
-            throw ReaderException(ss.str());};
+            throw ReaderException(ss.str());
+        };
         return uniform_params;
     }
 
@@ -141,7 +128,7 @@ namespace io {
 
             for (std::size_t i = 0; i < random_number_lines.size(); i++) {
                 std::vector<std::string> random_line_split = _splitInTwo(random_number_lines[i], "=");
-                if (random_line_split[1].find(UNIFORM_INT_CAPTION) != std::string::npos) {
+                if (random_line_split[1].find(RNDNBR_NAME[RNDNBR_TYPE::UNIFORM_INT]) != std::string::npos) {
                     std::size_t begin_index = random_line_split[1].find("(") + 1;
                     std::size_t end_index = random_line_split[1].find(")");
 
@@ -159,6 +146,29 @@ namespace io {
         return uniform_params;
     }
 
+    std::vector<double > ParserReader::readPoissonParams() {
+        std::vector<double> poisson_params;
+
+        try {
+            std::vector<std::string> random_number_lines = _readCaptionLines(RANDOM_NUMBER_CAPTION);
+
+            for (std::size_t i = 0; i < random_number_lines.size(); i++) {
+                std::vector<std::string> random_line_split = _splitInTwo(random_number_lines[i], "=");
+                if (random_line_split[1].find(RNDNBR_NAME[RNDNBR_TYPE::POISSON]) != std::string::npos) {
+                    std::size_t begin_index = random_line_split[1].find("(") + 1;
+                    std::size_t end_index = random_line_split[1].find(")");
+
+                    std::string params_str = random_line_split[1].substr(begin_index, end_index - begin_index);
+                    poisson_params.push_back(std::stof(params_str.c_str()));
+                }
+            }
+        } catch (const std::exception &e) {
+            std::stringstream ss;
+            ss << "Could not read parameters for Poisson random numbers:\n\t" << e.what() << std::endl;
+            throw ReaderException(ss.str());
+        }
+        return poisson_params;
+    }
     bool ParserReader::speciesDefined() const { return _keyworkdExists(SPECIES_CAPTION); }
 
     bool ParserReader::parametersDefined() const { return _keyworkdExists(PARAMETER_CAPTION); }

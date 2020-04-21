@@ -43,9 +43,11 @@ namespace models {
         std::vector<double> _normal_numbers;
         std::vector<double> _uniform_numbers;
         std::vector<double> _uniform_int_numbers;
+        std::vector<double> _poisson_numbers;
         std::vector<base::NormalDistribution> _normal_dists;
         std::vector<base::UniformRealDistribution> _uniform_dists;
         std::vector<base::UniformIntDistribution> _uniform_int_dists;
+        std::vector<base::PoissonDistribution> _poisson_dists;
 
 
         std::vector<double> _state;

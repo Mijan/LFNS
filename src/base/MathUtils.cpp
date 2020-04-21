@@ -74,6 +74,36 @@ namespace base {
         return boost::math::binomial_coefficient<double>(n, k);
     }
 
+    //TODO see if I should use more appropriate error than std::runtime_error
+    double MathUtils::factorial(double k) {
+        double intpart;
+        if(std::modf(k, &intpart) != 0.0){
+            std::stringstream ss;
+            ss << "Tried to compute the factorial of a non-integer number: " << k << std::endl;
+            throw std::runtime_error(ss.str());
+        }
+
+        if (k == 0) { return 1; }
+        double fac = 1;
+        for (int i = k; i > 0; i--) { fac = fac * i; }
+        return fac;
+    }
+
+    //TODO see if I should use more appropriate error than std::runtime_error
+    double MathUtils::logfactorial(double k) {
+        double intpart;
+        if(std::modf(k, &intpart) != 0.0){
+            std::stringstream ss;
+            ss << "Tried to compute the factorial of a non-integer number: " << k << std::endl;
+            throw std::runtime_error(ss.str());
+        }
+
+        if (k == 0) { return 1; }
+        double fac = 0;
+        for (int i = k; i > 0; i--) { fac += log(i); }
+        return fac;
+    }
+
 
     EiMatrix MathUtils::computeCovariance(EiMatrix &data) {
         EiVector mu_data = data.colwise().sum() * (1.0 / (double) data.rows());

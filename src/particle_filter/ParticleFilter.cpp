@@ -43,7 +43,7 @@ namespace particle_filter {
 
 
         // TODO implement version for multiple particles
-        if (!_provided_parameters.empty()) { _sampleProvidedParameter(); }
+        if (!_provided_parameters.empty()) { sampleProvidedParameter(); }
         try {
             (*_setting_parameter_fct)(theta);
 
@@ -63,6 +63,7 @@ namespace particle_filter {
                     log_likelihood += _runFilteringStep(data[t], times[t]);
                     if (_stopping_criterions.processStopped()) { return -DBL_MAX; }
                     if (_threshold_ptr && log_likelihood < *_threshold_ptr) { return -DBL_MAX; }
+                    if (_threshold_ptr && std::isinf(log_likelihood)) { return -DBL_MAX; }
                     _smc_particles->resampleOldParticles();
                 }
                 return log_likelihood;
@@ -148,7 +149,7 @@ namespace particle_filter {
         _stopping_criterions.push_back(stopping_criterion);
     }
 
-    void ParticleFilter::_sampleProvidedParameter() {
+    void ParticleFilter::sampleProvidedParameter() {
         int index = _dist(*_rng);
         for (int i = 0; i < _provided_parameter_ptrs.size(); i++) {
             *_provided_parameter_ptrs[i] = _provided_parameters[index][i];

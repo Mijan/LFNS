@@ -25,7 +25,7 @@ namespace lfns {
                 _logger.lfnsStarted(m, *_epsilon_ptr);
 
 
-                for (int i = 0; i < _settings.N; i++) {
+                while (_live_points.numberParticles() < _settings.N) {
                     time_t tic = clock();
                     std::vector<double> theta = _sampler->samplePrior();
                     time_t toc = clock();

@@ -55,7 +55,7 @@ namespace particle_filter {
 
         virtual void addStoppingCriterion(simulator::StoppingFct_ptr stopping_criterion);
 
-        void _sampleProvidedParameter();
+        void sampleProvidedParameter();
 
         void setProvidedParticles(std::vector<double*> provided_param_ptrs, std::string provided_parameters_file);
 

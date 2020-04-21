@@ -71,6 +71,15 @@ namespace base {
             return overlapping_elements;
         }
 
+        template<typename T>
+        static void removeElementsFromVector(std::vector<T> &original_vector, const std::vector<T> &elements_to_remove) {
+            for (std::size_t i = 0; i < elements_to_remove.size(); i++) {
+                if (std::find(original_vector.begin(), original_vector.end(), elements_to_remove[i]) != original_vector.end()) {
+                   original_vector.erase(std::find(original_vector.begin(), original_vector.end(), elements_to_remove[i]));
+                }
+            }
+        }
+
         template<typename Identifier>
         static std::map<Identifier, std::size_t> getIndexMapFromVector(std::vector<Identifier> vector) {
             std::map<Identifier, std::size_t> map;

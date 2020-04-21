@@ -25,6 +25,10 @@ namespace base {
 
         static double binomial(double n, double k);
 
+        static double factorial(double k);
+
+        static double logfactorial(double k);
+
         template<typename T>
         static int sgn(T val) { return (T(0) < val) - (val < T(0)); }
 

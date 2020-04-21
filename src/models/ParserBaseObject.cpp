@@ -66,6 +66,13 @@ namespace models {
             _uniform_int_dists.push_back(base::UniformIntDistribution(params.first, params.second));
         }
 
+        const std::vector<std::string> &poisson_random_num = _parser_data.getPoissonRandomNbrsName();
+        const std::vector<double> &poisson_params = _parser_data.getPoissonRandomParams();
+        for (std::size_t poisson_num = 0; poisson_num < poisson_random_num.size(); poisson_num++) {
+            double params = poisson_params[poisson_num];
+            _poisson_dists.push_back(base::PoissonDistribution(params));
+        }
+
         for (int i = 0; i < _base_data.getNumSpecies(); i++) {
             _state_ptrs[i] = &_state[i];
             _input_state_ext_by_int[i] = i;
@@ -144,6 +151,16 @@ namespace models {
             os << std::endl << std::endl;
         }
 
+        std::vector<std::string> poisson_names = _parser_data.getPoissonRandomNbrsName();
+        std::vector<double> poisson_params = _parser_data.getPoissonRandomParams();
+        if (!uniform_int_names.empty()) {
+            os << "\nPoisson numbers:" << std::endl;
+            for (std::size_t i = 0; i < uniform_int_names.size(); i++) {
+                os << poisson_names[i] << ":\tmean: " << poisson_params[i] << std::endl;
+            }
+            os << std::endl << std::endl;
+        }
+
     }
 
     void ParserBaseObject::setPointer(double *ptr, std::string name) {
@@ -197,6 +214,8 @@ namespace models {
         p.DefineFun("binom", base::MathUtils::binomial);
         p.DefineFun("ceil", ceil);
         p.DefineFun("floor", floor);
+        p.DefinePostfixOprt("!", base::MathUtils::factorial);
+        p.DefineFun("logfactorial", base::MathUtils::logfactorial);
 
         try {
             for (std::size_t i = 0; i < _base_data.getNumSpecies(); i++) {
@@ -224,6 +243,11 @@ namespace models {
                 p.DefineVar(uniform_int_random_nbr_name[uniform_int_rnb], &_uniform_int_numbers[uniform_int_rnb]);
             }
 
+            std::vector<std::string> poisson_random_nbr_name = _parser_data.getPoissonRandomNbrsName();
+            for (int poisson_rnb = 0; poisson_rnb < poisson_random_nbr_name.size(); poisson_rnb++) {
+                p.DefineVar(poisson_random_nbr_name[poisson_rnb], &_poisson_numbers[poisson_rnb]);
+            }
+
         } catch (mu::Parser::exception_type &e) {
             std::ostringstream os;
             os << "Could not define variable for ModelBase" << std::endl;
@@ -245,6 +269,9 @@ namespace models {
         }
         for (std::size_t i = 0; i < _uniform_int_dists.size(); i++) {
             _uniform_int_numbers[i] = (_uniform_int_dists[i])(*_rng);
+        }
+        for (std::size_t i = 0; i < _poisson_dists.size(); i++) {
+            _poisson_numbers[i] = (_poisson_dists[i])(*_rng);
         }
     }
 

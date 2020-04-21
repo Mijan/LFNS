@@ -27,11 +27,15 @@ namespace models {
 
         const std::vector<std::string> &getUniformIntRandomNbrsName() const;
 
+        const std::vector<std::string> &getPoissonRandomNbrsName() const;
+
         const std::vector<std::pair<double, double> > &getNormalRandomParams() const;
 
         const std::vector<std::pair<double, double> > &getUniformRandomParams() const;
 
         const std::vector<std::pair<int, int> > &getUniformIntRandomParams() const;
+
+        const std::vector<double> &getPoissonRandomParams() const;
 
         std::size_t getNumNormalNumbers();
 
@@ -43,9 +47,11 @@ namespace models {
         std::vector<std::string> _normal_random_nbr;
         std::vector<std::string> _uniform_random_nbr;
         std::vector<std::string> _uniform_int_random_nbr;
+        std::vector<std::string> _poisson_random_nbr;
         std::vector<std::pair<double, double> > _normal_random_params;
         std::vector<std::pair<double, double> > _uniform_random_params;
         std::vector<std::pair<int, int> > _uniform_int_random_params;
+        std::vector<double> _poisson_random_params;
     };
 }
 
