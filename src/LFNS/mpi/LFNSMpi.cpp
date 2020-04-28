@@ -92,7 +92,7 @@ namespace lfns {
 
         void LFNSMpi::_initializeQueue(RequestQueue &queue) {
             for (std::size_t rank = 1; rank < _num_tasks; rank++) { queue.addRequest(rank, _num_parameters, true); }
-            queue.stopPendingRequests();
+//            queue.stopPendingRequests();
         }
 
         void LFNSMpi::_sampleConstPrior(RequestQueue &queue) {
