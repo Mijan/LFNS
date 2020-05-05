@@ -153,9 +153,9 @@ namespace models {
 
         std::vector<std::string> poisson_names = _parser_data.getPoissonRandomNbrsName();
         std::vector<double> poisson_params = _parser_data.getPoissonRandomParams();
-        if (!uniform_int_names.empty()) {
+        if (!poisson_names.empty()) {
             os << "\nPoisson numbers:" << std::endl;
-            for (std::size_t i = 0; i < uniform_int_names.size(); i++) {
+            for (std::size_t i = 0; i < poisson_names.size(); i++) {
                 os << poisson_names[i] << ":\tmean: " << poisson_params[i] << std::endl;
             }
             os << std::endl << std::endl;
