@@ -16,8 +16,11 @@ namespace models {
                                                                                            parser_data.getNumUniformNumbers()),
                                                                                    _uniform_int_numbers(
                                                                                            parser_data.getNumUniformIntNumbers()),
+                                                                                   _poisson_numbers(
+                                                                                           parser_data.getNumPoissonNumbers()),
                                                                                    _normal_dists(), _uniform_dists(),
                                                                                    _uniform_int_dists(),
+                                                                                   _poisson_dists(),
                                                                                    _state(parser_data.getNumSpecies()),
                                                                                    _time(0),
                                                                                    _input_state_ext_by_int(),

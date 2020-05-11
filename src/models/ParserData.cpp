@@ -71,9 +71,11 @@ namespace models {
                                                      _normal_random_nbr(data._normal_random_nbr),
                                                      _uniform_random_nbr(data._uniform_random_nbr),
                                                      _uniform_int_random_nbr(data._uniform_int_random_nbr),
+                                                     _poisson_random_nbr(data._poisson_random_nbr),
                                                      _normal_random_params(data._normal_random_params),
                                                      _uniform_random_params(data._uniform_random_params),
-                                                     _uniform_int_random_params(data._uniform_int_random_params) {}
+                                                     _uniform_int_random_params(data._uniform_int_random_params),
+                                                     _poisson_random_params(data._poisson_random_params) {}
 
     ParserData::~ParserData() {}
 
@@ -89,7 +91,7 @@ namespace models {
         return _uniform_int_random_nbr;
     }
 
-    const std::vector<std::string> &ParserData::getPoissonRandomNbrsName() const{
+    const std::vector<std::string> &ParserData::getPoissonRandomNbrsName() const {
         return _poisson_random_nbr;
     }
 
@@ -114,5 +116,7 @@ namespace models {
     std::size_t ParserData::getNumUniformNumbers() { return _uniform_random_nbr.size(); }
 
     std::size_t ParserData::getNumUniformIntNumbers() { return _uniform_int_random_nbr.size(); }
+
+    std::size_t ParserData::getNumPoissonNumbers() { return _poisson_random_nbr.size(); }
 
 }

@@ -43,6 +43,8 @@ namespace models {
 
         std::size_t getNumUniformIntNumbers();
 
+        std::size_t getNumPoissonNumbers();
+
     protected:
         std::vector<std::string> _normal_random_nbr;
         std::vector<std::string> _uniform_random_nbr;
