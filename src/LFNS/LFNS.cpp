@@ -15,7 +15,7 @@ namespace lfns {
             : _settings(lfns_settings), _live_points(), _dead_points(),
               _post_estimator(std::make_shared<PosteriorEstimator>(lfns_settings.N, lfns_settings.r)),
               _sampler(nullptr),
-              _logger(lfns_settings), _resume_run(false), _epsilon(-DBL_MAX), _epsilon_ptr(&_epsilon),
+              _logger(lfns_settings), _resume_run(false), _epsilon(-1e10), _epsilon_ptr(&_epsilon),
               _num_parameters(-1) {}
 
     LFNS::~LFNS() {}

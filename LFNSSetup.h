@@ -40,7 +40,7 @@ public:
 
     std::vector<Times> times_vec;
     std::vector<TrajectorySet> data_vec;
-    double threshold = -DBL_MAX;
+    double threshold = -1e10;
 
 
     void setUp();

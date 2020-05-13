@@ -48,6 +48,7 @@ namespace lfns {
 
             RequestQueue queue;
             _initializeQueue(queue);
+            _updateEpsilon(_epsilon);
             if (!_resume_run) {
                 _logger.lfnsStarted(m, _epsilon);
                 _samplePrior(queue);
