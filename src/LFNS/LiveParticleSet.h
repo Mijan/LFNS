@@ -24,6 +24,8 @@ namespace lfns {
 
         const LFNSParticle removeLowestPartcile();
 
+        const LFNSParticle removeHighestPartcile();
+
         double getLowestLikelihood();
 
         double getHighestLogLikelihood();

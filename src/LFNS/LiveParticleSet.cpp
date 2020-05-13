@@ -25,6 +25,21 @@ namespace lfns {
         return particle;
     }
 
+    const LFNSParticle LiveParticleSet::removeHighestPartcile() {
+        if (_live_points.empty()) {
+            throw std::runtime_error("Tried to remove lowest particle from LiveParticleSet, but this set is empty!");
+        }
+        std::multiset<LFNSParticle, lfns_particle_comp>::reverse_iterator it = _live_points.rbegin();
+        LFNSParticle particle = *(it);
+        std::cout <<"particle dist: " << particle.getLogLikelihood() << std::endl;
+        std::advance(it, 1);
+        _live_points.erase(it.base());
+        std::multiset<LFNSParticle, lfns_particle_comp>::reverse_iterator it_2 = _live_points.rbegin();
+        LFNSParticle particle_new = *(it_2);
+        std::cout <<"newparticle dist: " << particle_new.getLogLikelihood() << std::endl;
+        return particle;
+    }
+
     double LiveParticleSet::getLowestLikelihood() { return _live_points.begin()->getLogLikelihood(); }
 
     double LiveParticleSet::getHighestLogLikelihood() { return _live_points.rbegin()->getLogLikelihood(); }
