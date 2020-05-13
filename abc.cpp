@@ -126,6 +126,7 @@ double computeDist(const std::vector<double> &theta, ABCSetup abc_setup) {
     int num_sim = abc_setup.particle_filter_settings.H;
     double distance = 0;
     for (int i = 0; i < num_sim; i++) {
+//        std::cout << "average taken over " << num_sim << " simulations" << std::endl;
         int count = 0;
         for (double sim_time : abc_setup.times_vec[0]) {
             try {
