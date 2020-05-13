@@ -53,6 +53,7 @@ set(SIMULATOR_SOURCE_FILES src/simulator/Simulator.h src/simulator/SimulatorSsa.
 set(PARTICLE_FILTER_SOURCE_FILES src/particle_filter/ParticleFilter.h src/particle_filter/ParticleFilter.cpp src/particle_filter/SmcParticle.h src/particle_filter/SmcParticleSet.h src/particle_filter/SmcParticleSet.cpp src/particle_filter/ParticleFilterSettings.h src/particle_filter/MultLikelihoodEval.h)
 set(MODELS_SOURCE_FILES src/models/BaseData.h src/models/BaseData.cpp src/models/BaseObject.h src/models/BaseObject.cpp src/models/ChemicalReactionNetwork.h src/models/ChemicalReactionNetwork.cpp src/models/ModelReactionData.h src/models/ModelReactionData.cpp src/models/ParserBaseObject.h src/models/ParserBaseObject.cpp src/models/ParserData.h src/models/ParserData.cpp src/models/InitialValueProvider.h src/models/InitialValueProvider.cpp src/models/InitialValueData.cpp src/models/InitialValueData.h src/models/MeasurementModel.h src/models/MeasurementModel.cpp src/models/MeasurementModelData.h src/models/MeasurementModelData.cpp src/models/InputPulse.cpp src/models/InputPulse.h src/models/FullModel.cpp src/models/FullModel.h src/models/ModelSettings.h)
 set(MCMC_SOURCE_FILES src/MCMC/MCMCSampler.cpp src/MCMC/MCMCSampler.h src/MCMC/MCMC.cpp src/MCMC/MCMC.h src/MCMC/MCMCParticles.cpp src/MCMC/MCMCParticles.h src/MCMC/MCMCLogger.cpp src/MCMC/MCMCLogger.h src/MCMC/MCMCSettings.h)
+set(ABC_SOURCE_FILES src/ABC/ABC.cpp src/ABC/ABC.h src/ABC/ABCMpi.cpp src/ABC/ABCMpi.h src/ABC/ABCLogger.h src/ABC/ABCLogger.cpp src/ABC/ABCSettings.h src/LFNS/LiveParticleSet.h src/LFNS/LiveParticleSet.cpp src/ABC/ABCWorker.h src/ABC/ABCWorker.cpp)
 
 add_library(base SHARED ${BASE_SOURCE_FILES})
 add_library(io SHARED ${IO_SOURCE_FILES})
@@ -65,6 +66,7 @@ add_library(simulator SHARED ${SIMULATOR_SOURCE_FILES})
 add_library(particle_filter SHARED ${PARTICLE_FILTER_SOURCE_FILES})
 add_library(models SHARED ${MODELS_SOURCE_FILES})
 add_library(MCMC SHARED ${MCMC_SOURCE_FILES})
+add_library(ABC SHARED ${ABC_SOURCE_FILES})
 
 target_link_libraries(base ${Boost_LIBRARIES} ${Eigen3_LIBRARIES})
 target_link_libraries(io ${Boost_LIBRARIES} ${Eigen3_LIBRARIES})
@@ -77,6 +79,7 @@ target_link_libraries(simulator ${Boost_LIBRARIES} ${Eigen3_LIBRARIES} ${SUNDIAL
 target_link_libraries(particle_filter ${Boost_LIBRARIES} ${Eigen3_LIBRARIES} base simulator)
 target_link_libraries(models ${Boost_LIBRARIES} ${Eigen3_LIBRARIES} ${MUPARSER_LIBRARIES} base io)
 target_link_libraries(MCMC ${Boost_LIBRARIES} base sampler)
+target_link_libraries(ABC ${Boost_LIBRARIES} base sampler lfnsMpi)
 
 
 if (MPI_COMPILE_FLAGS)
@@ -92,15 +95,17 @@ add_executable(lfns_mpi lfns_mpi.cpp LFNSSetup.cpp LFNSSetup.h GeneralSetup.cpp 
 add_executable(simulate simulate.cpp SimulationSetup.cpp SimulationSetup.h GeneralSetup.cpp GeneralSetup.h)
 add_executable(evaluate_likelihood evaluate_likelihood.cpp LikelihoodSetup.cpp LikelihoodSetup.h GeneralSetup.cpp GeneralSetup.h)
 add_executable(mcmc ${MCMC_SOURCE_FILES} GeneralSetup.cpp GeneralSetup.h mcmc.cpp MCMCSetup.cpp MCMCSetup.h)
+add_executable(abc ${MCMC_SOURCE_FILES} GeneralSetup.cpp GeneralSetup.h abc.cpp ABCSetup.cpp ABCSetup.h)
 
 target_link_libraries(lfns_seq base models particle_filter lfns lfnsSeq options io)
 target_link_libraries(lfns_mpi base models particle_filter lfns lfnsMpi options io)
 target_link_libraries(simulate base models simulator options io)
 target_link_libraries(evaluate_likelihood base models simulator options particle_filter io)
 target_link_libraries(mcmc ${Boost_LIBRARIES} base models sampler particle_filter options io)
+target_link_libraries(abc base models particle_filter lfns lfnsMpi options io ABC)
 
-install(TARGETS mcmc lfns_seq lfns_mpi simulate evaluate_likelihood DESTINATION bin)
-install(TARGETS base models simulator options io particle_filter sampler lfns lfnsSeq lfnsMpi DESTINATION lib)
+install(TARGETS mcmc lfns_seq lfns_mpi simulate evaluate_likelihood abc DESTINATION bin)
+install(TARGETS base models simulator options io particle_filter sampler lfns lfnsSeq lfnsMpi ABC DESTINATION lib)
 
 
 install(FILES src/base/EigenMatrices.h src/base/IoUtils.h src/base/MathUtils.h src/base/MultivariateNormal.h src/base/RandomDistributions.h src/base/Utils.h DESTINATION include)
