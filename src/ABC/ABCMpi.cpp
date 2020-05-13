@@ -93,13 +93,9 @@ namespace abc {
     }
 
     void ABCMpi::_sampleNewPoint(lfns::mpi::RequestQueue &queue) {
-        std::cout << "starting sampling" << std::endl;
-        std::cout << "acceptance rage " << _logger.lastAcceptanceRate() << std::endl;
         _sampler->updateAcceptanceRate(_logger.lastAcceptanceRate());
         for (int j = 0; j < _settings.r; j++) {
-            std::cout <<"removing particle..." << std::endl;
             const lfns::LFNSParticle &particle = _live_points.removeHighestPartcile();
-            std::cout <<"particle... removed" << std::endl;
         }
 
         std::cout <<"getting epsilon" << std::endl;
@@ -115,7 +111,7 @@ namespace abc {
         _logger.samplerUpdated(*_sampler, toc - tic);
         _updateSampler();
 
-        _live_points = lfns::LiveParticleSet();
+//        _live_points = lfns::LiveParticleSet();
         while (_live_points.numberParticles() < _settings.N) {
             std::queue<std::size_t> &finished_tasks = queue.getFinishedProcessess();
 
