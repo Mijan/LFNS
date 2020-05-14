@@ -11,7 +11,7 @@
 namespace abc {
     ABC::ABC(ABCSettings &abc_settings)
             : _settings(abc_settings), _live_points(), _sampler(nullptr),
-              _logger(abc_settings), _resume_run(false), _epsilon(1e15), _epsilon_ptr(&_epsilon),
+              _logger(abc_settings), _resume_run(false), _epsilon(1e10), _epsilon_ptr(&_epsilon),
               _num_parameters(-1) {}
 
     ABC::~ABC() {}
