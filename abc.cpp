@@ -116,22 +116,24 @@ double computeDist(const std::vector<double> &theta, ABCSetup abc_setup) {
     abc_setup.full_models[0]->setParameter(theta);
 
     Trajectory latent_states;
-    latent_states.reserve(abc_setup.data_vec[0].size());
+    latent_states.reserve(abc_setup.data_vec.back().size());
     Trajectory measurements;
-    measurements.reserve(abc_setup.data_vec[0].size());
+    measurements.reserve(abc_setup.data_vec.back().size());
 
+    // For this implementation we assume there is only one trajectory and only one experiment.
+    // This is just for the LF-NS paper and only temporary.
     abc_setup.full_models[0]->initial_value_provider->computeInitialState(&latentstate, &t);
     abc_setup.simulators[0]->reset(latentstate, t);
 
+    TrajectorySet &traj_set = abc_setup.data_vec.back();
+    Trajectory &trajectory = traj_set[0];
     int num_sim = abc_setup.particle_filter_settings.H;
     double distance = 0;
     for (int i = 0; i < num_sim; i++) {
-//        std::cout << "average taken over " << num_sim << " simulations" << std::endl;
-        int count = 0;
-        for (double sim_time : abc_setup.times_vec[0]) {
+        for(int time_nbr = 0; time_nbr < abc_setup.times_vec[0].size(); time_nbr++){
+            double sim_time = abc_setup.times_vec[0][time_nbr];
             try {
                 abc_setup.simulators[0]->simulate(sim_time);
-
             } catch (mu::ParserError &e) {
                 std::ostringstream os;
                 os << "Parser error for expression : " << e.GetExpr() << std::endl;
@@ -145,17 +147,15 @@ double computeDist(const std::vector<double> &theta, ABCSetup abc_setup) {
             abc_setup.full_models[0]->measurement_model->computeMeasurement(&measurement, latentstate, t);
             latent_states.push_back(latentstate);
             measurements.push_back(measurement);
-            TrajectorySet &tmp = abc_setup.data_vec.back();
-            Trajectory &tmp_2 = tmp[0];
-            std::vector<double> &tmp_3 = tmp_2[count];
 
-            distance += std::pow(measurement[0] - tmp_3[0], 2);
-            count++;
+            std::vector<double> &time_slice = trajectory[time_nbr];
+            for(int num_meas = 0; num_meas < measurement.size(); num_meas++) {
+                distance += std::pow(measurement[num_meas] - time_slice[num_meas], 2);
+            }
         }
     }
-    distance = distance / num_sim;
+    distance = distance / (double) num_sim;
 
-//    std::cout << "returning " << distance << " with " << num_sim << " simulations" << std::endl;
     return distance;
 
 }
