@@ -7,8 +7,6 @@
 #include "../LFNS/LiveParticleSet.h"
 #include "../LFNS/DeadParticleSet.h"
 #include "../LFNS/LFNSParticle.h"
-#include "../base/IoUtils.h"
-#include "../base/MathUtils.h"
 
 namespace abc {
     ABC::ABC(ABCSettings &abc_settings)
