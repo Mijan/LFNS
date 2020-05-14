@@ -31,12 +31,10 @@ namespace lfns {
         }
         std::multiset<LFNSParticle, lfns_particle_comp>::reverse_iterator it = _live_points.rbegin();
         LFNSParticle particle = *(it);
-        std::cout <<"particle dist: " << particle.getLogLikelihood() << std::endl;
         std::advance(it, 1);
         _live_points.erase(it.base());
         std::multiset<LFNSParticle, lfns_particle_comp>::reverse_iterator it_2 = _live_points.rbegin();
         LFNSParticle particle_new = *(it_2);
-        std::cout <<"newparticle dist: " << particle_new.getLogLikelihood() << std::endl;
         return particle;
     }
 
