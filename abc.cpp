@@ -19,6 +19,7 @@ options::LFNSOptions lfns_options;
 
 int my_rank;
 int num_tasks;
+double *thresh;
 
 namespace bmpi = boost::mpi;
 
@@ -95,7 +96,7 @@ void runWorker(ABCSetup &abc_setup) {
         }
     }
     if (abc_setup.particle_filter_settings.use_premature_cancelation) {
-        abc_setup.mult_like_eval.setThresholdPtr(worker.getEpsilonPtr());
+        thresh = worker.getEpsilonPtr();
     }
     worker.run();
 }
@@ -151,6 +152,7 @@ double computeDist(const std::vector<double> &theta, ABCSetup abc_setup) {
             std::vector<double> &time_slice = trajectory[time_nbr];
             for(int num_meas = 0; num_meas < measurement.size(); num_meas++) {
                 distance += std::pow(measurement[num_meas] - time_slice[num_meas], 2);
+                if(distance * num_sim > *thresh){ return DBL_MAX;}
             }
         }
     }

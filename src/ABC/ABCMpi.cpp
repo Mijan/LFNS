@@ -67,6 +67,7 @@ namespace abc {
     }
 
     void ABCMpi::_samplePrior(lfns::mpi::RequestQueue &queue) {
+        _updateEpsilon(_epsilon);
         while (_live_points.numberParticles() < _settings.N) {
             std::queue<std::size_t> &finished_tasks = queue.getFinishedProcessess();
             while (!finished_tasks.empty()) {
@@ -98,9 +99,7 @@ namespace abc {
             const lfns::LFNSParticle &particle = _live_points.removeHighestPartcile();
         }
 
-        std::cout <<"getting epsilon" << std::endl;
         _epsilon = _live_points.getHighestLogLikelihood();
-        std::cout << "new epsilon: " << _epsilon << std::endl;
 
         _updateEpsilon(_epsilon);
         _logger.epsilonUpdated(_epsilon);
