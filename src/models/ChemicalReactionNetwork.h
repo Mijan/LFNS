@@ -41,7 +41,7 @@ namespace models {
 
         std::size_t getNumReactions();
 
-        void _initialize();
+        void _initialize() override;
 
         void setDetStatesForHybridModel(std::vector<std::string> det_state_names);
 
