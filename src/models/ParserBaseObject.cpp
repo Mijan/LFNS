@@ -5,6 +5,7 @@
 #include <set>
 #include "ParserBaseObject.h"
 #include "../base/MathUtils.h"
+#include "../base/PhysicalFunctions.h"
 
 namespace models {
 
@@ -215,6 +216,7 @@ namespace models {
         p.DefineFun("exp", exp);
         p.DefineConst("_pi", (double) M_PI);
         p.DefineFun("binom", base::MathUtils::binomial);
+        p.DefineFun("light_cylindric", base::PhysicalFunctions::averageCylindricLightIntensity);
         p.DefineFun("ceil", ceil);
         p.DefineFun("floor", floor);
         p.DefinePostfixOprt("!", base::MathUtils::factorial);
