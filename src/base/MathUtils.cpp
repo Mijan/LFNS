@@ -77,7 +77,7 @@ namespace base {
     //TODO see if I should use more appropriate error than std::runtime_error
     double MathUtils::factorial(double k) {
         double intpart;
-        if(std::modf(k, &intpart) != 0.0){
+        if (std::modf(k, &intpart) != 0.0) {
             std::stringstream ss;
             ss << "Tried to compute the factorial of a non-integer number: " << k << std::endl;
             throw std::runtime_error(ss.str());
@@ -92,7 +92,7 @@ namespace base {
     //TODO see if I should use more appropriate error than std::runtime_error
     double MathUtils::logfactorial(double k) {
         double intpart;
-        if(std::modf(k, &intpart) != 0.0){
+        if (std::modf(k, &intpart) != 0.0) {
             std::stringstream ss;
             ss << "Tried to compute the factorial of a non-integer number: " << k << std::endl;
             throw std::runtime_error(ss.str());
@@ -192,6 +192,7 @@ namespace base {
         *sign_result = sum < 0 ? -1 : 1;
         *log_result = std::log(std::abs(sum)) + max_log;
     }
+
 }
 
 

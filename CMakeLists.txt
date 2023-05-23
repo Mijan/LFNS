@@ -42,7 +42,7 @@ find_package(MPI REQUIRED)
 include_directories(${MPI_INCLUDE_PATH})
 
 
-set(BASE_SOURCE_FILES src/base/EigenMatrices.h src/base/IoUtils.cpp src/base/IoUtils.h src/base/MathUtils.cpp src/base/MathUtils.h src/base/MultivariateNormal.cpp src/base/MultivariateNormal.h src/base/RandomDistributions.h src/base/Utils.cpp src/base/Utils.h src/base/EigenSerialization.h)
+set(BASE_SOURCE_FILES src/base/EigenMatrices.h src/base/IoUtils.cpp src/base/IoUtils.h src/base/MathUtils.cpp src/base/MathUtils.h src/base/MultivariateNormal.cpp src/base/MultivariateNormal.h src/base/RandomDistributions.h src/base/Utils.cpp src/base/Utils.h src/base/EigenSerialization.h src/base/PhysicalFunctions.cpp src/base/PhysicalFunctions.h)
 set(IO_SOURCE_FILES src/io/TxtFileReader.cpp src/io/TxtFileReader.h src/io/ModelReactionReader.cpp src/io/ModelReactionReader.h src/io/ParserReader.cpp src/io/ParserReader.h src/io/InitialValueReader.h src/io/InitialValueReader.cpp src/io/MeasurementModelReader.h src/io/MeasurementModelReader.cpp src/io/XmlPropertyMap.cpp src/io/XmlPropertyMap.h src/io/XmlFileReader.cpp src/io/XmlFileReader.h src/io/ConfigFileInterpreter.cpp src/io/ConfigFileInterpreter.h src/io/IoSettings.h)
 set(OPTIONS_SOURCE_FILES src/options/CommandLineOptions.cpp src/options/CommandLineOptions.h src/options/DataOptions.h src/options/LFNSOptions.cpp src/options/LFNSOptions.h src/options/SimulationOptions.cpp src/options/SimulationOptions.h src/options/ComputeLikelihoodOptions.cpp src/options/ComputeLikelihoodOptions.h src/options/MCMCOptions.cpp src/options/MCMCOptions.h)
 set(LFNS_SOURCE_FILES src/LFNS/LFNSSettings.h src/LFNS/LFNS.cpp src/LFNS/LFNS.h src/LFNS/DeadParticleSet.cpp src/LFNS/DeadParticleSet.h src/LFNS/LiveParticleSet.cpp src/LFNS/LiveParticleSet.h src/LFNS/LFNSParticle.cpp src/LFNS/LFNSParticle.h src/LFNS/LFNSLogger.cpp src/LFNS/LFNSLogger.h src/LFNS/PosteriorEstimator.cpp src/LFNS/PosteriorEstimator.h src/LFNS/LFNSSampler.cpp src/LFNS/LFNSSampler.h src/sampler/SliceSampler.cpp src/sampler/SliceSampler.h)
@@ -91,15 +91,15 @@ add_executable(lfns_seq lfns_seq.cpp LFNSSetup.cpp LFNSSetup.h GeneralSetup.cpp 
 add_executable(lfns_mpi lfns_mpi.cpp LFNSSetup.cpp LFNSSetup.h GeneralSetup.cpp GeneralSetup.h)
 add_executable(simulate simulate.cpp SimulationSetup.cpp SimulationSetup.h GeneralSetup.cpp GeneralSetup.h)
 add_executable(evaluate_likelihood evaluate_likelihood.cpp LikelihoodSetup.cpp LikelihoodSetup.h GeneralSetup.cpp GeneralSetup.h)
-add_executable(mcmc ${MCMC_SOURCE_FILES} GeneralSetup.cpp GeneralSetup.h mcmc.cpp MCMCSetup.cpp MCMCSetup.h)
+add_executable(mcmc_seq ${MCMC_SOURCE_FILES} GeneralSetup.cpp GeneralSetup.h mcmc.cpp MCMCSetup.cpp MCMCSetup.h)
 
 target_link_libraries(lfns_seq base models particle_filter lfns lfnsSeq options io)
 target_link_libraries(lfns_mpi base models particle_filter lfns lfnsMpi options io)
 target_link_libraries(simulate base models simulator options io)
 target_link_libraries(evaluate_likelihood base models simulator options particle_filter io)
-target_link_libraries(mcmc ${Boost_LIBRARIES} base models sampler particle_filter options io)
+target_link_libraries(mcmc_seq ${Boost_LIBRARIES} base models sampler particle_filter options io)
 
-install(TARGETS mcmc lfns_seq lfns_mpi simulate evaluate_likelihood DESTINATION bin)
+install(TARGETS mcmc_seq lfns_seq lfns_mpi simulate evaluate_likelihood DESTINATION bin)
 install(TARGETS base models simulator options io particle_filter sampler lfns lfnsSeq lfnsMpi DESTINATION lib)
 
 
@@ -113,3 +113,4 @@ install(FILES src/sampler/Sampler.h src/sampler/UniformSampler.h src/sampler/Den
 install(FILES src/simulator/Simulator.h src/simulator/SimulatorSsa.h src/simulator/StoppingCriterion.h src/simulator/SimulatorOde.h src/simulator/SimulatorExceptions.h DESTINATION include)
 install(FILES src/particle_filter/ParticleFilter.h src/particle_filter/SmcParticle.h src/particle_filter/SmcParticleSet.h DESTINATION include)
 install(FILES src/models/BaseData.h src/models/BaseObject.h src/models/ChemicalReactionNetwork.h src/models/ModelReactionData.h src/models/ParserBaseObject.h src/models/ParserData.h src/models/InitialValueProvider.h src/models/InitialValueData.h src/models/MeasurementModel.h src/models/MeasurementModelData.h DESTINATION include)
+install(FILES src/MCMC/MCMC.h src/MCMC/MCMCLogger.h src/MCMC/MCMCParticles.h src/MCMC/MCMCSampler.h src/MCMC/MCMCSettings.h DESTINATION include)
