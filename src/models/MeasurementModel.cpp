@@ -35,6 +35,7 @@ namespace models {
         }
         if (_perturbation_fct) { (*_perturbation_fct)(state.data(), t); }
         _updateState(state.data());
+        _updateTime(t);
         _createRandomNumbers();
 
         if (measurement->size() != _measurement_parsers.size()) {

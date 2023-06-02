@@ -41,6 +41,8 @@ namespace models {
 
         if (_perturbation_fct) { (*_perturbation_fct)(state.data(), t); }
         _updateState(state.data());
+        //TODO Think about how to include time varying reactions (not urgent)
+        // _updateTime(t)
         for (std::size_t prop_nbr = 0; prop_nbr < propensities.size(); prop_nbr++) {
             try {
                 if (_active_reactions_hybrid_model.empty() || _active_reactions_hybrid_model[prop_nbr]) {
@@ -91,7 +93,6 @@ namespace models {
 
     void ChemicalReactionNetwork::rhs(double *dx, const double *state, double t) {
 
-//        printPointerValue(std::cout);
         if (!_initialized) {
             std::stringstream os;
             os << "ChemicalReactionNetwork must be initialized before measurement can be computed!"
@@ -102,6 +103,7 @@ namespace models {
 
         if (_perturbation_fct) { (*_perturbation_fct)(state, t); }
         _updateState(state);
+        _updateTime(t);
         std::size_t species_index = 0;
         for (mu::Parser &p : _rhs_parsers) {
             if (_det_index_hybrid_model.empty() || _det_index_hybrid_model[species_index]) {
@@ -111,7 +113,6 @@ namespace models {
             }
             species_index++;
         }
-        int a = 2;
     }
 
     RhsFct_ptr ChemicalReactionNetwork::getRhsFct() {

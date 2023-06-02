@@ -286,4 +286,8 @@ namespace models {
             *_state_ptrs[it->first] = state[it->second];
         }
     }
+
+    void ParserBaseObject::_updateTime(double t){
+        *_time_ptr = t;
+    }
 }

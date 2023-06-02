@@ -62,6 +62,8 @@ namespace models {
 
         void _updateState(const double *state);
 
+        void _updateTime(double t);
+
         PerturbationFct_ptr _perturbation_fct;
 
         virtual void _initialize() = 0;

@@ -98,7 +98,7 @@ namespace models {
             os << _base_data.getSpeciesNames()[species_index] << ":\t" << *_state_ptrs[species_index] << std::endl;
         }
 
-        os << _base_data.getTimeName() << ":\t" << _time_ptr << std::endl;
+        os << _base_data.getTimeName() << ":\t" << *_time_ptr << std::endl;
         std::cout << std::endl;
     }
 
