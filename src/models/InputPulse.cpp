@@ -8,9 +8,8 @@
 
 namespace models {
     InputPulse::InputPulse(PulseData input_data)
-            : pulse_beginnings(), pulse_ends(), input_name(input_data.pulse_inpt_name),
-              _input_strength(input_data.pulse_strenght),
-              parameter_index(-1) {
+            : Input(input_data), pulse_beginnings(), pulse_ends(),
+              _input_strength(input_data.pulse_strenght){
         int effective_num_pulses = input_data.num_pulses;
         pulse_beginnings = std::vector<double>(effective_num_pulses, 0.0);
         pulse_ends = std::vector<double>(effective_num_pulses, 0.0);
@@ -35,9 +34,16 @@ namespace models {
         return dis_cont_times;
     }
 
-    bool InputPulse::pulseActive(double t) {
+    bool InputPulse::_pulseActive(double t) {
         if (t < pulse_beginnings.front()) { return false; }
         int pulse_index = base::MathUtils::findIndexSmallerThan(pulse_beginnings, t);
         if (t < pulse_ends[pulse_index]) { return true; } else { return false; }
     }
+
+    void InputPulse::evaluateInput(std::vector<double> &modified_parameter, const double *state, double t) {
+        if (_pulseActive(t)) {
+            modified_parameter[parameter_index] += _input_strength;
+        }
+    }
+
 }

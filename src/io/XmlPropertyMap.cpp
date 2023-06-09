@@ -32,9 +32,13 @@ namespace io {
     }
 
     std::string XmlPropertyMap::getValueForKey(std::string key_list_name, std::string key,
-                                               std::string value_list_name) {
+                                               std::string value_list_name, bool split_values) {
         std::vector<std::string> keys = base::Utils::StringToStringVector(at(key_list_name));
-        std::vector<std::string> values = base::Utils::StringToStringVector(at(value_list_name));
+
+        std::vector<std::string> values = {at(value_list_name)};
+        if(split_values) {
+            values = base::Utils::StringToStringVector(values[0]);
+        }
         if (std::find(keys.begin(), keys.end(), key) == keys.end()) {
             std::stringstream os;
             os << "Could not find value for " << key << " in list " << at(key_list_name) << std::endl;

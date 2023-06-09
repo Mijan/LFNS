@@ -43,7 +43,9 @@ protected:
     models::ModelSettings _readModelSettings();
     simulator::OdeSettings _readOdeSettings();
 
-    std::vector<models::PulseData> _getInputDatasForExperiment(std::string experiment, double final_time);
+    std::vector<models::InputData_ptr> _getInputDatasForExperiment(std::string experiment, double final_time);
+    std::vector<models::InputData_ptr> _createPulseDatasForExperiment(std::string experiment, double final_time);
+    std::vector<models::InputData_ptr> _createStepDatasForExperiment(std::string experiment, double final_time);
 
     simulator::Simulator_ptr _createSimulator(models::ChemicalReactionNetwork_ptr dynamics);
 

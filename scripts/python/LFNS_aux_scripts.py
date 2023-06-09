@@ -154,9 +154,9 @@ def plot_system(summary_file_name, data_file_names = [], time_file_names = []):
     folder_index = summary_file_name.rfind('/')
     file_name_index = summary_file_name.rfind('_model_summary.txt')
 
+    measure_datas = []
+    time_datas = []
     if len(data_file_names)>0:
-        measure_datas = []
-        time_datas = []
         for data_file_name in data_file_names:
             with open(data_file_name, 'r') as file:
                 csvreader = csv.reader(file)
@@ -207,7 +207,7 @@ def plot_system(summary_file_name, data_file_names = [], time_file_names = []):
 
         plt.figure(plot_fig_ofset + 1,  figsize=(6, 3))
         if num_simulations == 1:
-            [plt.plot(t, measurement[row,], '--') for row in range(num_simulations)]
+            plt.plot(t, measurement, '--')
             if len(time_datas) > 0:
                 plt.plot(np.array(time_datas[count]), np.array(measure_datas[count]),color="red")
             plt.xlabel('time')

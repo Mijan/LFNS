@@ -118,10 +118,18 @@ namespace io {
 
         std::vector<std::string> getProvidedParameters();
 
+        std::vector<std::string> getStepInputNames(std::string basicString);
+
+        std::vector<std::vector<double>> getStepInputTimes(std::string experiment);
+
+        std::vector<std::vector<double>> getStepInputStrengths(std::string experiment);
+
     protected:
         XmlFileReader _reader;
 
-        std::vector<std::string> _getInputValues(std::string experiment_name, std::string field_name);
+        std::vector<std::string> _getPulseInputValues(std::string experiment_name, std::string field_name);
+        std::vector<std::string> _getStepInputValues(std::string experiment_name, std::string field_name);
+        std::vector<std::string> _getInputValues(std::string input_key, std::string experiment_name, std::string field_name, bool split_values=true);
 
 
     };

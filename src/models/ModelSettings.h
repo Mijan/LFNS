@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <sstream>
 #include "InputPulse.h"
+#include "InputSteps.h"
 
 namespace models {
 
@@ -23,7 +24,7 @@ namespace models {
 
     class ModelSettings {
     public:
-        std::map<std::string, std::vector<models::PulseData>> input_datas = {};
+        std::map<std::string, std::vector<models::InputData_ptr>> input_datas = {};
 
         MODEL_TYPE model_type;
         std::map<std::string, double> fixed_parameters = {};
@@ -36,7 +37,7 @@ namespace models {
 
         std::vector<std::string> getUnfixedParameters() const {
             std::vector<std::string> unfixed_parameters;
-            for (std::string param : param_names) {
+            for (std::string param: param_names) {
                 if (fixed_parameters.count(param) == 0) { unfixed_parameters.push_back(param); }
             }
             return unfixed_parameters;
@@ -49,7 +50,7 @@ namespace models {
 
 
             std::size_t max_name_length = 0;
-            for (std::string &param_name : param_names) {
+            for (std::string &param_name: param_names) {
                 if (max_name_length < param_name.size()) { max_name_length = param_name.size(); }
             }
             std::size_t max_value_length = 16 + 8;
@@ -58,7 +59,7 @@ namespace models {
             stream << std::endl;
 
             int index = 0;
-            for (std::string &param_name : param_names) {
+            for (std::string &param_name: param_names) {
                 stream << std::setw(max_name_length) << param_name;
                 if (fixed_parameters.count(param_name) > 0) {
                     std::stringstream fixed_str;
@@ -70,16 +71,32 @@ namespace models {
 
             if (!input_datas.empty()) {
                 stream << "\n\nThe following experiments will be performed: " << std::endl;
-                std::map<std::string, std::vector<models::PulseData> >::iterator
+                std::map<std::string, std::vector<models::InputData_ptr> >::iterator
                         it;
                 for (it = input_datas.begin(); it != input_datas.end(); it++) {
                     stream << "Experiment " << it->first << ": " << std::endl;
-                    for (models::PulseData &input_data : it->second) {
-                        stream << "pulses of strength " << input_data.pulse_strenght << " of parameter "
-                               << input_data.pulse_inpt_name
-                               << " for " << input_data.pulse_duration << " time units, every "
-                               << input_data.pulse_period
-                               << ", starting from " << input_data.starting_time << std::endl;
+                    for (models::InputData_ptr input_data: it->second) {
+                        if (dynamic_cast<const PulseData *>(input_data.get())) {
+                            PulseData data = *dynamic_cast<const PulseData*>(input_data.get());
+                            stream << "pulses of strength " << data.pulse_strenght << " of parameter "
+                                   << data.input_name
+                                   << " for " << data.pulse_duration << " time units, every "
+                                   << data.pulse_period
+                                   << ", starting from " << data.starting_time << std::endl;
+                        }
+                        if (dynamic_cast<const StepData *>(input_data.get())) {
+                            StepData data = *dynamic_cast<const StepData*>(input_data.get());
+                            stream << "parameter "
+                                   << data.input_name << " will be set to values ";
+                            for (double val: data.input_strengths) {
+                                stream << val << " ";
+                            }
+                            stream << " in between timepoints ";
+                            for (double t: data.time_pts) {
+                                stream << t << " ";
+                            }
+                            stream << std::endl;
+                        }
                     }
                 }
                 stream << std::endl;

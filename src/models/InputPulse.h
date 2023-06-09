@@ -9,29 +9,30 @@
 #include <string>
 #include <set>
 #include "../base/Utils.h"
+#include "Input.h"
 
 namespace models {
-    struct PulseData {
+    struct PulseData : public InputData {
         PulseData(double pulse_period_, double pulse_strenght_, double pulse_duration_, int num_pulses_,
-                  std::string pulse_inpt_name_, double starting_time_) : pulse_period(
+                  std::string pulse_inpt_name_, double starting_time_) : InputData(pulse_inpt_name_), pulse_period(
                 pulse_period_), pulse_strenght(pulse_strenght_), pulse_duration(pulse_duration_),
                                                                          num_pulses(num_pulses_),
-                                                                         pulse_inpt_name(pulse_inpt_name_),
                                                                          starting_time(starting_time_) {}
 
-        PulseData(const PulseData &rhs) : pulse_period(
-                rhs.pulse_period), pulse_strenght(rhs.pulse_strenght), pulse_duration(rhs.pulse_duration),
-                                          num_pulses(rhs.num_pulses),
-                                          pulse_inpt_name(rhs.pulse_inpt_name),
-                                          starting_time(rhs.starting_time) {}
+
+        PulseData(const PulseData &rhs) :
+                InputData(rhs), pulse_period(rhs.pulse_period), pulse_strenght(rhs.pulse_strenght),
+                pulse_duration(rhs.pulse_duration),
+                num_pulses(rhs.num_pulses),
+                starting_time(rhs.starting_time) {}
 
         PulseData &operator=(const PulseData &rhs) {
             if (this == &rhs) { return *this; }
+            *this = rhs;
             pulse_period = rhs.pulse_period;
             pulse_strenght = rhs.pulse_strenght;
             pulse_duration = rhs.pulse_duration;
             num_pulses = rhs.num_pulses;
-            pulse_inpt_name = rhs.pulse_inpt_name;
             starting_time = rhs.starting_time;
             return *this;
         }
@@ -40,26 +41,26 @@ namespace models {
         double pulse_strenght;
         double pulse_duration;
         int num_pulses;
-        std::string pulse_inpt_name;
         double starting_time;
-        double final_time;
     };
 
-    class InputPulse {
+    class InputPulse : public Input {
     public:
-        InputPulse(PulseData input_data);
+        explicit InputPulse(PulseData input_data);
 
         virtual ~InputPulse();
 
-        std::vector<double> getDisContTimes();
+        std::vector<double> getDisContTimes() override;
 
-        bool pulseActive(double t);
+        void evaluateInput(std::vector<double> &modified_parameter, const double *state, double t) override;
 
         std::vector<double> pulse_beginnings;
         std::vector<double> pulse_ends;
-        std::string input_name;
         double _input_strength;
-        int parameter_index;
+
+    protected:
+        bool _pulseActive(double t);
+
     };
 
     struct InputPulses {
