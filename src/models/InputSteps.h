@@ -8,42 +8,43 @@
 
 #include <vector>
 #include <string>
+#include "Input.h"
 
 namespace models {
 
-    struct StepsData{
-        StepsData(std::vector<double> time_pts, std::vector<double> input_strength) : time_pts(
-                time_pts), input_strength(input_strength){}
+    struct StepData : public InputData {
+        explicit StepData(std::string input_name, std::vector<double> time_pts, std::vector<double> input_strengths)
+                : InputData(input_name), time_pts(time_pts), input_strengths(input_strengths) {}
 
-        StepsData(const StepsData &rhs) : time_pts(
-                rhs.time_pts), input_strength(rhs.input_strength) {}
+        StepData(const StepData &rhs) : InputData(rhs), time_pts(rhs.time_pts), input_strengths(rhs.input_strengths) {}
 
-        StepsData &operator=(const StepsData &rhs) {
+        ~StepData(){}
+
+        StepData &operator=(const StepData &rhs) {
             if (this == &rhs) { return *this; }
-            time_pts = rhs.time_pts;
-            input_strength = rhs.input_strength;
+            *this = rhs;
+            this->time_pts = rhs.time_pts;
+            this->input_strengths = rhs.input_strengths;
             return *this;
         }
 
         std::vector<double> time_pts;
-        std::vector<double> input_strength;
-
-
+        std::vector<double> input_strengths;
     };
-    class InputSteps {
-        InputSteps(StepsData input_data);
+
+    class InputSteps : public Input {
+    public:
+        explicit InputSteps(StepData step_data);
 
         virtual ~InputSteps();
 
-        std::vector<double> getDisContTimes();
+        std::vector<double> getDisContTimes() override;
 
-        bool pulseActive(double t);
+        void evaluateInput(std::vector<double> &modified_parameter, const double *state, double t) override;
 
-        std::vector<double> pulse_beginnings;
-        std::vector<double> pulse_ends;
-        std::string input_name;
-        double _input_strength;
-        int parameter_index;
+    protected:
+        std::vector<double> _time_pts;
+        std::vector<double> _input_strengths;
     };
 
 } // models

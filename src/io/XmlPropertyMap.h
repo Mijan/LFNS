@@ -24,7 +24,7 @@ namespace io {
 
         std::string safeAt(std::string);
 
-        std::string getValueForKey(std::string key_list_name, std::string key, std::string value_list_name);
+        std::string getValueForKey(std::string key_list_name, std::string key, std::string value_list_name, bool split_values = true);
 
         bool empty();
 

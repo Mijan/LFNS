@@ -75,9 +75,17 @@ namespace models {
         }
 
         if (experiment.size() > 0 && settings.input_datas.count(experiment) > 0) {
-            for (models::PulseData input_data : settings.input_datas[experiment]) {
-                models::InputPulse pulse(input_data);
-                addInput(std::make_shared<InputPulse>(pulse));
+            for (models::InputData_ptr input_data : settings.input_datas[experiment]) {
+                Input_ptr input_ptr(nullptr);
+                if (dynamic_cast<const PulseData*>(input_data.get())) {
+                    models::InputPulse pulse(*dynamic_cast<const PulseData*>(input_data.get()));
+                    input_ptr = std::make_shared<InputPulse>(pulse);
+                }
+                if (dynamic_cast<const StepData*>(input_data.get())) {
+                    models::StepData step(*dynamic_cast<const StepData*>(input_data.get()));
+                    input_ptr = std::make_shared<InputSteps>(step);
+                }
+                addInput(input_ptr);
             }
         }
     }

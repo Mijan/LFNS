@@ -8,7 +8,7 @@
 
 namespace models {
     InputPulse::InputPulse(PulseData input_data)
-            : Input(input_data.pulse_inpt_name, -1), pulse_beginnings(), pulse_ends(),
+            : Input(input_data), pulse_beginnings(), pulse_ends(),
               _input_strength(input_data.pulse_strenght){
         int effective_num_pulses = input_data.num_pulses;
         pulse_beginnings = std::vector<double>(effective_num_pulses, 0.0);
@@ -45,4 +45,5 @@ namespace models {
             modified_parameter[parameter_index] += _input_strength;
         }
     }
+
 }

@@ -113,9 +113,21 @@ simulator::OdeSettings GeneralSetup::_readOdeSettings() {
     return ode_settings;
 }
 
-std::vector<models::PulseData> GeneralSetup::_getInputDatasForExperiment(std::string experiment, double final_time) {
+std::vector<models::InputData_ptr>
+GeneralSetup::_getInputDatasForExperiment(std::string experiment, double final_time) {
+
+    std::vector<models::InputData_ptr> pulse_datas = _createPulseDatasForExperiment(experiment, final_time);
+    std::vector<models::InputData_ptr> step_datas = _createStepDatasForExperiment(experiment, final_time);
+    pulse_datas.insert( pulse_datas.end(), step_datas.begin(), step_datas.end() );
+    return pulse_datas;
+
+}
+
+
+std::vector<models::InputData_ptr>
+GeneralSetup::_createPulseDatasForExperiment(std::string experiment, double final_time) {
     std::vector<double> periods = interpreter.getPulsePeriods(experiment);
-    std::vector<models::PulseData> datas;
+    std::vector<models::InputData_ptr> datas;
     if (!periods.empty()) {
         std::vector<double> strength = interpreter.getPulseStrengths(experiment);
         std::vector<double> duration = interpreter.getPulseDurations(experiment);
@@ -135,14 +147,54 @@ std::vector<models::PulseData> GeneralSetup::_getInputDatasForExperiment(std::st
 
                 if (max_num_pulses > 0) {
                     datas.push_back(
-                            models::PulseData(periods[i], strength[i], duration[i], max_num_pulses, names[i],
-                                              starting_times[i]));
+                            std::make_shared<models::PulseData>(
+                                    models::PulseData(periods[i], strength[i], duration[i], max_num_pulses, names[i],
+                                                      starting_times[i])));
                 }
             }
         }
     }
     return datas;
 }
+
+std::vector<models::InputData_ptr>
+GeneralSetup::_createStepDatasForExperiment(std::string experiment, double final_time) {
+    std::vector<std::string> names = interpreter.getStepInputNames(experiment);
+    std::vector<models::InputData_ptr> datas;
+    if (!names.empty()) {
+
+        std::vector<std::vector<double> > times = interpreter.getStepInputTimes(experiment);
+        std::vector<std::vector<double> > input_strengths = interpreter.getStepInputStrengths(experiment);
+
+        for (int i = 0; i < names.size(); i++) {
+            for(int tpt_nbr = 0; tpt_nbr < times[i].size() -1 ; tpt_nbr++){
+                if(times[i][tpt_nbr] >= times[i][tpt_nbr +1]){
+                    std::stringstream ss;
+                    ss << "For step input, timepoints need to be strictly increasing, but for  " << experiment
+                       << " and input parameter " << names[i] << " timepoints seem to be not strictly increasing";
+                    throw std::runtime_error(ss.str());
+                }
+            }
+            if (times[i][0] > final_time) {
+                std::cerr << "For experiment " << experiment << " perturbation provided, but starting time "
+                          << times[i][0] << " is after the last considered time" << final_time
+                          << ", thus perturbation for experiment " << experiment << " on the parameter "
+                          << names[i] << " starting at " << times[i][0] << " will be ignored!" << std::endl;
+            }else if(times[i].size() != input_strengths[i].size()+1){
+                std::stringstream ss;
+                ss << "For step input, the number of timepoints must be equal to the number of inputs + 1 (the timepoints represent timewindows of input), but for experiment " << experiment
+                << " and input parameter " << names[i] << " " << times[i].size() << " timepoints were provided, and " << input_strengths[i].size() << " inputs.";
+                throw std::runtime_error(ss.str());
+            } else {
+                datas.push_back(
+                        std::make_shared<models::StepData>(
+                                models::StepData(names[i], times[i], input_strengths[i])));
+            }
+        }
+    }
+    return datas;
+}
+
 
 simulator::Simulator_ptr GeneralSetup::_createSimulator(models::ChemicalReactionNetwork_ptr dynamics) {
     simulator::Simulator_ptr sim_ptr;

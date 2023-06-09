@@ -10,10 +10,28 @@
 
 namespace models {
 
+    struct InputData {
+        explicit InputData(std::string input_name) : input_name(input_name) {}
+
+        InputData(const InputData &rhs) : input_name(rhs.input_name) {}
+
+        virtual ~InputData()= default;
+
+        InputData &operator=(const InputData &rhs) {
+            if (this == &rhs) { return *this; }
+            *this = rhs;
+            this->input_name = rhs.input_name;
+            return *this;
+        }
+
+        std::string input_name;
+    };
+    typedef std::shared_ptr<InputData> InputData_ptr;
+
     class Input {
     public:
-        Input(std::string input_name, int parameter_index) : input_name(input_name),
-                                                             parameter_index(parameter_index) {};
+        explicit Input(InputData input_data) : input_name(input_data.input_name),
+                                      parameter_index(-1) {};
 
         virtual void evaluateInput(std::vector<double> &modified_parameter, const double *state, double t) = 0;
 
@@ -22,6 +40,7 @@ namespace models {
         std::string input_name;
         int parameter_index;
     };
+
     typedef std::shared_ptr<Input> Input_ptr;
 
 } // models
