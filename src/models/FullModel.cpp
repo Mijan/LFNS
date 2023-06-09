@@ -75,7 +75,7 @@ namespace models {
         }
 
         if (experiment.size() > 0 && settings.input_datas.count(experiment) > 0) {
-            for (models::InputData input_data : settings.input_datas[experiment]) {
+            for (models::PulseData input_data : settings.input_datas[experiment]) {
                 models::InputPulse pulse(input_data);
                 addInputPulse(pulse);
             }
