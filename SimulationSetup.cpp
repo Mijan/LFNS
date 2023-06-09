@@ -35,7 +35,7 @@ void SimulationSetup::_readSettingsfromFile() {
 
     _readSimulationSettings();
     for (std::string experiment : experiments) {
-        std::vector<models::InputData> datas = _getInputDatasForExperiment(experiment, final_time);
+        std::vector<models::PulseData> datas = _getInputDatasForExperiment(experiment, final_time);
         if (!datas.empty()) { model_settings.input_datas[experiment] = datas; }
     }
     if (model_settings.input_datas.size() < experiments.size() - 1) {

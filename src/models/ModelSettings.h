@@ -23,7 +23,7 @@ namespace models {
 
     class ModelSettings {
     public:
-        std::map<std::string, std::vector<models::InputData>> input_datas = {};
+        std::map<std::string, std::vector<models::PulseData>> input_datas = {};
 
         MODEL_TYPE model_type;
         std::map<std::string, double> fixed_parameters = {};
@@ -70,11 +70,11 @@ namespace models {
 
             if (!input_datas.empty()) {
                 stream << "\n\nThe following experiments will be performed: " << std::endl;
-                std::map<std::string, std::vector<models::InputData> >::iterator
+                std::map<std::string, std::vector<models::PulseData> >::iterator
                         it;
                 for (it = input_datas.begin(); it != input_datas.end(); it++) {
                     stream << "Experiment " << it->first << ": " << std::endl;
-                    for (models::InputData &input_data : it->second) {
+                    for (models::PulseData &input_data : it->second) {
                         stream << "pulses of strength " << input_data.pulse_strenght << " of parameter "
                                << input_data.pulse_inpt_name
                                << " for " << input_data.pulse_duration << " time units, every "

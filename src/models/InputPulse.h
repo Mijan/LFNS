@@ -11,21 +11,21 @@
 #include "../base/Utils.h"
 
 namespace models {
-    struct InputData {
-        InputData(double pulse_period_, double pulse_strenght_, double pulse_duration_, int num_pulses_,
+    struct PulseData {
+        PulseData(double pulse_period_, double pulse_strenght_, double pulse_duration_, int num_pulses_,
                   std::string pulse_inpt_name_, double starting_time_) : pulse_period(
                 pulse_period_), pulse_strenght(pulse_strenght_), pulse_duration(pulse_duration_),
                                                                          num_pulses(num_pulses_),
                                                                          pulse_inpt_name(pulse_inpt_name_),
                                                                          starting_time(starting_time_) {}
 
-        InputData(const InputData &rhs) : pulse_period(
+        PulseData(const PulseData &rhs) : pulse_period(
                 rhs.pulse_period), pulse_strenght(rhs.pulse_strenght), pulse_duration(rhs.pulse_duration),
                                           num_pulses(rhs.num_pulses),
                                           pulse_inpt_name(rhs.pulse_inpt_name),
                                           starting_time(rhs.starting_time) {}
 
-        InputData &operator=(const InputData &rhs) {
+        PulseData &operator=(const PulseData &rhs) {
             if (this == &rhs) { return *this; }
             pulse_period = rhs.pulse_period;
             pulse_strenght = rhs.pulse_strenght;
@@ -47,7 +47,7 @@ namespace models {
 
     class InputPulse {
     public:
-        InputPulse(InputData input_data);
+        InputPulse(PulseData input_data);
 
         virtual ~InputPulse();
 

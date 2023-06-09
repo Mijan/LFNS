@@ -113,9 +113,9 @@ simulator::OdeSettings GeneralSetup::_readOdeSettings() {
     return ode_settings;
 }
 
-std::vector<models::InputData> GeneralSetup::_getInputDatasForExperiment(std::string experiment, double final_time) {
+std::vector<models::PulseData> GeneralSetup::_getInputDatasForExperiment(std::string experiment, double final_time) {
     std::vector<double> periods = interpreter.getPulsePeriods(experiment);
-    std::vector<models::InputData> datas;
+    std::vector<models::PulseData> datas;
     if (!periods.empty()) {
         std::vector<double> strength = interpreter.getPulseStrengths(experiment);
         std::vector<double> duration = interpreter.getPulseDurations(experiment);
@@ -135,7 +135,7 @@ std::vector<models::InputData> GeneralSetup::_getInputDatasForExperiment(std::st
 
                 if (max_num_pulses > 0) {
                     datas.push_back(
-                            models::InputData(periods[i], strength[i], duration[i], max_num_pulses, names[i],
+                            models::PulseData(periods[i], strength[i], duration[i], max_num_pulses, names[i],
                                               starting_times[i]));
                 }
             }

@@ -7,7 +7,7 @@
 #include <algorithm>
 
 namespace models {
-    InputPulse::InputPulse(InputData input_data)
+    InputPulse::InputPulse(PulseData input_data)
             : pulse_beginnings(), pulse_ends(), input_name(input_data.pulse_inpt_name),
               _input_strength(input_data.pulse_strenght),
               parameter_index(-1) {
