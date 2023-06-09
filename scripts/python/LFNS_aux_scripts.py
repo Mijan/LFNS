@@ -6,6 +6,7 @@ from scipy.stats import gaussian_kde
 import pandas as pd
 import csv
 import os
+from matplotlib.ticker import FuncFormatter
 
 
 
@@ -71,21 +72,29 @@ def read_model_description(path_to_model_description):
     return model_summaries
 
 
-def plot_posterior(summary_file_name, plot_scatter=False, plot_highest_corr=-1,
+def plot_posterior(summary_file_name, plot_scatter=False, plot_highest_corr=-1, plot_level_set = False,
                   ignored_parameters=[]):
     max_it = 5000000
 
     model_summary = read_model_description(summary_file_name)
 
-    posterior, weights = get_posterior_particles(summary_file_name, max_it)
+    if plot_level_set:
+        folder_name = Path(summary_file_name).parent
+        file_name = Path(summary_file_name).name.replace('_model_summary.txt', '')
+        logs = pd.read_csv(folder_name / f"{file_name}_log_file.txt", sep='\t', skiprows=1, header=None)
+        max_iteration_nbr = logs.shape[0]
+        posterior = np.loadtxt(folder_name / f"{file_name}_live_points_{max_iteration_nbr}.txt")
+        weights = np.ones(posterior.shape[0])
+    else:
+        posterior, weights = get_posterior_particles(summary_file_name, max_it)
     selected_params = [p for p in model_summary["param_names"] if p not in ignored_parameters]
 
     if selected_params:
         param_indices = [i for i, p in enumerate(model_summary["param_names"]) if p in selected_params]
         posterior = posterior[:, param_indices]
-        param_names = [model_summary["param_names"][i] for i in param_indices]
-        scales = [model_summary["scales"][i] for i in param_indices]
-        bounds = [model_summary["bounds"][i] for i in param_indices]
+        model_summary["param_names"] = [model_summary["param_names"][i] for i in param_indices]
+        model_summary["scales"] = [model_summary["scales"][i] for i in param_indices]
+        model_summary["bounds"] = [model_summary["bounds"][i] for i in param_indices]
 
 
     for i in range(len(model_summary["scales"])):
@@ -97,7 +106,8 @@ def plot_posterior(summary_file_name, plot_scatter=False, plot_highest_corr=-1,
     num_cols = 1 if num_params <= 1 else 3
     num_rows = int(np.ceil(num_params / 3))
 
-    samples = np.random.choice(posterior.shape[0], 1000, p=weights/sum(weights))
+    weights_norm = weights / sum(weights)
+    samples = np.random.choice(posterior.shape[0], 1000, p=weights_norm)
     posterior_samples = posterior[samples, ]
 
     fig, axs = plt.subplots(num_rows, num_cols)
@@ -106,7 +116,10 @@ def plot_posterior(summary_file_name, plot_scatter=False, plot_highest_corr=-1,
 
     for i in range(num_params):
         ax = axs[i]
-        density = gaussian_kde(posterior[:, i], weights=weights)
+        non_zero_indices = weights_norm > 0
+        # print(posterior[non_zero_indices, i])
+        # print(weights_norm[non_zero_indices])
+        density = gaussian_kde(posterior[non_zero_indices, i], weights= weights_norm[non_zero_indices])
         xs = np.linspace(*model_summary["bounds"][i], 200)
         ax.plot(xs, density(xs))
         counts, bins = np.histogram(posterior_samples[:, i])
@@ -136,9 +149,6 @@ def get_posterior_particles(summary_file_name, max_it=1e6):
 
     return posterior_particles, full_weights
 
-
-import numpy as np
-import matplotlib.pyplot as plt
 
 def plot_system(summary_file_name, data_file_names = [], time_file_names = []):
     folder_index = summary_file_name.rfind('/')
@@ -244,3 +254,145 @@ def plot_system(summary_file_name, data_file_names = [], time_file_names = []):
                 plt.title('mean ' + model_summary["species_names"][i] + ' ' + experiment)
             plt.tight_layout()
     plt.show()
+
+
+def plotBE(log_file_name):
+    logs = pd.read_csv(log_file_name, sep='\t', skiprows=1, header=None)
+    max_iteration_nbr = logs.shape[0]
+
+    log_zd = logs.iloc[:, 6]
+    log_zl = logs.iloc[:, 8]
+    log_ztot = logs.iloc[:, 4]
+
+    log_var_zd = logs.iloc[:, 7]
+    log_var_zl = logs.iloc[:, 9]
+    log_var_ztot = logs.iloc[:, 5]
+    log_var_min = logs.iloc[:, 10]
+    indices = np.arange(max_iteration_nbr)
+
+    log_std_zd = 0.5 * log_var_zd
+    max_log = np.maximum(log_zd, log_std_zd)
+    zd_down = np.log(np.maximum(np.exp(log_zd - max_log) - np.exp(log_std_zd - max_log), 0)) + max_log
+    zd_up = np.log(np.exp(log_zd - max_log) + np.exp(log_std_zd - max_log)) + max_log
+    zd_down = np.where(np.isinf(zd_down), np.min(log_zd), zd_down)
+
+    plt.fill_between(indices, zd_down, zd_up, color=[.93, .84, .84])
+
+    log_std_zl = 0.5 * log_var_zl
+    max_log = np.maximum(log_zl, log_std_zl)
+    zl_down = np.log(np.maximum(np.exp(log_zl - max_log) - np.exp(log_std_zl - max_log), 0)) + max_log
+    zl_up = np.log(np.exp(log_zl - max_log) + np.exp(log_std_zl - max_log)) + max_log
+    zl_down = np.where(np.isinf(zl_down), np.min(log_zd), zl_down)
+
+    plt.fill_between(indices, zl_down, zl_up, color=[.76, .87, .78])
+
+    log_std_ztot = 0.5 * log_var_ztot
+    max_log = np.maximum(log_ztot, log_std_ztot)
+    zLFNS_down = np.log(np.maximum(np.exp(log_ztot - max_log) - np.exp(log_std_ztot - max_log), 0)) + max_log
+    zLFNS_up = np.log(np.exp(log_ztot - max_log) + np.exp(log_std_ztot - max_log)) + max_log
+    zLFNS_down = np.where(np.isinf(zLFNS_down), np.min(log_zd), zLFNS_down)
+
+    plt.fill_between(indices, zLFNS_down, zLFNS_up, color=[.73, .83, .96])
+    plt.plot(log_zd, linewidth=1)
+    plt.plot(log_zl, linewidth=1)
+    plt.plot(log_ztot, linewidth=1)
+    plt.show()
+
+    plt.figure()
+
+    lfns_error = logs.iloc[:, -2]
+    max_error = logs.iloc[:, -3]
+    times = logs.iloc[:, 3]
+    acceptance = logs.iloc[:, 2]
+
+    plt.figure(figsize=(20, 5))
+    plt.subplot(1, 4, 1)
+    plt.plot(indices, max_error, linewidth=2)
+    plt.plot(indices, lfns_error, linewidth=2)
+    plt.title('Error estimate')
+    plt.legend(['$\log(\Delta_{max}^m)$', '$\log(\Delta_{LFNS}^m)$'], loc='best')
+    plt.xlabel('Iteration Nbr m')
+    plt.ylabel('$\log(\Delta^m)$')
+    plt.grid(True)
+    plt.xlim(indices[0], indices[-1] + 1)
+
+    plt.subplot(1, 4, 2)
+    plt.plot(indices, 0.5 * log_var_ztot, linewidth=2, color=[.73, .83, .96])
+    plt.plot(indices, 0.5 * log_var_min, linewidth=2, color=[.31, .4, .58])
+    plt.title('Variance estimate')
+    plt.legend(['$\log(\hat{\sigma}_{tot}^{2m})$', '$\log(\hat{\sigma}_{min}^{2m})$'], loc='best')
+    plt.xlabel('Iteration Nbr m')
+    plt.ylabel('$\log(\sigma^{2m})$')
+    plt.grid(True)
+    plt.xlim(indices[0], indices[-1] + 1)
+
+    plt.subplot(1, 4, 3)
+    norm_const = log_ztot.iloc[-1] if np.exp(log_ztot.iloc[-1]) > 0 else 0
+
+    # Calculate z and std normalized values
+    zd_norm = np.exp(log_zd - norm_const)
+    log_var_zd_norm = log_var_zd - 2 * norm_const
+    std_zd_norm = np.exp(0.5 * log_var_zd_norm)
+
+    # Calculate down and up values
+    zd_down = np.maximum(zd_norm - std_zd_norm, 0)
+    zd_up = zd_norm + std_zd_norm
+
+    zl_norm = np.exp(log_zl - norm_const)
+    log_var_zl_norm = log_var_zl - 2 * norm_const
+    std_zl_norm = np.exp(0.5 * log_var_zl_norm)
+    zl_down = np.maximum(zl_norm - std_zl_norm, 0)
+    zl_up = zl_norm + std_zl_norm
+
+    ztot_norm = np.exp(log_ztot - norm_const)
+    log_var_ztot_norm = log_var_ztot - 2 * norm_const
+    std_ztot_norm = np.exp(0.5 * log_var_ztot_norm)
+    zLFNS_down = np.maximum(ztot_norm - std_ztot_norm, 0)
+    zLFNS_up = ztot_norm + std_ztot_norm
+
+    log_var_min_norm = log_var_min - 2 * norm_const
+    std_std_min_norm = np.exp(0.5 * log_var_min_norm)
+    zmin_down = np.maximum(ztot_norm - std_std_min_norm, 0)
+    zmin_up = ztot_norm + std_std_min_norm
+
+    plt.fill_between(indices, zd_down, zd_up, color=[.93, .84, .84])
+    plt.fill_between(indices, zl_down, zl_up, color=[.76, .87, .78])
+    plt.fill_between(indices, zLFNS_down, zLFNS_up, color=[.73, .83, .96])
+    plt.fill_between(indices, zmin_down, zmin_up, color=[.31, .4, .58])
+
+    plt.plot(zd_norm, linewidth=2, color=[.49, .18, .56])
+    plt.plot(zl_norm, linewidth=2, color=[.47, .67, .19])
+    plt.plot(ztot_norm, linewidth=2, color=[0.3, .75, .93])
+
+    plt.title('BE estimate')
+    plt.legend(['$\pm\hat{\sigma}_\mathcal{D}^{m}$', '$\pm\hat{\sigma}_\mathcal{L}^{m}$',
+                '$\pm\hat{\sigma}_{tot}^{m}$', '$\pm\hat{\sigma}_{min}^{m}$',
+                 '$\hat{Z}_{\mathcal{D}}$', '$\hat{Z}_{\mathcal{L}}$', '$\hat{Z}_{tot}$',],
+               prop={"size": 10}, loc='best')
+    plt.ylabel('$\hat{Z}$')
+    plt.xlabel('Iteration Nbr m')
+    plt.xlim([indices[0], indices[-1] + 1])
+
+    plt.subplot(1, 4, 4)
+    plt.grid(True)
+    plt.plot(indices, acceptance, linewidth=2)
+    plt.ylabel('Acceptance rate')
+    plt.xlabel('Iteration Nbr m')
+
+
+    ax2 = plt.gca().twinx()  # Create a second y-axis
+    cum_times = np.cumsum(times)
+    if cum_times.iloc[-1] > 2 * 3600:
+        cum_times = cum_times / 3600
+        ax2.set_ylabel('Cumulative time in hours')
+    elif cum_times.iloc[-1] > 2 * 60:
+        cum_times = cum_times / 60
+        ax2.set_ylabel('Cumulative time in minutes')
+    else:
+        ax2.plot(indices, cum_times, linewidth=2, color = "#ff7f0e" )
+        ax2.set_ylabel('Cumulative time in seconds')
+
+    plt.title('Computational effort')
+    plt.show()
+
+
