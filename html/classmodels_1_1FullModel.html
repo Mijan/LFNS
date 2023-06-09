@@ -106,7 +106,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afb04a9f5b9eb2f3d6fa891def66e2ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20b06eca23676a7932de4f5b74bdd78f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1FullModel.html#a20b06eca23676a7932de4f5b74bdd78f">printInfo</a> (std::ostream &amp;os)</td></tr>
 <tr class="separator:a20b06eca23676a7932de4f5b74bdd78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7381a0bc7614daca104228a307ea7090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1FullModel.html#a7381a0bc7614daca104228a307ea7090">addInputPulse</a> (<a class="el" href="classmodels_1_1InputPulse.html">InputPulse</a> pulse)</td></tr>
+<tr class="memitem:a7381a0bc7614daca104228a307ea7090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1FullModel.html#a7381a0bc7614daca104228a307ea7090">addInput</a> (<a class="el" href="classmodels_1_1InputPulse.html">InputPulse</a> pulse)</td></tr>
 <tr class="separator:a7381a0bc7614daca104228a307ea7090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64cdc283d3a4c7d936ffc732adfba7bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1FullModel.html#a64cdc283d3a4c7d936ffc732adfba7bc">evaluateInput</a> (const double *state, double t)</td></tr>
 <tr class="separator:a64cdc283d3a4c7d936ffc732adfba7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,7 +140,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a3179d428372d658a9d50854566b69048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5a974df9b8b586c145b49d7aae804bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="plotBE_8m.html#a61569f2965b7a369eb10b6d75d410d11">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1FullModel.html#ab5a974df9b8b586c145b49d7aae804bd">_unfixed_parameter_indices</a></td></tr>
 <tr class="separator:ab5a974df9b8b586c145b49d7aae804bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6e04bdddd1f9b82ebda3a10a7da7525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodels_1_1InputPulses.html">InputPulses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1FullModel.html#af6e04bdddd1f9b82ebda3a10a7da7525">_inputs</a></td></tr>
+<tr class="memitem:af6e04bdddd1f9b82ebda3a10a7da7525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodels_1_1InputPulses.html">InputPulses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodels_1_1FullModel.html#af6e04bdddd1f9b82ebda3a10a7da7525">_input_provider</a></td></tr>
 <tr class="separator:af6e04bdddd1f9b82ebda3a10a7da7525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -257,13 +257,13 @@ Private Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7381a0bc7614daca104228a307ea7090"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7381a0bc7614daca104228a307ea7090">&#9670;&nbsp;</a></span>addInputPulse()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7381a0bc7614daca104228a307ea7090">&#9670;&nbsp;</a></span>addInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void models::FullModel::addInputPulse </td>
+          <td class="memname">void models::FullModel::addInput </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmodels_1_1InputPulse.html">InputPulse</a>&#160;</td>
           <td class="paramname"><em>pulse</em></td><td>)</td>
@@ -516,7 +516,7 @@ Private Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="af6e04bdddd1f9b82ebda3a10a7da7525"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6e04bdddd1f9b82ebda3a10a7da7525">&#9670;&nbsp;</a></span>_inputs</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e04bdddd1f9b82ebda3a10a7da7525">&#9670;&nbsp;</a></span>_input_provider</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -525,7 +525,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmodels_1_1InputPulses.html">InputPulses</a> models::FullModel::_inputs</td>
+          <td class="memname"><a class="el" href="structmodels_1_1InputPulses.html">InputPulses</a> models::FullModel::_input_provider</td>
         </tr>
       </table>
   </td>

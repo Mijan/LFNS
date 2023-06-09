@@ -9,6 +9,8 @@
 #include "InitialValueProvider.h"
 #include "MeasurementModel.h"
 #include "ModelSettings.h"
+#include "InputProvider.h"
+#include "Input.h"
 
 namespace models {
     typedef std::function<void(const std::vector<double> &theta)> SetParameterFct;
@@ -39,7 +41,7 @@ namespace models {
 
         void printInfo(std::ostream &os);
 
-        void addInputPulse(InputPulse pulse);
+        void addInput(Input_ptr input);
 
         void evaluateInput(const double *state, double t);
 
@@ -64,7 +66,7 @@ namespace models {
         std::vector<std::string> _param_names;
         std::vector<double> _parameter;
         std::vector<int> _unfixed_parameter_indices;
-        InputPulses _inputs;
+        InputProvider _input_provider;
     };
 
     typedef std::shared_ptr<FullModel> FullModel_ptr;

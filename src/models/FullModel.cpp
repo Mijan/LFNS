@@ -12,7 +12,7 @@ namespace models {
     FullModel::FullModel(ChemicalReactionNetwork_ptr dynamics, InitialValueProvider_ptr init_val,
                          MeasurementModel_ptr measurement) : dynamics(dynamics), initial_value_provider(init_val),
                                                              measurement_model(measurement), _param_names(),
-                                                             _parameter(), _unfixed_parameter_indices(), _inputs() {
+                                                             _parameter(), _unfixed_parameter_indices(), _input_provider() {
         _param_names = dynamics->getParameterNames();
         base::Utils::addOnlyNew<std::string>(_param_names, init_val->getParameterNames());
         base::Utils::addOnlyNew<std::string>(_param_names, measurement->getParameterNames());
@@ -37,7 +37,7 @@ namespace models {
                                                                                                       _parameter(
                                                                                                               settings.param_names.size()),
                                                                                                       _unfixed_parameter_indices(),
-                                                                                                      _inputs() {
+                                                                                                      _input_provider() {
         dynamics = std::make_shared<models::ChemicalReactionNetwork>(
                 settings.model_file);
         models::InitialValueData init_data(settings.initial_value_file);
@@ -77,7 +77,7 @@ namespace models {
         if (experiment.size() > 0 && settings.input_datas.count(experiment) > 0) {
             for (models::PulseData input_data : settings.input_datas[experiment]) {
                 models::InputPulse pulse(input_data);
-                addInputPulse(pulse);
+                addInput(std::make_shared<InputPulse>(pulse));
             }
         }
     }
@@ -88,7 +88,7 @@ namespace models {
                                                  _param_names(rhs._param_names),
                                                  _parameter(rhs._parameter),
                                                  _unfixed_parameter_indices(rhs._unfixed_parameter_indices),
-                                                 _inputs(rhs._inputs) {
+                                                 _input_provider(rhs._input_provider) {
         for (int i = 0; i < _param_names.size(); i++) {
             dynamics->setPointer(&_parameter[i], _param_names[i]);
             initial_value_provider->setPointer(&_parameter[i], _param_names[i]);
@@ -174,21 +174,21 @@ namespace models {
         measurement_model->printInfo(os);
     }
 
-    void FullModel::addInputPulse(InputPulse pulse) {
-        std::vector<std::string>::iterator it = std::find(_param_names.begin(), _param_names.end(), pulse.input_name);
+    void FullModel::addInput(Input_ptr input) {
+        std::vector<std::string>::iterator it = std::find(_param_names.begin(), _param_names.end(), input->input_name);
         bool param_found = it != _param_names.end();;
         if (param_found) {
-            if (_inputs.pulses.empty()) { _inputs.modified_parameter = std::vector<double>(_param_names.size(), 0.0); }
+            if (_input_provider.inputs.empty()) { _input_provider.modified_parameter = std::vector<double>(_param_names.size(), 0.0); }
             int param_index = it - _param_names.begin();
-            pulse.parameter_index = param_index;
-            if (_inputs.input_pram_indices.count(param_index) == 0) {
-                _inputs.input_pram_indices.insert(param_index);
-                dynamics->setPointer(&_inputs.modified_parameter[param_index], pulse.input_name);
-                initial_value_provider->setPointer(&_inputs.modified_parameter[param_index], pulse.input_name);
-                measurement_model->setPointer(&_inputs.modified_parameter[param_index], pulse.input_name);
+            input->parameter_index = param_index;
+            if (_input_provider.input_pram_indices.count(param_index) == 0) {
+                _input_provider.input_pram_indices.insert(param_index);
+                dynamics->setPointer(&_input_provider.modified_parameter[param_index], input->input_name);
+                initial_value_provider->setPointer(&_input_provider.modified_parameter[param_index], input->input_name);
+                measurement_model->setPointer(&_input_provider.modified_parameter[param_index], input->input_name);
             }
 
-            _inputs.pulses.push_back(pulse);
+            _input_provider.inputs.push_back(input);
             dynamics->setPerturbationFct(getInputFunction());
             initial_value_provider->setPerturbationFct(getInputFunction());
             measurement_model->setPerturbationFct(getInputFunction());
@@ -196,12 +196,10 @@ namespace models {
     }
 
     void FullModel::evaluateInput(const double *state, double t) {
-        if (!_inputs.input_pram_indices.empty()) {
-            for (int index : _inputs.input_pram_indices) { _inputs.modified_parameter[index] = 0; }//_parameter[index]; }
-            for (InputPulse &input : _inputs.pulses) {
-                if (input.pulseActive(t)) {
-                    _inputs.modified_parameter[input.parameter_index] += input._input_strength;
-                }
+        if (!_input_provider.input_pram_indices.empty()) {
+            for (int index : _input_provider.input_pram_indices) { _input_provider.modified_parameter[index] = 0; }
+            for (Input_ptr input : _input_provider.inputs) {
+                input->evaluateInput(_input_provider.modified_parameter, state, t);
             }
         }
     }
@@ -211,21 +209,21 @@ namespace models {
         return std::make_shared<PerturbationFct>(std::bind(&FullModel::evaluateInput, this, _1, _2));
     }
 
-    std::vector<double> FullModel::getDiscontTimes() {        return _inputs.getDisContTime();    }
+    std::vector<double> FullModel::getDiscontTimes() {        return _input_provider.getDisContTime();    }
 
-    double FullModel::root(const double *state, double t) {
-
-        double r = 1;
-        for (InputPulse &pulse : _inputs.pulses) {
-            for (int i = 0; i < pulse.pulse_beginnings.size(); i++) {
-                r *= (t - pulse.pulse_beginnings[i]) * (t - pulse.pulse_ends[i]);
-            }
-            r = r / pulse.pulse_ends.back();
-        }
-        return r;
-    }
-
-    RootFct_ptr FullModel::getRootFct() { return std::make_shared<RootFct>(std::bind(&FullModel::root, this, _1, _2)); }
+//    double FullModel::root(const double *state, double t) {
+//
+//        double r = 1;
+//        for (InputPulse &pulse : _input_provider.inputs) {
+//            for (int i = 0; i < pulse.pulse_beginnings.size(); i++) {
+//                r *= (t - pulse.pulse_beginnings[i]) * (t - pulse.pulse_ends[i]);
+//            }
+//            r = r / pulse.pulse_ends.back();
+//        }
+//        return r;
+//    }
+//
+//    RootFct_ptr FullModel::getRootFct() { return std::make_shared<RootFct>(std::bind(&FullModel::root, this, _1, _2)); }
 
 
     MeasurementFct_ptr FullModel::getMeasurementFct() {

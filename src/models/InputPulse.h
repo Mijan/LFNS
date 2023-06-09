@@ -9,6 +9,7 @@
 #include <string>
 #include <set>
 #include "../base/Utils.h"
+#include "Input.h"
 
 namespace models {
     struct PulseData {
@@ -45,21 +46,23 @@ namespace models {
         double final_time;
     };
 
-    class InputPulse {
+    class InputPulse : public Input {
     public:
-        InputPulse(PulseData input_data);
+        explicit InputPulse(PulseData input_data);
 
         virtual ~InputPulse();
 
-        std::vector<double> getDisContTimes();
+        std::vector<double> getDisContTimes() override;
 
-        bool pulseActive(double t);
+        void evaluateInput(std::vector<double> &modified_parameter, const double *state, double t) override;
 
         std::vector<double> pulse_beginnings;
         std::vector<double> pulse_ends;
-        std::string input_name;
         double _input_strength;
-        int parameter_index;
+
+    protected:
+        bool _pulseActive(double t);
+
     };
 
     struct InputPulses {
